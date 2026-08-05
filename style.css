@@ -89,6 +89,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .cabecalho-disc__trilha { margin:0 0 5px; color:rgba(255,255,255,.75); font-size:13px; text-transform:uppercase; letter-spacing:.09em; }
 .cabecalho-disc__titulo { margin:0; font-size:clamp(31px,4vw,48px); line-height:1.1; letter-spacing:-.035em; }
 .cabecalho-disc__texto { max-width:650px; margin:10px 0 0; color:rgba(255,255,255,.84); }
+.disc-visual { margin:18px 0 0; overflow:hidden; border:1px solid #e2dfd5; border-radius:24px; background:#fbf5e9; box-shadow:0 10px 28px rgba(35,46,75,.08); }
+.disc-visual img { display:block; width:100%; aspect-ratio:8 / 3; object-fit:cover; object-position:center; }
+.disc-visual + .secao__titulo { margin-top:26px; }
 .lista-capitulos { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
 .cap-card { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:16px; width:100%; padding:20px; border:1px solid var(--borda); border-radius:18px; background:#fff; text-align:left; cursor:pointer; transition:border .18s, transform .18s; }
 .cap-card:hover { border-color:var(--acento); transform:translateY(-2px); }
@@ -469,6 +472,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
   .disc-card { min-height:72px; padding:12px; border-radius:14px; }
   .disc-card__nome { font-size:15px; }
   .cap-topo { margin-top:24px; }
+  .disc-visual { margin-top:12px; border-radius:18px; }
+  .disc-visual img { aspect-ratio:16 / 7; }
+  .disc-visual + .secao__titulo { margin-top:22px; }
   .aba__ico { display:none; }
   .bloco-leitura, .jogo-card, .quiz-card, .resultado { padding:21px 18px; border-radius:18px; }
   .bloco-leitura p { font-size:17px; }

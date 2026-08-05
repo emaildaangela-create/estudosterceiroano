@@ -342,6 +342,14 @@
     estado.disciplina=id; estado.capitulo=null; salvar();
     var cab=$('#cabecalho-disc'); cab.innerHTML='<p class="cabecalho-disc__trilha">Matéria</p><h1 class="cabecalho-disc__titulo" id="disc-titulo">'+textoSeguro(disc.nome)+'</h1><p class="cabecalho-disc__texto">Escolha um assunto. Você pode explorar no seu ritmo e voltar quando quiser.</p>';
     cab.style.setProperty('--acento',acento(disc));
+    var visuaisDisciplina={
+      portugues:{src:'assets/disciplina-portugues.webp',alt:'Crianças lendo, escrevendo e imaginando histórias juntas.'},
+      matematica:{src:'assets/disciplina-matematica.webp',alt:'Crianças explorando formas, quantidades, medidas, padrões e o tempo.'},
+      ciencias:{src:'assets/disciplina-ciencias.webp',alt:'Crianças investigando plantas, animais, água, a Terra e o céu.'},
+      geografia:{src:'assets/disciplina-geografia.webp',alt:'Crianças explorando mapas, paisagens, cidade, campo e caminhos.'},
+      historia:{src:'assets/disciplina-historia.webp',alt:'Crianças e pessoas idosas compartilhando fotografias, memórias e histórias da comunidade.'}
+    }, visual=visuaisDisciplina[disc.id], figura=$('#disc-visual');
+    figura.innerHTML=visual?'<img src="'+visual.src+'" alt="'+visual.alt+'">':'';
     var lista=$('#lista-capitulos'); lista.innerHTML='';
     disc.capitulos.forEach(function(cap){
       var p=estado.progresso[cap.id], marca=p&&p.feito?'✓':'→';
