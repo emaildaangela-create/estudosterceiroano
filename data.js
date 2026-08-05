@@ -3012,6 +3012,7 @@ const DISCIPLINAS = [
         "id": "geo09",
         "module": 9,
         "title": "Conhecendo o município",
+        "video": "assets/videos/geo09-descobrindo-o-municipio.mp4",
         "theory": [
           {
             "h": "O que é município?",
@@ -3242,6 +3243,7 @@ const DISCIPLINAS = [
         "id": "geo10",
         "module": 10,
         "title": "A população do município",
+        "video": "assets/videos/geo10-o-nosso-municipio.mp4",
         "theory": [
           {
             "h": "O que é população?",
@@ -3725,6 +3727,7 @@ const DISCIPLINAS = [
         "id": "hist09",
         "module": 9,
         "title": "Dividindo espaços em comunidade",
+        "video": "assets/videos/hist09-espacos-publicos-e-privados.mp4",
         "theory": [
           {
             "h": "A cidade é feita de espaços compartilhados",
@@ -3948,6 +3951,7 @@ const DISCIPLINAS = [
         "id": "hist10",
         "module": 10,
         "title": "Espaços públicos e privados",
+        "video": "assets/videos/hist10-espacos-e-regras-da-cidade.mp4",
         "theory": [
           {
             "h": "Quando a fronteira não é tão clara",
@@ -4182,6 +4186,7 @@ const DISCIPLINAS = [
         "id": "hist11",
         "module": 11,
         "title": "Problemas das grandes cidades",
+        "video": "assets/videos/hist11-as-grandes-cidades.mp4",
         "theory": [
           {
             "h": "8 bilhões de pessoas, 8 bilhões de resíduos",
