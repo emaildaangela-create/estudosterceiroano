@@ -584,13 +584,12 @@
     if(arte){
       /* A recompensa é a coisa pronta na tela — e só aqui o termo da prova
          aparece sozinho, como nome do que a criança acabou de construir. */
-      box=criar('section','jogo-card jogo-conclusao','<p class="jogo-card__etapa">Ficou pronto</p><h3>Você montou '+textoSeguro(perfil.result)+'.</h3>');
+      box=criar('section','jogo-card jogo-conclusao','<h3>🎉 Você montou '+textoSeguro(perfil.result)+'.</h3>');
       box.appendChild(renderArtefato(game,total,true));
       if(arte.termLine)box.appendChild(criar('p','conclusao-termo',arte.termLine));
     } else {
-      box=criar('section','jogo-card jogo-conclusao','<p class="jogo-card__etapa">Missão concluída</p><h3>Você completou '+textoSeguro(perfil.result)+'.</h3><p>Foram '+total+' decisões. Agora você pode rever ou seguir para a próxima experiência.</p>');
+      box=criar('section','jogo-card jogo-conclusao','<h3>🎉 Você completou '+textoSeguro(perfil.result)+'.</h3>');
     }
-    box.insertBefore(falaMascote('Você não apenas respondeu: construiu uma ideia passo a passo.',false),box.firstChild);
     var nav=criar('div','navegacao'), repetir=criar('button','botao','Jogar novamente',{type:'button'});repetir.addEventListener('click',function(){reiniciarExperiencia(cap,salvo);});nav.appendChild(repetir);
     if(jogoAtual<cap.games.length-1){var proximo=criar('button','botao botao--primario','Próximo jogo →',{type:'button'});proximo.addEventListener('click',function(){jogoAtual++;salvo.atual=jogoAtual;salvar();renderJogos(cap);});nav.appendChild(proximo);}box.appendChild(nav);raiz.appendChild(box);
   }
@@ -821,10 +820,9 @@
     var raiz=$('#desafio-conteudo'); raiz.innerHTML='';
     if(!cap.quiz||!cap.quiz.length){raiz.appendChild(criar('div','vazio','Ainda não há perguntas para este assunto.'));return;}
     var perguntas=perguntasAtuais(cap);
-    if(quiz.pausa){renderIntervalo(cap,perguntas);return;}
     if(quiz.indice>=perguntas.length){renderResultado(cap);return;}
-    var q=perguntas[quiz.indice], contexto=contextualizarQuestao(cap,q), card=criar('section','quiz-card'), rodada=Math.floor(quiz.indice/3)+1, rodadas=Math.ceil(perguntas.length/3);
-    card.innerHTML='<p class="quiz-card__etapa">'+(quiz.revisao?'Revisão dos erros':'Rodada '+rodada+' de '+rodadas)+' · pergunta '+(quiz.indice+1)+' de '+perguntas.length+'</p>';
+    var q=perguntas[quiz.indice], contexto=contextualizarQuestao(cap,q), card=criar('section','quiz-card');
+    card.innerHTML='<p class="quiz-card__etapa">'+(quiz.revisao?'Revisão · ':'')+'Pergunta '+(quiz.indice+1)+' de '+perguntas.length+'</p>';
     if(contexto.imagem){
       card.appendChild(figuraOpcional(criar('figure','questao-contexto','<a href="'+textoSeguro(contexto.imagem)+'" target="_blank" rel="noopener" aria-label="Ampliar a ilustração"><img src="'+textoSeguro(contexto.imagem)+'" alt="'+textoSeguro(contexto.imagemAlt)+'" loading="lazy"></a><figcaption>'+textoSeguro(contexto.imagemCaption)+' Toque na imagem para ampliá-la.</figcaption>')));
     }
@@ -838,8 +836,8 @@
       resposta.className='feedback '+(certo?'feedback--ok':'feedback--erro');resposta.innerHTML='<strong>'+(certo?(errouAntes?'Agora ficou claro!':'Você percebeu!'):'Vamos entender juntos.')+'</strong>'+(q.explain?'<p class="explicacao">'+textoSeguro(q.explain)+'</p>':'');
       if(!certo)card.appendChild(falaMascote('Tudo bem não acertar ainda. Esta explicação mostra o caminho para a revisão.',true));
       var nav=criar('div','navegacao'), ultima=quiz.indice===perguntas.length-1, prox=criar('button','botao botao--primario',ultima?(quiz.revisao?'Terminar revisão':'Ver resultado'):'Próxima →',{type:'button'});
-      if(!quiz.revisao&&!ultima){var guardar=criar('button','botao botao--leve','Continuar depois',{type:'button'});guardar.addEventListener('click',function(){quiz.indice++;quiz.pausa=quiz.indice<perguntas.length&&quiz.indice%3===0;salvarTentativa(cap);abrirDisciplina(estado.disciplina);toast('Seu ponto foi guardado.');});nav.appendChild(guardar);}
-      prox.addEventListener('click',function(){quiz.indice++;quiz.pausa=!quiz.revisao && quiz.indice<perguntas.length && quiz.indice%3===0;salvarTentativa(cap);renderQuestao(cap);irTopo();});nav.appendChild(prox);card.appendChild(nav);
+      if(!quiz.revisao&&!ultima){var guardar=criar('button','botao botao--leve','Continuar depois',{type:'button'});guardar.addEventListener('click',function(){quiz.indice++;salvarTentativa(cap);abrirDisciplina(estado.disciplina);toast('Seu ponto foi guardado.');});nav.appendChild(guardar);}
+      prox.addEventListener('click',function(){quiz.indice++;salvarTentativa(cap);renderQuestao(cap);irTopo();});nav.appendChild(prox);card.appendChild(nav);
       revelar(resposta,nav);
     }
     if(q.type==='mc'){
@@ -849,13 +847,6 @@
       function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[]);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(pistaRespostaAberta(q,numerica));campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
     }
     card.appendChild(resposta);raiz.appendChild(card);
-  }
-  function renderIntervalo(cap,perguntas) {
-    var raiz=$('#desafio-conteudo'), feitas=quiz.indice, faltam=perguntas.length-feitas, rodada=Math.floor(feitas/3);
-    var box=criar('section','resultado intervalo','<p class="resultado__selo">Rodada '+rodada+' concluída</p><h3>Boa hora para respirar</h3><p>Você respondeu '+feitas+' perguntas. Faltam '+faltam+'. Seu progresso já está guardado.</p>');
-    box.insertBefore(falaMascote('Faça uma pausa curta se precisar. Aprender não é uma corrida.',false),box.firstChild);
-    var nav=criar('div','navegacao'), parar=criar('button','botao','Continuar depois',{type:'button'}), seguir=criar('button','botao botao--primario','Começar próxima rodada →',{type:'button'});
-    parar.addEventListener('click',function(){salvarTentativa(cap);abrirDisciplina(estado.disciplina);});seguir.addEventListener('click',function(){quiz.pausa=false;renderQuestao(cap);irTopo();});nav.appendChild(parar);nav.appendChild(seguir);box.appendChild(nav);raiz.appendChild(box);
   }
   function normalizar(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();}
   function validarResposta(v,aceitas){var a=normalizar(v);return aceitas.some(function(x){var b=normalizar(x);return a===b || (b.length>4 && a.indexOf(b)>=0);});}
@@ -878,13 +869,14 @@
   function renderResultado(cap) {
     var raiz=$('#desafio-conteudo'), total=perguntasAtuais(cap).length, pct=Math.round(quiz.acertos/Math.max(1,total)*100), disc=discPorId(estado.disciplina), erros=quiz.erros.slice();
     if(!quiz.revisao){estado.progresso[cap.id]={feito:true,acertos:quiz.acertos,total:total,data:new Date().toISOString()};delete estado.tentativas[cap.id];salvar();}
-    var msg=quiz.revisao?'Você voltou às ideias que mereciam outra tentativa.':(pct>=80?'Você já consegue explicar as ideias principais.':pct>=55?'Você construiu uma boa base. Vale rever '+erros.length+' ideia'+(erros.length===1?'':'s')+'.':'Agora sabemos exatamente quais ideias precisam de outra olhada.');
-    var box=criar('section','resultado','<p class="resultado__numero">'+quiz.acertos+'/'+total+'</p><h3>'+(quiz.revisao?'Revisão concluída':'Desafio concluído')+'</h3><p>'+msg+'</p>');
+    var msg=quiz.revisao?'Você concluiu a revisão.':(erros.length?'Você acertou '+quiz.acertos+' de '+total+'. Revise '+erros.length+' '+(erros.length===1?'questão':'questões')+' para fortalecer o que aprendeu.':'Você acertou todas as '+total+' questões!');
+    var box=criar('section','resultado resultado--final','<div class="resultado__palmas" aria-hidden="true"><span>👏</span><span>👏</span></div><h3>'+(quiz.revisao?'Revisão concluída':'Desafio concluído!')+'</h3><p class="resultado__placar"><strong>'+quiz.acertos+'</strong><span>de '+total+' acertos</span></p><p class="resultado__mensagem">'+msg+'</p>');
     if(!quiz.revisao)box.appendChild(resumoDominio(cap,erros));
-    box.insertBefore(falaMascote(quiz.revisao?'Rever um erro é uma forma de aprender, não um castigo.':'Você terminou no seu ritmo. O resultado mostra o próximo passo, não o seu valor.',false),box.firstChild);
     var nav=criar('div','navegacao');
     if(!quiz.revisao && erros.length){var reverErros=criar('button','botao','Rever meus erros ('+erros.length+')',{type:'button'});reverErros.addEventListener('click',function(){quiz={indice:0,acertos:0,respondidas:0,erros:[],perguntas:erros.map(function(e){return e.questao;}),indices:erros.map(function(e){return e.indiceOriginal;}),revisao:true,pausa:false};renderQuestao(cap);});nav.appendChild(reverErros);}
-    var repetir=criar('button','botao','Refazer tudo',{type:'button'}), voltar=criar('button','botao botao--primario','Ver outros assuntos',{type:'button'});repetir.addEventListener('click',function(){iniciarQuiz(cap,true);});voltar.addEventListener('click',function(){abrirDisciplina(disc.id);});nav.appendChild(repetir);nav.appendChild(voltar);box.appendChild(nav);raiz.appendChild(box);if(!quiz.revisao)toast('Progresso salvo neste aparelho.');
+    var repetir=criar('button','botao','Refazer tudo',{type:'button'}), voltar=criar('button','botao botao--primario','Ver outros assuntos',{type:'button'});repetir.addEventListener('click',function(){iniciarQuiz(cap,true);});voltar.addEventListener('click',function(){abrirDisciplina(disc.id);});nav.appendChild(repetir);nav.appendChild(voltar);box.appendChild(nav);raiz.appendChild(box);
+    if(!quiz.celebrado){quiz.celebrado=true;bip('vitoria');festejar(true);}
+    if(!quiz.revisao)toast('Progresso salvo neste aparelho.');
   }
 
   function selecionarAba(nome,rolar) {
