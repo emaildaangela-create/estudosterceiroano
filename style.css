@@ -267,6 +267,34 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .hud__som { flex:none; width:52px; border:1px solid var(--borda); border-radius:14px; background:#fff; cursor:pointer; font-size:19px; }
 .hud__som:active { transform:scale(.94); }
 
+/* --- Modo imersivo: o jogo vira a experiência inteira ------------------ */
+body.modo-jogo-imersivo { overflow:hidden; }
+.modo-jogo-imersivo #tela-capitulo { animation:none; transform:none; }
+.modo-jogo-imersivo #painel-jogos { position:fixed; z-index:45; inset:0; width:100vw; height:100dvh; margin:0; padding:0; animation:none; transform:none; background:#f4f7fc; }
+.modo-jogo-imersivo #jogos-conteudo,
+#jogos-conteudo:fullscreen { display:flex; flex-direction:column; width:100%; height:100dvh; min-height:100vh; overflow:hidden; background:
+  radial-gradient(circle at 8% 12%,color-mix(in srgb,var(--acento,var(--ciano)) 12%,transparent) 0 120px,transparent 121px),
+  radial-gradient(circle at 92% 88%,rgba(255,194,93,.15) 0 170px,transparent 171px),
+  radial-gradient(circle,rgba(41,64,105,.075) 1.2px,transparent 1.3px) 0 0/24px 24px,
+  #f4f7fc; }
+.jogo-imersivo__topo { position:relative; z-index:4; display:grid; grid-template-columns:minmax(150px,1fr) minmax(220px,1.4fr) minmax(260px,1fr); align-items:center; gap:16px; min-height:84px; padding:12px clamp(16px,3vw,42px); border-bottom:1px solid rgba(170,185,208,.65); background:rgba(255,255,255,.9); box-shadow:0 7px 24px rgba(32,52,89,.08); backdrop-filter:blur(12px); }
+.jogo-imersivo__sair,.jogo-imersivo__tela-cheia { border:1px solid var(--borda); border-radius:13px; background:#fff; color:var(--texto); cursor:pointer; font-weight:800; box-shadow:0 4px 13px rgba(32,52,89,.07); }
+.jogo-imersivo__sair { justify-self:start; min-height:46px; padding:0 16px; }
+.jogo-imersivo__identidade { display:grid; justify-items:center; min-width:0; text-align:center; }
+.jogo-imersivo__identidade span,.jogo-imersivo__identidade small { color:var(--fraco); font-size:10px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
+.jogo-imersivo__identidade strong { overflow:hidden; max-width:100%; color:var(--texto); font-size:clamp(17px,2vw,22px); text-overflow:ellipsis; white-space:nowrap; }
+.jogo-imersivo__controles { display:flex; justify-content:flex-end; align-items:stretch; gap:9px; }
+.jogo-imersivo__controles .hud { width:min(100%,310px); margin:0; }
+.jogo-imersivo__controles .hud__pilula { min-width:74px; padding:5px 9px; }
+.jogo-imersivo__controles .hud__som { width:46px; }
+.jogo-imersivo__tela-cheia { width:46px; min-height:46px; font-size:23px; }
+.jogo-imersivo__sair:hover,.jogo-imersivo__tela-cheia:hover { border-color:var(--acento,var(--ciano)); transform:translateY(-1px); }
+.jogo-imersivo__palco { flex:1; min-height:0; overflow:auto; overscroll-behavior:contain; scrollbar-gutter:stable; padding:clamp(12px,2.2vh,24px) clamp(12px,3vw,34px) 26px; }
+.jogo-imersivo__conteudo { width:min(100%,980px); min-height:100%; margin:0 auto; }
+.jogo-imersivo__conteudo .seletor-jogos { justify-content:center; margin-bottom:12px; }
+.jogo-imersivo__conteudo .jogo-card { margin:0; }
+.jogo-imersivo__conteudo .piloto { max-height:calc(100dvh - 245px); }
+
 .seletor-jogos { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px; }
 .seletor-jogo { display:flex; align-items:center; gap:8px; padding:8px 14px 8px 8px; border:1px solid var(--borda); border-radius:999px; background:#fff; cursor:pointer; color:var(--suave); font-size:14px; font-weight:800; transition:.14s; }
 .seletor-jogo:hover { border-color:var(--acento,var(--ciano)); transform:translateY(-1px); }
@@ -595,5 +623,20 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
   .piloto-escolhas--quatro { grid-template-columns:1fr 1fr; }
   .piloto-peca--tabuleiro { min-height:68px; padding:7px 5px; font-size:11px; }
   .piloto-peca { min-height:58px; padding:9px; font-size:14px; }
+  .jogo-imersivo__topo { grid-template-columns:auto 1fr auto; gap:8px; min-height:68px; padding:8px 10px; }
+  .jogo-imersivo__sair { width:43px; min-height:43px; padding:0; font-size:19px; }
+  .jogo-imersivo__sair span,.jogo-imersivo__identidade span,.jogo-imersivo__identidade small { display:none; }
+  .jogo-imersivo__identidade strong { font-size:15px; }
+  .jogo-imersivo__controles { gap:5px; }
+  .jogo-imersivo__controles .hud { gap:5px; }
+  .jogo-imersivo__controles .hud__pilula { min-width:45px; padding:5px 6px; }
+  .jogo-imersivo__controles .hud__pilula span { display:none; }
+  .jogo-imersivo__controles .hud__som { width:40px; }
+  .jogo-imersivo__tela-cheia { display:none; }
+  .jogo-imersivo__palco { padding:10px 8px 18px; }
+  .jogo-imersivo__conteudo .seletor-jogos { flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; padding:0 2px 3px; }
+  .jogo-imersivo__conteudo .seletor-jogo { flex:0 0 auto; }
+  .jogo-imersivo__conteudo .jogo-card { padding:18px 14px; }
+  .jogo-imersivo__conteudo .piloto { max-height:none; }
 }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto !important; animation:none !important; transition:none !important; } }

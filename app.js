@@ -318,6 +318,7 @@
     if(window.requestAnimationFrame)window.requestAnimationFrame(mexer);else mexer();
   }
   function mostrar(id) {
+    if(id!=='tela-capitulo')definirModoJogo(false);
     $$('.tela').forEach(function (t) { var ativa=t.id===id; t.hidden=!ativa; t.classList.toggle('tela--ativa',ativa); });
     var home=id==='tela-home';
     document.body.classList.toggle('body--home',home);
@@ -458,9 +459,31 @@
     if(!cap.games||!cap.games.length){raiz.appendChild(criar('div','vazio','Ainda não há experiências para este assunto.'));return;}
     var salvo=progressoExperiencias(cap);jogoAtual=Math.max(0,Math.min(salvo.atual||0,cap.games.length-1));salvo.atual=jogoAtual;
     var game=cap.games[jogoAtual], perfis=(typeof EXPERIENCE_PROFILES!=='undefined'&&EXPERIENCE_PROFILES[cap.id])||[], perfil=perfis[jogoAtual]||{mode:game.type==='pairs'?'explore':'choice',goal:game.title,prompt:game.instructions,result:'descoberta'};
-    raiz.appendChild(montarHud());
-    if(cap.games.length>1)raiz.appendChild(seletorDeJogos(cap,salvo));
-    montarNovaExperiencia(raiz,cap,game,perfil,salvo);
+    var topo=criar('header','jogo-imersivo__topo');
+    var sair=criar('button','jogo-imersivo__sair','← <span>Sair do jogo</span>',{type:'button','aria-label':'Sair do jogo e voltar a descobrir'});
+    sair.addEventListener('click',function(){selecionarAba('teoria',false);});
+    topo.appendChild(sair);
+    topo.appendChild(criar('div','jogo-imersivo__identidade','<span>'+textoSeguro(discPorId(estado.disciplina).nome)+' · módulo '+textoSeguro(cap.module)+'</span><strong>'+textoSeguro(game.short||game.title)+'</strong><small>Jogo '+(jogoAtual+1)+' de '+cap.games.length+'</small>'));
+    var controles=criar('div','jogo-imersivo__controles');
+    controles.appendChild(montarHud());
+    var cheia=criar('button','jogo-imersivo__tela-cheia','⛶',{type:'button','aria-label':'Usar tela cheia','aria-pressed':'false',title:'Tela cheia'});
+    cheia.addEventListener('click',alternarTelaCheia);controles.appendChild(cheia);topo.appendChild(controles);raiz.appendChild(topo);
+    var palco=criar('main','jogo-imersivo__palco'), conteudo=criar('div','jogo-imersivo__conteudo');
+    if(cap.games.length>1)conteudo.appendChild(seletorDeJogos(cap,salvo));
+    montarNovaExperiencia(conteudo,cap,game,perfil,salvo);palco.appendChild(conteudo);raiz.appendChild(palco);
+  }
+  function alternarTelaCheia() {
+    var alvo=$('#jogos-conteudo');
+    if(!document.fullscreenElement){if(alvo.requestFullscreen)alvo.requestFullscreen();}
+    else if(document.exitFullscreen)document.exitFullscreen();
+  }
+  function atualizarBotaoTelaCheia() {
+    var b=$('.jogo-imersivo__tela-cheia');if(!b)return;
+    var ativa=!!document.fullscreenElement;b.textContent=ativa?'↙':'⛶';b.setAttribute('aria-pressed',ativa?'true':'false');b.setAttribute('aria-label',ativa?'Sair da tela cheia':'Usar tela cheia');b.title=ativa?'Sair da tela cheia':'Tela cheia';
+  }
+  function definirModoJogo(ativo) {
+    document.body.classList.toggle('modo-jogo-imersivo',!!ativo);
+    if(!ativo&&document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen();
   }
   /* Todo jogo do capítulo fica sempre à mão — inclusive os já concluídos. */
   function seletorDeJogos(cap,salvo) {
@@ -950,7 +973,8 @@
     $('#cap-pergunta').hidden = nome!=='teoria';
     $$('.aba').forEach(function(b){var ativa=b.dataset.aba===nome;b.classList.toggle('aba--ativa',ativa);b.setAttribute('aria-selected',ativa?'true':'false');});
     $$('.painel-aba').forEach(function(p){var ativa=p.id==='painel-'+nome;p.hidden=!ativa;p.classList.toggle('painel-aba--ativo',ativa);});
-    if(rolar)document.querySelector('.abas').scrollIntoView({behavior:'smooth',block:'start'});
+    definirModoJogo(nome==='jogos');
+    if(rolar&&nome!=='jogos')document.querySelector('.abas').scrollIntoView({behavior:'smooth',block:'start'});
   }
   function voltar() {
     if(!$('#tela-capitulo').hidden) abrirDisciplina(estado.disciplina);
@@ -961,6 +985,7 @@
     $('#btn-voltar').addEventListener('click',voltar);
     $('#btn-continuar').addEventListener('click',function(){if(estado.ultimo)abrirCapitulo(estado.ultimo.disciplina,estado.ultimo.capitulo);});
     $$('.aba').forEach(function(b){b.addEventListener('click',function(){selecionarAba(b.dataset.aba,true);});});
+    document.addEventListener('fullscreenchange',atualizarBotaoTelaCheia);
   }
   function iniciar() {
     if(typeof DISCIPLINAS==='undefined'||!DISCIPLINAS.length){$('#grade-disciplinas').innerHTML='<div class="vazio">Não foi possível carregar os assuntos.</div>';return;}
