@@ -67,12 +67,22 @@
     'sufixo':'pedaço acrescentado no final de uma palavra', 'ortografia':'maneira correta de escrever as palavras',
     'município':'cidade e a área administrada junto com ela', 'comunidade':'grupo de pessoas que compartilha um lugar ou interesses',
     'patrimônio':'algo importante que uma comunidade preserva', 'paisagem':'tudo o que podemos observar em um lugar',
-    'multiplicação':'adição de parcelas iguais', 'divisão':'repartir ou formar grupos com a mesma quantidade'
+    'multiplicação':'adição de parcelas iguais', 'divisão':'repartir ou formar grupos com a mesma quantidade',
+    'adjetivo':'palavra que mostra uma característica', 'pronome':'palavra que pode substituir ou acompanhar um nome',
+    'biografia':'história da vida de uma pessoa escrita por outra', 'autobiografia':'história que alguém escreve sobre a própria vida',
+    'cronológica':'organizada na ordem em que os fatos aconteceram', 'rotação':'giro da Terra em torno dela mesma',
+    'translação':'movimento da Terra ao redor do Sol', 'astro':'corpo natural que existe no espaço',
+    'satélite':'corpo que gira ao redor de um planeta', 'atmosfera':'camada de gases que envolve a Terra',
+    'litosfera':'parte sólida mais externa da Terra', 'hidrosfera':'toda a água existente no planeta',
+    'biosfera':'regiões da Terra onde existe vida', 'magma':'material muito quente encontrado dentro da Terra',
+    'rural':'relacionado ao campo', 'urbana':'relacionada à cidade', 'migração':'mudança de pessoas de um lugar para outro',
+    'censo':'pesquisa que reúne informações sobre a população', 'democracia':'forma de governo com participação dos cidadãos',
+    'potável':'própria e segura para beber', 'triagem':'separação de materiais por tipo'
   };
   function palavras(txt) { return String(txt||'').replace(/<[^>]+>/g,' ').trim().split(/\s+/).filter(Boolean); }
   function separarResumo(paragrafos) {
     var todos=(paragrafos||[]).slice(), primeiro=todos.shift()||'', frases=primeiro.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[primeiro], resumo='', resto=[];
-    frases.forEach(function(f){ if(palavras(resumo+' '+f).length<=58 || !resumo) resumo+=(resumo?' ':'')+f.trim(); else resto.push(f.trim()); });
+    frases.forEach(function(f){ if(palavras(resumo+' '+f).length<=45 || !resumo) resumo+=(resumo?' ':'')+f.trim(); else resto.push(f.trim()); });
     if(resto.length) todos.unshift(resto.join(' '));
     return { resumo:resumo, detalhes:todos };
   }
@@ -300,7 +310,8 @@
     $('#tela-capitulo').style.setProperty('--acento',acento(disc));
     $('#cap-trilha').textContent=disc.nome+' · módulo '+cap.module;
     $('#cap-titulo').textContent=cap.title; $('#cap-sub').textContent=cap.subtitle||'';
-    $('#cap-pergunta').textContent=conviteMissao(cap.theory[0]||{},0);
+    var plano=(typeof PEDAGOGY!=='undefined'&&PEDAGOGY[cap.id])||null;
+    $('#cap-pergunta').innerHTML=plano&&plano.objectives?'<strong>Você vai aprender a:</strong> '+plano.objectives.map(textoSeguro).join(' · '):textoSeguro(conviteMissao(cap.theory[0]||{},0));
     var videoTab=$('#aba-video'); videoTab.hidden=!cap.video;
     renderTeoria(cap); renderVideo(cap); jogoAtual=0; renderJogos(cap); iniciarQuiz(cap);
     selecionarAba((estado.aba==='video'&&!cap.video)?'teoria':estado.aba,false);
@@ -310,7 +321,7 @@
   function renderTeoria(cap) {
     var raiz=$('#teoria-conteudo'); raiz.innerHTML='';
     var idx=Math.max(0,Math.min(estado.passoDescoberta,cap.theory.length-1)), bloco=cap.theory[idx];
-    $('#cap-pergunta').textContent=conviteMissao(bloco,idx);   /* acompanha o bloco aberto */
+    /* O objetivo geral permanece no cabeçalho; a provocação desta missão aparece no cartão. */
     if(idx===0) raiz.appendChild(falaMascote('Vamos por partes. Faça uma suposição, descubra uma ideia e só depois experimente.',false));
     else if(temaBloco(bloco)!==temaBloco(cap.theory[idx-1])) raiz.appendChild(falaMascote('Nova descoberta: o assunto muda um pouco agora. Procure uma ligação com o que você acabou de aprender.',true));
     var passos=criar('div','passos');
@@ -724,11 +735,12 @@
   }
   function perguntasAtuais(cap) { return quiz.revisao ? quiz.perguntas : cap.quiz; }
   function contextualizarQuestao(cap,q) {
-    var texto=q.q, imagem=null;
+    var texto=q.q, imagem=null, contexto='', indice=cap.quiz.indexOf(q), plano=(typeof PEDAGOGY!=='undefined'&&PEDAGOGY[cap.id])||null, ajuste=plano&&plano.questions&&plano.questions[indice];
+    if(ajuste){contexto=ajuste.context||'';texto=ajuste.prompt||texto;}
     if(/^Na tirinha,/i.test(texto)) texto=texto.replace(/^Na tirinha,/i,'Leia este diálogo de uma tirinha:');
     if(cap.id==='cie11' && /Antártica aparece completamente escura/i.test(texto)) texto='Uma imagem das luzes noturnas da Terra mostra onde há muitas cidades. Nela, a Antártica aparece completamente escura. Por quê?';
     if(cap.id==='lp17' && /Segundo o cartaz do Unicef/i.test(texto) && cap.pageImages) imagem=cap.pageImages[1]||null;
-    return {texto:texto,imagem:imagem};
+    return {texto:texto,contexto:contexto,imagem:imagem};
   }
   function renderQuestao(cap) {
     var raiz=$('#desafio-conteudo'); raiz.innerHTML='';
@@ -741,22 +753,25 @@
     if(contexto.imagem){
       card.appendChild(figuraOpcional(criar('figure','questao-contexto','<a href="'+textoSeguro(contexto.imagem)+'" target="_blank" rel="noopener" aria-label="Ampliar o cartaz"><img src="'+textoSeguro(contexto.imagem)+'" alt="Cartaz com as etapas para lavar as mãos" loading="lazy"></a><figcaption>Observe o cartaz. Toque na imagem para ampliá-la.</figcaption>')));
     }
+    if(contexto.contexto)card.appendChild(criar('div','questao-contexto-texto','<span>Informações para pensar</span><p>'+textoSeguro(contexto.contexto)+'</p>'));
     card.appendChild(criar('p','quiz-card__pergunta',textoSeguro(contexto.texto)));
-    var resposta=criar('div'), bloqueado=false;
+    var resposta=criar('div',null,null,{role:'status','aria-live':'polite'}), bloqueado=false, errouAntes=false, erroRegistrado=false;
+    function registrarErro(escolha){if(erroRegistrado)return;erroRegistrado=true;quiz.erros.push({questao:q,escolha:escolha,indiceOriginal:quiz.indices[quiz.indice]});}
+    function mostrarNovaTentativa(mensagem){resposta.className='feedback feedback--erro';resposta.innerHTML='<strong>Tente mais uma vez.</strong><p class="explicacao">'+textoSeguro(mensagem)+'</p>';revelar(resposta);}
     function concluir(certo,escolha){
-      if(bloqueado)return;bloqueado=true;quiz.respondidas++;if(certo)quiz.acertos++;else quiz.erros.push({questao:q,escolha:escolha,indiceOriginal:quiz.indices[quiz.indice]});
-      resposta.className='feedback '+(certo?'feedback--ok':'feedback--erro');resposta.innerHTML='<strong>'+(certo?'Você percebeu!':'Quase. Vamos entender.')+'</strong>'+(q.explain?'<p class="explicacao">'+textoSeguro(q.explain)+'</p>':'');
-      if(!certo)card.appendChild(falaMascote('Use a explicação como pista. Na revisão, você poderá tentar somente esta ideia outra vez.',true));
+      if(bloqueado)return;bloqueado=true;quiz.respondidas++;if(certo&&(!errouAntes||quiz.revisao))quiz.acertos++;if(!certo)registrarErro(escolha);
+      resposta.className='feedback '+(certo?'feedback--ok':'feedback--erro');resposta.innerHTML='<strong>'+(certo?(errouAntes?'Agora ficou claro!':'Você percebeu!'):'Vamos entender juntos.')+'</strong>'+(q.explain?'<p class="explicacao">'+textoSeguro(q.explain)+'</p>':'');
+      if(!certo)card.appendChild(falaMascote('Tudo bem não acertar ainda. Esta explicação mostra o caminho para a revisão.',true));
       var nav=criar('div','navegacao'), ultima=quiz.indice===perguntas.length-1, prox=criar('button','botao botao--primario',ultima?(quiz.revisao?'Terminar revisão':'Ver resultado'):'Próxima →',{type:'button'});
       if(!quiz.revisao&&!ultima){var guardar=criar('button','botao botao--leve','Continuar depois',{type:'button'});guardar.addEventListener('click',function(){quiz.indice++;quiz.pausa=quiz.indice<perguntas.length&&quiz.indice%3===0;salvarTentativa(cap);abrirDisciplina(estado.disciplina);toast('Seu ponto foi guardado.');});nav.appendChild(guardar);}
       prox.addEventListener('click',function(){quiz.indice++;quiz.pausa=!quiz.revisao && quiz.indice<perguntas.length && quiz.indice%3===0;salvarTentativa(cap);renderQuestao(cap);irTopo();});nav.appendChild(prox);card.appendChild(nav);
       revelar(resposta,nav);
     }
     if(q.type==='mc'){
-      var ops=criar('div','opcoes'); q.options.forEach(function(op,i){var b=criar('button','opcao',textoSeguro(op),{type:'button'});b.addEventListener('click',function(){if(bloqueado)return;ops.querySelectorAll('button').forEach(function(x,j){x.disabled=true;if(j===q.answer)x.classList.add('opcao--certa');});if(i!==q.answer)b.classList.add('opcao--errada');concluir(i===q.answer,op);});ops.appendChild(b);});card.appendChild(ops);
+      var errosMc=0, ops=criar('div','opcoes'); q.options.forEach(function(op,i){var b=criar('button','opcao','<span class="opcao__letra">'+String.fromCharCode(65+i)+'</span><span>'+textoSeguro(op)+'</span>',{type:'button'});b.addEventListener('click',function(){if(bloqueado||b.disabled)return;if(i===q.answer){ops.querySelectorAll('button').forEach(function(x){x.disabled=true;});b.classList.add('opcao--certa');concluir(true,op);}else{errosMc++;errouAntes=true;registrarErro(op);b.disabled=true;b.classList.add('opcao--errada');mostrarNovaTentativa(errosMc===1?'Elimine esta alternativa e releia a pergunta.':q.explain||'Compare as alternativas que ainda restam.');if(errosMc===2)card.appendChild(falaMascote(q.explain||'Observe as palavras mais importantes da pergunta.',true));}});ops.appendChild(b);});card.appendChild(ops);
     } else {
-      var linha=criar('div','campo-resposta'), campo=criar('input','campo',null,{type:'text',placeholder:'Escreva sua resposta','aria-label':'Sua resposta'}), enviar=criar('button','botao botao--primario','Conferir',{type:'button'});
-      function checar(){if(!campo.value.trim()||bloqueado)return;var certo=validarResposta(campo.value,q.answers||[]);campo.disabled=true;enviar.disabled=true;concluir(certo,campo.value);} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
+      var tentativasTexto=0, numerica=/número|quantos|quantas|quanto|horas|segundos|dias/i.test(contexto.texto), linha=criar('div','campo-resposta'), campo=criar('input','campo',null,{type:'text',inputmode:numerica?'numeric':'text',autocomplete:'off',placeholder:numerica?'Escreva o número':'Escreva uma palavra ou frase curta','aria-label':'Sua resposta'}), enviar=criar('button','botao botao--primario','Conferir',{type:'button'});
+      function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[]);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(pistaRespostaAberta(q,numerica));campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
     }
     card.appendChild(resposta);raiz.appendChild(card);
   }
@@ -768,7 +783,8 @@
     parar.addEventListener('click',function(){salvarTentativa(cap);abrirDisciplina(estado.disciplina);});seguir.addEventListener('click',function(){quiz.pausa=false;renderQuestao(cap);irTopo();});nav.appendChild(parar);nav.appendChild(seguir);box.appendChild(nav);raiz.appendChild(box);
   }
   function normalizar(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();}
-  function validarResposta(v,aceitas){var a=normalizar(v);return aceitas.some(function(x){var b=normalizar(x);return a===b || (b.length>4 && (a.indexOf(b)>=0 || b.indexOf(a)>=0));});}
+  function validarResposta(v,aceitas){var a=normalizar(v);return aceitas.some(function(x){var b=normalizar(x);return a===b || (b.length>4 && a.indexOf(b)>=0);});}
+  function pistaRespostaAberta(q,numerica){if(numerica)return 'Volte aos números do enunciado e confira a operação ou a unidade pedida.';var alvo=normalizar((q.answers||[])[0]);return alvo?'A resposta começa com “'+alvo.charAt(0).toUpperCase()+'”. Releia a pergunta.':'Releia a pergunta e responda com poucas palavras.';}
   function categoriaQuestao(q) {
     var t=normalizar(q.q);
     if(/texto|instrucional|cartaz|manual|anuncio|memoria|tirinha/.test(t))return 'Compreender textos e informações';

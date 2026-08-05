@@ -13,8 +13,9 @@
     {
       "h": "Problemas de moradia",
       "p": [
-        "Existem casas de muitos tipos: de barro, madeira, tijolo ou pedra; térreas ou sobrados; <strong>palafitas</strong> apoiadas em estacas às margens dos rios da Amazônia; <strong>ocas</strong> de povos indígenas; e, nas grandes cidades, prédios de apartamentos, em que as residências ficam umas sobre as outras para ocupar menos espaço.",
-        "Mesmo nas cidades mais ricas do mundo há pessoas sem casa, vivendo nas ruas ou em abrigos. Na maior parte das vezes, a origem do problema é a <strong>pobreza</strong>. O Brasil tem hoje cerca de <strong>227 mil pessoas em situação de rua</strong>, um aumento de 935% em 10 anos. Desse total, 90% sabem ler e escrever e 68% já tiveram emprego com carteira assinada.",
+        "Existem casas de muitos tipos, feitas de materiais como barro, madeira, tijolo ou pedra. Elas também podem ter diferentes formatos.",
+        "Há <strong>palafitas</strong> apoiadas em estacas perto de rios, <strong>ocas</strong> de povos indígenas e prédios de apartamentos nas cidades. Cada moradia se relaciona com o lugar e o modo de vida de seus moradores.",
+        "Algumas pessoas vivem em situação de rua por uma combinação de dificuldades, como pobreza, desemprego, problemas de saúde ou rompimento de vínculos familiares. Elas continuam tendo direitos e precisam ser tratadas com respeito e atendidas por políticas públicas.",
         "Quem não tem condições financeiras acaba construindo casas em áreas inadequadas, sem registro de endereço, saneamento básico, água ou energia elétrica."
       ]
     },
@@ -40,7 +41,7 @@
         "Antigamente, a maior parte do lixo era composta de <strong>resíduos orgânicos</strong> (restos de comida), que se decompunham naturalmente e viravam nutrientes. Com o crescimento das cidades e a tecnologia, surgiram sacolas plásticas, garrafas, latinhas, pilhas e eletrônicos — materiais que demoram <strong>muito mais tempo</strong> para se decompor.",
         "<strong>Lixões:</strong> grandes terrenos a céu aberto que recebem resíduos. São perigosos: contaminam o solo, atingem os <strong>lençóis freáticos</strong> (camada subterrânea onde os poros do solo estão cheios de água), poluem o ar, trazem pragas e espalham doenças.",
         "<strong>Incineradores:</strong> grandes fornos que queimam o lixo. Sobram cinzas, e os gases da queima prejudicam o ar — por isso precisam de filtros, o que torna o processo muito caro. Geralmente são usados para lixo hospitalar.",
-        "<strong>Aterros sanitários:</strong> parecidos com os lixões, mas com ambiente controlado, proteção para água, ar e solo. As camadas de resíduos são cobertas por areia, pedra e argila. Até o momento, é a forma mais segura e econômica de descarte."
+        "<strong>Aterros sanitários:</strong> locais preparados para receber rejeitos de forma controlada. O solo é protegido, e os resíduos são cobertos para diminuir os danos à água, ao ar, ao solo e à saúde."
       ]
     },
     {
@@ -89,7 +90,7 @@
       "q": "Muitas pessoas se deslocam dentro das cidades utilizando o transporte público. Sobre isso, podemos dizer que:",
       "options": ["na maior parte das vezes, ele é muito eficiente, com poucos engarrafamentos", "não existem trens ou metrôs, apenas ônibus e carros de aplicativos", "todas as cidades brasileiras têm ciclovias para aliviar a poluição dos carros", "o transporte público ajuda nos deslocamentos das pessoas, mas nem sempre funciona perfeitamente"],
       "answer": 3,
-      "explain": "O transporte público é essencial, mas enfrenta lotação e engarrafamentos, principalmente no horário de pico. Trens e metrôs existem em várias cidades, e ciclovias ainda são realidade de uma minoria delas."
+      "explain": "As ciclovias separam as bicicletas dos veículos motorizados e ajudam a tornar o trajeto mais seguro."
     },
     {
       "type": "mc",
@@ -116,13 +117,13 @@
       "type": "text",
       "q": "Como se chama o terreno preparado, com solo protegido e camadas de resíduos cobertas por areia e argila, considerado a forma mais segura de descarte de lixo?",
       "answers": ["aterro sanitario", "aterro", "aterros sanitarios", "o aterro sanitario"],
-      "explain": "É o aterro sanitário. Diferente do lixão, que fica a céu aberto e contamina solo, água e ar, o aterro tem ambiente controlado e proteção — até hoje, a forma mais segura e econômica de descarte."
+      "explain": "É o aterro sanitário. Ele recebe rejeitos de forma controlada e ajuda a proteger o solo, a água e a saúde das pessoas."
     },
     {
       "type": "text",
       "q": "Como se chama o conjunto de serviços que inclui água tratada, rede de esgoto e limpeza urbana?",
       "answers": ["saneamento basico", "saneamento", "o saneamento basico"],
-      "explain": "É o saneamento básico, garantido pela Lei n. 11.445, de 2007. Ele evita a transmissão de doenças e controla pragas urbanas — sem ele, o esgoto corre a céu aberto."
+      "explain": "É o saneamento básico. Ele inclui água potável, tratamento de esgoto, manejo de resíduos e drenagem da chuva, ajudando a proteger a saúde."
     },
     {
       "type": "mc",

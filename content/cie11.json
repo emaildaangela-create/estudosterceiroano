@@ -22,7 +22,7 @@
     {
       "h": "A Lua e suas fases",
       "p": [
-        "A Lua é o único <strong>satélite natural</strong> da Terra. Satélites naturais são corpos celestes que orbitam um planeta ou outro astro; não têm luz própria e são menores que os planetas. Na Lua não há água nem seres vivos, e sua atmosfera é diferente da terrestre.",
+        "A Lua é o único <strong>satélite natural</strong> da Terra. Satélites naturais são corpos celestes que orbitam um planeta ou outro astro e não têm luz própria. Na Lua não há seres vivos conhecidos. Existem pequenas quantidades de água, inclusive gelo em regiões muito frias, e sua atmosfera é muito fina.",
         "A aparência da Lua varia ao longo de um mês. Essas diferentes aparências são as <strong>fases da Lua</strong>, e cada uma dura cerca de <strong>sete dias</strong>. A Lua é iluminada pelo Sol e sua posição não é fixa — ela se movimenta. Assim, a região iluminada visível da Terra muda conforme a posição dela em relação ao Sol e à Terra.",
         "<strong>Lua cheia:</strong> a face da Lua está totalmente iluminada.",
         "<strong>Lua minguante:</strong> apenas uma parte da face está iluminada, com aparência da letra <strong>D</strong> (vista do hemisfério sul).",
@@ -128,7 +128,7 @@
       "type": "text",
       "q": "Como se chama o único satélite natural da Terra?",
       "answers": ["lua", "a lua"],
-      "explain": "É a Lua. Satélites naturais orbitam um planeta, não têm luz própria e são menores que os planetas. Na Lua não há água nem seres vivos."
+      "explain": "É a Lua. Ela orbita a Terra e não tem luz própria. Não há seres vivos conhecidos na Lua, mas existem pequenas quantidades de água, inclusive gelo."
     },
     {
       "type": "mc",

@@ -36,7 +36,8 @@
     {
       "h": "As três ideias da multiplicação",
       "p": [
-        "A multiplicação resolve problemas de três tipos: <strong>adição de parcelas iguais</strong> (7 fileiras com 10 maçãs: 7 × 10 = 70), <strong>disposição retangular</strong> (um mosaico de 7 fileiras com 10 azulejos: 7 × 10 = 70 azulejos) e <strong>combinação de possibilidades</strong> (2 cachorros e 3 coleiras: 2 × 3 = 6 maneiras).",
+        "A multiplicação ajuda a resolver diferentes problemas: somar parcelas iguais, organizar objetos em fileiras e contar combinações possíveis.",
+        "Por exemplo, 7 fileiras com 10 maçãs formam 70 maçãs. Já 2 cachorros e 3 coleiras permitem 6 combinações.",
         "Repare que a ordem dos fatores não muda o resultado: 2 × 5 = 10 e 5 × 2 = 10. Isso ajuda a conferir cálculos e a escolher o caminho mais fácil."
       ]
     }

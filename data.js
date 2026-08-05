@@ -28,7 +28,8 @@ const DISCIPLINAS = [
           {
             "h": "Exemplo: as cinco etapas para lavar as mãos",
             "p": [
-              "Um cartaz do Unicef Brasil ensina as cinco etapas: <strong>1.</strong> molhar as mãos com água limpa; <strong>2.</strong> aplicar sabão suficiente para cobrir as mãos molhadas; <strong>3.</strong> esfregar todas as superfícies das mãos, incluindo o dorso, entre os dedos e sob as unhas — por pelo menos <strong>20 segundos</strong>; <strong>4.</strong> enxaguar as mãos com água; <strong>5.</strong> secar as mãos com um pano limpo ou toalha de papel descartável.",
+              "Um cartaz do Unicef Brasil ensina a lavar as mãos em cinco etapas. Primeiro, molhe as mãos e aplique sabão.",
+              "Depois, esfregue todas as partes das mãos, inclusive entre os dedos e sob as unhas, por pelo menos <strong>20 segundos</strong>. Por fim, enxágue e seque com pano limpo ou papel descartável.",
               "Quando não for possível lavar as mãos na pia, pode-se limpar com álcool em gel a pelo menos 70%. Mas lembre-se: a lavagem com água e sabão é a mais adequada. E não se esqueça de fechar a torneira enquanto ensaboa as mãos — devemos consumir água com responsabilidade.",
               "Desde 2008, o dia <strong>15 de outubro</strong> é o Dia Mundial da Lavagem das Mãos, com eventos organizados pelo Unicef em diversos países."
             ]
@@ -1688,7 +1689,8 @@ const DISCIPLINAS = [
           {
             "h": "As três ideias da multiplicação",
             "p": [
-              "A multiplicação resolve problemas de três tipos: <strong>adição de parcelas iguais</strong> (7 fileiras com 10 maçãs: 7 × 10 = 70), <strong>disposição retangular</strong> (um mosaico de 7 fileiras com 10 azulejos: 7 × 10 = 70 azulejos) e <strong>combinação de possibilidades</strong> (2 cachorros e 3 coleiras: 2 × 3 = 6 maneiras).",
+              "A multiplicação ajuda a resolver diferentes problemas: somar parcelas iguais, organizar objetos em fileiras e contar combinações possíveis.",
+              "Por exemplo, 7 fileiras com 10 maçãs formam 70 maçãs. Já 2 cachorros e 3 coleiras permitem 6 combinações.",
               "Repare que a ordem dos fatores não muda o resultado: 2 × 5 = 10 e 5 × 2 = 10. Isso ajuda a conferir cálculos e a escolher o caminho mais fácil."
             ]
           }
@@ -2364,7 +2366,7 @@ const DISCIPLINAS = [
               "<strong>Crosta:</strong> a camada mais externa e também a mais fina, composta de material rochoso e sólido. Grande parte dela está recoberta pelos oceanos.",
               "<strong>Manto:</strong> a camada mais espessa da Terra. Sua temperatura é bem mais elevada que a da crosta e é formado por um material pastoso chamado <strong>magma</strong>, que dá origem à lava dos vulcões.",
               "<strong>Núcleo:</strong> a parte mais interna, dividida em núcleo externo (líquido, composto de metais e rochas derretidas) e núcleo interno (sólido, a região mais quente do planeta).",
-              "Mesmo as escavações mais profundas já feitas nunca ultrapassaram a crosta — o manto e o núcleo nunca foram atingidos. A maior perfuração do mundo fica na Rússia, com cerca de 12.260 metros; no Brasil, o poço mais profundo tem cerca de 7.700 metros, na bacia do Espírito Santo."
+              "Mesmo as perfurações mais profundas feitas pelo ser humano alcançaram apenas a crosta. Para conhecer as camadas mais internas, os cientistas estudam, entre outras pistas, as ondas produzidas pelos terremotos."
             ]
           },
           {
@@ -2593,14 +2595,14 @@ const DISCIPLINAS = [
             "h": "O Sol e sua influência na Terra",
             "p": [
               "O Sol é a estrela mais próxima da Terra e o centro do Sistema Solar. Ao penetrar na atmosfera, a luz solar <strong>aquece o planeta</strong>, permitindo uma temperatura adequada à vida. Se não fosse pelo calor do Sol, não teríamos água no estado líquido, essencial para a manutenção da vida.",
-              "A luz solar também é usada na <strong>fotossíntese</strong>, processo pelo qual as plantas produzem alimento. Quando crescem, as plantas servem de alimento para muitos animais, que por sua vez servem de comida para outros. Assim, todos os seres vivos conseguem se alimentar a partir da luz solar."
+              "A luz solar também é usada na <strong>fotossíntese</strong>, processo pelo qual as plantas produzem alimento. As plantas servem de alimento para muitos animais, que podem servir de alimento para outros. Assim, a luz solar sustenta a maior parte das cadeias alimentares."
             ]
           },
           {
             "h": "Os astros se movimentam",
             "p": [
               "Ao observar o Sol durante o dia, temos a impressão de que ele se movimenta no céu — o mesmo ocorre com a Lua e as estrelas à noite. Esse é o <strong>movimento aparente</strong> dos astros: eles não se movem no horizonte; a impressão vem do movimento de <strong>rotação</strong> realizado pela Terra, que gira ao redor de si mesma como um pião.",
-              "Por causa da rotação, ao longo de um dia uma parte da Terra é iluminada pelo Sol enquanto a outra fica no escuro: temos o dia na parte iluminada e a noite na parte escura. Esse giro leva cerca de <strong>24 horas</strong> e ocorre sempre da esquerda para a direita.",
+              "Por causa da rotação, ao longo de um dia uma parte da Terra é iluminada pelo Sol enquanto a outra fica no escuro: temos o dia na parte iluminada e a noite na parte escura. Esse giro leva cerca de <strong>24 horas</strong> e ocorre de oeste para leste.",
               "Além da rotação, a Terra realiza o movimento de <strong>translação</strong>, em que se move em torno do Sol. Uma volta completa demora aproximadamente <strong>um ano, ou 365 dias</strong>. O caminho percorrido é chamado de <strong>órbita da Terra</strong>."
             ]
           },
@@ -2842,7 +2844,7 @@ const DISCIPLINAS = [
           {
             "h": "A Lua e suas fases",
             "p": [
-              "A Lua é o único <strong>satélite natural</strong> da Terra. Satélites naturais são corpos celestes que orbitam um planeta ou outro astro; não têm luz própria e são menores que os planetas. Na Lua não há água nem seres vivos, e sua atmosfera é diferente da terrestre.",
+              "A Lua é o único <strong>satélite natural</strong> da Terra. Satélites naturais são corpos celestes que orbitam um planeta ou outro astro e não têm luz própria. Na Lua não há seres vivos conhecidos. Existem pequenas quantidades de água, inclusive gelo em regiões muito frias, e sua atmosfera é muito fina.",
               "A aparência da Lua varia ao longo de um mês. Essas diferentes aparências são as <strong>fases da Lua</strong>, e cada uma dura cerca de <strong>sete dias</strong>. A Lua é iluminada pelo Sol e sua posição não é fixa — ela se movimenta. Assim, a região iluminada visível da Terra muda conforme a posição dela em relação ao Sol e à Terra.",
               "<strong>Lua cheia:</strong> a face da Lua está totalmente iluminada.",
               "<strong>Lua minguante:</strong> apenas uma parte da face está iluminada, com aparência da letra <strong>D</strong> (vista do hemisfério sul).",
@@ -3024,7 +3026,7 @@ const DISCIPLINAS = [
               "lua",
               "a lua"
             ],
-            "explain": "É a Lua. Satélites naturais orbitam um planeta, não têm luz própria e são menores que os planetas. Na Lua não há água nem seres vivos."
+            "explain": "É a Lua. Ela orbita a Terra e não tem luz própria. Não há seres vivos conhecidos na Lua, mas existem pequenas quantidades de água, inclusive gelo."
           },
           {
             "type": "mc",
@@ -3531,7 +3533,8 @@ const DISCIPLINAS = [
           {
             "h": "O caminho correto do lixo",
             "p": [
-              "A coleta de lixo é um dos principais serviços públicos do município, geralmente realizada por empresas contratadas pela prefeitura. O caminho adequado tem 5 etapas: <strong>1.</strong> em casa, separa-se o lixo seco do orgânico; <strong>2.</strong> as empresas de coleta passam nos locais para recolher; <strong>3.</strong> o lixo vai para uma usina de tratamento; <strong>4.</strong> os resíduos passam por uma <strong>triagem</strong> que separa os materiais recicláveis; <strong>5.</strong> o que não puder ser reaproveitado vai para o aterro sanitário.",
+              "A coleta de lixo é um serviço público importante. O caminho adequado começa em casa, com a separação do lixo seco e do orgânico.",
+              "Depois, a coleta recolhe o lixo e o leva para tratamento. Na <strong>triagem</strong>, os materiais recicláveis são separados. O que não pode ser reaproveitado segue para o aterro sanitário.",
               "Muitos municípios não conseguem prestar a coleta em todos os bairros. Sem esse serviço, a população acaba queimando o lixo ou descartando em terrenos baldios, ruas, córregos e rios.",
               "Ao se decompor, o lixo gera um resíduo líquido chamado <strong>chorume</strong>. No descarte incorreto, o chorume infiltra e contamina o solo e as águas dos rios, córregos e lagos. Queimar o lixo também é incorreto: libera poluentes no ar e pode causar incêndios.",
               "No <strong>aterro sanitário</strong>, o solo recebe um revestimento que impede a infiltração do chorume, que é coletado por tubos e tratado antes de voltar à natureza. Uma tubulação queima o gás metano gerado pela decomposição, e o lixo é coberto diariamente com terra para evitar mau cheiro e doenças. Quando o aterro é preenchido, pode-se fazer uma cobertura vegetal."
@@ -3540,7 +3543,8 @@ const DISCIPLINAS = [
           {
             "h": "Tratamento de água",
             "p": [
-              "A água que usamos para beber, tomar banho, escovar os dentes e limpar a casa deve ser <strong>potável</strong>. O tratamento tem 6 etapas: <strong>captação</strong> (retirada da água de rios, lagos e represas), <strong>floculação</strong> (colocam-se substâncias que aglomeram as partículas de sujeira), <strong>decantação</strong> (as partículas se depositam no fundo e são retiradas), <strong>filtragem</strong> (a água passa por camadas de pedregulho, cascalho, areia e carvão), <strong>desinfecção</strong> (adição de cloro e flúor) e <strong>distribuição</strong> (reservatório e encanamento até as casas).",
+              "A água usada para beber e cuidar da higiene deve ser <strong>potável</strong>, isto é, própria para o consumo. Antes de chegar às casas, ela passa por várias etapas de tratamento.",
+              "Primeiro vêm a <strong>captação</strong>, a <strong>floculação</strong> e a <strong>decantação</strong>, que ajudam a juntar e retirar a sujeira. Depois ocorrem a <strong>filtragem</strong>, a <strong>desinfecção</strong> e a <strong>distribuição</strong> pelos reservatórios e encanamentos.",
               "Tratar a água é fundamental para evitar a transmissão de doenças como diarreia e leptospirose. Também é preciso usá-la de forma consciente, evitando o desperdício."
             ]
           },
@@ -3812,7 +3816,7 @@ const DISCIPLINAS = [
             "p": [
               "Dizer que um espaço é público não significa que podemos fazer o que quisermos nele. Os espaços públicos têm <strong>regras</strong> criadas para assegurar a boa convivência entre pessoas diferentes, além de garantir a preservação do local e a segurança de todos. Ao seguir essas regras, exercemos a <strong>cidadania</strong>.",
               "Algumas atitudes para cuidar do bairro: não jogar lixo nas ruas; participar da coleta seletiva separando o lixo em casa; regar as plantas dos jardins e cuidar das árvores; recolher o cocô do cachorro no passeio; cobrar e acompanhar as ações dos políticos.",
-              "Destruir patrimônio público — deteriorar, quebrar ou inutilizar — é <strong>crime previsto em lei</strong>, com pena de 6 meses a 1 ano de prisão. Isso acontece porque, ao consertar o que foi destruído, o governo gasta um dinheiro que poderia ser usado para o bem da população. No Rio de Janeiro, por exemplo, depredações já custaram mais de R$ 220 milhões."
+              "Danificar o patrimônio público é proibido. O dinheiro usado para consertar o que foi destruído poderia ser investido em melhorias para a população. Por isso, cuidar do que pertence a todos é uma forma de respeitar a comunidade."
             ]
           }
         ],
@@ -3947,7 +3951,7 @@ const DISCIPLINAS = [
               "um crime",
               "crime previsto em lei"
             ],
-            "explain": "É crime previsto em lei, com pena de 6 meses a 1 ano de prisão. O prejuízo é de todos: o dinheiro gasto no conserto deixa de ser usado em melhorias para a população."
+            "explain": "Danificar o patrimônio público é proibido e pode ser crime. Além do prejuízo, o conserto usa dinheiro que poderia beneficiar a comunidade."
           },
           {
             "type": "mc",
@@ -4020,7 +4024,7 @@ const DISCIPLINAS = [
             "h": "Serviços públicos e privados",
             "p": [
               "Os serviços também podem ser públicos ou privados. Os governos são responsáveis por serviços fundamentais — como <strong>saúde e educação</strong> —, que não têm dono e podem ser usados por todos sem pagar. É por isso que existem escolas e hospitais públicos, além do <strong>SUS</strong>, responsável pelas campanhas de vacinação em todo o território brasileiro.",
-              "No transporte, empresas privadas com autorização do governo administram ônibus, trens e metrôs: são <strong>transportes públicos</strong>, mas é preciso pagar a passagem. Já o táxi é um transporte <strong>privado de uso público</strong>. Idosos (acima de 60 anos), estudantes da rede pública e pessoas com deficiência não pagam passagem; e em quase 100 cidades brasileiras já existe o <strong>passe-livre pleno</strong>, sem cobrança para ninguém."
+              "Ônibus, trens e metrôs são <strong>transportes públicos coletivos</strong>. Em muitos lugares é preciso pagar passagem. Algumas pessoas têm gratuidade garantida por lei, e outras regras dependem do município. O táxi é um transporte privado de uso público."
             ]
           },
           {
@@ -4133,13 +4137,13 @@ const DISCIPLINAS = [
             "type": "mc",
             "q": "Ônibus, trens e metrôs são exemplos de transportes:",
             "options": [
-              "públicos e gratuitos em todas as cidades do Brasil",
-              "privados e, como a passagem é cara, usados por poucas pessoas",
-              "privados, mas o governo paga a passagem de quem precisa",
-              "públicos, mas quem faz uso deve pagar o valor de uma passagem"
+              "públicos e coletivos, usados no deslocamento das pessoas",
+              "privados e usados somente por seus proprietários",
+              "públicos, mas iguais aos táxis",
+              "privados e administrados apenas por famílias"
             ],
-            "answer": 3,
-            "explain": "São transportes públicos administrados por empresas autorizadas pelo governo, que cobram passagem. A gratuidade total (passe-livre pleno) existe em cerca de 100 cidades, não em todas."
+            "answer": 0,
+            "explain": "Ônibus, trens e metrôs são transportes públicos coletivos. A cobrança de passagem e as regras de gratuidade variam conforme o lugar e a legislação."
           },
           {
             "type": "mc",
@@ -4189,12 +4193,12 @@ const DISCIPLINAS = [
             "q": "Qual afirmação sobre a administração do município é FALSA?",
             "options": [
               "Os vereadores devem fazer as leis da cidade",
-              "O prefeito tem como responsabilidade garantir universidades públicas",
-              "O primeiro atendimento do paciente é responsabilidade da Prefeitura",
+              "O prefeito administra as universidades federais",
+              "A Prefeitura oferece serviços de atendimento básico de saúde",
               "O prefeito deve cuidar do patrimônio histórico da cidade"
             ],
             "answer": 1,
-            "explain": "As universidades públicas são responsabilidade dos governos federal e estadual, não da Prefeitura. Ao município cabem a educação básica (creches ao Ensino Fundamental) e o primeiro atendimento de saúde."
+            "explain": "As universidades federais são administradas pelo governo federal, não pelo prefeito. A Prefeitura cuida de serviços locais, como o atendimento básico de saúde."
           },
           {
             "type": "text",
@@ -4241,8 +4245,9 @@ const DISCIPLINAS = [
           {
             "h": "Problemas de moradia",
             "p": [
-              "Existem casas de muitos tipos: de barro, madeira, tijolo ou pedra; térreas ou sobrados; <strong>palafitas</strong> apoiadas em estacas às margens dos rios da Amazônia; <strong>ocas</strong> de povos indígenas; e, nas grandes cidades, prédios de apartamentos, em que as residências ficam umas sobre as outras para ocupar menos espaço.",
-              "Mesmo nas cidades mais ricas do mundo há pessoas sem casa, vivendo nas ruas ou em abrigos. Na maior parte das vezes, a origem do problema é a <strong>pobreza</strong>. O Brasil tem hoje cerca de <strong>227 mil pessoas em situação de rua</strong>, um aumento de 935% em 10 anos. Desse total, 90% sabem ler e escrever e 68% já tiveram emprego com carteira assinada.",
+              "Existem casas de muitos tipos, feitas de materiais como barro, madeira, tijolo ou pedra. Elas também podem ter diferentes formatos.",
+              "Há <strong>palafitas</strong> apoiadas em estacas perto de rios, <strong>ocas</strong> de povos indígenas e prédios de apartamentos nas cidades. Cada moradia se relaciona com o lugar e o modo de vida de seus moradores.",
+              "Algumas pessoas vivem em situação de rua por uma combinação de dificuldades, como pobreza, desemprego, problemas de saúde ou rompimento de vínculos familiares. Elas continuam tendo direitos e precisam ser tratadas com respeito e atendidas por políticas públicas.",
               "Quem não tem condições financeiras acaba construindo casas em áreas inadequadas, sem registro de endereço, saneamento básico, água ou energia elétrica."
             ]
           },
@@ -4268,7 +4273,7 @@ const DISCIPLINAS = [
               "Antigamente, a maior parte do lixo era composta de <strong>resíduos orgânicos</strong> (restos de comida), que se decompunham naturalmente e viravam nutrientes. Com o crescimento das cidades e a tecnologia, surgiram sacolas plásticas, garrafas, latinhas, pilhas e eletrônicos — materiais que demoram <strong>muito mais tempo</strong> para se decompor.",
               "<strong>Lixões:</strong> grandes terrenos a céu aberto que recebem resíduos. São perigosos: contaminam o solo, atingem os <strong>lençóis freáticos</strong> (camada subterrânea onde os poros do solo estão cheios de água), poluem o ar, trazem pragas e espalham doenças.",
               "<strong>Incineradores:</strong> grandes fornos que queimam o lixo. Sobram cinzas, e os gases da queima prejudicam o ar — por isso precisam de filtros, o que torna o processo muito caro. Geralmente são usados para lixo hospitalar.",
-              "<strong>Aterros sanitários:</strong> parecidos com os lixões, mas com ambiente controlado, proteção para água, ar e solo. As camadas de resíduos são cobertas por areia, pedra e argila. Até o momento, é a forma mais segura e econômica de descarte."
+              "<strong>Aterros sanitários:</strong> locais preparados para receber rejeitos de forma controlada. O solo é protegido, e os resíduos são cobertos para diminuir os danos à água, ao ar, ao solo e à saúde."
             ]
           },
           {
@@ -4367,7 +4372,7 @@ const DISCIPLINAS = [
               "o transporte público ajuda nos deslocamentos das pessoas, mas nem sempre funciona perfeitamente"
             ],
             "answer": 3,
-            "explain": "O transporte público é essencial, mas enfrenta lotação e engarrafamentos, principalmente no horário de pico. Trens e metrôs existem em várias cidades, e ciclovias ainda são realidade de uma minoria delas."
+            "explain": "As ciclovias separam as bicicletas dos veículos motorizados e ajudam a tornar o trajeto mais seguro."
           },
           {
             "type": "mc",
@@ -4414,7 +4419,7 @@ const DISCIPLINAS = [
               "aterros sanitarios",
               "o aterro sanitario"
             ],
-            "explain": "É o aterro sanitário. Diferente do lixão, que fica a céu aberto e contamina solo, água e ar, o aterro tem ambiente controlado e proteção — até hoje, a forma mais segura e econômica de descarte."
+            "explain": "É o aterro sanitário. Ele recebe rejeitos de forma controlada e ajuda a proteger o solo, a água e a saúde das pessoas."
           },
           {
             "type": "text",
@@ -4424,7 +4429,7 @@ const DISCIPLINAS = [
               "saneamento",
               "o saneamento basico"
             ],
-            "explain": "É o saneamento básico, garantido pela Lei n. 11.445, de 2007. Ele evita a transmissão de doenças e controla pragas urbanas — sem ele, o esgoto corre a céu aberto."
+            "explain": "É o saneamento básico. Ele inclui água potável, tratamento de esgoto, manejo de resíduos e drenagem da chuva, ajudando a proteger a saúde."
           },
           {
             "type": "mc",

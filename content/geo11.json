@@ -15,7 +15,8 @@
     {
       "h": "O caminho correto do lixo",
       "p": [
-        "A coleta de lixo é um dos principais serviços públicos do município, geralmente realizada por empresas contratadas pela prefeitura. O caminho adequado tem 5 etapas: <strong>1.</strong> em casa, separa-se o lixo seco do orgânico; <strong>2.</strong> as empresas de coleta passam nos locais para recolher; <strong>3.</strong> o lixo vai para uma usina de tratamento; <strong>4.</strong> os resíduos passam por uma <strong>triagem</strong> que separa os materiais recicláveis; <strong>5.</strong> o que não puder ser reaproveitado vai para o aterro sanitário.",
+        "A coleta de lixo é um serviço público importante. O caminho adequado começa em casa, com a separação do lixo seco e do orgânico.",
+        "Depois, a coleta recolhe o lixo e o leva para tratamento. Na <strong>triagem</strong>, os materiais recicláveis são separados. O que não pode ser reaproveitado segue para o aterro sanitário.",
         "Muitos municípios não conseguem prestar a coleta em todos os bairros. Sem esse serviço, a população acaba queimando o lixo ou descartando em terrenos baldios, ruas, córregos e rios.",
         "Ao se decompor, o lixo gera um resíduo líquido chamado <strong>chorume</strong>. No descarte incorreto, o chorume infiltra e contamina o solo e as águas dos rios, córregos e lagos. Queimar o lixo também é incorreto: libera poluentes no ar e pode causar incêndios.",
         "No <strong>aterro sanitário</strong>, o solo recebe um revestimento que impede a infiltração do chorume, que é coletado por tubos e tratado antes de voltar à natureza. Uma tubulação queima o gás metano gerado pela decomposição, e o lixo é coberto diariamente com terra para evitar mau cheiro e doenças. Quando o aterro é preenchido, pode-se fazer uma cobertura vegetal."
@@ -24,7 +25,8 @@
     {
       "h": "Tratamento de água",
       "p": [
-        "A água que usamos para beber, tomar banho, escovar os dentes e limpar a casa deve ser <strong>potável</strong>. O tratamento tem 6 etapas: <strong>captação</strong> (retirada da água de rios, lagos e represas), <strong>floculação</strong> (colocam-se substâncias que aglomeram as partículas de sujeira), <strong>decantação</strong> (as partículas se depositam no fundo e são retiradas), <strong>filtragem</strong> (a água passa por camadas de pedregulho, cascalho, areia e carvão), <strong>desinfecção</strong> (adição de cloro e flúor) e <strong>distribuição</strong> (reservatório e encanamento até as casas).",
+        "A água usada para beber e cuidar da higiene deve ser <strong>potável</strong>, isto é, própria para o consumo. Antes de chegar às casas, ela passa por várias etapas de tratamento.",
+        "Primeiro vêm a <strong>captação</strong>, a <strong>floculação</strong> e a <strong>decantação</strong>, que ajudam a juntar e retirar a sujeira. Depois ocorrem a <strong>filtragem</strong>, a <strong>desinfecção</strong> e a <strong>distribuição</strong> pelos reservatórios e encanamentos.",
         "Tratar a água é fundamental para evitar a transmissão de doenças como diarreia e leptospirose. Também é preciso usá-la de forma consciente, evitando o desperdício."
       ]
     },

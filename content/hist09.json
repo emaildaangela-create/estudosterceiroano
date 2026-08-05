@@ -43,7 +43,7 @@
       "p": [
         "Dizer que um espaço é público não significa que podemos fazer o que quisermos nele. Os espaços públicos têm <strong>regras</strong> criadas para assegurar a boa convivência entre pessoas diferentes, além de garantir a preservação do local e a segurança de todos. Ao seguir essas regras, exercemos a <strong>cidadania</strong>.",
         "Algumas atitudes para cuidar do bairro: não jogar lixo nas ruas; participar da coleta seletiva separando o lixo em casa; regar as plantas dos jardins e cuidar das árvores; recolher o cocô do cachorro no passeio; cobrar e acompanhar as ações dos políticos.",
-        "Destruir patrimônio público — deteriorar, quebrar ou inutilizar — é <strong>crime previsto em lei</strong>, com pena de 6 meses a 1 ano de prisão. Isso acontece porque, ao consertar o que foi destruído, o governo gasta um dinheiro que poderia ser usado para o bem da população. No Rio de Janeiro, por exemplo, depredações já custaram mais de R$ 220 milhões."
+        "Danificar o patrimônio público é proibido. O dinheiro usado para consertar o que foi destruído poderia ser investido em melhorias para a população. Por isso, cuidar do que pertence a todos é uma forma de respeitar a comunidade."
       ]
     }
   ],
@@ -110,7 +110,7 @@
       "type": "text",
       "q": "Destruir, quebrar ou deteriorar um patrimônio público é considerado o quê pela lei brasileira?",
       "answers": ["crime", "e crime", "um crime", "crime previsto em lei"],
-      "explain": "É crime previsto em lei, com pena de 6 meses a 1 ano de prisão. O prejuízo é de todos: o dinheiro gasto no conserto deixa de ser usado em melhorias para a população."
+      "explain": "Danificar o patrimônio público é proibido e pode ser crime. Além do prejuízo, o conserto usa dinheiro que poderia beneficiar a comunidade."
     },
     {
       "type": "mc",

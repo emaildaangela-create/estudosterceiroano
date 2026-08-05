@@ -28,7 +28,7 @@
       "h": "Serviços públicos e privados",
       "p": [
         "Os serviços também podem ser públicos ou privados. Os governos são responsáveis por serviços fundamentais — como <strong>saúde e educação</strong> —, que não têm dono e podem ser usados por todos sem pagar. É por isso que existem escolas e hospitais públicos, além do <strong>SUS</strong>, responsável pelas campanhas de vacinação em todo o território brasileiro.",
-        "No transporte, empresas privadas com autorização do governo administram ônibus, trens e metrôs: são <strong>transportes públicos</strong>, mas é preciso pagar a passagem. Já o táxi é um transporte <strong>privado de uso público</strong>. Idosos (acima de 60 anos), estudantes da rede pública e pessoas com deficiência não pagam passagem; e em quase 100 cidades brasileiras já existe o <strong>passe-livre pleno</strong>, sem cobrança para ninguém."
+        "Ônibus, trens e metrôs são <strong>transportes públicos coletivos</strong>. Em muitos lugares é preciso pagar passagem. Algumas pessoas têm gratuidade garantida por lei, e outras regras dependem do município. O táxi é um transporte privado de uso público."
       ]
     },
     {
@@ -89,9 +89,9 @@
     {
       "type": "mc",
       "q": "Ônibus, trens e metrôs são exemplos de transportes:",
-      "options": ["públicos e gratuitos em todas as cidades do Brasil", "privados e, como a passagem é cara, usados por poucas pessoas", "privados, mas o governo paga a passagem de quem precisa", "públicos, mas quem faz uso deve pagar o valor de uma passagem"],
-      "answer": 3,
-      "explain": "São transportes públicos administrados por empresas autorizadas pelo governo, que cobram passagem. A gratuidade total (passe-livre pleno) existe em cerca de 100 cidades, não em todas."
+      "options": ["públicos e coletivos, usados no deslocamento das pessoas", "privados e usados somente por seus proprietários", "públicos, mas iguais aos táxis", "privados e administrados apenas por famílias"],
+      "answer": 0,
+      "explain": "Ônibus, trens e metrôs são transportes públicos coletivos. A cobrança de passagem e as regras de gratuidade variam conforme o lugar e a legislação."
     },
     {
       "type": "mc",
@@ -122,9 +122,9 @@
     {
       "type": "mc",
       "q": "Qual afirmação sobre a administração do município é FALSA?",
-      "options": ["Os vereadores devem fazer as leis da cidade", "O prefeito tem como responsabilidade garantir universidades públicas", "O primeiro atendimento do paciente é responsabilidade da Prefeitura", "O prefeito deve cuidar do patrimônio histórico da cidade"],
+      "options": ["Os vereadores devem fazer as leis da cidade", "O prefeito administra as universidades federais", "A Prefeitura oferece serviços de atendimento básico de saúde", "O prefeito deve cuidar do patrimônio histórico da cidade"],
       "answer": 1,
-      "explain": "As universidades públicas são responsabilidade dos governos federal e estadual, não da Prefeitura. Ao município cabem a educação básica (creches ao Ensino Fundamental) e o primeiro atendimento de saúde."
+      "explain": "As universidades federais são administradas pelo governo federal, não pelo prefeito. A Prefeitura cuida de serviços locais, como o atendimento básico de saúde."
     },
     {
       "type": "text",
