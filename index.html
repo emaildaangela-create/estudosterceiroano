@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Estudos do 3º ano</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
   <link rel="icon" href="assets/app-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/app-icon-192.png">
 </head>
@@ -92,11 +92,11 @@
 
     <!-- Abas -->
     <div class="abas" role="tablist" aria-label="Seções do capítulo">
-      <button class="aba aba--ativa" id="tab-teoria" role="tab" aria-selected="true" aria-controls="painel-teoria" data-aba="teoria">
-        <span class="aba__ico" aria-hidden="true">💡</span><span class="aba__txt">Descobrir</span>
-      </button>
       <button class="aba" id="aba-video" role="tab" aria-selected="false" aria-controls="painel-video" data-aba="video" hidden>
         <span class="aba__ico" aria-hidden="true">🎬</span><span class="aba__txt">Vídeo</span>
+      </button>
+      <button class="aba aba--ativa" id="tab-teoria" role="tab" aria-selected="true" aria-controls="painel-teoria" data-aba="teoria">
+        <span class="aba__ico" aria-hidden="true">💡</span><span class="aba__txt">Descobrir</span>
       </button>
       <button class="aba" id="tab-jogos" role="tab" aria-selected="false" aria-controls="painel-jogos" data-aba="jogos">
         <span class="aba__ico" aria-hidden="true">🎮</span><span class="aba__txt">Jogar</span>
@@ -140,9 +140,9 @@
 <!-- ================= TOAST ================= -->
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-<script src="data.js?v=10"></script>
+<script src="data.js?v=11"></script>
 <script src="experiences.js?v=9"></script>
 <script src="pedagogy.js?v=9"></script>
-<script src="app.js?v=10"></script>
+<script src="app.js?v=11"></script>
 </body>
 </html>

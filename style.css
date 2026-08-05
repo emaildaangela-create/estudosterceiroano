@@ -114,6 +114,18 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .aba--ativa { color:#fff; background:var(--texto); }
 .painel-aba { animation:entrar .2s ease both; }
 .teoria, .jogos, .desafio, .video { width:min(100%,var(--leitura)); margin:0 auto; }
+.video-abertura { padding:clamp(20px,4vw,34px); border:1px solid var(--borda); border-radius:24px; background:#fff; box-shadow:0 16px 38px rgba(31,49,82,.09); }
+.video-abertura__etapa { display:inline-block; margin:0 0 8px; padding:5px 10px; border-radius:999px; color:var(--acento,var(--rosa)); background:color-mix(in srgb,var(--acento,var(--rosa)) 9%,white); font-size:11px; font-weight:850; letter-spacing:.06em; text-transform:uppercase; }
+.video-abertura h3 { margin:0 0 5px; font-size:clamp(24px,4vw,34px); line-height:1.2; }
+.video-abertura__convite { margin:0 0 20px; color:var(--suave); }
+.video-frame { position:relative; overflow:hidden; aspect-ratio:16/9; border-radius:18px; background:#111827; box-shadow:0 9px 25px rgba(18,26,45,.2); }
+.video-frame video { display:block; width:100%; height:100%; object-fit:contain; opacity:.18; transition:opacity .25s ease; }
+.video-frame--pronto video { opacity:1; }
+.video-carregando { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; gap:12px; padding:20px; color:#fff; background:linear-gradient(135deg,#17213b,#28385f); text-align:center; }
+.video-carregando__giro { width:28px; height:28px; flex:0 0 auto; border:3px solid rgba(255,255,255,.28); border-top-color:#fff; border-radius:50%; animation:girar-video .75s linear infinite; }
+.video-carregando--erro { color:#fff; background:#743244; }
+@keyframes girar-video { to { transform:rotate(360deg); } }
+.video-abertura .navegacao { margin-top:20px; }
 
 .passos { display:flex; justify-content:center; gap:7px; margin-bottom:17px; }
 .passos__ponto { width:28px; height:5px; border:0; border-radius:99px; background:#d9e0eb; cursor:pointer; }

@@ -1,4 +1,4 @@
-const CACHE = 'estudos-3-ano-v10';
+const CACHE = 'estudos-3-ano-v11';
 const ARQUIVOS = [
   './', './index.html', './style.css', './data.js', './experiences.js',
   './pedagogy.js', './app.js', './manifest.webmanifest',
@@ -35,6 +35,9 @@ self.addEventListener('activate', function (evento) {
 
 self.addEventListener('fetch', function (evento) {
   if (evento.request.method !== 'GET' || new URL(evento.request.url).origin !== self.location.origin) return;
+  /* Vídeos usam requisições parciais (Range). Deixamos o navegador cuidar
+     delas diretamente para iniciar a reprodução sem baixar o arquivo todo. */
+  if (evento.request.destination === 'video' || evento.request.headers.has('range')) return;
   evento.respondWith(fetch(evento.request).then(function (resposta) {
     var copia = resposta.clone();
     caches.open(CACHE).then(function (cache) { cache.put(evento.request, copia); });

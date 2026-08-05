@@ -15,6 +15,7 @@ const DISCIPLINAS = [
         "module": 17,
         "title": "Lava uma mão, lava a outra",
         "subtitle": "Texto instrucional · Aumentativo e diminutivo",
+        "video": "assets/videos/mod17-ferramentas-da-lingua.mp4",
         "theory": [
           {
             "h": "O texto instrucional",
@@ -404,6 +405,7 @@ const DISCIPLINAS = [
         "module": 18,
         "title": "Lembranças de uma vida",
         "subtitle": "Conto de memórias · Adjetivo · Sufixo -oso/-osa",
+        "video": "assets/videos/mod18-explorando-memorias.mp4",
         "theory": [
           {
             "h": "O conto de memórias",
@@ -640,6 +642,7 @@ const DISCIPLINAS = [
         "module": 19,
         "title": "Voando alto",
         "subtitle": "Biografia · Adjetivo pátrio · Sufixos -ês/-esa",
+        "video": "assets/videos/mod19-voando-alto.mp4",
         "theory": [
           {
             "h": "O gênero biografia",
@@ -869,6 +872,7 @@ const DISCIPLINAS = [
         "module": 20,
         "title": "Uma doce dança",
         "subtitle": "Anúncio classificado · Adjetivo no plural · Letras S e Z no fim da palavra",
+        "video": "assets/videos/mod20-anuncios-e-plural.mp4",
         "theory": [
           {
             "h": "O anúncio classificado",
@@ -1099,6 +1103,7 @@ const DISCIPLINAS = [
         "module": 21,
         "title": "Vencer o medo",
         "subtitle": "História em quadrinhos · Pronomes pessoais (caso reto e oblíquo)",
+        "video": "assets/videos/mod21-quadrinhos-e-pronomes.mp4",
         "theory": [
           {
             "h": "A história em quadrinhos (HQ)",
@@ -1360,6 +1365,7 @@ const DISCIPLINAS = [
         "module": 22,
         "title": "Contando e recontando",
         "subtitle": "Conto popular · Pronomes de tratamento · Pessoas do discurso",
+        "video": "assets/videos/mod22-contando-e-recontando.mp4",
         "theory": [
           {
             "h": "O conto popular",

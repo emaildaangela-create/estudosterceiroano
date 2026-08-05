@@ -374,7 +374,9 @@
   function abrirCapitulo(discId,capId,aba) {
     var disc=discPorId(discId), cap=capPorId(disc,capId); if(!cap) return renderHome();
     estado.disciplina=discId; estado.capitulo=capId; estado.ultimo={disciplina:discId,capitulo:capId};
-    estado.aba=aba||estado.areas[capId]||'teoria';
+    /* O vídeo funciona como abertura do módulo. Uma aba explícita ainda é
+       respeitada quando a navegação vem de dentro da própria experiência. */
+    estado.aba=aba||(cap.video?'video':estado.areas[capId]||'teoria');
     estado.passoDescoberta=Number(estado.leitura[capId])||0;
     estado.passoDescoberta=Math.min(estado.passoDescoberta||0,Math.max(0,cap.theory.length-1)); zerarPlacar(); salvar();
     $('#tela-capitulo').style.setProperty('--acento',acento(disc));
@@ -438,7 +440,19 @@
 
   function renderVideo(cap) {
     var raiz=$('#video-conteudo'); raiz.innerHTML=''; if(!cap.video)return;
-    raiz.innerHTML='<div class="bloco-leitura"><h3>Vídeo do assunto</h3><div class="video-frame"><iframe src="'+textoSeguro(cap.video)+'" title="Vídeo do assunto" allowfullscreen></iframe></div></div>';
+    var card=criar('section','video-abertura');
+    card.appendChild(criar('p','video-abertura__etapa','Antes de começar'));
+    card.appendChild(criar('h3',null,'Veja uma apresentação deste módulo'));
+    card.appendChild(criar('p','video-abertura__convite','Assista ao vídeo para conhecer as ideias que você vai explorar.'));
+    var frame=criar('div','video-frame'), carregando=criar('div','video-carregando','<span class="video-carregando__giro" aria-hidden="true"></span><strong>Carregando o vídeo…</strong>',{role:'status','aria-live':'polite'});
+    var video=criar('video',null,null,{controls:'',preload:'metadata',playsinline:'','aria-label':'Apresentação do módulo '+cap.module});
+    video.src=cap.video;
+    function pronto(){carregando.hidden=true;frame.classList.add('video-frame--pronto');}
+    function esperando(){carregando.hidden=false;carregando.querySelector('strong').textContent='Carregando o vídeo…';}
+    video.addEventListener('loadeddata',pronto);video.addEventListener('canplay',pronto);video.addEventListener('playing',pronto);video.addEventListener('waiting',esperando);
+    video.addEventListener('error',function(){carregando.hidden=false;carregando.classList.add('video-carregando--erro');carregando.innerHTML='<span aria-hidden="true">⚠️</span><strong>Não foi possível carregar o vídeo. Tente novamente em instantes.</strong>';});
+    frame.appendChild(video);frame.appendChild(carregando);card.appendChild(frame);
+    var nav=criar('div','navegacao');nav.appendChild(criar('span'));var descobrir=criar('button','botao botao--primario','Começar a descobrir →',{type:'button'});descobrir.addEventListener('click',function(){selecionarAba('teoria',true);});nav.appendChild(descobrir);card.appendChild(nav);raiz.appendChild(card);
   }
 
   function renderJogos(cap) {
