@@ -1,4 +1,4 @@
-const CACHE = 'estudos-3-ano-v3';
+const CACHE = 'estudos-3-ano-v4';
 const ARQUIVOS = [
   './', './index.html', './style.css', './data.js', './experiences.js',
   './pedagogy.js', './app.js', './manifest.webmanifest',
@@ -6,7 +6,11 @@ const ARQUIVOS = [
   './assets/capa-aprender.webp',
   './assets/capa-aprender.png', './assets/mascote-capivara-v2.webp',
   './assets/quiz-cidade-espacos.webp', './assets/quiz-desmatamento.webp',
-  './assets/quiz-poluicao-sonora.webp', './assets/quiz-terra-noturna.webp'
+  './assets/quiz-poluicao-sonora.webp', './assets/quiz-terra-noturna.webp',
+  './assets/descobrir-textos.webp', './assets/descobrir-palavras.webp',
+  './assets/descobrir-numeros.webp', './assets/descobrir-medidas.webp',
+  './assets/descobrir-natureza.webp', './assets/descobrir-lugares.webp',
+  './assets/descobrir-ideias.webp'
 ];
 
 self.addEventListener('install', function (evento) {

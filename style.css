@@ -115,9 +115,13 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .bloco-leitura, .jogo-card, .quiz-card, .resultado { padding:clamp(23px,4vw,38px); border:1px solid var(--borda); border-radius:24px; background:#fff; box-shadow:0 12px 36px rgba(34,47,76,.06); }
 .bloco-leitura__etapa, .jogo-card__etapa, .quiz-card__etapa { margin:0 0 9px; color:var(--acento,var(--ciano)); font-size:12px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
 .bloco-leitura h3, .jogo-card h3, .quiz-card h3 { margin:0 0 17px; font-size:clamp(25px,4vw,34px); line-height:1.18; letter-spacing:-.025em; }
-.bloco-leitura p { margin:0 0 15px; color:#303c55; font-size:18px; line-height:1.72; }
+.bloco-leitura p { margin:0 0 15px; color:#303c55; font-size:18px; line-height:1.66; }
 .missao-convite { margin:-5px 0 19px !important; color:var(--suave) !important; font-size:15px !important; line-height:1.55 !important; }
+.descoberta-destaque { display:grid; grid-template-columns:minmax(220px,.8fr) minmax(0,1.25fr); align-items:stretch; gap:18px; margin:0 0 18px; }
+.descoberta-visual { min-height:210px; margin:0; overflow:hidden; border:1px solid color-mix(in srgb,var(--acento,var(--ciano)) 18%,var(--borda)); border-radius:18px; background:#f8f5ed; }
+.descoberta-visual img { display:block; width:100%; height:100%; min-height:210px; object-fit:cover; }
 .ideia-principal { margin:0 0 18px; padding:20px; border-radius:16px; background:color-mix(in srgb,var(--acento,var(--ciano)) 8%,white); }
+.descoberta-destaque .ideia-principal { display:flex; min-width:0; margin:0; flex-direction:column; justify-content:center; }
 .ideia-principal > span { display:block; margin-bottom:6px; color:var(--acento,var(--ciano)); font-size:11px; font-weight:850; letter-spacing:.11em; text-transform:uppercase; }
 .ideia-principal p { margin:0; color:var(--texto); font-size:19px; line-height:1.62; }
 .termo { position:relative; border-bottom:2px dotted currentColor; cursor:help; font-weight:700; }
@@ -126,6 +130,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .bloco-leitura details { margin-top:8px; border-top:1px solid var(--borda); }
 .bloco-leitura summary { padding:15px 0 0; color:var(--acento,var(--ciano)); cursor:pointer; font-weight:750; }
 .bloco-leitura details p:first-of-type { margin-top:16px; }
+.bloco-leitura details p { max-width:64ch; }
 .pagina-livro { margin:24px 0 0; }
 .pagina-livro img { display:block; width:100%; border:1px solid var(--borda); border-radius:16px; }
 .pagina-livro figcaption { margin-top:7px; color:var(--fraco); font-size:12px; text-align:center; }
@@ -190,14 +195,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .peca-palavra { min-width:90px; padding:12px 16px; border:1px solid var(--borda); border-radius:13px; background:#fff; cursor:pointer; color:var(--acento,var(--ciano)); font-size:18px; font-weight:850; }
 .cena-legenda { margin:0; color:var(--texto); font-size:20px; font-weight:800; text-align:center; }
 
-/* --- Três tempos: mexer, ver acontecer, dar o nome ---------------------- */
-.artefato { margin:0 0 20px; padding:16px 18px; border:2px dashed color-mix(in srgb,var(--acento,var(--ciano)) 40%,var(--borda)); border-radius:18px; background:#fbfcfe; }
-.artefato__titulo { margin:0 0 11px; color:var(--acento,var(--ciano)); font-size:13px; font-weight:850; letter-spacing:.06em; text-transform:uppercase; }
-.artefato__vazio { margin:0; color:var(--fraco); font-size:14px; font-style:italic; }
-.artefato__pecas { display:grid; gap:7px; margin:0; padding:0; counter-reset:peca; list-style:none; }
-.artefato__peca { dis…461 tokens truncated…; }
-.cena-trecho--aceita { border-color:var(--ok); background:var(--ok-claro); transform:translateY(-6px); }
-.cena-trecho--recusada { border-color:var(--fraco); opacity:.5; transform:rotate(-1.5deg) scale(.95); }
+/* --- Três te…663 tokens truncated…ale(.95); }
 .decisoes--cartaz { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px; }
 .decisao--grande { min-height:66px; text-align:center; font-size:17px; }
 .decisao--aceitar:hover { border-color:var(--ok); background:var(--ok-claro); }
@@ -394,6 +392,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
   .aba__ico { display:none; }
   .bloco-leitura, .jogo-card, .quiz-card, .resultado { padding:21px 18px; border-radius:18px; }
   .bloco-leitura p { font-size:17px; }
+  .descoberta-destaque { grid-template-columns:1fr; gap:12px; }
+  .descoberta-visual, .descoberta-visual img { min-height:0; aspect-ratio:3 / 2; }
+  .descoberta-destaque .ideia-principal { padding:17px; }
   .mascote-fala { grid-template-columns:72px 1fr; padding:8px 13px 8px 8px; }
   .mascote-fala img { width:72px; height:72px; }
   .mascote-fala--compacta { grid-template-columns:48px 1fr; }
@@ -423,4 +424,3 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
   .resumo-dominio li { align-items:flex-start; flex-direction:column; gap:2px; }
 }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto !important; animation:none !important; transition:none !important; } }
-

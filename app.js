@@ -155,6 +155,18 @@
     if(/municipio|cidade|comunidade|espaco|populacao|servico/.test(h))return 'lugares';
     return 'ideia';
   }
+  function visualDaDescoberta(bloco) {
+    var tema=temaBloco(bloco), visuais={
+      textos:{src:'assets/descobrir-textos.webp',alt:'Criança observando uma sequência ilustrada de instruções para lavar as mãos.'},
+      palavras:{src:'assets/descobrir-palavras.webp',alt:'Criança montando e investigando palavras com peças coloridas.'},
+      numeros:{src:'assets/descobrir-numeros.webp',alt:'Criança explorando grupos, formas e quantidades com materiais de matemática.'},
+      medidas:{src:'assets/descobrir-medidas.webp',alt:'Criança investigando tempo, caminhos e medidas com relógio e instrumentos.'},
+      natureza:{src:'assets/descobrir-natureza.webp',alt:'Crianças investigando a Terra, a natureza, a Lua e o céu.'},
+      lugares:{src:'assets/descobrir-lugares.webp',alt:'Crianças observando uma maquete com campo, cidade e espaços da comunidade.'},
+      ideia:{src:'assets/descobrir-ideias.webp',alt:'Criança investigando pistas e organizando uma nova ideia.'}
+    };
+    return visuais[tema]||visuais.ideia;
+  }
   function irTopo() { window.scrollTo({top:0,behavior:'smooth'}); }
   /* As páginas do livro não são publicadas junto com o app. Se a imagem não
      estiver lá, a figura inteira some em vez de deixar um ícone quebrado. */
@@ -330,21 +342,7 @@
     estado.disciplina=id; estado.capitulo=null; salvar();
     var cab=$('#cabecalho-disc'); cab.innerHTML='<p class="cabecalho-disc__trilha">Matéria</p><h1 class="cabecalho-disc__titulo" id="disc-titulo">'+textoSeguro(disc.nome)+'</h1><p class="cabecalho-disc__texto">Escolha um assunto. Você pode explorar no seu ritmo e voltar quando quiser.</p>';
     cab.style.setProperty('--acento',acento(disc));
-    var lista=$('#lista-capitulos'); lista.innerHTML='';
-    disc.capitulos.forEach(function(cap){
-      var p=estado.progresso[cap.id], marca=p&&p.feito?'✓':'→';
-      var b=criar('button','cap-card','<span class="cap-card__num">'+cap.module+'</span><span><strong class="cap-card__titulo">'+textoSeguro(cap.title)+'</strong><span class="cap-card__sub">'+textoSeguro(cap.subtitle||'')+'</span></span><span class="cap-card__estado" aria-hidden="true">'+marca+'</span>',{type:'button'});
-      b.style.setProperty('--acento',acento(disc)); b.addEventListener('click',function(){abrirCapitulo(id,cap.id);}); lista.appendChild(b);
-    });
-    mostrar('tela-disciplina');
-  }
-
-  function abrirCapitulo(discId,capId,aba) {
-    var disc=discPorId(discId), cap=capPorId(disc,capId); if(!cap) return renderHome();
-    estado.disciplina=discId; estado.capitulo=capId; estado.ultimo={disciplina:discId,capitulo:capId};
-    estado.aba=aba||estado.areas[capId]||'teoria';
-    estado.passoDescoberta=Number(estado.leitura[capId])||0;
-    estado.passoDescoberta=Math.min(estado.passoDescober…7600 tokens truncated…<span>'+textoSeguro(p)+'</span>';}).join('');
+    var lista=$('#lista-capitulos'); lista.innerHTML='';…7929 tokens truncated…<span>'+textoSeguro(p)+'</span>';}).join('');
   }
   function horaDoTexto(txt) {var t=normalizar(txt);if(t.indexOf('meia noite')>=0)return 0;if(t.indexOf('meio dia')>=0)return 12;var m=t.match(/\d+/);return m?Number(m[0])%12:0;}
   function renderRelogio(stage,game,passo,perfil,concluir) {
