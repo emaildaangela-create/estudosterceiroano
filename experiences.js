@@ -6,7 +6,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'memoria', goal:'Jogo da memória dos graus', prompt:'Ache as duas cartas que combinam.', result:'todos os pares' }
   ],
   lp18: [
-    { mode:'builder', goal:'Criar palavras com -oso e -osa', prompt:'Qual palavra expressa essa característica?', result:'palavras' },
+    { mode:'factory', pilot:'factory', scene:'assets/games/piloto-lp18-fabrica.webp', goal:'Criar palavras com -oso e -osa', prompt:'Ligue a fábrica e transforme a expressão em uma nova palavra.', result:'palavras' },
     { mode:'choice', goal:'Separar nomes e características', prompt:'Esta palavra dá nome ou mostra uma característica?', result:'coleções' }
   ],
   lp19: [
@@ -26,7 +26,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'choice', goal:'Descobrir as pessoas do discurso', prompt:'Quem esta palavra representa na conversa?', result:'coleções' }
   ],
   mat09: [
-    { mode:'builder', goal:'Acionar a máquina de multiplicações', prompt:'Qual resultado faz a máquina funcionar?', result:'máquina' },
+    { mode:'outfit', pilot:'outfit', scene:'assets/games/piloto-mat09-maquina.webp', goal:'Acionar a máquina de multiplicação', prompt:'Qual resultado faz a máquina funcionar?', result:'coleção de multiplicações' },
     { mode:'combinations', goal:'Investigar duas ideias da multiplicação', prompt:'A situação combina escolhas ou repete grupos iguais?', result:'painel de estratégias' }
   ],
   mat10: [
@@ -38,7 +38,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'scenario', goal:'Descobrir quando sobra alguma coisa', prompt:'Essa divisão termina sem resto?', result:'divisões' }
   ],
   cie09: [
-    { mode:'explore', goal:'Montar um modelo das camadas da Terra', prompt:'Qual descrição pertence a esta parte da Terra?', result:'planeta' },
+    { mode:'earth', pilot:'earth', scene:'assets/games/piloto-cie09-terra.webp', goal:'Montar um modelo das camadas da Terra', prompt:'Coloque a descrição na parte correta do laboratório.', result:'modelo da Terra' },
     { mode:'scenario', goal:'Investigar forças que transformam a Terra', prompt:'Essa transformação começa dentro ou fora da Terra?', result:'investigação' }
   ],
   cie10: [
@@ -50,7 +50,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'scenario', goal:'Escolher um lugar para observar estrelas', prompt:'Esta condição ajuda ou atrapalha a observação?', result:'observatório' }
   ],
   geo09: [
-    { mode:'scenario', goal:'Montar um município com campo e cidade', prompt:'Em que parte do município esta atividade é comum?', result:'município' },
+    { mode:'municipality', pilot:'municipality', scene:'assets/games/piloto-geo09-municipio.webp', goal:'Montar um município com campo e cidade', prompt:'Leve cada atividade para o lugar onde ela costuma acontecer.', result:'município' },
     { mode:'explore', goal:'Criar um glossário de Geografia', prompt:'Qual explicação combina com este conceito?', result:'glossário' }
   ],
   geo10: [
@@ -62,7 +62,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'sequence', goal:'Construir o caminho da água limpa', prompt:'Qual é a próxima etapa do tratamento?', result:'estação de tratamento' }
   ],
   hist09: [
-    { mode:'scenario', goal:'Organizar os espaços de uma comunidade', prompt:'Este espaço pertence a qual grupo?', result:'mapa da comunidade' },
+    { mode:'community', pilot:'community', scene:'assets/games/piloto-hist09-comunidade.webp', goal:'Organizar os espaços de uma comunidade', prompt:'Coloque cada espaço no painel público ou privado.', result:'mapa da comunidade' },
     { mode:'explore', goal:'Descobrir a função dos espaços públicos', prompt:'Que função este espaço cumpre?', result:'guia comunitário' }
   ],
   hist10: [

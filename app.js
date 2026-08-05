@@ -577,7 +577,8 @@
     card.appendChild(criar('h3','jogo-pergunta',textoSeguro(perfil.prompt)));
     var stage=criar('div','game-stage');card.appendChild(stage);raiz.appendChild(card);
     var concluir=function(){marcarPasso(cap,game,perfil,salvo);};
-    if(perfil.mode==='memoria') renderMemoria(stage,game,perfil,cap,salvo,
+    if(perfil.pilot) renderPilotoVisual(stage,cap,game,passo,perfil,concluir);
+    else if(perfil.mode==='memoria') renderMemoria(stage,game,perfil,cap,salvo,
       function(){marcarPasso(cap,game,perfil,salvo,true);},    /* guarda, sem redesenhar */
       function(){renderJogos(cap);irTopo();});                  /* aí sim mostra o resultado */
     else if(perfil.mode==='cartaz') renderCartaz(stage,game,passo,perfil,concluir);
@@ -590,6 +591,40 @@
     else if(perfil.mode==='sequence') renderSequenciaJogo(stage,game,passo,perfil,concluir);
     else if(perfil.mode==='transform') renderTransformacaoJogo(stage,game,passo,perfil,concluir);
     else if(game.type==='pairs')renderConstrucao(stage,game,passo,perfil,concluir);else renderEscolhaUnica(stage,game,passo,perfil,concluir);
+  }
+  function renderPilotoVisual(stage,cap,game,passo,perfil,concluir) {
+    var cena=criar('div','piloto piloto--'+perfil.pilot);
+    cena.style.backgroundImage='url("'+perfil.scene+'")';
+    stage.appendChild(cena);
+    if(perfil.pilot==='outfit')renderPilotoArmario(stage,cena,game,passo,concluir);
+    else if(perfil.pilot==='municipality')renderPilotoMapa(stage,cena,game,passo,concluir,false);
+    else if(perfil.pilot==='community')renderPilotoMapa(stage,cena,game,passo,concluir,true);
+    else if(perfil.pilot==='factory')renderPilotoFabrica(stage,cena,game,passo,concluir);
+    else if(perfil.pilot==='earth')renderPilotoTerra(stage,cena,game,passo,concluir);
+  }
+  function escolhasPiloto(lista,correta,limite) {
+    return opcoesEmbaralhadas(lista.filter(function(x){return x!==correta;}),correta,limite||3);
+  }
+  function renderPilotoArmario(stage,cena,game,passo,concluir) {
+    var par=game.pairs[passo], nums=String(par[0]).match(/\d+/g)||[], a=Number(nums[0]||1), b=Number(nums[1]||1), respostas=game.pairs.map(function(p){return p[1];});
+    var painel=criar('div','piloto__painel piloto__painel--centro','<span class="piloto__chamada">Máquina de multiplicar</span><strong>'+textoSeguro(par[0])+'</strong><p>Escolha a peça de saída</p>');cena.appendChild(painel);
+    var opcoes=criar('div','piloto-escolhas piloto-escolhas--cabides');
+    escolhasPiloto(respostas,par[1],4).forEach(function(op){var bt=criar('button','piloto-peca piloto-peca--cabide','<span aria-hidden="true">⚙️</span><strong>'+textoSeguro(op)+'</strong>',{type:'button'});bt.addEventListener('click',function(){if(op===par[1]){painel.innerHTML='<span class="piloto__chamada">Máquina ligada!</span><strong>'+textoSeguro(par[0])+' = '+textoSeguro(op)+'</strong><p>resultado correto</p>';feedbackInterativo(stage,true,a+' × '+b+' = '+op+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,'Observe o que acontece quando multiplicamos por 1, 10 ou 100.');}});opcoes.appendChild(bt);});stage.appendChild(opcoes);
+  }
+  function renderPilotoMapa(stage,cena,game,passo,concluir,comunidade) {
+    var item=game.items[passo], zonas=comunidade?['Espaço público','Espaço privado']:['Área rural','Área urbana'];
+    cena.appendChild(criar('div','piloto__cartao-movel','<span aria-hidden="true">'+(comunidade?'📍':'🧭')+'</span><strong>'+textoSeguro(item.text)+'</strong><small>Toque no destino</small>'));
+    var destinos=criar('div','piloto-destinos');zonas.forEach(function(nome,i){var bt=criar('button','piloto-destino piloto-destino--'+(i?'direita':'esquerda'),'<span>'+textoSeguro(nome)+'</span>',{type:'button'});bt.addEventListener('click',function(){if(i===item.cat){bt.classList.add('piloto-destino--certo');feedbackInterativo(stage,true,item.text+' foi colocado em '+nome.toLowerCase()+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,comunidade?'Pense em quem pode entrar e usar esse espaço.':'Observe se essa atividade depende mais do campo ou da cidade.');}});destinos.appendChild(bt);});cena.appendChild(destinos);
+  }
+  function renderPilotoFabrica(stage,cena,game,passo,concluir) {
+    var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];});
+    cena.appendChild(criar('div','piloto__painel piloto__painel--maquina','<span class="piloto__chamada">Entra na fábrica</span><strong>'+textoSeguro(par[0])+'</strong><p class="piloto__saida">?</p>'));
+    var pecas=criar('div','piloto-escolhas piloto-escolhas--letras');escolhasPiloto(respostas,par[1],3).forEach(function(op){var bt=criar('button','piloto-peca piloto-peca--letra',textoSeguro(op),{type:'button'});bt.addEventListener('click',function(){if(op===par[1]){cena.querySelector('.piloto__saida').textContent=op;cena.classList.add('piloto--ativado');feedbackInterativo(stage,true,par[0]+' vira '+op+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,'Procure a palavra terminada em -oso ou -osa que mantém a ideia da expressão.');}});pecas.appendChild(bt);});stage.appendChild(pecas);
+  }
+  function renderPilotoTerra(stage,cena,game,passo,concluir) {
+    var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];});
+    cena.appendChild(criar('div','piloto__painel piloto__painel--terra','<span class="piloto__chamada">Peça do modelo</span><strong>'+textoSeguro(par[0])+'</strong>'));
+    var bandejas=criar('div','piloto-escolhas piloto-escolhas--bandejas');escolhasPiloto(respostas,par[1],3).forEach(function(op){var bt=criar('button','piloto-peca piloto-peca--bandeja',textoSeguro(op),{type:'button'});bt.addEventListener('click',function(){if(op===par[1]){cena.classList.add('piloto--ativado');feedbackInterativo(stage,true,par[0]+': '+op+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,'Observe se a palavra fala de água, ar, rochas ou do interior do planeta.');}});bandejas.appendChild(bt);});stage.appendChild(bandejas);
   }
   function renderConclusaoExperiencia(raiz,cap,game,perfil,salvo,total) {
     var arte=game&&game.artifact, box;
