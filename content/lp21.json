@@ -96,7 +96,7 @@
   "quiz": [
     {
       "type": "mc",
-      "q": "Cascão é conhecido por não gostar de água. Na tira, ele prefere dormir do lado de fora da casa a entrar nela, pois:",
+      "q": "Cascão evita água. Para entrar em casa, teria de lavar os pés. Por que ele decide dormir do lado de fora?",
       "options": ["Não queria incomodar a mãe", "Não gostaria de lavar os pés", "Gosta de dormir do lado de fora", "Estava uma noite quente"],
       "answer": 1,
       "explain": "A piada depende de conhecer o personagem: Cascão foge de água. Entrar em casa significaria lavar os pés, então ele preferiu passar a noite na calçada."
@@ -124,15 +124,15 @@
     },
     {
       "type": "text",
-      "q": "Na HQ, o que Mônica fez para enfrentar o medo de altura? Complete: ela foi se acostumando aos ______.",
+      "q": "Mônica começou por pedras baixas, depois subiu em bancos e degraus. Ela enfrentou o medo de uma vez ou aos poucos?",
       "answers": ["pouquinhos", "poucos", "aos pouquinhos", "pouquinhos.", "devagarzinho", "aos poucos"],
       "explain": "Ela foi aos pouquinhos: primeiro pedras, depois banquinhos, depois degraus da escada e, por fim, olhar pela janela da casa da avó. Treinando e se acostumando, sem pressa."
     },
     {
       "type": "text",
-      "q": "De que animal Marina tem medo na história?",
-      "answers": ["cachorro", "cachorros", "de cachorros", "de cachorro", "cao", "caes"],
-      "explain": "De cachorros. Ela conta que fica com as pernas bambas e não para de tremer — e o balão dessa fala aparece tremido, mostrando o nervosismo."
+      "q": "Marina fica com as pernas bambas e o balão de fala aparece tremido. Que sentimento esses sinais mostram?",
+      "answers": ["medo", "o medo", "nervosismo", "nervosa", "que ela esta com medo"],
+      "explain": "As pernas bambas e o balão tremido mostram medo ou nervosismo. Nos quadrinhos, palavras e desenhos trabalham juntos."
     },
     {
       "type": "text",
@@ -148,10 +148,10 @@
     },
     {
       "type": "mc",
-      "q": "Qual destas NÃO é uma forma saudável de lidar com o medo?",
-      "options": ["Buscar uma técnica de relaxamento", "Fingir que não tem medo nenhum", "Conversar com um adulto sobre o medo", "Ler histórias com personagens em situações parecidas"],
-      "answer": 1,
-      "explain": "Fingir esconde o problema em vez de resolvê-lo. As emoções existem para nos proteger e nos preparar — reconhecer o medo é o primeiro passo para enfrentá-lo."
+      "q": "Qual atitude pode ajudar uma criança a lidar com o medo?",
+      "options": ["Conversar com um adulto de confiança", "Esconder o medo de todas as pessoas", "Enfrentar uma situação perigosa sem ajuda", "Zombar de quem sente medo"],
+      "answer": 0,
+      "explain": "Conversar com um adulto de confiança ajuda a compreender o medo e encontrar uma maneira segura de enfrentá-lo."
     },
     {
       "type": "mc",

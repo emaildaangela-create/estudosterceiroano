@@ -100,22 +100,22 @@
     },
     {
       "type": "mc",
-      "q": "De acordo com o conto 'Uma aula de música do meu avô', sempre vemos as coisas:",
-      "options": ["Maiores que o nosso tamanho e, quando somos grandes, vemos as coisas maiores ainda", "De acordo com o nosso tamanho, então, quando somos pequenos, tudo parece enorme", "Do tamanho que elas realmente são, mesmo quando somos pequenos", "Menores do que realmente são quando somos crianças"],
-      "answer": 1,
-      "explain": "O narrador diz: 'talvez nem fosse tão grande assim; mas para mim, naquela época, era. E a gente sempre vê as coisas de acordo com o nosso tamanho'."
+      "q": "O narrador lembra que, quando era pequeno, a sala parecia enorme. O que essa lembrança mostra?",
+      "options": ["A maneira de perceber os lugares pode mudar com a idade", "A sala aumentava de tamanho todos os anos", "As crianças sempre enxergam tudo menor", "A casa do avô mudava de lugar"],
+      "answer": 0,
+      "explain": "O narrador mostra que nossa maneira de perceber os lugares pode mudar conforme crescemos."
     },
     {
       "type": "text",
-      "q": "Por meio de qual objeto o narrador do conto costumava ouvir música na casa do avô?",
-      "answers": ["radio", "o radio", "pelo radio", "radio."],
-      "explain": "Era o rádio, que o avô deixava ligado na estação de música clássica. Ele também escolhia discos, mas naquele domingo específico a música que gerou a discussão tocava no rádio."
+      "q": "Na expressão 'rádio antigo', qual palavra mostra uma característica do rádio?",
+      "answers": ["antigo", "a palavra antigo"],
+      "explain": "A palavra 'antigo' caracteriza o rádio. Por isso, ela é um adjetivo."
     },
     {
       "type": "text",
-      "q": "Qual era a idade aproximada do narrador na época do acontecimento relatado? (escreva o número)",
-      "answers": ["7", "8", "sete", "oito", "7 ou 8", "sete ou oito", "7 ou 8 anos", "sete ou oito anos"],
-      "explain": "Ele diz: 'Eu devia ter uns sete ou oito anos'. Era um menino pequeno — mais ou menos a sua idade!"
+      "q": "A frase 'Eu devia ter sete ou oito anos' apresenta uma lembrança do passado, do presente ou do futuro?",
+      "answers": ["passado", "do passado", "uma lembranca do passado"],
+      "explain": "A frase conta algo que já aconteceu. Relatar fatos do passado é uma característica do conto de memórias."
     },
     {
       "type": "text",
@@ -131,15 +131,15 @@
     },
     {
       "type": "mc",
-      "q": "Qual foi a atitude do avô ao descobrir que o menino tinha razão sobre a música?",
-      "options": ["Fingiu que não tinha ouvido o locutor", "Atravessou a sala, olhou o menino nos olhos e pediu desculpas", "Explicou por que tinha se confundido", "Trocou de assunto durante o almoço"],
-      "answer": 1,
-      "explain": "O avô disse: 'Desculpe. Você tinha razão. Eu quero lhe pedir desculpas'. Foi essa atitude — de um adulto respeitado reconhecendo o próprio erro — que o narrador nunca esqueceu."
+      "q": "O avô percebeu que o menino tinha razão e pediu desculpas. Que atitude isso demonstra?",
+      "options": ["Reconhecer o próprio erro", "Ignorar a opinião da criança", "Mudar de assunto", "Esconder o que aconteceu"],
+      "answer": 0,
+      "explain": "Pedir desculpas mostra que o avô reconheceu o próprio erro e respeitou a opinião do menino."
     },
     {
       "type": "mc",
       "q": "O que diferencia uma linha do tempo de um conto de memórias?",
-      "options": ["A linha do tempo é sempre sobre pessoas famosas", "A linha do tempo organiza os eventos em ordem cronológica; o conto de memórias não precisa seguir essa ordem", "O conto de memórias usa apenas imagens", "Não há diferença entre os dois"],
+      "options": ["A linha do tempo é sempre sobre pessoas famosas", "A linha do tempo organiza os fatos por data", "O conto de memórias usa apenas imagens", "Os dois textos são iguais"],
       "answer": 1,
       "explain": "A linha do tempo é definida pela ordem cronológica — a ordem exata em que os fatos aconteceram. Já o conto de memórias segue o fluxo das lembranças, podendo ir e voltar no tempo."
     }

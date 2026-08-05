@@ -266,17 +266,17 @@
     },
     {
       "type": "mc",
-      "q": "Relacione a formação do diminutivo: (1) -inho, (2) -sinho, (3) -zinho, com as palavras vaso, sapato, anel. Qual é a sequência correta para a segunda coluna?",
-      "options": ["1 – 2 – 3", "2 – 3 – 1", "2 – 1 – 3", "3 – 1 – 2"],
-      "answer": 2,
-      "explain": "Vaso termina com sílaba que tem s → vasinho (-sinho, opção 2). Sapato não tem s na última sílaba → sapatinho (-inho, opção 1). Anel → anelzinho (-zinho, opção 3). A sequência é 2 – 1 – 3."
+      "q": "Qual grupo apresenta as três palavras no diminutivo?",
+      "options": ["vasinho – sapatinho – anelzinho", "vasão – sapatão – anelão", "vaso – sapato – anel", "vasos – sapatos – anéis"],
+      "answer": 0,
+      "explain": "Os diminutivos são vasinho, sapatinho e anelzinho. Aqui você observa diretamente como cada palavra foi formada."
     },
     {
       "type": "mc",
-      "q": "Na tirinha, Magali diz 'Eu quelo um saco de pipoca!' e o menino pergunta 'E a garotinha?'. Marque a afirmativa correta.",
-      "options": ["Não há nenhum substantivo no grau diminutivo", "O diminutivo que aparece na tirinha indica o tamanho da Magali", "O substantivo garotinha está no grau normal", "No primeiro quadrinho, o diminutivo expressa afeto"],
-      "answer": 3,
-      "explain": "'Garotinha' é um substantivo no grau diminutivo, mas não fala do tamanho da Magali — expressa afeto, carinho. Lembre-se: os graus podem indicar sentimentos, e não apenas tamanho."
+      "q": "Na frase 'Venha cá, filhinha', o diminutivo expressa qual sentimento?",
+      "options": ["Carinho", "Raiva", "Medo", "Desprezo"],
+      "answer": 0,
+      "explain": "Nesse contexto, 'filhinha' expressa carinho. O diminutivo pode indicar um sentimento, e não apenas tamanho."
     },
     {
       "type": "text",

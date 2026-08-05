@@ -93,10 +93,10 @@
     },
     {
       "type": "mc",
-      "q": "Na divisão 72 ÷ 8 = 9, com resto 0, temos que:",
-      "options": ["72 é o divisor; 8 é o dividendo; 9 é o quociente; 0 é o resto", "72 é o dividendo; 8 é o divisor; 9 é o quociente; 0 é o resto", "72 é o dividendo; 8 é o quociente; 9 é o divisor; 0 é o resto", "72 é o divisor; 8 é o resto; 9 é o quociente; 0 é o dividendo"],
+      "q": "Na divisão 72 ÷ 8 = 9, qual número é o divisor?",
+      "options": ["72", "8", "9", "0"],
       "answer": 1,
-      "explain": "O dividendo é o número que está sendo dividido (72), o divisor indica em quantas partes (8), o quociente é o resultado (9) e o resto é o que sobra (0)."
+      "explain": "O divisor é 8. Ele indica em quantas partes iguais o número 72 será dividido."
     },
     {
       "type": "mc",
@@ -131,7 +131,7 @@
     },
     {
       "type": "mc",
-      "q": "Marcela e Adriana vão dividir igualmente uma camiseta de R$ 56,00. Se tivessem mais 2 irmãos para dividir (4 pessoas ao todo), quanto cada um pagaria?",
+      "q": "Quatro irmãos vão dividir igualmente o preço de uma camiseta de R$ 56. Quanto cada pessoa pagará?",
       "options": ["R$ 28,00", "R$ 14,00", "R$ 12,00", "R$ 26,00"],
       "answer": 1,
       "explain": "Com 4 pessoas: 56 ÷ 4 = 14. Conferindo: 14 × 4 = 56. Cada um pagaria R$ 14,00 (metade da metade de 56)."

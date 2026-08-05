@@ -310,27 +310,27 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Relacione a formação do diminutivo: (1) -inho, (2) -sinho, (3) -zinho, com as palavras vaso, sapato, anel. Qual é a sequência correta para a segunda coluna?",
+            "q": "Qual grupo apresenta as três palavras no diminutivo?",
             "options": [
-              "1 – 2 – 3",
-              "2 – 3 – 1",
-              "2 – 1 – 3",
-              "3 – 1 – 2"
+              "vasinho – sapatinho – anelzinho",
+              "vasão – sapatão – anelão",
+              "vaso – sapato – anel",
+              "vasos – sapatos – anéis"
             ],
-            "answer": 2,
-            "explain": "Vaso termina com sílaba que tem s → vasinho (-sinho, opção 2). Sapato não tem s na última sílaba → sapatinho (-inho, opção 1). Anel → anelzinho (-zinho, opção 3). A sequência é 2 – 1 – 3."
+            "answer": 0,
+            "explain": "Os diminutivos são vasinho, sapatinho e anelzinho. Aqui você observa diretamente como cada palavra foi formada."
           },
           {
             "type": "mc",
-            "q": "Na tirinha, Magali diz 'Eu quelo um saco de pipoca!' e o menino pergunta 'E a garotinha?'. Marque a afirmativa correta.",
+            "q": "Na frase 'Venha cá, filhinha', o diminutivo expressa qual sentimento?",
             "options": [
-              "Não há nenhum substantivo no grau diminutivo",
-              "O diminutivo que aparece na tirinha indica o tamanho da Magali",
-              "O substantivo garotinha está no grau normal",
-              "No primeiro quadrinho, o diminutivo expressa afeto"
+              "Carinho",
+              "Raiva",
+              "Medo",
+              "Desprezo"
             ],
-            "answer": 3,
-            "explain": "'Garotinha' é um substantivo no grau diminutivo, mas não fala do tamanho da Magali — expressa afeto, carinho. Lembre-se: os graus podem indicar sentimentos, e não apenas tamanho."
+            "answer": 0,
+            "explain": "Nesse contexto, 'filhinha' expressa carinho. O diminutivo pode indicar um sentimento, e não apenas tamanho."
           },
           {
             "type": "text",
@@ -565,41 +565,34 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "De acordo com o conto 'Uma aula de música do meu avô', sempre vemos as coisas:",
+            "q": "O narrador lembra que, quando era pequeno, a sala parecia enorme. O que essa lembrança mostra?",
             "options": [
-              "Maiores que o nosso tamanho e, quando somos grandes, vemos as coisas maiores ainda",
-              "De acordo com o nosso tamanho, então, quando somos pequenos, tudo parece enorme",
-              "Do tamanho que elas realmente são, mesmo quando somos pequenos",
-              "Menores do que realmente são quando somos crianças"
+              "A maneira de perceber os lugares pode mudar com a idade",
+              "A sala aumentava de tamanho todos os anos",
+              "As crianças sempre enxergam tudo menor",
+              "A casa do avô mudava de lugar"
             ],
-            "answer": 1,
-            "explain": "O narrador diz: 'talvez nem fosse tão grande assim; mas para mim, naquela época, era. E a gente sempre vê as coisas de acordo com o nosso tamanho'."
+            "answer": 0,
+            "explain": "O narrador mostra que nossa maneira de perceber os lugares pode mudar conforme crescemos."
           },
           {
             "type": "text",
-            "q": "Por meio de qual objeto o narrador do conto costumava ouvir música na casa do avô?",
+            "q": "Na expressão 'rádio antigo', qual palavra mostra uma característica do rádio?",
             "answers": [
-              "radio",
-              "o radio",
-              "pelo radio",
-              "radio."
+              "antigo",
+              "a palavra antigo"
             ],
-            "explain": "Era o rádio, que o avô deixava ligado na estação de música clássica. Ele também escolhia discos, mas naquele domingo específico a música que gerou a discussão tocava no rádio."
+            "explain": "A palavra 'antigo' caracteriza o rádio. Por isso, ela é um adjetivo."
           },
           {
             "type": "text",
-            "q": "Qual era a idade aproximada do narrador na época do acontecimento relatado? (escreva o número)",
+            "q": "A frase 'Eu devia ter sete ou oito anos' apresenta uma lembrança do passado, do presente ou do futuro?",
             "answers": [
-              "7",
-              "8",
-              "sete",
-              "oito",
-              "7 ou 8",
-              "sete ou oito",
-              "7 ou 8 anos",
-              "sete ou oito anos"
+              "passado",
+              "do passado",
+              "uma lembranca do passado"
             ],
-            "explain": "Ele diz: 'Eu devia ter uns sete ou oito anos'. Era um menino pequeno — mais ou menos a sua idade!"
+            "explain": "A frase conta algo que já aconteceu. Relatar fatos do passado é uma característica do conto de memórias."
           },
           {
             "type": "text",
@@ -622,24 +615,24 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Qual foi a atitude do avô ao descobrir que o menino tinha razão sobre a música?",
+            "q": "O avô percebeu que o menino tinha razão e pediu desculpas. Que atitude isso demonstra?",
             "options": [
-              "Fingiu que não tinha ouvido o locutor",
-              "Atravessou a sala, olhou o menino nos olhos e pediu desculpas",
-              "Explicou por que tinha se confundido",
-              "Trocou de assunto durante o almoço"
+              "Reconhecer o próprio erro",
+              "Ignorar a opinião da criança",
+              "Mudar de assunto",
+              "Esconder o que aconteceu"
             ],
-            "answer": 1,
-            "explain": "O avô disse: 'Desculpe. Você tinha razão. Eu quero lhe pedir desculpas'. Foi essa atitude — de um adulto respeitado reconhecendo o próprio erro — que o narrador nunca esqueceu."
+            "answer": 0,
+            "explain": "Pedir desculpas mostra que o avô reconheceu o próprio erro e respeitou a opinião do menino."
           },
           {
             "type": "mc",
             "q": "O que diferencia uma linha do tempo de um conto de memórias?",
             "options": [
               "A linha do tempo é sempre sobre pessoas famosas",
-              "A linha do tempo organiza os eventos em ordem cronológica; o conto de memórias não precisa seguir essa ordem",
+              "A linha do tempo organiza os fatos por data",
               "O conto de memórias usa apenas imagens",
-              "Não há diferença entre os dois"
+              "Os dois textos são iguais"
             ],
             "answer": 1,
             "explain": "A linha do tempo é definida pela ordem cronológica — a ordem exata em que os fatos aconteceram. Já o conto de memórias segue o fluxo das lembranças, podendo ir e voltar no tempo."
@@ -803,15 +796,15 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Que prêmio Santos Dumont recebeu ao voar com o 14-Bis?",
+            "q": "Leia: 1898 — dirigível; 1906 — voo do 14-Bis; 1926 — campanha pela paz. Qual fato aconteceu primeiro?",
             "options": [
-              "A Liga das Nações",
-              "A Taça Archdeacon",
-              "O Prêmio Nobel",
-              "A Medalha do Dirigível"
+              "A construção do dirigível",
+              "O voo do 14-Bis",
+              "A campanha pela paz",
+              "Os três aconteceram juntos"
             ],
-            "answer": 1,
-            "explain": "O feito com o 14-Bis rendeu-lhe a Taça Archdeacon, na França. A Liga das Nações não é prêmio: era a organização internacional que ele procurou em 1926 para impedir o uso do avião em guerras."
+            "answer": 0,
+            "explain": "A construção do dirigível aconteceu em 1898, antes dos fatos de 1906 e 1926. A linha do tempo ajuda a comparar a ordem dos acontecimentos."
           },
           {
             "type": "text",
@@ -843,22 +836,24 @@ const DISCIPLINAS = [
           },
           {
             "type": "text",
-            "q": "Em que ano Santos Dumont construiu o dirigível, um balão que voava mais rápido e podia ser controlado?",
+            "q": "Leia: '1898 — construiu um dirigível; 1906 — voou com o 14-Bis.' O que Santos Dumont construiu primeiro?",
             "answers": [
-              "1898",
-              "em 1898",
-              "20 de setembro de 1898"
+              "dirigivel",
+              "um dirigivel",
+              "o dirigivel",
+              "balao dirigivel",
+              "um balao dirigivel"
             ],
-            "explain": "Foi em 20 de setembro de 1898. Ele havia se mudado para a França em 1892 e feito seu primeiro voo de balão seis anos depois."
+            "explain": "Ele construiu um dirigível. A informação está na primeira data da linha do tempo."
           },
           {
             "type": "mc",
             "q": "Santos Dumont desejava que suas invenções fossem usadas em guerras?",
             "options": [
-              "Sim, ele projetou o 14-Bis para uso militar",
-              "Não — ele ficou triste e chegou a procurar a Liga das Nações para impedir esse uso",
-              "Ele nunca soube que os aviões eram usados em guerras",
-              "Sim, foi assim que ganhou a Taça Archdeacon"
+              "Sim, ele criou o avião para as guerras",
+              "Não, ele tentou impedir esse uso",
+              "Ele nunca soube das guerras",
+              "Sim, esse era seu principal objetivo"
             ],
             "answer": 1,
             "explain": "Ele defendia o avião como forma de aproximar os países. Ao descobrir o uso militar, ficou triste e em 1926 apelou à Liga das Nações — sem sucesso, o que agravou sua saúde."
@@ -1040,19 +1035,19 @@ const DISCIPLINAS = [
               "Uma tirinha em quadrinhos com um personagem refletindo"
             ],
             "answer": 1,
-            "explain": "Ele tem tudo o que define um classificado: o que é negociado (sapatilhas de balé), a finalidade (venda) e o contato (Liza e o telefone). A primeira é notícia, a terceira é calendário e a quarta é tirinha."
+            "explain": "O anúncio informa o produto, a finalidade da negociação e uma forma de contato. Esses elementos ajudam o interessado a compreender e responder."
           },
           {
             "type": "mc",
-            "q": "No livro 'Procura-se Lobo', por que Manuel Lobo se candidatou à vaga do anúncio?",
+            "q": "O anúncio dizia apenas 'Procura-se Lobo'. Por que Manuel Lobo pensou que poderia se candidatar?",
             "options": [
               "Porque ele era um lobo de verdade",
-              "Porque o texto do anúncio não era claro e ele achou que a empresa procurava alguém com o sobrenome Lobo",
-              "Porque ele queria participar de um documentário",
-              "Porque o anúncio pedia experiência em leitura"
+              "Porque Lobo era seu sobrenome",
+              "Porque queria participar de um filme",
+              "Porque o anúncio pedia um leitor"
             ],
             "answer": 1,
-            "explain": "A empresa queria um lobo bicho mesmo, mas o anúncio não deixou isso claro. Manuel era Lobo de sobrenome — e acabou contratado porque escrevia bem, virando respondedor das cartas dos lobos."
+            "explain": "Como o anúncio não explicou que procurava o animal, Manuel pensou que 'Lobo' poderia ser o sobrenome do candidato."
           },
           {
             "type": "text",
@@ -1258,7 +1253,7 @@ const DISCIPLINAS = [
         "quiz": [
           {
             "type": "mc",
-            "q": "Cascão é conhecido por não gostar de água. Na tira, ele prefere dormir do lado de fora da casa a entrar nela, pois:",
+            "q": "Cascão evita água. Para entrar em casa, teria de lavar os pés. Por que ele decide dormir do lado de fora?",
             "options": [
               "Não queria incomodar a mãe",
               "Não gostaria de lavar os pés",
@@ -1306,7 +1301,7 @@ const DISCIPLINAS = [
           },
           {
             "type": "text",
-            "q": "Na HQ, o que Mônica fez para enfrentar o medo de altura? Complete: ela foi se acostumando aos ______.",
+            "q": "Mônica começou por pedras baixas, depois subiu em bancos e degraus. Ela enfrentou o medo de uma vez ou aos poucos?",
             "answers": [
               "pouquinhos",
               "poucos",
@@ -1319,16 +1314,15 @@ const DISCIPLINAS = [
           },
           {
             "type": "text",
-            "q": "De que animal Marina tem medo na história?",
+            "q": "Marina fica com as pernas bambas e o balão de fala aparece tremido. Que sentimento esses sinais mostram?",
             "answers": [
-              "cachorro",
-              "cachorros",
-              "de cachorros",
-              "de cachorro",
-              "cao",
-              "caes"
+              "medo",
+              "o medo",
+              "nervosismo",
+              "nervosa",
+              "que ela esta com medo"
             ],
-            "explain": "De cachorros. Ela conta que fica com as pernas bambas e não para de tremer — e o balão dessa fala aparece tremido, mostrando o nervosismo."
+            "explain": "As pernas bambas e o balão tremido mostram medo ou nervosismo. Nos quadrinhos, palavras e desenhos trabalham juntos."
           },
           {
             "type": "text",
@@ -1353,15 +1347,15 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Qual destas NÃO é uma forma saudável de lidar com o medo?",
+            "q": "Qual atitude pode ajudar uma criança a lidar com o medo?",
             "options": [
-              "Buscar uma técnica de relaxamento",
-              "Fingir que não tem medo nenhum",
-              "Conversar com um adulto sobre o medo",
-              "Ler histórias com personagens em situações parecidas"
+              "Conversar com um adulto de confiança",
+              "Esconder o medo de todas as pessoas",
+              "Enfrentar uma situação perigosa sem ajuda",
+              "Zombar de quem sente medo"
             ],
-            "answer": 1,
-            "explain": "Fingir esconde o problema em vez de resolvê-lo. As emoções existem para nos proteger e nos preparar — reconhecer o medo é o primeiro passo para enfrentá-lo."
+            "answer": 0,
+            "explain": "Conversar com um adulto de confiança ajuda a compreender o medo e encontrar uma maneira segura de enfrentá-lo."
           },
           {
             "type": "mc",
@@ -1521,7 +1515,7 @@ const DISCIPLINAS = [
         "quiz": [
           {
             "type": "mc",
-            "q": "Quais são as características do rei no conto 'O homem mais rico do mundo'?",
+            "q": "O conto apresenta um rei muito rico que gostava de ajudar seu povo. Qual descrição combina com ele?",
             "options": [
               "Era maldoso e nunca ajudava o povo",
               "Era uma pessoa que nunca se enganava",
@@ -1529,11 +1523,11 @@ const DISCIPLINAS = [
               "Era pobre e vivia numa colina"
             ],
             "answer": 2,
-            "explain": "O conto começa dizendo que havia um rei muito rico que gostava de ajudar todas as pessoas que tinham menos do que ele. Ele até se enganou algumas vezes: muitos fingiam ser pobres para receber ajuda."
+            "explain": "O rei era muito rico e gostava de ajudar quem tinha menos. Essas informações aparecem no início do conto."
           },
           {
             "type": "mc",
-            "q": "Por que o rei desejava conhecer o homem considerado muito pobre?",
+            "q": "O rei disse: 'Preciso conhecê-lo para poder ajudá-lo'. Por que ele procurou o homem da colina?",
             "options": [
               "Porque ele desejava ajudá-lo",
               "Porque pretendia expulsar os pobres de seu reino",
@@ -1545,15 +1539,15 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "De acordo com as características do conto popular, qual afirmativa é FALSA?",
+            "q": "Qual é uma característica dos contos populares?",
             "options": [
-              "São transmitidos de geração em geração",
-              "Podem apresentar animais com características humanas como personagens",
-              "O narrador sempre participa das histórias",
-              "Em geral, são textos curtos"
+              "Podem ser transmitidos de geração em geração",
+              "Sempre apresentam fatos científicos",
+              "São escritos somente como notícias",
+              "Precisam ter instruções numeradas"
             ],
-            "answer": 2,
-            "explain": "No conto popular o narrador NÃO participa da história — ele apenas observa e conta o que acontece. As outras três afirmações são características verdadeiras do gênero."
+            "answer": 0,
+            "explain": "Os contos populares podem ser transmitidos de geração em geração e apresentar diferentes versões."
           },
           {
             "type": "mc",
@@ -1569,7 +1563,7 @@ const DISCIPLINAS = [
           },
           {
             "type": "text",
-            "q": "No conto africano, por que o burro ficou com a cor sem graça e amarelada?",
+            "q": "A zebra prometeu ajudar o burro, mas correu para o concurso. O burro tentou se pintar sozinho. Por que ele ficou todo borrado?",
             "answers": [
               "porque a zebra nao o ajudou",
               "a zebra nao o ajudou",
@@ -1604,7 +1598,7 @@ const DISCIPLINAS = [
           },
           {
             "type": "text",
-            "q": "Qual era a verdadeira riqueza do homem que vivia na colina, segundo o rei?",
+            "q": "O rei disse ao homem da colina: 'Sua riqueza é essa liberdade e esse contato com a natureza'. Qual era a riqueza dele?",
             "answers": [
               "a liberdade",
               "liberdade",
@@ -1616,27 +1610,27 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Larissa encontra Gabriel e pergunta: '— Você sabe onde está a Renata? Preciso entregar um livro a ela.' Quais pronomes pessoais se referem, respectivamente, a Larissa, Gabriel e Renata?",
+            "q": "Larissa diz: 'Preciso entregar um livro à Renata'. Qual pronome pode substituir 'Renata'?",
             "options": [
-              "eu, você, ela",
-              "eu, ele, ela",
-              "tu, ele, eu",
-              "ela, eu, você"
+              "Ela",
+              "Eu",
+              "Nós",
+              "Você"
             ],
             "answer": 0,
-            "explain": "Larissa é quem fala (1ª pessoa: eu); Gabriel é com quem ela fala (2ª pessoa: você); Renata é de quem se fala (3ª pessoa: ela)."
+            "explain": "O pronome 'ela' pode substituir Renata, a pessoa de quem Larissa está falando."
           },
           {
             "type": "mc",
-            "q": "No conto africano, qual animal ganhou o concurso para ser rei da floresta?",
+            "q": "A zebra prometeu ajudar o burro, mas foi embora depois de receber ajuda. Que atitude faltou a ela?",
             "options": [
-              "A zebra",
-              "O elefante",
-              "O leão",
-              "A lebre"
+              "Cumprir o combinado e ajudar o outro",
+              "Correr mais rápido para o concurso",
+              "Escolher novas cores para as listras",
+              "Pedir ao leão para decidir tudo"
             ],
-            "answer": 2,
-            "explain": "O vencedor foi o leão. A zebra não ganhou o concurso, mas passou a ser admirada pela beleza das suas cores — o que ela conquistou foi diferente do que buscava."
+            "answer": 0,
+            "explain": "Faltou cumprir o combinado e retribuir a ajuda. A história permite conversar sobre cooperação e responsabilidade."
           }
         ],
         "pageImages": [
@@ -1766,15 +1760,15 @@ const DISCIPLINAS = [
         "quiz": [
           {
             "type": "mc",
-            "q": "Gustavo comprou um videogame por R$ 2.500,00. Quais cédulas ele pode ter usado para pagar essa compra?",
+            "q": "Gustavo tem 25 cédulas de R$ 100. Quanto dinheiro ele tem?",
             "options": [
-              "10 cédulas de R$ 200,00",
-              "100 cédulas de R$ 20,00",
-              "25 cédulas de R$ 10,00",
-              "25 cédulas de R$ 100,00"
+              "R$ 250",
+              "R$ 2.000",
+              "R$ 2.500",
+              "R$ 25.000"
             ],
-            "answer": 3,
-            "explain": "25 × R$ 100,00 = R$ 2.500,00. As outras opções dão R$ 2.000,00 (10 × 200 e 100 × 20) e R$ 250,00 (25 × 10), valores que não pagam a compra."
+            "answer": 2,
+            "explain": "25 × 100 = 2.500. Multiplicar por 100 acrescenta dois zeros ao número 25."
           },
           {
             "type": "mc",
@@ -1843,15 +1837,15 @@ const DISCIPLINAS = [
           },
           {
             "type": "text",
-            "q": "Luísa tem 2 cédulas de R$ 10,00, 3 de R$ 20,00, 4 de R$ 50,00 e 5 de R$ 100,00. Quantos reais ela tem ao todo? (escreva só o número)",
+            "q": "Luísa tem 3 cédulas de R$ 20 e 4 cédulas de R$ 50. Quantos reais ela tem ao todo?",
             "answers": [
-              "780",
-              "780 reais",
-              "r$ 780",
-              "r$ 780,00",
-              "780,00"
+              "260",
+              "260 reais",
+              "r$ 260",
+              "r$ 260,00",
+              "260,00"
             ],
-            "explain": "2×10 = 20; 3×20 = 60; 4×50 = 200; 5×100 = 500. Somando: 20 + 60 + 200 + 500 = R$ 780,00."
+            "explain": "3 × 20 = 60 e 4 × 50 = 200. Somando os dois valores: 60 + 200 = R$ 260."
           },
           {
             "type": "mc",
@@ -1995,7 +1989,7 @@ const DISCIPLINAS = [
               "6 horas e 10 minutos"
             ],
             "answer": 2,
-            "explain": "O ponteiro pequeno (horas) passou do 5, então são 5 horas e alguma coisa. O ponteiro grande (minutos) no 2 indica 2 × 5 = 10 minutos. Logo, 5 h 10 min — bem cedinho, hora de o galo cantar!"
+            "explain": "O ponteiro pequeno passou do 5. O grande aponta para o 2, que vale 10 minutos. Portanto, são 5 h 10 min."
           },
           {
             "type": "mc",
@@ -2236,15 +2230,15 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Na divisão 72 ÷ 8 = 9, com resto 0, temos que:",
+            "q": "Na divisão 72 ÷ 8 = 9, qual número é o divisor?",
             "options": [
-              "72 é o divisor; 8 é o dividendo; 9 é o quociente; 0 é o resto",
-              "72 é o dividendo; 8 é o divisor; 9 é o quociente; 0 é o resto",
-              "72 é o dividendo; 8 é o quociente; 9 é o divisor; 0 é o resto",
-              "72 é o divisor; 8 é o resto; 9 é o quociente; 0 é o dividendo"
+              "72",
+              "8",
+              "9",
+              "0"
             ],
             "answer": 1,
-            "explain": "O dividendo é o número que está sendo dividido (72), o divisor indica em quantas partes (8), o quociente é o resultado (9) e o resto é o que sobra (0)."
+            "explain": "O divisor é 8. Ele indica em quantas partes iguais o número 72 será dividido."
           },
           {
             "type": "mc",
@@ -2301,7 +2295,7 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Marcela e Adriana vão dividir igualmente uma camiseta de R$ 56,00. Se tivessem mais 2 irmãos para dividir (4 pessoas ao todo), quanto cada um pagaria?",
+            "q": "Quatro irmãos vão dividir igualmente o preço de uma camiseta de R$ 56. Quanto cada pessoa pagará?",
             "options": [
               "R$ 28,00",
               "R$ 14,00",
@@ -2469,24 +2463,24 @@ const DISCIPLINAS = [
         "quiz": [
           {
             "type": "mc",
-            "q": "Marque a alternativa que faz uma afirmativa INCORRETA a respeito do planeta Terra.",
+            "q": "Qual alternativa explica corretamente uma parte do planeta Terra?",
             "options": [
-              "As escavações feitas pelo ser humano nunca conseguiram chegar até o manto terrestre",
               "A litosfera corresponde à parte sólida da Terra",
-              "O planeta Terra sempre foi considerado esférico, porém recentemente descobriu-se que ele é plano",
-              "O núcleo interno da Terra é sólido"
+              "O manto fica acima da crosta terrestre",
+              "O núcleo interno é formado apenas por água",
+              "A crosta se estende até o centro da Terra"
             ],
-            "answer": 2,
-            "explain": "A Terra tem formato aproximadamente esférico — isso é confirmado por fotografias de satélites e telescópios. As outras três afirmações estão corretas."
+            "answer": 0,
+            "explain": "A litosfera é a parte sólida mais externa da Terra. Ela inclui a crosta e uma parte superior do manto."
           },
           {
             "type": "mc",
             "q": "Marque a alternativa correta sobre os fenômenos da litosfera:",
             "options": [
-              "Quando as placas se esfregam, podem causar terremotos, que fazem o chão tremer",
-              "A formação de cadeias montanhosas ocorre quando duas placas tectônicas se afastam",
-              "Os tsunamis são ondas grandes que se formam nos oceanos e só afetam os pescadores",
-              "O relevo terrestre não se modifica pela ação de agentes externos, mantendo sempre a mesma forma"
+              "O atrito entre placas pode causar terremotos",
+              "Montanhas se formam apenas quando as placas se afastam",
+              "Tsunamis afetam somente os pescadores",
+              "A água e o vento nunca modificam o relevo"
             ],
             "answer": 0,
             "explain": "Cadeias montanhosas se formam quando as placas se CHOCAM (não se afastam); tsunamis atingem as cidades do litoral, pois a onda cresce ao se aproximar da praia; e o relevo se modifica constantemente pelo intemperismo."
@@ -2525,15 +2519,15 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Qual é a diferença entre hipocentro e epicentro de um terremoto?",
+            "q": "Como se chama o ponto da superfície mais próximo da origem de um terremoto?",
             "options": [
-              "Hipocentro fica na superfície; epicentro, no interior da crosta",
-              "Hipocentro é onde o terremoto se origina, no interior da crosta; epicentro é o ponto da superfície mais próximo dele",
-              "São dois nomes para a mesma coisa",
-              "Hipocentro é o tremor; epicentro é a onda sísmica"
+              "Epicentro",
+              "Hipocentro",
+              "Cratera",
+              "Manto"
             ],
-            "answer": 1,
-            "explain": "O hipocentro é a região no interior da crosta onde o terremoto nasce, muitas vezes no choque entre duas placas. O epicentro é o local da superfície mais próximo dele — e por isso o ponto onde o terremoto é mais forte."
+            "answer": 0,
+            "explain": "Esse ponto é o epicentro. O hipocentro é a origem do terremoto no interior da crosta."
           },
           {
             "type": "text",
@@ -2717,39 +2711,39 @@ const DISCIPLINAS = [
         "quiz": [
           {
             "type": "mc",
-            "q": "Marque a única alternativa INCORRETA a respeito dos astros.",
+            "q": "Por que o Sol, a Lua e as estrelas parecem atravessar o céu?",
             "options": [
-              "Os satélites são astros que giram ao redor de outros, como os planetas. A Lua é o satélite da Terra",
-              "As estrelas cadentes são meteoros que, ao entrarem na atmosfera terrestre, deixam um rastro luminoso pela queima de seu material",
-              "Quando esticamos o braço direito em direção ao leste, o braço esquerdo estará voltado para o oeste",
-              "O movimento de rotação da Terra não é responsável pelo movimento aparente dos astros no céu"
+              "Porque a Terra gira em torno de si mesma",
+              "Porque todos giram ao redor da Terra a cada dia",
+              "Porque o vento empurra os astros",
+              "Porque as nuvens movimentam o céu"
             ],
-            "answer": 3,
-            "explain": "É exatamente a rotação da Terra que causa o movimento aparente: os astros não se movem no horizonte, quem gira somos nós."
+            "answer": 0,
+            "explain": "A rotação da Terra cria o movimento aparente dos astros. Enquanto a Terra gira, temos a impressão de que eles atravessam o céu."
           },
           {
             "type": "mc",
             "q": "A respeito do céu diurno e da observação do céu, marque a alternativa correta.",
             "options": [
-              "No céu diurno é comum vermos as nuvens, o Sol e a Lua ao mesmo tempo",
-              "Em lugares onde são emitidos muitos poluentes no ar, é fácil visualizar os elementos do céu",
-              "As lunetas, os binóculos e os óculos escuros são instrumentos que ampliam o que é observado no céu",
-              "Ao observar o céu diurno, devemos ter cuidado para não olhar diretamente para o Sol"
+              "Sempre vemos o Sol e a Lua juntos",
+              "A poluição facilita a observação do céu",
+              "Óculos escuros servem para observar o Sol",
+              "Nunca devemos olhar diretamente para o Sol"
             ],
             "answer": 3,
             "explain": "Olhar direto para o Sol pode danificar a retina. A poluição DIFICULTA a observação, e óculos escuros não ampliam imagem nenhuma — só binóculos, lunetas e telescópios fazem isso."
           },
           {
             "type": "mc",
-            "q": "Qual afirmação sobre os astros é FALSA?",
+            "q": "Quais são os quatro pontos cardeais?",
             "options": [
-              "Apenas o norte e o sul são considerados pontos cardeais",
-              "Os planetas são corpos celestes que giram em torno de uma estrela",
-              "Os cometas são esferas de poeira e gelo",
-              "A Lua é o satélite natural da Terra"
+              "Norte, sul, leste e oeste",
+              "Norte, sul, alto e baixo",
+              "Leste, oeste, perto e longe",
+              "Direita, esquerda, norte e sul"
             ],
             "answer": 0,
-            "explain": "São quatro os pontos cardeais: norte, sul, leste e oeste. Leste é onde o Sol nasce e oeste é onde ele se põe."
+            "explain": "Os quatro pontos cardeais são norte, sul, leste e oeste. Eles ajudam a indicar direções."
           },
           {
             "type": "text",
@@ -2786,12 +2780,12 @@ const DISCIPLINAS = [
             "q": "Por que o céu é azul durante o dia?",
             "options": [
               "Porque a atmosfera é feita de gás azul",
-              "Porque a luz azul do Sol se espalha mais que as outras cores nas partículas de ar e poeira",
+              "Porque a luz azul se espalha mais na atmosfera",
               "Porque o céu reflete a cor dos oceanos",
-              "Porque as nuvens filtram as cores quentes"
+              "Porque as nuvens escondem as outras cores"
             ],
             "answer": 1,
-            "explain": "A luz do Sol contém todas as cores do arco-íris. Ao entrar na atmosfera, ela se espalha nas partículas de ar e poeira — e a luz azul se espalha mais que as demais, dominando o que enxergamos."
+            "explain": "A luz do Sol tem várias cores. Na atmosfera, a luz azul se espalha mais e predomina no céu que enxergamos."
           },
           {
             "type": "text",
@@ -2941,14 +2935,14 @@ const DISCIPLINAS = [
         "quiz": [
           {
             "type": "mc",
-            "q": "Marque a única alternativa VERDADEIRA:",
+            "q": "Por que enxergamos melhor as estrelas depois que o Sol se põe?",
             "options": [
-              "O melhor momento para observar a lua cheia é durante o dia",
-              "Conseguimos enxergar melhor as outras estrelas depois que o Sol se põe",
-              "A poluição luminosa nos grandes centros urbanos não atrapalha a observação do céu noturno",
-              "A poluição atmosférica não permite a visualização das estrelas durante o dia"
+              "Porque o céu fica menos iluminado pela luz do Sol",
+              "Porque as estrelas só produzem luz à noite",
+              "Porque a Lua acende as estrelas",
+              "Porque as estrelas se aproximam da Terra"
             ],
-            "answer": 1,
+            "answer": 0,
             "explain": "O que impede de ver as estrelas durante o dia é a luz do Sol se espalhando pela atmosfera, não a poluição. Por isso, depois que o Sol se põe, elas se tornam visíveis."
           },
           {
@@ -2977,12 +2971,12 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Indique a alternativa que traz uma solução EQUILIBRADA para a poluição luminosa nas grandes cidades.",
+            "q": "Como reduzir a poluição luminosa sem deixar as ruas escuras?",
             "options": [
-              "Eliminar todas as fontes de luz artificial",
-              "Usar apenas a luz natural do dia",
-              "Reduzir as fontes de luz artificial, mas não eliminá-las",
-              "Usar apenas velas durante a noite"
+              "Apagar todas as luzes da cidade",
+              "Usar somente velas durante a noite",
+              "Reduzir e direcionar melhor as luzes desnecessárias",
+              "Manter todas as luzes acesas durante o dia"
             ],
             "answer": 2,
             "explain": "A iluminação pública é necessária para a segurança das pessoas. A solução equilibrada é reduzir e direcionar melhor as luzes desnecessárias — não apagar a cidade inteira."
@@ -3033,9 +3027,9 @@ const DISCIPLINAS = [
             "q": "Na imagem noturna da Terra vista do espaço, por que a Antártica aparece completamente escura?",
             "options": [
               "Porque lá é sempre noite",
-              "Porque é uma região pouco povoada, com clima e relevo que dificultam a permanência humana",
-              "Porque a luz elétrica ainda não chegou àquele continente",
-              "Porque a poluição atmosférica esconde as luzes"
+              "Porque é uma região muito fria e pouco povoada",
+              "Porque não existe energia elétrica no continente",
+              "Porque a poluição esconde todas as luzes"
             ],
             "answer": 1,
             "explain": "As regiões mais iluminadas são as mais urbanizadas. As populações ocupam lugares de fácil acesso e clima favorável — condições que a Antártica não oferece, por isso permanece quase sem ocupação."
@@ -3179,10 +3173,10 @@ const DISCIPLINAS = [
             "type": "mc",
             "q": "Marque a alternativa correta sobre o município:",
             "options": [
-              "O município é uma das porções do território brasileiro que fazem parte da divisão político-administrativa do país",
-              "O território brasileiro é dividido em 26 municípios",
-              "Cada município contém diversos estados",
-              "O município é composto apenas de áreas urbanas"
+              "O município é uma divisão político-administrativa do Brasil",
+              "O Brasil possui somente 26 municípios",
+              "Cada município contém vários estados",
+              "O município possui apenas área urbana"
             ],
             "answer": 0,
             "explain": "O Brasil tem 26 estados e o Distrito Federal — e cada estado contém vários municípios, não o contrário. O município é composto de áreas urbanas E rurais."
@@ -3212,14 +3206,15 @@ const DISCIPLINAS = [
             "explain": "É extrativismo vegetal: a madeira é retirada das árvores. Quando grandes áreas de floresta são derrubadas, ocorre o desmatamento, principal impacto ambiental das áreas rurais."
           },
           {
-            "type": "text",
-            "q": "Qual palavra descreve uma área urbana cheia, com grande quantidade de pessoas vivendo no mesmo espaço, como o bairro de Copacabana?",
-            "answers": [
-              "adensada",
-              "adensado",
-              "densa",
-              "area adensada"
+            "type": "mc",
+            "q": "Um bairro tem muitos moradores e construções próximas. Como podemos descrever essa área?",
+            "options": [
+              "Densamente povoada",
+              "Desabitada",
+              "Rural e dispersa",
+              "Sem ocupação"
             ],
+            "answer": 0,
             "explain": "Adensada significa cheia, aglomerada. As áreas rurais, ao contrário, são pouco adensadas: as construções ficam esparsas, longe umas das outras."
           },
           {
@@ -3423,25 +3418,25 @@ const DISCIPLINAS = [
             "type": "mc",
             "q": "Assinale a alternativa correta sobre as migrações:",
             "options": [
-              "As migrações entre o campo e a cidade foram pouco comuns no Brasil",
-              "As condições do clima não influenciam a migração entre o campo e a cidade",
-              "A falta de emprego no campo é um fator que contribui para a migração da população rural",
-              "As migrações entre o campo e a cidade não acontecem no Brasil"
+              "Poucas pessoas já migraram no Brasil",
+              "O clima nunca influencia uma migração",
+              "A falta de trabalho pode levar pessoas a deixar o campo",
+              "Não existem migrações entre campo e cidade"
             ],
             "answer": 2,
             "explain": "A migração campo-cidade foi muito comum no Brasil e ainda ocorre. O clima (seca ou excesso de chuva) e a falta de emprego são os dois principais fatores que levam as famílias a migrar."
           },
           {
             "type": "mc",
-            "q": "Assinale a alternativa INCORRETA sobre a influência dos imigrantes:",
+            "q": "Em que aspectos os imigrantes podem influenciar a cultura do lugar de destino?",
             "options": [
-              "Os imigrantes não influenciam as características culturais do lugar de destino",
-              "A influência dos imigrantes pode ser percebida nas construções do lugar de destino",
-              "A influência dos imigrantes pode ser percebida nas festas populares do lugar de destino",
-              "A influência dos imigrantes pode ser percebida na culinária do lugar de destino"
+              "Na culinária, nas festas e nas construções",
+              "Na duração dos dias e das noites",
+              "No movimento dos planetas",
+              "Na direção em que os rios correm"
             ],
             "answer": 0,
-            "explain": "É justamente o contrário: quem migra leva sua cultura junto. Vemos isso nas construções (Blumenau), nas festas (Feira de São Cristóvão) e na culinária (acarajé)."
+            "explain": "Quem migra leva conhecimentos e costumes. Essa influência pode aparecer na culinária, nas festas, nas construções e em outras práticas culturais."
           },
           {
             "type": "text",
@@ -3657,15 +3652,15 @@ const DISCIPLINAS = [
         "quiz": [
           {
             "type": "mc",
-            "q": "Marque a alternativa que NÃO apresenta uma característica dos serviços públicos.",
+            "q": "Qual é uma característica dos serviços públicos?",
             "options": [
-              "Prestados pelo poder público",
-              "Mantidos a partir dos impostos",
-              "Administrados pela prefeitura",
-              "Prestados pela iniciativa privada"
+              "São mantidos com recursos dos impostos",
+              "Pertencem sempre a uma única família",
+              "Atendem somente aos donos de empresas",
+              "São organizados apenas por lojas particulares"
             ],
-            "answer": 3,
-            "explain": "Serviços prestados pela iniciativa privada — empresas, grupos ou indivíduos — são serviços privados. Os públicos vêm do poder público e são bancados pelos impostos."
+            "answer": 0,
+            "explain": "Os serviços públicos são organizados pelo poder público e mantidos com recursos dos impostos para atender às necessidades da população."
           },
           {
             "type": "mc",
@@ -3677,7 +3672,7 @@ const DISCIPLINAS = [
               "Jogar na rua"
             ],
             "answer": 2,
-            "explain": "O aterro sanitário é planejado para evitar contaminação: tem revestimento contra o chorume, tubos que queimam o gás metano e cobertura diária de terra. Queimar libera poluentes; jogar no rio ou na rua contamina solo e água."
+            "explain": "O aterro sanitário tem proteção contra o chorume e cobertura de terra. Queimar ou abandonar o lixo pode poluir o ar, a água e o solo."
           },
           {
             "type": "mc",
@@ -3907,7 +3902,7 @@ const DISCIPLINAS = [
               "há espaços privados, como as casas e a praça"
             ],
             "answer": 2,
-            "explain": "Hospital municipal, escola municipal e praça são mantidos pelo poder público e abertos a toda a população — são espaços públicos. A praça nunca é privada, e o banco não é o único espaço privado da cena (as casas também são)."
+            "explain": "Hospital municipal, escola municipal e praça são espaços públicos. Banco, mercado e casas são espaços privados."
           },
           {
             "type": "mc",
@@ -3943,27 +3938,28 @@ const DISCIPLINAS = [
             "explain": "É a democracia. Nas praças públicas da Grécia Antiga os cidadãos debatiam política, e essa prática deu origem à forma de governo que usamos até hoje."
           },
           {
-            "type": "text",
-            "q": "Destruir, quebrar ou deteriorar um patrimônio público é considerado o quê pela lei brasileira?",
-            "answers": [
-              "crime",
-              "e crime",
-              "um crime",
-              "crime previsto em lei"
+            "type": "mc",
+            "q": "Por que danificar um patrimônio público prejudica toda a comunidade?",
+            "options": [
+              "Porque o conserto usa recursos que poderiam melhorar outros serviços",
+              "Porque somente os turistas podem usar esse patrimônio",
+              "Porque o patrimônio passa a pertencer a uma empresa",
+              "Porque ninguém precisa cuidar do que é público"
             ],
-            "explain": "Danificar o patrimônio público é proibido e pode ser crime. Além do prejuízo, o conserto usa dinheiro que poderia beneficiar a comunidade."
+            "answer": 0,
+            "explain": "O patrimônio público pertence à coletividade. Seu conserto usa recursos que poderiam melhorar outros serviços para a população."
           },
           {
             "type": "mc",
-            "q": "Qual atitude NÃO ajuda a cuidar dos espaços públicos da cidade?",
+            "q": "Qual atitude ajuda a cuidar de uma praça pública?",
             "options": [
-              "Separar o lixo em casa para a coleta seletiva",
-              "Deixar o lixo do lanche no banco da praça",
-              "Recolher o cocô do cachorro durante o passeio",
-              "Acompanhar e cobrar as ações dos políticos"
+              "Levar o lixo até uma lixeira",
+              "Riscar os bancos",
+              "Arrancar as plantas",
+              "Deixar embalagens no chão"
             ],
-            "answer": 1,
-            "explain": "Deixar lixo na praça transfere para outra pessoa um trabalho que era seu e degrada um espaço que pertence a todos. As outras três atitudes são exemplos de exercício da cidadania."
+            "answer": 0,
+            "explain": "Levar o lixo até a lixeira ajuda a manter a praça limpa e agradável para todas as pessoas."
           },
           {
             "type": "mc",
@@ -4123,15 +4119,15 @@ const DISCIPLINAS = [
         "quiz": [
           {
             "type": "mc",
-            "q": "O Colégio Pedro II, no Rio de Janeiro, é o colégio público mais antigo do Brasil. A única alternativa correta é:",
+            "q": "O que significa dizer que uma escola é pública?",
             "options": [
-              "Todas as escolas do Brasil são públicas, como o Colégio Pedro II",
-              "Todas as escolas do Brasil são privadas, pois o governo não as administra",
-              "Algumas escolas brasileiras são privadas, ou seja, administradas pelo governo",
-              "O Colégio Pedro II é um colégio público, ou seja, de responsabilidade do governo"
+              "Ela é mantida pelo poder público",
+              "Ela pertence aos alunos matriculados",
+              "Ela é administrada por uma loja",
+              "Ela só pode receber visitantes"
             ],
-            "answer": 3,
-            "explain": "No Brasil existem escolas públicas e privadas. Escola privada é a que tem dono particular — não a administrada pelo governo, o que torna a alternativa C errada por definição."
+            "answer": 0,
+            "explain": "Uma escola pública é mantida pelo poder público para oferecer educação à população."
           },
           {
             "type": "mc",
@@ -4161,22 +4157,24 @@ const DISCIPLINAS = [
             "type": "mc",
             "q": "Um homem surdo foi impedido de entrar em um supermercado porque usava máscara transparente, necessária para a leitura labial. Sobre essa situação, é correto afirmar:",
             "options": [
-              "O mercado é público e por isso pode criar qualquer regra",
-              "O mercado é privado de uso público, e a regra acabou excluindo uma pessoa com deficiência",
-              "Nenhuma pessoa pode ser cliente de um espaço privado",
-              "Espaços privados não precisam respeitar a Constituição"
+              "O mercado pode criar qualquer regra",
+              "A regra excluiu uma pessoa com deficiência",
+              "Ninguém pode ser cliente de um espaço privado",
+              "Espaços privados não precisam respeitar direitos"
             ],
             "answer": 1,
             "explain": "Mercados são espaços privados de uso público: qualquer pessoa pode ser cliente. A regra aplicada sem considerar a deficiência gerou exclusão — ele mesmo disse que se sentiu excluído."
           },
           {
             "type": "text",
-            "q": "Em que ano foi publicada a Constituição brasileira, o conjunto das principais leis do país?",
+            "q": "Como se chama o documento que reúne as principais leis e direitos do país?",
             "answers": [
-              "1988",
-              "em 1988"
+              "constituicao",
+              "a constituicao",
+              "constituicao brasileira",
+              "a constituicao brasileira"
             ],
-            "explain": "A Constituição da República Federativa do Brasil foi publicada em 1988 e deve ser respeitada por todos: governo e população."
+            "explain": "É a Constituição brasileira. Ela reúne direitos, deveres e regras que devem ser respeitados pelo governo e pela população."
           },
           {
             "type": "text",
@@ -4190,15 +4188,15 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Qual afirmação sobre a administração do município é FALSA?",
+            "q": "Qual serviço local pode ser oferecido pela Prefeitura?",
             "options": [
-              "Os vereadores devem fazer as leis da cidade",
-              "O prefeito administra as universidades federais",
-              "A Prefeitura oferece serviços de atendimento básico de saúde",
-              "O prefeito deve cuidar do patrimônio histórico da cidade"
+              "Atendimento básico de saúde",
+              "Administração de universidades federais",
+              "Criação das leis de outros países",
+              "Comando das forças armadas nacionais"
             ],
-            "answer": 1,
-            "explain": "As universidades federais são administradas pelo governo federal, não pelo prefeito. A Prefeitura cuida de serviços locais, como o atendimento básico de saúde."
+            "answer": 0,
+            "explain": "A Prefeitura cuida de serviços locais, como o atendimento básico de saúde. Universidades federais e forças armadas são responsabilidades do governo federal."
           },
           {
             "type": "text",
@@ -4376,15 +4374,15 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Qual alternativa apresenta a lista correta dos principais problemas enfrentados pelas cidades brasileiras?",
+            "q": "Qual situação representa um problema que uma cidade precisa enfrentar?",
             "options": [
-              "Engarrafamento, problemas de saneamento, falta de moradias, excesso de poluição e lixo",
-              "Excesso de parques, hospitais públicos de qualidade e transportes velozes",
-              "Engarrafamento, moradias de qualidade, poluição do ar e problemas de saneamento",
-              "Existência de ciclovias, programas de reciclagem do lixo, falta de moradias e excesso de poluição"
+              "Esgoto sem tratamento chegando aos rios",
+              "Criação de ciclovias seguras",
+              "Coleta seletiva funcionando",
+              "Parques bem cuidados"
             ],
             "answer": 0,
-            "explain": "As outras alternativas misturam problemas com coisas boas — parques, moradias de qualidade, ciclovias e reciclagem são soluções, não problemas."
+            "explain": "O esgoto sem tratamento polui a água e pode transmitir doenças. Ciclovias, coleta seletiva e parques cuidados são melhorias para a cidade."
           },
           {
             "type": "mc",
@@ -4455,15 +4453,15 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Nas Unidades de Conservação de Proteção Integral:",
+            "q": "O que é permitido em uma Unidade de Conservação de Proteção Integral?",
             "options": [
-              "a extração de recursos naturais é proibida, permitindo-se pesquisa e visitas turísticas",
-              "é permitida a agricultura e a pesca ecológica",
-              "não é permitida nenhuma presença humana",
-              "qualquer pessoa pode retirar madeira de forma controlada"
+              "Pesquisa e visitação seguindo as regras do local",
+              "Retirada de madeira por qualquer pessoa",
+              "Agricultura em toda a área protegida",
+              "Caça de animais silvestres"
             ],
             "answer": 0,
-            "explain": "Na Proteção Integral a extração é proibida; só pesquisa científica e visitação são permitidas. O uso controlado dos recursos (agricultura, pesca ecológica, manejo florestal) ocorre nas UCs de Uso Sustentável."
+            "explain": "Nessas unidades, a natureza recebe proteção especial. Pesquisa e visitação podem acontecer quando seguem as regras do local."
           }
         ],
         "pageImages": [

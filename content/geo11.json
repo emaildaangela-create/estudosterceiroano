@@ -92,17 +92,17 @@
   "quiz": [
     {
       "type": "mc",
-      "q": "Marque a alternativa que NÃO apresenta uma característica dos serviços públicos.",
-      "options": ["Prestados pelo poder público", "Mantidos a partir dos impostos", "Administrados pela prefeitura", "Prestados pela iniciativa privada"],
-      "answer": 3,
-      "explain": "Serviços prestados pela iniciativa privada — empresas, grupos ou indivíduos — são serviços privados. Os públicos vêm do poder público e são bancados pelos impostos."
+      "q": "Qual é uma característica dos serviços públicos?",
+      "options": ["São mantidos com recursos dos impostos", "Pertencem sempre a uma única família", "Atendem somente aos donos de empresas", "São organizados apenas por lojas particulares"],
+      "answer": 0,
+      "explain": "Os serviços públicos são organizados pelo poder público e mantidos com recursos dos impostos para atender às necessidades da população."
     },
     {
       "type": "mc",
       "q": "Qual é o destino adequado para o lixo gerado nos municípios?",
       "options": ["Queimar", "Jogar no rio", "Levar para os aterros sanitários", "Jogar na rua"],
       "answer": 2,
-      "explain": "O aterro sanitário é planejado para evitar contaminação: tem revestimento contra o chorume, tubos que queimam o gás metano e cobertura diária de terra. Queimar libera poluentes; jogar no rio ou na rua contamina solo e água."
+      "explain": "O aterro sanitário tem proteção contra o chorume e cobertura de terra. Queimar ou abandonar o lixo pode poluir o ar, a água e o solo."
     },
     {
       "type": "mc",

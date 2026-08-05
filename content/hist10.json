@@ -81,10 +81,10 @@
   "quiz": [
     {
       "type": "mc",
-      "q": "O Colégio Pedro II, no Rio de Janeiro, é o colégio público mais antigo do Brasil. A única alternativa correta é:",
-      "options": ["Todas as escolas do Brasil são públicas, como o Colégio Pedro II", "Todas as escolas do Brasil são privadas, pois o governo não as administra", "Algumas escolas brasileiras são privadas, ou seja, administradas pelo governo", "O Colégio Pedro II é um colégio público, ou seja, de responsabilidade do governo"],
-      "answer": 3,
-      "explain": "No Brasil existem escolas públicas e privadas. Escola privada é a que tem dono particular — não a administrada pelo governo, o que torna a alternativa C errada por definição."
+      "q": "O que significa dizer que uma escola é pública?",
+      "options": ["Ela é mantida pelo poder público", "Ela pertence aos alunos matriculados", "Ela é administrada por uma loja", "Ela só pode receber visitantes"],
+      "answer": 0,
+      "explain": "Uma escola pública é mantida pelo poder público para oferecer educação à população."
     },
     {
       "type": "mc",
@@ -103,15 +103,15 @@
     {
       "type": "mc",
       "q": "Um homem surdo foi impedido de entrar em um supermercado porque usava máscara transparente, necessária para a leitura labial. Sobre essa situação, é correto afirmar:",
-      "options": ["O mercado é público e por isso pode criar qualquer regra", "O mercado é privado de uso público, e a regra acabou excluindo uma pessoa com deficiência", "Nenhuma pessoa pode ser cliente de um espaço privado", "Espaços privados não precisam respeitar a Constituição"],
+      "options": ["O mercado pode criar qualquer regra", "A regra excluiu uma pessoa com deficiência", "Ninguém pode ser cliente de um espaço privado", "Espaços privados não precisam respeitar direitos"],
       "answer": 1,
       "explain": "Mercados são espaços privados de uso público: qualquer pessoa pode ser cliente. A regra aplicada sem considerar a deficiência gerou exclusão — ele mesmo disse que se sentiu excluído."
     },
     {
       "type": "text",
-      "q": "Em que ano foi publicada a Constituição brasileira, o conjunto das principais leis do país?",
-      "answers": ["1988", "em 1988"],
-      "explain": "A Constituição da República Federativa do Brasil foi publicada em 1988 e deve ser respeitada por todos: governo e população."
+      "q": "Como se chama o documento que reúne as principais leis e direitos do país?",
+      "answers": ["constituicao", "a constituicao", "constituicao brasileira", "a constituicao brasileira"],
+      "explain": "É a Constituição brasileira. Ela reúne direitos, deveres e regras que devem ser respeitados pelo governo e pela população."
     },
     {
       "type": "text",
@@ -121,10 +121,10 @@
     },
     {
       "type": "mc",
-      "q": "Qual afirmação sobre a administração do município é FALSA?",
-      "options": ["Os vereadores devem fazer as leis da cidade", "O prefeito administra as universidades federais", "A Prefeitura oferece serviços de atendimento básico de saúde", "O prefeito deve cuidar do patrimônio histórico da cidade"],
-      "answer": 1,
-      "explain": "As universidades federais são administradas pelo governo federal, não pelo prefeito. A Prefeitura cuida de serviços locais, como o atendimento básico de saúde."
+      "q": "Qual serviço local pode ser oferecido pela Prefeitura?",
+      "options": ["Atendimento básico de saúde", "Administração de universidades federais", "Criação das leis de outros países", "Comando das forças armadas nacionais"],
+      "answer": 0,
+      "explain": "A Prefeitura cuida de serviços locais, como o atendimento básico de saúde. Universidades federais e forças armadas são responsabilidades do governo federal."
     },
     {
       "type": "text",

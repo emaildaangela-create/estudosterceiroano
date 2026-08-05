@@ -1,7 +1,6 @@
 /* Objetivos e adaptações de leitura para estudantes do 3º ano. */
 const PEDAGOGY = {
   lp17:{objectives:['reconhecer textos que ensinam','entender aumentativo e diminutivo','formar diminutivos no plural'],questions:{
-    1:{context:'Use: (1) -inho, (2) -sinho e (3) -zinho.',prompt:'Qual é a sequência para vaso, sapato e anel?'},
     8:{context:'O manual diz: “Faça 2 ou 3 rotações, toque em OK e, se necessário, volte ao primeiro passo.”',prompt:'Por que esse trecho é um texto instrucional?'}
   }},
   lp18:{objectives:['identificar um conto de memórias','diferenciar substantivo e adjetivo','formar adjetivos com -oso e -osa']},
@@ -10,15 +9,12 @@ const PEDAGOGY = {
   }},
   lp20:{objectives:['entender anúncios classificados','escolher entre S e Z','formar o plural das palavras'],questions:{}},
   lp21:{objectives:['interpretar balões de quadrinhos','reconhecer pronomes pessoais','diferenciar pronomes retos e oblíquos']},
-  lp22:{objectives:['acompanhar e recontar uma história','reconhecer as pessoas do discurso','usar formas de tratamento'],questions:{
-    8:{context:'Larissa pergunta a Gabriel: “Você sabe onde está Renata? Preciso entregar um livro a ela.”',prompt:'Quais pronomes representam Larissa, Gabriel e Renata, nessa ordem?'}
-  }},
+  lp22:{objectives:['acompanhar e recontar uma história','reconhecer as pessoas do discurso','usar formas de tratamento']},
   mat09:{objectives:['contar combinações possíveis','multiplicar por 10, 100 e 1.000','resolver situações com multiplicação'],questions:{
     2:{context:'Isabela tem 4 frutas e 2 tipos de leite. Ela escolherá uma fruta e um leite.',prompt:'Quantas vitaminas diferentes ela pode preparar?'},
     3:{context:'Júlia colocará lado a lado as fotos de um cachorro, um gato e um coelho.',prompt:'Quantas ordens diferentes ela pode formar?'},
     4:{context:'Um restaurante oferece 4 saladas e 5 molhos. A pessoa escolherá uma opção de cada.',prompt:'Quantas combinações são possíveis?'},
     6:{context:'No sábado, 1.000 crianças foram vacinadas. No domingo, foram vacinadas três vezes mais.',prompt:'Quantas crianças foram vacinadas nos dois dias?'},
-    7:{context:'Luísa tem 2 notas de R$ 10, 3 de R$ 20, 4 de R$ 50 e 5 de R$ 100.',prompt:'Quantos reais ela tem ao todo?'},
     8:{context:'De segunda a sexta, uma escola recebe 20 alunos de manhã e 30 à noite.',prompt:'Quantos alunos participam durante os cinco dias?'}
   }},
   mat10:{objectives:['ler horas e minutos','converter unidades de tempo','descrever localização e deslocamento'],questions:{

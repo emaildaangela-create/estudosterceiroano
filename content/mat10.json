@@ -78,7 +78,7 @@
       "q": "Um menino acorda com o sol nascendo e o galo cantando. O relógio dele mostra o ponteiro pequeno entre o 5 e o 6 e o ponteiro grande no 2. Que horas são?",
       "options": ["2 horas e 25 minutos", "5 horas e 2 minutos", "5 horas e 10 minutos", "6 horas e 10 minutos"],
       "answer": 2,
-      "explain": "O ponteiro pequeno (horas) passou do 5, então são 5 horas e alguma coisa. O ponteiro grande (minutos) no 2 indica 2 × 5 = 10 minutos. Logo, 5 h 10 min — bem cedinho, hora de o galo cantar!"
+      "explain": "O ponteiro pequeno passou do 5. O grande aponta para o 2, que vale 10 minutos. Portanto, são 5 h 10 min."
     },
     {
       "type": "mc",

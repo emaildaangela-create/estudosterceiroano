@@ -93,16 +93,16 @@
     {
       "type": "mc",
       "q": "Assinale a alternativa correta sobre as migrações:",
-      "options": ["As migrações entre o campo e a cidade foram pouco comuns no Brasil", "As condições do clima não influenciam a migração entre o campo e a cidade", "A falta de emprego no campo é um fator que contribui para a migração da população rural", "As migrações entre o campo e a cidade não acontecem no Brasil"],
+      "options": ["Poucas pessoas já migraram no Brasil", "O clima nunca influencia uma migração", "A falta de trabalho pode levar pessoas a deixar o campo", "Não existem migrações entre campo e cidade"],
       "answer": 2,
       "explain": "A migração campo-cidade foi muito comum no Brasil e ainda ocorre. O clima (seca ou excesso de chuva) e a falta de emprego são os dois principais fatores que levam as famílias a migrar."
     },
     {
       "type": "mc",
-      "q": "Assinale a alternativa INCORRETA sobre a influência dos imigrantes:",
-      "options": ["Os imigrantes não influenciam as características culturais do lugar de destino", "A influência dos imigrantes pode ser percebida nas construções do lugar de destino", "A influência dos imigrantes pode ser percebida nas festas populares do lugar de destino", "A influência dos imigrantes pode ser percebida na culinária do lugar de destino"],
+      "q": "Em que aspectos os imigrantes podem influenciar a cultura do lugar de destino?",
+      "options": ["Na culinária, nas festas e nas construções", "Na duração dos dias e das noites", "No movimento dos planetas", "Na direção em que os rios correm"],
       "answer": 0,
-      "explain": "É justamente o contrário: quem migra leva sua cultura junto. Vemos isso nas construções (Blumenau), nas festas (Feira de São Cristóvão) e na culinária (acarajé)."
+      "explain": "Quem migra leva conhecimentos e costumes. Essa influência pode aparecer na culinária, nas festas, nas construções e em outras práticas culturais."
     },
     {
       "type": "text",

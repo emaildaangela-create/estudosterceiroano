@@ -89,15 +89,15 @@
   "quiz": [
     {
       "type": "mc",
-      "q": "Marque a alternativa que faz uma afirmativa INCORRETA a respeito do planeta Terra.",
-      "options": ["As escavações feitas pelo ser humano nunca conseguiram chegar até o manto terrestre", "A litosfera corresponde à parte sólida da Terra", "O planeta Terra sempre foi considerado esférico, porém recentemente descobriu-se que ele é plano", "O núcleo interno da Terra é sólido"],
-      "answer": 2,
-      "explain": "A Terra tem formato aproximadamente esférico — isso é confirmado por fotografias de satélites e telescópios. As outras três afirmações estão corretas."
+      "q": "Qual alternativa explica corretamente uma parte do planeta Terra?",
+      "options": ["A litosfera corresponde à parte sólida da Terra", "O manto fica acima da crosta terrestre", "O núcleo interno é formado apenas por água", "A crosta se estende até o centro da Terra"],
+      "answer": 0,
+      "explain": "A litosfera é a parte sólida mais externa da Terra. Ela inclui a crosta e uma parte superior do manto."
     },
     {
       "type": "mc",
       "q": "Marque a alternativa correta sobre os fenômenos da litosfera:",
-      "options": ["Quando as placas se esfregam, podem causar terremotos, que fazem o chão tremer", "A formação de cadeias montanhosas ocorre quando duas placas tectônicas se afastam", "Os tsunamis são ondas grandes que se formam nos oceanos e só afetam os pescadores", "O relevo terrestre não se modifica pela ação de agentes externos, mantendo sempre a mesma forma"],
+      "options": ["O atrito entre placas pode causar terremotos", "Montanhas se formam apenas quando as placas se afastam", "Tsunamis afetam somente os pescadores", "A água e o vento nunca modificam o relevo"],
       "answer": 0,
       "explain": "Cadeias montanhosas se formam quando as placas se CHOCAM (não se afastam); tsunamis atingem as cidades do litoral, pois a onda cresce ao se aproximar da praia; e o relevo se modifica constantemente pelo intemperismo."
     },
@@ -121,10 +121,10 @@
     },
     {
       "type": "mc",
-      "q": "Qual é a diferença entre hipocentro e epicentro de um terremoto?",
-      "options": ["Hipocentro fica na superfície; epicentro, no interior da crosta", "Hipocentro é onde o terremoto se origina, no interior da crosta; epicentro é o ponto da superfície mais próximo dele", "São dois nomes para a mesma coisa", "Hipocentro é o tremor; epicentro é a onda sísmica"],
-      "answer": 1,
-      "explain": "O hipocentro é a região no interior da crosta onde o terremoto nasce, muitas vezes no choque entre duas placas. O epicentro é o local da superfície mais próximo dele — e por isso o ponto onde o terremoto é mais forte."
+      "q": "Como se chama o ponto da superfície mais próximo da origem de um terremoto?",
+      "options": ["Epicentro", "Hipocentro", "Cratera", "Manto"],
+      "answer": 0,
+      "explain": "Esse ponto é o epicentro. O hipocentro é a origem do terremoto no interior da crosta."
     },
     {
       "type": "text",

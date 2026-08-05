@@ -1,5 +1,5 @@
 """Monta data.js a partir dos JSONs em content/, agrupando por disciplina."""
-import json, io, os
+import json, io, os, re, unicodedata
 
 DISCIPLINAS = [
     {
@@ -60,11 +60,53 @@ saida = []
 total_q = 0
 total_g = 0
 
+PADROES_DE_PEGADINHA = (
+    "incorreta", "afirmacao falsa", "alternativa falsa", "nao apresenta",
+    "unica alternativa", "sequencia correta", "relacione", "respectivamente",
+)
+
+
+def normalizar(texto):
+    texto = unicodedata.normalize("NFD", str(texto or "").lower())
+    return "".join(ch for ch in texto if unicodedata.category(ch) != "Mn")
+
+
+def contar_palavras(texto):
+    return len(re.findall(r"\S+", str(texto or "").strip()))
+
+
+def validar_quiz(cap):
+    """Impede que o conteúdo volte a usar pegadinhas e códigos de memória."""
+    for indice, questao in enumerate(cap.get("quiz", []), start=1):
+        identificador = "%s, questao %d" % (cap.get("id", "capitulo"), indice)
+        enunciado = normalizar(questao.get("q"))
+        if not enunciado:
+            raise ValueError("Enunciado ausente em " + identificador)
+        if any(padrao in enunciado for padrao in PADROES_DE_PEGADINHA):
+            raise ValueError("Enunciado com pegadinha ou associacao excessiva em " + identificador)
+        if "(1)" in enunciado and "(2)" in enunciado:
+            raise ValueError("Enunciado usa codigos arbitrarios em " + identificador)
+        if not questao.get("explain"):
+            raise ValueError("Explicacao ausente em " + identificador)
+
+        if questao.get("type") == "mc":
+            opcoes = questao.get("options", [])
+            resposta = questao.get("answer")
+            if len(opcoes) != 4 or not isinstance(resposta, int) or not 0 <= resposta < len(opcoes):
+                raise ValueError("Alternativas ou resposta invalidas em " + identificador)
+            if len({normalizar(opcao) for opcao in opcoes}) != len(opcoes):
+                raise ValueError("Alternativas repetidas em " + identificador)
+            if any(contar_palavras(opcao) > 14 for opcao in opcoes):
+                raise ValueError("Alternativa longa demais em " + identificador)
+        elif not questao.get("answers"):
+            raise ValueError("Respostas aceitas ausentes em " + identificador)
+
 for d in DISCIPLINAS:
     caps = []
     for cid in d["capitulos"]:
         with io.open(os.path.join(base, "content", cid + ".json"), encoding="utf-8") as f:
             cap = json.load(f)
+        validar_quiz(cap)
         # As paginas do livro nao vao para o repositorio publico; so entram no
         # data.js quando os arquivos existem de fato na maquina.
         pasta = PASTAS_DE_PAGINAS.get(cid)

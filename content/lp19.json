@@ -94,10 +94,10 @@
     },
     {
       "type": "mc",
-      "q": "Que prêmio Santos Dumont recebeu ao voar com o 14-Bis?",
-      "options": ["A Liga das Nações", "A Taça Archdeacon", "O Prêmio Nobel", "A Medalha do Dirigível"],
-      "answer": 1,
-      "explain": "O feito com o 14-Bis rendeu-lhe a Taça Archdeacon, na França. A Liga das Nações não é prêmio: era a organização internacional que ele procurou em 1926 para impedir o uso do avião em guerras."
+      "q": "Leia: 1898 — dirigível; 1906 — voo do 14-Bis; 1926 — campanha pela paz. Qual fato aconteceu primeiro?",
+      "options": ["A construção do dirigível", "O voo do 14-Bis", "A campanha pela paz", "Os três aconteceram juntos"],
+      "answer": 0,
+      "explain": "A construção do dirigível aconteceu em 1898, antes dos fatos de 1906 e 1926. A linha do tempo ajuda a comparar a ordem dos acontecimentos."
     },
     {
       "type": "text",
@@ -119,14 +119,14 @@
     },
     {
       "type": "text",
-      "q": "Em que ano Santos Dumont construiu o dirigível, um balão que voava mais rápido e podia ser controlado?",
-      "answers": ["1898", "em 1898", "20 de setembro de 1898"],
-      "explain": "Foi em 20 de setembro de 1898. Ele havia se mudado para a França em 1892 e feito seu primeiro voo de balão seis anos depois."
+      "q": "Leia: '1898 — construiu um dirigível; 1906 — voou com o 14-Bis.' O que Santos Dumont construiu primeiro?",
+      "answers": ["dirigivel", "um dirigivel", "o dirigivel", "balao dirigivel", "um balao dirigivel"],
+      "explain": "Ele construiu um dirigível. A informação está na primeira data da linha do tempo."
     },
     {
       "type": "mc",
       "q": "Santos Dumont desejava que suas invenções fossem usadas em guerras?",
-      "options": ["Sim, ele projetou o 14-Bis para uso militar", "Não — ele ficou triste e chegou a procurar a Liga das Nações para impedir esse uso", "Ele nunca soube que os aviões eram usados em guerras", "Sim, foi assim que ganhou a Taça Archdeacon"],
+      "options": ["Sim, ele criou o avião para as guerras", "Não, ele tentou impedir esse uso", "Ele nunca soube das guerras", "Sim, esse era seu principal objetivo"],
       "answer": 1,
       "explain": "Ele defendia o avião como forma de aproximar os países. Ao descobrir o uso militar, ficou triste e em 1926 apelou à Liga das Nações — sem sucesso, o que agravou sua saúde."
     },

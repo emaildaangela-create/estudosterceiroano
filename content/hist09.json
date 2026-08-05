@@ -84,7 +84,7 @@
       "q": "Observando a ilustração de uma cidade com hospital municipal, escola municipal, banco, mercado, praça e casas, é possível afirmar que:",
       "options": ["há apenas um espaço público, o hospital municipal", "há apenas um espaço privado, o banco", "há espaços públicos, como o hospital, a escola e a praça", "há espaços privados, como as casas e a praça"],
       "answer": 2,
-      "explain": "Hospital municipal, escola municipal e praça são mantidos pelo poder público e abertos a toda a população — são espaços públicos. A praça nunca é privada, e o banco não é o único espaço privado da cena (as casas também são)."
+      "explain": "Hospital municipal, escola municipal e praça são espaços públicos. Banco, mercado e casas são espaços privados."
     },
     {
       "type": "mc",
@@ -107,17 +107,18 @@
       "explain": "É a democracia. Nas praças públicas da Grécia Antiga os cidadãos debatiam política, e essa prática deu origem à forma de governo que usamos até hoje."
     },
     {
-      "type": "text",
-      "q": "Destruir, quebrar ou deteriorar um patrimônio público é considerado o quê pela lei brasileira?",
-      "answers": ["crime", "e crime", "um crime", "crime previsto em lei"],
-      "explain": "Danificar o patrimônio público é proibido e pode ser crime. Além do prejuízo, o conserto usa dinheiro que poderia beneficiar a comunidade."
+      "type": "mc",
+      "q": "Por que danificar um patrimônio público prejudica toda a comunidade?",
+      "options": ["Porque o conserto usa recursos que poderiam melhorar outros serviços", "Porque somente os turistas podem usar esse patrimônio", "Porque o patrimônio passa a pertencer a uma empresa", "Porque ninguém precisa cuidar do que é público"],
+      "answer": 0,
+      "explain": "O patrimônio público pertence à coletividade. Seu conserto usa recursos que poderiam melhorar outros serviços para a população."
     },
     {
       "type": "mc",
-      "q": "Qual atitude NÃO ajuda a cuidar dos espaços públicos da cidade?",
-      "options": ["Separar o lixo em casa para a coleta seletiva", "Deixar o lixo do lanche no banco da praça", "Recolher o cocô do cachorro durante o passeio", "Acompanhar e cobrar as ações dos políticos"],
-      "answer": 1,
-      "explain": "Deixar lixo na praça transfere para outra pessoa um trabalho que era seu e degrada um espaço que pertence a todos. As outras três atitudes são exemplos de exercício da cidadania."
+      "q": "Qual atitude ajuda a cuidar de uma praça pública?",
+      "options": ["Levar o lixo até uma lixeira", "Riscar os bancos", "Arrancar as plantas", "Deixar embalagens no chão"],
+      "answer": 0,
+      "explain": "Levar o lixo até a lixeira ajuda a manter a praça limpa e agradável para todas as pessoas."
     },
     {
       "type": "mc",

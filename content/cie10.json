@@ -96,24 +96,24 @@
   "quiz": [
     {
       "type": "mc",
-      "q": "Marque a única alternativa INCORRETA a respeito dos astros.",
-      "options": ["Os satélites são astros que giram ao redor de outros, como os planetas. A Lua é o satélite da Terra", "As estrelas cadentes são meteoros que, ao entrarem na atmosfera terrestre, deixam um rastro luminoso pela queima de seu material", "Quando esticamos o braço direito em direção ao leste, o braço esquerdo estará voltado para o oeste", "O movimento de rotação da Terra não é responsável pelo movimento aparente dos astros no céu"],
-      "answer": 3,
-      "explain": "É exatamente a rotação da Terra que causa o movimento aparente: os astros não se movem no horizonte, quem gira somos nós."
+      "q": "Por que o Sol, a Lua e as estrelas parecem atravessar o céu?",
+      "options": ["Porque a Terra gira em torno de si mesma", "Porque todos giram ao redor da Terra a cada dia", "Porque o vento empurra os astros", "Porque as nuvens movimentam o céu"],
+      "answer": 0,
+      "explain": "A rotação da Terra cria o movimento aparente dos astros. Enquanto a Terra gira, temos a impressão de que eles atravessam o céu."
     },
     {
       "type": "mc",
       "q": "A respeito do céu diurno e da observação do céu, marque a alternativa correta.",
-      "options": ["No céu diurno é comum vermos as nuvens, o Sol e a Lua ao mesmo tempo", "Em lugares onde são emitidos muitos poluentes no ar, é fácil visualizar os elementos do céu", "As lunetas, os binóculos e os óculos escuros são instrumentos que ampliam o que é observado no céu", "Ao observar o céu diurno, devemos ter cuidado para não olhar diretamente para o Sol"],
+      "options": ["Sempre vemos o Sol e a Lua juntos", "A poluição facilita a observação do céu", "Óculos escuros servem para observar o Sol", "Nunca devemos olhar diretamente para o Sol"],
       "answer": 3,
       "explain": "Olhar direto para o Sol pode danificar a retina. A poluição DIFICULTA a observação, e óculos escuros não ampliam imagem nenhuma — só binóculos, lunetas e telescópios fazem isso."
     },
     {
       "type": "mc",
-      "q": "Qual afirmação sobre os astros é FALSA?",
-      "options": ["Apenas o norte e o sul são considerados pontos cardeais", "Os planetas são corpos celestes que giram em torno de uma estrela", "Os cometas são esferas de poeira e gelo", "A Lua é o satélite natural da Terra"],
+      "q": "Quais são os quatro pontos cardeais?",
+      "options": ["Norte, sul, leste e oeste", "Norte, sul, alto e baixo", "Leste, oeste, perto e longe", "Direita, esquerda, norte e sul"],
       "answer": 0,
-      "explain": "São quatro os pontos cardeais: norte, sul, leste e oeste. Leste é onde o Sol nasce e oeste é onde ele se põe."
+      "explain": "Os quatro pontos cardeais são norte, sul, leste e oeste. Eles ajudam a indicar direções."
     },
     {
       "type": "text",
@@ -136,9 +136,9 @@
     {
       "type": "mc",
       "q": "Por que o céu é azul durante o dia?",
-      "options": ["Porque a atmosfera é feita de gás azul", "Porque a luz azul do Sol se espalha mais que as outras cores nas partículas de ar e poeira", "Porque o céu reflete a cor dos oceanos", "Porque as nuvens filtram as cores quentes"],
+      "options": ["Porque a atmosfera é feita de gás azul", "Porque a luz azul se espalha mais na atmosfera", "Porque o céu reflete a cor dos oceanos", "Porque as nuvens escondem as outras cores"],
       "answer": 1,
-      "explain": "A luz do Sol contém todas as cores do arco-íris. Ao entrar na atmosfera, ela se espalha nas partículas de ar e poeira — e a luz azul se espalha mais que as demais, dominando o que enxergamos."
+      "explain": "A luz do Sol tem várias cores. Na atmosfera, a luz azul se espalha mais e predomina no céu que enxergamos."
     },
     {
       "type": "text",

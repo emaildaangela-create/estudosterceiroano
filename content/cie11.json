@@ -80,9 +80,9 @@
   "quiz": [
     {
       "type": "mc",
-      "q": "Marque a única alternativa VERDADEIRA:",
-      "options": ["O melhor momento para observar a lua cheia é durante o dia", "Conseguimos enxergar melhor as outras estrelas depois que o Sol se põe", "A poluição luminosa nos grandes centros urbanos não atrapalha a observação do céu noturno", "A poluição atmosférica não permite a visualização das estrelas durante o dia"],
-      "answer": 1,
+      "q": "Por que enxergamos melhor as estrelas depois que o Sol se põe?",
+      "options": ["Porque o céu fica menos iluminado pela luz do Sol", "Porque as estrelas só produzem luz à noite", "Porque a Lua acende as estrelas", "Porque as estrelas se aproximam da Terra"],
+      "answer": 0,
       "explain": "O que impede de ver as estrelas durante o dia é a luz do Sol se espalhando pela atmosfera, não a poluição. Por isso, depois que o Sol se põe, elas se tornam visíveis."
     },
     {
@@ -101,8 +101,8 @@
     },
     {
       "type": "mc",
-      "q": "Indique a alternativa que traz uma solução EQUILIBRADA para a poluição luminosa nas grandes cidades.",
-      "options": ["Eliminar todas as fontes de luz artificial", "Usar apenas a luz natural do dia", "Reduzir as fontes de luz artificial, mas não eliminá-las", "Usar apenas velas durante a noite"],
+      "q": "Como reduzir a poluição luminosa sem deixar as ruas escuras?",
+      "options": ["Apagar todas as luzes da cidade", "Usar somente velas durante a noite", "Reduzir e direcionar melhor as luzes desnecessárias", "Manter todas as luzes acesas durante o dia"],
       "answer": 2,
       "explain": "A iluminação pública é necessária para a segurança das pessoas. A solução equilibrada é reduzir e direcionar melhor as luzes desnecessárias — não apagar a cidade inteira."
     },
@@ -133,7 +133,7 @@
     {
       "type": "mc",
       "q": "Na imagem noturna da Terra vista do espaço, por que a Antártica aparece completamente escura?",
-      "options": ["Porque lá é sempre noite", "Porque é uma região pouco povoada, com clima e relevo que dificultam a permanência humana", "Porque a luz elétrica ainda não chegou àquele continente", "Porque a poluição atmosférica esconde as luzes"],
+      "options": ["Porque lá é sempre noite", "Porque é uma região muito fria e pouco povoada", "Porque não existe energia elétrica no continente", "Porque a poluição esconde todas as luzes"],
       "answer": 1,
       "explain": "As regiões mais iluminadas são as mais urbanizadas. As populações ocupam lugares de fácil acesso e clima favorável — condições que a Antártica não oferece, por isso permanece quase sem ocupação."
     }

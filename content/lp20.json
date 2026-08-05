@@ -97,14 +97,14 @@
       "q": "Assinale a alternativa em que há um exemplo de anúncio classificado.",
       "options": ["Uma página de jornal com a manchete 'Cidade recebe campeonato de dança'", "Um cartaz com 'VENDEM-SE Sapatilhas de balé — Falar com Liza (00) 00000-0000'", "Uma folha de calendário marcando 14 de fevereiro de 2023", "Uma tirinha em quadrinhos com um personagem refletindo"],
       "answer": 1,
-      "explain": "Ele tem tudo o que define um classificado: o que é negociado (sapatilhas de balé), a finalidade (venda) e o contato (Liza e o telefone). A primeira é notícia, a terceira é calendário e a quarta é tirinha."
+      "explain": "O anúncio informa o produto, a finalidade da negociação e uma forma de contato. Esses elementos ajudam o interessado a compreender e responder."
     },
     {
       "type": "mc",
-      "q": "No livro 'Procura-se Lobo', por que Manuel Lobo se candidatou à vaga do anúncio?",
-      "options": ["Porque ele era um lobo de verdade", "Porque o texto do anúncio não era claro e ele achou que a empresa procurava alguém com o sobrenome Lobo", "Porque ele queria participar de um documentário", "Porque o anúncio pedia experiência em leitura"],
+      "q": "O anúncio dizia apenas 'Procura-se Lobo'. Por que Manuel Lobo pensou que poderia se candidatar?",
+      "options": ["Porque ele era um lobo de verdade", "Porque Lobo era seu sobrenome", "Porque queria participar de um filme", "Porque o anúncio pedia um leitor"],
       "answer": 1,
-      "explain": "A empresa queria um lobo bicho mesmo, mas o anúncio não deixou isso claro. Manuel era Lobo de sobrenome — e acabou contratado porque escrevia bem, virando respondedor das cartas dos lobos."
+      "explain": "Como o anúncio não explicou que procurava o animal, Manuel pensou que 'Lobo' poderia ser o sobrenome do candidato."
     },
     {
       "type": "text",

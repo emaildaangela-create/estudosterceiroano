@@ -94,10 +94,10 @@
     },
     {
       "type": "mc",
-      "q": "Qual alternativa apresenta a lista correta dos principais problemas enfrentados pelas cidades brasileiras?",
-      "options": ["Engarrafamento, problemas de saneamento, falta de moradias, excesso de poluição e lixo", "Excesso de parques, hospitais públicos de qualidade e transportes velozes", "Engarrafamento, moradias de qualidade, poluição do ar e problemas de saneamento", "Existência de ciclovias, programas de reciclagem do lixo, falta de moradias e excesso de poluição"],
+      "q": "Qual situação representa um problema que uma cidade precisa enfrentar?",
+      "options": ["Esgoto sem tratamento chegando aos rios", "Criação de ciclovias seguras", "Coleta seletiva funcionando", "Parques bem cuidados"],
       "answer": 0,
-      "explain": "As outras alternativas misturam problemas com coisas boas — parques, moradias de qualidade, ciclovias e reciclagem são soluções, não problemas."
+      "explain": "O esgoto sem tratamento polui a água e pode transmitir doenças. Ciclovias, coleta seletiva e parques cuidados são melhorias para a cidade."
     },
     {
       "type": "mc",
@@ -140,10 +140,10 @@
     },
     {
       "type": "mc",
-      "q": "Nas Unidades de Conservação de Proteção Integral:",
-      "options": ["a extração de recursos naturais é proibida, permitindo-se pesquisa e visitas turísticas", "é permitida a agricultura e a pesca ecológica", "não é permitida nenhuma presença humana", "qualquer pessoa pode retirar madeira de forma controlada"],
+      "q": "O que é permitido em uma Unidade de Conservação de Proteção Integral?",
+      "options": ["Pesquisa e visitação seguindo as regras do local", "Retirada de madeira por qualquer pessoa", "Agricultura em toda a área protegida", "Caça de animais silvestres"],
       "answer": 0,
-      "explain": "Na Proteção Integral a extração é proibida; só pesquisa científica e visitação são permitidas. O uso controlado dos recursos (agricultura, pesca ecológica, manejo florestal) ocorre nas UCs de Uso Sustentável."
+      "explain": "Nessas unidades, a natureza recebe proteção especial. Pesquisa e visitação podem acontecer quando seguem as regras do local."
     }
   ]
 }

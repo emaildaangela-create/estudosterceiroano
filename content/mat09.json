@@ -74,10 +74,10 @@
   "quiz": [
     {
       "type": "mc",
-      "q": "Gustavo comprou um videogame por R$ 2.500,00. Quais cédulas ele pode ter usado para pagar essa compra?",
-      "options": ["10 cédulas de R$ 200,00", "100 cédulas de R$ 20,00", "25 cédulas de R$ 10,00", "25 cédulas de R$ 100,00"],
-      "answer": 3,
-      "explain": "25 × R$ 100,00 = R$ 2.500,00. As outras opções dão R$ 2.000,00 (10 × 200 e 100 × 20) e R$ 250,00 (25 × 10), valores que não pagam a compra."
+      "q": "Gustavo tem 25 cédulas de R$ 100. Quanto dinheiro ele tem?",
+      "options": ["R$ 250", "R$ 2.000", "R$ 2.500", "R$ 25.000"],
+      "answer": 2,
+      "explain": "25 × 100 = 2.500. Multiplicar por 100 acrescenta dois zeros ao número 25."
     },
     {
       "type": "mc",
@@ -120,9 +120,9 @@
     },
     {
       "type": "text",
-      "q": "Luísa tem 2 cédulas de R$ 10,00, 3 de R$ 20,00, 4 de R$ 50,00 e 5 de R$ 100,00. Quantos reais ela tem ao todo? (escreva só o número)",
-      "answers": ["780", "780 reais", "r$ 780", "r$ 780,00", "780,00"],
-      "explain": "2×10 = 20; 3×20 = 60; 4×50 = 200; 5×100 = 500. Somando: 20 + 60 + 200 + 500 = R$ 780,00."
+      "q": "Luísa tem 3 cédulas de R$ 20 e 4 cédulas de R$ 50. Quantos reais ela tem ao todo?",
+      "answers": ["260", "260 reais", "r$ 260", "r$ 260,00", "260,00"],
+      "explain": "3 × 20 = 60 e 4 × 50 = 200. Somando os dois valores: 60 + 200 = R$ 260."
     },
     {
       "type": "mc",

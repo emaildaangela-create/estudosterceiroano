@@ -84,7 +84,7 @@
     {
       "type": "mc",
       "q": "Marque a alternativa correta sobre o município:",
-      "options": ["O município é uma das porções do território brasileiro que fazem parte da divisão político-administrativa do país", "O território brasileiro é dividido em 26 municípios", "Cada município contém diversos estados", "O município é composto apenas de áreas urbanas"],
+      "options": ["O município é uma divisão político-administrativa do Brasil", "O Brasil possui somente 26 municípios", "Cada município contém vários estados", "O município possui apenas área urbana"],
       "answer": 0,
       "explain": "O Brasil tem 26 estados e o Distrito Federal — e cada estado contém vários municípios, não o contrário. O município é composto de áreas urbanas E rurais."
     },
@@ -103,9 +103,10 @@
       "explain": "É extrativismo vegetal: a madeira é retirada das árvores. Quando grandes áreas de floresta são derrubadas, ocorre o desmatamento, principal impacto ambiental das áreas rurais."
     },
     {
-      "type": "text",
-      "q": "Qual palavra descreve uma área urbana cheia, com grande quantidade de pessoas vivendo no mesmo espaço, como o bairro de Copacabana?",
-      "answers": ["adensada", "adensado", "densa", "area adensada"],
+      "type": "mc",
+      "q": "Um bairro tem muitos moradores e construções próximas. Como podemos descrever essa área?",
+      "options": ["Densamente povoada", "Desabitada", "Rural e dispersa", "Sem ocupação"],
+      "answer": 0,
       "explain": "Adensada significa cheia, aglomerada. As áreas rurais, ao contrário, são pouco adensadas: as construções ficam esparsas, longe umas das outras."
     },
     {
