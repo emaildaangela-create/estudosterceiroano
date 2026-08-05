@@ -441,7 +441,6 @@
   function renderVideo(cap) {
     var raiz=$('#video-conteudo'); raiz.innerHTML=''; if(!cap.video)return;
     var card=criar('section','video-abertura');
-    card.appendChild(criar('p','video-abertura__etapa','Antes de começar'));
     card.appendChild(criar('h3',null,'Veja uma apresentação deste módulo'));
     card.appendChild(criar('p','video-abertura__convite','Assista ao vídeo para conhecer as ideias que você vai explorar.'));
     var frame=criar('div','video-frame'), carregando=criar('div','video-carregando','<span class="video-carregando__giro" aria-hidden="true"></span><strong>Carregando o vídeo…</strong>',{role:'status','aria-live':'polite'});

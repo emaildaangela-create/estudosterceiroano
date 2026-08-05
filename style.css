@@ -115,7 +115,6 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .painel-aba { animation:entrar .2s ease both; }
 .teoria, .jogos, .desafio, .video { width:min(100%,var(--leitura)); margin:0 auto; }
 .video-abertura { padding:clamp(20px,4vw,34px); border:1px solid var(--borda); border-radius:24px; background:#fff; box-shadow:0 16px 38px rgba(31,49,82,.09); }
-.video-abertura__etapa { display:inline-block; margin:0 0 8px; padding:5px 10px; border-radius:999px; color:var(--acento,var(--rosa)); background:color-mix(in srgb,var(--acento,var(--rosa)) 9%,white); font-size:11px; font-weight:850; letter-spacing:.06em; text-transform:uppercase; }
 .video-abertura h3 { margin:0 0 5px; font-size:clamp(24px,4vw,34px); line-height:1.2; }
 .video-abertura__convite { margin:0 0 20px; color:var(--suave); }
 .video-frame { position:relative; overflow:hidden; aspect-ratio:16/9; border-radius:18px; background:#111827; box-shadow:0 9px 25px rgba(18,26,45,.2); }
