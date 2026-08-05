@@ -1,4 +1,4 @@
-const CACHE = 'estudos-3-ano-v17';
+const CACHE = 'estudos-3-ano-v18';
 const ARQUIVOS = [
   './', './index.html', './style.css', './data.js', './experiences.js',
   './pedagogy.js', './app.js', './manifest.webmanifest',
@@ -23,6 +23,10 @@ const ARQUIVOS = [
   ,'./assets/games/piloto-lp19-origens.webp','./assets/games/piloto-mat10-relogios.webp',
   './assets/games/piloto-cie10-observatorio.webp','./assets/games/piloto-geo10-campo-cidade.webp',
   './assets/games/piloto-hist10-acessos.webp'
+  ,'./assets/games/piloto-lp20-oficina-sz.webp','./assets/games/piloto-lp21-quadrinhos.webp',
+  './assets/games/piloto-lp22-correspondencia.webp','./assets/games/piloto-mat11-divisao.webp',
+  './assets/games/piloto-cie11-lua.webp','./assets/games/piloto-geo11-poluicao.webp',
+  './assets/games/piloto-hist11-conselho.webp'
 ];
 
 self.addEventListener('install', function (evento) {

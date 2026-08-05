@@ -352,6 +352,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .piloto-peca--letra { color:#683367; background:linear-gradient(145deg,#fff8fc,#f4eafa); font-size:18px; }
 .piloto-peca--bandeja { border-bottom-width:6px; border-bottom-color:#6699a8; background:#fffdf4; }
 .piloto-escolhas--no-tabuleiro { position:absolute; z-index:4; left:3%; right:3%; bottom:3%; }
+.piloto-escolhas--quatro { grid-template-columns:repeat(4,minmax(0,1fr)); }
 .piloto-peca--tabuleiro { min-height:82px; border-color:rgba(255,255,255,.88); background:rgba(255,252,241,.94); box-shadow:0 8px 20px rgba(15,27,53,.24); backdrop-filter:blur(4px); }
 
 .artefato { position:relative; margin-bottom:24px; padding:17px 18px 19px 74px; border:1px solid #d8e3f0; border-radius:20px; background:linear-gradient(135deg,#f8fbff,#fffaf2); box-shadow:0 7px 20px rgba(42,64,101,.07); }
@@ -591,6 +592,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
   .piloto-destinos--tres .piloto-destino { width:31%; font-size:11px; }
   .piloto-escolhas,.piloto-escolhas--cabides { grid-template-columns:1fr 1fr; }
   .piloto-escolhas--no-tabuleiro { grid-template-columns:1fr 1fr 1fr; gap:5px; }
+  .piloto-escolhas--quatro { grid-template-columns:1fr 1fr; }
   .piloto-peca--tabuleiro { min-height:68px; padding:7px 5px; font-size:11px; }
   .piloto-peca { min-height:58px; padding:9px; font-size:14px; }
 }

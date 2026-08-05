@@ -14,15 +14,15 @@ const EXPERIENCE_PROFILES = {
     { mode:'scenario', goal:'Investigar quem está contando', prompt:'A pessoa fala de si ou de outra pessoa?', result:'arquivo' }
   ],
   lp20: [
-    { mode:'builder', goal:'Consertar palavras incompletas', prompt:'Qual letra termina esta palavra?', result:'palavras' },
+    { mode:'wordrepair', pilot:'wordrepair', scene:'assets/games/piloto-lp20-oficina-sz.webp', goal:'Consertar palavras incompletas', prompt:'Envie cada palavra para a letra que a completa.', result:'palavras consertadas' },
     { mode:'transform', goal:'Transformar singular em plural', prompt:'Como esta expressão fica no plural?', result:'painel de transformações' }
   ],
   lp21: [
-    { mode:'explore', goal:'Escolher o balão que mostra a intenção', prompt:'Qual balão combina com esta situação?', result:'quadrinhos' },
+    { mode:'comics', pilot:'comics', scene:'assets/games/piloto-lp21-quadrinhos.webp', goal:'Escolher o balão que mostra a intenção', prompt:'Escolha o balão que dá voz à cena.', result:'estúdio de quadrinhos' },
     { mode:'choice', goal:'Organizar os pronomes', prompt:'Em qual grupo este pronome entra?', result:'coleções' }
   ],
   lp22: [
-    { mode:'scenario', goal:'Escolher como falar com cada pessoa', prompt:'Com quem usamos esta forma de tratamento?', result:'diálogos' },
+    { mode:'mailroom', pilot:'mailroom', scene:'assets/games/piloto-lp22-correspondencia.webp', goal:'Escolher como falar com cada pessoa', prompt:'Entregue cada forma de tratamento ao destinatário correto.', result:'correspondências' },
     { mode:'choice', goal:'Descobrir as pessoas do discurso', prompt:'Quem esta palavra representa na conversa?', result:'coleções' }
   ],
   mat09: [
@@ -34,7 +34,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'choice', goal:'Consertar um painel de tempo', prompt:'Esta conversão está correta?', result:'painel' }
   ],
   mat11: [
-    { mode:'distribute', goal:'Repartir quantidades igualmente', prompt:'Quanto fica em cada grupo?', result:'grupos' },
+    { mode:'sharing', pilot:'sharing', scene:'assets/games/piloto-mat11-divisao.webp', goal:'Repartir quantidades igualmente', prompt:'Reparta igualmente e escolha quanto fica em cada grupo.', result:'piquenique da divisão' },
     { mode:'scenario', goal:'Descobrir quando sobra alguma coisa', prompt:'Essa divisão termina sem resto?', result:'divisões' }
   ],
   cie09: [
@@ -46,7 +46,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'scenario', goal:'Simular os movimentos da Terra', prompt:'Qual movimento produz esse acontecimento?', result:'órbitas' }
   ],
   cie11: [
-    { mode:'explore', goal:'Completar um diário de observação da Lua', prompt:'Qual pista combina com esta fase?', result:'diário lunar' },
+    { mode:'moonlog', pilot:'moonlog', scene:'assets/games/piloto-cie11-lua.webp', goal:'Completar um diário de observação da Lua', prompt:'Registre a pista correta no diário lunar.', result:'diário lunar' },
     { mode:'scenario', goal:'Escolher um lugar para observar estrelas', prompt:'Esta condição ajuda ou atrapalha a observação?', result:'observatório' }
   ],
   geo09: [
@@ -58,7 +58,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'explore', goal:'Montar um mapa de heranças culturais', prompt:'Qual herança está ligada a este grupo ou lugar?', result:'mapa cultural' }
   ],
   geo11: [
-    { mode:'scenario', goal:'Ajudar a cidade a identificar poluições', prompt:'Que tipo de poluição aparece nesta situação?', result:'plano da cidade' },
+    { mode:'pollutionlab', pilot:'pollutionlab', scene:'assets/games/piloto-geo11-poluicao.webp', goal:'Ajudar a cidade a identificar poluições', prompt:'Envie cada alerta ao monitor de poluição correto.', result:'central ambiental' },
     { mode:'sequence', goal:'Construir o caminho da água limpa', prompt:'Qual é a próxima etapa do tratamento?', result:'estação de tratamento' }
   ],
   hist09: [
@@ -70,7 +70,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'explore', goal:'Montar o quadro de responsabilidades', prompt:'Quem realiza esta função no município?', result:'quadro cívico' }
   ],
   hist11: [
-    { mode:'scenario', goal:'Participar de um conselho da cidade', prompt:'Isto é um desafio ou uma solução?', result:'plano de melhorias' },
+    { mode:'citycouncil', pilot:'citycouncil', scene:'assets/games/piloto-hist11-conselho.webp', goal:'Participar de um conselho da cidade', prompt:'Leve cada proposta para desafio ou solução.', result:'plano de melhorias' },
     { mode:'explore', goal:'Investigar palavras usadas para entender a cidade', prompt:'Qual explicação combina com este conceito?', result:'caderno da cidade' }
   ]
 };
