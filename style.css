@@ -330,6 +330,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .piloto__painel--centro { left:50%; top:25%; width:31%; min-height:29%; transform:translateX(-50%); }
 .piloto__painel--maquina { left:50%; top:31%; width:42%; min-height:25%; transform:translateX(-50%); }
 .piloto__painel--terra { left:50%; top:10%; min-width:25%; transform:translateX(-50%); }
+.piloto__painel--topo { left:50%; top:5%; width:48%; min-height:18%; transform:translateX(-50%); }
 .piloto__saida { min-width:75%; padding:7px 11px; border-radius:10px; color:#fff !important; background:var(--acento,var(--rosa)); font-size:19px !important; font-weight:900; }
 .piloto--ativado { animation:piloto-brilho .55s ease; }
 @keyframes piloto-brilho { 50% { filter:saturate(1.35) brightness(1.08); transform:scale(1.01); } }
@@ -338,6 +339,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .piloto-destinos { position:absolute; z-index:3; inset:0; pointer-events:none; }
 .piloto-destino { position:absolute; bottom:4%; width:29%; min-height:22%; padding:12px; border:3px dashed rgba(255,255,255,.95); border-radius:20px; color:#fff; background:rgba(23,33,59,.66); box-shadow:0 8px 18px rgba(20,30,50,.2); cursor:pointer; pointer-events:auto; font-weight:900; text-shadow:0 2px 4px rgba(0,0,0,.4); backdrop-filter:blur(3px); }
 .piloto-destino--esquerda { left:3%; }.piloto-destino--direita { right:3%; }
+.piloto-destino--centro { left:50%; transform:translateX(-50%); }
+.piloto-destino--centro:hover { transform:translate(-50%,-3px); }
+.piloto-destinos--tres .piloto-destino { width:29%; }
 .piloto-destino:hover { transform:translateY(-3px); background:rgba(23,33,59,.78); }
 .piloto-destino--certo { border-style:solid; border-color:#9be2bb; background:rgba(22,119,90,.88); }
 .piloto-escolhas { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
@@ -347,6 +351,8 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .piloto-peca--cabide span { display:block; margin-bottom:3px; font-size:25px; }.piloto-peca--cabide strong { font-size:22px; }
 .piloto-peca--letra { color:#683367; background:linear-gradient(145deg,#fff8fc,#f4eafa); font-size:18px; }
 .piloto-peca--bandeja { border-bottom-width:6px; border-bottom-color:#6699a8; background:#fffdf4; }
+.piloto-escolhas--no-tabuleiro { position:absolute; z-index:4; left:3%; right:3%; bottom:3%; }
+.piloto-peca--tabuleiro { min-height:82px; border-color:rgba(255,255,255,.88); background:rgba(255,252,241,.94); box-shadow:0 8px 20px rgba(15,27,53,.24); backdrop-filter:blur(4px); }
 
 .artefato { position:relative; margin-bottom:24px; padding:17px 18px 19px 74px; border:1px solid #d8e3f0; border-radius:20px; background:linear-gradient(135deg,#f8fbff,#fffaf2); box-shadow:0 7px 20px rgba(42,64,101,.07); }
 .artefato::before { content:'🏆'; position:absolute; left:18px; top:16px; display:grid; place-items:center; width:40px; height:40px; border-radius:13px; background:#fff; box-shadow:0 5px 14px rgba(42,64,101,.1); font-size:21px; }
@@ -577,11 +583,15 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
   .resumo-dominio li { align-items:flex-start; flex-direction:column; gap:2px; }
   .piloto { aspect-ratio:4/3; background-position:center; border-radius:18px; }
   .piloto__painel--centro { top:21%; width:46%; }.piloto__painel--maquina { top:27%; width:58%; }.piloto__painel--terra { top:7%; width:52%; }
+  .piloto__painel--topo { top:3%; width:72%; min-height:17%; }
   .piloto__painel,.piloto__cartao-movel { padding:9px 11px; border-radius:13px; }
   .piloto__painel strong,.piloto__cartao-movel strong { font-size:16px; }
   .piloto__cartao-movel { top:3%; min-width:170px; }
   .piloto-destino { bottom:3%; width:42%; min-height:22%; padding:8px; border-radius:14px; font-size:13px; }
+  .piloto-destinos--tres .piloto-destino { width:31%; font-size:11px; }
   .piloto-escolhas,.piloto-escolhas--cabides { grid-template-columns:1fr 1fr; }
+  .piloto-escolhas--no-tabuleiro { grid-template-columns:1fr 1fr 1fr; gap:5px; }
+  .piloto-peca--tabuleiro { min-height:68px; padding:7px 5px; font-size:11px; }
   .piloto-peca { min-height:58px; padding:9px; font-size:14px; }
 }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto !important; animation:none !important; transition:none !important; } }

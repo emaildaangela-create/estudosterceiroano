@@ -601,6 +601,8 @@
     else if(perfil.pilot==='community')renderPilotoMapa(stage,cena,game,passo,concluir,true);
     else if(perfil.pilot==='factory')renderPilotoFabrica(stage,cena,game,passo,concluir);
     else if(perfil.pilot==='earth')renderPilotoTerra(stage,cena,game,passo,concluir);
+    else if(perfil.pilot==='origins'||perfil.pilot==='clockwork'||perfil.pilot==='observatory')renderPilotoPares(stage,cena,game,passo,concluir,perfil.pilot);
+    else if(perfil.pilot==='ruralurban'||perfil.pilot==='access')renderPilotoClassificar(stage,cena,game,passo,concluir,perfil.pilot);
   }
   function escolhasPiloto(lista,correta,limite) {
     return opcoesEmbaralhadas(lista.filter(function(x){return x!==correta;}),correta,limite||3);
@@ -625,6 +627,19 @@
     var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];});
     cena.appendChild(criar('div','piloto__painel piloto__painel--terra','<span class="piloto__chamada">Peça do modelo</span><strong>'+textoSeguro(par[0])+'</strong>'));
     var bandejas=criar('div','piloto-escolhas piloto-escolhas--bandejas');escolhasPiloto(respostas,par[1],3).forEach(function(op){var bt=criar('button','piloto-peca piloto-peca--bandeja',textoSeguro(op),{type:'button'});bt.addEventListener('click',function(){if(op===par[1]){cena.classList.add('piloto--ativado');feedbackInterativo(stage,true,par[0]+': '+op+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,'Observe se a palavra fala de água, ar, rochas ou do interior do planeta.');}});bandejas.appendChild(bt);});stage.appendChild(bandejas);
+  }
+  function renderPilotoPares(stage,cena,game,passo,concluir,tipo) {
+    var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];}), icone=tipo==='origins'?'🧳':tipo==='clockwork'?'🕰️':'🔭';
+    var chamadas={origins:'Lugar de origem',clockwork:'Horário no cotidiano',observatory:'Corpo celeste'};
+    cena.appendChild(criar('div','piloto__painel piloto__painel--topo','<span class="piloto__chamada">'+chamadas[tipo]+'</span><strong>'+icone+' '+textoSeguro(par[0])+'</strong><p>Escolha a combinação</p>'));
+    var opcoes=criar('div','piloto-escolhas piloto-escolhas--no-tabuleiro');
+    escolhasPiloto(respostas,par[1],3).forEach(function(op){var bt=criar('button','piloto-peca piloto-peca--tabuleiro',textoSeguro(op),{type:'button'});bt.addEventListener('click',function(){if(op===par[1]){cena.classList.add('piloto--ativado');feedbackInterativo(stage,true,par[0]+' combina com '+op+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,tipo==='clockwork'?'Depois do meio-dia, conte mais 12 horas.':tipo==='origins'?'Procure a palavra usada para indicar quem nasce nesse lugar.':'Pense em como esse corpo se move e se ele produz a própria luz.');}});opcoes.appendChild(bt);});cena.appendChild(opcoes);
+  }
+  function renderPilotoClassificar(stage,cena,game,passo,concluir,tipo) {
+    var item=game.items[passo], nomes=game.categories, tres=nomes.length===3;
+    cena.appendChild(criar('div','piloto__cartao-movel','<span aria-hidden="true">'+(tipo==='access'?'🔑':'🧭')+'</span><strong>'+textoSeguro(item.text)+'</strong><small>Escolha o destino</small>'));
+    var destinos=criar('div','piloto-destinos'+(tres?' piloto-destinos--tres':''));
+    nomes.forEach(function(nome,i){var pos=tres?(i===0?'esquerda':i===1?'centro':'direita'):(i?'direita':'esquerda');var bt=criar('button','piloto-destino piloto-destino--'+pos,'<span>'+textoSeguro(nome)+'</span>',{type:'button'});bt.addEventListener('click',function(){if(i===item.cat){bt.classList.add('piloto-destino--certo');feedbackInterativo(stage,true,item.text+' pertence a '+nome.toLowerCase()+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,tipo==='access'?'Pense em quem é dono do espaço e se qualquer pessoa pode entrar.':'Observe o ritmo, o transporte e as atividades dessa situação.');}});destinos.appendChild(bt);});cena.appendChild(destinos);
   }
   function renderConclusaoExperiencia(raiz,cap,game,perfil,salvo,total) {
     var arte=game&&game.artifact, box;

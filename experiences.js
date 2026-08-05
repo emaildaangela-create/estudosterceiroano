@@ -10,7 +10,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'choice', goal:'Separar nomes e características', prompt:'Esta palavra dá nome ou mostra uma característica?', result:'coleções' }
   ],
   lp19: [
-    { mode:'explore', goal:'Descobrir palavras que indicam origem', prompt:'Quem nasce nesse lugar é chamado de quê?', result:'mapa' },
+    { mode:'origins', pilot:'origins', scene:'assets/games/piloto-lp19-origens.webp', goal:'Descobrir palavras que indicam origem', prompt:'Complete o passaporte de cada lugar.', result:'mapa de origens' },
     { mode:'scenario', goal:'Investigar quem está contando', prompt:'A pessoa fala de si ou de outra pessoa?', result:'arquivo' }
   ],
   lp20: [
@@ -30,7 +30,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'combinations', goal:'Investigar duas ideias da multiplicação', prompt:'A situação combina escolhas ou repete grupos iguais?', result:'painel de estratégias' }
   ],
   mat10: [
-    { mode:'clock', goal:'Ajustar o relógio para cada horário', prompt:'Qual horário de 24 horas corresponde ao relógio?', result:'relógios' },
+    { mode:'clockwork', pilot:'clockwork', scene:'assets/games/piloto-mat10-relogios.webp', goal:'Ajustar o relógio para cada horário', prompt:'Encontre o horário equivalente na oficina.', result:'coleção de relógios' },
     { mode:'choice', goal:'Consertar um painel de tempo', prompt:'Esta conversão está correta?', result:'painel' }
   ],
   mat11: [
@@ -42,7 +42,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'scenario', goal:'Investigar forças que transformam a Terra', prompt:'Essa transformação começa dentro ou fora da Terra?', result:'investigação' }
   ],
   cie10: [
-    { mode:'explore', goal:'Criar um guia dos corpos celestes', prompt:'Qual descrição revela este corpo celeste?', result:'guia espacial' },
+    { mode:'observatory', pilot:'observatory', scene:'assets/games/piloto-cie10-observatorio.webp', goal:'Criar um guia dos corpos celestes', prompt:'Envie cada corpo celeste para a descrição correta.', result:'guia espacial' },
     { mode:'scenario', goal:'Simular os movimentos da Terra', prompt:'Qual movimento produz esse acontecimento?', result:'órbitas' }
   ],
   cie11: [
@@ -54,7 +54,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'explore', goal:'Criar um glossário de Geografia', prompt:'Qual explicação combina com este conceito?', result:'glossário' }
   ],
   geo10: [
-    { mode:'scenario', goal:'Comparar modos de vida', prompt:'Esta situação combina mais com campo ou cidade?', result:'dois cotidianos' },
+    { mode:'ruralurban', pilot:'ruralurban', scene:'assets/games/piloto-geo10-campo-cidade.webp', goal:'Comparar modos de vida', prompt:'Leve cada situação para o campo ou para a cidade.', result:'dois cotidianos' },
     { mode:'explore', goal:'Montar um mapa de heranças culturais', prompt:'Qual herança está ligada a este grupo ou lugar?', result:'mapa cultural' }
   ],
   geo11: [
@@ -66,7 +66,7 @@ const EXPERIENCE_PROFILES = {
     { mode:'explore', goal:'Descobrir a função dos espaços públicos', prompt:'Que função este espaço cumpre?', result:'guia comunitário' }
   ],
   hist10: [
-    { mode:'scenario', goal:'Decidir como os espaços podem ser usados', prompt:'Que tipo de acesso existe neste lugar?', result:'mapa de acesso' },
+    { mode:'access', pilot:'access', scene:'assets/games/piloto-hist10-acessos.webp', goal:'Decidir como os espaços podem ser usados', prompt:'Entregue a chave de acesso correta para cada lugar.', result:'mapa de acesso' },
     { mode:'explore', goal:'Montar o quadro de responsabilidades', prompt:'Quem realiza esta função no município?', result:'quadro cívico' }
   ],
   hist11: [
