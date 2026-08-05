@@ -1631,6 +1631,7 @@ const DISCIPLINAS = [
         "id": "mat09",
         "module": 9,
         "title": "Contagem de possibilidades e outras multiplicações",
+        "video": "assets/videos/mat09-matematica-no-dia-a-dia.mp4",
         "theory": [
           {
             "h": "Fazendo combinações",
@@ -1847,6 +1848,7 @@ const DISCIPLINAS = [
         "id": "mat10",
         "module": 10,
         "title": "Medidas de tempo, localização e deslocamento",
+        "video": "assets/videos/mat10-tempo-e-mapas.mp4",
         "theory": [
           {
             "h": "Instrumentos para medir o tempo",
@@ -2064,6 +2066,7 @@ const DISCIPLINAS = [
         "id": "mat11",
         "module": 11,
         "title": "Divisão",
+        "video": "assets/videos/mat11-desvendando-a-divisao.mp4",
         "theory": [
           {
             "h": "Repartir em partes iguais",
