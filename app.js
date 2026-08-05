@@ -258,4 +258,639 @@
     if(certo){
       placar.sequencia++;
       placar.melhor=Math.max(placar.melhor,placar.sequencia);
-      placar.pontos+=10+(placar.◊ç7ˆ⁄$z{-ÆÈ‹j◊ùW'Frì∑ñÊV¬ÁVW'ï6V∆V7F˜"ÇrÁñÊV¬◊G&Á6f˜&÷6ııˆFWˆó27G&ˆÊrríÁFWáD6ˆÁFVÁC÷˜∑ñÊV¬Ê6∆74∆ó7BÊFBÇwñÊV¬◊G&Á6f˜&÷6Ú“◊&ˆÁFÚrì∂fVVF&6¥ñÁFW&FófÚá7FvR«G'VR¬tˆ'6W'fRÚVR◊VF˜RV“FˆF22∆g&2FWá&W7<:6Ú‚r¬rr∆6ˆÊ6«Vó"ì∑÷V«6W∂W'&˜2≤≥∂"Ê6∆74∆ó7BÊFBÇvFV6ó6Ú“÷W'&Frì∂ñbÜW'&˜3„”"ñ÷˜7G&%ó7Fá7FvR¬t6ˆÊfó&6R7V'7FÁFófÚ¬'FñvÚR6&7FW,:◊7Fñ6W7L:6ÚFˆF˜2ÊÚ«W&¬‚rì∑◊“ì∂W66ˆ∆Ü2ÊVÊD6Üñ∆BÜ"ì∑“ì∑7FvRÊVÊD6Üñ∆BÜW66ˆ∆Ü2ì∞–¢––†–¢gVÊ7Fñˆ‚ñÊñ6ñ%Vó¢Ü6«&VñÊñ6ñ"í∞–¢f"wV&FFÛ“&VñÊñ6ñ"bbW7FFÚÁFVÁFFóf5∂6ÊñE”∞–¢Vó£÷wV&FFÚÚ∂ñÊFñ6S¶wV&FFÚÊñÊFñ6W«√∆6W'F˜3¶wV&FFÚÊ6W'F˜7«√«&W7ˆÊFñF3¶wV&FFÚÊñÊFñ6W«√∆W'&˜3¢ÜwV&FFÚÊW'&˜7«≈µ“íÊ÷ÜgVÊ7Fñˆ‚Üíó∑&WGW&‚∑VW7FÛ¶6ÁVó•∂ï“∆ñÊFñ6T˜&ñvñÊ√¶ó”∑“í∆ñÊFñ6W3¶6ÁVó¢Ê÷ÜgVÊ7Fñˆ‚ÖÚ∆íó∑&WGW&‚ì∑“í«&Wfó6Û¶f«6R«W6¶f«6W“†–¢∂ñÊFñ6S£∆6W'F˜3£«&W7ˆÊFñF3£∆W'&˜3•µ“∆ñÊFñ6W3¶6ÁVó¢Ê÷ÜgVÊ7Fñˆ‚ÖÚ∆íó∑&WGW&‚ì∑“í«&Wfó6Û¶f«6R«W6¶f«6W”∞–¢ñbá&VñÊñ6ñ"ó∂FV∆WFRW7FFÚÁFVÁFFóf5∂6ÊñE”∑6«f"Çì∑––¢&VÊFW%VW7FÚÜ6ì∞–¢––¢gVÊ7Fñˆ‚6«f%FVÁFFófÜ6í∞–¢ñbáVó¢Á&Wfó6Úó&WGW&„∞–¢W7FFÚÁFVÁFFóf5∂6ÊñE”◊∂ñÊFñ6SßVó¢ÊñÊFñ6R∆6W'F˜3ßVó¢Ê6W'F˜2∆W'&˜3ßVó¢ÊW'&˜2Ê÷ÜgVÊ7Fñˆ‚ÜRó∑&WGW&‚RÊñÊFñ6T˜&ñvñÊ√∑“ó”∑6«f"Çì∞–¢––¢gVÊ7Fñˆ‚W&wVÁF4GVó2Ü6í≤&WGW&‚Vó¢Á&Wfó6ÚÚVó¢ÁW&wVÁF2¢6ÁVó£≤–¢gVÊ7Fñˆ‚6ˆÁFWáGV∆ó¶%VW7FÚÜ6«í∞¢f"FWáFÛ◊Á¬ñ÷vV”◊Êñ÷vW«∆ÁV∆¬¬ñ÷vV‘«C◊Êñ÷vT«G«¬rr¬ñ÷vV‘6Fñˆ„◊Êñ÷vT6FñˆÁ«¬rr¬6ˆÁFWáFÛ“rr¬ñÊFñ6S÷6ÁVó¢ÊñÊFWÑˆbáí¬∆ÊÛ“áGóVˆbTDtÙuí”“wVÊFVfñÊVBrbeTDtÙuï∂6ÊñE“ó«∆ÁV∆¬¬ßW7FS◊∆ÊÚbg∆ÊÚÁVW7FñˆÁ2bg∆ÊÚÁVW7FñˆÁ5∂ñÊFñ6U”∞¢ñbÜßW7FRó∂6ˆÁFWáFÛ÷ßW7FRÊ6ˆÁFWáG«¬rs∑FWáFÛ÷ßW7FRÁ&ˆ◊G««FWáFÛ∑––¢ñbÇı‰ÊFó&ñÊÜ¬ˆíÁFW7BáFWáFÚííFWáFÛ◊FWáFÚÁ&W∆6RÇı‰ÊFó&ñÊÜ¬ˆí¬t∆VñW7FRFú:∆ˆvÚFRV÷Fó&ñÊÜ¢rì∞–¢ñbÜ6ÊñC””“v6ñSrbbÙÁL:'Fñ6&V6R6ˆ◊∆WF÷VÁFRW67W&ˆíÁFW7BáFWáFÚííFWáFÛ“uV÷ñ÷vV“F2«W¶W2Ê˜GW&Ê2FFW'&÷˜7G&ˆÊFRå:◊VóF26ñFFW2‚ÊV∆¬ÁL:'Fñ6&V6R6ˆ◊∆WF÷VÁFRW67W&‚˜"\:£Ús∞–¢ñbÜ6ÊñC””“v«rrbbı6VwVÊFÚÚ6'F¢FÚVÊñ6VbˆíÁFW7BáFWáFÚíbb6ÁvTñ÷vW2íñ÷vV”÷6ÁvTñ÷vW5≥◊«∆ÁV∆√∞–¢ñbÜñ÷vV“bbñ÷vV‘«Bíñ÷vV‘«C“tñ«W7G&:|:6ÚFRˆñÚ&&W7ˆÊFW":W&wVÁF‚s∞¢ñbÜñ÷vV“bbñ÷vV‘6Fñˆ‚íñ÷vV‘6Fñˆ„“tˆ'6W'fRñ«W7G&:|:6ÚÁFW2FR&W7ˆÊFW"‚s∞¢&WGW&‚∑FWáFÛßFWáFÚ∆6ˆÁFWáFÛ¶6ˆÁFWáFÚ∆ñ÷vV”¶ñ÷vV“∆ñ÷vV‘«C¶ñ÷vV‘«B∆ñ÷vV‘6Fñˆ„¶ñ÷vV‘6FñˆÁ”∞¢––¢gVÊ7Fñˆ‚&VÊFW%VW7FÚÜ6í∞–¢f"&ó£“BÇr6FW6fñÚ÷6ˆÁFWVFÚrì≤&ó¢ÊñÊÊW$ÖD‘√“rs∞–¢ñbÇ6ÁVóß«¬6ÁVó¢Ê∆VÊwFÇó∑&ó¢ÊVÊD6Üñ∆BÜ7&ñ"ÇvFóbr¬wf¶ñÚr¬tñÊFÏ:6Úå:W&wVÁF2&W7FR77VÁFÚ‚ríì∑&WGW&„∑––¢f"W&wVÁF3◊W&wVÁF4GVó2Ü6ì∞–¢ñbáVó¢ÁW6ó∑&VÊFW$ñÁFW'f∆ÚÜ6«W&wVÁF2ì∑&WGW&„∑––¢ñbáVó¢ÊñÊFñ6S„◊W&wVÁF2Ê∆VÊwFÇó∑&VÊFW%&W7V«FFÚÜ6ì∑&WGW&„∑––¢f"◊W&wVÁF5∑Vó¢ÊñÊFñ6U“¬6ˆÁFWáFÛ÷6ˆÁFWáGV∆ó¶%VW7FÚÜ6«í¬6&C÷7&ñ"Çw6V7Fñˆ‚r¬wVó¢÷6&Brí¬&ˆFF‘÷FÇÊf∆ˆ˜"áVó¢ÊñÊFñ6RÛ2í≥¬&ˆFF3‘÷FÇÊ6Vñ¬áW&wVÁF2Ê∆VÊwFÇÛ2ì∞–¢6&BÊñÊÊW$ÖD‘√“s«6∆73“'Vó¢÷6&EıˆWF#‚r≤áVó¢Á&Wfó6ÛÚu&Wfó<:6ÚF˜2W'&˜2s¢u&ˆFFr∑&ˆFF≤rFRr∑&ˆFF2í≤r+rW&wVÁFr≤áVó¢ÊñÊFñ6R≥í≤rFRr∑W&wVÁF2Ê∆VÊwFÇ≤s¬˜‚s∞¢ñbÜ6ˆÁFWáFÚÊñ÷vV“ó∞¢6&BÊVÊD6Üñ∆BÜfñwW&˜6ñˆÊ¬Ü7&ñ"ÇvfñwW&Rr¬wVW7FÚ÷6ˆÁFWáFÚr¬s∆á&Vc“"r∑FWáFı6VwW&ÚÜ6ˆÁFWáFÚÊñ÷vV“í≤r"F&vWC“%ˆ&∆Ê≤"&V√“&Êˆ˜VÊW""&ñ÷∆&V√“$◊∆ñ"ñ«W7G&:|:6Ú#„∆ñ÷r7&3“"r∑FWáFı6VwW&ÚÜ6ˆÁFWáFÚÊñ÷vV“í≤r"«C“"r∑FWáFı6VwW&ÚÜ6ˆÁFWáFÚÊñ÷vV‘«Bí≤r"∆ˆFñÊs“&∆ßí#„¬ˆ„∆fñv6Fñˆ„‚r∑FWáFı6VwW&ÚÜ6ˆÁFWáFÚÊñ÷vV‘6Fñˆ‚í≤rF˜VRÊñ÷vV“&◊∆ú:÷∆„¬ˆfñv6Fñˆ„‚rííì∞¢––¢ñbÜ6ˆÁFWáFÚÊ6ˆÁFWáFÚñ6&BÊVÊD6Üñ∆BÜ7&ñ"ÇvFóbr¬wVW7FÚ÷6ˆÁFWáFÚ◊FWáFÚr¬s«7„‰ñÊf˜&÷:|;VW2&VÁ6#¬˜7„„«‚r∑FWáFı6VwW&ÚÜ6ˆÁFWáFÚÊ6ˆÁFWáFÚí≤s¬˜‚ríì∞–¢6&BÊVÊD6Üñ∆BÜ7&ñ"Çwr¬wVó¢÷6&Eı˜W&wVÁFr«FWáFı6VwW&ÚÜ6ˆÁFWáFÚÁFWáFÚííì∞–¢f"&W7˜7F÷7&ñ"ÇvFóbr∆ÁV∆¬∆ÁV∆¬«∑&ˆ∆S¢w7FGW2r¬v&ñ÷∆ófRs¢wˆ∆óFRw“í¬&∆˜VVFÛ÷f«6R¬W'&˜TÁFW3÷f«6R¬W'&ı&Vvó7G&FÛ÷f«6S∞–¢gVÊ7Fñˆ‚&Vvó7G&$W'&ÚÜW66ˆ∆Üó∂ñbÜW'&ı&Vvó7G&FÚó&WGW&„∂W'&ı&Vvó7G&FÛ◊G'VS∑Vó¢ÊW'&˜2ÁW6Çá∑VW7FÛß∆W66ˆ∆Ü¶W66ˆ∆Ü∆ñÊFñ6T˜&ñvñÊ√ßVó¢ÊñÊFñ6W5∑Vó¢ÊñÊFñ6U◊“ì∑––¢gVÊ7Fñˆ‚÷˜7G&$Ê˜fFVÁFFófÜ÷VÁ6vV“ó∑&W7˜7FÊ6∆74Ê÷S“vfVVF&6≤fVVF&6≤“÷W'&Ús∑&W7˜7FÊñÊÊW$ÖD‘√“s«7G&ˆÊsÂFVÁFR÷ó2V÷fW¢„¬˜7G&ˆÊs„«6∆73“&Wá∆ñ66Ú#‚r∑FWáFı6VwW&ÚÜ÷VÁ6vV“í≤s¬˜‚s∑&WfV∆"á&W7˜7Fì∑––¢gVÊ7Fñˆ‚6ˆÊ6«Vó"Ü6W'FÚ∆W66ˆ∆Üó∞–¢ñbÜ&∆˜VVFÚó&WGW&„∂&∆˜VVFÛ◊G'VS∑Vó¢Á&W7ˆÊFñF2≤≥∂ñbÜ6W'FÚbbÇW'&˜TÁFW7««Vó¢Á&Wfó6ÚíóVó¢Ê6W'F˜2≤≥∂ñbÇ6W'FÚó&Vvó7G&$W'&ÚÜW66ˆ∆Üì∞–¢&W7˜7FÊ6∆74Ê÷S“vfVVF&6≤r≤Ü6W'FÛÚvfVVF&6≤“÷ˆ≤s¢vfVVF&6≤“÷W'&Úrì∑&W7˜7FÊñÊÊW$ÖD‘√“s«7G&ˆÊs‚r≤Ü6W'FÛÚÜW'&˜TÁFW3Útv˜&fñ6˜R6∆&Ús¢ufˆ<:¢W&6V&WRrì¢uf÷˜2VÁFVÊFW"ßVÁF˜2‚rí≤s¬˜7G&ˆÊs‚r≤áÊWá∆ñ„Ús«6∆73“&Wá∆ñ66Ú#‚r∑FWáFı6VwW&ÚáÊWá∆ñ‚í≤s¬˜‚s¢rrì∞–¢ñbÇ6W'FÚñ6&BÊVÊD6Üñ∆BÜf∆÷66˜FRÇuGVFÚ&V“Ï:6Ú6W'F"ñÊF‚W7FWá∆ñ6:|:6Ú÷˜7G&Ú6÷ñÊÜÚ&&Wfó<:6Ú‚r«G'VRíì∞–¢f"Êc÷7&ñ"ÇvFóbr¬vÊfVv6Úrí¬V«Fñ÷◊Vó¢ÊñÊFñ6S””◊W&wVÁF2Ê∆VÊwFÇ”¬&˜É÷7&ñ"Çv'WGFˆ‚r¬v&˜FÚ&˜FÚ“◊&ñ÷&ñÚr«V«Fñ÷ÚáVó¢Á&Wfó6ÛÚuFW&÷ñÊ"&Wfó<:6Ús¢ufW"&W7V«FFÚrì¢u,;7Üñ÷(i"r«∑GóS¢v'WGFˆ‚w“ì∞–¢ñbÇVó¢Á&Wfó6ÚbbV«Fñ÷ó∑f"wV&F#÷7&ñ"Çv'WGFˆ‚r¬v&˜FÚ&˜FÚ“÷∆WfRr¬t6ˆÁFñÁV"FWˆó2r«∑GóS¢v'WGFˆ‚w“ì∂wV&F"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∑Vó¢ÊñÊFñ6R≤≥∑Vó¢ÁW6◊Vó¢ÊñÊFñ6S«W&wVÁF2Ê∆VÊwFÇbgVó¢ÊñÊFñ6RS3”””∑6«f%FVÁFFófÜ6ì∂'&ó$Fó66ó∆ñÊÜW7FFÚÊFó66ó∆ñÊì∑Fˆ7BÇu6WRˆÁFÚfˆíwV&FFÚ‚rì∑“ì∂ÊbÊVÊD6Üñ∆BÜwV&F"ì∑––¢&˜ÇÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∑Vó¢ÊñÊFñ6R≤≥∑Vó¢ÁW6“Vó¢Á&Wfó6ÚbbVó¢ÊñÊFñ6S«W&wVÁF2Ê∆VÊwFÇbbVó¢ÊñÊFñ6RS3”””∑6«f%FVÁFFófÜ6ì∑&VÊFW%VW7FÚÜ6ì∂ó%F˜ÚÇì∑“ì∂ÊbÊVÊD6Üñ∆Bá&˜Çì∂6&BÊVÊD6Üñ∆BÜÊbì∞–¢&WfV∆"á&W7˜7F∆Êbì∞–¢––¢ñbáÁGóS””“v÷2ró∞–¢f"W'&˜4÷3”¬˜3÷7&ñ"ÇvFóbr¬v˜6ˆW2rì≤Ê˜FñˆÁ2Êf˜$V6ÇÜgVÊ7Fñˆ‚Ü˜∆íó∑f"#÷7&ñ"Çv'WGFˆ‚r¬v˜6Úr¬s«7‚6∆73“&˜6ııˆ∆WG&#‚rµ7G&ñÊrÊg&ˆ‘6Ü$6ˆFRÉcR∂íí≤s¬˜7„„«7„‚r∑FWáFı6VwW&ÚÜ˜í≤s¬˜7„‚r«∑GóS¢v'WGFˆ‚w“ì∂"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∂ñbÜ&∆˜VVF˜«∆"ÊFó6&∆VBó&WGW&„∂ñbÜì””◊ÊÁ7vW"ó∂˜2ÁVW'ï6V∆V7F˜$∆¬Çv'WGFˆ‚ríÊf˜$V6ÇÜgVÊ7Fñˆ‚áÇó∑ÇÊFó6&∆VC◊G'VS∑“ì∂"Ê6∆74∆ó7BÊFBÇv˜6Ú“÷6W'Frì∂6ˆÊ6«Vó"áG'VR∆˜ì∑÷V«6W∂W'&˜4÷2≤≥∂W'&˜TÁFW3◊G'VS∑&Vvó7G&$W'&ÚÜ˜ì∂"ÊFó6&∆VC◊G'VS∂"Ê6∆74∆ó7BÊFBÇv˜6Ú“÷W'&Frì∂÷˜7G&$Ê˜fFVÁFFófÜW'&˜4÷3”””ÚtV∆ñ÷ñÊRW7F«FW&ÊFófR&V∆VñW&wVÁF‚sßÊWá∆ñÁ«¬t6ˆ◊&R2«FW&ÊFóf2VRñÊF&W7F“‚rì∂ñbÜW'&˜4÷3”””"ñ6&BÊVÊD6Üñ∆BÜf∆÷66˜FRáÊWá∆ñÁ«¬tˆ'6W'fR2∆g&2÷ó2ñ◊˜'FÁFW2FW&wVÁF‚r«G'VRíì∑◊“ì∂˜2ÊVÊD6Üñ∆BÜ"ì∑“ì∂6&BÊVÊD6Üñ∆BÜ˜2ì∞–¢“V«6R∞–¢f"FVÁFFóf5FWáFÛ”¬ÁV÷W&ñ6“ˆÏ;¶÷W&˜«VÁF˜7«VÁF7«VÁF˜∆Ü˜&7«6VwVÊF˜7∆Fñ2ˆíÁFW7BÜ6ˆÁFWáFÚÁFWáFÚí¬∆ñÊÜ÷7&ñ"ÇvFóbr¬v6◊Ú◊&W7˜7Frí¬6◊Û÷7&ñ"ÇvñÁWBr¬v6◊Úr∆ÁV∆¬«∑GóS¢wFWáBr∆ñÁWF÷ˆFS¶ÁV÷W&ñ6ÚvÁV÷W&ñ2s¢wFWáBr∆WFˆ6ˆ◊∆WFS¢vˆfbr«∆6VÜˆ∆FW#¶ÁV÷W&ñ6ÚtW67&WfÚÏ;¶÷W&Ús¢tW67&WfV÷∆g&˜Rg&6R7W'Fr¬v&ñ÷∆&V¬s¢u7V&W7˜7Fw“í¬VÁfñ#÷7&ñ"Çv'WGFˆ‚r¬v&˜FÚ&˜FÚ“◊&ñ÷&ñÚr¬t6ˆÊfW&ó"r«∑GóS¢v'WGFˆ‚w“ì∞–¢gVÊ7Fñˆ‚6ÜV6"Çó∂ñbÇ6◊ÚÁf«VRÁG&ñ“Çó«∆&∆˜VVFÚó&WGW&„∑f"f∆˜#÷6◊ÚÁf«VRÁG&ñ“Çí∆6W'FÛ◊f∆ñF%&W7˜7Fáf∆˜"«ÊÁ7vW'7«≈µ“ì∂ñbÜ6W'FÚó∂6◊ÚÊFó6&∆VC◊G'VS∂VÁfñ"ÊFó6&∆VC◊G'VS∂6ˆÊ6«Vó"áG'VR«f∆˜"ì∑&WGW&„∑◊FVÁFFóf5FWáFÚ≤≥∂W'&˜TÁFW3◊G'VS∑&Vvó7G&$W'&Úáf∆˜"ì∂ñbáFVÁFFóf5FWáFÛ”””ó∂÷˜7G&$Ê˜fFVÁFFófáó7F&W7˜7F&W'Fá∆ÁV÷W&ñ6íì∂6◊ÚÁf«VS“rs∂6◊ÚÊfˆ7W2Çì∑÷V«6W∂6◊ÚÊFó6&∆VC◊G'VS∂VÁfñ"ÊFó6&∆VC◊G'VS∂6ˆÊ6«Vó"Üf«6R«f∆˜"ì∑◊“VÁfñ"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆6ÜV6"ì∂6◊ÚÊFDWfVÁD∆ó7FVÊW"Çv∂WñF˜v‚r∆gVÊ7Fñˆ‚ÜRó∂ñbÜRÊ∂Wì””“tVÁFW"rñ6ÜV6"Çì∑“ì∂∆ñÊÜÊVÊD6Üñ∆BÜ6◊Úì∂∆ñÊÜÊVÊD6Üñ∆BÜVÁfñ"ì∂6&BÊVÊD6Üñ∆BÜ∆ñÊÜì∞–¢––¢6&BÊVÊD6Üñ∆Bá&W7˜7Fì∑&ó¢ÊVÊD6Üñ∆BÜ6&Bì∞–¢––¢gVÊ7Fñˆ‚&VÊFW$ñÁFW'f∆ÚÜ6«W&wVÁF2í∞–¢f"&ó£“BÇr6FW6fñÚ÷6ˆÁFWVFÚrí¬fVóF3◊Vó¢ÊñÊFñ6R¬f«F”◊W&wVÁF2Ê∆VÊwFÇ÷fVóF2¬&ˆFF‘÷FÇÊf∆ˆ˜"ÜfVóF2Û2ì∞–¢f"&˜É÷7&ñ"Çw6V7Fñˆ‚r¬w&W7V«FFÚñÁFW'f∆Úr¬s«6∆73“'&W7V«FFıı˜6V∆Ú#Â&ˆFFr∑&ˆFF≤r6ˆÊ6«\:÷F¬˜„∆É3‰&ˆÜ˜&&&W7ó&#¬ˆÉ3„«Âfˆ<:¢&W7ˆÊFWRr∂fVóF2≤rW&wVÁF2‚f«F“r∂f«F“≤r‚6WR&ˆw&W76Ú¨:W7L:wV&FFÚ„¬˜‚rì∞–¢&˜ÇÊñÁ6W'D&Vf˜&RÜf∆÷66˜FRÇtf:vV÷W67W'F6R&V6ó6"‚&VÊFW"Ï:6Ú:íV÷6˜'&ñF‚r∆f«6Rí∆&˜ÇÊfó'7D6Üñ∆Bì∞–¢f"Êc÷7&ñ"ÇvFóbr¬vÊfVv6Úrí¬&#÷7&ñ"Çv'WGFˆ‚r¬v&˜FÚr¬t6ˆÁFñÁV"FWˆó2r«∑GóS¢v'WGFˆ‚w“í¬6VwVó#÷7&ñ"Çv'WGFˆ‚r¬v&˜FÚ&˜FÚ“◊&ñ÷&ñÚr¬t6ˆ÷\:v",;7Üñ÷&ˆFF(i"r«∑GóS¢v'WGFˆ‚w“ì∞–¢&"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∑6«f%FVÁFFófÜ6ì∂'&ó$Fó66ó∆ñÊÜW7FFÚÊFó66ó∆ñÊì∑“ì∑6VwVó"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∑Vó¢ÁW6÷f«6S∑&VÊFW%VW7FÚÜ6ì∂ó%F˜ÚÇì∑“ì∂ÊbÊVÊD6Üñ∆Bá&"ì∂ÊbÊVÊD6Üñ∆Bá6VwVó"ì∂&˜ÇÊVÊD6Üñ∆BÜÊbì∑&ó¢ÊVÊD6Üñ∆BÜ&˜Çì∞–¢––¢gVÊ7Fñˆ‚Ê˜&÷∆ó¶"á2ó∑&WGW&‚7G&ñÊrá7«¬rríÁFÙ∆˜vW$66RÇíÊÊ˜&÷∆ó¶RÇt‰dBríÁ&W∆6RÇıµ«S3’«S3fe“ˆr¬rríÁ&W∆6RÇıµÊ◊£”ï«5“ˆr¬rríÁ&W∆6RÇı«2≤ˆr¬rríÁG&ñ“Çì∑––¢gVÊ7Fñˆ‚f∆ñF%&W7˜7Fáb∆6VóF2ó∑f"÷Ê˜&÷∆ó¶"ábì∑&WGW&‚6VóF2Á6ˆ÷RÜgVÊ7Fñˆ‚áÇó∑f"#÷Ê˜&÷∆ó¶"áÇì∑&WGW&‚””÷"«¬Ü"Ê∆VÊwFÉ„BbbÊñÊFWÑˆbÜ"ì„”ì∑“ì∑––¢gVÊ7Fñˆ‚ó7F&W7˜7F&W'Fá∆ÁV÷W&ñ6ó∂ñbÜÁV÷W&ñ6ó&WGW&‚ufˆ«FR˜2Ï;¶÷W&˜2FÚVÁVÊ6ñFÚR6ˆÊfó&˜W&:|:6Ú˜RVÊñFFRVFñF‚s∑f"«fÛ÷Ê˜&÷∆ó¶"ÇáÊÁ7vW'7«≈µ“ï≥“ì∑&WGW&‚«fÛÚt&W7˜7F6ˆ÷\:v6ˆ“(	¬r∂«fÚÊ6Ü$BÉíÁFıWW$66RÇí≤~(	“‚&V∆VñW&wVÁF‚s¢u&V∆VñW&wVÁFR&W7ˆÊF6ˆ“˜V62∆g&2‚s∑––¢gVÊ7Fñˆ‚6FVv˜&ñVW7FÚáí∞–¢f"C÷Ê˜&÷∆ó¶"áÁì∞–¢ñbÇ˜FWáF˜∆ñÁ7G'V6ñˆÊ«∆6'Fß∆÷ÁV«∆ÁVÊ6ñ˜∆÷V÷˜&ñ«Fó&ñÊÜÚÁFW7BáBíó&WGW&‚t6ˆ◊&VVÊFW"FWáF˜2RñÊf˜&÷:|;VW2s∞–¢ñbÇ˜∆g&«7V'7FÁFóf˜∆Fñ÷ñÁWFóf˜∆V÷VÁFFóf˜««W&««6ñ∆&«fW&&˜∆F¶WFófÚÚÁFW7BáBíó&WGW&‚tˆ'6W'f"6ˆ÷Ú2∆g&2gVÊ6ñˆÊ“s∞–¢ñbÇˆÁV÷W&˜∆◊V«Fó∆ñ6∆Fófó7«˜76ñ&ñ«∆Ü˜&∆÷ñÁWF˜∆6∆7V∆˜«&W7V«FFÚÚÁFW7BáBíó&WGW&‚u&W6ˆ«fW"6óGV:|;VW26ˆ“Ï;¶÷W&˜2s∞–¢ñbÇˆ6WW«FW'&∆«V«6ˆ«∆W7G&V∆«∆ÊWF∆«Wß∆F÷˜6fW&ÚÁFW7BáBíó&WGW&‚tñÁfW7Fñv"ÊGW&W¶RÚ<:óRs∞–¢ñbÇˆ6ñFFW∆◊VÊñ6óñ˜∆6ˆ◊VÊñFFW∆&ó'&˜«˜V∆6˜∆W76˜«V&∆ñ6˜«&ófFÚÚÁFW7BáBíó&WGW&‚tVÁFVÊFW"«Vv&W2R6ˆ◊VÊñFFW2s∞–¢&WGW&‚uW6"ÚVRfˆíFW66ˆ&W'FÚs∞–¢––¢gVÊ7Fñˆ‚&W7V÷ÙFˆ÷ñÊñÚÜ6∆W'&˜2í∞–¢f"w'W˜3◊∑“¬W'&F˜3◊∑”∂W'&˜2Êf˜$V6ÇÜgVÊ7Fñˆ‚ÜRó∂W'&F˜5∂RÊñÊFñ6T˜&ñvñÊ≈”◊G'VS∑“ì∞–¢6ÁVó¢Êf˜$V6ÇÜgVÊ7Fñˆ‚á∆íó∑f"Êˆ÷S÷6FVv˜&ñVW7FÚáì∂ñbÇw'W˜5∂Êˆ÷U“ñw'W˜5∂Êˆ÷U”◊∑F˜F√£∆6W'F˜3£”∂w'W˜5∂Êˆ÷U“ÁF˜F¬≤≥∂ñbÇW'&F˜5∂ï“ñw'W˜5∂Êˆ÷U“Ê6W'F˜2≤≥∑“ì∞–¢f"&˜É÷7&ñ"ÇvFóbr¬w&W7V÷Ú÷Fˆ÷ñÊñÚr¬s∆ÉC‰ÚVRW7FR&W7V«FFÚ÷˜7G&¬ˆÉC‚rí¬∆ó7F÷7&ñ"ÇwV¬rì∞–¢ˆ&¶V7BÊ∂Wó2Üw'W˜2íÊf˜$V6ÇÜgVÊ7Fñˆ‚ÜÊˆ÷Ró∑f"s÷w'W˜5∂Êˆ÷U“¬ˆ≥÷rÊ6W'F˜3””÷rÁF˜F√∂∆ó7FÊVÊD6Üñ∆BÜ7&ñ"Çv∆ír∆ˆ≥Úw&W7V÷Ú÷Fˆ÷ñÊñııˆˆ≤s¢w&W7V÷Ú÷Fˆ÷ñÊñıı˜&WfW"r¬s«7„‚r∑FWáFı6VwW&ÚÜÊˆ÷Rí≤s¬˜7„„«7G&ˆÊs‚r≤Üˆ≥Út¨:W7L:fó&÷Rs¶rÊ6W'F˜2≤rFRr∂rÁF˜F¬≤r+rf∆R&WfW"rí≤s¬˜7G&ˆÊs‚ríì∑“ì∂&˜ÇÊVÊD6Üñ∆BÜ∆ó7Fì∑&WGW&‚&˜É∞–¢––¢gVÊ7Fñˆ‚&VÊFW%&W7V«FFÚÜ6í∞–¢f"&ó£“BÇr6FW6fñÚ÷6ˆÁFWVFÚrí¬F˜F√◊W&wVÁF4GVó2Ü6íÊ∆VÊwFÇ¬7C‘÷FÇÁ&˜VÊBáVó¢Ê6W'F˜2Ù÷FÇÊ÷ÇÉ«F˜F¬í£í¬Fó63÷Fó65˜$ñBÜW7FFÚÊFó66ó∆ñÊí¬W'&˜3◊Vó¢ÊW'&˜2Á6∆ñ6RÇì∞–¢ñbÇVó¢Á&Wfó6Úó∂W7FFÚÁ&ˆw&W76ı∂6ÊñE”◊∂fVóFÛßG'VR∆6W'F˜3ßVó¢Ê6W'F˜2«F˜F√ßF˜F¬∆FF¶ÊWrFFRÇíÁFÙï4ı7G&ñÊrÇó”∂FV∆WFRW7FFÚÁFVÁFFóf5∂6ÊñE”∑6«f"Çì∑––¢f"◊6s◊Vó¢Á&Wfó6ÛÚufˆ<:¢fˆ«F˜R:2ñFVñ2VR÷W&V6ñ“˜WG&FVÁFFóf‚s¢á7C„”ÉÚufˆ<:¢¨:6ˆÁ6VwVRWá∆ñ6"2ñFVñ2&ñÊ6óó2‚sß7C„”SSÚufˆ<:¢6ˆÁ7G'VóRV÷&ˆ&6R‚f∆R&WfW"r∂W'&˜2Ê∆VÊwFÇ≤rñFVñr≤ÜW'&˜2Ê∆VÊwFÉ”””Úrs¢w2rí≤r‚s¢tv˜&6&V÷˜2WÜF÷VÁFRVó2ñFVñ2&V6ó6“FR˜WG&ˆ∆ÜF‚rì∞–¢f"&˜É÷7&ñ"Çw6V7Fñˆ‚r¬w&W7V«FFÚr¬s«6∆73“'&W7V«FFııˆÁV÷W&Ú#‚r∑Vó¢Ê6W'F˜2≤rÚr∑F˜F¬≤s¬˜„∆É3‚r≤áVó¢Á&Wfó6ÛÚu&Wfó<:6Ú6ˆÊ6«\:÷Fs¢tFW6fñÚ6ˆÊ6«\:÷FÚrí≤s¬ˆÉ3„«‚r∂◊6r≤s¬˜‚rì∞–¢ñbÇVó¢Á&Wfó6Úñ&˜ÇÊVÊD6Üñ∆Bá&W7V÷ÙFˆ÷ñÊñÚÜ6∆W'&˜2íì∞–¢&˜ÇÊñÁ6W'D&Vf˜&RÜf∆÷66˜FRáVó¢Á&Wfó6ÛÚu&WfW"V“W'&Ú:íV÷f˜&÷FR&VÊFW"¬Ï:6ÚV“67FñvÚ‚s¢ufˆ<:¢FW&÷ñÊ˜RÊÚ6WR&óF÷Ú‚Ú&W7V«FFÚ÷˜7G&Ú,;7Üñ÷Ú76Ú¬Ï:6ÚÚ6WRf∆˜"‚r∆f«6Rí∆&˜ÇÊfó'7D6Üñ∆Bì∞–¢f"Êc÷7&ñ"ÇvFóbr¬vÊfVv6Úrì∞–¢ñbÇVó¢Á&Wfó6ÚbbW'&˜2Ê∆VÊwFÇó∑f"&WfW$W'&˜3÷7&ñ"Çv'WGFˆ‚r¬v&˜FÚr¬u&WfW"÷WW2W'&˜2Çr∂W'&˜2Ê∆VÊwFÇ≤rír«∑GóS¢v'WGFˆ‚w“ì∑&WfW$W'&˜2ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∑Vó£◊∂ñÊFñ6S£∆6W'F˜3£«&W7ˆÊFñF3£∆W'&˜3•µ“«W&wVÁF3¶W'&˜2Ê÷ÜgVÊ7Fñˆ‚ÜRó∑&WGW&‚RÁVW7FÛ∑“í∆ñÊFñ6W3¶W'&˜2Ê÷ÜgVÊ7Fñˆ‚ÜRó∑&WGW&‚RÊñÊFñ6T˜&ñvñÊ√∑“í«&Wfó6ÛßG'VR«W6¶f«6W”∑&VÊFW%VW7FÚÜ6ì∑“ì∂ÊbÊVÊD6Üñ∆Bá&WfW$W'&˜2ì∑––¢f"&WWFó#÷7&ñ"Çv'WGFˆ‚r¬v&˜FÚr¬u&Vf¶W"GVFÚr«∑GóS¢v'WGFˆ‚w“í¬fˆ«F#÷7&ñ"Çv'WGFˆ‚r¬v&˜FÚ&˜FÚ“◊&ñ÷&ñÚr¬ufW"˜WG&˜277VÁF˜2r«∑GóS¢v'WGFˆ‚w“ì∑&WWFó"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∂ñÊñ6ñ%Vó¢Ü6«G'VRì∑“ì∑fˆ«F"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∂'&ó$Fó66ó∆ñÊÜFó62ÊñBì∑“ì∂ÊbÊVÊD6Üñ∆Bá&WWFó"ì∂ÊbÊVÊD6Üñ∆Báfˆ«F"ì∂&˜ÇÊVÊD6Üñ∆BÜÊbì∑&ó¢ÊVÊD6Üñ∆BÜ&˜Çì∂ñbÇVó¢Á&Wfó6ÚóFˆ7BÇu&ˆw&W76Ú6«fÚÊW7FR&V∆ÜÚ‚rì∞–¢––†–¢gVÊ7Fñˆ‚6V∆V6ñˆÊ$&ÜÊˆ÷R«&ˆ∆"í∞–¢f"6÷6˜$ñBÜFó65˜$ñBÜW7FFÚÊFó66ó∆ñÊí∆W7FFÚÊ6óGV∆Úì≤ñbÇ6ó&WGW&„∞–¢ñbÜÊˆ÷S””“wfñFVÚrbb6ÁfñFVÚñÊˆ÷S“wFV˜&ñs≤W7FFÚÊ&÷Êˆ÷S≤W7FFÚÊ&V5∂6ÊñE”÷Êˆ÷S≤6«f"Çì∞–¢Ú¢Ú6ˆÁfóFR÷&V∆Úf∆FÚ&∆ˆ6ÚFRFV˜&ñVRW7L:&W'FÛ≤f˜&F–¢FW66ˆ'&ó"V∆RÏ:6ÚFV“fW"6ˆ“ÚVRW7L:ÊFV∆‚¢–¢BÇr66◊W&wVÁFríÊÜñFFV‚“Êˆ÷R”“wFV˜&ñs∞–¢BBÇrÊ&ríÊf˜$V6ÇÜgVÊ7Fñˆ‚Ü"ó∑f"Fóf÷"ÊFF6WBÊ&””÷Êˆ÷S∂"Ê6∆74∆ó7BÁFˆvv∆RÇv&“÷Fófr∆Fófì∂"Á6WDGG&ñ'WFRÇv&ñ◊6V∆V7FVBr∆FófÚwG'VRs¢vf«6Rrì∑“ì∞–¢BBÇrÁñÊV¬÷&ríÊf˜$V6ÇÜgVÊ7Fñˆ‚áó∑f"Fóf◊ÊñC””“wñÊV¬“r∂Êˆ÷S∑ÊÜñFFV„“Fóf∑Ê6∆74∆ó7BÁFˆvv∆RÇwñÊV¬÷&“÷FófÚr∆Fófì∑“ì∞–¢ñbá&ˆ∆"ñFˆ7V÷VÁBÁVW'ï6V∆V7F˜"ÇrÊ&2ríÁ67&ˆ∆ƒñÁFıfñWrá∂&VÜfñ˜#¢w6÷ˆ˜FÇr∆&∆ˆ6≥¢w7F'Bw“ì∞–¢––¢gVÊ7Fñˆ‚fˆ«F"Çí∞–¢ñbÇBÇr7FV∆÷6óGV∆ÚríÊÜñFFV‚í'&ó$Fó66ó∆ñÊÜW7FFÚÊFó66ó∆ñÊì∞–¢V«6RñbÇBÇr7FV∆÷Fó66ó∆ñÊríÊÜñFFV‚í&VÊFW$Üˆ÷RÇì≤V«6R&VÊFW$Üˆ÷RÇì∞–¢––¢gVÊ7Fñˆ‚∆ñv$WfVÁF˜2Çí∞–¢BÇr6∆ñÊ≤÷Üˆ÷RríÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚ÜRó∂RÁ&WfVÁDFVfV«BÇì∑&VÊFW$Üˆ÷RÇì∑“ì∞–¢BÇr6'F‚◊fˆ«F"ríÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r«fˆ«F"ì∞–¢BÇr6'F‚÷6ˆÁFñÁV"ríÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∂ñbÜW7FFÚÁV«Fñ÷Úñ'&ó$6óGV∆ÚÜW7FFÚÁV«Fñ÷ÚÊFó66ó∆ñÊ∆W7FFÚÁV«Fñ÷ÚÊ6óGV∆Úì∑“ì∞–¢BBÇrÊ&ríÊf˜$V6ÇÜgVÊ7Fñˆ‚Ü"ó∂"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∑6V∆V6ñˆÊ$&Ü"ÊFF6WBÊ&«G'VRì∑“ì∑“ì∞–¢––¢gVÊ7Fñˆ‚ñÊñ6ñ"Çí∞–¢ñbáGóVˆbDï44ïƒî‰3””“wVÊFVfñÊVBw«¬Dï44ïƒî‰2Ê∆VÊwFÇó≤BÇr6w&FR÷Fó66ó∆ñÊ2ríÊñÊÊW$ÖD‘√“s∆Fób6∆73“'f¶ñÚ#‰Ï:6Úfˆí˜7<:◊fV¬6'&Vv"˜277VÁF˜2„¬ˆFóc‚s∑&WGW&„∑––¢6'&Vv"Çì≤∆ñv$WfVÁF˜2Çì≤6ˆÊfñwW&$ñÁ7F∆6ÚÇì≤&Vvó7G&%6W'fñ6Uv˜&∂W"Çì≤&VÊFW$Üˆ÷RÇì∞–¢––¢ñbÜFˆ7V÷VÁBÁ&VGï7FFS””“v∆ˆFñÊrrñFˆ7V÷VÁBÊFDWfVÁD∆ó7FVÊW"ÇtDÙ‘6ˆÁFVÁD∆ˆFVBr∆ñÊñ6ñ"ì∂V«6RñÊñ6ñ"Çì∞–ß“íÇì∞–†
+      placar.pontos+=10+(placar.sequencia>=3?5:0);
+    } else placar.sequencia=0;
+    atualizarPlacar();
+  }
+  function atualizarPlacar() {
+    var hud=$('#hud-jogo'); if(!hud)return;
+    hud.querySelector('.hud__pontos b').textContent=placar.pontos;
+    hud.querySelector('.hud__seguidas b').textContent=placar.sequencia;
+    hud.querySelector('.hud__seguidas').classList.toggle('hud__pilula--quente',placar.sequencia>=3);
+  }
+  function montarHud() {
+    var hud=criar('div','hud',null,{id:'hud-jogo'});
+    hud.appendChild(criar('div','hud__pilula hud__pontos','<b>'+placar.pontos+'</b><span>Pontos</span>'));
+    hud.appendChild(criar('div','hud__pilula hud__seguidas'+(placar.sequencia>=3?' hud__pilula--quente':''),'<b>'+placar.sequencia+'</b><span>Seguidas</span>'));
+    var som=criar('button','hud__som',estado.som?'üîä':'üîá',{type:'button','aria-label':'Ligar ou desligar o som'});
+    som.addEventListener('click',function(){
+      estado.som=!estado.som; salvar(); som.textContent=estado.som?'üîä':'üîá';
+      som.setAttribute('aria-pressed',estado.som?'true':'false'); if(estado.som)bip('ok');
+    });
+    hud.appendChild(som);
+    return hud;
+  }
+  function semAnimacao() {
+    return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }
+  /* Quando nasce conte√∫do embaixo (a nomea√ß√£o, o feedback, o bot√£o de seguir),
+     a p√°gina vai atr√°s dele: puxa o fim para dentro da tela, mas nunca esconde
+     o come√ßo debaixo do cabe√ßalho grudado. */
+  function revelar(inicio,fim) {
+    if(!inicio||!inicio.getBoundingClientRect||!window.scrollBy)return;
+    var mexer=function(){
+      try {
+        var a=inicio.getBoundingClientRect(), b=(fim||inicio).getBoundingClientRect();
+        /* O que cobre o alto da tela: o cabe√ßalho e, na tela de cap√≠tulo,
+           tamb√©m a barra de abas ‚Äî as duas s√£o grudentas. */
+        var teto=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--topo'),10)||58;
+        var abas=$('.abas');
+        if(abas){var ra=abas.getBoundingClientRect();if(ra.bottom>0&&ra.bottom<window.innerHeight/2)teto=Math.max(teto,ra.bottom);}
+        var topo=teto+14, chao=window.innerHeight-14, delta=0;
+        if(b.bottom>chao) delta=b.bottom-chao;
+        if(a.top-delta<topo) delta=a.top-topo;
+        if(Math.abs(delta)<4)return;
+        window.scrollBy({top:delta,behavior:semAnimacao()?'auto':'smooth'});
+      } catch(_) {}
+    };
+    if(window.requestAnimationFrame)window.requestAnimationFrame(mexer);else mexer();
+  }
+  function mostrar(id) {
+    $$('.tela').forEach(function (t) { var ativa=t.id===id; t.hidden=!ativa; t.classList.toggle('tela--ativa',ativa); });
+    var home=id==='tela-home';
+    document.body.classList.toggle('body--home',home);
+    $('#btn-voltar').hidden=home;
+    irTopo();
+  }
+
+  function renderHome() {
+    estado.disciplina=null; estado.capitulo=null; estado.aba='teoria';
+    var grade=$('#grade-disciplinas'); grade.innerHTML='';
+    DISCIPLINAS.forEach(function (disc) {
+      var feitos=disc.capitulos.filter(function(c){return estado.progresso[c.id] && estado.progresso[c.id].feito;}).length;
+      var iniciados=disc.capitulos.some(function(c){return !!estado.progresso[c.id];});
+      var status=feitos ? feitos+' de '+disc.capitulos.length+' conclu√≠dos' : (iniciados?'Continuar':'');
+      var b=criar('button','disc-card','<span class="disc-card__nome">'+textoSeguro(disc.nome)+'</span>'+
+        (status?'<span class="disc-card__status">'+status+'</span>':'')+'<span class="disc-card__seta" aria-hidden="true">‚Üí</span>',{type:'button'});
+      b.style.setProperty('--acento',acento(disc));
+      b.addEventListener('click',function(){abrirDisciplina(disc.id);}); grade.appendChild(b);
+    });
+    var feitos=totalFeitos(), total=totalCaps(), pct=Math.round(feitos/total*100);
+    $('#painel-progresso').hidden=feitos===0;
+    $('#painel-pct').textContent=pct+'%'; $('#barra-fill').style.width=pct+'%';
+    $('#barra-geral').setAttribute('aria-valuenow',String(pct));
+    var cont=$('#btn-continuar'); cont.hidden=true;
+    if (estado.ultimo) {
+      var d=discPorId(estado.ultimo.disciplina), c=capPorId(d,estado.ultimo.capitulo);
+      if(d&&c){ cont.hidden=false; $('#continuar-titulo').textContent=c.title; $('#continuar-detalhe').textContent=d.nome+' ¬∑ m√≥dulo '+c.module; }
+    }
+    atualizarTopo(); mostrar('tela-home');
+  }
+
+  function abrirDisciplina(id) {
+    var disc=discPorId(id); if(!disc) return renderHome();
+    estado.disciplina=id; estado.capitulo=null; salvar();
+    var cab=$('#cabecalho-disc'); cab.innerHTML='<p class="cabecalho-disc__trilha">Mat√©ria</p><h1 class="cabecalho-disc__titulo" id="disc-titulo">'+textoSeguro(disc.nome)+'</h1><p class="cabecalho-disc__texto">Escolha um assunto. Voc√™ pode explorar no seu ritmo e voltar quando quiser.</p>';
+    cab.style.setProperty('--acento',acento(disc));
+    var lista=$('#lista-capitulos'); lista.innerHTML='';
+    disc.capitulos.forEach(function(cap){
+      var p=estado.progresso[cap.id], marca=p&&p.feito?'‚úì':'‚Üí';
+      var b=criar('button','cap-card','<span class="cap-card__num">'+cap.module+'</span><span><strong class="cap-card__titulo">'+textoSeguro(cap.title)+'</strong><span class="cap-card__sub">'+textoSeguro(cap.subtitle||'')+'</span></span><span class="cap-card__estado" aria-hidden="true">'+marca+'</span>',{type:'button'});
+      b.style.setProperty('--acento',acento(disc)); b.addEventListener('click',function(){abrirCapitulo(id,cap.id);}); lista.appendChild(b);
+    });
+    mostrar('tela-disciplina');
+  }
+
+  function abrirCapitulo(discId,capId,aba) {
+    var disc=discPorId(discId), cap=capPorId(disc,capId); if(!cap) return renderHome();
+    estado.disciplina=discId; estado.capitulo=capId; estado.ultimo={disciplina:discId,capitulo:capId};
+    estado.aba=aba||estado.areas[capId]||'teoria';
+    estado.passoDescoberta=Number(estado.leitura[capId])||0;
+    estado.passoDescoberta=Math.min(estado.passoDescoberta||0,Math.max(0,cap.theory.length-1)); zerarPlacar(); salvar();
+    $('#tela-capitulo').style.setProperty('--acento',acento(disc));
+    $('#cap-trilha').textContent=disc.nome+' ¬∑ m√≥dulo '+cap.module;
+    $('#cap-titulo').textContent=cap.title; $('#cap-sub').textContent=cap.subtitle||'';
+    var plano=(typeof PEDAGOGY!=='undefined'&&PEDAGOGY[cap.id])||null;
+    $('#cap-pergunta').innerHTML=plano&&plano.objectives?'<strong>Voc√™ vai aprender a:</strong> '+plano.objectives.map(textoSeguro).join(' ¬∑ '):textoSeguro(conviteMissao(cap.theory[0]||{},0));
+    var videoTab=$('#aba-video'); videoTab.hidden=!cap.video;
+    renderTeoria(cap); renderVideo(cap); jogoAtual=0; renderJogos(cap); iniciarQuiz(cap);
+    selecionarAba((estado.aba==='video'&&!cap.video)?'teoria':estado.aba,false);
+    mostrar('tela-capitulo');
+  }
+
+  function renderTeoria(cap) {
+    var raiz=$('#teoria-conteudo'); raiz.innerHTML='';
+    var idx=Math.max(0,Math.min(estado.passoDescoberta,cap.theory.length-1)), bloco=cap.theory[idx];
+    /* O objetivo geral permanece no cabe√ßalho; a provoca√ß√£o desta miss√£o aparece no cart√£o. */
+    if(idx===0) raiz.appendChild(falaMascote('Vamos por partes. Fa√ßa uma suposi√ß√£o, descubra uma ideia e s√≥ depois experimente.',false));
+    else if(temaBloco(bloco)!==temaBloco(cap.theory[idx-1])) raiz.appendChild(falaMascote('Nova descoberta: o assunto muda um pouco agora. Procure uma liga√ß√£o com o que voc√™ acabou de aprender.',true));
+    var passos=criar('div','passos');
+    cap.theory.forEach(function(_,i){var p=criar('button','passos__ponto'+(i===idx?' passos__ponto--ativo':''),null,{type:'button','aria-label':'Ir para a miss√£o '+(i+1)});p.addEventListener('click',function(){guardarPasso(cap,i);renderTeoria(cap);});passos.appendChild(p);});
+    raiz.appendChild(passos);
+    var card=criar('article','bloco-leitura'), recorte=separarResumo(bloco.p||[]), fonteNumerada=(bloco.p||[]).find(function(p){return /<strong>1\.<\/strong>/.test(p)&&/<strong>2\.<\/strong>/.test(p);});
+    if(fonteNumerada){recorte.resumo=fonteNumerada.split(/<strong>1\.<\/strong>/)[0].replace(/[\s:]+$/,'')+'.';recorte.detalhes=(bloco.p||[]).filter(function(p){return p!==fonteNumerada;});}
+    card.innerHTML='<p class="bloco-leitura__etapa">Miss√£o '+(idx+1)+' de '+cap.theory.length+'</p><h3>'+textoSeguro(bloco.h)+'</h3>'+
+      '<p class="missao-convite">'+textoSeguro(conviteMissao(bloco,idx))+'</p>';
+    var visual=visualDaDescoberta(bloco), destaque=criar('div','descoberta-destaque');
+    destaque.appendChild(criar('figure','descoberta-visual','<img src="'+textoSeguro(visual.src)+'" alt="'+textoSeguro(visual.alt)+'" loading="lazy">'));
+    destaque.appendChild(criar('div','ideia-principal','<span>Ideia principal</span><p>'+explicarTermos(recorte.resumo)+'</p>'));
+    card.appendChild(destaque);
+    var sequencia=montarSequencia(bloco.p||[]); if(sequencia) card.appendChild(sequencia);
+    if(recorte.detalhes.length){var det=criar('details');det.innerHTML='<summary>Entender melhor</summary>';recorte.detalhes.forEach(function(p){det.appendChild(criar('p',null,explicarTermos(p)));var transformacao=montarTransformacao(p);if(transformacao)det.appendChild(transformacao);});card.appendChild(det);}
+    if(cap.pageImages && cap.pageImages[idx%2] && (idx===1 || idx===cap.theory.length-1)) {
+      var fig=criar('figure','pagina-livro','<img src="'+textoSeguro(cap.pageImages[idx%2])+'" alt="P√°gina do material deste assunto" loading="lazy"><figcaption>Uma p√°gina do material para observar com calma</figcaption>'); card.appendChild(figuraOpcional(fig));
+    }
+    if(idx===cap.theory.length-1){card.appendChild(criar('aside','pausa','<strong>Pausa para pensar</strong>Como voc√™ explicaria esta descoberta para algu√©m da sua idade? N√£o precisa usar palavras de livro.'));}
+    raiz.appendChild(card);
+    var nav=criar('div','navegacao');
+    var ant=criar('button','botao','‚Üê Anterior',{type:'button'}); ant.disabled=idx===0; ant.addEventListener('click',function(){guardarPasso(cap,idx-1);renderTeoria(cap);irTopo();});
+    var prox=criar('button','botao botao--primario',idx===cap.theory.length-1?'Vamos jogar ‚Üí':'Pr√≥xima ‚Üí',{type:'button'}); prox.addEventListener('click',function(){if(idx===cap.theory.length-1){selecionarAba('jogos',true);}else{guardarPasso(cap,idx+1);renderTeoria(cap);irTopo();}});
+    nav.appendChild(ant);nav.appendChild(prox);raiz.appendChild(nav);
+  }
+  function guardarPasso(cap,indice) { estado.passoDescoberta=indice;estado.leitura[cap.id]=indice;salvar(); }
+
+  function montarSequencia(paragrafos) {
+    var fonte=(paragrafos||[]).find(function(p){return /<strong>1\.<\/strong>/.test(p)&&/<strong>2\.<\/strong>/.test(p);});
+    if(!fonte)return null;
+    var partes=fonte.split(/<strong>\d+\.<\/strong>/).slice(1).map(function(p){return p.replace(/^[\s,;:]+|[\s,;:]+$/g,'');}).filter(Boolean);
+    if(partes.length<2)return null;
+    var box=criar('div','sequencia-visual','<strong>Veja o passo a passo</strong>'), lista=criar('ol');
+    partes.forEach(function(p){lista.appendChild(criar('li',null,explicarTermos(p)));});box.appendChild(lista);return box;
+  }
+  function montarTransformacao(paragrafo) {
+    if(String(paragrafo).indexOf('‚Üí')<0)return null;
+    var limpo=String(paragrafo).replace(/<[^>]+>/g,'').replace(/^.*?:\s*/,'');
+    var partes=limpo.split('‚Üí').map(function(x){return x.trim().replace(/[.;]$/,'');}).filter(Boolean);
+    if(partes.length<2||partes.length>6)return null;
+    var box=criar('div','transformacao');
+    partes.forEach(function(p,i){box.appendChild(criar('span','transformacao__passo',textoSeguro(p)));if(i<partes.length-1)box.appendChild(criar('span','transformacao__seta','‚Üí'));});return box;
+  }
+
+  function renderVideo(cap) {
+    var raiz=$('#video-conteudo'); raiz.innerHTML=''; if(!cap.video)return;
+    raiz.innerHTML='<div class="bloco-leitura"><h3>V√≠deo do assunto</h3><div class="video-frame"><iframe src="'+textoSeguro(cap.video)+'" title="V√≠deo do assunto" allowfullscreen></iframe></div></div>';
+  }
+
+  function renderJogos(cap) {
+    var raiz=$('#jogos-conteudo'); raiz.innerHTML='';
+    if(!cap.games||!cap.games.length){raiz.appendChild(criar('div','vazio','Ainda n√£o h√° experi√™ncias para este assunto.'));return;}
+    var salvo=progressoExperiencias(cap);jogoAtual=Math.max(0,Math.min(salvo.atual||0,cap.games.length-1));salvo.atual=jogoAtual;
+    var game=cap.games[jogoAtual], perfis=(typeof EXPERIENCE_PROFILES!=='undefined'&&EXPERIENCE_PROFILES[cap.id])||[], perfil=perfis[jogoAtual]||{mode:game.type==='pairs'?'explore':'choice',goal:game.title,prompt:game.instructions,result:'descoberta'};
+    raiz.appendChild(montarHud());
+    if(cap.games.length>1)raiz.appendChild(seletorDeJogos(cap,salvo));
+    montarNovaExperiencia(raiz,cap,game,perfil,salvo);
+  }
+  /* Todo jogo do cap√≠tulo fica sempre √† m√£o ‚Äî inclusive os j√° conclu√≠dos. */
+  function seletorDeJogos(cap,salvo) {
+    var barra=criar('div','seletor-jogos',null,{role:'tablist','aria-label':'Jogos deste assunto'});
+    cap.games.forEach(function(g,i){
+      var feito=!!salvo.feitas[i], atual=i===jogoAtual;
+      var b=criar('button','seletor-jogo'+(atual?' seletor-jogo--atual':'')+(feito?' seletor-jogo--feito':''),
+        '<span class="seletor-jogo__n">'+(feito?'‚úì':(i+1))+'</span><span>'+textoSeguro(g.short||g.title)+'</span>',
+        {type:'button',role:'tab','aria-selected':atual?'true':'false'});
+      b.addEventListener('click',function(){
+        if(i===jogoAtual)return;
+        jogoAtual=i;salvo.atual=i;zerarPlacar();salvar();renderJogos(cap);irTopo();
+      });
+      barra.appendChild(b);
+    });
+    return barra;
+  }
+
+  function progressoExperiencias(cap) {
+    if(!estado.experiencias[cap.id]){
+      var jaConcluido=estado.progresso[cap.id]&&estado.progresso[cap.id].feito;
+      estado.experiencias[cap.id]={feitas:cap.games.map(function(){return !!jaConcluido;}),passos:{},atual:0};
+      if(jaConcluido)cap.games.forEach(function(g,i){estado.experiencias[cap.id].passos[i]=totalItens(g,((typeof EXPERIENCE_PROFILES!=='undefined'&&EXPERIENCE_PROFILES[cap.id])||[])[i]||{});});
+      salvar();
+    }
+    var p=estado.experiencias[cap.id];p.feitas=p.feitas||[];p.passos=p.passos||{};return p;
+  }
+  function totalItens(game,perfil) { return perfil.mode==='sequence'?game.pairs.length:(game.type==='pairs'?game.pairs.length:game.items.length); }
+
+  /* --- Estrutura dos tr√™s tempos: mexer ‚Üí ver acontecer ‚Üí dar o nome. ------
+     O artefato √© a coisa que a crian√ßa constr√≥i. Ele fica vis√≠vel no topo e
+     ganha uma pe√ßa a cada rodada; a nomea√ß√£o fecha a rodada dizendo como o
+     que ela acabou de fazer se chama na prova. */
+  function pecasConquistadas(game,passo,indices) {
+    /* Na mem√≥ria os pares saem fora de ordem, ent√£o o artefato √© montado a
+       partir dos √≠ndices realmente achados, e n√£o dos N primeiros itens. */
+    var lista=indices?indices.map(function(i){return game.items[i];}):(game.items||[]).slice(0,passo);
+    return lista.filter(Boolean).map(function(item){
+      return item.piece ? {texto:item.piece,nome:item.name} : (item.result ? {texto:item.result,nome:item.name} : null);
+    }).filter(Boolean);
+  }
+  function renderArtefato(game,passo,completo,indices) {
+    var arte=game.artifact; if(!arte)return null;
+    var pecas=pecasConquistadas(game,completo?(game.items||[]).length:passo,completo?null:indices);
+    var caixa=criar('section','artefato artefato--'+(arte.kind||'objeto')+(completo?' artefato--pronto':''));
+    caixa.appendChild(criar('h4','artefato__titulo',textoSeguro(arte.title)));
+    if(!pecas.length){caixa.appendChild(criar('p','artefato__vazio',textoSeguro(arte.empty||'Ainda n√£o tem nada aqui.')));return caixa;}
+    var lista=criar('ol','artefato__pecas');
+    pecas.forEach(function(p){
+      var li=criar('li','artefato__peca','<span class="artefato__texto">'+textoSeguro(p.texto)+'</span>'+
+        (p.nome?'<span class="artefato__etiqueta">'+textoSeguro(p.nome)+'</span>':''));
+      lista.appendChild(li);
+    });
+    caixa.appendChild(lista);
+    if(completo&&arte.done)caixa.appendChild(criar('p','artefato__fecho',textoSeguro(arte.done)));
+    return caixa;
+  }
+  /* Terceiro tempo: a crian√ßa j√° fez a coisa; agora ela recebe o nome dela. */
+  function comemorar(forte) {
+    pontuar(true); bip(forte?'vitoria':'ok'); festejar(forte);
+  }
+  function elogio() {
+    if(placar.sequencia>=5)return 'üî• '+placar.sequencia+' seguidas! Voc√™ est√° voando.';
+    if(placar.sequencia>=3)return 'üî• '+placar.sequencia+' seguidas!';
+    return ['Boa!','Isso!','Mandou bem!','Acertou!'][Math.floor(Math.random()*4)];
+  }
+  function fecharRodada(stage,item,game,aoContinuar) {
+    stage.querySelectorAll('.feedback,.pista-dinamica,.nomeacao').forEach(function(n){n.remove();});
+    stage.querySelectorAll('button').forEach(function(b){b.disabled=true;});
+    comemorar(false);
+    var caixa=criar('div','nomeacao',null,{role:'status'});
+    caixa.appendChild(criar('p','nomeacao__viva',textoSeguro(elogio())));
+    if(item.name)caixa.appendChild(criar('p','nomeacao__rotulo','Isso tem nome: <strong>'+textoSeguro(item.name)+'</strong>'));
+    if(item.say)caixa.appendChild(criar('p','nomeacao__texto',item.say));
+    stage.appendChild(caixa);
+    var nav=criar('div','navegacao');nav.appendChild(criar('span'));
+    var seguir=criar('button','botao botao--primario','Continuar ‚Üí',{type:'button'});
+    seguir.addEventListener('click',aoContinuar);nav.appendChild(seguir);stage.appendChild(nav);
+    revelar(caixa,nav);
+  }
+  function errarRodada(stage,botao,erros,pista) {
+    pontuar(false); bip('erro');
+    botao.classList.add('decisao--errada');
+    setTimeout(function(){botao.classList.remove('decisao--errada');},500);
+    if(erros>=2&&pista)mostrarPista(stage,pista);
+  }
+  function marcarPasso(cap,game,perfil,salvo,manterTela) {
+    var total=totalItens(game,perfil), atual=Number(salvo.passos[jogoAtual])||0;atual++;salvo.passos[jogoAtual]=atual;
+    if(atual>=total)salvo.feitas[jogoAtual]=true;
+    salvar();
+    /* O tabuleiro da mem√≥ria n√£o pode ser redesenhado a cada par: as cartas
+       viradas se perderiam. Quem decide a hora de redesenhar √© o pr√≥prio jogo. */
+    if(manterTela)return;
+    renderJogos(cap);irTopo();
+  }
+  function reiniciarExperiencia(cap,salvo) {
+    salvo.feitas[jogoAtual]=false;salvo.passos[jogoAtual]=0;
+    if(salvo.achados)salvo.achados[jogoAtual]=[];
+    zerarPlacar();salvar();renderJogos(cap);
+  }
+  function montarNovaExperiencia(raiz,cap,game,perfil,salvo) {
+    var total=totalItens(game,perfil), passo=Math.min(Number(salvo.passos[jogoAtual])||0,total), feita=!!salvo.feitas[jogoAtual];
+    if(feita){renderConclusaoExperiencia(raiz,cap,game,perfil,salvo,total);return;}
+    var card=criar('section','jogo-card jogo-card--novo jogo-card--'+textoSeguro(perfil.mode||'atividade'));
+    var artefato=renderArtefato(game,passo,false,perfil.mode==='memoria'?(salvo.achados&&salvo.achados[jogoAtual]||[]):null);
+    if(artefato){
+      /* Com artefato, quem marca o progresso √© o pr√≥prio objeto enchendo ‚Äî
+         n√£o precisa dizer √† crian√ßa quantas perguntas ainda faltam. */
+      card.appendChild(artefato);
+    } else {
+      card.appendChild(criar('div','progresso-jogo','<span style="width:'+Math.round(passo/total*100)+'%"></span>'));
+      card.appendChild(criar('p','atividade-progresso','Jogo '+(jogoAtual+1)+' de '+cap.games.length+' ¬∑ item '+(passo+1)+' de '+total));
+    }
+    card.appendChild(criar('p','jogo-objetivo',textoSeguro(perfil.goal)));
+    card.appendChild(criar('h3','jogo-pergunta',textoSeguro(perfil.prompt)));
+    var stage=criar('div','game-stage');card.appendChild(stage);raiz.appendChild(card);
+    var concluir=function(){marcarPasso(cap,game,perfil,salvo);};
+    if(perfil.mode==='memoria') renderMemoria(stage,game,perfil,cap,salvo,
+      function(){marcarPasso(cap,game,perfil,salvo,true);},    /* guarda, sem redesenhar */
+      function(){renderJogos(cap);irTopo();});                  /* a√≠ sim mostra o resultado */
+    else if(perfil.mode==='cartaz') renderCartaz(stage,game,passo,perfil,concluir);
+    else if(perfil.mode==='maquina') renderMaquina(stage,game,passo,perfil,concluir);
+    else if(perfil.mode==='scenario'&&game.type==='pairs')renderConstrucao(stage,game,passo,perfil,concluir);
+    else if(perfil.mode==='choice'||perfil.mode==='scenario'||perfil.mode==='combinations') renderEscolhaUnica(stage,game,passo,perfil,concluir);
+    else if(perfil.mode==='builder'||perfil.mode==='explore') renderConstrucao(stage,game,passo,perfil,concluir);
+    else if(perfil.mode==='clock') renderRelogio(stage,game,passo,perfil,concluir);
+    else if(perfil.mode==='distribute') renderDistribuicao(stage,game,passo,perfil,concluir);
+    else if(perfil.mode==='sequence') renderSequenciaJogo(stage,game,passo,perfil,concluir);
+    else if(perfil.mode==='transform') renderTransformacaoJogo(stage,game,passo,perfil,concluir);
+    else if(game.type==='pairs')renderConstrucao(stage,game,passo,perfil,concluir);else renderEscolhaUnica(stage,game,passo,perfil,concluir);
+  }
+  function renderConclusaoExperiencia(raiz,cap,game,perfil,salvo,total) {
+    var arte=game&&game.artifact, box;
+    if(arte){
+      /* A recompensa √© a coisa pronta na tela ‚Äî e s√≥ aqui o termo da prova
+         aparece sozinho, como nome do que a crian√ßa acabou de construir. */
+      box=criar('section','jogo-card jogo-conclusao','<p class="jogo-card__etapa">Ficou pronto</p><h3>Voc√™ montou '+textoSeguro(perfil.result)+'.</h3>');
+      box.appendChild(renderArtefato(game,total,true));
+      if(arte.termLine)box.appendChild(criar('p','conclusao-termo',arte.termLine));
+    } else {
+      box=criar('section','jogo-card jogo-conclusao','<p class="jogo-card__etapa">Miss√£o conclu√≠da</p><h3>Voc√™ completou '+textoSeguro(perfil.result)+'.</h3><p>Foram '+total+' decis√µes. Agora voc√™ pode rever ou seguir para a pr√≥xima experi√™ncia.</p>');
+    }
+    box.insertBefore(falaMascote('Voc√™ n√£o apenas respondeu: construiu uma ideia passo a passo.',false),box.firstChild);
+    var nav=criar('div','navegacao'), repetir=criar('button','botao','Jogar novamente',{type:'button'});repetir.addEventListener('click',function(){reiniciarExperiencia(cap,salvo);});nav.appendChild(repetir);
+    if(jogoAtual<cap.games.length-1){var proximo=criar('button','botao botao--primario','Pr√≥ximo jogo ‚Üí',{type:'button'});proximo.addEventListener('click',function(){jogoAtual++;salvo.atual=jogoAtual;salvar();renderJogos(cap);});nav.appendChild(proximo);}box.appendChild(nav);raiz.appendChild(box);
+  }
+  function opcoesEmbaralhadas(lista,correta,limite) {
+    var unicas=[];[correta].concat(misturar(lista)).forEach(function(x){if(unicas.indexOf(x)<0)unicas.push(x);});return misturar(unicas.slice(0,limite||3));
+  }
+  function feedbackInterativo(stage,certo,mensagem,pista,aoContinuar) {
+    stage.querySelectorAll('.feedback,.pista-dinamica').forEach(function(n){n.remove();});
+    pontuar(certo); bip(certo?'ok':'erro'); if(certo)festejar(false);
+    var fb=criar('div','feedback '+(certo?'feedback--ok':'feedback--erro'),'<strong>'+(certo?elogio():'Ainda n√£o.')+'</strong><p class="explicacao">'+textoSeguro(mensagem)+'</p>',{role:'status'});stage.appendChild(fb);
+    if(!certo&&pista)mostrarPista(stage,pista);
+    if(certo){stage.querySelectorAll('button').forEach(function(b){b.disabled=true;});var nav=criar('div','navegacao');nav.appendChild(criar('span'));var seguir=criar('button','botao botao--primario','Ver a pr√≥xima ‚Üí',{type:'button'});seguir.addEventListener('click',aoContinuar);nav.appendChild(seguir);stage.appendChild(nav);revelar(fb,nav);}
+    else revelar(fb);
+  }
+  function mostrarPista(stage,mensagem) {stage.querySelectorAll('.pista-dinamica').forEach(function(n){n.remove();});var m=falaMascote(mensagem,true);m.classList.add('pista-dinamica');stage.appendChild(m);revelar(m);}
+  /* Jogo da mem√≥ria: as cartas ficam viradas para baixo e a crian√ßa procura a
+     palavra que combina. Cada par achado nomeia o grau e vai para o artefato. */
+  function renderMemoria(stage,game,perfil,cap,salvo,registrar,verResultado) {
+    var achados=(salvo.achados&&salvo.achados[jogoAtual]||[]).slice();
+    var cartas=[];
+    game.items.forEach(function(item,i){
+      cartas.push({i:i,texto:item.base,lado:'base'});
+      cartas.push({i:i,texto:item.result,lado:'result'});
+    });
+    cartas=misturar(cartas);
+    var mesa=criar('div','memoria'), virada=null, travado=false;
+    cartas.forEach(function(carta){
+      var achada=achados.indexOf(carta.i)>=0;
+      var b=criar('button','carta'+(achada?' carta--achada':''),
+        '<span class="carta__verso" aria-hidden="true"><i>‚ú¶</i></span><span class="carta__frente">'+textoSeguro(carta.texto)+'</span>',
+        {type:'button','aria-label':achada?carta.texto:'Carta virada para baixo'});
+      b.dados=carta;
+      if(achada)b.disabled=true;
+      b.addEventListener('click',function(){
+        if(travado||b.disabled||b===virada)return;
+        b.classList.add('carta--aberta'); b.setAttribute('aria-label',carta.texto);
+        if(!virada){virada=b; bip('ok'); return;}
+        var outra=virada; virada=null;
+        if(outra.dados.i===carta.i){
+          [outra,b].forEach(function(x){x.classList.add('carta--achada');x.disabled=true;});
+          achados.push(carta.i);
+          salvo.achados=salvo.achados||{}; salvo.achados[jogoAtual]=achados.slice();
+          var ultimo=achados.length>=game.items.length;
+          comemorar(ultimo);
+          trocarArtefato(game,achados);
+          registrar();
+          /* Mesmo no √∫ltimo par a nomea√ß√£o aparece primeiro: o resultado s√≥
+             entra quando a crian√ßa tocar em continuar. */
+          nomearInline(stage,game.items[carta.i],ultimo?verResultado:null);
+        } else {
+          travado=true; pontuar(false); bip('erro');
+          [outra,b].forEach(function(x){x.classList.add('carta--errada');});
+          setTimeout(function(){
+            [outra,b].forEach(function(x){x.classList.remove('carta--aberta','carta--errada');x.setAttribute('aria-label','Carta virada para baixo');});
+            travado=false;
+          },900);
+        }
+      });
+      mesa.appendChild(b);
+    });
+    stage.appendChild(mesa);
+  }
+  /* Na mem√≥ria a nomea√ß√£o n√£o trava nada: a crian√ßa continua jogando. */
+  function nomearInline(stage,item,aoFechar) {
+    stage.querySelectorAll('.nomeacao').forEach(function(n){n.remove();});
+    stage.querySelectorAll('.navegacao').forEach(function(n){n.remove();});
+    var caixa=criar('div','nomeacao nomeacao--solta',null,{role:'status'});
+    caixa.appendChild(criar('p','nomeacao__viva',textoSeguro(aoFechar?'üéâ Achou todos os pares!':elogio())));
+    if(item.name)caixa.appendChild(criar('p','nomeacao__rotulo','Par achado: <strong>'+textoSeguro(item.name)+'</strong>'));
+    if(item.say)caixa.appendChild(criar('p','nomeacao__texto',item.say));
+    stage.appendChild(caixa);
+    var fim=caixa;
+    if(aoFechar){
+      var nav=criar('div','navegacao');nav.appendChild(criar('span'));
+      var b=criar('button','botao botao--primario','Ver o que voc√™ achou ‚Üí',{type:'button'});
+      b.addEventListener('click',aoFechar);nav.appendChild(b);stage.appendChild(nav);fim=nav;
+    }
+    revelar(caixa,fim);
+  }
+  function trocarArtefato(game,achados) {
+    var velho=$('.artefato'); if(!velho)return;
+    var novo=renderArtefato(game,achados.length,false,achados);
+    if(novo)velho.parentNode.replaceChild(novo,velho);
+  }
+
+  /* Jogo do cartaz: a crian√ßa l√™ um trecho de verdade e decide se ele ensina
+     algu√©m a fazer algo. O que entra vira um passo do cartaz, ali em cima. */
+  function renderCartaz(stage,game,passo,perfil,concluir) {
+    var item=game.items[passo], erros=0;
+    var cena=criar('div','cena-trecho','<span class="cena-trecho__selo">Trecho recortado</span><p class="cena-trecho__texto">'+textoSeguro(item.text)+'</p>');
+    stage.appendChild(cena);
+    var opcoes=criar('div','decisoes decisoes--cartaz');
+    game.categories.forEach(function(nome,i){
+      var b=criar('button','decisao decisao--grande'+(i===0?' decisao--aceitar':' decisao--recusar'),
+        (i===0?'<span aria-hidden="true">üìã</span> ':'<span aria-hidden="true">üóëÔ∏è</span> ')+textoSeguro(nome),{type:'button'});
+      b.addEventListener('click',function(){
+        if(i===item.cat){
+          b.classList.add('decisao--certa');
+          cena.classList.add(item.cat===0?'cena-trecho--aceita':'cena-trecho--recusada');
+          fecharRodada(stage,item,game,concluir);
+        } else {
+          erros++;
+          errarRodada(stage,b,erros,'Pergunte a si mesma: algu√©m consegue FAZER alguma coisa lendo isso?');
+        }
+      });
+      opcoes.appendChild(b);
+    });
+    stage.appendChild(opcoes);
+  }
+  /* M√°quina de encolher e crescer: a palavra entra INTEIRA e a sa√≠da fica em
+     branco ‚Äî nada de peda√ßo pr√©-quebrado, que s√≥ confunde. A crian√ßa escolhe
+     entre palavras inteiras (as erradas s√£o os erros que a prova cobra) e v√™
+     a palavra escolhida encolher ou crescer de verdade na tela. */
+  function renderMaquina(stage,game,passo,perfil,concluir) {
+    var item=game.items[passo], erros=0, cresce=item.dir==='maior';
+    var acao=(cresce?'CRESCER':'ENCOLHER')+(item.plural?' MUITOS':'');
+    var maquina=criar('div','maquina'+(cresce?' maquina--cresce':' maquina--encolhe'));
+    maquina.innerHTML='<figure class="maquina__ilustracao"><img src="assets/'+(cresce?'jogo-maquina-aumentar.webp':'jogo-maquina-encolher.webp')+'" alt="M√°quina '+(cresce?'aumentadora':'encolhedora')+' transformando um vaso"><figcaption>'+ (cresce?'M√°quina de aumentar':'M√°quina de encolher') +'</figcaption></figure>'+
+      '<div class="maquina__painel"><div class="maquina__lado"><span>1 ¬∑ entra</span><strong class="maquina__base">'+textoSeguro(item.base)+'</strong></div>'+
+      '<div class="maquina__corpo"><i class="maquina__engrenagem" aria-hidden="true">‚öô</i><span class="maquina__acao">'+textoSeguro(acao)+'</span></div>'+
+      '<div class="maquina__lado"><span>2 ¬∑ sai</span><strong class="maquina__saida">?</strong></div></div>';
+    stage.appendChild(maquina);
+    var escolhas=criar('div','palavras-maquina');
+    misturar([item.result].concat(item.wrong||[])).forEach(function(op){
+      var b=criar('button','palavra-maquina',textoSeguro(op),{type:'button'});
+      b.addEventListener('click',function(){
+        if(op===item.result){
+          b.classList.add('decisao--certa');
+          var saida=maquina.querySelector('.maquina__saida');
+          saida.textContent=op;
+          maquina.classList.add('maquina--pronta');
+          fecharRodada(stage,item,game,concluir);
+        } else {
+          erros++;
+          errarRodada(stage,b,erros,item.plural
+            ? 'Passe a palavra para o plural primeiro e olhe como ela termina.'
+            : 'Olhe a √∫ltima s√≠laba de ‚Äú'+item.base+'‚Äù. Ela tem a letra S?');
+        }
+      });
+      escolhas.appendChild(b);
+    });
+    stage.appendChild(escolhas);
+  }
+  function renderEscolhaUnica(stage,game,passo,perfil,concluir) {
+    var item=game.items[passo], erros=0, cena=criar('div','cena-decisao');
+    if(perfil.mode==='scenario')cena.appendChild(criar('span','cena-decisao__selo','Situa√ß√£o'));
+    if(perfil.mode==='combinations')cena.appendChild(criar('div','cena-objetos',visualizarNumeros(item.text)));
+    cena.appendChild(criar('p','cena-decisao__texto',textoSeguro(item.text)));stage.appendChild(cena);
+    var opcoes=criar('div','decisoes'+(game.categories.length>2?' decisoes--muitas':''));
+    game.categories.forEach(function(nome,i){var b=criar('button','decisao',textoSeguro(rotuloCurto(nome)),{type:'button'});b.addEventListener('click',function(){if(i===item.cat){b.classList.add('decisao--certa');if(/__/.test(item.text))cena.querySelector('.cena-decisao__texto').textContent=completarLacuna(item.text,nome);feedbackInterativo(stage,true,mensagemDaEscolha(item,nome,perfil),'',concluir);}else{erros++;b.classList.add('decisao--errada');setTimeout(function(){b.classList.remove('decisao--errada');},500);if(erros===1)feedbackInterativo(stage,false,'Leia o cart√£o novamente e compare com as respostas.','',function(){});else if(erros>=2)mostrarPista(stage,'Pista: a melhor resposta √© ‚Äú'+rotuloCurto(game.categories[item.cat])+'‚Äù.');}});opcoes.appendChild(b);});stage.appendChild(opcoes);
+  }
+  function mensagemDaEscolha(item,categoria,perfil) {
+    if(perfil.result==='conjunto de pistas')return item.cat===0?'Sim. Isso ajuda a pessoa a entender e seguir os passos.':'Certo. Isso aparece em outros tipos de texto, n√£o em uma instru√ß√£o.';
+    return 'Esta situa√ß√£o combina com ‚Äú'+rotuloCurto(categoria)+'‚Äù.';
+  }
+  function completarLacuna(texto,categoria) {var letra=/com S/i.test(categoria)?'s':(/com Z/i.test(categoria)?'z':'');return String(texto).replace('__',letra);}
+  function rotuloCurto(nome) {
+    return String(nome).replace('Caracter√≠stica do texto instrucional','Sim, √© uma pista').replace('N√ÉO √© caracter√≠stica dele','N√£o √© uma pista').replace('Combina√ß√£o de possibilidades','Combinar escolhas').replace('Adi√ß√£o de parcelas iguais','Repetir grupos iguais').replace(/^Substantivo$/,'D√° nome').replace(/^Adjetivo$/,'Mostra caracter√≠stica');
+  }
+  function visualizarNumeros(texto) {
+    var nums=String(texto).match(/\d+/g)||[];if(!nums.length)return '<span class="objeto-visual">?</span>';
+    return nums.slice(0,2).map(function(n){return '<span class="objeto-visual">'+n+'</span>';}).join('<span class="objeto-visual__vezes">√ó</span>');
+  }
+  function renderConstrucao(stage,game,passo,perfil,concluir) {
+    if(game.type==='sort'){renderEscolhaUnica(stage,game,passo,perfil,concluir);return;}
+    if(perfil.wordParts){renderConstrucaoPalavra(stage,game,passo,concluir);return;}
+    var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];}), opcoes=opcoesEmbaralhadas(respostas,par[1],3), erros=0;
+    var cena=criar('div','cena-construcao','<span class="cena-decisao__selo">'+(perfil.mode==='explore'?'Pista para investigar':'Pe√ßa inicial')+'</span><p>'+textoSeguro(par[0])+'</p><div class="construcao-resultado" aria-live="polite"><span>?</span></div>');stage.appendChild(cena);
+    var escolhas=criar('div','decisoes decisoes--coluna');opcoes.forEach(function(op){var b=criar('button','decisao',textoSeguro(op),{type:'button'});b.addEventListener('click',function(){if(op===par[1]){b.classList.add('decisao--certa');cena.querySelector('.construcao-resultado').innerHTML=montarPecasResposta(op);feedbackInterativo(stage,true,'A liga√ß√£o ficou completa. Observe as duas partes juntas.','',concluir);}else{erros++;b.classList.add('decisao--errada');setTimeout(function(){b.classList.remove('decisao--errada');},500);if(erros===1)feedbackInterativo(stage,false,'Essa pe√ßa n√£o completa a ideia.','',function(){});else if(erros>=2)mostrarPista(stage,'A resposta correta come√ßa com ‚Äú'+par[1].slice(0,Math.min(4,par[1].length))+'‚Ä¶‚Äù.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
+  }
+  function prefixoComum(a,b) {var i=0;a=String(a);b=String(b);while(i<a.length&&i<b.length&&normalizar(a[i])===normalizar(b[i]))i++;return a.slice(0,i);}
+  function partesDaPalavra(par) {var base=prefixoComum(par[0],par[1]);return {base:base,sufixo:String(par[1]).slice(base.length)};}
+  function renderConstrucaoPalavra(stage,game,passo,concluir) {
+    var par=game.pairs[passo], partes=partesDaPalavra(par), sufixos=game.pairs.map(partesDaPalavra).map(function(x){return x.sufixo;}), opcoes=opcoesEmbaralhadas(sufixos,partes.sufixo,4), erros=0;
+    var cena=criar('div','cena-construcao','<span class="cena-decisao__selo">Palavra original: '+textoSeguro(par[0])+'</span><div class="palavra-montagem"><span>'+textoSeguro(partes.base)+'</span><b>?</b></div>');stage.appendChild(cena);
+    var escolhas=criar('div','pecas-palavra');opcoes.forEach(function(op){var b=criar('button','peca-palavra',textoSeguro(op),{type:'button'});b.addEventListener('click',function(){if(op===partes.sufixo){b.classList.add('decisao--certa');cena.querySelector('.palavra-montagem b').textContent=op;feedbackInterativo(stage,true,partes.base+' + '+op+' forma '+par[1]+'.','',concluir);}else{erros++;b.classList.add('decisao--errada');setTimeout(function(){b.classList.remove('decisao--errada');},500);if(erros>=2)mostrarPista(stage,'Observe como come√ßa ‚Äú'+par[1]+'‚Äù. A parte que falta vem logo depois de ‚Äú'+partes.base+'‚Äù.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
+  }
+  function montarPecasResposta(resposta) {
+    var partes=String(resposta).split(/(\s+|‚Üí|=)/).filter(function(x){return x.trim();});return partes.map(function(p){return '<span>'+textoSeguro(p)+'</span>';}).join('');
+  }
+  function horaDoTexto(txt) {var t=normalizar(txt);if(t.indexOf('meia noite')>=0)return 0;if(t.indexOf('meio dia')>=0)return 12;var m=t.match(/\d+/);return m?Number(m[0])%12:0;}
+  function renderRelogio(stage,game,passo,perfil,concluir) {
+    var par=game.pairs[passo], hora=horaDoTexto(par[0]), respostas=game.pairs.map(function(p){return p[1];}), opcoes=opcoesEmbaralhadas(respostas,par[1],3), erros=0;
+    var relogio=criar('div','relogio-jogo','<span class="relogio__n r12">12</span><span class="relogio__n r3">3</span><span class="relogio__n r6">6</span><span class="relogio__n r9">9</span><i class="ponteiro ponteiro--hora" style="transform:rotate('+(hora*30)+'deg)"></i><i class="ponteiro ponteiro--minuto"></i><b></b>');stage.appendChild(criar('p','cena-legenda',textoSeguro(par[0])));stage.appendChild(relogio);
+    var escolhas=criar('div','decisoes');opcoes.forEach(function(op){var b=criar('button','decisao',textoSeguro(op),{type:'button'});b.addEventListener('click',function(){if(op===par[1]){b.classList.add('decisao--certa');feedbackInterativo(stage,true,'O rel√≥gio e o hor√°rio de 24 horas representam o mesmo momento.','',concluir);}else{erros++;b.classList.add('decisao--errada');if(erros>=2)mostrarPista(stage,'Depois do meio-dia, podemos somar 12 √† hora mostrada.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
+  }
+  function divisorDoTexto(txt) {var bruto=String(txt),m=bruto.match(/√∑\s*(\d+)/);if(m)return Number(m[1]);var t=normalizar(txt);if(/terca/.test(t))return 3;if(/metade/.test(t))return 2;if(/quinta/.test(t))return 5;if(/quarta/.test(t))return 4;if(/decima/.test(t))return 10;return 2;}
+  function renderDistribuicao(stage,game,passo,perfil,concluir) {
+    var par=game.pairs[passo], numeros=String(par[0]).match(/\d+/g)||[], total=String(par[0]).indexOf('√∑')>=0?Number(numeros[0]):Number(numeros[numeros.length-1]), divisor=divisorDoTexto(par[0]), resposta=Number(par[1]), alternativas=opcoesEmbaralhadas([String(Math.max(1,resposta-1)),String(resposta+1),String(resposta+2)],String(resposta),3), erros=0;
+    stage.appendChild(criar('p','cena-legenda',textoSeguro(par[0])));var objetos=criar('div','objetos-divisao');for(var i=0;i<Math.min(total,40);i++)objetos.appendChild(criar('i','objeto-divisao'));stage.appendChild(objetos);
+    var grupos=criar('div','grupos-divisao');for(var g=0;g<divisor;g++)grupos.appendChild(criar('div','grupo-divisao','<span>grupo '+(g+1)+'</span>'));stage.appendChild(grupos);
+    var escolhas=criar('div','decisoes');alternativas.forEach(function(op){var b=criar('button','decisao',op+' em cada grupo',{type:'button'});b.addEventListener('click',function(){if(Number(op)===resposta){b.classList.add('decisao--certa');objetos.classList.add('objetos-divisao--movidos');grupos.querySelectorAll('.grupo-divisao').forEach(function(gr){for(var j=0;j<resposta&&j<12;j++)gr.appendChild(criar('i','objeto-divisao'));});feedbackInterativo(stage,true,total+' objetos repartidos em '+divisor+' grupos deixam '+resposta+' em cada um.','',concluir);}else{erros++;b.classList.add('decisao--errada');if(erros>=2)mostrarPista(stage,'Experimente contar de '+divisor+' em '+divisor+' at√© chegar a '+total+'.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
+  }
+  function renderSequenciaJogo(stage,game,passo,perfil,concluir) {
+    var corretos=game.pairs.slice(0,passo), restantes=misturar(game.pairs.slice(passo)), esperado=game.pairs[passo], erros=0;
+    var fluxo=criar('ol','fluxo-etapas');corretos.forEach(function(p){fluxo.appendChild(criar('li',null,'<strong>'+textoSeguro(p[0])+'</strong><span>'+textoSeguro(p[1])+'</span>'));});fluxo.appendChild(criar('li','fluxo-etapas__vazio','Qual √© a etapa '+(passo+1)+'?'));stage.appendChild(fluxo);
+    var escolhas=criar('div','decisoes decisoes--coluna');restantes.forEach(function(par){var b=criar('button','decisao',textoSeguro(par[0]),{type:'button'});b.addEventListener('click',function(){if(par===esperado){b.classList.add('decisao--certa');feedbackInterativo(stage,true,par[0]+': '+par[1],'',concluir);}else{erros++;b.classList.add('decisao--errada');if(erros>=2)mostrarPista(stage,'Pista: a pr√≥xima etapa √© ‚Äú'+esperado[0]+'‚Äù.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
+  }
+  function renderTransformacaoJogo(stage,game,passo,perfil,concluir) {
+    var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];}), opcoes=opcoesEmbaralhadas(respostas,par[1],3), erros=0;
+    var painel=criar('div','painel-transformacao','<div><span>Antes</span><strong>'+textoSeguro(par[0])+'</strong></div><i>‚Üí</i><div class="painel-transformacao__depois"><span>Depois</span><strong>?</strong></div>');stage.appendChild(painel);
+    var escolhas=criar('div','decisoes decisoes--coluna');opcoes.forEach(function(op){var b=criar('button','decisao',textoSeguro(op),{type:'button'});b.addEventListener('click',function(){if(op===par[1]){b.classList.add('decisao--certa');painel.querySelector('.painel-transformacao__depois strong').textContent=op;painel.classList.add('painel-transformacao--pronto');feedbackInterativo(stage,true,'Observe o que mudou em todas as palavras da express√£o.','',concluir);}else{erros++;b.classList.add('decisao--errada');if(erros>=2)mostrarPista(stage,'Confira se substantivo, artigo e caracter√≠stica est√£o todos no plural.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
+  }
+
+  function iniciarQuiz(cap,reiniciar) {
+    var guardado=!reiniciar && estado.tentativas[cap.id];
+    quiz=guardado ? {indice:guardado.indice||0,acertos:guardado.acertos||0,respondidas:guardado.indice||0,erros:(guardado.erros||[]).map(function(i){return {questao:cap.quiz[i],indiceOriginal:i};}),indices:cap.quiz.map(function(_,i){return i;}),revisao:false,pausa:false} :
+      {indice:0,acertos:0,respondidas:0,erros:[],indices:cap.quiz.map(function(_,i){return i;}),revisao:false,pausa:false};
+    if(reiniciar){delete estado.tentativas[cap.id];salvar();}
+    renderQuestao(cap);
+  }
+  function salvarTentativa(cap) {
+    if(quiz.revisao)return;
+    estado.tentativas[cap.id]={indice:quiz.indice,acertos:quiz.acertos,erros:quiz.erros.map(function(e){return e.indiceOriginal;})};salvar();
+  }
+  function perguntasAtuais(cap) { return quiz.revisao ? quiz.perguntas : cap.quiz; }
+  function contextualizarQuestao(cap,q) {
+    var texto=q.q, imagem=q.image||null, imagemAlt=q.imageAlt||'', imagemCaption=q.imageCaption||'', contexto='', indice=cap.quiz.indexOf(q), plano=(typeof PEDAGOGY!=='undefined'&&PEDAGOGY[cap.id])||null, ajuste=plano&&plano.questions&&plano.questions[indice];
+    if(ajuste){contexto=ajuste.context||'';texto=ajuste.prompt||texto;}
+    if(/^Na tirinha,/i.test(texto)) texto=texto.replace(/^Na tirinha,/i,'Leia este di√°logo de uma tirinha:');
+    if(cap.id==='cie11' && /Ant√°rtica aparece completamente escura/i.test(texto)) texto='Uma imagem das luzes noturnas da Terra mostra onde h√° muitas cidades. Nela, a Ant√°rtica aparece completamente escura. Por qu√™?';
+    if(cap.id==='lp17' && /Segundo o cartaz do Unicef/i.test(texto) && cap.pageImages) imagem=cap.pageImages[1]||null;
+    if(imagem && !imagemAlt) imagemAlt='Ilustra√ß√£o de apoio para responder √† pergunta.';
+    if(imagem && !imagemCaption) imagemCaption='Observe a ilustra√ß√£o antes de responder.';
+    return {texto:texto,contexto:contexto,imagem:imagem,imagemAlt:imagemAlt,imagemCaption:imagemCaption};
+  }
+  function renderQuestao(cap) {
+    var raiz=$('#desafio-conteudo'); raiz.innerHTML='';
+    if(!cap.quiz||!cap.quiz.length){raiz.appendChild(criar('div','vazio','Ainda n√£o h√° perguntas para este assunto.'));return;}
+    var perguntas=perguntasAtuais(cap);
+    if(quiz.pausa){renderIntervalo(cap,perguntas);return;}
+    if(quiz.indice>=perguntas.length){renderResultado(cap);return;}
+    var q=perguntas[quiz.indice], contexto=contextualizarQuestao(cap,q), card=criar('section','quiz-card'), rodada=Math.floor(quiz.indice/3)+1, rodadas=Math.ceil(perguntas.length/3);
+    card.innerHTML='<p class="quiz-card__etapa">'+(quiz.revisao?'Revis√£o dos erros':'Rodada '+rodada+' de '+rodadas)+' ¬∑ pergunta '+(quiz.indice+1)+' de '+perguntas.length+'</p>';
+    if(contexto.imagem){
+      card.appendChild(figuraOpcional(criar('figure','questao-contexto','<a href="'+textoSeguro(contexto.imagem)+'" target="_blank" rel="noopener" aria-label="Ampliar a ilustra√ß√£o"><img src="'+textoSeguro(contexto.imagem)+'" alt="'+textoSeguro(contexto.imagemAlt)+'" loading="lazy"></a><figcaption>'+textoSeguro(contexto.imagemCaption)+' Toque na imagem para ampli√°-la.</figcaption>')));
+    }
+    if(contexto.contexto)card.appendChild(criar('div','questao-contexto-texto','<span>Informa√ß√µes para pensar</span><p>'+textoSeguro(contexto.contexto)+'</p>'));
+    card.appendChild(criar('p','quiz-card__pergunta',textoSeguro(contexto.texto)));
+    var resposta=criar('div',null,null,{role:'status','aria-live':'polite'}), bloqueado=false, errouAntes=false, erroRegistrado=false;
+    function registrarErro(escolha){if(erroRegistrado)return;erroRegistrado=true;quiz.erros.push({questao:q,escolha:escolha,indiceOriginal:quiz.indices[quiz.indice]});}
+    function mostrarNovaTentativa(mensagem){resposta.className='feedback feedback--erro';resposta.innerHTML='<strong>Tente mais uma vez.</strong><p class="explicacao">'+textoSeguro(mensagem)+'</p>';revelar(resposta);}
+    function concluir(certo,escolha){
+      if(bloqueado)return;bloqueado=true;quiz.respondidas++;if(certo&&(!errouAntes||quiz.revisao))quiz.acertos++;if(!certo)registrarErro(escolha);
+      resposta.className='feedback '+(certo?'feedback--ok':'feedback--erro');resposta.innerHTML='<strong>'+(certo?(errouAntes?'Agora ficou claro!':'Voc√™ percebeu!'):'Vamos entender juntos.')+'</strong>'+(q.explain?'<p class="explicacao">'+textoSeguro(q.explain)+'</p>':'');
+      if(!certo)card.appendChild(falaMascote('Tudo bem n√£o acertar ainda. Esta explica√ß√£o mostra o caminho para a revis√£o.',true));
+      var nav=criar('div','navegacao'), ultima=quiz.indice===perguntas.length-1, prox=criar('button','botao botao--primario',ultima?(quiz.revisao?'Terminar revis√£o':'Ver resultado'):'Pr√≥xima ‚Üí',{type:'button'});
+      if(!quiz.revisao&&!ultima){var guardar=criar('button','botao botao--leve','Continuar depois',{type:'button'});guardar.addEventListener('click',function(){quiz.indice++;quiz.pausa=quiz.indice<perguntas.length&&quiz.indice%3===0;salvarTentativa(cap);abrirDisciplina(estado.disciplina);toast('Seu ponto foi guardado.');});nav.appendChild(guardar);}
+      prox.addEventListener('click',function(){quiz.indice++;quiz.pausa=!quiz.revisao && quiz.indice<perguntas.length && quiz.indice%3===0;salvarTentativa(cap);renderQuestao(cap);irTopo();});nav.appendChild(prox);card.appendChild(nav);
+      revelar(resposta,nav);
+    }
+    if(q.type==='mc'){
+      var errosMc=0, ops=criar('div','opcoes'); q.options.forEach(function(op,i){var b=criar('button','opcao','<span class="opcao__letra">'+String.fromCharCode(65+i)+'</span><span>'+textoSeguro(op)+'</span>',{type:'button'});b.addEventListener('click',function(){if(bloqueado||b.disabled)return;if(i===q.answer){ops.querySelectorAll('button').forEach(function(x){x.disabled=true;});b.classList.add('opcao--certa');concluir(true,op);}else{errosMc++;errouAntes=true;registrarErro(op);b.disabled=true;b.classList.add('opcao--errada');mostrarNovaTentativa(errosMc===1?'Elimine esta alternativa e releia a pergunta.':q.explain||'Compare as alternativas que ainda restam.');if(errosMc===2)card.appendChild(falaMascote(q.explain||'Observe as palavras mais importantes da pergunta.',true));}});ops.appendChild(b);});card.appendChild(ops);
+    } else {
+      var tentativasTexto=0, numerica=/n√∫mero|quantos|quantas|quanto|horas|segundos|dias/i.test(contexto.texto), linha=criar('div','campo-resposta'), campo=criar('input','campo',null,{type:'text',inputmode:numerica?'numeric':'text',autocomplete:'off',placeholder:numerica?'Escreva o n√∫mero':'Escreva uma palavra ou frase curta','aria-label':'Sua resposta'}), enviar=criar('button','botao botao--primario','Conferir',{type:'button'});
+      function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[]);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(pistaRespostaAberta(q,numerica));campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
+    }
+    card.appendChild(resposta);raiz.appendChild(card);
+  }
+  function renderIntervalo(cap,perguntas) {
+    var raiz=$('#desafio-conteudo'), feitas=quiz.indice, faltam=perguntas.length-feitas, rodada=Math.floor(feitas/3);
+    var box=criar('section','resultado intervalo','<p class="resultado__selo">Rodada '+rodada+' conclu√≠da</p><h3>Boa hora para respirar</h3><p>Voc√™ respondeu '+feitas+' perguntas. Faltam '+faltam+'. Seu progresso j√° est√° guardado.</p>');
+    box.insertBefore(falaMascote('Fa√ßa uma pausa curta se precisar. Aprender n√£o √© uma corrida.',false),box.firstChild);
+    var nav=criar('div','navegacao'), parar=criar('button','botao','Continuar depois',{type:'button'}), seguir=criar('button','botao botao--primario','Come√ßar pr√≥xima rodada ‚Üí',{type:'button'});
+    parar.addEventListener('click',function(){salvarTentativa(cap);abrirDisciplina(estado.disciplina);});seguir.addEventListener('click',function(){quiz.pausa=false;renderQuestao(cap);irTopo();});nav.appendChild(parar);nav.appendChild(seguir);box.appendChild(nav);raiz.appendChild(box);
+  }
+  function normalizar(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();}
+  function validarResposta(v,aceitas){var a=normalizar(v);return aceitas.some(function(x){var b=normalizar(x);return a===b || (b.length>4 && a.indexOf(b)>=0);});}
+  function pistaRespostaAberta(q,numerica){if(numerica)return 'Volte aos n√∫meros do enunciado e confira a opera√ß√£o ou a unidade pedida.';var alvo=normalizar((q.answers||[])[0]);return alvo?'A resposta come√ßa com ‚Äú'+alvo.charAt(0).toUpperCase()+'‚Äù. Releia a pergunta.':'Releia a pergunta e responda com poucas palavras.';}
+  function categoriaQuestao(q) {
+    var t=normalizar(q.q);
+    if(/texto|instrucional|cartaz|manual|anuncio|memoria|tirinha/.test(t))return 'Compreender textos e informa√ß√µes';
+    if(/palavra|substantivo|diminutivo|aumentativo|plural|silaba|verbo|adjetivo/.test(t))return 'Observar como as palavras funcionam';
+    if(/numero|multiplica|divis|possibil|hora|minuto|calculo|resultado/.test(t))return 'Resolver situa√ß√µes com n√∫meros';
+    if(/ceu|terra|lua|sol|estrela|planeta|luz|atmosfera/.test(t))return 'Investigar a natureza e o c√©u';
+    if(/cidade|municipio|comunidade|bairro|populacao|espaco|publico|privado/.test(t))return 'Entender lugares e comunidades';
+    return 'Usar o que foi descoberto';
+  }
+  function resumoDominio(cap,erros) {
+    var grupos={}, errados={};erros.forEach(function(e){errados[e.indiceOriginal]=true;});
+    cap.quiz.forEach(function(q,i){var nome=categoriaQuestao(q);if(!grupos[nome])grupos[nome]={total:0,acertos:0};grupos[nome].total++;if(!errados[i])grupos[nome].acertos++;});
+    var box=criar('div','resumo-dominio','<h4>O que este resultado mostra</h4>'), lista=criar('ul');
+    Object.keys(grupos).forEach(function(nome){var g=grupos[nome], ok=g.acertos===g.total;lista.appendChild(criar('li',ok?'resumo-dominio__ok':'resumo-dominio__rever','<span>'+textoSeguro(nome)+'</span><strong>'+(ok?'J√° est√° firme':g.acertos+' de '+g.total+' ¬∑ vale rever')+'</strong>'));});box.appendChild(lista);return box;
+  }
+  function renderResultado(cap) {
+    var raiz=$('#desafio-conteudo'), total=perguntasAtuais(cap).length, pct=Math.round(quiz.acertos/Math.max(1,total)*100), disc=discPorId(estado.disciplina), erros=quiz.erros.slice();
+    if(!quiz.revisao){estado.progresso[cap.id]={feito:true,acertos:quiz.acertos,total:total,data:new Date().toISOString()};delete estado.tentativas[cap.id];salvar();}
+    var msg=quiz.revisao?'Voc√™ voltou √†s ideias que mereciam outra tentativa.':(pct>=80?'Voc√™ j√° consegue explicar as ideias principais.':pct>=55?'Voc√™ construiu uma boa base. Vale rever '+erros.length+' ideia'+(erros.length===1?'':'s')+'.':'Agora sabemos exatamente quais ideias precisam de outra olhada.');
+    var box=criar('section','resultado','<p class="resultado__numero">'+quiz.acertos+'/'+total+'</p><h3>'+(quiz.revisao?'Revis√£o conclu√≠da':'Desafio conclu√≠do')+'</h3><p>'+msg+'</p>');
+    if(!quiz.revisao)box.appendChild(resumoDominio(cap,erros));
+    box.insertBefore(falaMascote(quiz.revisao?'Rever um erro √© uma forma de aprender, n√£o um castigo.':'Voc√™ terminou no seu ritmo. O resultado mostra o pr√≥ximo passo, n√£o o seu valor.',false),box.firstChild);
+    var nav=criar('div','navegacao');
+    if(!quiz.revisao && erros.length){var reverErros=criar('button','botao','Rever meus erros ('+erros.length+')',{type:'button'});reverErros.addEventListener('click',function(){quiz={indice:0,acertos:0,respondidas:0,erros:[],perguntas:erros.map(function(e){return e.questao;}),indices:erros.map(function(e){return e.indiceOriginal;}),revisao:true,pausa:false};renderQuestao(cap);});nav.appendChild(reverErros);}
+    var repetir=criar('button','botao','Refazer tudo',{type:'button'}), voltar=criar('button','botao botao--primario','Ver outros assuntos',{type:'button'});repetir.addEventListener('click',function(){iniciarQuiz(cap,true);});voltar.addEventListener('click',function(){abrirDisciplina(disc.id);});nav.appendChild(repetir);nav.appendChild(voltar);box.appendChild(nav);raiz.appendChild(box);if(!quiz.revisao)toast('Progresso salvo neste aparelho.');
+  }
+
+  function selecionarAba(nome,rolar) {
+    var cap=capPorId(discPorId(estado.disciplina),estado.capitulo); if(!cap)return;
+    if(nome==='video'&&!cap.video)nome='teoria'; estado.aba=nome; estado.areas[cap.id]=nome; salvar();
+    /* O convite amarelo fala do bloco de teoria que est√° aberto; fora do
+       Descobrir ele n√£o tem a ver com o que est√° na tela. */
+    $('#cap-pergunta').hidden = nome!=='teoria';
+    $$('.aba').forEach(function(b){var ativa=b.dataset.aba===nome;b.classList.toggle('aba--ativa',ativa);b.setAttribute('aria-selected',ativa?'true':'false');});
+    $$('.painel-aba').forEach(function(p){var ativa=p.id==='painel-'+nome;p.hidden=!ativa;p.classList.toggle('painel-aba--ativo',ativa);});
+    if(rolar)document.querySelector('.abas').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  function voltar() {
+    if(!$('#tela-capitulo').hidden) abrirDisciplina(estado.disciplina);
+    else if(!$('#tela-disciplina').hidden) renderHome(); else renderHome();
+  }
+  function ligarEventos() {
+    $('#link-home').addEventListener('click',function(e){e.preventDefault();renderHome();});
+    $('#btn-voltar').addEventListener('click',voltar);
+    $('#btn-continuar').addEventListener('click',function(){if(estado.ultimo)abrirCapitulo(estado.ultimo.disciplina,estado.ultimo.capitulo);});
+    $$('.aba').forEach(function(b){b.addEventListener('click',function(){selecionarAba(b.dataset.aba,true);});});
+  }
+  function iniciar() {
+    if(typeof DISCIPLINAS==='undefined'||!DISCIPLINAS.length){$('#grade-disciplinas').innerHTML='<div class="vazio">N√£o foi poss√≠vel carregar os assuntos.</div>';return;}
+    carregar(); ligarEventos(); configurarInstalacao(); registrarServiceWorker(); renderHome();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',iniciar);else iniciar();
+})();
