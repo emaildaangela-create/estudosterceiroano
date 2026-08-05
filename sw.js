@@ -1,4 +1,4 @@
-const CACHE = 'estudos-3-ano-v8';
+const CACHE = 'estudos-3-ano-v9';
 const ARQUIVOS = [
   './', './index.html', './style.css', './data.js', './experiences.js',
   './pedagogy.js', './app.js', './manifest.webmanifest',
@@ -11,6 +11,8 @@ const ARQUIVOS = [
   './assets/descobrir-numeros.webp', './assets/descobrir-medidas.webp',
   './assets/descobrir-natureza.webp', './assets/descobrir-lugares.webp',
   './assets/descobrir-ideias.webp',
+  './assets/descobrir-anuncios.webp', './assets/descobrir-memorias.webp',
+  './assets/descobrir-quadrinhos.webp', './assets/descobrir-contos.webp',
   './assets/disciplina-portugues.webp', './assets/disciplina-matematica.webp',
   './assets/disciplina-ciencias.webp', './assets/disciplina-geografia.webp',
   './assets/disciplina-historia.webp',

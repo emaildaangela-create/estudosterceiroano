@@ -137,17 +137,25 @@
       '<img src="assets/mascote-capivara-v2.webp" alt="Mascote do aplicativo"><p>'+textoSeguro(mensagem)+'</p>');
   }
   function conviteMissao(bloco,idx) {
-    var h=(bloco.h||'').toLowerCase();
-    if(/instrucional|instruç/.test(h)) return 'Pense no cartaz de lavar as mãos do banheiro da escola. O que precisa estar nele para alguém conseguir seguir?';
+    var h=normalizar(bloco&&bloco.h);
+    if(/instrucional|instrucao/.test(h)) return 'Pense no cartaz de lavar as mãos do banheiro da escola. O que precisa estar nele para alguém conseguir seguir?';
+    if(/anuncio|classificado|aulas de tango/.test(h)) return 'Onde você já viu algo sendo oferecido para vender, trocar, alugar ou prestar um serviço?';
+    if(/memoria|biografia|santos dumont|aula de musica|linha do tempo/.test(h)) return 'Que pistas ajudam a perceber que um texto conta fatos da vida ou lembranças do passado?';
+    if(/quadrinho|balao|monica|marina/.test(h)) return 'O que os desenhos, os quadros e os balões ajudam a entender antes mesmo de ler todas as falas?';
+    if(/conto|zebra|lobo/.test(h)) return 'Que elementos fazem você perceber que este texto conta uma história?';
     if(/diminutivo|aumentativo|plural|ortografia/.test(h)) return 'Observe como as palavras mudam. Tente descobrir o padrão antes de abrir a explicação.';
     if(/tempo|hora|calend/.test(h)) return 'Pense em uma situação do seu dia em que você usa essa ideia.';
-    if(/terra|céu|lua|sol|estrela/.test(h)) return 'Comece com uma hipótese: o que você acha que acontece? Depois compare com a descoberta.';
-    if(/município|cidade|comunidade|espaço/.test(h)) return 'Pense no lugar onde você vive. O que você já viu que se parece com este assunto?';
-    return idx===0?'Você não precisa saber a resposta ainda. Primeiro faça uma suposição.':'Antes de ler, tente explicar esta ideia com suas próprias palavras.';
+    if(/terra|ceu|lua|sol|estrela/.test(h)) return 'Observe o título e a imagem. O que você acha que acontece com esse elemento da natureza?';
+    if(/municipio|cidade|comunidade|espaco/.test(h)) return 'Pense no lugar onde você vive. O que você já viu que se parece com este assunto?';
+    return 'Observe o título e a imagem. O que você já sabe ou percebe sobre este assunto?';
   }
   function temaBloco(bloco) {
     var h=normalizar(bloco&&bloco.h);
-    if(/texto|memoria|poema|anuncio|instrucional/.test(h))return 'textos';
+    if(/anuncio|classificado|aulas de tango/.test(h))return 'anuncios';
+    if(/memoria|biografia|santos dumont|aula de musica|linha do tempo/.test(h))return 'memorias';
+    if(/quadrinho|balao|monica|marina/.test(h))return 'quadrinhos';
+    if(/conto|zebra|lobo/.test(h))return 'contos';
+    if(/instrucional|lavar as maos/.test(h))return 'instrucoes';
     if(/substantivo|diminutivo|aumentativo|plural|ortografia|verbo|adjetivo|silaba/.test(h))return 'palavras';
     if(/multiplica|divis|possibil|numero|calculo/.test(h))return 'numeros';
     if(/tempo|hora|localiza|desloca/.test(h))return 'medidas';
@@ -157,7 +165,11 @@
   }
   function visualDaDescoberta(bloco) {
     var tema=temaBloco(bloco), visuais={
-      textos:{src:'assets/descobrir-textos.webp',alt:'Criança observando uma sequência ilustrada de instruções para lavar as mãos.'},
+      instrucoes:{src:'assets/descobrir-textos.webp',alt:'Criança observando uma sequência ilustrada de instruções para lavar as mãos.'},
+      anuncios:{src:'assets/descobrir-anuncios.webp',alt:'Crianças observando um anúncio ilustrado em um mural da comunidade.'},
+      memorias:{src:'assets/descobrir-memorias.webp',alt:'Criança ouvindo uma pessoa idosa compartilhar fotografias e lembranças de sua vida.'},
+      quadrinhos:{src:'assets/descobrir-quadrinhos.webp',alt:'Crianças criando uma história em quadrinhos com quadros e diferentes balões de fala.'},
+      contos:{src:'assets/descobrir-contos.webp',alt:'Crianças ouvindo uma contadora de histórias enquanto personagens surgem de um livro.'},
       palavras:{src:'assets/descobrir-palavras.webp',alt:'Criança montando e investigando palavras com peças coloridas.'},
       numeros:{src:'assets/descobrir-numeros.webp',alt:'Criança explorando grupos, formas e quantidades com materiais de matemática.'},
       medidas:{src:'assets/descobrir-medidas.webp',alt:'Criança investigando tempo, caminhos e medidas com relógio e instrumentos.'},
@@ -380,7 +392,7 @@
     var raiz=$('#teoria-conteudo'); raiz.innerHTML='';
     var idx=Math.max(0,Math.min(estado.passoDescoberta,cap.theory.length-1)), bloco=cap.theory[idx];
     /* O objetivo geral permanece no cabeçalho; a provocação desta missão aparece no cartão. */
-    if(idx===0) raiz.appendChild(falaMascote('Vamos por partes. Faça uma suposição, descubra uma ideia e só depois experimente.',false));
+    if(idx===0) raiz.appendChild(falaMascote('Observe o título e a imagem da missão. Antes de ler, conte o que você já sabe ou percebe sobre o assunto.',false));
     else if(temaBloco(bloco)!==temaBloco(cap.theory[idx-1])) raiz.appendChild(falaMascote('Nova descoberta: o assunto muda um pouco agora. Procure uma ligação com o que você acabou de aprender.',true));
     var passos=criar('div','passos');
     cap.theory.forEach(function(_,i){var p=criar('button','passos__ponto'+(i===idx?' passos__ponto--ativo':''),null,{type:'button','aria-label':'Ir para a missão '+(i+1)});p.addEventListener('click',function(){guardarPasso(cap,i);renderTeoria(cap);});passos.appendChild(p);});
