@@ -7,7 +7,7 @@ const EXPERIENCE_PROFILES = {
   ],
   lp18: [
     { mode:'factory', pilot:'factory', scene:'assets/games/piloto-lp18-fabrica.webp', goal:'Criar palavras com -oso e -osa', prompt:'Ligue a fábrica e transforme a expressão em uma nova palavra.', result:'palavras' },
-    { mode:'choice', goal:'Separar nomes e características', prompt:'Esta palavra dá nome ou mostra uma característica?', result:'coleções' }
+    { mode:'gramclass', pilot:'gramclass', scene:'assets/games/piloto-lp18-classes.webp', goal:'Separar nomes e características', prompt:'Leve cada palavra para a ala correta do museu.', result:'museu de palavras' }
   ],
   lp19: [
     { mode:'origins', pilot:'origins', scene:'assets/games/piloto-lp19-origens.webp', goal:'Descobrir palavras que indicam origem', prompt:'Complete o passaporte de cada lugar.', result:'mapa de origens' },
@@ -27,7 +27,7 @@ const EXPERIENCE_PROFILES = {
   ],
   mat09: [
     { mode:'outfit', pilot:'outfit', scene:'assets/games/piloto-mat09-maquina.webp', goal:'Acionar a máquina de multiplicação', prompt:'Qual resultado faz a máquina funcionar?', result:'coleção de multiplicações' },
-    { mode:'combinations', goal:'Investigar duas ideias da multiplicação', prompt:'A situação combina escolhas ou repete grupos iguais?', result:'painel de estratégias' }
+    { mode:'multideas', pilot:'multideas', scene:'assets/games/piloto-mat09-ideias.webp', goal:'Investigar duas ideias da multiplicação', prompt:'Envie a situação para a estratégia que ela representa.', result:'laboratório de multiplicação' }
   ],
   mat10: [
     { mode:'clockwork', pilot:'clockwork', scene:'assets/games/piloto-mat10-relogios.webp', goal:'Ajustar o relógio para cada horário', prompt:'Encontre o horário equivalente na oficina.', result:'coleção de relógios' },
@@ -39,7 +39,7 @@ const EXPERIENCE_PROFILES = {
   ],
   cie09: [
     { mode:'earth', pilot:'earth', scene:'assets/games/piloto-cie09-terra.webp', goal:'Montar um modelo das camadas da Terra', prompt:'Coloque a descrição na parte correta do laboratório.', result:'modelo da Terra' },
-    { mode:'scenario', goal:'Investigar forças que transformam a Terra', prompt:'Essa transformação começa dentro ou fora da Terra?', result:'investigação' }
+    { mode:'landforces', pilot:'landforces', scene:'assets/games/piloto-cie09-agentes.webp', goal:'Investigar forças que transformam a Terra', prompt:'Descubra se a força age de dentro ou de fora da Terra.', result:'laboratório do relevo' }
   ],
   cie10: [
     { mode:'observatory', pilot:'observatory', scene:'assets/games/piloto-cie10-observatorio.webp', goal:'Criar um guia dos corpos celestes', prompt:'Envie cada corpo celeste para a descrição correta.', result:'guia espacial' },
@@ -51,7 +51,7 @@ const EXPERIENCE_PROFILES = {
   ],
   geo09: [
     { mode:'municipality', pilot:'municipality', scene:'assets/games/piloto-geo09-municipio.webp', goal:'Montar um município com campo e cidade', prompt:'Leve cada atividade para o lugar onde ela costuma acontecer.', result:'município' },
-    { mode:'explore', goal:'Criar um glossário de Geografia', prompt:'Qual explicação combina com este conceito?', result:'glossário' }
+    { mode:'geoglossary', pilot:'geoglossary', scene:'assets/games/piloto-geo09-glossario.webp', goal:'Criar um glossário de Geografia', prompt:'Guarde cada definição no cartão geográfico correto.', result:'glossário de campo' }
   ],
   geo10: [
     { mode:'ruralurban', pilot:'ruralurban', scene:'assets/games/piloto-geo10-campo-cidade.webp', goal:'Comparar modos de vida', prompt:'Leve cada situação para o campo ou para a cidade.', result:'dois cotidianos' },
@@ -63,7 +63,7 @@ const EXPERIENCE_PROFILES = {
   ],
   hist09: [
     { mode:'community', pilot:'community', scene:'assets/games/piloto-hist09-comunidade.webp', goal:'Organizar os espaços de uma comunidade', prompt:'Coloque cada espaço no painel público ou privado.', result:'mapa da comunidade' },
-    { mode:'explore', goal:'Descobrir a função dos espaços públicos', prompt:'Que função este espaço cumpre?', result:'guia comunitário' }
+    { mode:'cityservices', pilot:'cityservices', scene:'assets/games/piloto-hist09-servicos.webp', goal:'Descobrir a função dos espaços públicos', prompt:'Ligue cada lugar ao serviço que oferece à comunidade.', result:'central de serviços' }
   ],
   hist10: [
     { mode:'access', pilot:'access', scene:'assets/games/piloto-hist10-acessos.webp', goal:'Decidir como os espaços podem ser usados', prompt:'Entregue a chave de acesso correta para cada lugar.', result:'mapa de acesso' },
