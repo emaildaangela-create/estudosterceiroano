@@ -1,10 +1,12 @@
-const CACHE = 'estudos-3-ano-v2';
+const CACHE = 'estudos-3-ano-v3';
 const ARQUIVOS = [
   './', './index.html', './style.css', './data.js', './experiences.js',
   './pedagogy.js', './app.js', './manifest.webmanifest',
   './assets/app-icon.svg', './assets/app-icon-192.png', './assets/app-icon-512.png',
   './assets/capa-aprender.webp',
-  './assets/capa-aprender.png', './assets/mascote-capivara-v2.webp'
+  './assets/capa-aprender.png', './assets/mascote-capivara-v2.webp',
+  './assets/quiz-cidade-espacos.webp', './assets/quiz-desmatamento.webp',
+  './assets/quiz-poluicao-sonora.webp', './assets/quiz-terra-noturna.webp'
 ];
 
 self.addEventListener('install', function (evento) {
@@ -33,4 +35,3 @@ self.addEventListener('fetch', function (evento) {
     });
   }));
 });
-

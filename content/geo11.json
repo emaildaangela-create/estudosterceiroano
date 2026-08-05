@@ -107,6 +107,9 @@
     {
       "type": "mc",
       "q": "Uma ilustração mostra uma avenida engarrafada, com carros buzinando, um avião passando, alto-falantes e uma britadeira quebrando o asfalto — todos com marcas de ruído. Que tipo de poluição é mostrada?",
+      "image": "assets/quiz-poluicao-sonora.webp",
+      "imageAlt": "Avenida congestionada com carros, avião, alto-falante e trabalhador usando britadeira, todos representados como fontes de ruído.",
+      "imageCaption": "Observe as diferentes fontes de som presentes na avenida.",
       "options": ["Poluição atmosférica", "Poluição sonora", "Poluição hídrica", "Poluição visual"],
       "answer": 1,
       "explain": "As marcas de som saindo das buzinas, do avião, dos alto-falantes e da britadeira indicam poluição sonora: o excesso de ruído nas áreas urbanas."

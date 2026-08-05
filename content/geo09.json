@@ -98,6 +98,9 @@
     {
       "type": "mc",
       "q": "Uma ilustração mostra uma máquina derrubando árvores, deixando o terreno cheio de tocos. Que produto está sendo extraído e qual impacto ambiental essa extração provoca?",
+      "image": "assets/quiz-desmatamento.webp",
+      "imageAlt": "Máquina florestal carregando um tronco em área com árvores cortadas, vários tocos e toras empilhadas.",
+      "imageCaption": "Observe o que está sendo retirado da floresta e como o terreno ficou.",
       "options": ["Sal e poluição do ar", "Madeira e desmatamento", "Peixes e poluição da água", "Alimentos e contaminação do solo"],
       "answer": 1,
       "explain": "É extrativismo vegetal: a madeira é retirada das árvores. Quando grandes áreas de floresta são derrubadas, ocorre o desmatamento, principal impacto ambiental das áreas rurais."

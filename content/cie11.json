@@ -133,6 +133,9 @@
     {
       "type": "mc",
       "q": "Na imagem noturna da Terra vista do espaço, por que a Antártica aparece completamente escura?",
+      "image": "assets/quiz-terra-noturna.webp",
+      "imageAlt": "Planeta Terra à noite visto do espaço, com luzes nas regiões habitadas e a Antártica escura na parte inferior.",
+      "imageCaption": "Compare as regiões iluminadas da Terra com a Antártica.",
       "options": ["Porque lá é sempre noite", "Porque é uma região muito fria e pouco povoada", "Porque não existe energia elétrica no continente", "Porque a poluição esconde todas as luzes"],
       "answer": 1,
       "explain": "As regiões mais iluminadas são as mais urbanizadas. As populações ocupam lugares de fácil acesso e clima favorável — condições que a Antártica não oferece, por isso permanece quase sem ocupação."

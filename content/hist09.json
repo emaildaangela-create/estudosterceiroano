@@ -82,6 +82,9 @@
     {
       "type": "mc",
       "q": "Observando a ilustração de uma cidade com hospital municipal, escola municipal, banco, mercado, praça e casas, é possível afirmar que:",
+      "image": "assets/quiz-cidade-espacos.webp",
+      "imageAlt": "Cidade vista de cima com hospital, escola, banco, mercado, praça e casas distribuídos ao redor das ruas.",
+      "imageCaption": "Observe os diferentes espaços da cidade antes de responder.",
       "options": ["há apenas um espaço público, o hospital municipal", "há apenas um espaço privado, o banco", "há espaços públicos, como o hospital, a escola e a praça", "há espaços privados, como as casas e a praça"],
       "answer": 2,
       "explain": "Hospital municipal, escola municipal e praça são espaços públicos. Banco, mercado e casas são espaços privados."
