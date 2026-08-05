@@ -195,18 +195,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .artefato__titulo { margin:0 0 11px; color:var(--acento,var(--ciano)); font-size:13px; font-weight:850; letter-spacing:.06em; text-transform:uppercase; }
 .artefato__vazio { margin:0; color:var(--fraco); font-size:14px; font-style:italic; }
 .artefato__pecas { display:grid; gap:7px; margin:0; padding:0; counter-reset:peca; list-style:none; }
-.artefato__peca { display:flex; align-items:center; flex-wrap:wrap; gap:9px; padding:9px 12px 9px 42px; position:relative; border-radius:11px; background:#fff; box-shadow:0 1px 0 rgba(23,33,59,.05); animation:entrar .3s ease both; }
-.artefato__peca::before { counter-increment:peca; content:counter(peca); position:absolute; left:10px; display:grid; place-items:center; width:23px; height:23px; border-radius:8px; color:#fff; background:var(--acento,var(--ciano)); font-size:13px; font-weight:850; }
-.artefato__texto { color:var(--texto); font-weight:700; }
-.artefato__etiqueta { padding:2px 8px; border-radius:99px; color:var(--acento,var(--ciano)); background:color-mix(in srgb,var(--acento,var(--ciano)) 12%,white); font-size:11px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; }
-.artefato--prateleira .artefato__pecas { grid-template-columns:repeat(auto-fill,minmax(165px,1fr)); }
-.artefato--pronto { border-style:solid; border-color:var(--ok); background:var(--ok-claro); }
-.artefato__fecho { margin:12px 0 0; color:var(--ok); font-weight:750; }
-.conclusao-termo { margin:16px 0 0; padding:14px 16px; border-left:4px solid var(--acento,var(--ciano)); border-radius:0 12px 12px 0; background:#f1f5fa; font-size:17px; line-height:1.6; }
-
-.cena-trecho { position:relative; padding:20px; border:1px solid var(--borda); border-radius:17px; background:#fff; box-shadow:0 4px 14px rgba(34,47,76,.06); text-align:center; transition:transform .3s ease, opacity .3s ease; }
-.cena-trecho__selo { display:inline-block; margin-bottom:10px; padding:5px 9px; border-radius:99px; color:var(--fraco); background:#f1f4f9; font-size:11px; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
-.cena-trecho__texto { max-width:620px; margin:0 auto; color:var(--texto); font-size:clamp(20px,3.2vw,27px); font-weight:750; line-height:1.4; }
+.artefato__peca { dis…461 tokens truncated…; }
 .cena-trecho--aceita { border-color:var(--ok); background:var(--ok-claro); transform:translateY(-6px); }
 .cena-trecho--recusada { border-color:var(--fraco); opacity:.5; transform:rotate(-1.5deg) scale(.95); }
 .decisoes--cartaz { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px; }
@@ -392,6 +381,12 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
   .body--home .hero__arte { width:100%; height:auto; aspect-ratio:1693/929; object-fit:contain; }
   .body--home .continuar { width:calc(100% - 22px); margin-top:-61px; }
   .body--home .continuar__ico, .body--home .continuar__detalhe { display:none; }
+  .body--home .grade-disciplinas {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    overflow-x:visible;
+  }
+  .body--home .disc-card:last-child { grid-column:1 / -1; }
   .secao__titulo { margin-top:30px; }
   .disc-card { min-height:72px; padding:12px; border-radius:14px; }
   .disc-card__nome { font-size:15px; }
@@ -428,3 +423,4 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
   .resumo-dominio li { align-items:flex-start; flex-direction:column; gap:2px; }
 }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto !important; animation:none !important; transition:none !important; } }
+
