@@ -11,7 +11,7 @@ const EXPERIENCE_PROFILES = {
   ],
   lp19: [
     { mode:'origins', pilot:'origins', scene:'assets/games/piloto-lp19-origens.webp', goal:'Descobrir palavras que indicam origem', prompt:'Complete o passaporte de cada lugar.', result:'mapa de origens' },
-    { mode:'scenario', goal:'Investigar quem está contando', prompt:'A pessoa fala de si ou de outra pessoa?', result:'arquivo' }
+    { mode:'lifearchive', pilot:'lifearchive', scene:'assets/games/piloto-lp19-narrador.webp', goal:'Investigar quem está contando', prompt:'Arquive o trecho conforme quem conta a história.', result:'arquivo de memórias' }
   ],
   lp20: [
     { mode:'wordrepair', pilot:'wordrepair', scene:'assets/games/piloto-lp20-oficina-sz.webp', goal:'Consertar palavras incompletas', prompt:'Envie cada palavra para a letra que a completa.', result:'palavras consertadas' },
@@ -31,7 +31,7 @@ const EXPERIENCE_PROFILES = {
   ],
   mat10: [
     { mode:'clockwork', pilot:'clockwork', scene:'assets/games/piloto-mat10-relogios.webp', goal:'Ajustar o relógio para cada horário', prompt:'Encontre o horário equivalente na oficina.', result:'coleção de relógios' },
-    { mode:'choice', goal:'Consertar um painel de tempo', prompt:'Esta conversão está correta?', result:'painel' }
+    { mode:'timecheck', pilot:'timecheck', scene:'assets/games/piloto-mat10-conversoes.webp', goal:'Consertar um painel de tempo', prompt:'Teste cada conversão na oficina do tempo.', result:'painel de conversões' }
   ],
   mat11: [
     { mode:'sharing', pilot:'sharing', scene:'assets/games/piloto-mat11-divisao.webp', goal:'Repartir quantidades igualmente', prompt:'Reparta igualmente e escolha quanto fica em cada grupo.', result:'piquenique da divisão' },
@@ -43,7 +43,7 @@ const EXPERIENCE_PROFILES = {
   ],
   cie10: [
     { mode:'observatory', pilot:'observatory', scene:'assets/games/piloto-cie10-observatorio.webp', goal:'Criar um guia dos corpos celestes', prompt:'Envie cada corpo celeste para a descrição correta.', result:'guia espacial' },
-    { mode:'scenario', goal:'Simular os movimentos da Terra', prompt:'Qual movimento produz esse acontecimento?', result:'órbitas' }
+    { mode:'orbitsim', pilot:'orbitsim', scene:'assets/games/piloto-cie10-movimentos.webp', goal:'Simular os movimentos da Terra', prompt:'Envie cada pista para o movimento correto.', result:'simulador orbital' }
   ],
   cie11: [
     { mode:'moonlog', pilot:'moonlog', scene:'assets/games/piloto-cie11-lua.webp', goal:'Completar um diário de observação da Lua', prompt:'Registre a pista correta no diário lunar.', result:'diário lunar' },
@@ -55,7 +55,7 @@ const EXPERIENCE_PROFILES = {
   ],
   geo10: [
     { mode:'ruralurban', pilot:'ruralurban', scene:'assets/games/piloto-geo10-campo-cidade.webp', goal:'Comparar modos de vida', prompt:'Leve cada situação para o campo ou para a cidade.', result:'dois cotidianos' },
-    { mode:'explore', goal:'Montar um mapa de heranças culturais', prompt:'Qual herança está ligada a este grupo ou lugar?', result:'mapa cultural' }
+    { mode:'heritage', pilot:'heritage', scene:'assets/games/piloto-geo10-herancas.webp', goal:'Montar um mapa de heranças culturais', prompt:'Ligue cada herança à sua história de origem.', result:'museu das heranças' }
   ],
   geo11: [
     { mode:'pollutionlab', pilot:'pollutionlab', scene:'assets/games/piloto-geo11-poluicao.webp', goal:'Ajudar a cidade a identificar poluições', prompt:'Envie cada alerta ao monitor de poluição correto.', result:'central ambiental' },
@@ -67,7 +67,7 @@ const EXPERIENCE_PROFILES = {
   ],
   hist10: [
     { mode:'access', pilot:'access', scene:'assets/games/piloto-hist10-acessos.webp', goal:'Decidir como os espaços podem ser usados', prompt:'Entregue a chave de acesso correta para cada lugar.', result:'mapa de acesso' },
-    { mode:'explore', goal:'Montar o quadro de responsabilidades', prompt:'Quem realiza esta função no município?', result:'quadro cívico' }
+    { mode:'civiclab', pilot:'civiclab', scene:'assets/games/piloto-hist10-responsabilidades.webp', goal:'Montar o quadro de responsabilidades', prompt:'Encaminhe cada responsabilidade ao órgão ou direito correto.', result:'oficina cívica' }
   ],
   hist11: [
     { mode:'citycouncil', pilot:'citycouncil', scene:'assets/games/piloto-hist11-conselho.webp', goal:'Participar de um conselho da cidade', prompt:'Leve cada proposta para desafio ou solução.', result:'plano de melhorias' },

@@ -1,4 +1,4 @@
-const CACHE = 'estudos-3-ano-v19';
+const CACHE = 'estudos-3-ano-v20';
 const ARQUIVOS = [
   './', './index.html', './style.css', './data.js', './experiences.js',
   './pedagogy.js', './app.js', './manifest.webmanifest',
@@ -30,6 +30,9 @@ const ARQUIVOS = [
   ,'./assets/games/piloto-lp18-classes.webp','./assets/games/piloto-mat09-ideias.webp',
   './assets/games/piloto-cie09-agentes.webp','./assets/games/piloto-geo09-glossario.webp',
   './assets/games/piloto-hist09-servicos.webp'
+  ,'./assets/games/piloto-lp19-narrador.webp','./assets/games/piloto-mat10-conversoes.webp',
+  './assets/games/piloto-cie10-movimentos.webp','./assets/games/piloto-geo10-herancas.webp',
+  './assets/games/piloto-hist10-responsabilidades.webp'
 ];
 
 self.addEventListener('install', function (evento) {
