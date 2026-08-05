@@ -1,0 +1,136 @@
+{
+  "id": "mat10",
+  "module": 10,
+  "title": "Medidas de tempo, localização e deslocamento",
+  "theory": [
+    {
+      "h": "Instrumentos para medir o tempo",
+      "p": [
+        "Antes dos relógios atuais, a humanidade inventou outros instrumentos para medir o tempo: o <strong>relógio de água</strong> (ou clepsidra), o <strong>relógio de areia</strong> (ampulheta) e o <strong>relógio de sol</strong>.",
+        "Hoje usamos o <strong>relógio analógico</strong> (de ponteiros), o <strong>relógio digital</strong> e o <strong>cronômetro</strong>. Existem até relógios inteligentes, que se conectam ao celular e têm várias funções."
+      ]
+    },
+    {
+      "h": "As 24 horas do dia",
+      "p": [
+        "O dia tem 24 horas. Depois do meio-dia (12 h), o relógio digital continua contando: 13 h, 14 h, 15 h... Por isso, <strong>1 hora da tarde é o mesmo que 13 horas</strong>, 3 horas da tarde é 15 horas e 9 horas da noite é 21 horas.",
+        "Alguns relógios digitais dividem o dia em <strong>AM</strong> (antes do meio-dia) e <strong>PM</strong> (depois do meio-dia). Assim, 1:00 AM é de madrugada e 1:00 PM é 13 horas.",
+        "No relógio analógico, o mesmo horário aparece duas vezes por dia. Se o ponteiro marca 3 horas e já passou do meio-dia, sabemos que são 15 horas."
+      ]
+    },
+    {
+      "h": "Hora, minuto e segundo",
+      "p": [
+        "A hora, o minuto e o segundo são <strong>unidades padronizadas de medida de tempo</strong>: <strong>1 hora = 60 minutos</strong> e <strong>1 minuto = 60 segundos</strong>. Abreviamos: 1 h, 1 min e 1 s.",
+        "No relógio analógico, o ponteiro menor indica as horas, o maior indica os minutos e o mais fino, os segundos. Os números do mostrador formam 12 intervalos iguais, e cada intervalo vale 5 minutos, pois 5 × 12 = 60.",
+        "Exemplos de conversão: 2 horas = 120 minutos; 5 minutos = 300 segundos; 240 minutos = 4 horas; 180 segundos = 3 minutos."
+      ]
+    },
+    {
+      "h": "Localização",
+      "p": [
+        "Para localizar pessoas e objetos, usamos palavras como <strong>na frente, atrás, à direita, à esquerda, ao lado, perto e longe</strong>. Em uma sala de aula, por exemplo, podemos dizer quem senta na frente ou atrás de um colega, e quem está à direita ou à esquerda.",
+        "Atenção: a direita e a esquerda dependem de quem observa! O que está à sua direita pode estar à esquerda de quem está de frente para você.",
+        "Curiosidade: o <strong>CEP</strong> (Código de Endereçamento Postal) foi criado pelos Correios para orientar a entrega de correspondências no Brasil. Ele tem 8 algarismos que indicam região, sub-região, setor e outros detalhes do endereço."
+      ]
+    },
+    {
+      "h": "Trajetos e deslocamentos",
+      "p": [
+        "Um <strong>trajeto</strong> é o caminho percorrido de um ponto a outro. Podemos descrevê-lo com instruções como: siga em frente 3 quadras, vire à esquerda, ande mais 2 quadras.",
+        "Em uma malha quadriculada, podemos comparar trajetos contando os quadradinhos percorridos: o trajeto mais curto é o que passa por menos quadradinhos.",
+        "Também podemos localizar figuras na malha usando dois números: quanto andar <strong>para o lado</strong> e quanto <strong>subir</strong>. Sempre começamos a contar do zero."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "pairs",
+      "title": "Horários equivalentes",
+      "instructions": "Ligue cada horário da tarde/noite ao número de horas do relógio digital.",
+      "pairs": [
+        ["1 hora da tarde", "13 h"],
+        ["3 horas da tarde", "15 h"],
+        ["7 horas da noite", "19 h"],
+        ["9 horas da noite", "21 h"],
+        ["Meia-noite", "24 h"],
+        ["Meio-dia", "12 h"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Conversões de tempo",
+      "instructions": "Arraste cada conversão para o grupo certo: verdadeira ou falsa.",
+      "categories": ["Verdadeira", "Falsa"],
+      "items": [
+        { "text": "1 hora = 60 minutos", "cat": 0 },
+        { "text": "2 horas = 120 minutos", "cat": 0 },
+        { "text": "1 minuto = 100 segundos", "cat": 1 },
+        { "text": "240 minutos = 4 horas", "cat": 0 },
+        { "text": "180 segundos = 2 minutos", "cat": 1 },
+        { "text": "5 minutos = 300 segundos", "cat": 0 }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Um menino acorda com o sol nascendo e o galo cantando. O relógio dele mostra o ponteiro pequeno entre o 5 e o 6 e o ponteiro grande no 2. Que horas são?",
+      "options": ["2 horas e 25 minutos", "5 horas e 2 minutos", "5 horas e 10 minutos", "6 horas e 10 minutos"],
+      "answer": 2,
+      "explain": "O ponteiro pequeno (horas) passou do 5, então são 5 horas e alguma coisa. O ponteiro grande (minutos) no 2 indica 2 × 5 = 10 minutos. Logo, 5 h 10 min — bem cedinho, hora de o galo cantar!"
+    },
+    {
+      "type": "mc",
+      "q": "Os ônibus saem da rodoviária de 2 em 2 horas, a partir das 8 da manhã. Caio vai embarcar ao meio-dia. Qual é o horário de saída do próximo ônibus depois do que Caio pegou?",
+      "options": ["2 horas", "10 horas", "13 horas", "14 horas"],
+      "answer": 3,
+      "explain": "Os horários são 8 h, 10 h, 12 h, 14 h... Caio embarca no das 12 h (meio-dia). O próximo sai 2 horas depois: às 14 horas."
+    },
+    {
+      "type": "text",
+      "q": "Complete: 2 horas equivalem a quantos minutos? (escreva o número)",
+      "answers": ["120", "cento e vinte"],
+      "explain": "1 hora tem 60 minutos. Então 2 horas = 2 × 60 = 120 minutos."
+    },
+    {
+      "type": "text",
+      "q": "Complete: 5 minutos equivalem a quantos segundos? (escreva o número)",
+      "answers": ["300", "trezentos"],
+      "explain": "1 minuto tem 60 segundos. Então 5 minutos = 5 × 60 = 300 segundos."
+    },
+    {
+      "type": "mc",
+      "q": "Quatorze horas (14 h) é o mesmo que:",
+      "options": ["2 horas da tarde", "4 horas da tarde", "2 horas da madrugada", "4 horas da manhã"],
+      "answer": 0,
+      "explain": "Depois do meio-dia (12 h), continuamos contando: 13 h = 1 da tarde, 14 h = 2 da tarde. Basta subtrair 12: 14 − 12 = 2."
+    },
+    {
+      "type": "text",
+      "q": "Meia-noite é o mesmo que quantas horas no relógio de 24 horas? (escreva o número)",
+      "answers": ["24", "24 horas", "vinte e quatro", "0", "24h"],
+      "explain": "A meia-noite marca o fim do dia (24 h) e também o começo do dia seguinte (0 h). As duas respostas estão certas!"
+    },
+    {
+      "type": "mc",
+      "q": "No relógio analógico, cada intervalo entre dois números vale 5 minutos. Por quê?",
+      "options": ["Porque o relógio tem 5 ponteiros", "Porque 5 × 12 = 60, o total de minutos de uma volta", "Porque a hora tem 5 minutos", "Porque o ponteiro anda de 10 em 10"],
+      "answer": 1,
+      "explain": "O mostrador tem 12 números formando 12 intervalos iguais. Como uma volta completa do ponteiro dos minutos dura 60 minutos, cada intervalo vale 60 ÷ 12 = 5 minutos (5 × 12 = 60)."
+    },
+    {
+      "type": "mc",
+      "q": "Vivian saiu de um ponto, seguiu em frente por 3 quadras, virou à esquerda e percorreu mais 2 quadras. Para descrever esse caminho usamos palavras de:",
+      "options": ["Medidas de tempo", "Localização e deslocamento", "Multiplicação", "Medidas de massa"],
+      "answer": 1,
+      "explain": "Instruções como 'siga em frente', 'vire à esquerda' e 'ande 2 quadras' descrevem um trajeto — isso é localização e deslocamento no espaço."
+    },
+    {
+      "type": "text",
+      "q": "O ponteiro menor do relógio analógico indica os minutos ou as horas?",
+      "answers": ["horas", "as horas", "hora", "a hora"],
+      "explain": "O ponteiro menor (mais curto) indica as horas; o maior indica os minutos; e o mais fininho e rápido indica os segundos."
+    }
+  ]
+}

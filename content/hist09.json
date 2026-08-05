@@ -1,0 +1,136 @@
+{
+  "id": "hist09",
+  "module": 9,
+  "title": "Dividindo espaços em comunidade",
+  "theory": [
+    {
+      "h": "A cidade é feita de espaços compartilhados",
+      "p": [
+        "As cidades são formadas por diferentes espaços: ruas, casas, prédios, praças e parques. Nesses lugares convivemos com pessoas que não fazem parte da nossa família e que, em geral, nem conhecemos.",
+        "Para uma cidade existir, é preciso garantir que as necessidades dos habitantes sejam atendidas: moradia, água potável e saneamento básico, entre outras. Algumas cidades são <strong>planejadas</strong>, ou seja, pensadas com antecedência: onde ficará o governo? Onde as pessoas vão se encontrar para cerimônias religiosas? Onde vão se reunir para o lazer?"
+      ]
+    },
+    {
+      "h": "Da praça grega à democracia",
+      "p": [
+        "Na Antiguidade, os gregos se reuniam em <strong>praças públicas</strong> para discutir política. Mais tarde, essa prática deu origem à <strong>democracia</strong>: um governo em que os cidadãos se reúnem para tomar decisões e propor melhorias para a vida coletiva.",
+        "Foi o uso dessas praças que fez surgir as ideias de <strong>público</strong> e <strong>privado</strong>."
+      ]
+    },
+    {
+      "h": "Espaço público",
+      "p": [
+        "<strong>Público</strong> é aquilo que pertence à comunidade. Escolas e faculdades públicas, hospitais, parques, praias, teatros, ruas e o transporte público (ônibus, trens e metrôs) são espaços pensados para uso coletivo — toda a população pode utilizá-los.",
+        "O espaço público é de cuidado do governo <strong>e de todos os cidadãos</strong>. Hoje, a população também se reúne nas ruas para pedir mudanças e melhorias ao governo: as ruas servem para o trânsito e também para exercer nossos direitos políticos."
+      ]
+    },
+    {
+      "h": "Espaço privado",
+      "p": [
+        "O que é <strong>privado</strong> não pertence a todas as pessoas. Em geral, há acordos ou condições financeiras necessárias para usar esses lugares: sua casa, algumas escolas, faculdades, hospitais e clubes.",
+        "Esses espaços têm <strong>proprietários</strong>, e para acessá-los é preciso seguir as normas e regras estabelecidas por eles. Em casa, é comum que a família crie regras para preservar os espaços e manter a harmonia — e essas regras valem também para as visitas."
+      ]
+    },
+    {
+      "h": "Museus e bibliotecas: conhecimento aberto",
+      "p": [
+        "Além do lazer, há espaços públicos importantes para a educação e para a divulgação de conhecimentos históricos e culturais. <strong>Museus e bibliotecas</strong> contam parte da história das comunidades e garantem acesso ao conhecimento.",
+        "Dois exemplos: o <strong>Real Gabinete Português de Leitura</strong>, no Rio de Janeiro (RJ), fundado em 1837, e o <strong>Museu da Inconfidência</strong>, em Ouro Preto (MG), que ajuda a preservar a memória do passado brasileiro."
+      ]
+    },
+    {
+      "h": "A cidade é nossa — e tem regras",
+      "p": [
+        "Dizer que um espaço é público não significa que podemos fazer o que quisermos nele. Os espaços públicos têm <strong>regras</strong> criadas para assegurar a boa convivência entre pessoas diferentes, além de garantir a preservação do local e a segurança de todos. Ao seguir essas regras, exercemos a <strong>cidadania</strong>.",
+        "Algumas atitudes para cuidar do bairro: não jogar lixo nas ruas; participar da coleta seletiva separando o lixo em casa; regar as plantas dos jardins e cuidar das árvores; recolher o cocô do cachorro no passeio; cobrar e acompanhar as ações dos políticos.",
+        "Destruir patrimônio público — deteriorar, quebrar ou inutilizar — é <strong>crime previsto em lei</strong>, com pena de 6 meses a 1 ano de prisão. Isso acontece porque, ao consertar o que foi destruído, o governo gasta um dinheiro que poderia ser usado para o bem da população. No Rio de Janeiro, por exemplo, depredações já custaram mais de R$ 220 milhões."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Público ou privado?",
+      "instructions": "Arraste cada lugar para a coluna certa.",
+      "categories": ["Espaço público", "Espaço privado"],
+      "items": [
+        { "text": "Praça da cidade", "cat": 0 },
+        { "text": "Sua casa", "cat": 1 },
+        { "text": "Hospital municipal", "cat": 0 },
+        { "text": "Clube com mensalidade", "cat": 1 },
+        { "text": "Praia", "cat": 0 },
+        { "text": "Rua e transporte público", "cat": 0 },
+        { "text": "Escola particular", "cat": 1 },
+        { "text": "Biblioteca pública", "cat": 0 }
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Cada espaço e sua função",
+      "instructions": "Ligue o lugar à função que ele cumpre na cidade.",
+      "pairs": [
+        ["Museu", "Preserva a memória e a história"],
+        ["Biblioteca", "Garante acesso ao conhecimento"],
+        ["Praça", "Lazer e encontro da comunidade"],
+        ["Prefeitura", "Sede do governo do município"],
+        ["Hospital", "Cuida da saúde da população"],
+        ["Ônibus e metrô", "Transporte público coletivo"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Observando a ilustração de uma cidade com hospital municipal, escola municipal, banco, mercado, praça e casas, é possível afirmar que:",
+      "options": ["há apenas um espaço público, o hospital municipal", "há apenas um espaço privado, o banco", "há espaços públicos, como o hospital, a escola e a praça", "há espaços privados, como as casas e a praça"],
+      "answer": 2,
+      "explain": "Hospital municipal, escola municipal e praça são mantidos pelo poder público e abertos a toda a população — são espaços públicos. A praça nunca é privada, e o banco não é o único espaço privado da cena (as casas também são)."
+    },
+    {
+      "type": "mc",
+      "q": "Por que uma praia como a de São Conrado, no Rio de Janeiro, é um espaço público?",
+      "options": ["Porque poucas pessoas a frequentam", "Porque pertence a todos os brasileiros", "Porque não pode ser frequentada por estrangeiros", "Porque pode ser frequentada por quem pagar pelo acesso"],
+      "answer": 1,
+      "explain": "No Brasil, todas as praias são bens públicos: pertencem à coletividade e ninguém pode cobrar pelo acesso nem impedir a entrada de qualquer pessoa, brasileira ou estrangeira."
+    },
+    {
+      "type": "mc",
+      "q": "Entre as imagens de um hospital municipal, uma rua, um museu e uma casa, qual representa um espaço PRIVADO?",
+      "options": ["O hospital municipal", "A rua", "O museu", "A casa"],
+      "answer": 3,
+      "explain": "A casa tem proprietários e o acesso depende da autorização deles. Hospital municipal, rua e museu são espaços de uso coletivo, mantidos com dinheiro público."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama o governo em que os cidadãos se reúnem para tomar decisões e propor melhorias para a vida coletiva — prática que nasceu nas praças da Grécia Antiga?",
+      "answers": ["democracia", "a democracia"],
+      "explain": "É a democracia. Nas praças públicas da Grécia Antiga os cidadãos debatiam política, e essa prática deu origem à forma de governo que usamos até hoje."
+    },
+    {
+      "type": "text",
+      "q": "Destruir, quebrar ou deteriorar um patrimônio público é considerado o quê pela lei brasileira?",
+      "answers": ["crime", "e crime", "um crime", "crime previsto em lei"],
+      "explain": "É crime previsto em lei, com pena de 6 meses a 1 ano de prisão. O prejuízo é de todos: o dinheiro gasto no conserto deixa de ser usado em melhorias para a população."
+    },
+    {
+      "type": "mc",
+      "q": "Qual atitude NÃO ajuda a cuidar dos espaços públicos da cidade?",
+      "options": ["Separar o lixo em casa para a coleta seletiva", "Deixar o lixo do lanche no banco da praça", "Recolher o cocô do cachorro durante o passeio", "Acompanhar e cobrar as ações dos políticos"],
+      "answer": 1,
+      "explain": "Deixar lixo na praça transfere para outra pessoa um trabalho que era seu e degrada um espaço que pertence a todos. As outras três atitudes são exemplos de exercício da cidadania."
+    },
+    {
+      "type": "mc",
+      "q": "O Real Gabinete Português de Leitura (RJ, 1837) e o Museu da Inconfidência (Ouro Preto, MG) são exemplos de espaços públicos ligados principalmente a:",
+      "options": ["Esporte e competição", "Educação, cultura e memória", "Comércio e serviços bancários", "Moradia da população"],
+      "answer": 1,
+      "explain": "Bibliotecas e museus contam parte da história das comunidades, preservam a memória do passado e garantem acesso ao conhecimento."
+    },
+    {
+      "type": "text",
+      "q": "Ao seguir as regras de convivência dos espaços públicos, estamos exercendo o quê?",
+      "answers": ["cidadania", "a cidadania", "cidadania.", "exercendo a cidadania"],
+      "explain": "Estamos exercendo a cidadania: convivendo em harmonia com a sociedade, respeitando as regras que garantem a segurança e a preservação dos lugares que são de todos."
+    }
+  ]
+}

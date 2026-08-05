@@ -1,0 +1,143 @@
+{
+  "id": "hist10",
+  "module": 10,
+  "title": "Espaços públicos e privados",
+  "theory": [
+    {
+      "h": "Quando a fronteira não é tão clara",
+      "p": [
+        "Já sabemos que espaços <strong>privados</strong> têm dono (como uma loja) e espaços <strong>públicos</strong> são administrados pelo governo e todos têm direito de frequentar. Mas em alguns casos é difícil diferenciar um do outro — e isso acontece por causa dos <strong>usos</strong> que fazemos desses espaços.",
+        "Um bar ou restaurante é privado, pois tem dono, mas é frequentado por muita gente. As ruas e calçadas são públicas, onde todos podem circular livremente. Às vezes esses limites entram em conflito: mesas de bar, lixeiras, postes e patinetes espalhados podem impedir a livre circulação dos pedestres pelas calçadas."
+      ]
+    },
+    {
+      "h": "Espaços públicos de acesso restrito",
+      "p": [
+        "Existem espaços públicos com <strong>regras para serem frequentados</strong>. Uma praça pode ser frequentada por todas as pessoas, sem restrição. Já uma <strong>creche</strong> só pode ser frequentada por funcionários, pelas crianças matriculadas e por seus responsáveis.",
+        "O mesmo vale para quase todos os prédios públicos: a Câmara dos Vereadores, a Prefeitura, os Correios e as escolas são espaços públicos, mas têm horário de funcionamento e regras de acesso. Dentro da escola há ainda restrições a certos espaços, como a sala dos professores."
+      ]
+    },
+    {
+      "h": "Espaços privados de uso público",
+      "p": [
+        "Em compensação, existem espaços <strong>privados que podem ser frequentados por qualquer pessoa</strong> em seu horário de funcionamento, porque qualquer um pode ser cliente: mercados, lojas, bares e <em>shopping centers</em>.",
+        "Nem sempre, porém, as pessoas conseguem circular livremente. Um motivo é a <strong>discriminação</strong>: o Brasil tem grande desigualdade econômica, e em locais frequentados por classes sociais altas, pessoas de classes mais baixas podem não se sentir bem-vindas. Outro é a <strong>falta de acesso a meios de locomoção</strong> e a falta de acessibilidade (calçadas esburacadas, ausência de rampas)."
+      ]
+    },
+    {
+      "h": "Serviços públicos e privados",
+      "p": [
+        "Os serviços também podem ser públicos ou privados. Os governos são responsáveis por serviços fundamentais — como <strong>saúde e educação</strong> —, que não têm dono e podem ser usados por todos sem pagar. É por isso que existem escolas e hospitais públicos, além do <strong>SUS</strong>, responsável pelas campanhas de vacinação em todo o território brasileiro.",
+        "No transporte, empresas privadas com autorização do governo administram ônibus, trens e metrôs: são <strong>transportes públicos</strong>, mas é preciso pagar a passagem. Já o táxi é um transporte <strong>privado de uso público</strong>. Idosos (acima de 60 anos), estudantes da rede pública e pessoas com deficiência não pagam passagem; e em quase 100 cidades brasileiras já existe o <strong>passe-livre pleno</strong>, sem cobrança para ninguém."
+      ]
+    },
+    {
+      "h": "A Constituição garante direitos",
+      "p": [
+        "A <strong>Constituição</strong> é o conjunto das principais leis de um país. A brasileira foi publicada em <strong>1988</strong> e precisa ser respeitada por todos: governo e população.",
+        "O <strong>Artigo 205</strong> garante que a educação é direito de todos e dever do Estado e da família. O <strong>Artigo 196</strong> garante que a saúde é direito de todos e dever do Estado."
+      ]
+    },
+    {
+      "h": "Quem administra o município",
+      "p": [
+        "A administração pública da cidade é responsabilidade do <strong>prefeito</strong> e dos <strong>vereadores</strong>, eleitos a cada quatro anos por voto direto. São os políticos mais próximos da população, e é dever dos cidadãos fiscalizar o trabalho deles.",
+        "O <strong>prefeito</strong> cuida do patrimônio histórico e cultural, da limpeza da cidade e do saneamento básico. É responsabilidade da Prefeitura a educação básica (das creches ao Ensino Fundamental) e o primeiro atendimento de saúde, feito nos postos da rede municipal. O prefeito deve usar o dinheiro público, arrecadado pelos impostos, em benefício da população.",
+        "A <strong>Câmara Municipal</strong> é o espaço público onde as leis da cidade são elaboradas, propostas e votadas pelos vereadores, que também fiscalizam o prefeito. A quantidade de vereadores depende do tamanho da cidade: Borá, a menor do Brasil, tem 9; São Paulo, a maior, tem 55. As sessões são públicas e todo cidadão pode participar."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Classifique o espaço",
+      "instructions": "Nem tudo é só público ou privado. Arraste cada exemplo para a categoria certa.",
+      "categories": ["Público de acesso livre", "Público de acesso restrito", "Privado de uso público"],
+      "items": [
+        { "text": "Praça da cidade", "cat": 0 },
+        { "text": "Creche municipal", "cat": 1 },
+        { "text": "Shopping center", "cat": 2 },
+        { "text": "Rua e calçada", "cat": 0 },
+        { "text": "Câmara dos Vereadores", "cat": 1 },
+        { "text": "Supermercado", "cat": 2 },
+        { "text": "Praia", "cat": 0 },
+        { "text": "Sala dos professores", "cat": 1 }
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Quem faz o quê no município",
+      "instructions": "Ligue cada responsabilidade a quem cumpre.",
+      "pairs": [
+        ["Artigo 205 da Constituição", "Garante educação para todos"],
+        ["Artigo 196 da Constituição", "Garante saúde para todos"],
+        ["Vereadores", "Fazem as leis e fiscalizam o prefeito"],
+        ["Prefeito", "Administra a cidade e o dinheiro público"],
+        ["SUS", "Campanhas de vacinação no país todo"],
+        ["Câmara Municipal", "Onde as leis da cidade são votadas"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "O Colégio Pedro II, no Rio de Janeiro, é o colégio público mais antigo do Brasil. A única alternativa correta é:",
+      "options": ["Todas as escolas do Brasil são públicas, como o Colégio Pedro II", "Todas as escolas do Brasil são privadas, pois o governo não as administra", "Algumas escolas brasileiras são privadas, ou seja, administradas pelo governo", "O Colégio Pedro II é um colégio público, ou seja, de responsabilidade do governo"],
+      "answer": 3,
+      "explain": "No Brasil existem escolas públicas e privadas. Escola privada é a que tem dono particular — não a administrada pelo governo, o que torna a alternativa C errada por definição."
+    },
+    {
+      "type": "mc",
+      "q": "Ônibus, trens e metrôs são exemplos de transportes:",
+      "options": ["públicos e gratuitos em todas as cidades do Brasil", "privados e, como a passagem é cara, usados por poucas pessoas", "privados, mas o governo paga a passagem de quem precisa", "públicos, mas quem faz uso deve pagar o valor de uma passagem"],
+      "answer": 3,
+      "explain": "São transportes públicos administrados por empresas autorizadas pelo governo, que cobram passagem. A gratuidade total (passe-livre pleno) existe em cerca de 100 cidades, não em todas."
+    },
+    {
+      "type": "mc",
+      "q": "São exemplos de espaços públicos:",
+      "options": ["praças e parques", "mercados e lojas", "clubes e praias", "praias e shopping centers"],
+      "answer": 0,
+      "explain": "Praças e parques pertencem à população e são administrados pelo governo. Mercados, lojas, clubes e shoppings têm donos — são privados, ainda que alguns sejam de uso público."
+    },
+    {
+      "type": "mc",
+      "q": "Um homem surdo foi impedido de entrar em um supermercado porque usava máscara transparente, necessária para a leitura labial. Sobre essa situação, é correto afirmar:",
+      "options": ["O mercado é público e por isso pode criar qualquer regra", "O mercado é privado de uso público, e a regra acabou excluindo uma pessoa com deficiência", "Nenhuma pessoa pode ser cliente de um espaço privado", "Espaços privados não precisam respeitar a Constituição"],
+      "answer": 1,
+      "explain": "Mercados são espaços privados de uso público: qualquer pessoa pode ser cliente. A regra aplicada sem considerar a deficiência gerou exclusão — ele mesmo disse que se sentiu excluído."
+    },
+    {
+      "type": "text",
+      "q": "Em que ano foi publicada a Constituição brasileira, o conjunto das principais leis do país?",
+      "answers": ["1988", "em 1988"],
+      "explain": "A Constituição da República Federativa do Brasil foi publicada em 1988 e deve ser respeitada por todos: governo e população."
+    },
+    {
+      "type": "text",
+      "q": "Quem são os políticos responsáveis por elaborar e votar as leis da cidade na Câmara Municipal?",
+      "answers": ["vereadores", "os vereadores", "vereador"],
+      "explain": "Os vereadores fazem as leis do município e fiscalizam o trabalho do prefeito. São eleitos por voto direto a cada quatro anos."
+    },
+    {
+      "type": "mc",
+      "q": "Qual afirmação sobre a administração do município é FALSA?",
+      "options": ["Os vereadores devem fazer as leis da cidade", "O prefeito tem como responsabilidade garantir universidades públicas", "O primeiro atendimento do paciente é responsabilidade da Prefeitura", "O prefeito deve cuidar do patrimônio histórico da cidade"],
+      "answer": 1,
+      "explain": "As universidades públicas são responsabilidade dos governos federal e estadual, não da Prefeitura. Ao município cabem a educação básica (creches ao Ensino Fundamental) e o primeiro atendimento de saúde."
+    },
+    {
+      "type": "text",
+      "q": "Uma creche municipal é um espaço público, mas só pode ser frequentada por funcionários, crianças matriculadas e responsáveis. Como chamamos esse tipo de espaço público, que tem regras de entrada?",
+      "answers": ["publico de acesso restrito", "espaco publico de acesso restrito", "acesso restrito", "de acesso restrito", "restrito"],
+      "explain": "É um espaço público de acesso restrito: pertence à população e é mantido pelo governo, mas existem regras de segurança que limitam quem pode circular ali."
+    },
+    {
+      "type": "mc",
+      "q": "Por que as ruas de centros históricos, com escadarias e calçadas irregulares, nem sempre são espaços 'para todos'?",
+      "options": ["Porque são espaços privados", "Porque falta acessibilidade, impedindo a circulação de parte das pessoas", "Porque só moradores podem entrar", "Porque é preciso pagar para circular"],
+      "answer": 1,
+      "explain": "São espaços públicos, mas buracos, escadarias e ausência de rampas impedem que idosos, pessoas com deficiência e famílias com carrinhos circulem. Sem acessibilidade, o espaço não é efetivamente de todos."
+    }
+  ]
+}

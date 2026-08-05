@@ -1,0 +1,141 @@
+{
+  "id": "cie11",
+  "module": 11,
+  "title": "Observando o céu noturno",
+  "theory": [
+    {
+      "h": "Astros visíveis durante a noite",
+      "p": [
+        "No céu noturno, além de estrelas e da Lua, podemos observar nuvens e outros astros: <strong>planetas</strong> (corpos celestes que orbitam o Sol) e <strong>cometas</strong> (que, ao se aproximarem do Sol, podem apresentar uma cauda brilhante visível da Terra). Numa mesma noite é possível ver a Lua ao lado de Júpiter e Vênus.",
+        "Ao observar as estrelas e a Lua com atenção, notamos que elas parecem se movimentar no céu. Do Brasil, esse movimento é percebido no sentido <strong>leste-oeste</strong>. É o <strong>movimento aparente</strong>: na verdade quem se movimenta é a Terra, em seu movimento de rotação.",
+        "Alguns fatores atrapalham a observação do céu noturno: a presença de nuvens, a chuva e outros fenômenos atmosféricos, como a neblina e os raios."
+      ]
+    },
+    {
+      "h": "Por que as estrelas só aparecem à noite?",
+      "p": [
+        "As estrelas <strong>não brilham apenas à noite</strong> — elas brilham o tempo inteiro. Só conseguimos enxergá-las depois que o Sol se põe porque, durante o dia, a luz solar se espalha pela atmosfera e impede que vejamos o que acontece no espaço.",
+        "O Sol é a única estrela que vemos no céu durante o dia. Lembre-se: <strong>nunca olhe diretamente para o Sol</strong>, isso pode causar sérios danos aos seus olhos!",
+        "E por que as estrelas brilham? Elas são <strong>esferas de gás quente</strong>. Próximo ao centro delas a temperatura é altíssima, o que faz o gás que as compõe se transformar em outro. Esse processo gera energia em forma de <strong>calor e luz</strong> — e é essa a razão do brilho das estrelas."
+      ]
+    },
+    {
+      "h": "A Lua e suas fases",
+      "p": [
+        "A Lua é o único <strong>satélite natural</strong> da Terra. Satélites naturais são corpos celestes que orbitam um planeta ou outro astro; não têm luz própria e são menores que os planetas. Na Lua não há água nem seres vivos, e sua atmosfera é diferente da terrestre.",
+        "A aparência da Lua varia ao longo de um mês. Essas diferentes aparências são as <strong>fases da Lua</strong>, e cada uma dura cerca de <strong>sete dias</strong>. A Lua é iluminada pelo Sol e sua posição não é fixa — ela se movimenta. Assim, a região iluminada visível da Terra muda conforme a posição dela em relação ao Sol e à Terra.",
+        "<strong>Lua cheia:</strong> a face da Lua está totalmente iluminada.",
+        "<strong>Lua minguante:</strong> apenas uma parte da face está iluminada, com aparência da letra <strong>D</strong> (vista do hemisfério sul).",
+        "<strong>Lua nova:</strong> não é visível no céu, pois a face voltada para nós não está iluminada pelo Sol.",
+        "<strong>Lua crescente:</strong> somente parte da face está iluminada, com aparência da letra <strong>C</strong>. A região iluminada é oposta à da fase minguante."
+      ]
+    },
+    {
+      "h": "Poluição atmosférica e luminosa",
+      "p": [
+        "Nos grandes centros urbanos, observar os astros não é tão fácil quanto em um local afastado, como uma fazenda. Isso acontece por causa da <strong>poluição atmosférica</strong>, causada pelo modo de vida nas grandes cidades: a liberação de fumaça por muitos automóveis e diversas indústrias.",
+        "Nas cidades também há <strong>poluição luminosa</strong>, que é o excesso de luzes artificiais. Principalmente nas vias públicas, ela atrapalha a visualização dos astros. Por isso, em regiões sem muita iluminação artificial é possível ver muito mais estrelas e corpos celestes do que nas cidades.",
+        "Uma solução equilibrada não é eliminar toda a luz artificial — que é necessária para a segurança —, mas <strong>reduzir as fontes de luz</strong> desnecessárias e direcioná-las melhor."
+      ]
+    },
+    {
+      "h": "As luzes do planeta vistas do espaço",
+      "p": [
+        "As regiões mais artificialmente iluminadas do planeta são, em geral, as mais <strong>urbanizadas</strong>. As cidades tendem a se desenvolver ao longo das costas (regiões próximas aos oceanos) e de redes de transporte. Por isso, na imagem noturna da Terra, o contorno de muitos continentes é visível.",
+        "Apesar de mais de um século desde a invenção da luz elétrica, algumas áreas permanecem pouco povoadas e, consequentemente, menos iluminadas: a <strong>Antártica</strong> é completamente escura; as selvas no interior da África e as florestas da América do Sul também são pouco iluminadas.",
+        "A diferença na distribuição das populações tem relação com a geografia de cada lugar, envolvendo fatores como o <strong>clima</strong> e o <strong>relevo</strong>. As populações procuram ocupar regiões de fácil acesso e clima favorável; onde essas condições não existem, a permanência das pessoas é mais difícil.",
+        "A observação dos astros sempre <strong>fascinou</strong> (encantou, atraiu) a humanidade — muitas histórias sobre o surgimento das estrelas foram criadas por povos antigos. Há cerca de cem anos, poderíamos olhar para o céu à noite e ver um espetáculo luminoso; hoje, muitas pessoas não conseguem observar os astros da cidade onde moram por causa da poluição luminosa."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "pairs",
+      "title": "As fases da Lua",
+      "instructions": "Ligue cada fase à sua descrição.",
+      "pairs": [
+        ["Lua cheia", "Face totalmente iluminada"],
+        ["Lua nova", "Não é visível no céu"],
+        ["Lua crescente", "Parte iluminada com formato de C"],
+        ["Lua minguante", "Parte iluminada com formato de D"],
+        ["Duração de cada fase", "Cerca de sete dias"],
+        ["Satélite natural", "Orbita um planeta e não tem luz própria"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Onde vejo mais estrelas?",
+      "instructions": "Arraste cada local ou situação para o grupo certo.",
+      "categories": ["Boa observação do céu", "Observação prejudicada"],
+      "items": [
+        { "text": "Fazenda sem iluminação artificial", "cat": 0 },
+        { "text": "Centro de uma cidade grande", "cat": 1 },
+        { "text": "Noite de céu limpo no campo", "cat": 0 },
+        { "text": "Avenida cheia de postes e letreiros", "cat": 1 },
+        { "text": "Região da Antártica, sem cidades", "cat": 0 },
+        { "text": "Cidade com muita fumaça de indústrias", "cat": 1 }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Marque a única alternativa VERDADEIRA:",
+      "options": ["O melhor momento para observar a lua cheia é durante o dia", "Conseguimos enxergar melhor as outras estrelas depois que o Sol se põe", "A poluição luminosa nos grandes centros urbanos não atrapalha a observação do céu noturno", "A poluição atmosférica não permite a visualização das estrelas durante o dia"],
+      "answer": 1,
+      "explain": "O que impede de ver as estrelas durante o dia é a luz do Sol se espalhando pela atmosfera, não a poluição. Por isso, depois que o Sol se põe, elas se tornam visíveis."
+    },
+    {
+      "type": "mc",
+      "q": "Qual das seguintes afirmações sobre a poluição luminosa é verdadeira?",
+      "options": ["A poluição luminosa não afeta os animais", "A poluição luminosa só ocorre em grandes cidades", "A poluição luminosa pode dificultar a observação de estrelas e planetas", "A poluição luminosa é causada apenas por lâmpadas incandescentes"],
+      "answer": 2,
+      "explain": "A poluição luminosa é o excesso de luzes artificiais e atrapalha a visualização dos astros. Ela também afeta os animais, ocorre em qualquer local iluminado artificialmente e vem de todo tipo de lâmpada."
+    },
+    {
+      "type": "mc",
+      "q": "Em qual dos locais a seguir você teria a melhor chance de observar as estrelas no céu?",
+      "options": ["Um parque de diversões em ambiente urbano", "Uma praia durante o dia", "Um local sem iluminação artificial", "O centro de uma cidade grande"],
+      "answer": 2,
+      "explain": "Sem iluminação artificial não há poluição luminosa competindo com a luz das estrelas. Parques de diversões e centros urbanos são cheios de luzes, e de dia a luz do Sol ofusca tudo."
+    },
+    {
+      "type": "mc",
+      "q": "Indique a alternativa que traz uma solução EQUILIBRADA para a poluição luminosa nas grandes cidades.",
+      "options": ["Eliminar todas as fontes de luz artificial", "Usar apenas a luz natural do dia", "Reduzir as fontes de luz artificial, mas não eliminá-las", "Usar apenas velas durante a noite"],
+      "answer": 2,
+      "explain": "A iluminação pública é necessária para a segurança das pessoas. A solução equilibrada é reduzir e direcionar melhor as luzes desnecessárias — não apagar a cidade inteira."
+    },
+    {
+      "type": "text",
+      "q": "Em qual fase a Lua não é visível no céu, porque a face voltada para nós não está iluminada pelo Sol?",
+      "answers": ["lua nova", "nova", "a lua nova", "fase nova"],
+      "explain": "É a lua nova. Nessa fase a Lua fica entre o Sol e a Terra, e a face iluminada é a que está voltada para o lado oposto ao nosso."
+    },
+    {
+      "type": "text",
+      "q": "Quantos dias dura aproximadamente cada fase da Lua? (escreva o número)",
+      "answers": ["7", "sete", "7 dias", "sete dias"],
+      "explain": "Cada fase dura cerca de sete dias. As quatro fases juntas — nova, crescente, cheia e minguante — completam aproximadamente um mês."
+    },
+    {
+      "type": "text",
+      "q": "Por que as estrelas brilham? Complete: elas são esferas de ______ quente, e o processo que ocorre no centro delas gera energia em forma de calor e luz.",
+      "answers": ["gas", "gases", "gas quente"],
+      "explain": "As estrelas são esferas de gás quente. Perto do centro a temperatura é altíssima, o que transforma o gás em outro e libera energia como calor e luz."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama o único satélite natural da Terra?",
+      "answers": ["lua", "a lua"],
+      "explain": "É a Lua. Satélites naturais orbitam um planeta, não têm luz própria e são menores que os planetas. Na Lua não há água nem seres vivos."
+    },
+    {
+      "type": "mc",
+      "q": "Na imagem noturna da Terra vista do espaço, por que a Antártica aparece completamente escura?",
+      "options": ["Porque lá é sempre noite", "Porque é uma região pouco povoada, com clima e relevo que dificultam a permanência humana", "Porque a luz elétrica ainda não chegou àquele continente", "Porque a poluição atmosférica esconde as luzes"],
+      "answer": 1,
+      "explain": "As regiões mais iluminadas são as mais urbanizadas. As populações ocupam lugares de fácil acesso e clima favorável — condições que a Antártica não oferece, por isso permanece quase sem ocupação."
+    }
+  ]
+}

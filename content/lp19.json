@@ -1,0 +1,141 @@
+{
+  "id": "lp19",
+  "module": 19,
+  "title": "Voando alto",
+  "subtitle": "Biografia · Adjetivo pátrio · Sufixos -ês/-esa",
+  "theory": [
+    {
+      "h": "O gênero biografia",
+      "p": [
+        "A <strong>biografia</strong> é composta dos fatos mais marcantes que ocorreram na vida de uma pessoa, a começar pelo nascimento. Geralmente os fatos são apresentados na sequência em que ocorreram, ou seja, em <strong>ordem cronológica</strong>.",
+        "O texto da biografia é escrito em <strong>3ª pessoa</strong> — quem escreve fala sobre outra pessoa (<em>\"ele nasceu\", \"ela mudou-se\"</em>). Quando alguém escreve sobre a <strong>própria vida</strong>, em 1ª pessoa (<em>\"eu nasci\", \"tenho boas lembranças\"</em>), chamamos esse texto de <strong>autobiografia</strong>.",
+        "As informações de uma biografia são <strong>verdadeiras e reais</strong>, sobre fatos que já aconteceram — não são inventadas nem fictícias. Quem escreve biografias é o <strong>biógrafo</strong>."
+      ]
+    },
+    {
+      "h": "Quem foi Alberto Santos Dumont",
+      "p": [
+        "O inventor nasceu na fazenda de seus pais, onde hoje é a cidade de Santos Dumont, em <strong>Minas Gerais</strong>, em <strong>20 de julho de 1873</strong>. Desde a infância gostava de Matemática e de aprender sobre as máquinas da propriedade da família. Percebendo o gosto do filho, o pai o incentivou a estudar Física, Química, Mecânica e Eletricidade.",
+        "Em <strong>1892</strong> mudou-se para a França para concluir os estudos. Seis anos depois fez seu primeiro voo em um balão alugado. Em <strong>20 de setembro de 1898</strong> construiu um balão que voava mais rápido e podia ser controlado: o invento ganhou o nome de <strong>dirigível</strong>.",
+        "Com o passar dos anos criou mais balões e aeroplanos (tipo de avião) e venceu competições de voos, faturando vários prêmios. O <strong>feito</strong> (proeza, ação heroica) com o <strong>14-Bis</strong> rendeu-lhe a <strong>Taça Archdeacon</strong>, na França.",
+        "Realizou o último voo em <strong>18 de setembro de 1909</strong>. Em <strong>1910</strong> fechou sua oficina por problemas de saúde e, em <strong>1915</strong>, retornou ao Brasil. No mesmo ano participou de um <strong>congresso</strong> (reunião em que cientistas e estudiosos apresentam suas descobertas) defendendo o uso do avião como forma de facilitar o relacionamento entre os países.",
+        "Quando descobriu que sua invenção estava sendo usada na <strong>guerra</strong>, Santos Dumont ficou triste. Em janeiro de <strong>1926</strong> procurou a <strong>Liga das Nações</strong> (organização internacional que existiu entre 1919 e 1946) para impedir esse tipo de uso, mas o apelo não funcionou. Foi quando sua saúde piorou. Ele morreu aos <strong>59 anos, em 1932</strong>."
+      ]
+    },
+    {
+      "h": "O adjetivo pátrio",
+      "p": [
+        "Os <strong>adjetivos pátrios</strong> indicam o <strong>local de origem</strong> de alguém ou algo. Eles não indicam quantidade nem posição — apenas de onde a pessoa ou coisa vem. Podem se referir ao país, ao estado ou ao município.",
+        "Exemplos: quem nasce na Grécia é <strong>grego</strong> (país); quem nasce em Goiás é <strong>goiano</strong> (estado); quem nasce em Salvador é <strong>soteropolitano</strong> ou <strong>salvadorense</strong> (município).",
+        "Adjetivos pátrios dos estados brasileiros: Amazonas → <strong>amazonense</strong>; Minas Gerais → <strong>mineiro</strong>; São Paulo → <strong>paulista</strong>; Santa Catarina → <strong>catarinense</strong> ou <em>barriga-verde</em>; Pernambuco → <strong>pernambucano</strong>; Mato Grosso → <strong>mato-grossense</strong>; Amapá → <strong>amapaense</strong>; Ceará → <strong>cearense</strong>; Bahia → <strong>baiano</strong>; Pará → <strong>paraense</strong>; Rio Grande do Sul → <strong>gaúcho</strong>."
+      ]
+    },
+    {
+      "h": "Ortografia: os sufixos -ês e -esa",
+      "p": [
+        "Alguns adjetivos pátrios são formados com o acréscimo dos sufixos <strong>-ês</strong> ou <strong>-esa</strong>, que indicam \"originário de determinado lugar ou referente a ele\". Observe: referente a Portugal → menino <strong>português</strong> / língua <strong>portuguesa</strong>.",
+        "Outros exemplos: Holanda → <strong>holandês / holandesa</strong>; Japão → <strong>japonês / japonesa</strong>; China → <strong>chinês / chinesa</strong>; Escócia → <strong>escocês / escocesa</strong>; Noruega → <strong>norueguês / norueguesa</strong>; Dinamarca → <strong>dinamarquês / dinamarquesa</strong>; França → <strong>francês / francesa</strong>; Inglaterra → <strong>inglês / inglesa</strong>.",
+        "O par -ês/-esa também aparece em palavras que não são adjetivos pátrios: <em>marquês/marquesa</em>, <em>freguês/freguesa</em>, <em>camponês/camponesa</em>, <em>burguês/burguesa</em>.",
+        "<strong>Atenção!</strong> Alguns títulos de nobreza também são escritos com <strong>-esa</strong>, como <em>princesa</em>, <em>duquesa</em> e <em>baronesa</em>."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "pairs",
+      "title": "De onde vem?",
+      "instructions": "Ligue cada lugar ao seu adjetivo pátrio.",
+      "pairs": [
+        ["Minas Gerais", "mineiro"],
+        ["Amazonas", "amazonense"],
+        ["São Paulo", "paulista"],
+        ["Rio Grande do Sul", "gaúcho"],
+        ["Portugal", "português"],
+        ["Japão", "japonês"],
+        ["Grécia", "grego"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Biografia ou autobiografia?",
+      "instructions": "Arraste cada trecho para o gênero correspondente.",
+      "categories": ["Biografia (3ª pessoa)", "Autobiografia (1ª pessoa)"],
+      "items": [
+        { "text": "\"Eva Furnari nasceu em Roma, na Itália, em 1948.\"", "cat": 0 },
+        { "text": "\"Tenho boas lembranças da minha mãe nessa época.\"", "cat": 1 },
+        { "text": "\"O inventor nasceu na fazenda de seus pais.\"", "cat": 0 },
+        { "text": "\"Eu devia ter uns sete ou oito anos.\"", "cat": 1 },
+        { "text": "\"Ele morreu aos 59 anos, em 1932.\"", "cat": 0 },
+        { "text": "\"Desde criança eu gostava de desenhar.\"", "cat": 1 }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Leia a piada: '— O idioma francês é o mais interessante e útil. — Qual nada! Acho que é o idioma inglês. (...)'. Marque a alternativa correta.",
+      "options": ["No texto não há nenhum adjetivo pátrio", "Há somente um adjetivo pátrio no texto", "Aparecem dois adjetivos pátrios no texto", "No texto há três adjetivos pátrios"],
+      "answer": 2,
+      "explain": "São dois: 'francês' (referente à França) e 'inglês' (referente à Inglaterra). Ambos indicam origem, por isso são adjetivos pátrios."
+    },
+    {
+      "type": "mc",
+      "q": "Quem nasce no estado do Amazonas é:",
+      "options": ["Amaziano", "Amazinense", "Amazionense", "Amazonense"],
+      "answer": 3,
+      "explain": "O adjetivo pátrio é amazonense: Amazonas + o sufixo -ense. As outras três formas não existem na língua portuguesa."
+    },
+    {
+      "type": "mc",
+      "q": "Uma biografia é um gênero textual que:",
+      "options": ["Conta histórias em forma de quadrinhos com humor", "Mostra como algo deve ser feito por meio de instruções precisas", "Conta os fatos mais marcantes que ocorrem na vida de uma pessoa", "Divulga a venda de produtos ou serviços"],
+      "answer": 2,
+      "explain": "A alternativa B descreve o texto instrucional e a D, o anúncio publicitário. A biografia narra os fatos marcantes da vida de alguém, geralmente em ordem cronológica."
+    },
+    {
+      "type": "mc",
+      "q": "Que prêmio Santos Dumont recebeu ao voar com o 14-Bis?",
+      "options": ["A Liga das Nações", "A Taça Archdeacon", "O Prêmio Nobel", "A Medalha do Dirigível"],
+      "answer": 1,
+      "explain": "O feito com o 14-Bis rendeu-lhe a Taça Archdeacon, na França. A Liga das Nações não é prêmio: era a organização internacional que ele procurou em 1926 para impedir o uso do avião em guerras."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama a biografia quando a pessoa escreve sobre a própria vida, em 1ª pessoa?",
+      "answers": ["autobiografia", "a autobiografia", "autobiografia."],
+      "explain": "É a autobiografia. A diferença está em quem narra: na biografia, alguém escreve sobre outra pessoa (3ª pessoa); na autobiografia, sobre si mesmo (1ª pessoa)."
+    },
+    {
+      "type": "text",
+      "q": "Complete: 'A pintora Frida Kahlo nasceu no México. Ela era ______.'",
+      "answers": ["mexicana", "mexicana."],
+      "explain": "O adjetivo pátrio de México é mexicano/mexicana. Como Frida Kahlo é uma mulher, usamos a forma feminina: mexicana."
+    },
+    {
+      "type": "text",
+      "q": "Escreva o adjetivo pátrio FEMININO referente à China:",
+      "answers": ["chinesa", "chinesa."],
+      "explain": "China + sufixo -esa = chinesa. No masculino seria chinês, com o sufixo -ês."
+    },
+    {
+      "type": "text",
+      "q": "Em que ano Santos Dumont construiu o dirigível, um balão que voava mais rápido e podia ser controlado?",
+      "answers": ["1898", "em 1898", "20 de setembro de 1898"],
+      "explain": "Foi em 20 de setembro de 1898. Ele havia se mudado para a França em 1892 e feito seu primeiro voo de balão seis anos depois."
+    },
+    {
+      "type": "mc",
+      "q": "Santos Dumont desejava que suas invenções fossem usadas em guerras?",
+      "options": ["Sim, ele projetou o 14-Bis para uso militar", "Não — ele ficou triste e chegou a procurar a Liga das Nações para impedir esse uso", "Ele nunca soube que os aviões eram usados em guerras", "Sim, foi assim que ganhou a Taça Archdeacon"],
+      "answer": 1,
+      "explain": "Ele defendia o avião como forma de aproximar os países. Ao descobrir o uso militar, ficou triste e em 1926 apelou à Liga das Nações — sem sucesso, o que agravou sua saúde."
+    },
+    {
+      "type": "mc",
+      "q": "Na frase 'A comida japonesa é apreciada no mundo todo', a que substantivo o adjetivo pátrio se refere?",
+      "options": ["mundo", "comida", "todo", "Japão"],
+      "answer": 1,
+      "explain": "'Japonesa' caracteriza o substantivo 'comida', indicando sua origem. Repare na concordância: comida é feminino, por isso o adjetivo também vai para o feminino."
+    }
+  ]
+}

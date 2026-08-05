@@ -1,0 +1,157 @@
+{
+  "id": "cie10",
+  "module": 10,
+  "title": "Observando o céu diurno",
+  "theory": [
+    {
+      "h": "Os corpos celestes",
+      "p": [
+        "A <strong>Astronomia</strong> é a área da ciência que estuda os astros. Chamamos de astros todos os corpos celestes que estão no espaço.",
+        "<strong>Estrelas:</strong> astros que têm <strong>luz própria</strong>. Existem muitos tipos, de diferentes cores e tamanhos. O Sol é a estrela mais próxima da Terra.",
+        "<strong>Planetas:</strong> corpos celestes que giram em torno de uma estrela e <strong>não têm luz própria</strong>. Saturno e a Terra são planetas.",
+        "<strong>Satélites:</strong> corpos celestes que gravitam em torno de outro, geralmente um planeta. A Lua é o satélite natural da Terra.",
+        "<strong>Cometas:</strong> esferas de poeira e gelo, que podem apresentar rochas em sua composição. Viajam ao redor do Sol.",
+        "<strong>Asteroides:</strong> corpos celestes que viajam pelo espaço girando ao redor do Sol.",
+        "<strong>Estrelas cadentes:</strong> são meteoros, corpos celestes originados de asteroides. O rastro brilhante de luz se forma quando o meteoro se aproxima da Terra e se incendeia."
+      ]
+    },
+    {
+      "h": "O Sol e sua influência na Terra",
+      "p": [
+        "O Sol é a estrela mais próxima da Terra e o centro do Sistema Solar. Ao penetrar na atmosfera, a luz solar <strong>aquece o planeta</strong>, permitindo uma temperatura adequada à vida. Se não fosse pelo calor do Sol, não teríamos água no estado líquido, essencial para a manutenção da vida.",
+        "A luz solar também é usada na <strong>fotossíntese</strong>, processo pelo qual as plantas produzem alimento. Quando crescem, as plantas servem de alimento para muitos animais, que por sua vez servem de comida para outros. Assim, todos os seres vivos conseguem se alimentar a partir da luz solar."
+      ]
+    },
+    {
+      "h": "Os astros se movimentam",
+      "p": [
+        "Ao observar o Sol durante o dia, temos a impressão de que ele se movimenta no céu — o mesmo ocorre com a Lua e as estrelas à noite. Esse é o <strong>movimento aparente</strong> dos astros: eles não se movem no horizonte; a impressão vem do movimento de <strong>rotação</strong> realizado pela Terra, que gira ao redor de si mesma como um pião.",
+        "Por causa da rotação, ao longo de um dia uma parte da Terra é iluminada pelo Sol enquanto a outra fica no escuro: temos o dia na parte iluminada e a noite na parte escura. Esse giro leva cerca de <strong>24 horas</strong> e ocorre sempre da esquerda para a direita.",
+        "Além da rotação, a Terra realiza o movimento de <strong>translação</strong>, em que se move em torno do Sol. Uma volta completa demora aproximadamente <strong>um ano, ou 365 dias</strong>. O caminho percorrido é chamado de <strong>órbita da Terra</strong>."
+      ]
+    },
+    {
+      "h": "Os pontos cardeais",
+      "p": [
+        "O movimento aparente dá a impressão de que os astros surgem do lado direito e se põem do lado esquerdo — aproximadamente de <strong>leste para oeste</strong>.",
+        "Sabendo onde o Sol nasce, é possível encontrar os <strong>pontos cardeais</strong>. Posicione-se com os braços abertos em forma de cruz: o braço <strong>direito</strong> aponta para o <strong>leste</strong> (onde o Sol nasce), o braço <strong>esquerdo</strong> para o <strong>oeste</strong> (onde o Sol se põe), à sua <strong>frente</strong> estará o <strong>norte</strong> e às suas <strong>costas</strong>, o <strong>sul</strong>."
+      ]
+    },
+    {
+      "h": "O céu diurno",
+      "p": [
+        "Por que o céu é azul durante o dia? Isso acontece por causa da luz do Sol, que é composta das cores do arco-íris. Ao entrar na atmosfera, a luz solar se <strong>espalha em todas as direções</strong> por causa das partículas de ar e poeira. A <strong>luz azul se espalha mais</strong> do que as outras, por isso o céu parece azul para nós.",
+        "Durante o dia não conseguimos ver todos os astros, nem aqueles que refletem a luz solar (chamados de <strong>iluminados</strong>), porque a luz do Sol é tão forte que ofusca a luz refletida por eles.",
+        "As <strong>nuvens</strong> são formadas por pequenas gotas de água ou cristais de gelo suspensos no ar. Podem ter diferentes formas e tamanhos: algumas são brancas e fofas como algodão; outras são escuras e costumam sinalizar a chegada de chuva."
+      ]
+    },
+    {
+      "h": "O céu e a poluição do ar",
+      "p": [
+        "A poluição do ar é causada por substâncias prejudiciais liberadas na atmosfera, como a queima de vegetação e a fumaça de carros e fábricas.",
+        "Quando está poluído, o ar muda a aparência do céu diurno, tornando-o mais escuro, com tons de cinza ou marrom, e escondendo o Sol. Também dificulta a observação de elementos distantes, como montanhas e edifícios altos. A convivência frequente com o ar poluído pode afetar o humor e a saúde, causando ou agravando <strong>problemas respiratórios</strong>."
+      ]
+    },
+    {
+      "h": "Instrumentos para observar o céu",
+      "p": [
+        "Só com os olhos é muito difícil diferenciar as estrelas dos demais astros. Para uma observação mais detalhada usamos <strong>binóculos, lunetas e telescópios</strong>. Atenção: nunca devemos olhar diretamente para o Sol — isso pode causar danos à retina!",
+        "O <strong>telescópio</strong> aumenta a imagem dos objetos, facilitando a identificação dos astros. Os equipamentos potentes usados por astrônomos permitem estimar a idade de uma estrela, por quanto tempo ela ainda vai existir, sua fase do ciclo de vida (nascimento, evolução e morte), do que ela é feita e a que distância se encontra.",
+        "<strong>Telescópios ópticos</strong> utilizam lentes ou espelhos para focar a luz visível. São os mais comuns, encontrados em observatórios e até em versões menores para uso amador.",
+        "<strong>Telescópios espaciais:</strong> como a atmosfera dificulta a observação, os astrônomos passaram a colocar telescópios em órbita ao redor da Terra. O <strong>Kepler</strong> ficou quase dez anos em operação e permitiu a descoberta de mais de 2.600 planetas fora do Sistema Solar. Outros exemplos são o <strong>Hubble</strong> e o <strong>James Webb</strong>."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "pairs",
+      "title": "Quem é quem no espaço",
+      "instructions": "Ligue cada corpo celeste à sua característica.",
+      "pairs": [
+        ["Estrela", "Tem luz própria — como o Sol"],
+        ["Planeta", "Gira em torno de uma estrela, sem luz própria"],
+        ["Satélite", "Gravita em torno de um planeta — como a Lua"],
+        ["Cometa", "Esfera de poeira e gelo que viaja ao redor do Sol"],
+        ["Estrela cadente", "Meteoro que se incendeia perto da Terra"],
+        ["Asteroide", "Corpo rochoso que gira ao redor do Sol"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Rotação ou translação?",
+      "instructions": "Arraste cada característica para o movimento correspondente.",
+      "categories": ["Rotação", "Translação"],
+      "items": [
+        { "text": "A Terra gira em torno de si mesma", "cat": 0 },
+        { "text": "A Terra se move ao redor do Sol", "cat": 1 },
+        { "text": "Dura cerca de 24 horas", "cat": 0 },
+        { "text": "Dura cerca de 365 dias", "cat": 1 },
+        { "text": "Determina a duração do dia", "cat": 0 },
+        { "text": "Determina a duração do ano", "cat": 1 },
+        { "text": "Causa o movimento aparente do Sol", "cat": 0 },
+        { "text": "O caminho é chamado de órbita", "cat": 1 }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Marque a única alternativa INCORRETA a respeito dos astros.",
+      "options": ["Os satélites são astros que giram ao redor de outros, como os planetas. A Lua é o satélite da Terra", "As estrelas cadentes são meteoros que, ao entrarem na atmosfera terrestre, deixam um rastro luminoso pela queima de seu material", "Quando esticamos o braço direito em direção ao leste, o braço esquerdo estará voltado para o oeste", "O movimento de rotação da Terra não é responsável pelo movimento aparente dos astros no céu"],
+      "answer": 3,
+      "explain": "É exatamente a rotação da Terra que causa o movimento aparente: os astros não se movem no horizonte, quem gira somos nós."
+    },
+    {
+      "type": "mc",
+      "q": "A respeito do céu diurno e da observação do céu, marque a alternativa correta.",
+      "options": ["No céu diurno é comum vermos as nuvens, o Sol e a Lua ao mesmo tempo", "Em lugares onde são emitidos muitos poluentes no ar, é fácil visualizar os elementos do céu", "As lunetas, os binóculos e os óculos escuros são instrumentos que ampliam o que é observado no céu", "Ao observar o céu diurno, devemos ter cuidado para não olhar diretamente para o Sol"],
+      "answer": 3,
+      "explain": "Olhar direto para o Sol pode danificar a retina. A poluição DIFICULTA a observação, e óculos escuros não ampliam imagem nenhuma — só binóculos, lunetas e telescópios fazem isso."
+    },
+    {
+      "type": "mc",
+      "q": "Qual afirmação sobre os astros é FALSA?",
+      "options": ["Apenas o norte e o sul são considerados pontos cardeais", "Os planetas são corpos celestes que giram em torno de uma estrela", "Os cometas são esferas de poeira e gelo", "A Lua é o satélite natural da Terra"],
+      "answer": 0,
+      "explain": "São quatro os pontos cardeais: norte, sul, leste e oeste. Leste é onde o Sol nasce e oeste é onde ele se põe."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama o movimento que a Terra faz ao redor de si mesma, girando como um pião?",
+      "answers": ["rotacao", "a rotacao", "movimento de rotacao"],
+      "explain": "É a rotação. Ela dura cerca de 24 horas, determina a duração do dia e é a responsável pelo movimento aparente dos astros no céu."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama o movimento que a Terra faz ao redor do Sol, que dura aproximadamente 365 dias?",
+      "answers": ["translacao", "a translacao", "movimento de translacao"],
+      "explain": "É a translação, que determina a duração do ano. O caminho percorrido pela Terra nesse movimento é chamado de órbita."
+    },
+    {
+      "type": "text",
+      "q": "Se você abrir os braços em cruz com o braço direito apontando para o leste, para que ponto cardeal estará apontando o braço esquerdo?",
+      "answers": ["oeste", "o oeste", "para o oeste"],
+      "explain": "O braço esquerdo aponta para o oeste, onde o Sol se põe. À sua frente estará o norte e às suas costas, o sul."
+    },
+    {
+      "type": "mc",
+      "q": "Por que o céu é azul durante o dia?",
+      "options": ["Porque a atmosfera é feita de gás azul", "Porque a luz azul do Sol se espalha mais que as outras cores nas partículas de ar e poeira", "Porque o céu reflete a cor dos oceanos", "Porque as nuvens filtram as cores quentes"],
+      "answer": 1,
+      "explain": "A luz do Sol contém todas as cores do arco-íris. Ao entrar na atmosfera, ela se espalha nas partículas de ar e poeira — e a luz azul se espalha mais que as demais, dominando o que enxergamos."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama o processo pelo qual as plantas usam a luz solar para produzir seu alimento?",
+      "answers": ["fotossintese", "a fotossintese"],
+      "explain": "É a fotossíntese. Ela é a base da alimentação de quase todos os seres vivos: as plantas viram alimento dos animais, que viram alimento de outros animais."
+    },
+    {
+      "type": "mc",
+      "q": "Por que os astrônomos enviam telescópios para o espaço, como o Kepler, o Hubble e o James Webb?",
+      "options": ["Porque no espaço eles ficam mais próximos das estrelas", "Porque a atmosfera muitas vezes dificulta a observação dos astros a partir da Terra", "Porque telescópios não funcionam com gravidade", "Porque na Terra não existem observatórios"],
+      "answer": 1,
+      "explain": "A atmosfera atrapalha a observação. Em órbita, livre dela, o Kepler permitiu descobrir mais de 2.600 planetas fora do Sistema Solar em quase dez anos de operação."
+    }
+  ]
+}

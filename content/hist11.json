@@ -1,0 +1,148 @@
+{
+  "id": "hist11",
+  "module": 11,
+  "title": "Problemas das grandes cidades",
+  "theory": [
+    {
+      "h": "8 bilhões de pessoas, 8 bilhões de resíduos",
+      "p": [
+        "O planeta Terra é compartilhado por mais de <strong>8 bilhões de pessoas</strong>. Todas moram em algum lugar, consomem comida, água e outros recursos.",
+        "Agora imagine que cada uma dessas 8 bilhões de pessoas gerasse apenas <strong>um resíduo por dia</strong> — uma embalagem de picolé, uma garrafinha de água. Seriam 8 bilhões de resíduos por dia. É por aí que começam vários dos problemas das grandes cidades."
+      ]
+    },
+    {
+      "h": "Problemas de moradia",
+      "p": [
+        "Existem casas de muitos tipos: de barro, madeira, tijolo ou pedra; térreas ou sobrados; <strong>palafitas</strong> apoiadas em estacas às margens dos rios da Amazônia; <strong>ocas</strong> de povos indígenas; e, nas grandes cidades, prédios de apartamentos, em que as residências ficam umas sobre as outras para ocupar menos espaço.",
+        "Mesmo nas cidades mais ricas do mundo há pessoas sem casa, vivendo nas ruas ou em abrigos. Na maior parte das vezes, a origem do problema é a <strong>pobreza</strong>. O Brasil tem hoje cerca de <strong>227 mil pessoas em situação de rua</strong>, um aumento de 935% em 10 anos. Desse total, 90% sabem ler e escrever e 68% já tiveram emprego com carteira assinada.",
+        "Quem não tem condições financeiras acaba construindo casas em áreas inadequadas, sem registro de endereço, saneamento básico, água ou energia elétrica."
+      ]
+    },
+    {
+      "h": "Saneamento básico",
+      "p": [
+        "O <strong>saneamento</strong> consiste no acesso à água tratada, à rede de esgoto e à limpeza urbana. Essas medidas garantem a saúde e a segurança das pessoas: evitam a transmissão de doenças e controlam pragas urbanas.",
+        "Quando o encanamento de uma casa não é ligado à rede de esgoto, toda a sujeira vai para a rua, riachos ou terrenos a céu aberto. O saneamento é garantido por lei: a <strong>Lei n. 11.445, de 5 de janeiro de 2007</strong>, estabelece as diretrizes nacionais do saneamento básico."
+      ]
+    },
+    {
+      "h": "Transporte e horário de pico",
+      "p": [
+        "Nas grandes cidades, as casas costumam ficar longe do centro, e as pessoas precisam se deslocar de carro, ônibus, trem ou metrô. Como os horários de escolas e trabalhos são parecidos, milhares de pessoas se movem <strong>no mesmo sentido e ao mesmo tempo</strong>, gerando lentidão, transportes lotados e <strong>engarrafamentos</strong>.",
+        "O <strong>horário de pico</strong> costuma ocupar o período das 7 h às 10 h da manhã e das 17 h às 20 h — a hora de ir e a hora de voltar. Nele, aumentam também os acidentes de trânsito.",
+        "Uma solução que algumas cidades adotam são as <strong>ciclovias</strong>, que estimulam o uso de bicicletas em trechos curtos. Além de promover um estilo de vida saudável, a bicicleta não emite gases tóxicos na atmosfera, melhorando a qualidade do ar.",
+        "Barulho, poluição e cansaço tornam o trânsito um espaço difícil. Por isso é importante a <strong>gentileza</strong>: evitar buzinar sem necessidade, dar carona, ter cuidado com ciclistas, respeitar os limites de velocidade e ceder lugar nos transportes públicos a gestantes, idosos e pessoas com dificuldade de mobilidade."
+      ]
+    },
+    {
+      "h": "Para onde vai o lixo",
+      "p": [
+        "Antigamente, a maior parte do lixo era composta de <strong>resíduos orgânicos</strong> (restos de comida), que se decompunham naturalmente e viravam nutrientes. Com o crescimento das cidades e a tecnologia, surgiram sacolas plásticas, garrafas, latinhas, pilhas e eletrônicos — materiais que demoram <strong>muito mais tempo</strong> para se decompor.",
+        "<strong>Lixões:</strong> grandes terrenos a céu aberto que recebem resíduos. São perigosos: contaminam o solo, atingem os <strong>lençóis freáticos</strong> (camada subterrânea onde os poros do solo estão cheios de água), poluem o ar, trazem pragas e espalham doenças.",
+        "<strong>Incineradores:</strong> grandes fornos que queimam o lixo. Sobram cinzas, e os gases da queima prejudicam o ar — por isso precisam de filtros, o que torna o processo muito caro. Geralmente são usados para lixo hospitalar.",
+        "<strong>Aterros sanitários:</strong> parecidos com os lixões, mas com ambiente controlado, proteção para água, ar e solo. As camadas de resíduos são cobertas por areia, pedra e argila. Até o momento, é a forma mais segura e econômica de descarte."
+      ]
+    },
+    {
+      "h": "Coleta seletiva e Unidades de Conservação",
+      "p": [
+        "No Brasil existe uma lei que torna os municípios responsáveis por criar e executar sistemas de <strong>coleta seletiva</strong>, o que facilita recolher materiais para reciclagem. As lixeiras têm cores diferentes justamente para separar cada tipo de material.",
+        "As <strong>Unidades de Conservação (UC)</strong> são espaços com características naturais importantes, protegidos por lei. Dividem-se em <strong>Proteção Integral</strong> (a extração de recursos é proibida; permitem-se apenas pesquisa científica e visitas turísticas, como no Parque Nacional da Serra da Bocaina) e <strong>Uso Sustentável</strong> (permitem uso controlado dos recursos: turismo ecológico, educação ambiental, agricultura e pesca ecológica).",
+        "Nas grandes cidades há poucas áreas verdes e muitas áreas <strong>pavimentadas</strong> (cobertas de asfalto e concreto), o que gera temperaturas mais altas e baixa qualidade do ar. Por isso as UCs próximas às cidades — como o Parque Nacional da Tijuca (RJ) e o Parque Estadual da Cantareira (SP) — são essenciais: bairros vizinhos a grandes áreas verdes registram <strong>temperaturas mais amenas</strong>."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Desafio ou solução?",
+      "instructions": "Arraste cada item para o grupo certo.",
+      "categories": ["Grande desafio da cidade", "Solução inteligente"],
+      "items": [
+        { "text": "Engarrafamento no horário de pico", "cat": 0 },
+        { "text": "Ciclovias para trechos curtos", "cat": 1 },
+        { "text": "Lixão a céu aberto", "cat": 0 },
+        { "text": "Coleta seletiva e reciclagem", "cat": 1 },
+        { "text": "Falta de saneamento básico", "cat": 0 },
+        { "text": "Unidades de Conservação", "cat": 1 },
+        { "text": "Pessoas em situação de rua", "cat": 0 },
+        { "text": "Aterro sanitário controlado", "cat": 1 }
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Conceitos do módulo",
+      "instructions": "Ligue cada palavra à sua definição.",
+      "pairs": [
+        ["Lençol freático", "Camada subterrânea com água no solo"],
+        ["Palafita", "Casa apoiada em estacas sobre a água"],
+        ["Pavimentada", "Superfície coberta de asfalto ou concreto"],
+        ["Horário de pico", "7h-10h e 17h-20h, trânsito intenso"],
+        ["Saneamento básico", "Água tratada, esgoto e limpeza urbana"],
+        ["Proteção Integral", "UC onde extrair recursos é proibido"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Muitas pessoas se deslocam dentro das cidades utilizando o transporte público. Sobre isso, podemos dizer que:",
+      "options": ["na maior parte das vezes, ele é muito eficiente, com poucos engarrafamentos", "não existem trens ou metrôs, apenas ônibus e carros de aplicativos", "todas as cidades brasileiras têm ciclovias para aliviar a poluição dos carros", "o transporte público ajuda nos deslocamentos das pessoas, mas nem sempre funciona perfeitamente"],
+      "answer": 3,
+      "explain": "O transporte público é essencial, mas enfrenta lotação e engarrafamentos, principalmente no horário de pico. Trens e metrôs existem em várias cidades, e ciclovias ainda são realidade de uma minoria delas."
+    },
+    {
+      "type": "mc",
+      "q": "Qual alternativa apresenta a lista correta dos principais problemas enfrentados pelas cidades brasileiras?",
+      "options": ["Engarrafamento, problemas de saneamento, falta de moradias, excesso de poluição e lixo", "Excesso de parques, hospitais públicos de qualidade e transportes velozes", "Engarrafamento, moradias de qualidade, poluição do ar e problemas de saneamento", "Existência de ciclovias, programas de reciclagem do lixo, falta de moradias e excesso de poluição"],
+      "answer": 0,
+      "explain": "As outras alternativas misturam problemas com coisas boas — parques, moradias de qualidade, ciclovias e reciclagem são soluções, não problemas."
+    },
+    {
+      "type": "mc",
+      "q": "Um depoimento sobre o trânsito de Porto Alegre relata que o fluxo começa às 17 h e segue até 19 h, com muitos acidentes na esquina. O depoimento informa que, no horário de pico:",
+      "options": ["o número de carros nas ruas diminui", "acidentes de carro, como batidas, podem acontecer", "aumenta o número de carros circulando a partir das 19 h", "não ocorrem engarrafamentos"],
+      "answer": 1,
+      "explain": "O texto diz que já presenciou bastante acidente na esquina, a maioria por motoristas colidindo ao tentar entrar e sair das vagas. O fluxo termina às 19 h, e não aumenta a partir dessa hora."
+    },
+    {
+      "type": "mc",
+      "q": "Numa charge, uma placa diz 'Bem-vindo a São Paulo — População: 8.000.000 de veículos', com a cidade tomada por carros e ônibus parados. Que característica o artista quis criticar?",
+      "options": ["A poluição do ar causada por fábricas", "O excesso de prédios e a pouca quantidade de áreas verdes", "O excesso de veículos e o trânsito caótico", "A sinalização de trânsito confusa"],
+      "answer": 2,
+      "explain": "Ao trocar a população de pessoas pela de veículos, o artista ironiza uma cidade dominada por carros. O que preenche toda a cena são veículos parados, não prédios nem fábricas."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama o terreno preparado, com solo protegido e camadas de resíduos cobertas por areia e argila, considerado a forma mais segura de descarte de lixo?",
+      "answers": ["aterro sanitario", "aterro", "aterros sanitarios", "o aterro sanitario"],
+      "explain": "É o aterro sanitário. Diferente do lixão, que fica a céu aberto e contamina solo, água e ar, o aterro tem ambiente controlado e proteção — até hoje, a forma mais segura e econômica de descarte."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama o conjunto de serviços que inclui água tratada, rede de esgoto e limpeza urbana?",
+      "answers": ["saneamento basico", "saneamento", "o saneamento basico"],
+      "explain": "É o saneamento básico, garantido pela Lei n. 11.445, de 2007. Ele evita a transmissão de doenças e controla pragas urbanas — sem ele, o esgoto corre a céu aberto."
+    },
+    {
+      "type": "mc",
+      "q": "Segundo a reportagem estudada, os bairros mais frescos do Rio de Janeiro (como o Alto da Boa Vista e o Jardim Botânico) têm em comum o fato de:",
+      "options": ["estarem no Rio de Janeiro, cidade de clima frio", "estarem próximos a uma grande área verde, a Floresta da Tijuca", "terem um sistema de pavimentação que alivia o calor", "terem menos moradores que os outros bairros"],
+      "answer": 1,
+      "explain": "As áreas verdes reduzem a temperatura: as árvores dão sombra e liberam umidade. Já o asfalto e o concreto (pavimentação) fazem o oposto — absorvem e devolvem calor."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama a camada subterrânea, onde os poros do solo estão preenchidos com água, que pode ser contaminada pelos lixões?",
+      "answers": ["lencol freatico", "lencois freaticos", "o lencol freatico"],
+      "explain": "É o lençol freático. Quando o lixo é despejado a céu aberto, líquidos tóxicos escorrem pelo solo até essa camada e contaminam a água que abastece a região."
+    },
+    {
+      "type": "mc",
+      "q": "Nas Unidades de Conservação de Proteção Integral:",
+      "options": ["a extração de recursos naturais é proibida, permitindo-se pesquisa e visitas turísticas", "é permitida a agricultura e a pesca ecológica", "não é permitida nenhuma presença humana", "qualquer pessoa pode retirar madeira de forma controlada"],
+      "answer": 0,
+      "explain": "Na Proteção Integral a extração é proibida; só pesquisa científica e visitação são permitidas. O uso controlado dos recursos (agricultura, pesca ecológica, manejo florestal) ocorre nas UCs de Uso Sustentável."
+    }
+  ]
+}

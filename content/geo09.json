@@ -1,0 +1,145 @@
+{
+  "id": "geo09",
+  "module": 9,
+  "title": "Conhecendo o município",
+  "theory": [
+    {
+      "h": "O que é município?",
+      "p": [
+        "O Brasil é dividido em <strong>26 estados e o Distrito Federal</strong>. Cada estado é composto de diversos municípios. Isso significa que o município é uma das <strong>menores porções do território brasileiro</strong> e faz parte da divisão político-administrativa do país.",
+        "O município é composto de <strong>áreas urbanas e rurais</strong>. Essas áreas contêm bairros ou comunidades, que são os locais onde as pessoas moram e realizam as atividades do dia a dia.",
+        "Os municípios são administrados por <strong>prefeito e vereadores</strong>, eleitos a cada quatro anos pela população. Eles cuidam dos serviços de saúde, educação, lazer e transporte, oferecidos tanto aos moradores da área urbana quanto aos da área rural."
+      ]
+    },
+    {
+      "h": "Município e cidade não são a mesma coisa",
+      "p": [
+        "Município e cidade muitas vezes são tratados como sinônimos, mas não são. A <strong>cidade é a área urbana do município</strong> e, em geral, abriga a maior parte da população que vive nele.",
+        "Alguns municípios têm áreas urbanas muito extensas, com pouca (ou quase nenhuma) área rural. É o caso de São Paulo: como a área urbana ocupa grande parte do município, ele é muitas vezes chamado de 'cidade de São Paulo'."
+      ]
+    },
+    {
+      "h": "A área urbana",
+      "p": [
+        "A área urbana corresponde à porção do município ocupada pela cidade. É caracterizada pela ocupação humana <strong>contínua</strong> (aquilo que não se divide, que não é interrompido), com casas grandes e pequenas, edifícios altos e baixos e galpões. Há também espaços públicos — ruas, avenidas, praças e parques — e espaços de cultura, esporte e lazer, como cinemas, teatros e estádios.",
+        "As áreas urbanas costumam abrigar muitos moradores, o que faz com que sejam <strong>adensadas</strong> (cheias, aglomeradas): há grande quantidade de pessoas vivendo em um mesmo espaço. O bairro de Copacabana, no Rio de Janeiro, é um dos mais adensados do Brasil.",
+        "Além das construções, as áreas urbanas apresentam grande variedade de atividades econômicas. Essas atividades geram impactos: as indústrias e a circulação de carros e ônibus são as principais responsáveis pela <strong>poluição do ar</strong> nas áreas urbanas. Outro problema comum é a poluição dos rios pelo lixo descartado incorretamente."
+      ]
+    },
+    {
+      "h": "A área rural",
+      "p": [
+        "A área rural corresponde à parte do município destinada às atividades econômicas típicas do <strong>campo</strong>: agricultura, pecuária e extrativismo. Essas atividades são chamadas <strong>primárias</strong>, pois exploram os recursos da natureza para produzir alimentos e matérias-primas.",
+        "Ao contrário das áreas urbanas, as rurais têm baixa concentração de pessoas, construções, indústrias, comércio e serviços — por isso são consideradas <strong>pouco adensadas</strong>. As construções são <strong>esparsas</strong>, ou seja, longe umas das outras. Há vários tipos de propriedades: ranchos, sítios, chácaras e fazendas, com plantações, pastagens, moradias, curral, chiqueiro e galinheiro.",
+        "Os elementos naturais (rios, córregos, lagos, lagoas, florestas e montanhas) são mais fáceis de observar nas áreas rurais, pois foram menos modificados pelas atividades humanas. Mesmo assim, elas geram impactos: o principal é o <strong>desmatamento</strong>, quando florestas são retiradas para abrir espaço a plantações e pastagens."
+      ]
+    },
+    {
+      "h": "Atividades econômicas do campo",
+      "p": [
+        "<strong>Agricultura:</strong> produz alimentos e matérias-primas — frutas, grãos, cereais, legumes e verduras. Alguns produtos servem de matéria-prima para as indústrias, como a cana-de-açúcar, transformada em álcool combustível. Pode ser feita com trabalho manual (enxada) ou com máquinas, como o trator.",
+        "<strong>Pecuária:</strong> criação de animais para produção de alimentos e matérias-primas. Bois, vacas, cabras, porcos, galinhas e ovelhas são os principais animais criados; os produtos são carne, leite, queijo, ovos, lã e couro.",
+        "<strong>Extrativismo:</strong> exploração dos recursos da natureza. Divide-se em <strong>mineral</strong> (minérios das rochas, como ferro e sal), <strong>vegetal</strong> (partes de plantas e árvores, como óleo e madeira) e <strong>animal</strong> (exploração de animais, como a pesca)."
+      ]
+    },
+    {
+      "h": "Atividades econômicas da cidade",
+      "p": [
+        "<strong>Indústria:</strong> utiliza as matérias-primas extraídas da natureza e as transforma em diferentes produtos, com a ajuda de máquinas e ferramentas.",
+        "<strong>Comércio:</strong> corresponde à troca, compra e venda de produtos diversos — alimentos, roupas, calçados, brinquedos, móveis — em lojas, supermercados, galerias, <em>shopping centers</em> e, cada vez mais, pela internet.",
+        "<strong>Serviços:</strong> atendem às necessidades de saúde, educação, transporte, lazer, cultura e tecnologia das pessoas. O dentista, o professor e o motorista de ônibus são exemplos de profissionais que prestam serviços."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Onde acontece essa atividade?",
+      "instructions": "Arraste cada atividade econômica para a área onde é típica.",
+      "categories": ["Típica da área rural", "Típica da área urbana"],
+      "items": [
+        { "text": "Agricultura", "cat": 0 },
+        { "text": "Indústria", "cat": 1 },
+        { "text": "Pecuária", "cat": 0 },
+        { "text": "Comércio", "cat": 1 },
+        { "text": "Extrativismo", "cat": 0 },
+        { "text": "Serviços de saúde e educação", "cat": 1 }
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Palavras da Geografia",
+      "instructions": "Ligue cada termo ao seu significado.",
+      "pairs": [
+        ["Adensado", "Cheio, com muita gente no mesmo espaço"],
+        ["Esparso", "Longe um do outro, espalhado"],
+        ["Contínuo", "Que não se divide nem é interrompido"],
+        ["Extrativismo mineral", "Retira minérios como ferro e sal"],
+        ["Extrativismo vegetal", "Retira óleo e madeira das plantas"],
+        ["Atividade primária", "Explora recursos direto da natureza"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Marque a alternativa correta sobre o município:",
+      "options": ["O município é uma das porções do território brasileiro que fazem parte da divisão político-administrativa do país", "O território brasileiro é dividido em 26 municípios", "Cada município contém diversos estados", "O município é composto apenas de áreas urbanas"],
+      "answer": 0,
+      "explain": "O Brasil tem 26 estados e o Distrito Federal — e cada estado contém vários municípios, não o contrário. O município é composto de áreas urbanas E rurais."
+    },
+    {
+      "type": "mc",
+      "q": "Essa atividade é bastante comum em áreas urbanas e corresponde à compra, venda e troca de produtos. Que atividade econômica é essa?",
+      "options": ["Agricultura", "Comércio", "Indústria", "Pecuária"],
+      "answer": 1,
+      "explain": "O comércio é a troca, compra e venda de produtos em lojas, supermercados e shoppings. A indústria transforma matérias-primas; agricultura e pecuária são atividades rurais."
+    },
+    {
+      "type": "mc",
+      "q": "Uma ilustração mostra uma máquina derrubando árvores, deixando o terreno cheio de tocos. Que produto está sendo extraído e qual impacto ambiental essa extração provoca?",
+      "options": ["Sal e poluição do ar", "Madeira e desmatamento", "Peixes e poluição da água", "Alimentos e contaminação do solo"],
+      "answer": 1,
+      "explain": "É extrativismo vegetal: a madeira é retirada das árvores. Quando grandes áreas de floresta são derrubadas, ocorre o desmatamento, principal impacto ambiental das áreas rurais."
+    },
+    {
+      "type": "text",
+      "q": "Qual palavra descreve uma área urbana cheia, com grande quantidade de pessoas vivendo no mesmo espaço, como o bairro de Copacabana?",
+      "answers": ["adensada", "adensado", "densa", "area adensada"],
+      "explain": "Adensada significa cheia, aglomerada. As áreas rurais, ao contrário, são pouco adensadas: as construções ficam esparsas, longe umas das outras."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama a atividade rural de criação de bois, vacas, porcos e galinhas para produzir carne, leite, ovos e couro?",
+      "answers": ["pecuaria", "a pecuaria"],
+      "explain": "É a pecuária. Junto com a agricultura e o extrativismo, é uma das três atividades primárias típicas da área rural."
+    },
+    {
+      "type": "mc",
+      "q": "Quais são os três tipos de extrativismo?",
+      "options": ["Urbano, rural e industrial", "Mineral, vegetal e animal", "Primário, secundário e terciário", "Manual, mecânico e digital"],
+      "answer": 1,
+      "explain": "O extrativismo mineral retira minérios das rochas (ferro, sal); o vegetal, partes das plantas (óleo, madeira); o animal explora animais, como na pesca."
+    },
+    {
+      "type": "text",
+      "q": "Qual é a diferença entre município e cidade? Complete: a cidade é a área ______ do município.",
+      "answers": ["urbana", "urbano", "a area urbana"],
+      "explain": "A cidade é a área urbana do município. O município é maior: inclui a cidade (área urbana) e também a área rural."
+    },
+    {
+      "type": "mc",
+      "q": "Nas áreas rurais é mais fácil observar rios, florestas e montanhas. Por quê?",
+      "options": ["Porque só existem elementos naturais no campo", "Porque foram menos modificados pelas atividades humanas", "Porque as cidades não têm rios", "Porque a área rural é sempre maior"],
+      "answer": 1,
+      "explain": "Nas áreas rurais há menos construções e menos concentração de pessoas, então a paisagem natural foi menos alterada. Nas cidades os rios muitas vezes foram canalizados ou poluídos."
+    },
+    {
+      "type": "mc",
+      "q": "Quem administra o município e de quanto em quanto tempo é eleito?",
+      "options": ["Prefeito e vereadores, eleitos a cada quatro anos", "Governador e deputados, eleitos a cada dois anos", "Presidente e senadores, eleitos a cada cinco anos", "Apenas o prefeito, eleito a cada oito anos"],
+      "answer": 0,
+      "explain": "Prefeito e vereadores são eleitos pela população a cada quatro anos e cuidam dos serviços de saúde, educação, lazer e transporte para toda a população do município."
+    }
+  ]
+}

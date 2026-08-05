@@ -1,0 +1,141 @@
+{
+  "id": "lp20",
+  "module": 20,
+  "title": "Uma doce dança",
+  "subtitle": "Anúncio classificado · Adjetivo no plural · Letras S e Z no fim da palavra",
+  "theory": [
+    {
+      "h": "O anúncio classificado",
+      "p": [
+        "O <strong>anúncio classificado</strong> é um gênero textual <strong>curto</strong> em que é divulgada a venda, a troca ou o aluguel de produtos ou, ainda, o oferecimento e a contratação de serviços. Pode ser encontrado em jornais, revistas, <em>sites</em> e outros meios de comunicação.",
+        "O anúncio classificado costuma expor seu objetivo de modo <strong>mais direto</strong> do que o anúncio publicitário. Algumas informações que não podem faltar: <strong>o que é negociado</strong> e <strong>como os interessados podem entrar em contato</strong> com o anunciante.",
+        "Um anúncio classificado é composto de: título, descrição do produto ou serviço, preço e contato. A <strong>imagem</strong> torna o anúncio mais atrativo e completo, pois permite ver o estado real do produto."
+      ]
+    },
+    {
+      "h": "Exemplo: aulas de tango argentino",
+      "p": [
+        "Um classificado anuncia: <em>\"AULAS DE TANGO ARGENTINO — Com professores experientes para adultos e crianças. Escola Internacional de Tango Argentino. Contato pelo e-mail aulas@escoladetangoargentino.com.br\"</em>.",
+        "Analisando esse anúncio: o <strong>serviço anunciado</strong> são aulas de tango; o <strong>anunciante</strong> é a Escola Internacional de Tango Argentino; e o <strong>objetivo</strong> é conseguir alunos, ou seja, divulgar a contratação de um serviço.",
+        "Dizer que os professores são <strong>experientes para adultos e crianças</strong> produz um efeito de <strong>confiança</strong>: convence o leitor de que a escola sabe ensinar pessoas de todas as idades. O tango, aliás, nasceu na Argentina — a Praça de Maio, em Buenos Aires, fica no país de origem dessa dança."
+      ]
+    },
+    {
+      "h": "Adjetivo: singular e plural",
+      "p": [
+        "Quando o substantivo está no <strong>singular</strong>, o adjetivo também fica no singular. Quando o substantivo está no <strong>plural</strong>, o adjetivo também fica no plural. Isso se chama <strong>concordância</strong>.",
+        "Exemplos: <em>A <strong>dança</strong> é <strong>envolvente</strong></em> / <em>As <strong>danças</strong> são <strong>envolventes</strong></em>. <em>Comprarei um vaso para a <strong>flor colorida</strong></em> / <em>...para as <strong>flores coloridas</strong></em>.",
+        "Cuidado ao escolher o adjetivo em uma frase: em <em>\"Encontrei no site anúncios ______ para aluguel de casas\"</em>, o substantivo <em>anúncios</em> é masculino e plural — então só cabe um adjetivo masculino plural, como <strong>maravilhosos</strong>. Não caberiam <em>sensacional</em> nem <em>incrível</em> (singular), nem <em>boas</em> (feminino)."
+      ]
+    },
+    {
+      "h": "Ortografia: as letras S e Z no fim da palavra",
+      "p": [
+        "O <strong>plural</strong> pode ser representado, entre outras formas, com a letra <strong>s</strong> no final das palavras, mas <strong>nunca com o acréscimo da letra z</strong>. Exemplos: <em>lobo → lobos</em>; <em>chapéu → chapéus</em>.",
+        "Quando uma palavra no singular <strong>termina com z</strong>, o plural é feito com o acréscimo da terminação <strong>-es</strong>. Exemplos: <em>cartaz → cartazes</em>; <em>perdiz → perdizes</em>; <em>arroz → arrozes</em>; <em>capaz → capazes</em>.",
+        "Palavras que terminam em <strong>z</strong>: feliz, giz, xadrez, lápis? Não! Preste atenção: <em>feli<strong>z</strong></em>, <em>rapa<strong>z</strong></em>, <em>xadre<strong>z</strong></em>, <em>cicatri<strong>z</strong></em>, <em>capa<strong>z</strong></em>, <em>arro<strong>z</strong></em>. Já com <strong>s</strong>: <em>burguê<strong>s</strong></em>, <em>siamê<strong>s</strong></em>, <em>ônibu<strong>s</strong></em>, <em>lápi<strong>s</strong></em>, <em>pire<strong>s</strong></em>, <em>avó<strong>s</strong></em>.",
+        "<strong>Dica do dicionário:</strong> nos dicionários, os verbetes (as palavras que procuramos) aparecem sempre no <strong>singular</strong>. Para ter certeza de que uma palavra termina com s ou com z, procure sempre no dicionário. Se ela estiver lá com z, é com z que se escreve!"
+      ]
+    },
+    {
+      "h": "Cantinho de leitura: \"Procura-se Lobo\"",
+      "p": [
+        "No livro <strong>\"Procura-se Lobo\"</strong>, de Ana Maria Machado, Manuel estava procurando emprego. Abriu o jornal e viu um anúncio classificado pedindo um \"Lobo, adulto, de boa aparência, com experiência comprovada, para trabalho de responsabilidade\".",
+        "A empresa queria um lobo <strong>bicho</strong> mesmo — daqueles peludos, de quatro patas — para um documentário. Mas Manuel era <strong>Lobo</strong> de sobrenome, como quem tem Coelho, Raposo ou Leitão. Achou que valia a pena arriscar e respondeu.",
+        "Deu certo por outro lado: como muitos lobos responderam ao anúncio, a empresa criou um emprego novo — <strong>respondedor de cartas de lobos</strong> — e contratou Manuel, porque ele escrevia muito bem e adorava ler. O mal-entendido aconteceu porque o texto do anúncio <strong>não estava claro</strong>. É por isso que um bom classificado precisa dizer exatamente o que está sendo procurado!"
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Termina com S ou com Z?",
+      "instructions": "Arraste cada palavra para a letra com que ela termina.",
+      "categories": ["Termina com S", "Termina com Z"],
+      "items": [
+        { "text": "feli__", "cat": 1 },
+        { "text": "burguê__", "cat": 0 },
+        { "text": "rapa__", "cat": 1 },
+        { "text": "ônibu__", "cat": 0 },
+        { "text": "xadre__", "cat": 1 },
+        { "text": "lápi__", "cat": 0 },
+        { "text": "cicatri__", "cat": 1 },
+        { "text": "pire__", "cat": 0 }
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Do singular ao plural",
+      "instructions": "Ligue cada palavra ao seu plural correto.",
+      "pairs": [
+        ["cartaz", "cartazes"],
+        ["perdiz", "perdizes"],
+        ["o bocão capaz", "os bocões capazes"],
+        ["chapéu", "chapéus"],
+        ["a dança envolvente", "as danças envolventes"],
+        ["a flor colorida", "as flores coloridas"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Sobre os anúncios classificados é correto afirmar que são textos:",
+      "options": ["Longos e sem imagens, que servem para informar o leitor sobre determinado assunto", "Explicativos sobre o funcionamento de aparelhos eletrônicos", "Curtos, encontrados em meios de comunicação nas seções de aluguel, venda, troca ou busca", "Curtos, em que o anunciante escreve a própria opinião sobre o produto"],
+      "answer": 2,
+      "explain": "O classificado é curto e direto, sempre ligado a uma negociação: venda, troca, aluguel ou busca. Ele não traz a opinião do anunciante nem explica funcionamento de aparelhos — isso seria um manual."
+    },
+    {
+      "type": "mc",
+      "q": "Leia: 'Encontrei no site anúncios ★ para aluguel de casas no centro da cidade.' Que adjetivo pode substituir o símbolo ★ mantendo a concordância?",
+      "options": ["Maravilhosos", "Sensacional", "Incrível", "Boas"],
+      "answer": 0,
+      "explain": "O substantivo 'anúncios' é masculino e plural, então o adjetivo precisa ser masculino e plural: maravilhosos. 'Sensacional' e 'incrível' estão no singular, e 'boas' é feminino."
+    },
+    {
+      "type": "mc",
+      "q": "Assinale a alternativa em que há um exemplo de anúncio classificado.",
+      "options": ["Uma página de jornal com a manchete 'Cidade recebe campeonato de dança'", "Um cartaz com 'VENDEM-SE Sapatilhas de balé — Falar com Liza (00) 00000-0000'", "Uma folha de calendário marcando 14 de fevereiro de 2023", "Uma tirinha em quadrinhos com um personagem refletindo"],
+      "answer": 1,
+      "explain": "Ele tem tudo o que define um classificado: o que é negociado (sapatilhas de balé), a finalidade (venda) e o contato (Liza e o telefone). A primeira é notícia, a terceira é calendário e a quarta é tirinha."
+    },
+    {
+      "type": "mc",
+      "q": "No livro 'Procura-se Lobo', por que Manuel Lobo se candidatou à vaga do anúncio?",
+      "options": ["Porque ele era um lobo de verdade", "Porque o texto do anúncio não era claro e ele achou que a empresa procurava alguém com o sobrenome Lobo", "Porque ele queria participar de um documentário", "Porque o anúncio pedia experiência em leitura"],
+      "answer": 1,
+      "explain": "A empresa queria um lobo bicho mesmo, mas o anúncio não deixou isso claro. Manuel era Lobo de sobrenome — e acabou contratado porque escrevia bem, virando respondedor das cartas dos lobos."
+    },
+    {
+      "type": "text",
+      "q": "Escreva o plural da palavra 'cartaz':",
+      "answers": ["cartazes", "cartazes."],
+      "explain": "Quando a palavra no singular termina com z, o plural é feito com o acréscimo de -es: cartaz → cartazes. Nunca acrescentamos a letra z para formar plural!"
+    },
+    {
+      "type": "text",
+      "q": "Complete com S ou Z: 'burguê__'",
+      "answers": ["s", "burgues", "burgues.", "com s"],
+      "explain": "Burguês termina com S — vem do mesmo grupo de português, siamês e freguês. Na dúvida, procure no dicionário: os verbetes aparecem sempre no singular."
+    },
+    {
+      "type": "text",
+      "q": "Reescreva no plural: 'A dança é envolvente' → 'As danças são ______.'",
+      "answers": ["envolventes", "envolventes.", "as dancas sao envolventes"],
+      "explain": "O adjetivo concorda com o substantivo. Como 'danças' está no plural, o adjetivo 'envolvente' também vai para o plural: envolventes."
+    },
+    {
+      "type": "text",
+      "q": "Que informação NÃO pode faltar em um anúncio classificado, além de dizer o que está sendo negociado?",
+      "answers": ["contato", "o contato", "forma de contato", "como entrar em contato", "telefone", "o contato do anunciante"],
+      "explain": "É o contato do anunciante. Sem ele, o leitor interessado não tem como fechar o negócio — e o anúncio perde totalmente a função."
+    },
+    {
+      "type": "mc",
+      "q": "Por que colocar uma imagem em um anúncio classificado?",
+      "options": ["Para deixar o texto mais longo", "Porque a lei exige imagem em todo anúncio", "Porque torna o anúncio mais atrativo e permite ver o estado real do produto", "Para substituir o preço"],
+      "answer": 2,
+      "explain": "A imagem chama a atenção e mostra o produto como ele realmente é. Mesmo assim, ela não substitui as informações escritas: descrição, preço e contato continuam necessários."
+    }
+  ]
+}

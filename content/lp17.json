@@ -1,0 +1,319 @@
+{
+  "id": "lp17",
+  "module": 17,
+  "title": "Lava uma mão, lava a outra",
+  "subtitle": "Texto instrucional · Aumentativo e diminutivo",
+  "theory": [
+    {
+      "h": "O texto instrucional",
+      "p": [
+        "Os <strong>textos instrucionais</strong> têm a finalidade de mostrar <strong>como algo deve ser feito</strong>. Receitas, manuais de videogame, cartazes de higiene e regras de jogo são exemplos que encontramos todos os dias.",
+        "Eles apresentam <strong>linguagem clara e objetiva</strong>, com frases curtas e comandos diretos, para que o leitor entenda e coloque em prática as instruções.",
+        "Características que ajudam a reconhecer o gênero: costumam trazer uma lista de materiais ou ingredientes; apresentam uma <strong>sequência numerada de ações</strong> que precisa ser seguida na ordem; e muitas vezes usam <strong>imagens ou setas</strong> que ilustram cada etapa.",
+        "Atenção ao que o texto instrucional <strong>não</strong> faz: ele não tem rimas, não se divide em versos e estrofes, não narra a história de um personagem e não apresenta diálogos."
+      ]
+    },
+    {
+      "h": "Exemplo: as cinco etapas para lavar as mãos",
+      "p": [
+        "Um cartaz do Unicef Brasil ensina as cinco etapas: <strong>1.</strong> molhar as mãos com água limpa; <strong>2.</strong> aplicar sabão suficiente para cobrir as mãos molhadas; <strong>3.</strong> esfregar todas as superfícies das mãos, incluindo o dorso, entre os dedos e sob as unhas — por pelo menos <strong>20 segundos</strong>; <strong>4.</strong> enxaguar as mãos com água; <strong>5.</strong> secar as mãos com um pano limpo ou toalha de papel descartável.",
+        "Quando não for possível lavar as mãos na pia, pode-se limpar com álcool em gel a pelo menos 70%. Mas lembre-se: a lavagem com água e sabão é a mais adequada. E não se esqueça de fechar a torneira enquanto ensaboa as mãos — devemos consumir água com responsabilidade.",
+        "Desde 2008, o dia <strong>15 de outubro</strong> é o Dia Mundial da Lavagem das Mãos, com eventos organizados pelo Unicef em diversos países."
+      ]
+    },
+    {
+      "h": "Substantivo: os graus diminutivo e aumentativo",
+      "p": [
+        "Quanto ao <strong>grau</strong>, o substantivo pode ser <strong>diminutivo</strong> (indica tamanho menor que o original: <em>festinha</em>, <em>chapeuzinho</em>) ou <strong>aumentativo</strong> (indica tamanho maior: <em>festança</em>, <em>chapelão</em>).",
+        "Mas os graus nem sempre indicam tamanho! Eles também podem expressar <strong>sentimentos</strong>: carinho, desprezo ou admiração. Exemplos: <em>Você é um paizão!</em> (admiração); <em>Esse timinho não vale nada</em> (desprezo); <em>Filhinha, você quer ajuda na lição?</em> (carinho).",
+        "Compare: em <em>'Ontem as meninas jogaram o maior bolão!'</em>, o aumentativo expressa elogio, não tamanho. Em <em>'Que grupinho mais egoísta'</em>, o diminutivo expressa desprezo. Em <em>'não vou representar esse papelzinho'</em>, o diminutivo também expressa desprezo — não carinho."
+      ]
+    },
+    {
+      "h": "Ortografia: -sinho(a), -zinho(a) e -inho(a)",
+      "p": [
+        "Muitos diminutivos são formados com o acréscimo dos sufixos <strong>-sinho(a)</strong>, <strong>-zinho(a)</strong> e <strong>-inho(a)</strong>. Existe uma regra simples para escolher qual usar:",
+        "Quando a sílaba final da palavra <strong>tem s</strong>, forma-se o diminutivo com <strong>-sinho(a)</strong>. Exemplo: <em>vaso → vasinho</em>.",
+        "Quando a sílaba final <strong>não tem s</strong>, forma-se o diminutivo com <strong>-zinho(a)</strong> ou <strong>-inho(a)</strong>. Exemplos: <em>pai → paizinho</em>; <em>cama → caminha</em>; <em>anel → anelzinho</em>; <em>sapato → sapatinho</em>."
+      ]
+    },
+    {
+      "h": "O plural dos diminutivos",
+      "p": [
+        "Para formar o plural de um substantivo diminutivo terminado em -zinho(a) ou -zito(a), há um passo a passo: primeiro passe o substantivo para o <strong>plural</strong>, depois <strong>retire o -s</strong>, acrescente o sufixo e coloque o <strong>-s no final</strong> da palavra.",
+        "Exemplo com <em>animal</em>: plural = <em>animais</em> → sem o -s = <em>animai</em> → + <em>-zinho</em> + <em>-s</em> = <strong>animaizinhos</strong>.",
+        "Outro exemplo com <em>farol</em>: plural = <em>faróis</em> → sem o -s = <em>farói</em> → <strong>faroizinhos</strong>. O mesmo vale para <em>pão → pães → paezinhos</em> e <em>botão → botões → botõezinhos</em>."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "mode": "cartaz",
+      "short": "O cartaz",
+      "title": "Monte o cartaz de lavar as mãos",
+      "instructions": "Só entra no cartaz o que ensina alguém a fazer. O resto, joga fora.",
+      "term": "texto instrucional",
+      "categories": ["Vai para o cartaz", "Não é de cartaz"],
+      "artifact": {
+        "title": "Cartaz: como lavar as mãos",
+        "kind": "cartaz",
+        "empty": "O cartaz ainda está em branco.",
+        "done": "Cartaz pronto! Ele ensina, passo a passo, uma coisa de verdade.",
+        "termLine": "Um cartaz assim tem nome na prova: <strong>texto instrucional</strong>."
+      },
+      "items": [
+        {
+          "text": "Molhe as mãos com água limpa.",
+          "cat": 0,
+          "piece": "Molhe as mãos com água limpa",
+          "name": "comando direto",
+          "say": "Frase curta, mandando fazer. É a <strong>linguagem clara e objetiva</strong> do texto instrucional."
+        },
+        {
+          "text": "A mãozinha do menino tremia de medo naquela noite escura.",
+          "cat": 1,
+          "name": "narrativa",
+          "say": "Isso conta a história de um personagem. Narrativa não é <strong>texto instrucional</strong>."
+        },
+        {
+          "text": "Aplique sabão suficiente para cobrir as mãos molhadas.",
+          "cat": 0,
+          "piece": "Aplique sabão nas mãos molhadas",
+          "name": "material a usar",
+          "say": "Apareceu o material: o sabão. O <strong>texto instrucional</strong> costuma dizer o que você vai precisar."
+        },
+        {
+          "text": "Lava, lavinha, água que vem da fontinha.",
+          "cat": 1,
+          "name": "rima",
+          "say": "Isso rima. Rima é coisa de poema — o <strong>texto instrucional</strong> não rima."
+        },
+        {
+          "text": "Esfregue todas as partes das mãos por pelo menos 20 segundos.",
+          "cat": 0,
+          "piece": "Esfregue tudo por 20 segundos",
+          "name": "instrução exata",
+          "say": "Comando direto com uma informação exata: 20 segundos. Instrução não deixa dúvida."
+        },
+        {
+          "text": "— Você lavou as mãos? — Ainda não, mãe!",
+          "cat": 1,
+          "name": "diálogo",
+          "say": "São duas pessoas conversando. <strong>Texto instrucional</strong> não tem diálogo."
+        },
+        {
+          "text": "Enxágue as mãos com água.",
+          "cat": 0,
+          "piece": "Enxágue as mãos com água",
+          "name": "sequência de ações",
+          "say": "Repare na ordem: molhar, ensaboar, esfregar, enxaguar. O <strong>texto instrucional</strong> tem uma <strong>sequência de ações</strong>."
+        },
+        {
+          "text": "Seque as mãos com um pano limpo ou toalha de papel.",
+          "cat": 0,
+          "piece": "Seque com um pano limpo",
+          "name": "último passo",
+          "say": "Cinco passos, na ordem certa. Seu cartaz virou um <strong>texto instrucional</strong> completo."
+        }
+      ]
+    },
+    {
+      "type": "maquina",
+      "mode": "maquina",
+      "short": "A máquina",
+      "title": "A máquina de encolher e crescer palavras",
+      "instructions": "A palavra entra inteira. Qual delas sai da máquina?",
+      "term": "diminutivo e aumentativo",
+      "artifact": {
+        "title": "Prateleira de palavras",
+        "kind": "prateleira",
+        "empty": "A prateleira ainda está vazia.",
+        "done": "Prateleira cheia! Você encolheu e cresceu palavras escrevendo cada uma do jeito certo.",
+        "termLine": "Toda palavra que encolheu está no <strong>grau diminutivo</strong>. Toda palavra que cresceu está no <strong>grau aumentativo</strong>."
+      },
+      "items": [
+        {
+          "base": "vaso",
+          "result": "vasinho",
+          "wrong": ["vazinho", "vasozinho"],
+          "dir": "menor",
+          "name": "diminutivo",
+          "say": "A palavra encolheu: isso é o <strong>diminutivo</strong>. E a última sílaba de <em>vaso</em> tem <strong>s</strong> — por isso <em>vasinho</em>, com S, e não <em>vazinho</em>."
+        },
+        {
+          "base": "pai",
+          "result": "paizinho",
+          "wrong": ["paisinho", "painho"],
+          "dir": "menor",
+          "name": "diminutivo",
+          "say": "<em>Pai</em> não tem <strong>s</strong> na última sílaba, então escrevemos com <strong>Z</strong>: <em>paizinho</em>. Outro <strong>diminutivo</strong>."
+        },
+        {
+          "base": "cama",
+          "result": "caminha",
+          "wrong": ["camazinha", "camainha"],
+          "dir": "menor",
+          "name": "diminutivo",
+          "say": "Aqui a palavra perde o <strong>-a</strong> do fim e ganha <strong>-inha</strong>: <em>caminha</em>. Também é <strong>diminutivo</strong>."
+        },
+        {
+          "base": "sapato",
+          "result": "sapatinho",
+          "wrong": ["sapatozinho", "sapatinha"],
+          "dir": "menor",
+          "name": "diminutivo",
+          "say": "O <strong>-o</strong> do fim sai antes de entrar o <strong>-inho</strong>: <em>sapatinho</em>, e não <em>sapatozinho</em>. Já são quatro <strong>diminutivos</strong> na prateleira."
+        },
+        {
+          "base": "bola",
+          "result": "bolão",
+          "wrong": ["bolaão", "bolzão"],
+          "dir": "maior",
+          "name": "aumentativo",
+          "say": "Agora a palavra cresceu: isso é o <strong>aumentativo</strong>. Cuidado — em <em>“que bolão!”</em> ele vira elogio, e não tamanho."
+        },
+        {
+          "base": "pai",
+          "result": "paizão",
+          "wrong": ["paião", "paisão"],
+          "dir": "maior",
+          "name": "aumentativo",
+          "say": "<em>Paizão</em> não fala do tamanho do pai — fala de <strong>admiração</strong>. O <strong>aumentativo</strong> também mostra sentimento."
+        },
+        {
+          "base": "animal",
+          "result": "animaizinhos",
+          "wrong": ["animalzinhos", "animaiszinhos"],
+          "dir": "menor",
+          "plural": true,
+          "name": "diminutivo plural",
+          "say": "O caminho é <em>animal → animais → animai → <strong>animaizinhos</strong></em>. Primeiro o plural, depois tira o <strong>-s</strong>, e só então encolhe."
+        },
+        {
+          "base": "pão",
+          "result": "pãezinhos",
+          "wrong": ["pãozinhos", "pãesinhos"],
+          "dir": "menor",
+          "plural": true,
+          "name": "diminutivo plural",
+          "say": "<em>pão → pães → pãe → <strong>pãezinhos</strong></em>. Sempre o plural primeiro. Essa palavra cai na prova!"
+        }
+      ]
+    },
+    {
+      "type": "memoria",
+      "mode": "memoria",
+      "short": "Jogo da memória",
+      "title": "Jogo da memória dos graus",
+      "instructions": "Vire duas cartas e ache a palavra que combina com a outra.",
+      "term": "diminutivo e aumentativo",
+      "artifact": {
+        "title": "Pares que você achou",
+        "kind": "prateleira",
+        "empty": "Nenhum par ainda. Vire duas cartas!",
+        "done": "Todos os pares achados! Repare que nem um deles falava só de tamanho.",
+        "termLine": "Os graus <strong>diminutivo</strong> e <strong>aumentativo</strong> mudam o tamanho — mas também mostram <strong>carinho, desprezo e admiração</strong>."
+      },
+      "items": [
+        {
+          "base": "festa",
+          "result": "festinha",
+          "name": "diminutivo",
+          "say": "<em>Festinha</em> pode ser uma festa pequena — ou uma festa de que a pessoa gostou muito. O <strong>diminutivo</strong> também é carinho."
+        },
+        {
+          "base": "chapéu",
+          "result": "chapelão",
+          "name": "aumentativo",
+          "say": "<em>Chapelão</em> é um chapéu grande. Aqui o <strong>aumentativo</strong> fala mesmo de tamanho."
+        },
+        {
+          "base": "time",
+          "result": "timinho",
+          "name": "diminutivo de desprezo",
+          "say": "Em <em>“esse timinho não vale nada”</em>, o <strong>diminutivo</strong> não fala do tamanho do time: mostra <strong>desprezo</strong>."
+        },
+        {
+          "base": "filha",
+          "result": "filhinha",
+          "name": "diminutivo de carinho",
+          "say": "Em <em>“filhinha, quer ajuda na lição?”</em>, o <strong>diminutivo</strong> mostra <strong>carinho</strong> — a filha não é pequena."
+        },
+        {
+          "base": "papel",
+          "result": "papelzinho",
+          "name": "diminutivo de desprezo",
+          "say": "Em <em>“não vou representar esse papelzinho”</em>, o <strong>diminutivo</strong> mostra <strong>desprezo</strong>, e não carinho. Cuidado com essa!"
+        },
+        {
+          "base": "gato",
+          "result": "gatão",
+          "name": "aumentativo",
+          "say": "<em>Gatão</em> pode ser um gato enorme — ou um elogio. O <strong>aumentativo</strong> também expressa <strong>admiração</strong>."
+        }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Assinale a opção que apresenta uma característica de textos instrucionais.",
+      "options": ["Costumam ter rimas", "Podem apresentar imagens que ilustram uma sequência de ações", "Dividem-se em versos e estrofes", "Apresentam personagens que dialogam no texto"],
+      "answer": 1,
+      "explain": "Textos instrucionais mostram como algo deve ser feito, e as imagens ajudam o leitor a entender cada etapa. Rimas, versos e estrofes são de poemas; diálogos entre personagens são de narrativas."
+    },
+    {
+      "type": "mc",
+      "q": "Relacione a formação do diminutivo: (1) -inho, (2) -sinho, (3) -zinho, com as palavras vaso, sapato, anel. Qual é a sequência correta para a segunda coluna?",
+      "options": ["1 – 2 – 3", "2 – 3 – 1", "2 – 1 – 3", "3 – 1 – 2"],
+      "answer": 2,
+      "explain": "Vaso termina com sílaba que tem s → vasinho (-sinho, opção 2). Sapato não tem s na última sílaba → sapatinho (-inho, opção 1). Anel → anelzinho (-zinho, opção 3). A sequência é 2 – 1 – 3."
+    },
+    {
+      "type": "mc",
+      "q": "Na tirinha, Magali diz 'Eu quelo um saco de pipoca!' e o menino pergunta 'E a garotinha?'. Marque a afirmativa correta.",
+      "options": ["Não há nenhum substantivo no grau diminutivo", "O diminutivo que aparece na tirinha indica o tamanho da Magali", "O substantivo garotinha está no grau normal", "No primeiro quadrinho, o diminutivo expressa afeto"],
+      "answer": 3,
+      "explain": "'Garotinha' é um substantivo no grau diminutivo, mas não fala do tamanho da Magali — expressa afeto, carinho. Lembre-se: os graus podem indicar sentimentos, e não apenas tamanho."
+    },
+    {
+      "type": "text",
+      "q": "Escreva o diminutivo da palavra 'rosa':",
+      "answers": ["rosinha", "rosinha."],
+      "explain": "Rosa tem s na sílaba final, então usamos o sufixo -sinha: rosinha. Compare com bola (sem s), que vira bolinha."
+    },
+    {
+      "type": "text",
+      "q": "Escreva o diminutivo PLURAL da palavra 'pão' (dica: pão → pães → ...):",
+      "answers": ["paezinhos", "pãezinhos", "paozinhos"],
+      "explain": "O passo a passo é: pão → plural pães → tira o -s: pãe → acrescenta -zinho + -s = pãezinhos. Primeiro o plural, depois o sufixo!"
+    },
+    {
+      "type": "text",
+      "q": "Na frase 'Você é um paizão!', o aumentativo expressa tamanho ou um sentimento de admiração?",
+      "answers": ["admiracao", "sentimento", "sentimento de admiracao", "admiracao.", "um sentimento"],
+      "explain": "Expressa admiração. Além do tamanho, os graus do substantivo podem indicar sentimentos como carinho, desprezo e admiração."
+    },
+    {
+      "type": "mc",
+      "q": "Na frase 'Que grupinho mais egoísta', o diminutivo expressa:",
+      "options": ["O tamanho pequeno do grupo", "Carinho pelo grupo", "Desprezo pelo grupo", "Admiração pelo grupo"],
+      "answer": 2,
+      "explain": "O contexto — 'mais egoísta' — mostra que quem fala está criticando. O diminutivo aqui carrega desprezo, não informação sobre quantas pessoas há no grupo."
+    },
+    {
+      "type": "text",
+      "q": "Segundo o cartaz do Unicef, por quantos segundos, no mínimo, devemos esfregar todas as superfícies das mãos? (escreva o número)",
+      "answers": ["20", "20 segundos", "vinte"],
+      "explain": "Pelo menos 20 segundos, esfregando o dorso, entre os dedos e sob as unhas. Uma dica do próprio cartaz: cante uma música para ajudar a contar o tempo."
+    },
+    {
+      "type": "mc",
+      "q": "Um trecho de manual de videogame ensina: '1. Faça 2 ou 3 rotações, depois toque em OK. Se a mensagem aparecer, volte ao primeiro passo.' Esse texto é instrucional porque:",
+      "options": ["Tem rimas e ritmo", "Apresenta uma sequência de passos que ensina como fazer algo", "Conta uma história com personagens", "Expressa a opinião do autor"],
+      "answer": 1,
+      "explain": "Ele traz comandos diretos e numerados que orientam o leitor a executar um procedimento — calibrar o botão. É exatamente a função do texto instrucional."
+    }
+  ]
+}

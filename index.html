@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estudos do 3º ano com explicações curtas, experiências e revisões de Português, Matemática, Ciências, Geografia e História.">
+  <meta name="theme-color" content="#f4f6fb">
+  <title>Estudos do 3º ano</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='86'>📘</text></svg>">
+</head>
+<body class="body--home">
+
+<!-- ================= CABEÇALHO FIXO ================= -->
+<header class="topo" id="topo">
+  <button class="topo__voltar" id="btn-voltar" hidden aria-label="Voltar">
+    <span aria-hidden="true">←</span>
+  </button>
+  <a class="topo__marca" href="#" id="link-home">
+    <span class="topo__raio" aria-hidden="true">✦</span>
+    <span class="topo__nome">3º ano</span>
+  </a>
+  <div class="topo__xp" id="topo-xp" title="Assuntos concluídos">
+    <span class="topo__xp-num" id="xp-num">0</span>
+    <span class="topo__xp-lbl">concluídos</span>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- ============ TELA 1: HOME / DISCIPLINAS ============ -->
+  <section class="tela tela--ativa" id="tela-home" aria-labelledby="home-titulo">
+
+    <div class="hero">
+      <div class="hero__conteudo">
+        <h1 class="hero__titulo" id="home-titulo">O que vamos descobrir hoje?</h1>
+      </div>
+      <figure class="hero__figura">
+        <picture>
+          <source srcset="assets/capa-aprender.webp" type="image/webp">
+          <img class="hero__arte" src="assets/capa-aprender.png" alt="Crianças exploram palavras, números, mapas, a natureza e o céu a partir de um livro aberto" width="1693" height="929" fetchpriority="high">
+        </picture>
+      </figure>
+    </div>
+
+    <button class="continuar" id="btn-continuar" type="button" hidden>
+      <span class="continuar__ico" aria-hidden="true">↗</span>
+      <span class="continuar__corpo">
+        <span class="continuar__rotulo">Continuar de onde parei</span>
+        <strong class="continuar__titulo" id="continuar-titulo"></strong>
+        <span class="continuar__detalhe" id="continuar-detalhe"></span>
+      </span>
+      <span class="continuar__seta" aria-hidden="true">›</span>
+    </button>
+
+    <h2 class="secao__titulo" id="materias-titulo">Matérias</h2>
+    <div class="grade-disciplinas" id="grade-disciplinas"><!-- render via JS --></div>
+
+    <div class="seu-caminho" id="painel-progresso" hidden>
+      <div class="seu-caminho__linha">
+        <span>Seu caminho</span>
+        <strong id="painel-pct">0%</strong>
+      </div>
+      <div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="barra-geral">
+        <div class="barra__preenchimento" id="barra-fill"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============ TELA 2: CAPÍTULOS DA DISCIPLINA ============ -->
+  <section class="tela" id="tela-disciplina" aria-labelledby="disc-titulo" hidden>
+    <div class="cabecalho-disc" id="cabecalho-disc"><!-- render via JS --></div>
+    <h2 class="secao__titulo">Assuntos</h2>
+    <div class="lista-capitulos" id="lista-capitulos"><!-- render via JS --></div>
+  </section>
+
+  <!-- ============ TELA 3: CAPÍTULO (ABAS) ============ -->
+  <section class="tela" id="tela-capitulo" aria-labelledby="cap-titulo" hidden>
+    <div class="cap-topo">
+      <p class="cap-topo__trilha" id="cap-trilha"></p>
+      <h2 class="cap-topo__titulo" id="cap-titulo"></h2>
+      <p class="cap-topo__sub" id="cap-sub"></p>
+      <p class="cap-topo__pergunta" id="cap-pergunta"></p>
+    </div>
+
+    <!-- Abas -->
+    <div class="abas" role="tablist" aria-label="Seções do capítulo">
+      <button class="aba aba--ativa" id="tab-teoria" role="tab" aria-selected="true" aria-controls="painel-teoria" data-aba="teoria">
+        <span class="aba__ico" aria-hidden="true">💡</span><span class="aba__txt">Descobrir</span>
+      </button>
+      <button class="aba" id="aba-video" role="tab" aria-selected="false" aria-controls="painel-video" data-aba="video" hidden>
+        <span class="aba__ico" aria-hidden="true">🎬</span><span class="aba__txt">Vídeo</span>
+      </button>
+      <button class="aba" id="tab-jogos" role="tab" aria-selected="false" aria-controls="painel-jogos" data-aba="jogos">
+        <span class="aba__ico" aria-hidden="true">🎮</span><span class="aba__txt">Jogar</span>
+      </button>
+      <button class="aba" id="tab-desafio" role="tab" aria-selected="false" aria-controls="painel-desafio" data-aba="desafio">
+        <span class="aba__ico" aria-hidden="true">🏆</span><span class="aba__txt">Desafio</span>
+      </button>
+    </div>
+
+    <!-- Painel: Teoria -->
+    <div class="painel-aba painel-aba--ativo" id="painel-teoria" role="tabpanel" aria-labelledby="tab-teoria">
+      <div class="teoria" id="teoria-conteudo"></div>
+    </div>
+
+    <!-- Painel: Vídeo -->
+    <div class="painel-aba" id="painel-video" role="tabpanel" aria-labelledby="aba-video" hidden>
+      <div class="video" id="video-conteudo"></div>
+    </div>
+
+    <!-- Painel: Jogos -->
+    <div class="painel-aba" id="painel-jogos" role="tabpanel" aria-labelledby="tab-jogos" hidden>
+      <div class="jogos" id="jogos-conteudo"></div>
+    </div>
+
+    <!-- Painel: Desafio -->
+    <div class="painel-aba" id="painel-desafio" role="tabpanel" aria-labelledby="tab-desafio" hidden>
+      <div class="desafio" id="desafio-conteudo"></div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= TOAST ================= -->
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="data.js"></script>
+<script src="experiences.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

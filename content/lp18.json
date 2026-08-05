@@ -1,0 +1,147 @@
+{
+  "id": "lp18",
+  "module": 18,
+  "title": "Lembranças de uma vida",
+  "subtitle": "Conto de memórias · Adjetivo · Sufixo -oso/-osa",
+  "theory": [
+    {
+      "h": "O conto de memórias",
+      "p": [
+        "Os <strong>contos de memórias</strong> narram recordações de acontecimentos da vida da <strong>pessoa que conta a história</strong>. Ou seja, quem narra viveu aquilo — está relatando fatos do <strong>passado</strong>, e não inventando uma história ou planejando o futuro.",
+        "Esses contos podem abordar vários temas: infância, família, lugares significativos ou momentos importantes que deixaram uma impressão marcante na mente do narrador.",
+        "Uma característica importante: eles <strong>não precisam estar em ordem cronológica</strong>, ou seja, na ordem exata em que os fatos aconteceram. O narrador pode ir e voltar no tempo conforme as lembranças surgem."
+      ]
+    },
+    {
+      "h": "\"Uma aula de música do meu avô\", de Arthur Nestrovski",
+      "p": [
+        "O narrador tinha uns <strong>sete ou oito anos</strong> e todo domingo almoçava na casa dos avós, o vô Maurício e a vó Luísa. Para ele, a casa era \"linda, enorme\" — e ele mesmo reconhece: <em>\"talvez nem fosse tão grande assim; mas para mim, naquela época, era. E a gente sempre vê as coisas de acordo com o nosso tamanho.\"</em>",
+        "Quem comandava a música era o avô: escolhia um disco ou deixava o <strong>rádio</strong> ligado na estação de música clássica. Num desses domingos, o menino reconheceu a música que tocava: <em>\"As quatro estações\"</em>, de <strong>Vivaldi</strong>. O avô discordou: <em>\"É Bach\"</em>. E insistiu: <em>\"Não seja bobo, menino.\"</em>",
+        "O menino estava <strong>orgulhoso</strong> de saber, mas também decepcionado por sentir que o avô não confiava na opinião dele. Quando a música acabou, o locutor anunciou: Vivaldi, \"As quatro estações\". O menino ficou com os olhos cheios de lágrimas — <em>\"estava contente por ter acertado, mas estava mais triste do que contente\"</em>.",
+        "Então o avô fez algo que ele nunca esqueceu: atravessou a sala, olhou-o nos olhos e disse com a maior simplicidade: <strong>\"Desculpe. Você tinha razão. Eu quero lhe pedir desculpas.\"</strong> Para os outros, o vô Maurício era um homem muito importante e respeitado. Anos depois, o narrador conclui que o mais importante daquele domingo não foi Vivaldi, e sim <strong>descobrir que podia confiar na própria opinião</strong>."
+      ]
+    },
+    {
+      "h": "O adjetivo",
+      "p": [
+        "Os <strong>adjetivos</strong> são palavras que <strong>caracterizam o substantivo</strong>, indicando qualidade, defeito, origem ou estado.",
+        "No trecho <em>\"moravam numa casa linda, enorme\"</em>, as palavras <strong>linda</strong> e <strong>enorme</strong> são adjetivos: caracterizam o substantivo <em>casa</em>.",
+        "O adjetivo <strong>concorda</strong> com o substantivo que caracteriza em <strong>gênero</strong> (masculino e feminino) e em <strong>número</strong> (singular e plural). Por isso dizemos <em>o menino orgulhoso</em>, mas <em>a mãe orgulhosa</em>; <em>o jardim florido</em>, mas <em>as flores floridas</em>."
+      ]
+    },
+    {
+      "h": "Ortografia: o sufixo -oso / -osa",
+      "p": [
+        "Quando juntamos o sufixo <strong>-oso</strong> a um substantivo, formamos um <strong>adjetivo derivado</strong>. A forma feminina terá o sufixo <strong>-osa</strong>.",
+        "Exemplo: com <em>esperança</em> → <strong>esperançoso / esperançosa</strong>. Com <em>orgulho</em> → <strong>orgulhoso / orgulhosa</strong>.",
+        "Outros exemplos: criança com manha → criança <strong>manhosa</strong>; comida com sabor → comida <strong>saborosa</strong>; estampa com brilho → estampa <strong>brilhosa</strong>; animal com fúria → animal <strong>furioso</strong>; livro com fama → livro <strong>famoso</strong>."
+      ]
+    },
+    {
+      "h": "A linha do tempo",
+      "p": [
+        "A <strong>linha do tempo</strong> é uma representação simplificada de eventos em <strong>ordem cronológica</strong>, ou seja, na ordem em que os fatos aconteceram. Ela pode ser sobre uma pessoa, um grupo de pessoas, um lugar e outros temas.",
+        "Repare na diferença: o conto de memórias <strong>não precisa</strong> seguir a ordem cronológica, mas a linha do tempo <strong>é organizada exatamente por ela</strong>."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "pairs",
+      "title": "Fábrica de adjetivos com -oso/-osa",
+      "instructions": "Ligue cada expressão ao adjetivo derivado correspondente.",
+      "pairs": [
+        ["criança com manha", "criança manhosa"],
+        ["comida com sabor", "comida saborosa"],
+        ["estampa com brilho", "estampa brilhosa"],
+        ["animal com fúria", "animal furioso"],
+        ["livro com fama", "livro famoso"],
+        ["menino com orgulho", "menino orgulhoso"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Substantivo ou adjetivo?",
+      "instructions": "Arraste cada palavra para a classe gramatical a que ela pertence.",
+      "categories": ["Substantivo", "Adjetivo"],
+      "items": [
+        { "text": "casa", "cat": 0 },
+        { "text": "enorme", "cat": 1 },
+        { "text": "avô", "cat": 0 },
+        { "text": "orgulhoso", "cat": 1 },
+        { "text": "música", "cat": 0 },
+        { "text": "amarelo", "cat": 1 },
+        { "text": "jardim", "cat": 0 },
+        { "text": "florido", "cat": 1 }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Na tirinha, o Menino Maluquinho diz: 'Vou escrever minhas memórias!'. Para escrever suas memórias, ele deverá:",
+      "options": ["Inventar uma história sobre a família dele", "Planejar alguns eventos futuros com a família", "Relatar fatos do passado", "Contar diversos fatos em ordem cronológica"],
+      "answer": 2,
+      "explain": "Contos de memórias relatam fatos do passado realmente vividos por quem narra — não são inventados nem planejam o futuro. E atenção: eles NÃO precisam seguir a ordem cronológica."
+    },
+    {
+      "type": "mc",
+      "q": "Na frase 'O guarda-chuva do Menino Maluquinho é amarelo', a classe gramatical da palavra destacada é:",
+      "options": ["Artigo", "Adjetivo", "Substantivo", "Verbo"],
+      "answer": 1,
+      "explain": "'Amarelo' caracteriza o substantivo guarda-chuva, indicando uma qualidade dele — sua cor. Palavras que caracterizam substantivos são adjetivos."
+    },
+    {
+      "type": "mc",
+      "q": "Qual adjetivo podemos usar para indicar que os personagens criados por Ziraldo têm fama?",
+      "options": ["Familiares", "Famintos", "Famosos", "Famulentos"],
+      "answer": 2,
+      "explain": "Fama + sufixo -oso = famosos. 'Famintos' vem de fome, 'familiares' vem de família — e 'famulentos' nem existe como adjetivo de fama."
+    },
+    {
+      "type": "mc",
+      "q": "De acordo com o conto 'Uma aula de música do meu avô', sempre vemos as coisas:",
+      "options": ["Maiores que o nosso tamanho e, quando somos grandes, vemos as coisas maiores ainda", "De acordo com o nosso tamanho, então, quando somos pequenos, tudo parece enorme", "Do tamanho que elas realmente são, mesmo quando somos pequenos", "Menores do que realmente são quando somos crianças"],
+      "answer": 1,
+      "explain": "O narrador diz: 'talvez nem fosse tão grande assim; mas para mim, naquela época, era. E a gente sempre vê as coisas de acordo com o nosso tamanho'."
+    },
+    {
+      "type": "text",
+      "q": "Por meio de qual objeto o narrador do conto costumava ouvir música na casa do avô?",
+      "answers": ["radio", "o radio", "pelo radio", "radio."],
+      "explain": "Era o rádio, que o avô deixava ligado na estação de música clássica. Ele também escolhia discos, mas naquele domingo específico a música que gerou a discussão tocava no rádio."
+    },
+    {
+      "type": "text",
+      "q": "Qual era a idade aproximada do narrador na época do acontecimento relatado? (escreva o número)",
+      "answers": ["7", "8", "sete", "oito", "7 ou 8", "sete ou oito", "7 ou 8 anos", "sete ou oito anos"],
+      "explain": "Ele diz: 'Eu devia ter uns sete ou oito anos'. Era um menino pequeno — mais ou menos a sua idade!"
+    },
+    {
+      "type": "text",
+      "q": "Forme o adjetivo derivado no FEMININO a partir do substantivo 'esperança':",
+      "answers": ["esperancosa", "esperancosa."],
+      "explain": "Esperança + sufixo -osa = esperançosa. No masculino ficaria esperançoso. Lembre-se: o sufixo -oso/-osa transforma substantivos em adjetivos."
+    },
+    {
+      "type": "text",
+      "q": "Reescreva o final da frase substituindo o substantivo: 'O menino estava orgulhoso' → 'A mãe estava ______'.",
+      "answers": ["orgulhosa", "orgulhosa.", "a mae estava orgulhosa"],
+      "explain": "O adjetivo concorda em gênero e número com o substantivo. Como 'mãe' é feminino, o adjetivo passa de orgulhoso para orgulhosa."
+    },
+    {
+      "type": "mc",
+      "q": "Qual foi a atitude do avô ao descobrir que o menino tinha razão sobre a música?",
+      "options": ["Fingiu que não tinha ouvido o locutor", "Atravessou a sala, olhou o menino nos olhos e pediu desculpas", "Explicou por que tinha se confundido", "Trocou de assunto durante o almoço"],
+      "answer": 1,
+      "explain": "O avô disse: 'Desculpe. Você tinha razão. Eu quero lhe pedir desculpas'. Foi essa atitude — de um adulto respeitado reconhecendo o próprio erro — que o narrador nunca esqueceu."
+    },
+    {
+      "type": "mc",
+      "q": "O que diferencia uma linha do tempo de um conto de memórias?",
+      "options": ["A linha do tempo é sempre sobre pessoas famosas", "A linha do tempo organiza os eventos em ordem cronológica; o conto de memórias não precisa seguir essa ordem", "O conto de memórias usa apenas imagens", "Não há diferença entre os dois"],
+      "answer": 1,
+      "explain": "A linha do tempo é definida pela ordem cronológica — a ordem exata em que os fatos aconteceram. Já o conto de memórias segue o fluxo das lembranças, podendo ir e voltar no tempo."
+    }
+  ]
+}

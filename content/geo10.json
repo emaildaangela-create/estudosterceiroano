@@ -1,0 +1,146 @@
+{
+  "id": "geo10",
+  "module": 10,
+  "title": "A população do município",
+  "theory": [
+    {
+      "h": "O que é população?",
+      "p": [
+        "<strong>População</strong> é o conjunto de pessoas que vivem em um mesmo local, como um município, um estado ou um país.",
+        "A população pode ser dividida de várias maneiras. Por <strong>idade</strong>, temos população infantil, jovem, adulta e idosa. Por <strong>local de moradia</strong>, temos população urbana (a que vive na cidade) e população rural (a que vive no campo).",
+        "Atualmente, no Brasil, a maior parte da população é <strong>urbana</strong>, e esse número tem crescido rapidamente. Já a população rural vem diminuindo no país."
+      ]
+    },
+    {
+      "h": "O censo demográfico",
+      "p": [
+        "Para conhecer a população total de um local, é preciso realizar uma pesquisa. No Brasil, ela se chama <strong>censo demográfico</strong> e é realizada pelo <strong>IBGE</strong> (Instituto Brasileiro de Geografia e Estatística) a cada <strong>10 anos</strong>.",
+        "Quantas pessoas vivem no Brasil? Como vivem? Onde vivem? Para descobrir, os <strong>recenseadores</strong> (pessoas que trabalham coletando dados por meio de entrevistas) visitam os <strong>domicílios</strong> (residências) de todos os municípios e fazem perguntas sobre idade, trabalho, cor, raça e outras.",
+        "As informações do censo ajudam o governo a compreender as características da população e a tomar as melhores decisões. Por exemplo: se um bairro tem muitas crianças, é ali que se devem construir escolas; se outro tem muitos idosos, é ali que fazem falta espaços de lazer para essa faixa etária."
+      ]
+    },
+    {
+      "h": "O jeito de viver no campo",
+      "p": [
+        "O dia a dia no campo costuma ser menos agitado do que na cidade. As atividades de trabalho da população rural estão mais ligadas aos <strong>ritmos da natureza</strong> (tempo, intervalo entre os acontecimentos): o dia e a noite, as estações do ano e o período de chuva.",
+        "O agricultor precisa da luz do dia para irrigar as plantas e colher os alimentos — tarefas difíceis de fazer à noite. Por isso, muitas famílias rurais acordam bem cedo para aproveitar todo o período de luz natural do Sol.",
+        "O descanso e o lazer nas áreas rurais geralmente acontecem junto à natureza: tomar banho em rios, lagos e cachoeiras, pescar, andar a cavalo, caminhar e participar de festas locais."
+      ]
+    },
+    {
+      "h": "O jeito de viver na cidade",
+      "p": [
+        "Nas cidades, as atividades não dependem tanto do ritmo da natureza. Muitas pessoas trabalham em locais fechados — escritórios, lojas, supermercados, hospitais e escolas —, por isso é possível trabalhar, estudar e realizar tarefas tanto de dia como à noite.",
+        "A circulação também é mais intensa: há muitos pedestres, automóveis, ônibus, motocicletas e bicicletas se deslocando pelas ruas e avenidas. A população costuma dizer que a vida nas cidades é <strong>muito agitada</strong>.",
+        "Para o lazer da população urbana existem parques e praças, além de cinemas, teatros, <em>shopping centers</em>, museus e estádios."
+      ]
+    },
+    {
+      "h": "As migrações",
+      "p": [
+        "<strong>Migração</strong> é o movimento de pessoas que deixam o local onde nasceram (<strong>lugar de origem</strong>) e buscam um novo local para viver (<strong>lugar de destino</strong>). Esse movimento pode ser <strong>temporário</strong> (alguns meses ou anos) ou <strong>permanente</strong> (que dura para sempre).",
+        "Vários fatores levam à decisão de migrar. O <strong>clima</strong> é um deles: a seca ou o excesso de chuva prejudicam as atividades do campo, e as famílias buscam outro lugar para cultivar e criar animais. A <strong>falta de emprego</strong> é outro fator importante: muitas pessoas migram para onde existem mais oportunidades de trabalho.",
+        "As migrações entre o campo e a cidade já foram muito comuns no Brasil. Muitas famílias saíram das áreas rurais por causa da seca ou da dificuldade de encontrar trabalho, migrando para as cidades em busca de emprego nas indústrias, no comércio e nos serviços. Assim, muitas cidades brasileiras cresceram bastante. Isso ainda acontece hoje, mas não de forma tão intensa como antigamente."
+      ]
+    },
+    {
+      "h": "Migrações e mistura de culturas",
+      "p": [
+        "Quando as pessoas migram, além da bagagem, elas levam consigo as <strong>características culturais</strong> do lugar de origem. Assim, o lugar de destino se transforma com a mistura de diferentes culturas.",
+        "<strong>Nas construções:</strong> a prefeitura de Blumenau (SC) tem estilo enxaimel, trazido pelos imigrantes alemães que chegaram nos séculos 19 e 20. Em Registro (SP) há um templo budista japonês, herança dos imigrantes do Japão.",
+        "<strong>Nas festas:</strong> São Paulo e Rio de Janeiro receberam muitos migrantes nordestinos e hoje abrigam festas e feiras típicas dessas tradições, como a Feira de São Cristóvão.",
+        "<strong>Na culinária:</strong> o acarajé, prato muito comum na Bahia, teve origem na África e foi trazido pelos africanos que foram forçados a vir ao Brasil como escravizados."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Campo ou cidade?",
+      "instructions": "Arraste cada característica para o modo de vida correspondente.",
+      "categories": ["Modo de vida rural", "Modo de vida urbano"],
+      "items": [
+        { "text": "Trabalho segue o ritmo da natureza", "cat": 0 },
+        { "text": "Circulação intensa de veículos", "cat": 1 },
+        { "text": "Acorda cedo para usar a luz do Sol", "cat": 0 },
+        { "text": "É possível trabalhar de dia e à noite", "cat": 1 },
+        { "text": "Lazer em rios e cachoeiras", "cat": 0 },
+        { "text": "Lazer em cinemas e shoppings", "cat": 1 }
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Heranças das migrações",
+      "instructions": "Ligue cada elemento cultural à sua origem.",
+      "pairs": [
+        ["Prefeitura de Blumenau (SC)", "Imigrantes alemães"],
+        ["Templo budista de Registro (SP)", "Imigrantes japoneses"],
+        ["Acarajé da Bahia", "Povos africanos"],
+        ["Feira de São Cristóvão (RJ)", "Migrantes nordestinos"],
+        ["Censo demográfico", "Pesquisa do IBGE a cada 10 anos"],
+        ["Recenseador", "Coleta dados por entrevistas"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Assinale a alternativa que apresenta características do jeito de viver da população URBANA.",
+      "options": ["O trabalho está mais ligado ao ritmo da natureza", "A circulação de veículos em ruas e avenidas é intensa", "Geralmente é preciso da luz do dia para realizar as atividades de trabalho", "O descanso e o lazer são atividades geralmente feitas junto à natureza"],
+      "answer": 1,
+      "explain": "As outras três descrevem a vida rural, onde o trabalho depende do Sol e das estações. Na cidade, muita gente trabalha em locais fechados e o trânsito é intenso o dia todo."
+    },
+    {
+      "type": "mc",
+      "q": "Assinale a alternativa correta sobre as migrações:",
+      "options": ["As migrações entre o campo e a cidade foram pouco comuns no Brasil", "As condições do clima não influenciam a migração entre o campo e a cidade", "A falta de emprego no campo é um fator que contribui para a migração da população rural", "As migrações entre o campo e a cidade não acontecem no Brasil"],
+      "answer": 2,
+      "explain": "A migração campo-cidade foi muito comum no Brasil e ainda ocorre. O clima (seca ou excesso de chuva) e a falta de emprego são os dois principais fatores que levam as famílias a migrar."
+    },
+    {
+      "type": "mc",
+      "q": "Assinale a alternativa INCORRETA sobre a influência dos imigrantes:",
+      "options": ["Os imigrantes não influenciam as características culturais do lugar de destino", "A influência dos imigrantes pode ser percebida nas construções do lugar de destino", "A influência dos imigrantes pode ser percebida nas festas populares do lugar de destino", "A influência dos imigrantes pode ser percebida na culinária do lugar de destino"],
+      "answer": 0,
+      "explain": "É justamente o contrário: quem migra leva sua cultura junto. Vemos isso nas construções (Blumenau), nas festas (Feira de São Cristóvão) e na culinária (acarajé)."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama a pesquisa feita pelo IBGE a cada 10 anos para conhecer a população brasileira?",
+      "answers": ["censo demografico", "censo", "o censo demografico"],
+      "explain": "É o censo demográfico. Os recenseadores visitam os domicílios de todos os municípios e perguntam sobre idade, trabalho, cor e raça — dados que ajudam o governo a decidir onde investir."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama o movimento de pessoas que deixam seu lugar de origem para viver em um novo lugar de destino?",
+      "answers": ["migracao", "a migracao", "migracoes", "as migracoes"],
+      "explain": "É a migração. Ela pode ser temporária (dura alguns meses ou anos) ou permanente (dura para sempre)."
+    },
+    {
+      "type": "mc",
+      "q": "No censo do bairro Lapa (área urbana) há 100 crianças, 60 jovens, 120 adultos e nenhum idoso. No bairro Jardim (área rural) há 0 crianças, 10 jovens, 30 adultos e 30 idosos. Se você fosse prefeito por um dia, onde criaria espaços de lazer para idosos?",
+      "options": ["Só no bairro Lapa", "Só no bairro Jardim", "Nos dois bairros", "Em nenhum dos dois"],
+      "answer": 1,
+      "explain": "Os 30 idosos do município vivem todos no bairro Jardim; no bairro Lapa não há nenhum. É assim que o censo ajuda o prefeito a decidir onde investir o dinheiro público."
+    },
+    {
+      "type": "text",
+      "q": "Atualmente, no Brasil, a maior parte da população vive na cidade ou no campo? (responda: urbana ou rural)",
+      "answers": ["urbana", "cidade", "na cidade", "populacao urbana"],
+      "explain": "A maior parte da população brasileira é urbana, e esse número continua crescendo rapidamente. A população rural vem diminuindo no país."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama a pessoa que trabalha coletando os dados da população por meio de entrevistas nos domicílios?",
+      "answers": ["recenseador", "recenseadora", "o recenseador", "recenseadores"],
+      "explain": "É o recenseador (ou recenseadora). Domicílio, por sua vez, é o nome técnico para residência — a casa onde as pessoas moram."
+    },
+    {
+      "type": "mc",
+      "q": "Por que as famílias que vivem no campo costumam acordar muito cedo?",
+      "options": ["Porque não existe energia elétrica no campo", "Para aproveitar todo o período de luz natural do Sol no trabalho", "Porque as escolas rurais abrem de madrugada", "Porque no campo não é possível dormir tarde"],
+      "answer": 1,
+      "explain": "O agricultor precisa da luz do dia para irrigar as plantas e colher os alimentos — tarefas difíceis de realizar à noite. O trabalho rural segue os ritmos da natureza."
+    }
+  ]
+}

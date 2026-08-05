@@ -1,0 +1,151 @@
+{
+  "id": "geo11",
+  "module": 11,
+  "title": "Serviços e problemas do município",
+  "theory": [
+    {
+      "h": "Serviços públicos e privados",
+      "p": [
+        "O <strong>serviço</strong> é um tipo de atividade que tem como principal objetivo atender às necessidades das pessoas. Nas áreas urbanas e rurais há serviços que mantêm os espaços públicos limpos e organizados e outros que atendem às necessidades cotidianas: transporte, saúde, educação, segurança, lazer e cultura.",
+        "Os <strong>serviços públicos</strong> são prestados pelo poder público — a prefeitura ou os governos estadual e federal — e pagos com o dinheiro dos <strong>impostos</strong> (valor cobrado da população pelo poder público para bancar os custos desses serviços). O transporte público de Salvador e a iluminação pública de Pelotas são exemplos.",
+        "Os <strong>serviços privados</strong> são prestados pela iniciativa privada: empresas particulares, grupos de pessoas ou indivíduos. Cabeleireiros e manicures oferecem serviços em salões; encanadores, eletricistas e pintores oferecem serviços de construção e manutenção.",
+        "Alguns serviços podem ser prestados pelos dois lados: os médicos, por exemplo, trabalham tanto em clínicas particulares quanto em hospitais públicos."
+      ]
+    },
+    {
+      "h": "O caminho correto do lixo",
+      "p": [
+        "A coleta de lixo é um dos principais serviços públicos do município, geralmente realizada por empresas contratadas pela prefeitura. O caminho adequado tem 5 etapas: <strong>1.</strong> em casa, separa-se o lixo seco do orgânico; <strong>2.</strong> as empresas de coleta passam nos locais para recolher; <strong>3.</strong> o lixo vai para uma usina de tratamento; <strong>4.</strong> os resíduos passam por uma <strong>triagem</strong> que separa os materiais recicláveis; <strong>5.</strong> o que não puder ser reaproveitado vai para o aterro sanitário.",
+        "Muitos municípios não conseguem prestar a coleta em todos os bairros. Sem esse serviço, a população acaba queimando o lixo ou descartando em terrenos baldios, ruas, córregos e rios.",
+        "Ao se decompor, o lixo gera um resíduo líquido chamado <strong>chorume</strong>. No descarte incorreto, o chorume infiltra e contamina o solo e as águas dos rios, córregos e lagos. Queimar o lixo também é incorreto: libera poluentes no ar e pode causar incêndios.",
+        "No <strong>aterro sanitário</strong>, o solo recebe um revestimento que impede a infiltração do chorume, que é coletado por tubos e tratado antes de voltar à natureza. Uma tubulação queima o gás metano gerado pela decomposição, e o lixo é coberto diariamente com terra para evitar mau cheiro e doenças. Quando o aterro é preenchido, pode-se fazer uma cobertura vegetal."
+      ]
+    },
+    {
+      "h": "Tratamento de água",
+      "p": [
+        "A água que usamos para beber, tomar banho, escovar os dentes e limpar a casa deve ser <strong>potável</strong>. O tratamento tem 6 etapas: <strong>captação</strong> (retirada da água de rios, lagos e represas), <strong>floculação</strong> (colocam-se substâncias que aglomeram as partículas de sujeira), <strong>decantação</strong> (as partículas se depositam no fundo e são retiradas), <strong>filtragem</strong> (a água passa por camadas de pedregulho, cascalho, areia e carvão), <strong>desinfecção</strong> (adição de cloro e flúor) e <strong>distribuição</strong> (reservatório e encanamento até as casas).",
+        "Tratar a água é fundamental para evitar a transmissão de doenças como diarreia e leptospirose. Também é preciso usá-la de forma consciente, evitando o desperdício."
+      ]
+    },
+    {
+      "h": "Tratamento de esgoto",
+      "p": [
+        "O tratamento de esgoto separa as partes líquida e sólida dos resíduos, diminuindo a poluição e devolvendo a água à natureza em boas condições.",
+        "Nas <strong>áreas rurais</strong> é comum o uso de <strong>fossas sépticas</strong>: um tanque que recebe e armazena o esgoto, separa a parte líquida da sólida e purifica a água antes de lançá-la no ambiente.",
+        "Nas <strong>áreas urbanas</strong>, o esgoto é coletado por tubulações e levado às <strong>estações de tratamento de esgoto (ETE)</strong>, onde passa por grades, caixa de areia, decantador primário, tanque de aeração e decantador secundário antes de voltar ao rio. Ainda há lugares no Brasil em que o esgoto é lançado na natureza sem tratamento, poluindo os recursos hídricos."
+      ]
+    },
+    {
+      "h": "Os quatro tipos de poluição",
+      "p": [
+        "<strong>Poluição atmosférica</strong> (atmosfera = camada de ar que envolve o planeta): provocada pelos poluentes das indústrias e da circulação de automóveis e ônibus, principalmente nas áreas urbanas.",
+        "<strong>Poluição hídrica</strong> (hídrico = relativo à água): causada pelo lançamento de resíduos industriais nos rios sem tratamento e pelos <strong>defensivos agrícolas</strong> (produtos químicos usados nas plantações contra pragas e doenças).",
+        "<strong>Poluição sonora</strong>: gerada pelo forte ruído de motores e buzinas, máquinas e equipamentos de construção e carros de som.",
+        "<strong>Poluição visual</strong>: gerada pelo excesso de anúncios, cartazes, letreiros, placas, fiação e fachadas de lojas."
+      ]
+    },
+    {
+      "h": "Como cuidar do município",
+      "p": [
+        "<strong>Lixo:</strong> evitar o consumo excessivo de produtos, separar o material para a <strong>coleta seletiva</strong> e fazer o descarte correto nas lixeiras.",
+        "<strong>Água:</strong> diminuir o tempo do banho, fechar a torneira ao escovar os dentes e não jogar óleo ou medicamentos no ralo da pia. Também é importante exigir do poder público a prestação de serviços adequados.",
+        "<strong>Ar:</strong> usar meios de transporte não poluentes, como a bicicleta, ou fazer deslocamentos a pé. O transporte coletivo (ônibus, metrô, trem) também ajuda, pois leva muitas pessoas ao mesmo tempo.",
+        "<strong>Ruído:</strong> buzinar apenas quando realmente necessário e usar fones de ouvido nos espaços públicos.",
+        "<strong>Visual:</strong> comerciantes devem respeitar os espaços públicos e não colocar placas em locais proibidos; os moradores devem cobrar a fiscalização do poder público. Ruas arborizadas e sem excesso de placas e fios tornam os espaços mais agradáveis."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Que tipo de poluição é essa?",
+      "instructions": "Arraste cada situação para o tipo de poluição que ela provoca.",
+      "categories": ["Atmosférica", "Hídrica", "Sonora", "Visual"],
+      "items": [
+        { "text": "Fumaça saindo de uma indústria", "cat": 0 },
+        { "text": "Esgoto lançado no rio sem tratamento", "cat": 1 },
+        { "text": "Buzinas e carros de som", "cat": 2 },
+        { "text": "Excesso de cartazes e letreiros", "cat": 3 },
+        { "text": "Defensivos agrícolas nas plantações", "cat": 1 },
+        { "text": "Escapamento de ônibus e carros", "cat": 0 },
+        { "text": "Britadeira em obra na rua", "cat": 2 },
+        { "text": "Fiação elétrica emaranhada", "cat": 3 }
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Etapas do tratamento de água",
+      "instructions": "Ligue cada etapa ao que acontece nela.",
+      "pairs": [
+        ["Captação", "Retira a água do rio ou represa"],
+        ["Floculação", "Aglomera as partículas de sujeira"],
+        ["Decantação", "Partículas se depositam no fundo"],
+        ["Filtragem", "Passa por areia, cascalho e carvão"],
+        ["Desinfecção", "Adiciona cloro e flúor"],
+        ["Distribuição", "Leva a água até as casas"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Marque a alternativa que NÃO apresenta uma característica dos serviços públicos.",
+      "options": ["Prestados pelo poder público", "Mantidos a partir dos impostos", "Administrados pela prefeitura", "Prestados pela iniciativa privada"],
+      "answer": 3,
+      "explain": "Serviços prestados pela iniciativa privada — empresas, grupos ou indivíduos — são serviços privados. Os públicos vêm do poder público e são bancados pelos impostos."
+    },
+    {
+      "type": "mc",
+      "q": "Qual é o destino adequado para o lixo gerado nos municípios?",
+      "options": ["Queimar", "Jogar no rio", "Levar para os aterros sanitários", "Jogar na rua"],
+      "answer": 2,
+      "explain": "O aterro sanitário é planejado para evitar contaminação: tem revestimento contra o chorume, tubos que queimam o gás metano e cobertura diária de terra. Queimar libera poluentes; jogar no rio ou na rua contamina solo e água."
+    },
+    {
+      "type": "mc",
+      "q": "Uma ilustração mostra uma avenida engarrafada, com carros buzinando, um avião passando, alto-falantes e uma britadeira quebrando o asfalto — todos com marcas de ruído. Que tipo de poluição é mostrada?",
+      "options": ["Poluição atmosférica", "Poluição sonora", "Poluição hídrica", "Poluição visual"],
+      "answer": 1,
+      "explain": "As marcas de som saindo das buzinas, do avião, dos alto-falantes e da britadeira indicam poluição sonora: o excesso de ruído nas áreas urbanas."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama o resíduo líquido, altamente poluente, gerado quando o lixo se decompõe na natureza?",
+      "answers": ["chorume", "o chorume"],
+      "explain": "É o chorume. No descarte incorreto ele infiltra no solo e contamina rios, córregos e lagos. Por isso o aterro sanitário tem revestimento e tubos para coletá-lo e tratá-lo."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama o valor cobrado da população pelo poder público para bancar os custos dos serviços públicos?",
+      "answers": ["imposto", "impostos", "os impostos", "o imposto"],
+      "explain": "São os impostos. É com esse dinheiro que a prefeitura mantém o transporte, a iluminação pública, a coleta de lixo, as escolas e os postos de saúde."
+    },
+    {
+      "type": "mc",
+      "q": "Na área rural, o tratamento de esgoto é feito comumente por meio de:",
+      "options": ["Estações de tratamento de esgoto (ETE)", "Fossas sépticas", "Aterros sanitários", "Usinas de triagem"],
+      "answer": 1,
+      "explain": "A fossa séptica é um tanque que recebe o esgoto, separa a parte líquida da sólida e purifica a água. As ETEs, com grades e decantadores, são típicas das áreas urbanas."
+    },
+    {
+      "type": "text",
+      "q": "Qual é a primeira coisa que devemos fazer em casa para que o lixo siga o caminho correto?",
+      "answers": ["separar o lixo", "separar o lixo seco do organico", "separar", "fazer a separacao do lixo", "separar o lixo seco do lixo organico", "coleta seletiva"],
+      "explain": "A etapa 1 é separar o lixo seco do orgânico em casa. Isso facilita a triagem na usina de tratamento e aumenta a quantidade de material que consegue ser reciclado."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama a água própria para o consumo humano, obtida após todas as etapas de tratamento?",
+      "answers": ["potavel", "agua potavel", "e potavel"],
+      "explain": "É a água potável. Ela passa por captação, floculação, decantação, filtragem, desinfecção e distribuição — processo que evita doenças como diarreia e leptospirose."
+    },
+    {
+      "type": "mc",
+      "q": "Qual atitude ajuda a diminuir a poluição atmosférica no município?",
+      "options": ["Usar bicicleta ou transporte coletivo nos deslocamentos", "Queimar o lixo do quintal", "Buzinar sempre que houver trânsito", "Colocar mais cartazes nas fachadas"],
+      "answer": 0,
+      "explain": "A bicicleta não emite poluentes, e o transporte coletivo leva muitas pessoas de uma vez, reduzindo o número de carros. Queimar lixo piora a poluição do ar; buzina é sonora e cartaz é visual."
+    }
+  ]
+}

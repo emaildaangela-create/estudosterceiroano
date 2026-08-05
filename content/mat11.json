@@ -1,0 +1,147 @@
+{
+  "id": "mat11",
+  "module": 11,
+  "title": "Divisão",
+  "theory": [
+    {
+      "h": "Repartir em partes iguais",
+      "p": [
+        "Dividir é <strong>repartir uma quantidade em partes iguais</strong>. Giovana tinha 12 figurinhas para colar igualmente em 3 cadernos: distribuindo de 1 em 1, cada caderno recebeu 4 figurinhas. Escrevemos: <strong>12 ÷ 3 = 4</strong>.",
+        "Se ela tivesse 4 cadernos, cada um receberia 3 figurinhas: 12 ÷ 4 = 3. Também podemos distribuir mais de 1 por vez — o resultado é o mesmo."
+      ]
+    },
+    {
+      "h": "Quantas vezes cabe?",
+      "p": [
+        "A divisão também responde à pergunta <strong>\"quantas vezes um número cabe em outro?\"</strong>. Marcos tem 30 caquis e quer formar caixas com meia dúzia (6) em cada: 30 ÷ 6 = 5, pois 5 × 6 = 30. Ele vai precisar de 5 caixas.",
+        "Repare que a divisão e a multiplicação são operações irmãs: para conferir uma divisão, basta multiplicar o resultado pelo divisor."
+      ]
+    },
+    {
+      "h": "Os termos da divisão",
+      "p": [
+        "Toda divisão tem quatro termos: o <strong>dividendo</strong> (quantidade que está sendo dividida), o <strong>divisor</strong> (em quantas partes dividimos), o <strong>quociente</strong> (o resultado) e o <strong>resto</strong> (o que sobra).",
+        "Em 72 ÷ 8 = 9: o 72 é o dividendo, o 8 é o divisor, o 9 é o quociente e o resto é 0."
+      ]
+    },
+    {
+      "h": "Divisão exata e não exata",
+      "p": [
+        "Uma divisão é <strong>exata</strong> quando não há sobra (resto zero). Aline dividiu 45 maços de espinafre em caixas de 9: 45 ÷ 9 = 5, resto 0 — exata!",
+        "Uma divisão <strong>não é exata</strong> quando há resto. Fernanda usa 2 cenouras por copo de suco e tem 17 cenouras: ela faz 8 copos e <strong>sobra 1 cenoura</strong>, pois 17 = 8 × 2 + 1. O quociente é 8 e o resto é 1."
+      ]
+    },
+    {
+      "h": "Estratégias para dividir",
+      "p": [
+        "<strong>Cálculo mental com a multiplicação:</strong> para 25 ÷ 3, pense: 3 × 8 = 24 (menor que 25) e 3 × 9 = 27 (passa). Então 25 ÷ 3 dá quociente 8 e resto 1.",
+        "<strong>Método da decomposição:</strong> para 72 ÷ 6, decompomos 72 = 60 + 12. Então 72 ÷ 6 = 60 ÷ 6 + 12 ÷ 6 = 10 + 2 = <strong>12</strong>.",
+        "<strong>Algoritmo (conta armada):</strong> para 56 ÷ 2, dividimos primeiro as dezenas (5 ÷ 2 = 2, resta 1 dezena), trocamos a dezena por 10 unidades (10 + 6 = 16) e dividimos: 16 ÷ 2 = 8. Resultado: 28."
+      ]
+    },
+    {
+      "h": "Metade, terça parte, quarta parte...",
+      "p": [
+        "Calculamos a <strong>metade</strong> dividindo por 2, a <strong>terça parte</strong> dividindo por 3, a <strong>quarta parte</strong> por 4, a <strong>quinta parte</strong> por 5 e a <strong>décima parte</strong> por 10.",
+        "Exemplos: metade de 84 = 42; terça parte de 69 = 23; quarta parte de 76 = 19; quinta parte de 95 = 19; décima parte de 50 = 5."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "pairs",
+      "title": "Divisões e resultados",
+      "instructions": "Ligue cada expressão ao seu valor.",
+      "pairs": [
+        ["Terça parte de 21", "7"],
+        ["Metade de 50", "25"],
+        ["Quinta parte de 25", "5"],
+        ["Quarta parte de 16", "4"],
+        ["Décima parte de 100", "10"],
+        ["72 ÷ 6", "12"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Exata ou não exata?",
+      "instructions": "Arraste cada divisão para o grupo correto.",
+      "categories": ["Divisão exata (resto 0)", "Divisão não exata (tem resto)"],
+      "items": [
+        { "text": "45 ÷ 9", "cat": 0 },
+        { "text": "17 ÷ 2", "cat": 1 },
+        { "text": "30 ÷ 6", "cat": 0 },
+        { "text": "25 ÷ 3", "cat": 1 },
+        { "text": "56 ÷ 2", "cat": 0 },
+        { "text": "49 ÷ 4", "cat": 1 }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Calculando a terça parte de 84 lápis, obtemos:",
+      "options": ["42 lápis", "32 lápis", "28 lápis", "18 lápis"],
+      "answer": 2,
+      "explain": "Terça parte = dividir por 3. Decompondo: 84 = 60 + 24; 60 ÷ 3 = 20 e 24 ÷ 3 = 8; 20 + 8 = 28 lápis."
+    },
+    {
+      "type": "mc",
+      "q": "A professora organizou os 26 alunos do 3º ano em duplas. Quantas duplas ela formou?",
+      "options": ["7 duplas", "8 duplas", "13 duplas", "14 duplas"],
+      "answer": 2,
+      "explain": "Dupla = grupo de 2. Então 26 ÷ 2 = 13 duplas, pois 13 × 2 = 26. Divisão exata, ninguém fica de fora!"
+    },
+    {
+      "type": "mc",
+      "q": "Na divisão 72 ÷ 8 = 9, com resto 0, temos que:",
+      "options": ["72 é o divisor; 8 é o dividendo; 9 é o quociente; 0 é o resto", "72 é o dividendo; 8 é o divisor; 9 é o quociente; 0 é o resto", "72 é o dividendo; 8 é o quociente; 9 é o divisor; 0 é o resto", "72 é o divisor; 8 é o resto; 9 é o quociente; 0 é o dividendo"],
+      "answer": 1,
+      "explain": "O dividendo é o número que está sendo dividido (72), o divisor indica em quantas partes (8), o quociente é o resultado (9) e o resto é o que sobra (0)."
+    },
+    {
+      "type": "mc",
+      "q": "Rafael quer cortar 14 metros de barbante em pedaços de 2 metros cada. Quantos pedaços ele vai obter?",
+      "options": ["12 pedaços", "13 pedaços", "10 pedaços", "7 pedaços"],
+      "answer": 3,
+      "explain": "É a ideia de 'quantas vezes cabe': 14 ÷ 2 = 7, pois 7 × 2 = 14. Rafael obtém 7 pedaços de 2 metros."
+    },
+    {
+      "type": "text",
+      "q": "Fernanda usa 2 cenouras para cada copo de suco e tem 17 cenouras. Quantos copos de suco ela consegue fazer? (escreva o número)",
+      "answers": ["8", "oito"],
+      "explain": "17 ÷ 2 dá quociente 8 e resto 1: ela faz 8 copos e sobra 1 cenoura. A divisão não é exata."
+    },
+    {
+      "type": "text",
+      "q": "Artur vai ler um livro de 112 páginas, lendo 8 páginas por dia. Em quantos dias ele termina o livro? (escreva o número)",
+      "answers": ["14", "quatorze", "catorze"],
+      "explain": "112 ÷ 8 = 14, pois 14 × 8 = 112. Trocamos a centena por dezenas: 11 dezenas ÷ 8 = 1 dezena e restam 3; 32 unidades ÷ 8 = 4. Resultado: 14 dias."
+    },
+    {
+      "type": "text",
+      "q": "Qual é a metade de 56? (escreva o número)",
+      "answers": ["28", "vinte e oito"],
+      "explain": "Metade = dividir por 2. 56 ÷ 2 = 28: 5 dezenas ÷ 2 = 2 dezenas (sobra 1); a dezena vira 10 unidades: 16 ÷ 2 = 8. Logo, 28."
+    },
+    {
+      "type": "text",
+      "q": "Maria levou R$ 80,00 à doceria e gastou a quinta parte desse valor. Quantos reais ela gastou? (escreva só o número)",
+      "answers": ["16", "16 reais", "r$ 16", "r$ 16,00", "16,00", "dezesseis"],
+      "explain": "Quinta parte = dividir por 5. 80 ÷ 5 = 16, pois 16 × 5 = 80. Maria gastou R$ 16,00."
+    },
+    {
+      "type": "mc",
+      "q": "Marcela e Adriana vão dividir igualmente uma camiseta de R$ 56,00. Se tivessem mais 2 irmãos para dividir (4 pessoas ao todo), quanto cada um pagaria?",
+      "options": ["R$ 28,00", "R$ 14,00", "R$ 12,00", "R$ 26,00"],
+      "answer": 1,
+      "explain": "Com 4 pessoas: 56 ÷ 4 = 14. Conferindo: 14 × 4 = 56. Cada um pagaria R$ 14,00 (metade da metade de 56)."
+    },
+    {
+      "type": "mc",
+      "q": "A turma do 3º ano usa 2 botões para os olhos de cada boneco. Quantos bonecos é possível fazer com 256 botões?",
+      "options": ["512 bonecos", "254 bonecos", "128 bonecos", "64 bonecos"],
+      "answer": 2,
+      "explain": "256 ÷ 2 = 128. Decompondo: 200 ÷ 2 = 100; 56 ÷ 2 = 28; 100 + 28 = 128 bonecos."
+    }
+  ]
+}

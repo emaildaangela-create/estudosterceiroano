@@ -1,0 +1,134 @@
+{
+  "id": "mat09",
+  "module": 9,
+  "title": "Contagem de possibilidades e outras multiplicações",
+  "theory": [
+    {
+      "h": "Fazendo combinações",
+      "p": [
+        "Imagine que você vai decorar uma festa e precisa escolher balões. Há 3 tamanhos (pequeno, médio e grande) e 3 cores (roxo, verde e rosa). Quantas combinações diferentes de 1 tamanho e 1 cor você consegue montar?",
+        "Para não se perder, podemos desenhar um esquema ligando cada tamanho às cores possíveis. Esse esquema é chamado de <strong>árvore de possibilidades</strong>: cada balão (pequeno, médio, grande) pode ser roxo, verde ou rosa — 3 opções para cada um. Como são 3 tamanhos com 3 opções de cor cada, temos 3 + 3 + 3 = 9, ou seja, <strong>3 × 3 = 9 combinações</strong>.",
+        "Outro exemplo: uma sorveteria tem 2 tipos de sorvete (casquinha e picolé) e 3 sabores (morango, limão e uva). Um cliente pode combinar 1 tipo e 1 sabor de <strong>2 × 3 = 6 maneiras diferentes</strong>."
+      ]
+    },
+    {
+      "h": "A multiplicação resolve a contagem",
+      "p": [
+        "Sempre que precisamos combinar 1 item de um grupo com 1 item de outro grupo, o total de combinações é a <strong>multiplicação</strong> da quantidade de opções de cada grupo.",
+        "João tem 2 cores de mochila e 4 cores de relógio: 2 × 4 = <strong>8 combinações</strong>. Alice pode escolher 1 sanduíche entre 4 opções e 1 suco entre 3 opções: 4 × 3 = <strong>12 lanches diferentes</strong>. Um restaurante com 4 tipos de salada e 5 molhos oferece 4 × 5 = <strong>20 combinações</strong>.",
+        "Também dá para organizar as combinações em uma tabela (quadro): as linhas mostram as opções de um grupo e as colunas, as do outro. Cada casinha da tabela é uma combinação."
+      ]
+    },
+    {
+      "h": "Multiplicação por 10, 100 e 1000",
+      "p": [
+        "Observe o padrão: 6 × 10 = 60, 6 × 100 = 600, 6 × 1000 = 6000. Ao multiplicar por 10, acrescentamos <strong>um zero</strong> ao número; por 100, <strong>dois zeros</strong>; por 1000, <strong>três zeros</strong>.",
+        "Isso vale em qualquer ordem: 10 × 15 = 150, 100 × 15 = 1500, 1000 × 15 = 15000. Esse truque deixa o cálculo mental muito mais rápido."
+      ]
+    },
+    {
+      "h": "Mais multiplicações: decompondo fatores",
+      "p": [
+        "E quando um fator é 20, 200 ou 2000? Podemos <strong>decompor</strong>: 12 × 20 é o mesmo que 12 × 2 × 10. Primeiro calculamos 12 × 2 = 24 e depois 24 × 10 = <strong>240</strong>.",
+        "Outros exemplos: 8 × 30 = 8 × 3 × 10 = 24 × 10 = 240; 4 × 600 = 4 × 6 × 100 = 24 × 100 = 2400; 3 × 9000 = 3 × 9 × 1000 = 27 × 1000 = 27000."
+      ]
+    },
+    {
+      "h": "As três ideias da multiplicação",
+      "p": [
+        "A multiplicação resolve problemas de três tipos: <strong>adição de parcelas iguais</strong> (7 fileiras com 10 maçãs: 7 × 10 = 70), <strong>disposição retangular</strong> (um mosaico de 7 fileiras com 10 azulejos: 7 × 10 = 70 azulejos) e <strong>combinação de possibilidades</strong> (2 cachorros e 3 coleiras: 2 × 3 = 6 maneiras).",
+        "Repare que a ordem dos fatores não muda o resultado: 2 × 5 = 10 e 5 × 2 = 10. Isso ajuda a conferir cálculos e a escolher o caminho mais fácil."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "pairs",
+      "title": "Ligue a multiplicação ao resultado",
+      "instructions": "Toque em uma carta de cada coluna para formar o par correto.",
+      "pairs": [
+        ["100 × 1", "100"],
+        ["13 × 10", "130"],
+        ["10 × 100", "1000"],
+        ["14 × 1000", "14000"],
+        ["12 × 20", "240"],
+        ["4 × 600", "2400"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Qual ideia da multiplicação?",
+      "instructions": "Arraste cada situação para a ideia de multiplicação que ela usa.",
+      "categories": ["Combinação de possibilidades", "Adição de parcelas iguais"],
+      "items": [
+        { "text": "2 mochilas e 4 relógios: quantos conjuntos?", "cat": 0 },
+        { "text": "5 caixas com 8 lápis em cada uma", "cat": 1 },
+        { "text": "3 sanduíches e 3 sucos: quantos lanches?", "cat": 0 },
+        { "text": "7 fileiras com 10 maçãs em cada", "cat": 1 },
+        { "text": "2 tênis e 4 bonés: quantas combinações?", "cat": 0 },
+        { "text": "4 pacotes com 500 folhas em cada", "cat": 1 }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Gustavo comprou um videogame por R$ 2.500,00. Quais cédulas ele pode ter usado para pagar essa compra?",
+      "options": ["10 cédulas de R$ 200,00", "100 cédulas de R$ 20,00", "25 cédulas de R$ 10,00", "25 cédulas de R$ 100,00"],
+      "answer": 3,
+      "explain": "25 × R$ 100,00 = R$ 2.500,00. As outras opções dão R$ 2.000,00 (10 × 200 e 100 × 20) e R$ 250,00 (25 × 10), valores que não pagam a compra."
+    },
+    {
+      "type": "mc",
+      "q": "Uma empresa tinha 900 funcionários quando foi inaugurada. Após 10 anos, ela tem 50 vezes essa quantidade. Quantos funcionários ela tem agora?",
+      "options": ["450", "4500", "9000", "45000"],
+      "answer": 3,
+      "explain": "900 × 50 = 900 × 5 × 10 = 4500 × 10 = 45.000 funcionários. Decompor o 50 em 5 × 10 facilita o cálculo mental."
+    },
+    {
+      "type": "mc",
+      "q": "Isabela comprou 4 frutas (maçã, morango, banana e kiwi) e 2 tipos de leite (arroz e amêndoa). De quantas maneiras diferentes ela pode combinar 1 fruta e 1 tipo de leite para fazer a vitamina?",
+      "options": ["2 maneiras", "4 maneiras", "6 maneiras", "8 maneiras"],
+      "answer": 3,
+      "explain": "É um problema de combinação: 4 frutas × 2 leites = 8 vitaminas diferentes. Cada fruta pode ser batida com cada um dos 2 leites."
+    },
+    {
+      "type": "mc",
+      "q": "Júlia quer colar as fotos dos 3 animais de estimação dela (cachorro, gato e coelho) em uma cartolina, uma ao lado da outra. De quantas maneiras diferentes ela pode ordenar as fotos?",
+      "options": ["3 maneiras", "6 maneiras", "9 maneiras", "12 maneiras"],
+      "answer": 1,
+      "explain": "Para a 1ª posição há 3 opções, para a 2ª sobram 2 e para a 3ª sobra 1: 3 × 2 × 1 = 6 ordens diferentes (ex.: cão-gato-coelho, cão-coelho-gato, gato-cão-coelho...)."
+    },
+    {
+      "type": "text",
+      "q": "Um restaurante oferece 4 tipos de salada e 5 molhos. Quantas combinações diferentes um cliente pode fazer escolhendo 1 salada e 1 molho? (escreva o número)",
+      "answers": ["20", "vinte"],
+      "explain": "Multiplicamos as opções de cada grupo: 4 × 5 = 20 combinações diferentes."
+    },
+    {
+      "type": "text",
+      "q": "Complete com o resultado: 8 × 3000 = ?",
+      "answers": ["24000", "24.000", "24 000"],
+      "explain": "Decompondo: 8 × 3 × 1000 = 24 × 1000 = 24.000. Multiplicar por 1000 acrescenta três zeros."
+    },
+    {
+      "type": "text",
+      "q": "No sábado, 1000 crianças foram vacinadas. No domingo, foi o triplo dessa quantidade. Quantas crianças foram vacinadas no fim de semana todo? (escreva o número)",
+      "answers": ["4000", "4.000", "quatro mil"],
+      "explain": "Domingo: 3 × 1000 = 3000 crianças. Total do fim de semana: 1000 + 3000 = 4.000 crianças. Atenção: a pergunta pede o total, não só o domingo!"
+    },
+    {
+      "type": "text",
+      "q": "Luísa tem 2 cédulas de R$ 10,00, 3 de R$ 20,00, 4 de R$ 50,00 e 5 de R$ 100,00. Quantos reais ela tem ao todo? (escreva só o número)",
+      "answers": ["780", "780 reais", "r$ 780", "r$ 780,00", "780,00"],
+      "explain": "2×10 = 20; 3×20 = 60; 4×50 = 200; 5×100 = 500. Somando: 20 + 60 + 200 + 500 = R$ 780,00."
+    },
+    {
+      "type": "mc",
+      "q": "Uma escola de dança funciona de segunda a sexta. Cada dia tem uma turma de manhã (20 alunos) e uma à noite (30 alunos). Quantos alunos a escola tem ao todo?",
+      "options": ["50 alunos", "100 alunos", "150 alunos", "250 alunos"],
+      "answer": 3,
+      "explain": "Cada dia tem 20 + 30 = 50 alunos. Em 5 dias: 5 × 50 = 250 alunos, pois cada aluno faz apenas uma aula por semana."
+    }
+  ]
+}
