@@ -142,9 +142,9 @@ const DISCIPLINAS = [
             "instructions": "A palavra entra inteira. Qual delas sai da máquina?",
             "term": "diminutivo e aumentativo",
             "artifact": {
-              "title": "Prateleira de palavras",
+              "title": "Palavras conquistadas",
               "kind": "prateleira",
-              "empty": "A prateleira ainda está vazia.",
+              "empty": "Sua coleção começa no primeiro acerto.",
               "done": "Prateleira cheia! Você encolheu e cresceu palavras escrevendo cada uma do jeito certo.",
               "termLine": "Toda palavra que encolheu está no <strong>grau diminutivo</strong>. Toda palavra que cresceu está no <strong>grau aumentativo</strong>."
             },

@@ -2,7 +2,7 @@
 const EXPERIENCE_PROFILES = {
   lp17: [
     { mode:'cartaz', goal:'Monte o cartaz de lavar as mãos', prompt:'Isto entra no cartaz?', result:'o cartaz' },
-    { mode:'maquina', goal:'Ligue a máquina de encolher e crescer', prompt:'Qual palavra sai da máquina?', result:'a prateleira de palavras' },
+    { mode:'maquina', goal:'Transforme as palavras', prompt:'Escolha a palavra que sai da máquina.', result:'a coleção de palavras' },
     { mode:'memoria', goal:'Jogo da memória dos graus', prompt:'Ache as duas cartas que combinam.', result:'todos os pares' }
   ],
   lp18: [

@@ -313,6 +313,11 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .artefato__peca { min-height:44px; border:1px solid #e4eaf3; border-radius:13px; box-shadow:0 4px 12px rgba(23,33,59,.06); }
 .artefato--prateleira { padding-bottom:26px; background:linear-gradient(180deg,#f8fbff 0,#fff 64%,#e4b67b 65%,#bd7c3a 75%,#f4d0a2 76%,#fffaf2 100%); }
 .artefato--prateleira .artefato__peca { border-bottom:4px solid #d3a064; }
+.artefato--vazio { min-height:0; padding:13px 16px 13px 64px; background:#f8fbff; box-shadow:none; }
+.artefato--vazio::before { left:14px; top:12px; width:36px; height:36px; font-size:18px; }
+.artefato--vazio .artefato__titulo { margin:0; font-size:13px; }
+.artefato--vazio .artefato__vazio { margin-top:2px; font-size:12px; }
+.artefato--prateleira.artefato--vazio { padding-bottom:13px; background:#f8fbff; }
 
 .cena-trecho { padding:27px 24px 25px; border:2px solid #dce5f1; border-radius:21px; background:linear-gradient(145deg,#fff,#f8fbff); box-shadow:0 9px 24px rgba(34,47,76,.08); }
 .cena-trecho::before { content:'✂'; position:absolute; left:16px; top:14px; color:#8fa0b9; font-size:18px; transform:rotate(-18deg); }

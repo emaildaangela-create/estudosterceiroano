@@ -473,7 +473,7 @@
   function renderArtefato(game,passo,completo,indices) {
     var arte=game.artifact; if(!arte)return null;
     var pecas=pecasConquistadas(game,completo?(game.items||[]).length:passo,completo?null:indices);
-    var caixa=criar('section','artefato artefato--'+(arte.kind||'objeto')+(completo?' artefato--pronto':''));
+    var caixa=criar('section','artefato artefato--'+(arte.kind||'objeto')+(completo?' artefato--pronto':'')+(!pecas.length?' artefato--vazio':''));
     caixa.appendChild(criar('h4','artefato__titulo',textoSeguro(arte.title)));
     if(!pecas.length){caixa.appendChild(criar('p','artefato__vazio',textoSeguro(arte.empty||'Ainda não tem nada aqui.')));return caixa;}
     var lista=criar('ol','artefato__pecas');
@@ -542,7 +542,6 @@
       card.appendChild(criar('div','progresso-jogo','<span style="width:'+Math.round(passo/total*100)+'%"></span>'));
       card.appendChild(criar('p','atividade-progresso','Jogo '+(jogoAtual+1)+' de '+cap.games.length+' · item '+(passo+1)+' de '+total));
     }
-    card.appendChild(criar('p','jogo-objetivo',textoSeguro(perfil.goal)));
     card.appendChild(criar('h3','jogo-pergunta',textoSeguro(perfil.prompt)));
     var stage=criar('div','game-stage');card.appendChild(stage);raiz.appendChild(card);
     var concluir=function(){marcarPasso(cap,game,perfil,salvo);};
