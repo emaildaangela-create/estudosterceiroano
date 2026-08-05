@@ -1,4 +1,4 @@
-const CACHE = 'estudos-3-ano-v12';
+const CACHE = 'estudos-3-ano-v13';
 const ARQUIVOS = [
   './', './index.html', './style.css', './data.js', './experiences.js',
   './pedagogy.js', './app.js', './manifest.webmanifest',

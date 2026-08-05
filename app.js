@@ -393,9 +393,8 @@
   function renderTeoria(cap) {
     var raiz=$('#teoria-conteudo'); raiz.innerHTML='';
     var idx=Math.max(0,Math.min(estado.passoDescoberta,cap.theory.length-1)), bloco=cap.theory[idx];
-    /* O objetivo geral permanece no cabeçalho; a provocação desta missão aparece no cartão. */
-    if(idx===0) raiz.appendChild(falaMascote('Observe o título e a imagem da missão. Antes de ler, conte o que você já sabe ou percebe sobre o assunto.',false));
-    else if(temaBloco(bloco)!==temaBloco(cap.theory[idx-1])) raiz.appendChild(falaMascote('Nova descoberta: o assunto muda um pouco agora. Procure uma ligação com o que você acabou de aprender.',true));
+    /* Na leitura, o título e a imagem já anunciam a mudança de assunto. O
+       mascote fica reservado para pistas e feedbacks que ajudam de verdade. */
     var passos=criar('div','passos');
     cap.theory.forEach(function(_,i){var p=criar('button','passos__ponto'+(i===idx?' passos__ponto--ativo':''),null,{type:'button','aria-label':'Ir para a missão '+(i+1)});p.addEventListener('click',function(){guardarPasso(cap,i);renderTeoria(cap);});passos.appendChild(p);});
     raiz.appendChild(passos);
