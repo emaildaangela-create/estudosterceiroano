@@ -6,6 +6,8 @@
   var estado = { disciplina:null, capitulo:null, aba:'teoria', passoDescoberta:0, progresso:{}, tentativas:{}, experiencias:{}, leitura:{}, areas:{}, ultimo:null, som:true };
   var jogoAtual = 0;
   var quiz = null;
+  var promptInstalacao = null;
+  var focoAntesDaInstalacao = null;
   var placar = { pontos:0, sequencia:0, melhor:0 };   /* vale pela partida atual */
 
   function $(s) { return document.querySelector(s); }
@@ -60,6 +62,42 @@
     var t=$('#toast'); if(!t) return;
     t.textContent=msg; t.hidden=false;
     clearTimeout(toast.timer); toast.timer=setTimeout(function(){t.hidden=true;},2400);
+  }
+  function appEstaInstalado() {
+    return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  }
+  function fecharAjudaInstalacao() {
+    var ajuda=$('#instalar-ajuda'); if(!ajuda)return;
+    ajuda.hidden=true;
+    if(focoAntesDaInstalacao)focoAntesDaInstalacao.focus();
+  }
+  function abrirAjudaInstalacao() {
+    var ajuda=$('#instalar-ajuda'), instrucao=$('#instalar-instrucao'); if(!ajuda||!instrucao)return;
+    var ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
+    instrucao.textContent=ios?'No Safari, toque em Compartilhar e depois em “Adicionar à Tela de Início”.':'Abra o menu do navegador e escolha “Instalar aplicativo” ou “Adicionar à tela inicial”.';
+    focoAntesDaInstalacao=document.activeElement; ajuda.hidden=false; $('#fechar-instalacao').focus();
+  }
+  function configurarInstalacao() {
+    var botao=$('#btn-instalar'), ajuda=$('#instalar-ajuda'), fechar=$('#fechar-instalacao'); if(!botao)return;
+    var ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
+    botao.hidden=appEstaInstalado()||!ios;
+    window.addEventListener('beforeinstallprompt',function(evento){evento.preventDefault();promptInstalacao=evento;if(!appEstaInstalado())botao.hidden=false;});
+    window.addEventListener('appinstalled',function(){promptInstalacao=null;botao.hidden=true;toast('Aplicativo instalado!');});
+    botao.addEventListener('click',function(){
+      if(!promptInstalacao){abrirAjudaInstalacao();return;}
+      promptInstalacao.prompt();
+      promptInstalacao.userChoice.then(function(escolha){
+        if(escolha.outcome==='accepted')botao.hidden=true;
+        promptInstalacao=null;
+      });
+    });
+    if(fechar)fechar.addEventListener('click',fecharAjudaInstalacao);
+    if(ajuda)ajuda.addEventListener('click',function(evento){if(evento.target===ajuda)fecharAjudaInstalacao();});
+    document.addEventListener('keydown',function(evento){if(evento.key==='Escape'&&ajuda&&!ajuda.hidden)fecharAjudaInstalacao();});
+  }
+  function registrarServiceWorker() {
+    if(!('serviceWorker' in navigator))return;
+    window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').catch(function(){});});
   }
   var GLOSSARIO = {
     'finalidade':'para que algo serve', 'gênero':'um tipo de texto', 'objetiva':'direta e fácil de entender',
@@ -834,7 +872,7 @@
   }
   function iniciar() {
     if(typeof DISCIPLINAS==='undefined'||!DISCIPLINAS.length){$('#grade-disciplinas').innerHTML='<div class="vazio">Não foi possível carregar os assuntos.</div>';return;}
-    carregar(); ligarEventos(); renderHome();
+    carregar(); ligarEventos(); configurarInstalacao(); registrarServiceWorker(); renderHome();
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',iniciar);else iniciar();
 })();

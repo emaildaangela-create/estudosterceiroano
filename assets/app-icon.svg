@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Livro aberto com uma estrela">
+  <rect width="512" height="512" rx="112" fill="#17213b"/>
+  <circle cx="390" cy="118" r="54" fill="#f5b632"/>
+  <path d="m390 80 10 25 27 2-21 17 6 27-22-15-23 15 7-27-22-17 28-2z" fill="#fff8df"/>
+  <path d="M86 176c58-16 112-4 170 38v210c-54-38-111-50-170-34V176Z" fill="#fff8df"/>
+  <path d="M426 176c-58-16-112-4-170 38v210c54-38 111-50 170-34V176Z" fill="#f3e7c9"/>
+  <path d="M256 214v210" stroke="#20768e" stroke-width="16" stroke-linecap="round"/>
+  <path d="M118 224c43-5 76 4 104 25M118 276c43-5 76 4 104 25M394 224c-43-5-76 4-104 25M394 276c-43-5-76 4-104 25" fill="none" stroke="#ba376d" stroke-width="12" stroke-linecap="round" opacity=".78"/>
+</svg>

@@ -1,0 +1,35 @@
+const CACHE = 'estudos-3-ano-v1';
+const ARQUIVOS = [
+  './', './index.html', './style.css', './data.js', './experiences.js',
+  './pedagogy.js', './app.js', './manifest.webmanifest',
+  './assets/app-icon.svg', './assets/app-icon-192.png', './assets/app-icon-512.png',
+  './assets/capa-aprender.webp',
+  './assets/capa-aprender.png', './assets/mascote-capivara-v2.webp'
+];
+
+self.addEventListener('install', function (evento) {
+  evento.waitUntil(caches.open(CACHE).then(function (cache) {
+    return cache.addAll(ARQUIVOS);
+  }).then(function () { return self.skipWaiting(); }));
+});
+
+self.addEventListener('activate', function (evento) {
+  evento.waitUntil(caches.keys().then(function (nomes) {
+    return Promise.all(nomes.filter(function (nome) { return nome !== CACHE; }).map(function (nome) {
+      return caches.delete(nome);
+    }));
+  }).then(function () { return self.clients.claim(); }));
+});
+
+self.addEventListener('fetch', function (evento) {
+  if (evento.request.method !== 'GET' || new URL(evento.request.url).origin !== self.location.origin) return;
+  evento.respondWith(fetch(evento.request).then(function (resposta) {
+    var copia = resposta.clone();
+    caches.open(CACHE).then(function (cache) { cache.put(evento.request, copia); });
+    return resposta;
+  }).catch(function () {
+    return caches.match(evento.request).then(function (resposta) {
+      return resposta || (evento.request.mode === 'navigate' ? caches.match('./index.html') : Promise.reject());
+    });
+  }));
+});

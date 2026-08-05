@@ -26,6 +26,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .topo__raio { color:var(--ciano); }
 .topo__xp { margin-left:auto; display:flex; align-items:baseline; gap:5px; color:var(--fraco); font-size:12px; }
 .topo__xp-num { color:var(--texto); font-size:15px; font-weight:800; }
+.topo__instalar { min-height:36px; padding:7px 13px; border:1px solid var(--texto); border-radius:11px; color:#fff; background:var(--texto); cursor:pointer; font-size:13px; font-weight:800; }
+.topo__xp[hidden] + .topo__instalar { margin-left:auto; }
+.topo__instalar:hover { background:#263452; }
 
 #app { width:min(calc(100% - 40px), var(--largura)); margin:0 auto; padding:0 0 64px; }
 .body--home #app { padding-bottom:18px; }
@@ -364,6 +367,12 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 
 .vazio { padding:28px; border:1px dashed var(--borda); border-radius:18px; color:var(--fraco); text-align:center; }
 .toast { position:fixed; z-index:50; left:50%; bottom:24px; transform:translateX(-50%); max-width:min(90vw,520px); padding:12px 18px; border-radius:12px; color:#fff; background:var(--texto); box-shadow:0 10px 30px rgba(0,0,0,.2); text-align:center; }
+.instalar-ajuda { position:fixed; z-index:60; inset:0; display:grid; place-items:center; padding:20px; background:rgba(15,24,45,.58); backdrop-filter:blur(4px); }
+.instalar-ajuda__painel { position:relative; width:min(100%,390px); padding:28px; border-radius:24px; background:#fff; box-shadow:0 24px 70px rgba(15,24,45,.28); text-align:center; }
+.instalar-ajuda__painel img { display:block; margin:0 auto 15px; border-radius:17px; }
+.instalar-ajuda__painel h2 { margin:0 0 9px; font-size:25px; }
+.instalar-ajuda__painel p { margin:0; color:var(--suave); }
+.instalar-ajuda__fechar { position:absolute; top:10px; right:12px; width:38px; height:38px; border:0; border-radius:50%; background:#eef2f7; cursor:pointer; font-size:24px; line-height:1; }
 
 @media (max-width:900px) {
   :root { --largura:1080px; }
@@ -373,6 +382,8 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 @media (max-width:620px) {
   #app { width:min(calc(100% - 28px),var(--largura)); }
   .topo { padding:0 14px; }
+  .topo__xp-lbl { display:none; }
+  .topo__instalar { padding-inline:10px; font-size:12px; }
   .hero__titulo { margin-bottom:14px; font-size:38px; }
   .hero__figura { border-radius:18px; }
   .hero__arte { aspect-ratio:1.35; }

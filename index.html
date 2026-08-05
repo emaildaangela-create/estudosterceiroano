@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Estudos do 3º ano com explicações curtas, experiências e revisões de Português, Matemática, Ciências, Geografia e História.">
-  <meta name="theme-color" content="#f4f6fb">
+  <meta name="theme-color" content="#17213b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Estudos do 3º ano</title>
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='86'>📘</text></svg>">
+  <link rel="icon" href="assets/app-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/app-icon-192.png">
 </head>
 <body class="body--home">
 
@@ -24,6 +28,7 @@
     <span class="topo__xp-num" id="xp-num">0</span>
     <span class="topo__xp-lbl">concluídos</span>
   </div>
+  <button class="topo__instalar" id="btn-instalar" type="button" hidden>Instalar app</button>
 </header>
 
 <main id="app">
@@ -121,6 +126,15 @@
     </div>
   </section>
 </main>
+
+<div class="instalar-ajuda" id="instalar-ajuda" role="dialog" aria-modal="true" aria-labelledby="instalar-titulo" hidden>
+  <div class="instalar-ajuda__painel">
+    <button class="instalar-ajuda__fechar" id="fechar-instalacao" type="button" aria-label="Fechar">×</button>
+    <img src="assets/app-icon.svg" alt="" width="72" height="72">
+    <h2 id="instalar-titulo">Instalar no aparelho</h2>
+    <p id="instalar-instrucao">Abra o menu do navegador e escolha “Instalar aplicativo” ou “Adicionar à tela inicial”.</p>
+  </div>
+</div>
 
 <!-- ================= TOAST ================= -->
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
