@@ -368,9 +368,9 @@ body.modo-jogo-imersivo { overflow:hidden; }
 .piloto-destino { position:absolute; bottom:4%; width:29%; min-height:22%; padding:12px; border:3px dashed rgba(255,255,255,.95); border-radius:20px; color:#fff; background:rgba(23,33,59,.66); box-shadow:0 8px 18px rgba(20,30,50,.2); cursor:pointer; pointer-events:auto; font-weight:900; text-shadow:0 2px 4px rgba(0,0,0,.4); backdrop-filter:blur(3px); }
 .piloto-destino--esquerda { left:3%; }.piloto-destino--direita { right:3%; }
 .piloto-destino--centro { left:50%; transform:translateX(-50%); }
-.piloto-destino--centro:hover { transform:translate(-50%,-3px); }
 .piloto-destinos--tres .piloto-destino { width:29%; }
 .piloto-destino:hover { transform:translateY(-3px); background:rgba(23,33,59,.78); }
+.piloto-destino--centro:hover { transform:translate(-50%,-3px); }
 .piloto-destino--certo { border-style:solid; border-color:#9be2bb; background:rgba(22,119,90,.88); }
 .piloto-escolhas { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
 .piloto-escolhas--cabides { grid-template-columns:repeat(4,minmax(0,1fr)); }

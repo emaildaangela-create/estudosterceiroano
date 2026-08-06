@@ -2307,6 +2307,7 @@ const DISCIPLINAS = [
         "id": "cie09",
         "module": 9,
         "title": "Características da Terra",
+        "video": "assets/videos/cie09-explorando-o-ceu-noturno.mp4",
         "theory": [
           {
             "h": "Representações da Terra",
@@ -2541,6 +2542,7 @@ const DISCIPLINAS = [
         "id": "cie10",
         "module": 10,
         "title": "Observando o céu diurno",
+        "video": "assets/videos/cie10-explorando-o-nosso-ceu.mp4",
         "theory": [
           {
             "h": "Os corpos celestes",
@@ -2783,6 +2785,7 @@ const DISCIPLINAS = [
         "id": "cie11",
         "module": 11,
         "title": "Observando o céu noturno",
+        "video": "assets/videos/cie11-segredos-do-planeta-terra.mp4",
         "theory": [
           {
             "h": "Astros visíveis durante a noite",
@@ -3476,6 +3479,7 @@ const DISCIPLINAS = [
         "id": "geo11",
         "module": 11,
         "title": "Serviços e problemas do município",
+        "video": "assets/videos/geo11-o-cientista-da-cidade.mp4",
         "theory": [
           {
             "h": "Serviços públicos e privados",
