@@ -616,10 +616,77 @@ body.modo-jogo-imersivo { overflow:hidden; }
   .piloto__painel strong,.piloto__cartao-movel strong { font-size:16px; }
   .piloto__cartao-movel { top:3%; min-width:170px; }
   .piloto-destino { bottom:3%; width:42%; min-height:22%; padding:8px; border-radius:14px; font-size:13px; }
-  .piloto-destinos--tres { bottom:3%; gap:2%; }
-  .piloto-destinos--tres .piloto-destino { width:100%; font-size:11px; }
+  /* No celular, cartões com frases não disputam espaço sobre a ilustração.
+     A cena vira uma composição vertical: imagem, item e escolhas legíveis. */
+  .piloto:has(.piloto-destinos),
+  .piloto:has(.piloto-escolhas--no-tabuleiro) {
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    min-height:0;
+    padding:190px 10px 10px;
+    aspect-ratio:auto;
+    overflow:visible;
+    background-color:#f7f3e9;
+    background-position:center top;
+    background-size:100% 190px;
+    background-repeat:no-repeat;
+  }
+  .piloto:has(.piloto-destinos) .piloto__cartao-movel,
+  .piloto:has(.piloto-escolhas--no-tabuleiro) .piloto__cartao-movel {
+    position:relative;
+    left:auto;
+    top:auto;
+    width:100%;
+    min-width:0;
+    padding:12px 14px;
+    transform:none;
+    box-shadow:0 5px 14px rgba(28,34,50,.12);
+  }
+  .piloto:has(.piloto-destinos) .piloto__cartao-movel > span,
+  .piloto:has(.piloto-escolhas--no-tabuleiro) .piloto__cartao-movel > span { font-size:20px; }
+  .piloto:has(.piloto-destinos) .piloto__cartao-movel strong,
+  .piloto:has(.piloto-escolhas--no-tabuleiro) .piloto__cartao-movel strong { font-size:18px; }
+  .piloto:has(.piloto-destinos) .piloto-destinos {
+    position:relative;
+    inset:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    height:auto;
+    pointer-events:auto;
+  }
+  .piloto:has(.piloto-destinos) .piloto-destino {
+    position:relative;
+    inset:auto;
+    width:100%;
+    min-width:0;
+    min-height:58px;
+    height:auto;
+    padding:11px 10px;
+    border:2px solid #dce4ef;
+    border-radius:13px;
+    color:var(--texto);
+    background:#fff;
+    box-shadow:0 4px 11px rgba(31,46,76,.08);
+    font-size:14px;
+    line-height:1.3;
+    text-shadow:none;
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+  .piloto:has(.piloto-destinos) .piloto-destino--certo { border-color:var(--ok); color:#fff; background:var(--ok); }
+  .piloto:has(.piloto-destinos) .piloto-destino:hover { transform:none; }
+  .piloto:has(.piloto-destinos--tres) .piloto-destinos--tres { grid-template-columns:1fr; }
+  .piloto:has(.piloto-escolhas--no-tabuleiro) .piloto-escolhas--no-tabuleiro {
+    position:relative;
+    inset:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    width:100%;
+  }
   .piloto-escolhas,.piloto-escolhas--cabides { grid-template-columns:1fr 1fr; }
-  .piloto-escolhas--no-tabuleiro { grid-template-columns:1fr 1fr 1fr; gap:5px; }
   .piloto-escolhas--quatro { grid-template-columns:1fr 1fr; }
   .piloto-peca--tabuleiro { min-height:68px; padding:7px 5px; font-size:11px; }
   .piloto-peca { min-height:58px; padding:9px; font-size:14px; }
@@ -634,9 +701,16 @@ body.modo-jogo-imersivo { overflow:hidden; }
   .jogo-imersivo__controles .hud__som { width:40px; }
   .jogo-imersivo__tela-cheia { display:none; }
   .jogo-imersivo__palco { padding:10px 8px 18px; }
-  .jogo-imersivo__conteudo .seletor-jogos { flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; padding:0 2px 3px; }
-  .jogo-imersivo__conteudo .seletor-jogo { flex:0 0 auto; }
-  .jogo-imersivo__conteudo .jogo-card { padding:18px 14px; }
+  .jogo-imersivo__conteudo .seletor-jogos { flex-wrap:nowrap; align-items:center; justify-content:center; overflow:visible; padding:0 2px 3px; }
+  .jogo-imersivo__conteudo .seletor-jogo { flex:0 0 auto; min-width:38px; padding:7px; }
+  .jogo-imersivo__conteudo .seletor-jogo:not(.seletor-jogo--atual) > span:last-child { display:none; }
+  .jogo-imersivo__conteudo .seletor-jogo--atual { flex:1 1 auto; min-width:0; max-width:270px; padding-right:12px; }
+  .jogo-imersivo__conteudo .seletor-jogo--atual > span:last-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .jogo-imersivo__conteudo .jogo-card { padding:16px 12px; }
+  .jogo-imersivo__conteudo .jogo-pergunta { font-size:clamp(24px,7.5vw,31px); line-height:1.15; }
+  .jogo-imersivo__conteudo .feedback { padding:15px; }
+  .jogo-imersivo__conteudo .feedback strong { font-size:18px; }
+  .jogo-imersivo__conteudo .feedback p { font-size:15px; line-height:1.45; }
   .jogo-imersivo__conteudo .piloto { max-height:none; }
 }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto !important; animation:none !important; transition:none !important; } }
