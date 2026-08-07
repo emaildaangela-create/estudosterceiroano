@@ -179,7 +179,11 @@
     };
     return visuais[tema]||visuais.ideia;
   }
-  function irTopo() { window.scrollTo({top:0,behavior:'smooth'}); }
+  function irTopo() {
+    var palco=document.body.classList.contains('modo-jogo-imersivo')&&$('.jogo-imersivo__palco');
+    if(palco)palco.scrollTo({top:0,behavior:semAnimacao()?'auto':'smooth'});
+    else window.scrollTo({top:0,behavior:semAnimacao()?'auto':'smooth'});
+  }
   /* As páginas do livro não são publicadas junto com o app. Se a imagem não
      estiver lá, a figura inteira some em vez de deixar um ícone quebrado. */
   function figuraOpcional(figura) {
@@ -299,10 +303,18 @@
      a página vai atrás dele: puxa o fim para dentro da tela, mas nunca esconde
      o começo debaixo do cabeçalho grudado. */
   function revelar(inicio,fim) {
-    if(!inicio||!inicio.getBoundingClientRect||!window.scrollBy)return;
+    if(!inicio||!inicio.getBoundingClientRect)return;
     var mexer=function(){
       try {
         var a=inicio.getBoundingClientRect(), b=(fim||inicio).getBoundingClientRect();
+        var palco=document.body.classList.contains('modo-jogo-imersivo')&&$('.jogo-imersivo__palco');
+        if(palco&&palco.contains(inicio)){
+          var rp=palco.getBoundingClientRect(), topoPalco=rp.top+12, chaoPalco=rp.bottom-14, ajuste=0;
+          if(b.bottom>chaoPalco)ajuste=b.bottom-chaoPalco;
+          if(a.top-ajuste<topoPalco)ajuste=a.top-topoPalco;
+          if(Math.abs(ajuste)>=4)palco.scrollBy({top:ajuste,behavior:semAnimacao()?'auto':'smooth'});
+          return;
+        }
         /* O que cobre o alto da tela: o cabeçalho e, na tela de capítulo,
            também a barra de abas — as duas são grudentas. */
         var teto=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--topo'),10)||58;
@@ -974,6 +986,7 @@
     $$('.aba').forEach(function(b){var ativa=b.dataset.aba===nome;b.classList.toggle('aba--ativa',ativa);b.setAttribute('aria-selected',ativa?'true':'false');});
     $$('.painel-aba').forEach(function(p){var ativa=p.id==='painel-'+nome;p.hidden=!ativa;p.classList.toggle('painel-aba--ativo',ativa);});
     definirModoJogo(nome==='jogos');
+    if(nome==='jogos')irTopo();
     if(rolar&&nome!=='jogos')document.querySelector('.abas').scrollIntoView({behavior:'smooth',block:'start'});
   }
   function voltar() {
