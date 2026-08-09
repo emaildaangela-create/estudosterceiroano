@@ -4,6 +4,7 @@ const PEDAGOGY = {
     8:{context:'O manual diz: “Faça 2 ou 3 rotações, toque em OK e, se necessário, volte ao primeiro passo.”',prompt:'Por que esse trecho é um texto instrucional?'}
   }},
   lp18:{objectives:['identificar um conto de memórias','diferenciar substantivo e adjetivo','formar adjetivos com -oso e -osa']},
+  rev_lp3b:{objectives:['revisar textos instrucionais','usar diminutivo e aumentativo','reconhecer adjetivos e a escrita de -oso/-osa']},
   lp19:{objectives:['diferenciar biografia e autobiografia','reconhecer palavras que indicam origem','usar informações de uma linha do tempo'],questions:{
     0:{context:'Na piada, uma pessoa prefere o idioma francês e outra prefere o inglês.',prompt:'Qual afirmação sobre “francês” e “inglês” está correta?'}
   }},
@@ -22,17 +23,20 @@ const PEDAGOGY = {
     1:{context:'Os ônibus saem a cada 2 horas: 8 h, 10 h, 12 h… Caio embarca ao meio-dia.',prompt:'A que horas sai o próximo ônibus?'},
     7:{context:'Vivian andou 3 quadras, virou à esquerda e andou mais 2.',prompt:'Que tipo de palavras descreve esse caminho?'}
   }},
+  rev_mat3b:{objectives:['revisar possibilidades e multiplicação','resolver situações com tempo','interpretar localização e deslocamento']},
   mat11:{objectives:['repartir em grupos iguais','identificar os termos da divisão','diferenciar divisão exata e não exata'],questions:{
     8:{context:'Uma camiseta custa R$ 56. Quatro irmãos dividirão o valor igualmente.',prompt:'Quanto cada pessoa pagará?'}
   }},
   cie09:{objectives:['identificar as partes da Terra','compreender mudanças no relevo','diferenciar agentes internos e externos'],questions:{}},
   cie10:{objectives:['reconhecer corpos celestes','compreender rotação e translação','observar o céu com segurança']},
+  rev_cie3b:{objectives:['revisar as características da Terra','diferenciar fenômenos terrestres','reconhecer astros e movimentos da Terra']},
   cie11:{objectives:['reconhecer as fases da Lua','entender por que vemos as estrelas','avaliar condições para observar o céu'],questions:{
     6:{context:'No centro das estrelas ocorre um processo que produz calor e luz.',prompt:'Complete: as estrelas são esferas de ______ quente.'}
   }},
   geo09:{objectives:['diferenciar área urbana e rural','reconhecer atividades econômicas','compreender transformações da paisagem'],questions:{
     2:{context:'Uma máquina derruba árvores e deixa o terreno cheio de tocos.',prompt:'O que está sendo retirado e qual problema isso provoca?'}
   }},
+  rev_geo3b:{objectives:['revisar o conceito de município','comparar áreas urbana e rural','identificar atividades e problemas ambientais']},
   geo10:{objectives:['comparar modos de vida no campo e na cidade','compreender migrações','usar dados de população'],questions:{
     5:{context:'No bairro Lapa não há idosos. No bairro Jardim vivem 30 idosos.',prompt:'Onde a prefeitura deveria criar lazer para idosos?'}
   }},
@@ -46,6 +50,7 @@ const PEDAGOGY = {
     3:{context:'Um homem surdo precisava de máscara transparente para fazer leitura labial. Mesmo assim, foi impedido de entrar em um supermercado.',prompt:'Qual afirmação explica corretamente essa situação?'},
     7:{context:'Uma creche municipal recebe apenas funcionários, crianças matriculadas e responsáveis.',prompt:'Que tipo de espaço público é esse?'}
   }},
+  rev_hist3b:{objectives:['revisar espaços públicos e privados','diferenciar tipos de acesso e serviços','entender a função da prefeitura']},
   hist11:{objectives:['identificar problemas das cidades','comparar formas de tratar o lixo','avaliar soluções para melhorar a vida urbana'],questions:{
     2:{context:'Em Porto Alegre, o trânsito fica intenso entre 17 h e 19 h, e acontecem acidentes em uma esquina.',prompt:'O que o depoimento informa sobre o horário de pico?'},
     3:{context:'Uma charge mostra São Paulo cheia de veículos parados. A placa diz: “População: 8 milhões de veículos”.',prompt:'O que o artista está criticando?'},

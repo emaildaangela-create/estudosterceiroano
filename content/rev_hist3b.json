@@ -1,0 +1,108 @@
+{
+  "id": "rev_hist3b",
+  "module": "R3",
+  "title": "Revisão do 3º bimestre",
+  "subtitle": "Espaços da comunidade · Serviços e prefeitura",
+  "theory": [
+    {
+      "h": "Revisão: espaços da comunidade",
+      "p": [
+        "Espaços <strong>públicos</strong> pertencem à coletividade e são administrados pelo poder público. Ruas, praças e parques são exemplos. Espaços <strong>privados</strong> pertencem a pessoas ou instituições.",
+        "Alguns espaços públicos têm <strong>acesso restrito</strong>, como escolas durante as aulas. Alguns espaços privados são de <strong>uso público</strong>, como mercados e cinemas, que recebem clientes seguindo regras."
+      ]
+    },
+    {
+      "h": "Revisão: serviços e administração municipal",
+      "p": [
+        "Serviços públicos atendem necessidades coletivas, como iluminação das ruas, escolas e postos de saúde. Serviços privados são oferecidos por empresas ou profissionais.",
+        "A <strong>prefeitura</strong> administra o município. O prefeito e os secretários organizam serviços, cuidam dos espaços públicos e planejam melhorias para a população."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Que espaço é esse?",
+      "instructions": "Separe os espaços em públicos e privados.",
+      "categories": ["Espaço público", "Espaço privado"],
+      "items": [
+        {"text": "Praça municipal", "cat": 0},
+        {"text": "Rua do bairro", "cat": 0},
+        {"text": "Escola municipal", "cat": 0},
+        {"text": "Casa de uma família", "cat": 1},
+        {"text": "Cinema de uma empresa", "cat": 1},
+        {"text": "Supermercado", "cat": 1}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Comunidade bem organizada",
+      "instructions": "Ligue cada conceito ao exemplo.",
+      "pairs": [
+        ["Acesso restrito", "Escola recebe alunos e responsáveis autorizados"],
+        ["Privado de uso público", "Mercado recebe clientes"],
+        ["Serviço público", "Coleta de lixo realizada pelo município"],
+        ["Serviço privado", "Conserto feito por uma empresa"],
+        ["Prefeitura", "Administra o município"],
+        ["Praça", "Espaço público de convivência"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Qual destes lugares é um espaço público?",
+      "options": ["Praça municipal", "Quarto de uma casa", "Clube particular", "Loja de roupas"],
+      "answer": 0,
+      "explain": "A praça pertence à coletividade e é cuidada pelo poder público."
+    },
+    {
+      "type": "mc",
+      "q": "Qual é uma função dos espaços públicos da cidade?",
+      "options": ["Servir somente ao proprietário", "Permitir circulação e convivência", "Impedir encontros entre moradores", "Receber apenas funcionários"],
+      "answer": 1,
+      "explain": "Ruas, praças e parques permitem deslocamento, lazer e convivência entre as pessoas."
+    },
+    {
+      "type": "mc",
+      "q": "Por que uma escola municipal pode ter acesso restrito?",
+      "options": ["Porque deixou de ser pública", "Porque pertence a uma família", "Para proteger e organizar a comunidade escolar", "Porque não presta serviço público"],
+      "answer": 2,
+      "explain": "A escola continua pública, mas controla a entrada para proteger estudantes e organizar suas atividades."
+    },
+    {
+      "type": "mc",
+      "q": "Qual exemplo representa um espaço privado de uso público?",
+      "options": ["Sala de uma residência", "Quarto de hotel ocupado", "Garagem de uma casa", "Supermercado aberto aos clientes"],
+      "answer": 3,
+      "explain": "O supermercado pertence a uma empresa, mas recebe o público durante seu funcionamento."
+    },
+    {
+      "type": "mc",
+      "q": "Qual destes é um serviço público municipal?",
+      "options": ["Iluminação das ruas", "Venda de brinquedos", "Aula particular", "Conserto de celular"],
+      "answer": 0,
+      "explain": "A iluminação das ruas atende toda a comunidade e é organizada pelo poder público."
+    },
+    {
+      "type": "mc",
+      "q": "Qual destes é um serviço privado?",
+      "options": ["Limpeza de uma praça", "Conserto oferecido por uma empresa", "Sinalização das ruas", "Administração do município"],
+      "answer": 1,
+      "explain": "Empresas e profissionais particulares oferecem serviços privados aos clientes."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama o órgão que administra o município?",
+      "answers": ["prefeitura", "a prefeitura", "prefeitura municipal"],
+      "explain": "A prefeitura administra o município e organiza serviços e melhorias para a população."
+    },
+    {
+      "type": "mc",
+      "q": "Quem chefia o poder executivo do município?",
+      "options": ["Diretor da escola", "Dono do mercado", "Prefeito", "Presidente do bairro"],
+      "answer": 2,
+      "explain": "O prefeito chefia o poder executivo municipal e trabalha com secretários e servidores."
+    }
+  ]
+}

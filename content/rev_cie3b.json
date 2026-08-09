@@ -1,0 +1,119 @@
+{
+  "id": "rev_cie3b",
+  "module": "R3",
+  "title": "Revisão do 3º bimestre",
+  "subtitle": "Características da Terra · Céu diurno",
+  "theory": [
+    {
+      "h": "Revisão: características da Terra",
+      "p": [
+        "A Terra pode ser representada por <strong>fotografias, planisférios e globos</strong>. O globo preserva melhor o formato esférico; o planisfério mostra toda a superfície em um plano.",
+        "A <strong>hidrosfera</strong> reúne a água; a <strong>litosfera</strong>, a parte sólida; a <strong>atmosfera</strong>, os gases; e a <strong>biosfera</strong>, os lugares onde existe vida.",
+        "No interior da Terra estão a <strong>crosta</strong>, o <strong>manto</strong> e o <strong>núcleo</strong>. Movimentos das placas tectônicas podem provocar terremotos, tsunamis e atividade vulcânica."
+      ]
+    },
+    {
+      "h": "Revisão: observando o céu diurno",
+      "p": [
+        "Estrelas têm luz própria; planetas giram ao redor de estrelas; satélites naturais giram ao redor de planetas. O <strong>Sol</strong> é a estrela mais próxima da Terra.",
+        "A luz e o calor do Sol ajudam a manter a água líquida e permitem a fotossíntese. A rotação da Terra dura cerca de <strong>24 horas</strong> e produz o dia e a noite; a translação dura cerca de <strong>365 dias</strong>."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "pairs",
+      "title": "Pistas da Terra e do céu",
+      "instructions": "Ligue cada termo à explicação correspondente.",
+      "pairs": [
+        ["Planisfério", "Representação plana de toda a superfície terrestre"],
+        ["Hidrosfera", "Toda a água do planeta"],
+        ["Atmosfera", "Camada de gases ao redor da Terra"],
+        ["Manto", "Camada espessa abaixo da crosta"],
+        ["Terremoto", "Tremor ligado ao movimento das placas"],
+        ["Estrela", "Astro que tem luz própria"],
+        ["Rotação", "Giro da Terra em torno de si mesma"],
+        ["Translação", "Movimento da Terra ao redor do Sol"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Terra ou céu?",
+      "instructions": "Separe as ideias conforme o assunto principal.",
+      "categories": ["Características da Terra", "Céu diurno"],
+      "items": [
+        {"text": "Crosta, manto e núcleo", "cat": 0},
+        {"text": "Hidrosfera e litosfera", "cat": 0},
+        {"text": "Vulcões e terremotos", "cat": 0},
+        {"text": "Estrelas e planetas", "cat": 1},
+        {"text": "Luz e calor do Sol", "cat": 1},
+        {"text": "Rotação e translação", "cat": 1}
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Qual representação mostra toda a superfície da Terra de forma plana?",
+      "options": ["Planisfério", "Telescópio", "Bússola", "Satélite"],
+      "answer": 0,
+      "explain": "O planisfério, também chamado de mapa-múndi, representa toda a superfície terrestre em um plano."
+    },
+    {
+      "type": "mc",
+      "q": "Por que a Terra é chamada de planeta azul?",
+      "options": ["O núcleo é azul", "Grande parte da superfície tem água", "As rochas são azuis", "O Sol ilumina somente os oceanos"],
+      "answer": 1,
+      "explain": "Vista do espaço, a Terra parece azul porque grande parte de sua superfície é coberta pelos oceanos."
+    },
+    {
+      "type": "mc",
+      "q": "Qual parte da Terra reúne continentes, rochas e o fundo dos oceanos?",
+      "options": ["Hidrosfera", "Atmosfera", "Litosfera", "Biosfera"],
+      "answer": 2,
+      "explain": "A litosfera é a parte sólida da Terra. Ela inclui as rochas dos continentes e do fundo oceânico."
+    },
+    {
+      "type": "mc",
+      "q": "Qual é a camada mais externa e fina do interior da Terra?",
+      "options": ["Manto", "Núcleo externo", "Núcleo interno", "Crosta"],
+      "answer": 3,
+      "explain": "A crosta é a camada rochosa mais externa e fina. Abaixo dela fica o manto."
+    },
+    {
+      "type": "mc",
+      "q": "O que pode acontecer quando placas tectônicas se movimentam bruscamente?",
+      "options": ["Um terremoto", "Uma fase da Lua", "Uma mudança de estação", "Um eclipse solar"],
+      "answer": 0,
+      "explain": "Movimentos bruscos entre placas liberam energia e produzem tremores chamados terremotos."
+    },
+    {
+      "type": "mc",
+      "q": "Como se chama o magma depois que ele sai de um vulcão?",
+      "options": ["Crosta", "Lava", "Onda sísmica", "Atmosfera"],
+      "answer": 1,
+      "explain": "Dentro da Terra o material é chamado magma. Ao chegar à superfície, recebe o nome de lava."
+    },
+    {
+      "type": "mc",
+      "q": "Qual característica distingue uma estrela de um planeta?",
+      "options": ["O planeta tem luz própria", "A estrela gira ao redor da Terra", "A estrela tem luz própria", "O planeta não se movimenta"],
+      "answer": 2,
+      "explain": "Estrelas produzem luz. Planetas não têm luz própria e giram ao redor de uma estrela."
+    },
+    {
+      "type": "mc",
+      "q": "Qual movimento da Terra dura cerca de 24 horas?",
+      "options": ["Translação", "Órbita lunar", "Movimento das placas", "Rotação"],
+      "answer": 3,
+      "explain": "A rotação é o giro da Terra em torno de si mesma. Ela produz a alternância entre dia e noite."
+    },
+    {
+      "type": "mc",
+      "q": "Como o Sol ajuda a existência da vida na Terra?",
+      "options": ["Fornece luz e calor", "Impede a fotossíntese", "Apaga a atmosfera", "Faz a Terra parar"],
+      "answer": 0,
+      "explain": "A luz e o calor do Sol mantêm condições adequadas à vida e permitem que as plantas façam fotossíntese."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "rev_mat3b",
+  "module": "R3",
+  "title": "Revisão do 3º bimestre",
+  "subtitle": "Multiplicação · Tempo · Localização",
+  "theory": [
+    {
+      "h": "Revisão: possibilidades e multiplicação",
+      "p": [
+        "Em problemas de possibilidades, podemos organizar as escolhas em uma tabela ou multiplicar as quantidades. Se há 3 camisetas e 2 bermudas, existem <strong>3 × 2 = 6</strong> combinações.",
+        "Multiplicar por 10, 100 ou 1.000 ajuda a resolver cálculos rapidamente. Também usamos a multiplicação em problemas com grupos de mesma quantidade."
+      ]
+    },
+    {
+      "h": "Revisão: tempo, localização e deslocamento",
+      "p": [
+        "Uma hora tem <strong>60 minutos</strong>; meia hora tem <strong>30 minutos</strong>; um minuto tem <strong>60 segundos</strong>. O ponteiro pequeno indica as horas e o grande, os minutos.",
+        "Para indicar localização e trajetos usamos pontos de referência e palavras como direita, esquerda, em frente, atrás, perto e longe."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "pairs",
+      "title": "Revisão rápida de Matemática",
+      "instructions": "Ligue cada pergunta ao resultado.",
+      "pairs": [
+        ["3 blusas e 2 saias", "6 combinações"],
+        ["7 × 10", "70"],
+        ["4 × 100", "400"],
+        ["2 × 1.000", "2.000"],
+        ["Meia hora", "30 minutos"],
+        ["Um minuto", "60 segundos"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Número, tempo ou caminho?",
+      "instructions": "Separe cada pista conforme o assunto.",
+      "categories": ["Multiplicação", "Tempo", "Localização"],
+      "items": [
+        {"text": "5 × 100", "cat": 0},
+        {"text": "Quatro grupos de seis", "cat": 0},
+        {"text": "30 minutos", "cat": 1},
+        {"text": "Ponteiro dos segundos", "cat": 1},
+        {"text": "Vire à esquerda", "cat": 2},
+        {"text": "Atrás da escola", "cat": 2}
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "text",
+      "q": "Uma lanchonete oferece 3 sucos e 2 sanduíches. Quantas combinações são possíveis?",
+      "answers": ["6", "6 combinacoes", "seis", "seis combinacoes"],
+      "explain": "Cada um dos 3 sucos pode acompanhar 2 sanduíches: 3 × 2 = 6 combinações."
+    },
+    {
+      "type": "text",
+      "q": "Qual é o resultado de 8 × 100?",
+      "answers": ["800", "oitocentos"],
+      "explain": "Multiplicar 8 por 100 resulta em 800."
+    },
+    {
+      "type": "text",
+      "q": "Há 6 caixas com 4 lápis em cada uma. Quantos lápis há ao todo?",
+      "answers": ["24", "24 lapis", "vinte e quatro"],
+      "explain": "São 6 grupos de 4 lápis: 6 × 4 = 24."
+    },
+    {
+      "type": "mc",
+      "q": "Quantos minutos há em meia hora?",
+      "options": ["15 minutos", "30 minutos", "45 minutos", "60 minutos"],
+      "answer": 1,
+      "explain": "Uma hora tem 60 minutos. A metade de 60 é 30, portanto meia hora tem 30 minutos."
+    },
+    {
+      "type": "mc",
+      "q": "Quantos segundos há em um minuto?",
+      "options": ["30 segundos", "100 segundos", "60 segundos", "24 segundos"],
+      "answer": 2,
+      "explain": "Um minuto corresponde a 60 segundos."
+    },
+    {
+      "type": "mc",
+      "q": "No relógio, qual ponteiro indica os minutos?",
+      "options": ["Ponteiro pequeno", "Os números", "A moldura", "Ponteiro grande"],
+      "answer": 3,
+      "explain": "O ponteiro grande indica os minutos; o pequeno indica as horas."
+    },
+    {
+      "type": "mc",
+      "q": "A biblioteca fica ao lado da escola. Essa frase informa o quê?",
+      "options": ["Duração", "Localização", "Quantidade", "Temperatura"],
+      "answer": 1,
+      "explain": "A expressão 'ao lado' indica a posição da biblioteca em relação à escola."
+    },
+    {
+      "type": "mc",
+      "q": "Qual instrução descreve um deslocamento?",
+      "options": ["A praça fica perto", "A aula dura uma hora", "Ande duas quadras e vire à direita", "Há três caminhos"],
+      "answer": 2,
+      "explain": "Um deslocamento descreve o movimento realizado ao longo de um trajeto."
+    }
+  ]
+}

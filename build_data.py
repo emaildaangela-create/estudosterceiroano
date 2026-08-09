@@ -6,31 +6,31 @@ DISCIPLINAS = [
         "id": "portugues",
         "nome": "Língua Portuguesa",
         "cor": "--rosa",
-        "capitulos": ["lp17", "lp18", "lp19", "lp20", "lp21", "lp22"],
+        "capitulos": ["lp17", "lp18", "rev_lp3b", "lp19", "lp20", "lp21", "lp22"],
     },
     {
         "id": "matematica",
         "nome": "Matemática",
         "cor": "--ciano",
-        "capitulos": ["mat09", "mat10", "mat11"],
+        "capitulos": ["mat09", "mat10", "rev_mat3b", "mat11"],
     },
     {
         "id": "ciencias",
         "nome": "Ciências",
         "cor": "--verde",
-        "capitulos": ["cie09", "cie10", "cie11"],
+        "capitulos": ["cie09", "cie10", "rev_cie3b", "cie11"],
     },
     {
         "id": "geografia",
         "nome": "Geografia",
         "cor": "--laranja",
-        "capitulos": ["geo09", "geo10", "geo11"],
+        "capitulos": ["geo09", "rev_geo3b", "geo10", "geo11"],
     },
     {
         "id": "historia",
         "nome": "História",
         "cor": "--roxo",
-        "capitulos": ["hist09", "hist10", "hist11"],
+        "capitulos": ["hist09", "hist10", "rev_hist3b", "hist11"],
     },
 ]
 

@@ -398,6 +398,10 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "Ele traz comandos diretos e numerados que orientam o leitor a executar um procedimento — calibrar o botão. É exatamente a função do texto instrucional."
           }
+        ],
+        "pageImages": [
+          "pages/LINGUA_PORTUGUESA__01_Modulo_17_Lava_uma_mao_lava_a_outra/p01.png",
+          "pages/LINGUA_PORTUGUESA__01_Modulo_17_Lava_uma_mao_lava_a_outra/p03.png"
         ]
       },
       {
@@ -635,6 +639,193 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "A linha do tempo é definida pela ordem cronológica — a ordem exata em que os fatos aconteceram. Já o conto de memórias segue o fluxo das lembranças, podendo ir e voltar no tempo."
           }
+        ],
+        "pageImages": [
+          "pages/LINGUA_PORTUGUESA__02_Modulo_18_Lembrancas_de_uma_vida/p01.png",
+          "pages/LINGUA_PORTUGUESA__02_Modulo_18_Lembrancas_de_uma_vida/p03.png"
+        ]
+      },
+      {
+        "id": "rev_lp3b",
+        "module": "R3",
+        "title": "Revisão do 3º bimestre",
+        "subtitle": "Texto instrucional · Substantivo · Adjetivo · Ortografia",
+        "theory": [
+          {
+            "h": "Revisão: texto instrucional e graus do substantivo",
+            "p": [
+              "O <strong>texto instrucional</strong> ensina como fazer algo. Ele usa comandos claros, materiais, etapas em ordem e, muitas vezes, imagens.",
+              "O substantivo pode aparecer no <strong>diminutivo</strong> ou no <strong>aumentativo</strong>. Essas formas podem indicar tamanho ou sentimentos, como carinho e admiração.",
+              "Usamos terminações como <strong>-sinho, -zinho e -inho</strong>. Exemplos: rosa → rosinha; pai → paizinho; sapato → sapatinho."
+            ]
+          },
+          {
+            "h": "Revisão: adjetivos e terminações -oso e -osa",
+            "p": [
+              "O <strong>adjetivo</strong> atribui uma característica ao substantivo: menina curiosa, livro interessante, caminho perigoso.",
+              "Muitos adjetivos terminados em <strong>-oso</strong> e <strong>-osa</strong> são escritos com S: carinho → carinhoso; fama → famosa; perigo → perigoso."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "sort",
+            "title": "Cada palavra em seu lugar",
+            "instructions": "Separe as palavras conforme sua função.",
+            "categories": [
+              "Substantivo",
+              "Adjetivo"
+            ],
+            "items": [
+              {
+                "text": "menina",
+                "cat": 0
+              },
+              {
+                "text": "cidade",
+                "cat": 0
+              },
+              {
+                "text": "livro",
+                "cat": 0
+              },
+              {
+                "text": "curiosa",
+                "cat": 1
+              },
+              {
+                "text": "silenciosa",
+                "cat": 1
+              },
+              {
+                "text": "perigoso",
+                "cat": 1
+              }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Palavras da revisão",
+            "instructions": "Ligue cada palavra à forma correspondente.",
+            "pairs": [
+              [
+                "rosa",
+                "rosinha"
+              ],
+              [
+                "pai",
+                "paizinho"
+              ],
+              [
+                "sapato",
+                "sapatinho"
+              ],
+              [
+                "bola",
+                "bolão"
+              ],
+              [
+                "carinho",
+                "carinhoso"
+              ],
+              [
+                "fama",
+                "famosa"
+              ]
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "Qual é a finalidade de um texto instrucional?",
+            "options": [
+              "Ensinar como fazer algo",
+              "Contar uma aventura",
+              "Expressar sentimentos em versos",
+              "Descrever um personagem"
+            ],
+            "answer": 0,
+            "explain": "Textos instrucionais orientam o leitor por meio de materiais, comandos e etapas organizadas."
+          },
+          {
+            "type": "mc",
+            "q": "Qual característica combina com um texto instrucional?",
+            "options": [
+              "Versos e rimas",
+              "Comandos em ordem",
+              "Diálogos entre personagens",
+              "Narrador de uma história"
+            ],
+            "answer": 1,
+            "explain": "As instruções precisam aparecer em uma ordem clara para que o leitor consiga realizar a tarefa."
+          },
+          {
+            "type": "mc",
+            "q": "Na frase 'Minha filhinha chegou', o diminutivo pode expressar o quê?",
+            "options": [
+              "Localização",
+              "Tempo",
+              "Carinho",
+              "Quantidade"
+            ],
+            "answer": 2,
+            "explain": "O diminutivo pode indicar tamanho, mas também pode demonstrar carinho."
+          },
+          {
+            "type": "text",
+            "q": "Escreva o diminutivo da palavra 'rosa'.",
+            "answers": [
+              "rosinha",
+              "rosinha."
+            ],
+            "explain": "Como rosa tem S na última sílaba, seu diminutivo é rosinha."
+          },
+          {
+            "type": "text",
+            "q": "Escreva o diminutivo da palavra 'pai'.",
+            "answers": [
+              "paizinho",
+              "paizinho."
+            ],
+            "explain": "A forma correta é paizinho, escrita com Z."
+          },
+          {
+            "type": "mc",
+            "q": "Qual palavra é o adjetivo em 'A menina curiosa fez uma pergunta'?",
+            "options": [
+              "Menina",
+              "Pergunta",
+              "Fez",
+              "Curiosa"
+            ],
+            "answer": 3,
+            "explain": "Curiosa atribui uma característica ao substantivo menina, por isso é um adjetivo."
+          },
+          {
+            "type": "mc",
+            "q": "Qual palavra está escrita corretamente?",
+            "options": [
+              "Carinhozo",
+              "Carinhoso",
+              "Carinhoço",
+              "Carinozo"
+            ],
+            "answer": 1,
+            "explain": "Adjetivos terminados em -oso e -osa são escritos com S: carinhoso."
+          },
+          {
+            "type": "mc",
+            "q": "Qual adjetivo pode caracterizar um caminho com perigo?",
+            "options": [
+              "Perigo",
+              "Perigos",
+              "Perigoso",
+              "Perigosamente"
+            ],
+            "answer": 2,
+            "explain": "Perigoso é o adjetivo derivado de perigo e caracteriza o substantivo caminho."
+          }
         ]
       },
       {
@@ -865,6 +1056,10 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "'Japonesa' caracteriza o substantivo 'comida', indicando sua origem. Repare na concordância: comida é feminino, por isso o adjetivo também vai para o feminino."
           }
+        ],
+        "pageImages": [
+          "pages/LINGUA_PORTUGUESA__03_Modulo_19_Voando_alto/p01.png",
+          "pages/LINGUA_PORTUGUESA__03_Modulo_19_Voando_alto/p03.png"
         ]
       },
       {
@@ -1096,6 +1291,10 @@ const DISCIPLINAS = [
             "answer": 2,
             "explain": "A imagem chama a atenção e mostra o produto como ele realmente é. Mesmo assim, ela não substitui as informações escritas: descrição, preço e contato continuam necessários."
           }
+        ],
+        "pageImages": [
+          "pages/LINGUA_PORTUGUESA__04_Modulo_20_Uma_doce_danca/p01.png",
+          "pages/LINGUA_PORTUGUESA__04_Modulo_20_Uma_doce_danca/p03.png"
         ]
       },
       {
@@ -1358,6 +1557,10 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "Com 'a gente', a concordância é no singular: 'a gente gosta'. Com 'nós', vai para o plural: 'nós gostamos'. Trocar o pronome exige ajustar o verbo!"
           }
+        ],
+        "pageImages": [
+          "pages/LINGUA_PORTUGUESA__05_Modulo_21_Vencer_o_medo/p01.png",
+          "pages/LINGUA_PORTUGUESA__05_Modulo_21_Vencer_o_medo/p03.png"
         ]
       },
       {
@@ -1618,6 +1821,10 @@ const DISCIPLINAS = [
             "answer": 0,
             "explain": "Faltou cumprir o combinado e retribuir a ajuda. A história permite conversar sobre cooperação e responsabilidade."
           }
+        ],
+        "pageImages": [
+          "pages/LINGUA_PORTUGUESA__06_Modulo_22_Contando_e_recontando/p01.png",
+          "pages/LINGUA_PORTUGUESA__06_Modulo_22_Contando_e_recontando/p03.png"
         ]
       }
     ]
@@ -1842,6 +2049,10 @@ const DISCIPLINAS = [
             "answer": 3,
             "explain": "Cada dia tem 20 + 30 = 50 alunos. Em 5 dias: 5 × 50 = 250 alunos, pois cada aluno faz apenas uma aula por semana."
           }
+        ],
+        "pageImages": [
+          "pages/MATEMATICA__01_Modulo_09_Contagem_de_possibilidades_e_outras_multiplicacoes/p01.png",
+          "pages/MATEMATICA__01_Modulo_09_Contagem_de_possibilidades_e_outras_multiplicacoes/p03.png"
         ]
       },
       {
@@ -2059,6 +2270,193 @@ const DISCIPLINAS = [
               "a hora"
             ],
             "explain": "O ponteiro menor (mais curto) indica as horas; o maior indica os minutos; e o mais fininho e rápido indica os segundos."
+          }
+        ],
+        "pageImages": [
+          "pages/MATEMATICA__02_Modulo_10_Medidas_de_tempo_localizacao_e_deslocamento/p01.png",
+          "pages/MATEMATICA__02_Modulo_10_Medidas_de_tempo_localizacao_e_deslocamento/p03.png"
+        ]
+      },
+      {
+        "id": "rev_mat3b",
+        "module": "R3",
+        "title": "Revisão do 3º bimestre",
+        "subtitle": "Multiplicação · Tempo · Localização",
+        "theory": [
+          {
+            "h": "Revisão: possibilidades e multiplicação",
+            "p": [
+              "Em problemas de possibilidades, podemos organizar as escolhas em uma tabela ou multiplicar as quantidades. Se há 3 camisetas e 2 bermudas, existem <strong>3 × 2 = 6</strong> combinações.",
+              "Multiplicar por 10, 100 ou 1.000 ajuda a resolver cálculos rapidamente. Também usamos a multiplicação em problemas com grupos de mesma quantidade."
+            ]
+          },
+          {
+            "h": "Revisão: tempo, localização e deslocamento",
+            "p": [
+              "Uma hora tem <strong>60 minutos</strong>; meia hora tem <strong>30 minutos</strong>; um minuto tem <strong>60 segundos</strong>. O ponteiro pequeno indica as horas e o grande, os minutos.",
+              "Para indicar localização e trajetos usamos pontos de referência e palavras como direita, esquerda, em frente, atrás, perto e longe."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "pairs",
+            "title": "Revisão rápida de Matemática",
+            "instructions": "Ligue cada pergunta ao resultado.",
+            "pairs": [
+              [
+                "3 blusas e 2 saias",
+                "6 combinações"
+              ],
+              [
+                "7 × 10",
+                "70"
+              ],
+              [
+                "4 × 100",
+                "400"
+              ],
+              [
+                "2 × 1.000",
+                "2.000"
+              ],
+              [
+                "Meia hora",
+                "30 minutos"
+              ],
+              [
+                "Um minuto",
+                "60 segundos"
+              ]
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "Número, tempo ou caminho?",
+            "instructions": "Separe cada pista conforme o assunto.",
+            "categories": [
+              "Multiplicação",
+              "Tempo",
+              "Localização"
+            ],
+            "items": [
+              {
+                "text": "5 × 100",
+                "cat": 0
+              },
+              {
+                "text": "Quatro grupos de seis",
+                "cat": 0
+              },
+              {
+                "text": "30 minutos",
+                "cat": 1
+              },
+              {
+                "text": "Ponteiro dos segundos",
+                "cat": 1
+              },
+              {
+                "text": "Vire à esquerda",
+                "cat": 2
+              },
+              {
+                "text": "Atrás da escola",
+                "cat": 2
+              }
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "text",
+            "q": "Uma lanchonete oferece 3 sucos e 2 sanduíches. Quantas combinações são possíveis?",
+            "answers": [
+              "6",
+              "6 combinacoes",
+              "seis",
+              "seis combinacoes"
+            ],
+            "explain": "Cada um dos 3 sucos pode acompanhar 2 sanduíches: 3 × 2 = 6 combinações."
+          },
+          {
+            "type": "text",
+            "q": "Qual é o resultado de 8 × 100?",
+            "answers": [
+              "800",
+              "oitocentos"
+            ],
+            "explain": "Multiplicar 8 por 100 resulta em 800."
+          },
+          {
+            "type": "text",
+            "q": "Há 6 caixas com 4 lápis em cada uma. Quantos lápis há ao todo?",
+            "answers": [
+              "24",
+              "24 lapis",
+              "vinte e quatro"
+            ],
+            "explain": "São 6 grupos de 4 lápis: 6 × 4 = 24."
+          },
+          {
+            "type": "mc",
+            "q": "Quantos minutos há em meia hora?",
+            "options": [
+              "15 minutos",
+              "30 minutos",
+              "45 minutos",
+              "60 minutos"
+            ],
+            "answer": 1,
+            "explain": "Uma hora tem 60 minutos. A metade de 60 é 30, portanto meia hora tem 30 minutos."
+          },
+          {
+            "type": "mc",
+            "q": "Quantos segundos há em um minuto?",
+            "options": [
+              "30 segundos",
+              "100 segundos",
+              "60 segundos",
+              "24 segundos"
+            ],
+            "answer": 2,
+            "explain": "Um minuto corresponde a 60 segundos."
+          },
+          {
+            "type": "mc",
+            "q": "No relógio, qual ponteiro indica os minutos?",
+            "options": [
+              "Ponteiro pequeno",
+              "Os números",
+              "A moldura",
+              "Ponteiro grande"
+            ],
+            "answer": 3,
+            "explain": "O ponteiro grande indica os minutos; o pequeno indica as horas."
+          },
+          {
+            "type": "mc",
+            "q": "A biblioteca fica ao lado da escola. Essa frase informa o quê?",
+            "options": [
+              "Duração",
+              "Localização",
+              "Quantidade",
+              "Temperatura"
+            ],
+            "answer": 1,
+            "explain": "A expressão 'ao lado' indica a posição da biblioteca em relação à escola."
+          },
+          {
+            "type": "mc",
+            "q": "Qual instrução descreve um deslocamento?",
+            "options": [
+              "A praça fica perto",
+              "A aula dura uma hora",
+              "Ande duas quadras e vire à direita",
+              "Há três caminhos"
+            ],
+            "answer": 2,
+            "explain": "Um deslocamento descreve o movimento realizado ao longo de um trajeto."
           }
         ]
       },
@@ -2294,6 +2692,10 @@ const DISCIPLINAS = [
             "answer": 2,
             "explain": "256 ÷ 2 = 128. Decompondo: 200 ÷ 2 = 100; 56 ÷ 2 = 28; 100 + 28 = 128 bonecos."
           }
+        ],
+        "pageImages": [
+          "pages/MATEMATICA__03_Modulo_11_Divisao/p01.png",
+          "pages/MATEMATICA__03_Modulo_11_Divisao/p03.png"
         ]
       }
     ]
@@ -2536,6 +2938,10 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "Quando duas placas se chocam, elas empurram a superfície do terreno para cima. No caso dos Andes, uma placa chegou a subir em cima da outra."
           }
+        ],
+        "pageImages": [
+          "pages/GEO_HIST_CIENC__07_CIENCIAS_Modulo_09_Caracteristicas_da_Terra/p01.png",
+          "pages/GEO_HIST_CIENC__07_CIENCIAS_Modulo_09_Caracteristicas_da_Terra/p03.png"
         ]
       },
       {
@@ -2779,6 +3185,219 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "A atmosfera atrapalha a observação. Em órbita, livre dela, o Kepler permitiu descobrir mais de 2.600 planetas fora do Sistema Solar em quase dez anos de operação."
           }
+        ],
+        "pageImages": [
+          "pages/GEO_HIST_CIENC__08_CIENCIAS_Modulo_10_Observando_o_ceu_diurno/p01.png",
+          "pages/GEO_HIST_CIENC__08_CIENCIAS_Modulo_10_Observando_o_ceu_diurno/p03.png"
+        ]
+      },
+      {
+        "id": "rev_cie3b",
+        "module": "R3",
+        "title": "Revisão do 3º bimestre",
+        "subtitle": "Características da Terra · Céu diurno",
+        "theory": [
+          {
+            "h": "Revisão: características da Terra",
+            "p": [
+              "A Terra pode ser representada por <strong>fotografias, planisférios e globos</strong>. O globo preserva melhor o formato esférico; o planisfério mostra toda a superfície em um plano.",
+              "A <strong>hidrosfera</strong> reúne a água; a <strong>litosfera</strong>, a parte sólida; a <strong>atmosfera</strong>, os gases; e a <strong>biosfera</strong>, os lugares onde existe vida.",
+              "No interior da Terra estão a <strong>crosta</strong>, o <strong>manto</strong> e o <strong>núcleo</strong>. Movimentos das placas tectônicas podem provocar terremotos, tsunamis e atividade vulcânica."
+            ]
+          },
+          {
+            "h": "Revisão: observando o céu diurno",
+            "p": [
+              "Estrelas têm luz própria; planetas giram ao redor de estrelas; satélites naturais giram ao redor de planetas. O <strong>Sol</strong> é a estrela mais próxima da Terra.",
+              "A luz e o calor do Sol ajudam a manter a água líquida e permitem a fotossíntese. A rotação da Terra dura cerca de <strong>24 horas</strong> e produz o dia e a noite; a translação dura cerca de <strong>365 dias</strong>."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "pairs",
+            "title": "Pistas da Terra e do céu",
+            "instructions": "Ligue cada termo à explicação correspondente.",
+            "pairs": [
+              [
+                "Planisfério",
+                "Representação plana de toda a superfície terrestre"
+              ],
+              [
+                "Hidrosfera",
+                "Toda a água do planeta"
+              ],
+              [
+                "Atmosfera",
+                "Camada de gases ao redor da Terra"
+              ],
+              [
+                "Manto",
+                "Camada espessa abaixo da crosta"
+              ],
+              [
+                "Terremoto",
+                "Tremor ligado ao movimento das placas"
+              ],
+              [
+                "Estrela",
+                "Astro que tem luz própria"
+              ],
+              [
+                "Rotação",
+                "Giro da Terra em torno de si mesma"
+              ],
+              [
+                "Translação",
+                "Movimento da Terra ao redor do Sol"
+              ]
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "Terra ou céu?",
+            "instructions": "Separe as ideias conforme o assunto principal.",
+            "categories": [
+              "Características da Terra",
+              "Céu diurno"
+            ],
+            "items": [
+              {
+                "text": "Crosta, manto e núcleo",
+                "cat": 0
+              },
+              {
+                "text": "Hidrosfera e litosfera",
+                "cat": 0
+              },
+              {
+                "text": "Vulcões e terremotos",
+                "cat": 0
+              },
+              {
+                "text": "Estrelas e planetas",
+                "cat": 1
+              },
+              {
+                "text": "Luz e calor do Sol",
+                "cat": 1
+              },
+              {
+                "text": "Rotação e translação",
+                "cat": 1
+              }
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "Qual representação mostra toda a superfície da Terra de forma plana?",
+            "options": [
+              "Planisfério",
+              "Telescópio",
+              "Bússola",
+              "Satélite"
+            ],
+            "answer": 0,
+            "explain": "O planisfério, também chamado de mapa-múndi, representa toda a superfície terrestre em um plano."
+          },
+          {
+            "type": "mc",
+            "q": "Por que a Terra é chamada de planeta azul?",
+            "options": [
+              "O núcleo é azul",
+              "Grande parte da superfície tem água",
+              "As rochas são azuis",
+              "O Sol ilumina somente os oceanos"
+            ],
+            "answer": 1,
+            "explain": "Vista do espaço, a Terra parece azul porque grande parte de sua superfície é coberta pelos oceanos."
+          },
+          {
+            "type": "mc",
+            "q": "Qual parte da Terra reúne continentes, rochas e o fundo dos oceanos?",
+            "options": [
+              "Hidrosfera",
+              "Atmosfera",
+              "Litosfera",
+              "Biosfera"
+            ],
+            "answer": 2,
+            "explain": "A litosfera é a parte sólida da Terra. Ela inclui as rochas dos continentes e do fundo oceânico."
+          },
+          {
+            "type": "mc",
+            "q": "Qual é a camada mais externa e fina do interior da Terra?",
+            "options": [
+              "Manto",
+              "Núcleo externo",
+              "Núcleo interno",
+              "Crosta"
+            ],
+            "answer": 3,
+            "explain": "A crosta é a camada rochosa mais externa e fina. Abaixo dela fica o manto."
+          },
+          {
+            "type": "mc",
+            "q": "O que pode acontecer quando placas tectônicas se movimentam bruscamente?",
+            "options": [
+              "Um terremoto",
+              "Uma fase da Lua",
+              "Uma mudança de estação",
+              "Um eclipse solar"
+            ],
+            "answer": 0,
+            "explain": "Movimentos bruscos entre placas liberam energia e produzem tremores chamados terremotos."
+          },
+          {
+            "type": "mc",
+            "q": "Como se chama o magma depois que ele sai de um vulcão?",
+            "options": [
+              "Crosta",
+              "Lava",
+              "Onda sísmica",
+              "Atmosfera"
+            ],
+            "answer": 1,
+            "explain": "Dentro da Terra o material é chamado magma. Ao chegar à superfície, recebe o nome de lava."
+          },
+          {
+            "type": "mc",
+            "q": "Qual característica distingue uma estrela de um planeta?",
+            "options": [
+              "O planeta tem luz própria",
+              "A estrela gira ao redor da Terra",
+              "A estrela tem luz própria",
+              "O planeta não se movimenta"
+            ],
+            "answer": 2,
+            "explain": "Estrelas produzem luz. Planetas não têm luz própria e giram ao redor de uma estrela."
+          },
+          {
+            "type": "mc",
+            "q": "Qual movimento da Terra dura cerca de 24 horas?",
+            "options": [
+              "Translação",
+              "Órbita lunar",
+              "Movimento das placas",
+              "Rotação"
+            ],
+            "answer": 3,
+            "explain": "A rotação é o giro da Terra em torno de si mesma. Ela produz a alternância entre dia e noite."
+          },
+          {
+            "type": "mc",
+            "q": "Como o Sol ajuda a existência da vida na Terra?",
+            "options": [
+              "Fornece luz e calor",
+              "Impede a fotossíntese",
+              "Apaga a atmosfera",
+              "Faz a Terra parar"
+            ],
+            "answer": 0,
+            "explain": "A luz e o calor do Sol mantêm condições adequadas à vida e permitem que as plantas façam fotossíntese."
+          }
         ]
       },
       {
@@ -3005,6 +3624,10 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "As regiões mais iluminadas são as mais urbanizadas. As populações ocupam lugares de fácil acesso e clima favorável — condições que a Antártica não oferece, por isso permanece quase sem ocupação."
           }
+        ],
+        "pageImages": [
+          "pages/GEO_HIST_CIENC__09_CIENCIAS_Modulo_11_Observando_o_ceu_noturno/p01.png",
+          "pages/GEO_HIST_CIENC__09_CIENCIAS_Modulo_11_Observando_o_ceu_noturno/p03.png"
         ]
       }
     ]
@@ -3243,6 +3866,186 @@ const DISCIPLINAS = [
             "answer": 0,
             "explain": "Prefeito e vereadores são eleitos pela população a cada quatro anos e cuidam dos serviços de saúde, educação, lazer e transporte para toda a população do município."
           }
+        ],
+        "pageImages": [
+          "pages/GEO_HIST_CIENC__04_GEOGRAFIA_Modulo_09_Conhecendo_o_municipio/p01.png",
+          "pages/GEO_HIST_CIENC__04_GEOGRAFIA_Modulo_09_Conhecendo_o_municipio/p03.png"
+        ]
+      },
+      {
+        "id": "rev_geo3b",
+        "module": "R3",
+        "title": "Revisão do 3º bimestre",
+        "subtitle": "Município · Área urbana e área rural",
+        "theory": [
+          {
+            "h": "Revisão: conhecendo o município",
+            "p": [
+              "O <strong>município</strong> é formado pela cidade e pelas áreas rurais administradas pela mesma prefeitura. A área urbana concentra ruas, prédios, comércio e serviços.",
+              "A área rural tem mais campos, propriedades agrícolas e atividades ligadas à agricultura, pecuária e extrativismo. As áreas urbana e rural dependem uma da outra."
+            ]
+          },
+          {
+            "h": "Revisão: atividades e problemas ambientais",
+            "p": [
+              "Na área urbana são comuns comércio, indústria e prestação de serviços. Na área rural destacam-se agricultura e criação de animais.",
+              "Poluição do ar e da água, excesso de lixo, enchentes e retirada da vegetação são problemas ambientais. A população e o governo devem colaborar para diminuir esses problemas."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "sort",
+            "title": "Urbano ou rural?",
+            "instructions": "Leve cada característica para a área correspondente.",
+            "categories": [
+              "Área urbana",
+              "Área rural"
+            ],
+            "items": [
+              {
+                "text": "Grande concentração de prédios",
+                "cat": 0
+              },
+              {
+                "text": "Comércio e muitos serviços",
+                "cat": 0
+              },
+              {
+                "text": "Trânsito intenso",
+                "cat": 0
+              },
+              {
+                "text": "Plantação de alimentos",
+                "cat": 1
+              },
+              {
+                "text": "Criação de animais",
+                "cat": 1
+              },
+              {
+                "text": "Propriedades agrícolas",
+                "cat": 1
+              }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Município em revisão",
+            "instructions": "Ligue cada ideia ao exemplo.",
+            "pairs": [
+              [
+                "Município",
+                "Área urbana e rural administradas juntas"
+              ],
+              [
+                "Atividade urbana",
+                "Comércio em uma avenida"
+              ],
+              [
+                "Atividade rural",
+                "Cultivo de hortaliças"
+              ],
+              [
+                "Poluição do ar",
+                "Fumaça de muitos veículos"
+              ],
+              [
+                "Enchente",
+                "Água ocupa ruas após chuva forte"
+              ],
+              [
+                "Desmatamento",
+                "Retirada da vegetação"
+              ]
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "O que forma um município?",
+            "options": [
+              "Área urbana e área rural",
+              "Somente o centro da cidade",
+              "Apenas as áreas agrícolas",
+              "Somente bairros com prédios"
+            ],
+            "answer": 0,
+            "explain": "O município reúne a cidade, seus bairros e as áreas rurais administradas pela mesma prefeitura."
+          },
+          {
+            "type": "mc",
+            "q": "Qual característica é comum na área urbana?",
+            "options": [
+              "Grandes plantações",
+              "Concentração de comércio e serviços",
+              "Criação extensiva de gado",
+              "Poucas construções"
+            ],
+            "answer": 1,
+            "explain": "A área urbana concentra moradias, comércio, serviços, ruas e prédios."
+          },
+          {
+            "type": "mc",
+            "q": "Qual situação representa um problema ambiental urbano?",
+            "options": [
+              "Plantio de uma horta",
+              "Criação responsável de animais",
+              "Fumaça de muitos veículos",
+              "Preservação de uma praça"
+            ],
+            "answer": 2,
+            "explain": "A fumaça dos veículos libera poluentes e prejudica a qualidade do ar nas cidades."
+          },
+          {
+            "type": "mc",
+            "q": "Qual característica é comum na área rural?",
+            "options": [
+              "Muitos edifícios altos",
+              "Trânsito de avenidas centrais",
+              "Grande número de lojas",
+              "Propriedades agrícolas"
+            ],
+            "answer": 3,
+            "explain": "Na área rural há propriedades agrícolas, plantações, pastagens e criação de animais."
+          },
+          {
+            "type": "mc",
+            "q": "Qual é uma atividade econômica rural?",
+            "options": [
+              "Cultivo de milho",
+              "Venda em shopping",
+              "Transporte por metrô",
+              "Trabalho em banco"
+            ],
+            "answer": 0,
+            "explain": "O cultivo de alimentos é uma atividade agrícola realizada principalmente na área rural."
+          },
+          {
+            "type": "mc",
+            "q": "Qual é uma atividade econômica urbana?",
+            "options": [
+              "Plantio de soja",
+              "Comércio em uma loja",
+              "Criação de gado",
+              "Colheita de café"
+            ],
+            "answer": 1,
+            "explain": "Comércio e prestação de serviços estão entre as atividades mais comuns das áreas urbanas."
+          },
+          {
+            "type": "mc",
+            "q": "Como as áreas urbana e rural se relacionam?",
+            "options": [
+              "Não dependem uma da outra",
+              "Produzem exatamente as mesmas coisas",
+              "Trocam produtos e serviços",
+              "Pertencem a municípios diferentes"
+            ],
+            "answer": 2,
+            "explain": "O campo fornece muitos alimentos e matérias-primas; a cidade oferece produtos, comércio e serviços."
+          }
         ]
       },
       {
@@ -3473,6 +4276,10 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "O agricultor precisa da luz do dia para irrigar as plantas e colher os alimentos — tarefas difíceis de realizar à noite. O trabalho rural segue os ritmos da natureza."
           }
+        ],
+        "pageImages": [
+          "pages/GEO_HIST_CIENC__05_GEOGRAFIA_Modulo_10_A_populacao_do_municipio/p01.png",
+          "pages/GEO_HIST_CIENC__05_GEOGRAFIA_Modulo_10_A_populacao_do_municipio/p03.png"
         ]
       },
       {
@@ -3721,6 +4528,10 @@ const DISCIPLINAS = [
             "answer": 0,
             "explain": "A bicicleta não emite poluentes, e o transporte coletivo leva muitas pessoas de uma vez, reduzindo o número de carros. Queimar lixo piora a poluição do ar; buzina é sonora e cartaz é visual."
           }
+        ],
+        "pageImages": [
+          "pages/GEO_HIST_CIENC__06_GEOGRAFIA_Modulo_11_Servicos_e_problemas_do_municipio/p01.png",
+          "pages/GEO_HIST_CIENC__06_GEOGRAFIA_Modulo_11_Servicos_e_problemas_do_municipio/p03.png"
         ]
       }
     ]
@@ -3952,6 +4763,10 @@ const DISCIPLINAS = [
             ],
             "explain": "Estamos exercendo a cidadania: convivendo em harmonia com a sociedade, respeitando as regras que garantem a segurança e a preservação dos lugares que são de todos."
           }
+        ],
+        "pageImages": [
+          "pages/GEO_HIST_CIENC__01_HISTORIA_Modulo_09_Dividindo_espacos_em_comunidade/p01.png",
+          "pages/GEO_HIST_CIENC__01_HISTORIA_Modulo_09_Dividindo_espacos_em_comunidade/p03.png"
         ]
       },
       {
@@ -4186,6 +5001,196 @@ const DISCIPLINAS = [
             ],
             "answer": 1,
             "explain": "São espaços públicos, mas buracos, escadarias e ausência de rampas impedem que idosos, pessoas com deficiência e famílias com carrinhos circulem. Sem acessibilidade, o espaço não é efetivamente de todos."
+          }
+        ],
+        "pageImages": [
+          "pages/GEO_HIST_CIENC__02_HISTORIA_Modulo_10_Espacos_publicos_e_privados/p01.png",
+          "pages/GEO_HIST_CIENC__02_HISTORIA_Modulo_10_Espacos_publicos_e_privados/p03.png"
+        ]
+      },
+      {
+        "id": "rev_hist3b",
+        "module": "R3",
+        "title": "Revisão do 3º bimestre",
+        "subtitle": "Espaços da comunidade · Serviços e prefeitura",
+        "theory": [
+          {
+            "h": "Revisão: espaços da comunidade",
+            "p": [
+              "Espaços <strong>públicos</strong> pertencem à coletividade e são administrados pelo poder público. Ruas, praças e parques são exemplos. Espaços <strong>privados</strong> pertencem a pessoas ou instituições.",
+              "Alguns espaços públicos têm <strong>acesso restrito</strong>, como escolas durante as aulas. Alguns espaços privados são de <strong>uso público</strong>, como mercados e cinemas, que recebem clientes seguindo regras."
+            ]
+          },
+          {
+            "h": "Revisão: serviços e administração municipal",
+            "p": [
+              "Serviços públicos atendem necessidades coletivas, como iluminação das ruas, escolas e postos de saúde. Serviços privados são oferecidos por empresas ou profissionais.",
+              "A <strong>prefeitura</strong> administra o município. O prefeito e os secretários organizam serviços, cuidam dos espaços públicos e planejam melhorias para a população."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "sort",
+            "title": "Que espaço é esse?",
+            "instructions": "Separe os espaços em públicos e privados.",
+            "categories": [
+              "Espaço público",
+              "Espaço privado"
+            ],
+            "items": [
+              {
+                "text": "Praça municipal",
+                "cat": 0
+              },
+              {
+                "text": "Rua do bairro",
+                "cat": 0
+              },
+              {
+                "text": "Escola municipal",
+                "cat": 0
+              },
+              {
+                "text": "Casa de uma família",
+                "cat": 1
+              },
+              {
+                "text": "Cinema de uma empresa",
+                "cat": 1
+              },
+              {
+                "text": "Supermercado",
+                "cat": 1
+              }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Comunidade bem organizada",
+            "instructions": "Ligue cada conceito ao exemplo.",
+            "pairs": [
+              [
+                "Acesso restrito",
+                "Escola recebe alunos e responsáveis autorizados"
+              ],
+              [
+                "Privado de uso público",
+                "Mercado recebe clientes"
+              ],
+              [
+                "Serviço público",
+                "Coleta de lixo realizada pelo município"
+              ],
+              [
+                "Serviço privado",
+                "Conserto feito por uma empresa"
+              ],
+              [
+                "Prefeitura",
+                "Administra o município"
+              ],
+              [
+                "Praça",
+                "Espaço público de convivência"
+              ]
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "Qual destes lugares é um espaço público?",
+            "options": [
+              "Praça municipal",
+              "Quarto de uma casa",
+              "Clube particular",
+              "Loja de roupas"
+            ],
+            "answer": 0,
+            "explain": "A praça pertence à coletividade e é cuidada pelo poder público."
+          },
+          {
+            "type": "mc",
+            "q": "Qual é uma função dos espaços públicos da cidade?",
+            "options": [
+              "Servir somente ao proprietário",
+              "Permitir circulação e convivência",
+              "Impedir encontros entre moradores",
+              "Receber apenas funcionários"
+            ],
+            "answer": 1,
+            "explain": "Ruas, praças e parques permitem deslocamento, lazer e convivência entre as pessoas."
+          },
+          {
+            "type": "mc",
+            "q": "Por que uma escola municipal pode ter acesso restrito?",
+            "options": [
+              "Porque deixou de ser pública",
+              "Porque pertence a uma família",
+              "Para proteger e organizar a comunidade escolar",
+              "Porque não presta serviço público"
+            ],
+            "answer": 2,
+            "explain": "A escola continua pública, mas controla a entrada para proteger estudantes e organizar suas atividades."
+          },
+          {
+            "type": "mc",
+            "q": "Qual exemplo representa um espaço privado de uso público?",
+            "options": [
+              "Sala de uma residência",
+              "Quarto de hotel ocupado",
+              "Garagem de uma casa",
+              "Supermercado aberto aos clientes"
+            ],
+            "answer": 3,
+            "explain": "O supermercado pertence a uma empresa, mas recebe o público durante seu funcionamento."
+          },
+          {
+            "type": "mc",
+            "q": "Qual destes é um serviço público municipal?",
+            "options": [
+              "Iluminação das ruas",
+              "Venda de brinquedos",
+              "Aula particular",
+              "Conserto de celular"
+            ],
+            "answer": 0,
+            "explain": "A iluminação das ruas atende toda a comunidade e é organizada pelo poder público."
+          },
+          {
+            "type": "mc",
+            "q": "Qual destes é um serviço privado?",
+            "options": [
+              "Limpeza de uma praça",
+              "Conserto oferecido por uma empresa",
+              "Sinalização das ruas",
+              "Administração do município"
+            ],
+            "answer": 1,
+            "explain": "Empresas e profissionais particulares oferecem serviços privados aos clientes."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama o órgão que administra o município?",
+            "answers": [
+              "prefeitura",
+              "a prefeitura",
+              "prefeitura municipal"
+            ],
+            "explain": "A prefeitura administra o município e organiza serviços e melhorias para a população."
+          },
+          {
+            "type": "mc",
+            "q": "Quem chefia o poder executivo do município?",
+            "options": [
+              "Diretor da escola",
+              "Dono do mercado",
+              "Prefeito",
+              "Presidente do bairro"
+            ],
+            "answer": 2,
+            "explain": "O prefeito chefia o poder executivo municipal e trabalha com secretários e servidores."
           }
         ]
       },
@@ -4425,6 +5430,10 @@ const DISCIPLINAS = [
             "answer": 0,
             "explain": "Nessas unidades, a natureza recebe proteção especial. Pesquisa e visitação podem acontecer quando seguem as regras do local."
           }
+        ],
+        "pageImages": [
+          "pages/GEO_HIST_CIENC__03_HISTORIA_Modulo_11_Problemas_das_grandes_cidades/p01.png",
+          "pages/GEO_HIST_CIENC__03_HISTORIA_Modulo_11_Problemas_das_grandes_cidades/p03.png"
         ]
       }
     ]

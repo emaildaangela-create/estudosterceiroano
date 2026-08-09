@@ -1,0 +1,108 @@
+{
+  "id": "rev_lp3b",
+  "module": "R3",
+  "title": "Revisão do 3º bimestre",
+  "subtitle": "Texto instrucional · Substantivo · Adjetivo · Ortografia",
+  "theory": [
+    {
+      "h": "Revisão: texto instrucional e graus do substantivo",
+      "p": [
+        "O <strong>texto instrucional</strong> ensina como fazer algo. Ele usa comandos claros, materiais, etapas em ordem e, muitas vezes, imagens.",
+        "O substantivo pode aparecer no <strong>diminutivo</strong> ou no <strong>aumentativo</strong>. Essas formas podem indicar tamanho ou sentimentos, como carinho e admiração.",
+        "Usamos terminações como <strong>-sinho, -zinho e -inho</strong>. Exemplos: rosa → rosinha; pai → paizinho; sapato → sapatinho."
+      ]
+    },
+    {
+      "h": "Revisão: adjetivos e terminações -oso e -osa",
+      "p": [
+        "O <strong>adjetivo</strong> atribui uma característica ao substantivo: menina curiosa, livro interessante, caminho perigoso.",
+        "Muitos adjetivos terminados em <strong>-oso</strong> e <strong>-osa</strong> são escritos com S: carinho → carinhoso; fama → famosa; perigo → perigoso."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Cada palavra em seu lugar",
+      "instructions": "Separe as palavras conforme sua função.",
+      "categories": ["Substantivo", "Adjetivo"],
+      "items": [
+        {"text": "menina", "cat": 0},
+        {"text": "cidade", "cat": 0},
+        {"text": "livro", "cat": 0},
+        {"text": "curiosa", "cat": 1},
+        {"text": "silenciosa", "cat": 1},
+        {"text": "perigoso", "cat": 1}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Palavras da revisão",
+      "instructions": "Ligue cada palavra à forma correspondente.",
+      "pairs": [
+        ["rosa", "rosinha"],
+        ["pai", "paizinho"],
+        ["sapato", "sapatinho"],
+        ["bola", "bolão"],
+        ["carinho", "carinhoso"],
+        ["fama", "famosa"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Qual é a finalidade de um texto instrucional?",
+      "options": ["Ensinar como fazer algo", "Contar uma aventura", "Expressar sentimentos em versos", "Descrever um personagem"],
+      "answer": 0,
+      "explain": "Textos instrucionais orientam o leitor por meio de materiais, comandos e etapas organizadas."
+    },
+    {
+      "type": "mc",
+      "q": "Qual característica combina com um texto instrucional?",
+      "options": ["Versos e rimas", "Comandos em ordem", "Diálogos entre personagens", "Narrador de uma história"],
+      "answer": 1,
+      "explain": "As instruções precisam aparecer em uma ordem clara para que o leitor consiga realizar a tarefa."
+    },
+    {
+      "type": "mc",
+      "q": "Na frase 'Minha filhinha chegou', o diminutivo pode expressar o quê?",
+      "options": ["Localização", "Tempo", "Carinho", "Quantidade"],
+      "answer": 2,
+      "explain": "O diminutivo pode indicar tamanho, mas também pode demonstrar carinho."
+    },
+    {
+      "type": "text",
+      "q": "Escreva o diminutivo da palavra 'rosa'.",
+      "answers": ["rosinha", "rosinha."],
+      "explain": "Como rosa tem S na última sílaba, seu diminutivo é rosinha."
+    },
+    {
+      "type": "text",
+      "q": "Escreva o diminutivo da palavra 'pai'.",
+      "answers": ["paizinho", "paizinho."],
+      "explain": "A forma correta é paizinho, escrita com Z."
+    },
+    {
+      "type": "mc",
+      "q": "Qual palavra é o adjetivo em 'A menina curiosa fez uma pergunta'?",
+      "options": ["Menina", "Pergunta", "Fez", "Curiosa"],
+      "answer": 3,
+      "explain": "Curiosa atribui uma característica ao substantivo menina, por isso é um adjetivo."
+    },
+    {
+      "type": "mc",
+      "q": "Qual palavra está escrita corretamente?",
+      "options": ["Carinhozo", "Carinhoso", "Carinhoço", "Carinozo"],
+      "answer": 1,
+      "explain": "Adjetivos terminados em -oso e -osa são escritos com S: carinhoso."
+    },
+    {
+      "type": "mc",
+      "q": "Qual adjetivo pode caracterizar um caminho com perigo?",
+      "options": ["Perigo", "Perigos", "Perigoso", "Perigosamente"],
+      "answer": 2,
+      "explain": "Perigoso é o adjetivo derivado de perigo e caracteriza o substantivo caminho."
+    }
+  ]
+}

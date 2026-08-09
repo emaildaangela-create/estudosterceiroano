@@ -1,0 +1,102 @@
+{
+  "id": "rev_geo3b",
+  "module": "R3",
+  "title": "Revisão do 3º bimestre",
+  "subtitle": "Município · Área urbana e área rural",
+  "theory": [
+    {
+      "h": "Revisão: conhecendo o município",
+      "p": [
+        "O <strong>município</strong> é formado pela cidade e pelas áreas rurais administradas pela mesma prefeitura. A área urbana concentra ruas, prédios, comércio e serviços.",
+        "A área rural tem mais campos, propriedades agrícolas e atividades ligadas à agricultura, pecuária e extrativismo. As áreas urbana e rural dependem uma da outra."
+      ]
+    },
+    {
+      "h": "Revisão: atividades e problemas ambientais",
+      "p": [
+        "Na área urbana são comuns comércio, indústria e prestação de serviços. Na área rural destacam-se agricultura e criação de animais.",
+        "Poluição do ar e da água, excesso de lixo, enchentes e retirada da vegetação são problemas ambientais. A população e o governo devem colaborar para diminuir esses problemas."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Urbano ou rural?",
+      "instructions": "Leve cada característica para a área correspondente.",
+      "categories": ["Área urbana", "Área rural"],
+      "items": [
+        {"text": "Grande concentração de prédios", "cat": 0},
+        {"text": "Comércio e muitos serviços", "cat": 0},
+        {"text": "Trânsito intenso", "cat": 0},
+        {"text": "Plantação de alimentos", "cat": 1},
+        {"text": "Criação de animais", "cat": 1},
+        {"text": "Propriedades agrícolas", "cat": 1}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Município em revisão",
+      "instructions": "Ligue cada ideia ao exemplo.",
+      "pairs": [
+        ["Município", "Área urbana e rural administradas juntas"],
+        ["Atividade urbana", "Comércio em uma avenida"],
+        ["Atividade rural", "Cultivo de hortaliças"],
+        ["Poluição do ar", "Fumaça de muitos veículos"],
+        ["Enchente", "Água ocupa ruas após chuva forte"],
+        ["Desmatamento", "Retirada da vegetação"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "O que forma um município?",
+      "options": ["Área urbana e área rural", "Somente o centro da cidade", "Apenas as áreas agrícolas", "Somente bairros com prédios"],
+      "answer": 0,
+      "explain": "O município reúne a cidade, seus bairros e as áreas rurais administradas pela mesma prefeitura."
+    },
+    {
+      "type": "mc",
+      "q": "Qual característica é comum na área urbana?",
+      "options": ["Grandes plantações", "Concentração de comércio e serviços", "Criação extensiva de gado", "Poucas construções"],
+      "answer": 1,
+      "explain": "A área urbana concentra moradias, comércio, serviços, ruas e prédios."
+    },
+    {
+      "type": "mc",
+      "q": "Qual situação representa um problema ambiental urbano?",
+      "options": ["Plantio de uma horta", "Criação responsável de animais", "Fumaça de muitos veículos", "Preservação de uma praça"],
+      "answer": 2,
+      "explain": "A fumaça dos veículos libera poluentes e prejudica a qualidade do ar nas cidades."
+    },
+    {
+      "type": "mc",
+      "q": "Qual característica é comum na área rural?",
+      "options": ["Muitos edifícios altos", "Trânsito de avenidas centrais", "Grande número de lojas", "Propriedades agrícolas"],
+      "answer": 3,
+      "explain": "Na área rural há propriedades agrícolas, plantações, pastagens e criação de animais."
+    },
+    {
+      "type": "mc",
+      "q": "Qual é uma atividade econômica rural?",
+      "options": ["Cultivo de milho", "Venda em shopping", "Transporte por metrô", "Trabalho em banco"],
+      "answer": 0,
+      "explain": "O cultivo de alimentos é uma atividade agrícola realizada principalmente na área rural."
+    },
+    {
+      "type": "mc",
+      "q": "Qual é uma atividade econômica urbana?",
+      "options": ["Plantio de soja", "Comércio em uma loja", "Criação de gado", "Colheita de café"],
+      "answer": 1,
+      "explain": "Comércio e prestação de serviços estão entre as atividades mais comuns das áreas urbanas."
+    },
+    {
+      "type": "mc",
+      "q": "Como as áreas urbana e rural se relacionam?",
+      "options": ["Não dependem uma da outra", "Produzem exatamente as mesmas coisas", "Trocam produtos e serviços", "Pertencem a municípios diferentes"],
+      "answer": 2,
+      "explain": "O campo fornece muitos alimentos e matérias-primas; a cidade oferece produtos, comércio e serviços."
+    }
+  ]
+}

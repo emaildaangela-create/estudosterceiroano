@@ -392,7 +392,8 @@
     var lista=$('#lista-capitulos'); lista.innerHTML='';
     disc.capitulos.forEach(function(cap){
       var p=estado.progresso[cap.id], marca=p&&p.feito?'✓':'→';
-      var b=criar('button','cap-card','<span class="cap-card__num">'+cap.module+'</span><span><strong class="cap-card__titulo">'+textoSeguro(cap.title)+'</strong><span class="cap-card__sub">'+textoSeguro(cap.subtitle||'')+'</span></span><span class="cap-card__estado" aria-hidden="true">'+marca+'</span>',{type:'button'});
+      var revisao=cap.id.indexOf('rev_')===0;
+      var b=criar('button','cap-card'+(revisao?' cap-card--revisao':''),'<span class="cap-card__num">'+cap.module+'</span><span><strong class="cap-card__titulo">'+textoSeguro(cap.title)+'</strong><span class="cap-card__sub">'+textoSeguro(cap.subtitle||'')+'</span></span><span class="cap-card__estado" aria-hidden="true">'+marca+'</span>',{type:'button'});
       b.style.setProperty('--acento',acento(disc)); b.addEventListener('click',function(){abrirCapitulo(id,cap.id);}); lista.appendChild(b);
     });
     mostrar('tela-disciplina');
