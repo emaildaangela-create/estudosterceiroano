@@ -498,7 +498,7 @@
     cheia.addEventListener('click',alternarTelaCheia);controles.appendChild(cheia);topo.appendChild(controles);raiz.appendChild(topo);
     var palco=criar('main','jogo-imersivo__palco'), conteudo=criar('div','jogo-imersivo__conteudo');
     if(cap.games.length>1)conteudo.appendChild(seletorDeJogos(cap,salvo));
-    montarNovaExperiencia(conteudo,cap,game,perfil,salvo);palco.appendChild(conteudo);raiz.appendChild(palco);
+    if(game.type==='writing')renderProducaoTextualJogo(conteudo,cap,game,salvo);else montarNovaExperiencia(conteudo,cap,game,perfil,salvo);palco.appendChild(conteudo);raiz.appendChild(palco);
   }
   function alternarTelaCheia() {
     var alvo=$('#jogos-conteudo');
@@ -539,7 +539,7 @@
     }
     var p=estado.experiencias[cap.id];p.feitas=p.feitas||[];p.passos=p.passos||{};return p;
   }
-  function totalItens(game,perfil) { return perfil.mode==='sequence'?game.pairs.length:(game.type==='pairs'?game.pairs.length:game.items.length); }
+  function totalItens(game,perfil) { if(game.type==='writing')return 1;return perfil.mode==='sequence'?game.pairs.length:(game.type==='pairs'?game.pairs.length:game.items.length); }
 
   /* --- Estrutura dos três tempos: mexer → ver acontecer → dar o nome. ------
      O artefato é a coisa que a criança constrói. Ele fica visível no topo e
@@ -611,6 +611,27 @@
     salvo.feitas[jogoAtual]=false;salvo.passos[jogoAtual]=0;
     if(salvo.achados)salvo.achados[jogoAtual]=[];
     zerarPlacar();salvar();renderJogos(cap);
+  }
+  function renderProducaoTextualJogo(raiz,cap,game,salvo) {
+    salvo.textos=salvo.textos||{};var rascunho=salvo.textos[jogoAtual]||'';
+    if(salvo.feitas[jogoAtual]){
+      var concluida=criar('section','jogo-card jogo-conclusao producao-jogo__conclusao','<h3>🎉 Produção textual concluída!</h3><p>Você criou um texto instrucional. Releia o resultado e confira se outra pessoa conseguiria seguir as orientações.</p>');
+      concluida.appendChild(criar('div','producao-jogo__texto',textoSeguro(rascunho).replace(/\n/g,'<br>')));
+      var navPronto=criar('div','navegacao'),editar=criar('button','botao','Editar meu texto',{type:'button'}),desafio=criar('button','botao botao--primario','Ir para o desafio →',{type:'button'});
+      editar.addEventListener('click',function(){salvo.feitas[jogoAtual]=false;salvo.passos[jogoAtual]=0;salvar();renderJogos(cap);});
+      desafio.addEventListener('click',function(){selecionarAba('desafio',true);});navPronto.appendChild(editar);navPronto.appendChild(desafio);concluida.appendChild(navPronto);raiz.appendChild(concluida);return;
+    }
+    var card=criar('section','jogo-card jogo-card--novo producao-jogo');
+    card.appendChild(criar('p','atividade-progresso','Jogo '+(jogoAtual+1)+' de '+cap.games.length+' · produção autoral'));
+    card.appendChild(criar('h3','jogo-pergunta',textoSeguro(game.instructions)));
+    if(game.orientation)card.appendChild(criar('p','producao-textual__orientacao',textoSeguro(game.orientation)));
+    if(game.checklist&&game.checklist.length){card.appendChild(criar('strong',null,'Antes de concluir, confira:'));var lista=criar('ul','producao-textual__lista');game.checklist.forEach(function(item){lista.appendChild(criar('li',null,textoSeguro(item)));});card.appendChild(lista);}
+    var campo=criar('textarea','campo producao-textual__campo',null,{rows:'12',placeholder:'Escreva aqui seu título e suas instruções…','aria-label':'Sua produção textual'});campo.value=rascunho;
+    campo.addEventListener('input',function(){salvo.textos[jogoAtual]=campo.value;});campo.addEventListener('blur',salvar);card.appendChild(campo);
+    card.appendChild(criar('p','producao-textual__aviso','Seu texto é autoral: não existe uma única resposta correta. O rascunho fica salvo neste aparelho.'));
+    var feedback=criar('div',null,null,{role:'status','aria-live':'polite'}), concluirProducao=criar('button','botao botao--primario','Concluir produção',{type:'button'});
+    concluirProducao.addEventListener('click',function(){var texto=campo.value.trim(),minimo=game.minLength||60;if(texto.length<minimo){feedback.className='feedback feedback--erro';feedback.innerHTML='<strong>Desenvolva um pouco mais.</strong><p class="explicacao">Inclua o título e pelo menos quatro etapas completas.</p>';revelar(feedback);campo.focus();return;}salvo.textos[jogoAtual]=texto;salvo.passos[jogoAtual]=1;salvo.feitas[jogoAtual]=true;salvar();comemorar(true);renderJogos(cap);irTopo();});
+    card.appendChild(feedback);card.appendChild(concluirProducao);raiz.appendChild(card);
   }
   function montarNovaExperiencia(raiz,cap,game,perfil,salvo) {
     var total=totalItens(game,perfil), passo=Math.min(Number(salvo.passos[jogoAtual])||0,total), feita=!!salvo.feitas[jogoAtual];
@@ -956,13 +977,6 @@
     }
     if(q.type==='mc'){
       var errosMc=0, ops=criar('div','opcoes'); q.options.forEach(function(op,i){var b=criar('button','opcao','<span class="opcao__letra">'+String.fromCharCode(65+i)+'</span><span>'+textoSeguro(op)+'</span>',{type:'button'});b.addEventListener('click',function(){if(bloqueado||b.disabled)return;if(i===q.answer){ops.querySelectorAll('button').forEach(function(x){x.disabled=true;});b.classList.add('opcao--certa');concluir(true,op);}else{errosMc++;errouAntes=true;registrarErro(op);b.disabled=true;b.classList.add('opcao--errada');mostrarNovaTentativa(errosMc===1?'Elimine esta alternativa e releia a pergunta.':q.explain||'Compare as alternativas que ainda restam.');if(errosMc===2)card.appendChild(falaMascote(q.explain||'Observe as palavras mais importantes da pergunta.',true));}});ops.appendChild(b);});card.appendChild(ops);
-    } else if(q.type==='writing') {
-      var producao=criar('div','producao-textual');
-      if(q.instructions)producao.appendChild(criar('p','producao-textual__orientacao',textoSeguro(q.instructions)));
-      if(q.checklist&&q.checklist.length){var listaConferencia=criar('ul','producao-textual__lista');q.checklist.forEach(function(item){listaConferencia.appendChild(criar('li',null,textoSeguro(item)));});producao.appendChild(criar('strong',null,'Antes de entregar, confira:'));producao.appendChild(listaConferencia);}
-      var textoProducao=criar('textarea','campo producao-textual__campo',null,{rows:'10',placeholder:'Escreva aqui seu título e suas instruções…','aria-label':'Sua produção textual'}), entregar=criar('button','botao botao--primario','Concluir produção',{type:'button'}), aviso=criar('p','producao-textual__aviso','Seu texto é autoral: não existe uma única resposta correta.');
-      entregar.addEventListener('click',function(){var valor=textoProducao.value.trim(), minimo=q.minLength||60;if(valor.length<minimo){mostrarNovaTentativa('Desenvolva um pouco mais: inclua o título e pelo menos quatro etapas completas.');textoProducao.focus();return;}textoProducao.disabled=true;entregar.disabled=true;concluir(true,valor);});
-      producao.appendChild(textoProducao);producao.appendChild(aviso);producao.appendChild(entregar);card.appendChild(producao);
     } else {
       var tentativasTexto=0, numerica=/número|quantos|quantas|quanto|horas|segundos|dias/i.test(contexto.texto), linha=criar('div','campo-resposta'), campo=criar('input','campo',null,{type:'text',inputmode:numerica?'numeric':'text',autocomplete:'off',placeholder:numerica?'Escreva o número':'Escreva uma palavra ou frase curta','aria-label':'Sua resposta'}), enviar=criar('button','botao botao--primario','Conferir',{type:'button'});
       function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[]);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(pistaRespostaAberta(q,numerica));campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);

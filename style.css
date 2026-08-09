@@ -514,12 +514,13 @@ body.modo-jogo-imersivo { overflow:hidden; }
 .opcao--certa { border-color:var(--ok); color:var(--ok); background:var(--ok-claro); }
 .opcao--errada { border-color:var(--erro); color:var(--erro); background:var(--erro-claro); }
 .campo-resposta { display:flex; gap:9px; }
-.producao-textual { display:grid; gap:12px; }
+.producao-jogo { display:grid; gap:14px; }
 .producao-textual__orientacao { margin:0; padding:14px 16px; border-radius:14px; background:color-mix(in srgb,var(--acento) 9%,white); line-height:1.55; }
 .producao-textual__lista { display:grid; gap:7px; margin:0; padding-left:24px; color:var(--texto); }
 .producao-textual__campo { width:100%; min-height:220px; resize:vertical; padding:16px; font:inherit; line-height:1.55; }
 .producao-textual__aviso { margin:0; color:var(--fraco); font-size:13px; }
-.producao-textual .botao { justify-self:start; }
+.producao-jogo > .botao { justify-self:start; }
+.producao-jogo__texto { padding:18px; border:1px solid var(--borda); border-radius:16px; background:#fff; line-height:1.65; white-space:normal; }
 .campo { min-width:0; flex:1; padding:12px 14px; border:1px solid var(--borda); border-radius:12px; background:#fff; }
 .explicacao { margin:15px 0 0; color:var(--suave); }
 .resultado { text-align:center; }
