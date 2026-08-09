@@ -612,6 +612,11 @@
     if(salvo.achados)salvo.achados[jogoAtual]=[];
     zerarPlacar();salvar();renderJogos(cap);
   }
+  function criarCenarioRevisao(cap,game) {
+    if(!cap.reviewImage)return null;
+    var icones={portugues:'✏️',matematica:'🧩',ciencias:'🔭',geografia:'🗺️',historia:'🏛️'},icone=icones[estado.disciplina]||'✨';
+    return criar('figure','jogo-revisao__cenario','<img src="'+textoSeguro(cap.reviewImage)+'" alt="'+textoSeguro(cap.reviewImageAlt||'Ilustração desta revisão.')+'"><figcaption><span aria-hidden="true">'+icone+'</span><strong>'+textoSeguro(game.title)+'</strong><small>Missão de revisão</small></figcaption>');
+  }
   function renderProducaoTextualJogo(raiz,cap,game,salvo) {
     salvo.textos=salvo.textos||{};var rascunho=salvo.textos[jogoAtual]||'';
     if(salvo.feitas[jogoAtual]){
@@ -621,7 +626,8 @@
       editar.addEventListener('click',function(){salvo.feitas[jogoAtual]=false;salvo.passos[jogoAtual]=0;salvar();renderJogos(cap);});
       desafio.addEventListener('click',function(){selecionarAba('desafio',true);});navPronto.appendChild(editar);navPronto.appendChild(desafio);concluida.appendChild(navPronto);raiz.appendChild(concluida);return;
     }
-    var card=criar('section','jogo-card jogo-card--novo producao-jogo');
+    var card=criar('section','jogo-card jogo-card--novo jogo-card--revisao producao-jogo'),cenario=criarCenarioRevisao(cap,game);if(cenario)card.appendChild(cenario);
+    card.appendChild(criar('p','jogo-objetivo','✨ Crie, revise e dê vida às suas ideias'));
     card.appendChild(criar('p','atividade-progresso','Jogo '+(jogoAtual+1)+' de '+cap.games.length+' · produção autoral'));
     card.appendChild(criar('h3','jogo-pergunta',textoSeguro(game.instructions)));
     if(game.orientation)card.appendChild(criar('p','producao-textual__orientacao',textoSeguro(game.orientation)));
@@ -636,7 +642,8 @@
   function montarNovaExperiencia(raiz,cap,game,perfil,salvo) {
     var total=totalItens(game,perfil), passo=Math.min(Number(salvo.passos[jogoAtual])||0,total), feita=!!salvo.feitas[jogoAtual];
     if(feita){renderConclusaoExperiencia(raiz,cap,game,perfil,salvo,total);return;}
-    var card=criar('section','jogo-card jogo-card--novo jogo-card--'+textoSeguro(perfil.mode||'atividade'));
+    var revisao=!!cap.reviewImage,card=criar('section','jogo-card jogo-card--novo jogo-card--'+textoSeguro(perfil.mode||'atividade')+(revisao?' jogo-card--revisao':''));
+    if(revisao){var cenario=criarCenarioRevisao(cap,game);if(cenario)card.appendChild(cenario);card.appendChild(criar('p','jogo-objetivo','✨ Missão de revisão · descubra uma pista por vez'));}
     var artefato=renderArtefato(game,passo,false,perfil.mode==='memoria'?(salvo.achados&&salvo.achados[jogoAtual]||[]):null);
     if(artefato){
       /* Com artefato, quem marca o progresso é o próprio objeto enchendo —
