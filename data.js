@@ -2307,7 +2307,7 @@ const DISCIPLINAS = [
         "id": "cie09",
         "module": 9,
         "title": "Características da Terra",
-        "video": "assets/videos/cie09-explorando-o-ceu-noturno.mp4",
+        "video": "assets/videos/cie09-segredos-do-planeta-terra.mp4",
         "theory": [
           {
             "h": "Representações da Terra",
@@ -2785,7 +2785,7 @@ const DISCIPLINAS = [
         "id": "cie11",
         "module": 11,
         "title": "Observando o céu noturno",
-        "video": "assets/videos/cie11-segredos-do-planeta-terra.mp4",
+        "video": "assets/videos/cie11-explorando-o-ceu-noturno.mp4",
         "theory": [
           {
             "h": "Astros visíveis durante a noite",
