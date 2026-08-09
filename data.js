@@ -827,6 +827,20 @@ const DISCIPLINAS = [
             ],
             "answer": 2,
             "explain": "Perigoso é o adjetivo derivado de perigo e caracteriza o substantivo caminho."
+          },
+          {
+            "type": "writing",
+            "q": "Produção textual: escreva um texto instrucional ensinando como cuidar de uma planta em vaso.",
+            "instructions": "Dê um título ao texto e escreva pelo menos quatro etapas em ordem. Use verbos de comando e inclua ao menos um adjetivo para deixar uma orientação mais precisa.",
+            "checklist": [
+              "O título informa o que será ensinado.",
+              "As etapas aparecem em uma ordem que pode ser seguida.",
+              "O texto usa verbos de comando, como coloque, regue ou mantenha.",
+              "Há pelo menos um adjetivo, como ensolarado, úmida ou cuidadoso.",
+              "As frases começam com letra maiúscula e terminam com pontuação."
+            ],
+            "minLength": 80,
+            "explain": "Produção concluída! Releia seu texto usando a lista de conferência. Um bom texto instrucional apresenta orientações claras e organizadas para que outra pessoa consiga realizar a tarefa."
           }
         ]
       },

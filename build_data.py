@@ -98,6 +98,10 @@ def validar_quiz(cap):
                 raise ValueError("Alternativas repetidas em " + identificador)
             if any(contar_palavras(opcao) > 14 for opcao in opcoes):
                 raise ValueError("Alternativa longa demais em " + identificador)
+        elif questao.get("type") == "writing":
+            lista = questao.get("checklist", [])
+            if not questao.get("instructions") or len(lista) < 4 or questao.get("minLength", 0) < 60:
+                raise ValueError("Proposta de producao textual incompleta em " + identificador)
         elif not questao.get("answers"):
             raise ValueError("Respostas aceitas ausentes em " + identificador)
 

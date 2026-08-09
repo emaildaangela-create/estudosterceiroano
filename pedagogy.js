@@ -4,7 +4,7 @@ const PEDAGOGY = {
     8:{context:'O manual diz: “Faça 2 ou 3 rotações, toque em OK e, se necessário, volte ao primeiro passo.”',prompt:'Por que esse trecho é um texto instrucional?'}
   }},
   lp18:{objectives:['identificar um conto de memórias','diferenciar substantivo e adjetivo','formar adjetivos com -oso e -osa']},
-  rev_lp3b:{objectives:['revisar textos instrucionais','usar diminutivo e aumentativo','reconhecer adjetivos e a escrita de -oso/-osa']},
+  rev_lp3b:{objectives:['revisar e produzir textos instrucionais','usar diminutivo e aumentativo','reconhecer adjetivos e a escrita de -oso/-osa']},
   lp19:{objectives:['diferenciar biografia e autobiografia','reconhecer palavras que indicam origem','usar informações de uma linha do tempo'],questions:{
     0:{context:'Na piada, uma pessoa prefere o idioma francês e outra prefere o inglês.',prompt:'Qual afirmação sobre “francês” e “inglês” está correta?'}
   }},
