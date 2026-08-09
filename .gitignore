@@ -10,3 +10,5 @@ assets/mascote-capivara-v2.png
 desktop.ini
 **/desktop.ini
 .DS_Store
+dist/
+*.tar.gz

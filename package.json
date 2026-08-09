@@ -1,0 +1,8 @@
+{
+  "name": "estudos-terceiro-ano",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-static.mjs"
+  }
+}
