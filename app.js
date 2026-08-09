@@ -164,6 +164,20 @@
     return 'ideia';
   }
   function visualDaDescoberta(bloco) {
+    var titulo=normalizar(bloco&&bloco.h);
+    var visuaisEspecificos={
+      'terra, planeta azul':{
+        src:'assets/camadas-esferas-terra.webp',
+        tipo:'diagrama',
+        alt:'Esquema da Terra mostrando a hidrosfera nas águas, a litosfera nas rochas e no solo, a atmosfera ao redor do planeta e a biosfera nos ambientes onde há vida.'
+      },
+      'o interior da terra':{
+        src:'assets/camadas-interior-terra.webp',
+        tipo:'diagrama',
+        alt:'Corte do interior da Terra identificando a crosta fina, o manto espesso, o núcleo externo líquido e o núcleo interno sólido.'
+      }
+    };
+    if(visuaisEspecificos[titulo])return visuaisEspecificos[titulo];
     var tema=temaBloco(bloco), visuais={
       instrucoes:{src:'assets/descobrir-textos.webp',alt:'Criança observando uma sequência ilustrada de instruções para lavar as mãos.'},
       anuncios:{src:'assets/descobrir-anuncios.webp',alt:'Crianças observando um anúncio ilustrado em um mural da comunidade.'},
@@ -416,7 +430,7 @@
     card.innerHTML='<p class="bloco-leitura__etapa">Missão '+(idx+1)+' de '+cap.theory.length+'</p><h3>'+textoSeguro(bloco.h)+'</h3>'+
       '<p class="missao-convite">'+textoSeguro(conviteMissao(bloco,idx))+'</p>';
     var visual=visualDaDescoberta(bloco), destaque=criar('div','descoberta-destaque');
-    destaque.appendChild(criar('figure','descoberta-visual','<img src="'+textoSeguro(visual.src)+'" alt="'+textoSeguro(visual.alt)+'" loading="lazy">'));
+    destaque.appendChild(criar('figure','descoberta-visual'+(visual.tipo==='diagrama'?' descoberta-visual--diagrama':''),'<img src="'+textoSeguro(visual.src)+'" alt="'+textoSeguro(visual.alt)+'" loading="lazy">'));
     destaque.appendChild(criar('div','ideia-principal','<span>Ideia principal</span><p>'+explicarTermos(recorte.resumo)+'</p>'));
     card.appendChild(destaque);
     var sequencia=montarSequencia(bloco.p||[]); if(sequencia) card.appendChild(sequencia);

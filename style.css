@@ -137,6 +137,8 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .descoberta-destaque { display:grid; grid-template-columns:minmax(220px,.8fr) minmax(0,1.25fr); align-items:stretch; gap:18px; margin:0 0 18px; }
 .descoberta-visual { min-height:210px; margin:0; overflow:hidden; border:1px solid color-mix(in srgb,var(--acento,var(--ciano)) 18%,var(--borda)); border-radius:18px; background:#f8f5ed; }
 .descoberta-visual img { display:block; width:100%; height:100%; min-height:210px; object-fit:cover; }
+.descoberta-visual--diagrama { background:#061b3e; }
+.descoberta-visual--diagrama img { object-fit:contain; }
 .ideia-principal { margin:0 0 18px; padding:20px; border-radius:16px; background:color-mix(in srgb,var(--acento,var(--ciano)) 8%,white); }
 .descoberta-destaque .ideia-principal { display:flex; min-width:0; margin:0; flex-direction:column; justify-content:center; }
 .ideia-principal > span { display:block; margin-bottom:6px; color:var(--acento,var(--ciano)); font-size:11px; font-weight:850; letter-spacing:.11em; text-transform:uppercase; }
