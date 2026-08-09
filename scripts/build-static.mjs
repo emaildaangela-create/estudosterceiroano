@@ -24,7 +24,7 @@ for (const file of [
 }
 
 await mkdir(resolve(client, "assets"), { recursive: true });
-for (const image of ["camadas-esferas-terra.webp", "camadas-interior-terra-v2.webp"]) {
+for (const image of ["camadas-esferas-terra-v2.webp", "camadas-interior-terra-v2.webp"]) {
   await cp(resolve(root, "assets", image), resolve(client, "assets", image));
 }
 const worker = await readFile(resolve(root, "hosting-worker.js"), "utf8");

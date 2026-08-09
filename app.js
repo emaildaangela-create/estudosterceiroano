@@ -167,9 +167,9 @@
     var titulo=normalizar(bloco&&bloco.h);
     var visuaisEspecificos={
       'terra planeta azul':{
-        src:'assets/camadas-esferas-terra.webp',
+        src:'assets/camadas-esferas-terra-v2.webp',
         tipo:'diagrama',
-        alt:'Esquema da Terra mostrando a hidrosfera nas águas, a litosfera nas rochas e no solo, a atmosfera ao redor do planeta e a biosfera nos ambientes onde há vida.'
+        alt:'Esquema da Terra mostrando a hidrosfera na água, a litosfera em rochas expostas e secas, a atmosfera ao redor do planeta e a biosfera onde há seres vivos.'
       },
       'o interior da terra':{
         src:'assets/camadas-interior-terra-v2.webp',
