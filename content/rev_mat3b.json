@@ -3,6 +3,8 @@
   "module": "R3",
   "title": "Revisão do 3º bimestre",
   "subtitle": "Multiplicação · Tempo · Localização",
+  "reviewImage": "assets/revisao-3b-matematica.webp",
+  "reviewImageAlt": "Crianças combinando roupas, formando grupos com blocos, observando um relógio e seguindo um trajeto entre escola, árvore e biblioteca.",
   "theory": [
     {
       "h": "Revisão: possibilidades e multiplicação",

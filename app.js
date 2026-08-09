@@ -430,8 +430,9 @@
     if(fonteNumerada){recorte.resumo=fonteNumerada.split(/<strong>1\.<\/strong>/)[0].replace(/[\s:]+$/,'')+'.';recorte.detalhes=(bloco.p||[]).filter(function(p){return p!==fonteNumerada;});}
     card.innerHTML='<p class="bloco-leitura__etapa">Missão '+(idx+1)+' de '+cap.theory.length+'</p><h3>'+textoSeguro(bloco.h)+'</h3>'+
       '<p class="missao-convite">'+textoSeguro(conviteMissao(bloco,idx))+'</p>';
-    var visual=visualDaDescoberta(bloco), destaque=criar('div','descoberta-destaque'+(visual.tipo==='diagrama'?' descoberta-destaque--diagrama':''));
-    destaque.appendChild(criar('figure','descoberta-visual'+(visual.tipo==='diagrama'?' descoberta-visual--diagrama':''),'<img src="'+textoSeguro(visual.src)+'" alt="'+textoSeguro(visual.alt)+'" loading="lazy">'));
+    var visual=cap.reviewImage?{src:cap.reviewImage,alt:cap.reviewImageAlt||'Ilustração dos assuntos desta revisão.',tipo:'revisao'}:visualDaDescoberta(bloco), tipoVisual=visual.tipo==='diagrama'?'diagrama':(visual.tipo==='revisao'?'revisao':'');
+    var destaque=criar('div','descoberta-destaque'+(tipoVisual?' descoberta-destaque--'+tipoVisual:''));
+    destaque.appendChild(criar('figure','descoberta-visual'+(tipoVisual?' descoberta-visual--'+tipoVisual:''),'<img src="'+textoSeguro(visual.src)+'" alt="'+textoSeguro(visual.alt)+'" loading="lazy">'));
     destaque.appendChild(criar('div','ideia-principal','<span>Ideia principal</span><p>'+explicarTermos(recorte.resumo)+'</p>'));
     card.appendChild(destaque);
     var sequencia=montarSequencia(bloco.p||[]); if(sequencia) card.appendChild(sequencia);

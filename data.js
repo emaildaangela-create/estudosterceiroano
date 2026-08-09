@@ -650,6 +650,8 @@ const DISCIPLINAS = [
         "module": "R3",
         "title": "Revisão do 3º bimestre",
         "subtitle": "Texto instrucional · Substantivo · Adjetivo · Ortografia",
+        "reviewImage": "assets/revisao-3b-portugues.webp",
+        "reviewImageAlt": "Crianças organizando uma sequência ilustrada, comparando casas de tamanhos diferentes e relacionando figuras a características.",
         "theory": [
           {
             "h": "Revisão: texto instrucional e graus do substantivo",
@@ -2282,6 +2284,8 @@ const DISCIPLINAS = [
         "module": "R3",
         "title": "Revisão do 3º bimestre",
         "subtitle": "Multiplicação · Tempo · Localização",
+        "reviewImage": "assets/revisao-3b-matematica.webp",
+        "reviewImageAlt": "Crianças combinando roupas, formando grupos com blocos, observando um relógio e seguindo um trajeto entre escola, árvore e biblioteca.",
         "theory": [
           {
             "h": "Revisão: possibilidades e multiplicação",
@@ -3196,6 +3200,8 @@ const DISCIPLINAS = [
         "module": "R3",
         "title": "Revisão do 3º bimestre",
         "subtitle": "Características da Terra · Céu diurno",
+        "reviewImage": "assets/revisao-3b-ciencias.webp",
+        "reviewImageAlt": "Crianças estudando um globo, um modelo correto das camadas da Terra, um vulcão, ondas, o Sol, a Lua e os movimentos terrestres.",
         "theory": [
           {
             "h": "Revisão: características da Terra",
@@ -3877,6 +3883,8 @@ const DISCIPLINAS = [
         "module": "R3",
         "title": "Revisão do 3º bimestre",
         "subtitle": "Município · Área urbana e área rural",
+        "reviewImage": "assets/revisao-3b-geografia.webp",
+        "reviewImageAlt": "Crianças observando uma maquete de município com área urbana, área rural, poluição e trocas de produtos entre campo e cidade.",
         "theory": [
           {
             "h": "Revisão: conhecendo o município",
@@ -5013,6 +5021,8 @@ const DISCIPLINAS = [
         "module": "R3",
         "title": "Revisão do 3º bimestre",
         "subtitle": "Espaços da comunidade · Serviços e prefeitura",
+        "reviewImage": "assets/revisao-3b-historia.webp",
+        "reviewImageAlt": "Crianças classificando espaços e serviços em uma maquete com praça, escola municipal, casa, mercado, prefeitura, iluminação e coleta de lixo.",
         "theory": [
           {
             "h": "Revisão: espaços da comunidade",

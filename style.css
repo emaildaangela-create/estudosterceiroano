@@ -144,6 +144,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .descoberta-destaque--diagrama { grid-template-columns:1fr; }
 .descoberta-destaque--diagrama .descoberta-visual { width:100%; min-height:0; aspect-ratio:3 / 2; }
 .descoberta-destaque--diagrama .descoberta-visual img { min-height:0; }
+.descoberta-destaque--revisao { grid-template-columns:1fr; }
+.descoberta-destaque--revisao .descoberta-visual { width:100%; min-height:0; aspect-ratio:3 / 1; }
+.descoberta-destaque--revisao .descoberta-visual img { min-height:0; object-fit:cover; }
 .ideia-principal { margin:0 0 18px; padding:20px; border-radius:16px; background:color-mix(in srgb,var(--acento,var(--ciano)) 8%,white); }
 .descoberta-destaque .ideia-principal { display:flex; min-width:0; margin:0; flex-direction:column; justify-content:center; }
 .ideia-principal > span { display:block; margin-bottom:6px; color:var(--acento,var(--ciano)); font-size:11px; font-weight:850; letter-spacing:.11em; text-transform:uppercase; }

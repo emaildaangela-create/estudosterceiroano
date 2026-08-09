@@ -3,6 +3,8 @@
   "module": "R3",
   "title": "Revisão do 3º bimestre",
   "subtitle": "Características da Terra · Céu diurno",
+  "reviewImage": "assets/revisao-3b-ciencias.webp",
+  "reviewImageAlt": "Crianças estudando um globo, um modelo correto das camadas da Terra, um vulcão, ondas, o Sol, a Lua e os movimentos terrestres.",
   "theory": [
     {
       "h": "Revisão: características da Terra",
