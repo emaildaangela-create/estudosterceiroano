@@ -166,7 +166,7 @@
   function visualDaDescoberta(bloco) {
     var titulo=normalizar(bloco&&bloco.h);
     var visuaisEspecificos={
-      'terra, planeta azul':{
+      'terra planeta azul':{
         src:'assets/camadas-esferas-terra.webp',
         tipo:'diagrama',
         alt:'Esquema da Terra mostrando a hidrosfera nas águas, a litosfera nas rochas e no solo, a atmosfera ao redor do planeta e a biosfera nos ambientes onde há vida.'
