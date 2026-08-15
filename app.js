@@ -547,7 +547,7 @@
   function renderJogos(cap) {
     var raiz=$('#jogos-conteudo'); raiz.innerHTML='';
     if(!cap.games||!cap.games.length){raiz.appendChild(criar('div','vazio','Ainda não há experiências para este assunto.'));return;}
-    var salvo=progressoExperiencias(cap);jogoAtual=(/^rev_/.test(cap.id))?0:Math.max(0,Math.min(salvo.atual||0,cap.games.length-1));salvo.atual=jogoAtual;
+    var salvo=progressoExperiencias(cap);jogoAtual=Math.max(0,Math.min(salvo.atual||0,cap.games.length-1));salvo.atual=jogoAtual;
     var game=cap.games[jogoAtual], perfis=(typeof EXPERIENCE_PROFILES!=='undefined'&&EXPERIENCE_PROFILES[cap.id])||[], perfil=perfis[jogoAtual]||{mode:game.type==='pairs'?'explore':'choice',goal:game.title,prompt:game.instructions,result:'descoberta'};
     var topo=criar('header','jogo-imersivo__topo');
     var sair=criar('button','jogo-imersivo__sair','← <span>Sair do jogo</span>',{type:'button','aria-label':'Sair do jogo e voltar a descobrir'});
@@ -999,10 +999,7 @@
   }
 
   function iniciarQuiz(cap,reiniciar) {
-    /* Revisões sempre começam do início: não retomam o ponto salvo. */
-    var ehRev=/^rev_/.test(cap.id);
-    if(ehRev)delete estado.tentativas[cap.id];
-    var guardado=!reiniciar && !ehRev && estado.tentativas[cap.id];
+    var guardado=!reiniciar && estado.tentativas[cap.id];
     if(guardado){
       var errSet={};(guardado.erros||[]).forEach(function(i){errSet[i]=true;});
       var feitas={};for(var k=0;k<(guardado.indice||0);k++){feitas[k]={acertou:!errSet[k],contou:!errSet[k],escolhaIdx:-1,escolhaTxt:null};}
@@ -1014,7 +1011,7 @@
     renderQuestao(cap);
   }
   function salvarTentativa(cap) {
-    if(quiz.revisao||/^rev_/.test(cap.id))return;
+    if(quiz.revisao)return;
     estado.tentativas[cap.id]={indice:quiz.indice,acertos:quiz.acertos,erros:quiz.erros.map(function(e){return e.indiceOriginal;})};salvar();
   }
   function perguntasAtuais(cap) { return quiz.revisao ? quiz.perguntas : cap.quiz; }
@@ -1036,10 +1033,15 @@
     var q=perguntas[quiz.indice], contexto=contextualizarQuestao(cap,q), card=criar('section','quiz-card');
     card.innerHTML='<p class="quiz-card__etapa">'+(quiz.revisao?'Revisão · ':'')+'Pergunta '+(quiz.indice+1)+' de '+perguntas.length+'</p>';
     var oi=quiz.indices[quiz.indice], feita=quiz.feitas&&quiz.feitas[oi];
+    var barraNav=criar('div','quiz-card__nav-topo');
     var anterior=criar('button','botao botao--leve quiz-card__voltar','<span aria-hidden="true">←</span> Anterior',{type:'button','aria-label':'Voltar para a pergunta anterior'});
     anterior.disabled=quiz.indice===0;
     anterior.addEventListener('click',function(){if(quiz.indice===0)return;quiz.indice--;salvarTentativa(cap);renderQuestao(cap);irTopo();});
-    card.insertBefore(anterior,card.firstChild);
+    var recomecar=criar('button','botao botao--leve quiz-card__recomecar','<span aria-hidden="true">↻</span> Recomeçar',{type:'button','aria-label':'Recomeçar o desafio desde a primeira pergunta'});
+    recomecar.disabled=quiz.indice===0;
+    recomecar.addEventListener('click',function(){iniciarQuiz(cap,true);irTopo();});
+    barraNav.appendChild(anterior);barraNav.appendChild(recomecar);
+    card.insertBefore(barraNav,card.firstChild);
     if(contexto.imagem){
       card.appendChild(figuraOpcional(criar('figure','questao-contexto','<a href="'+textoSeguro(contexto.imagem)+'" target="_blank" rel="noopener" aria-label="Ampliar a ilustração"><img src="'+textoSeguro(contexto.imagem)+'" alt="'+textoSeguro(contexto.imagemAlt)+'" loading="lazy"></a><figcaption>'+textoSeguro(contexto.imagemCaption)+' Toque na imagem para ampliá-la.</figcaption>')));
     }
@@ -1074,7 +1076,7 @@
       resposta.className='feedback '+(certo?'feedback--ok':'feedback--erro');resposta.innerHTML='<strong>'+(certo?(errouAntes?'Agora ficou claro!':'Você percebeu!'):'Vamos entender juntos.')+'</strong>'+(q.explain?'<p class="explicacao">'+textoSeguro(q.explain)+'</p>':'');
       if(!certo)card.appendChild(falaMascote('Tudo bem não acertar ainda. Esta explicação mostra o caminho para a revisão.',true));
       var nav=criar('div','navegacao'), ultima=quiz.indice===perguntas.length-1, prox=criar('button','botao botao--primario',ultima?(quiz.revisao?'Terminar revisão':'Ver resultado'):'Próxima →',{type:'button'});
-      if(!quiz.revisao&&!ultima&&!/^rev_/.test(cap.id)){var guardar=criar('button','botao botao--leve','Continuar depois',{type:'button'});guardar.addEventListener('click',function(){quiz.indice++;salvarTentativa(cap);abrirDisciplina(estado.disciplina);toast('Seu ponto foi guardado.');});nav.appendChild(guardar);}
+      if(!quiz.revisao&&!ultima){var guardar=criar('button','botao botao--leve','Continuar depois',{type:'button'});guardar.addEventListener('click',function(){quiz.indice++;salvarTentativa(cap);abrirDisciplina(estado.disciplina);toast('Seu ponto foi guardado.');});nav.appendChild(guardar);}
       prox.addEventListener('click',function(){quiz.indice++;salvarTentativa(cap);renderQuestao(cap);irTopo();});nav.appendChild(prox);card.appendChild(nav);
       revelar(resposta,nav);
     }
