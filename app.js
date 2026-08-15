@@ -1027,6 +1027,9 @@
     if(quiz.indice>=perguntas.length){renderResultado(cap);return;}
     var q=perguntas[quiz.indice], contexto=contextualizarQuestao(cap,q), card=criar('section','quiz-card');
     card.innerHTML='<p class="quiz-card__etapa">'+(quiz.revisao?'Revisão · ':'')+'Pergunta '+(quiz.indice+1)+' de '+perguntas.length+'</p>';
+    var voltarDesafio=criar('button','botao botao--leve quiz-card__voltar','<span aria-hidden="true">←</span> Voltar',{type:'button','aria-label':'Voltar para os assuntos'});
+    voltarDesafio.addEventListener('click',function(){if(!quiz.revisao)salvarTentativa(cap);abrirDisciplina(estado.disciplina);});
+    card.insertBefore(voltarDesafio,card.firstChild);
     if(contexto.imagem){
       card.appendChild(figuraOpcional(criar('figure','questao-contexto','<a href="'+textoSeguro(contexto.imagem)+'" target="_blank" rel="noopener" aria-label="Ampliar a ilustração"><img src="'+textoSeguro(contexto.imagem)+'" alt="'+textoSeguro(contexto.imagemAlt)+'" loading="lazy"></a><figcaption>'+textoSeguro(contexto.imagemCaption)+' Toque na imagem para ampliá-la.</figcaption>')));
     }
