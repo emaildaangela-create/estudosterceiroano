@@ -373,7 +373,69 @@
       var d=discPorId(estado.ultimo.disciplina), c=capPorId(d,estado.ultimo.capitulo);
       if(d&&c){ cont.hidden=false; $('#continuar-titulo').textContent=c.title; $('#continuar-detalhe').textContent=d.nome+' · módulo '+c.module; }
     }
+    renderCalendarioProvas();
     atualizarTopo(); mostrar('tela-home');
+  }
+
+  /* Calendário de provas — cada prova leva à "Revisão do 3º bimestre" da
+     matéria (um toque). O card lista os módulos e tópicos cobrados. Para
+     atualizar num próximo bimestre, basta editar a lista PROVAS: data, dia,
+     o capítulo de revisão de destino e os módulos/tópicos exibidos. */
+  var PROVAS = {
+    titulo:'Calendário de provas',
+    legenda:'Testes bimestrais · 3º bimestre de 2026',
+    itens:[
+      { disciplina:'portugues', capitulo:'rev_lp3b', data:'17', mes:'08', dia:'Segunda', modulos:[
+        {n:17, titulo:'Lava uma mão, lava a outra', topicos:['Texto instrucional','Substantivo aumentativo e diminutivo','Ortografia: terminações -sinho(a), -zinho(a), -inho(a)']},
+        {n:18, titulo:'Lembranças de uma vida', topicos:['Contos de memórias','Adjetivo','Ortografia: -oso/-osa']}
+      ]},
+      { disciplina:'ciencias', capitulo:'rev_cie3b', data:'18', mes:'08', dia:'Terça', modulos:[
+        {n:9, titulo:'Características da Terra', topicos:['Representações da Terra','Terra, planeta azul','O interior da Terra','Vulcões, terremotos e tsunamis']},
+        {n:10, titulo:'Observando o céu diurno', topicos:['Os corpos celestes','O Sol e sua influência na Terra','Os astros se movimentam']}
+      ]},
+      { disciplina:'matematica', capitulo:'rev_mat3b', data:'19', mes:'08', dia:'Quarta', modulos:[
+        {n:9, titulo:'Contagem de possibilidades e outras multiplicações', topicos:['Problemas de contagem de possibilidades','Multiplicação por 10, por 100 e por 1000','Problemas de multiplicação']},
+        {n:10, titulo:'Medidas de tempo, localização e deslocamento', topicos:['Hora e meia hora','Hora, minuto e segundo','Localização','Trajetos e deslocamentos']}
+      ]},
+      { disciplina:'historia', capitulo:'rev_hist3b', data:'20', mes:'08', dia:'Quinta', modulos:[
+        {n:9, titulo:'Dividindo espaços em comunidade', topicos:['Espaços públicos e espaços privados','Espaços públicos de sua cidade']},
+        {n:10, titulo:'Espaços públicos e espaços privados', topicos:['Espaços públicos de acesso restrito','Espaços privados de uso público','Serviços públicos e privados','A administração do município (Prefeitura)']}
+      ]},
+      { disciplina:'geografia', capitulo:'rev_geo3b', data:'21', mes:'08', dia:'Sexta', modulos:[
+        {n:9, titulo:'Conhecendo o município', topicos:['O que é município?','A área urbana do município','Problemas ambientais nas áreas urbanas','A área rural do município','Atividades econômicas rurais e urbanas']}
+      ]}
+    ]
+  };
+  function renderCalendarioProvas() {
+    var secao=$('#calendario-provas'); if(!secao) return;
+    secao.innerHTML='';
+    var itens=PROVAS.itens.filter(function(p){ var d=discPorId(p.disciplina); return d&&capPorId(d,p.capitulo); });
+    if(!itens.length){ secao.hidden=true; return; }
+    secao.hidden=false;
+    secao.appendChild(criar('h2','provas__titulo','<span class="provas__ico" aria-hidden="true">📅</span> '+textoSeguro(PROVAS.titulo),{id:'provas-titulo'}));
+    secao.appendChild(criar('p','provas__legenda',textoSeguro(PROVAS.legenda)));
+    var lista=criar('div','provas__lista');
+    itens.forEach(function(p){
+      var disc=discPorId(p.disciplina);
+      var modulosHtml=(p.modulos||[]).map(function(m){
+        return '<span class="prova-modulo">'+
+          '<span class="prova-modulo__nome">Módulo '+textoSeguro(m.n)+' · '+textoSeguro(m.titulo)+'</span>'+
+          '<span class="prova-modulo__topicos">'+(m.topicos||[]).map(textoSeguro).join(' · ')+'</span>'+
+        '</span>';
+      }).join('');
+      var card=criar('button','prova-card',
+        '<span class="prova-card__data"><strong>'+textoSeguro(p.data)+'</strong><span class="prova-card__mes">/'+textoSeguro(p.mes)+'</span><span class="prova-card__dia">'+textoSeguro(p.dia)+'</span></span>'+
+        '<span class="prova-card__info">'+
+          '<strong class="prova-card__disc">'+textoSeguro(disc.nome)+'</strong>'+
+          '<span class="prova-card__modulos">'+modulosHtml+'</span>'+
+          '<span class="prova-card__atalho">Revisar para a prova <span aria-hidden="true">→</span></span>'+
+        '</span>',
+        {type:'button','aria-label':'Revisar para a prova de '+disc.nome+' em '+p.data+'/'+p.mes});
+      card.style.setProperty('--acento',acento(disc));
+      card.addEventListener('click',function(){ abrirCapitulo(p.disciplina,p.capitulo); });
+      lista.appendChild(card);
+    });
+    secao.appendChild(lista);
   }
 
   function abrirDisciplina(id) {

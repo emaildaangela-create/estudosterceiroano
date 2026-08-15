@@ -88,6 +88,28 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .barra { height:7px; overflow:hidden; border-radius:999px; background:#dfe5ee; }
 .barra__preenchimento { height:100%; width:0; border-radius:inherit; background:var(--ciano); transition:width .35s ease; }
 
+/* ===== Calendário de provas (home) ===== */
+.provas { margin:30px 0 8px; }
+.provas__titulo { display:flex; align-items:center; gap:9px; margin:0 0 4px; font-size:clamp(20px,2.4vw,26px); font-weight:850; letter-spacing:-.02em; }
+.provas__ico { font-size:1.05em; }
+.provas__legenda { margin:0 0 16px; color:var(--fraco); font-size:14px; }
+.provas__lista { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; }
+.prova-card { display:flex; gap:14px; align-items:stretch; width:100%; padding:14px; border:1px solid var(--borda); border-left:5px solid var(--acento); border-radius:18px; background:#fff; text-align:left; cursor:pointer; box-shadow:0 6px 18px rgba(35,46,75,.06); transition:transform .16s ease, box-shadow .16s ease; }
+.prova-card:hover { transform:translateY(-2px); box-shadow:0 12px 26px rgba(35,46,75,.12); }
+.prova-card__data { flex:0 0 auto; display:flex; flex-direction:column; align-items:center; justify-content:center; min-width:64px; padding:8px 10px; border-radius:13px; color:var(--acento); background:color-mix(in srgb,var(--acento) 12%,white); line-height:1; }
+.prova-card__data strong { font-size:26px; font-weight:850; letter-spacing:-.03em; }
+.prova-card__mes { font-size:13px; font-weight:750; opacity:.85; }
+.prova-card__dia { margin-top:6px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
+.prova-card__info { display:flex; min-width:0; flex:1; flex-direction:column; gap:7px; }
+.prova-card__disc { color:var(--acento); font-size:16px; font-weight:800; letter-spacing:-.01em; }
+.prova-card__modulos { display:flex; flex-direction:column; gap:6px; }
+.prova-modulo { display:flex; flex-direction:column; }
+.prova-modulo__nome { color:var(--texto); font-size:13px; font-weight:700; }
+.prova-modulo__topicos { color:var(--suave); font-size:12px; line-height:1.4; }
+.prova-card__atalho { margin-top:2px; display:inline-flex; align-items:center; gap:6px; color:var(--acento); font-size:13px; font-weight:750; }
+.prova-card__atalho span { transition:transform .16s ease; }
+.prova-card:hover .prova-card__atalho span { transform:translateX(3px); }
+
 .cabecalho-disc { margin:34px 0 24px; padding:30px; border-radius:26px; color:#fff; background:var(--acento); }
 .cabecalho-disc__trilha { margin:0 0 5px; color:rgba(255,255,255,.75); font-size:13px; text-transform:uppercase; letter-spacing:.09em; }
 .cabecalho-disc__titulo { margin:0; font-size:clamp(31px,4vw,48px); line-height:1.1; letter-spacing:-.035em; }
