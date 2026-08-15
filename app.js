@@ -1020,7 +1020,6 @@
     if(ajuste){contexto=ajuste.context||'';texto=ajuste.prompt||texto;}
     if(/^Na tirinha,/i.test(texto)) texto=texto.replace(/^Na tirinha,/i,'Leia este diálogo de uma tirinha:');
     if(cap.id==='cie11' && /Antártica aparece completamente escura/i.test(texto)) texto='Uma imagem das luzes noturnas da Terra mostra onde há muitas cidades. Nela, a Antártica aparece completamente escura. Por quê?';
-    if(cap.id==='lp17' && /Segundo o cartaz do Unicef/i.test(texto) && cap.pageImages) imagem=cap.pageImages[1]||null;
     if(imagem && !imagemAlt) imagemAlt='Ilustração de apoio para responder à pergunta.';
     if(imagem && !imagemCaption) imagemCaption='Observe a ilustração antes de responder.';
     return {texto:texto,contexto:contexto,imagem:imagem,imagemAlt:imagemAlt,imagemCaption:imagemCaption};

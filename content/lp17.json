@@ -305,10 +305,11 @@
       "explain": "O contexto — 'mais egoísta' — mostra que quem fala está criticando. O diminutivo aqui carrega desprezo, não informação sobre quantas pessoas há no grupo."
     },
     {
-      "type": "text",
-      "q": "Segundo o cartaz do Unicef, por quantos segundos, no mínimo, devemos esfregar todas as superfícies das mãos? (escreva o número)",
-      "answers": ["20", "20 segundos", "vinte"],
-      "explain": "Pelo menos 20 segundos, esfregando o dorso, entre os dedos e sob as unhas. Uma dica do próprio cartaz: cante uma música para ajudar a contar o tempo."
+      "type": "mc",
+      "q": "No texto instrucional 'Molhe as mãos e esfregue bem', qual palavra é um verbo de comando?",
+      "options": ["Molhe", "Limpo", "Devagar", "Sabão"],
+      "answer": 0,
+      "explain": "Textos instrucionais usam verbos de comando, como molhe, esfregue e enxágue, que indicam a ação que deve ser feita."
     },
     {
       "type": "mc",
