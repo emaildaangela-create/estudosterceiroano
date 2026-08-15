@@ -1591,15 +1591,15 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Qual atitude pode ajudar uma criança a lidar com o medo?",
+            "q": "Na frase 'A professora me elogiou', que tipo de palavra é 'me'?",
             "options": [
-              "Conversar com um adulto de confiança",
-              "Esconder o medo de todas as pessoas",
-              "Enfrentar uma situação perigosa sem ajuda",
-              "Zombar de quem sente medo"
+              "Pronome do caso oblíquo",
+              "Pronome do caso reto",
+              "Substantivo",
+              "Adjetivo"
             ],
             "answer": 0,
-            "explain": "Conversar com um adulto de confiança ajuda a compreender o medo e encontrar uma maneira segura de enfrentá-lo."
+            "explain": "'Me' é um pronome pessoal do caso oblíquo, que completa a ação do verbo. Os do caso reto são eu, tu, ele, ela, nós, vós, eles."
           },
           {
             "type": "mc",
