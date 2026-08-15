@@ -105,6 +105,13 @@
       "options": ["Diretor da escola", "Dono do mercado", "Prefeito", "Presidente do bairro"],
       "answer": 2,
       "explain": "O prefeito chefia o poder executivo municipal e trabalha com secretários e servidores."
+    },
+    {
+      "type": "mc",
+      "q": "Como devemos tratar os espaços públicos, como praças e ruas?",
+      "options": ["Cuidar, pois são de todos", "Danificar, pois não têm dono", "Usar só com permissão do prefeito", "Deixar sempre fechados"],
+      "answer": 0,
+      "explain": "Os espaços públicos pertencem a toda a comunidade, por isso todos devem cuidar deles."
     }
   ]
 }

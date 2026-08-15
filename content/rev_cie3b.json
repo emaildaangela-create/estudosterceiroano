@@ -116,6 +116,20 @@
       "options": ["Fornece luz e calor", "Impede a fotossíntese", "Apaga a atmosfera", "Faz a Terra parar"],
       "answer": 0,
       "explain": "A luz e o calor do Sol mantêm condições adequadas à vida e permitem que as plantas façam fotossíntese."
+    },
+    {
+      "type": "mc",
+      "q": "O que é um tsunami?",
+      "options": ["Uma onda gigante causada por abalos no fundo do mar", "Uma fase da Lua", "Um tipo de nuvem", "Uma corrente de ar quente"],
+      "answer": 0,
+      "explain": "Terremotos no fundo do oceano podem empurrar a água e gerar ondas enormes chamadas tsunamis."
+    },
+    {
+      "type": "mc",
+      "q": "O que a Lua é em relação à Terra?",
+      "options": ["Um satélite natural", "Uma estrela", "Um planeta", "Uma galáxia"],
+      "answer": 0,
+      "explain": "A Lua é um satélite natural: um astro sem luz própria que gira ao redor da Terra."
     }
   ]
 }

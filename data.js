@@ -654,16 +654,18 @@ const DISCIPLINAS = [
         "reviewImageAlt": "Crianças organizando uma sequência ilustrada, comparando casas de tamanhos diferentes e relacionando figuras a características.",
         "theory": [
           {
-            "h": "Revisão: texto instrucional e graus do substantivo",
+            "h": "Revisão: texto instrucional, aumentativo e diminutivo",
             "p": [
               "O <strong>texto instrucional</strong> ensina como fazer algo. Ele usa comandos claros, materiais, etapas em ordem e, muitas vezes, imagens.",
-              "O substantivo pode aparecer no <strong>diminutivo</strong> ou no <strong>aumentativo</strong>. Essas formas podem indicar tamanho ou sentimentos, como carinho e admiração.",
-              "Usamos terminações como <strong>-sinho, -zinho e -inho</strong>. Exemplos: rosa → rosinha; pai → paizinho; sapato → sapatinho."
+              "O substantivo pode aparecer no <strong>diminutivo</strong> ou no <strong>aumentativo</strong>. Além do tamanho, essas formas podem expressar carinho ou admiração.",
+              "No <strong>diminutivo</strong> usamos as terminações <strong>-inho(a), -zinho(a) e -sinho(a)</strong>: rosa → rosinha; pai → paizinho; sapato → sapatinho.",
+              "No <strong>aumentativo</strong> usamos terminações como <strong>-ão</strong>: casa → casarão; bola → bolão; livro → livrão."
             ]
           },
           {
-            "h": "Revisão: adjetivos e terminações -oso e -osa",
+            "h": "Revisão: conto de memórias, adjetivo e ortografia",
             "p": [
+              "O <strong>conto de memórias</strong> é um texto em que alguém narra <strong>lembranças do passado</strong>, quase sempre em 1ª pessoa (o \"eu\"). Costuma trazer sentimentos, pessoas queridas e lugares da infância.",
               "O <strong>adjetivo</strong> atribui uma característica ao substantivo: menina curiosa, livro interessante, caminho perigoso.",
               "Muitos adjetivos terminados em <strong>-oso</strong> e <strong>-osa</strong> são escritos com S: carinho → carinhoso; fama → famosa; perigo → perigoso."
             ]
@@ -842,6 +844,40 @@ const DISCIPLINAS = [
             ],
             "answer": 2,
             "explain": "Perigoso é o adjetivo derivado de perigo e caracteriza o substantivo caminho."
+          },
+          {
+            "type": "mc",
+            "q": "O que um autor conta em um conto de memórias?",
+            "options": [
+              "Lembranças que viveu no passado",
+              "Uma receita de bolo",
+              "As regras de um jogo",
+              "Uma notícia do dia"
+            ],
+            "answer": 0,
+            "explain": "No conto de memórias, quem escreve relembra fatos e sentimentos que viveu no passado."
+          },
+          {
+            "type": "mc",
+            "q": "O conto de memórias costuma ser escrito em qual pessoa?",
+            "options": [
+              "Na 1ª pessoa, o \"eu\"",
+              "Sempre na terceira pessoa",
+              "Sem nenhum narrador",
+              "Somente em versos"
+            ],
+            "answer": 0,
+            "explain": "Como o autor conta as próprias lembranças, o texto costuma usar a 1ª pessoa, o \"eu\"."
+          },
+          {
+            "type": "text",
+            "q": "Escreva o aumentativo da palavra 'casa'.",
+            "answers": [
+              "casarao",
+              "casarão",
+              "um casarao"
+            ],
+            "explain": "O aumentativo de casa é casarão."
           }
         ]
       },
@@ -2476,6 +2512,16 @@ const DISCIPLINAS = [
             ],
             "answer": 2,
             "explain": "Um deslocamento descreve o movimento realizado ao longo de um trajeto."
+          },
+          {
+            "type": "text",
+            "q": "Qual é o resultado de 5 × 1.000?",
+            "answers": [
+              "5000",
+              "5 000",
+              "cinco mil"
+            ],
+            "explain": "Multiplicar 5 por 1.000 resulta em 5.000."
           }
         ]
       },
@@ -3418,6 +3464,30 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "A luz e o calor do Sol mantêm condições adequadas à vida e permitem que as plantas façam fotossíntese."
+          },
+          {
+            "type": "mc",
+            "q": "O que é um tsunami?",
+            "options": [
+              "Uma onda gigante causada por abalos no fundo do mar",
+              "Uma fase da Lua",
+              "Um tipo de nuvem",
+              "Uma corrente de ar quente"
+            ],
+            "answer": 0,
+            "explain": "Terremotos no fundo do oceano podem empurrar a água e gerar ondas enormes chamadas tsunamis."
+          },
+          {
+            "type": "mc",
+            "q": "O que a Lua é em relação à Terra?",
+            "options": [
+              "Um satélite natural",
+              "Uma estrela",
+              "Um planeta",
+              "Uma galáxia"
+            ],
+            "answer": 0,
+            "explain": "A Lua é um satélite natural: um astro sem luz própria que gira ao redor da Terra."
           }
         ]
       },
@@ -4068,6 +4138,18 @@ const DISCIPLINAS = [
             ],
             "answer": 2,
             "explain": "O campo fornece muitos alimentos e matérias-primas; a cidade oferece produtos, comércio e serviços."
+          },
+          {
+            "type": "mc",
+            "q": "O que pode aumentar o risco de enchentes na área urbana?",
+            "options": [
+              "Muito lixo entupindo os bueiros",
+              "Praças bem cuidadas",
+              "Ruas com muitas árvores",
+              "Rios limpos"
+            ],
+            "answer": 0,
+            "explain": "O lixo jogado nas ruas entope os bueiros, a água da chuva não escoa e podem ocorrer enchentes."
           }
         ]
       },
@@ -5216,6 +5298,18 @@ const DISCIPLINAS = [
             ],
             "answer": 2,
             "explain": "O prefeito chefia o poder executivo municipal e trabalha com secretários e servidores."
+          },
+          {
+            "type": "mc",
+            "q": "Como devemos tratar os espaços públicos, como praças e ruas?",
+            "options": [
+              "Cuidar, pois são de todos",
+              "Danificar, pois não têm dono",
+              "Usar só com permissão do prefeito",
+              "Deixar sempre fechados"
+            ],
+            "answer": 0,
+            "explain": "Os espaços públicos pertencem a toda a comunidade, por isso todos devem cuidar deles."
           }
         ]
       },

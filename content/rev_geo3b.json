@@ -99,6 +99,13 @@
       "options": ["Não dependem uma da outra", "Produzem exatamente as mesmas coisas", "Trocam produtos e serviços", "Pertencem a municípios diferentes"],
       "answer": 2,
       "explain": "O campo fornece muitos alimentos e matérias-primas; a cidade oferece produtos, comércio e serviços."
+    },
+    {
+      "type": "mc",
+      "q": "O que pode aumentar o risco de enchentes na área urbana?",
+      "options": ["Muito lixo entupindo os bueiros", "Praças bem cuidadas", "Ruas com muitas árvores", "Rios limpos"],
+      "answer": 0,
+      "explain": "O lixo jogado nas ruas entope os bueiros, a água da chuva não escoa e podem ocorrer enchentes."
     }
   ]
 }

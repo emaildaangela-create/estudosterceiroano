@@ -103,6 +103,12 @@
       "options": ["A praça fica perto", "A aula dura uma hora", "Ande duas quadras e vire à direita", "Há três caminhos"],
       "answer": 2,
       "explain": "Um deslocamento descreve o movimento realizado ao longo de um trajeto."
+    },
+    {
+      "type": "text",
+      "q": "Qual é o resultado de 5 × 1.000?",
+      "answers": ["5000", "5 000", "cinco mil"],
+      "explain": "Multiplicar 5 por 1.000 resulta em 5.000."
     }
   ]
 }
