@@ -3289,7 +3289,7 @@ const DISCIPLINAS = [
             "instructions": "Separe as ideias conforme o assunto principal.",
             "categories": [
               "Características da Terra",
-              "Céu diurno"
+              "Observando o céu"
             ],
             "items": [
               {
@@ -3305,15 +3305,15 @@ const DISCIPLINAS = [
                 "cat": 0
               },
               {
+                "text": "Rotação e translação",
+                "cat": 0
+              },
+              {
                 "text": "Estrelas e planetas",
                 "cat": 1
               },
               {
                 "text": "Luz e calor do Sol",
-                "cat": 1
-              },
-              {
-                "text": "Rotação e translação",
                 "cat": 1
               }
             ]
