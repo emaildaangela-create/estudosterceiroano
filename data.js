@@ -400,10 +400,6 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "Ele traz comandos diretos e numerados que orientam o leitor a executar um procedimento — calibrar o botão. É exatamente a função do texto instrucional."
           }
-        ],
-        "pageImages": [
-          "pages/LINGUA_PORTUGUESA__01_Modulo_17_Lava_uma_mao_lava_a_outra/p01.png",
-          "pages/LINGUA_PORTUGUESA__01_Modulo_17_Lava_uma_mao_lava_a_outra/p03.png"
         ]
       },
       {
@@ -641,10 +637,6 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "A linha do tempo é definida pela ordem cronológica — a ordem exata em que os fatos aconteceram. Já o conto de memórias segue o fluxo das lembranças, podendo ir e voltar no tempo."
           }
-        ],
-        "pageImages": [
-          "pages/LINGUA_PORTUGUESA__02_Modulo_18_Lembrancas_de_uma_vida/p01.png",
-          "pages/LINGUA_PORTUGUESA__02_Modulo_18_Lembrancas_de_uma_vida/p03.png"
         ]
       },
       {
@@ -914,6 +906,7 @@ const DISCIPLINAS = [
             "p": [
               "Os <strong>adjetivos pátrios</strong> indicam o <strong>local de origem</strong> de alguém ou algo. Eles não indicam quantidade nem posição — apenas de onde a pessoa ou coisa vem. Podem se referir ao país, ao estado ou ao município.",
               "Exemplos: quem nasce na Grécia é <strong>grego</strong> (país); quem nasce em Goiás é <strong>goiano</strong> (estado); quem nasce em Salvador é <strong>soteropolitano</strong> ou <strong>salvadorense</strong> (município).",
+              "Alguns adjetivos pátrios de países são: México → <strong>mexicano</strong> ou <strong>mexicana</strong>; China → <strong>chinês</strong> ou <strong>chinesa</strong>. A forma escolhida deve concordar com a pessoa ou coisa caracterizada: Frida Kahlo nasceu no México, por isso era <strong>mexicana</strong>.",
               "Adjetivos pátrios dos estados brasileiros: Amazonas → <strong>amazonense</strong>; Minas Gerais → <strong>mineiro</strong>; São Paulo → <strong>paulista</strong>; Santa Catarina → <strong>catarinense</strong> ou <em>barriga-verde</em>; Pernambuco → <strong>pernambucano</strong>; Mato Grosso → <strong>mato-grossense</strong>; Amapá → <strong>amapaense</strong>; Ceará → <strong>cearense</strong>; Bahia → <strong>baiano</strong>; Pará → <strong>paraense</strong>; Rio Grande do Sul → <strong>gaúcho</strong>."
             ]
           },
@@ -1112,10 +1105,6 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "'Japonesa' caracteriza o substantivo 'comida', indicando sua origem. Repare na concordância: comida é feminino, por isso o adjetivo também vai para o feminino."
           }
-        ],
-        "pageImages": [
-          "pages/LINGUA_PORTUGUESA__03_Modulo_19_Voando_alto/p01.png",
-          "pages/LINGUA_PORTUGUESA__03_Modulo_19_Voando_alto/p03.png"
         ]
       },
       {
@@ -1347,10 +1336,6 @@ const DISCIPLINAS = [
             "answer": 2,
             "explain": "A imagem chama a atenção e mostra o produto como ele realmente é. Mesmo assim, ela não substitui as informações escritas: descrição, preço e contato continuam necessários."
           }
-        ],
-        "pageImages": [
-          "pages/LINGUA_PORTUGUESA__04_Modulo_20_Uma_doce_danca/p01.png",
-          "pages/LINGUA_PORTUGUESA__04_Modulo_20_Uma_doce_danca/p03.png"
         ]
       },
       {
@@ -1613,10 +1598,6 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "Com 'a gente', a concordância é no singular: 'a gente gosta'. Com 'nós', vai para o plural: 'nós gostamos'. Trocar o pronome exige ajustar o verbo!"
           }
-        ],
-        "pageImages": [
-          "pages/LINGUA_PORTUGUESA__05_Modulo_21_Vencer_o_medo/p01.png",
-          "pages/LINGUA_PORTUGUESA__05_Modulo_21_Vencer_o_medo/p03.png"
         ]
       },
       {
@@ -1877,10 +1858,6 @@ const DISCIPLINAS = [
             "answer": 0,
             "explain": "Faltou cumprir o combinado e retribuir a ajuda. A história permite conversar sobre cooperação e responsabilidade."
           }
-        ],
-        "pageImages": [
-          "pages/LINGUA_PORTUGUESA__06_Modulo_22_Contando_e_recontando/p01.png",
-          "pages/LINGUA_PORTUGUESA__06_Modulo_22_Contando_e_recontando/p03.png"
         ]
       }
     ]
@@ -1901,7 +1878,8 @@ const DISCIPLINAS = [
             "p": [
               "Imagine que você vai decorar uma festa e precisa escolher balões. Há 3 tamanhos (pequeno, médio e grande) e 3 cores (roxo, verde e rosa). Quantas combinações diferentes de 1 tamanho e 1 cor você consegue montar?",
               "Para não se perder, podemos desenhar um esquema ligando cada tamanho às cores possíveis. Esse esquema é chamado de <strong>árvore de possibilidades</strong>: cada balão (pequeno, médio, grande) pode ser roxo, verde ou rosa — 3 opções para cada um. Como são 3 tamanhos com 3 opções de cor cada, temos 3 + 3 + 3 = 9, ou seja, <strong>3 × 3 = 9 combinações</strong>.",
-              "Outro exemplo: uma sorveteria tem 2 tipos de sorvete (casquinha e picolé) e 3 sabores (morango, limão e uva). Um cliente pode combinar 1 tipo e 1 sabor de <strong>2 × 3 = 6 maneiras diferentes</strong>."
+              "Outro exemplo: uma sorveteria tem 2 tipos de sorvete (casquinha e picolé) e 3 sabores (morango, limão e uva). Um cliente pode combinar 1 tipo e 1 sabor de <strong>2 × 3 = 6 maneiras diferentes</strong>.",
+              "Também podemos contar <strong>ordens diferentes</strong>. Para colocar 3 fotos distintas lado a lado, há 3 escolhas para a primeira posição, depois restam 2 para a segunda e 1 para a última. Assim, existem <strong>3 × 2 × 1 = 6 ordens</strong>. Em cada posição usamos uma foto e não a repetimos."
             ]
           },
           {
@@ -2105,10 +2083,6 @@ const DISCIPLINAS = [
             "answer": 3,
             "explain": "Cada dia tem 20 + 30 = 50 alunos. Em 5 dias: 5 × 50 = 250 alunos, pois cada aluno faz apenas uma aula por semana."
           }
-        ],
-        "pageImages": [
-          "pages/MATEMATICA__01_Modulo_09_Contagem_de_possibilidades_e_outras_multiplicacoes/p01.png",
-          "pages/MATEMATICA__01_Modulo_09_Contagem_de_possibilidades_e_outras_multiplicacoes/p03.png"
         ]
       },
       {
@@ -2327,10 +2301,6 @@ const DISCIPLINAS = [
             ],
             "explain": "O ponteiro menor (mais curto) indica as horas; o maior indica os minutos; e o mais fininho e rápido indica os segundos."
           }
-        ],
-        "pageImages": [
-          "pages/MATEMATICA__02_Modulo_10_Medidas_de_tempo_localizacao_e_deslocamento/p01.png",
-          "pages/MATEMATICA__02_Modulo_10_Medidas_de_tempo_localizacao_e_deslocamento/p03.png"
         ]
       },
       {
@@ -2340,6 +2310,7 @@ const DISCIPLINAS = [
         "subtitle": "Multiplicação · Tempo · Localização",
         "reviewImage": "assets/revisao-3b-matematica.webp",
         "reviewImageAlt": "Crianças combinando roupas, formando grupos com blocos, observando um relógio e seguindo um trajeto entre escola, árvore e biblioteca.",
+        "video": "assets/videos/rev-matematica-3bim-resumo.mp4",
         "theory": [
           {
             "h": "Revisão: possibilidades e multiplicação",
@@ -2760,10 +2731,6 @@ const DISCIPLINAS = [
             "answer": 2,
             "explain": "256 ÷ 2 = 128. Decompondo: 200 ÷ 2 = 100; 56 ÷ 2 = 28; 100 + 28 = 128 bonecos."
           }
-        ],
-        "pageImages": [
-          "pages/MATEMATICA__03_Modulo_11_Divisao/p01.png",
-          "pages/MATEMATICA__03_Modulo_11_Divisao/p03.png"
         ]
       }
     ]
@@ -3006,10 +2973,6 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "Quando duas placas se chocam, elas empurram a superfície do terreno para cima. No caso dos Andes, uma placa chegou a subir em cima da outra."
           }
-        ],
-        "pageImages": [
-          "pages/GEO_HIST_CIENC__07_CIENCIAS_Modulo_09_Caracteristicas_da_Terra/p01.png",
-          "pages/GEO_HIST_CIENC__07_CIENCIAS_Modulo_09_Caracteristicas_da_Terra/p03.png"
         ]
       },
       {
@@ -3253,10 +3216,6 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "A atmosfera atrapalha a observação. Em órbita, livre dela, o Kepler permitiu descobrir mais de 2.600 planetas fora do Sistema Solar em quase dez anos de operação."
           }
-        ],
-        "pageImages": [
-          "pages/GEO_HIST_CIENC__08_CIENCIAS_Modulo_10_Observando_o_ceu_diurno/p01.png",
-          "pages/GEO_HIST_CIENC__08_CIENCIAS_Modulo_10_Observando_o_ceu_diurno/p03.png"
         ]
       },
       {
@@ -3266,6 +3225,7 @@ const DISCIPLINAS = [
         "subtitle": "Características da Terra · Céu diurno",
         "reviewImage": "assets/revisao-3b-ciencias.webp",
         "reviewImageAlt": "Crianças estudando um globo, um modelo correto das camadas da Terra, um vulcão, ondas, o Sol, a Lua e os movimentos terrestres.",
+        "video": "assets/videos/rev-ciencias-3bim-resumo.mp4",
         "theory": [
           {
             "h": "Revisão: características da Terra",
@@ -3718,10 +3678,6 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "As regiões mais iluminadas são as mais urbanizadas. As populações ocupam lugares de fácil acesso e clima favorável — condições que a Antártica não oferece, por isso permanece quase sem ocupação."
           }
-        ],
-        "pageImages": [
-          "pages/GEO_HIST_CIENC__09_CIENCIAS_Modulo_11_Observando_o_ceu_noturno/p01.png",
-          "pages/GEO_HIST_CIENC__09_CIENCIAS_Modulo_11_Observando_o_ceu_noturno/p03.png"
         ]
       }
     ]
@@ -3764,7 +3720,7 @@ const DISCIPLINAS = [
             "h": "A área rural",
             "p": [
               "A área rural corresponde à parte do município destinada às atividades econômicas típicas do <strong>campo</strong>: agricultura, pecuária e extrativismo. Essas atividades são chamadas <strong>primárias</strong>, pois exploram os recursos da natureza para produzir alimentos e matérias-primas.",
-              "Ao contrário das áreas urbanas, as rurais têm baixa concentração de pessoas, construções, indústrias, comércio e serviços — por isso são consideradas <strong>pouco adensadas</strong>. As construções são <strong>esparsas</strong>, ou seja, longe umas das outras. Há vários tipos de propriedades: ranchos, sítios, chácaras e fazendas, com plantações, pastagens, moradias, curral, chiqueiro e galinheiro.",
+              "Ao contrário das áreas urbanas, as rurais têm baixa concentração de pessoas, construções, indústrias, comércio e serviços — por isso são consideradas <strong>pouco adensadas</strong>. Uma área com muitas pessoas e construções próximas é <strong>adensada</strong>, também chamada de <strong>densamente povoada</strong>. As construções rurais costumam ser <strong>esparsas</strong>, ou seja, longe umas das outras. Há vários tipos de propriedades: ranchos, sítios, chácaras e fazendas, com plantações, pastagens, moradias, curral, chiqueiro e galinheiro.",
               "Os elementos naturais (rios, córregos, lagos, lagoas, florestas e montanhas) são mais fáceis de observar nas áreas rurais, pois foram menos modificados pelas atividades humanas. Mesmo assim, elas geram impactos: o principal é o <strong>desmatamento</strong>, quando florestas são retiradas para abrir espaço a plantações e pastagens."
             ]
           },
@@ -3960,10 +3916,6 @@ const DISCIPLINAS = [
             "answer": 0,
             "explain": "Prefeito e vereadores são eleitos pela população a cada quatro anos e cuidam dos serviços de saúde, educação, lazer e transporte para toda a população do município."
           }
-        ],
-        "pageImages": [
-          "pages/GEO_HIST_CIENC__04_GEOGRAFIA_Modulo_09_Conhecendo_o_municipio/p01.png",
-          "pages/GEO_HIST_CIENC__04_GEOGRAFIA_Modulo_09_Conhecendo_o_municipio/p03.png"
         ]
       },
       {
@@ -3973,6 +3925,7 @@ const DISCIPLINAS = [
         "subtitle": "Município · Área urbana e área rural",
         "reviewImage": "assets/revisao-3b-geografia.webp",
         "reviewImageAlt": "Crianças observando uma maquete de município com área urbana, área rural, poluição e trocas de produtos entre campo e cidade.",
+        "video": "assets/videos/rev-geografia-3bim-resumo.mp4",
         "theory": [
           {
             "h": "Revisão: conhecendo o município",
@@ -4384,10 +4337,6 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "O agricultor precisa da luz do dia para irrigar as plantas e colher os alimentos — tarefas difíceis de realizar à noite. O trabalho rural segue os ritmos da natureza."
           }
-        ],
-        "pageImages": [
-          "pages/GEO_HIST_CIENC__05_GEOGRAFIA_Modulo_10_A_populacao_do_municipio/p01.png",
-          "pages/GEO_HIST_CIENC__05_GEOGRAFIA_Modulo_10_A_populacao_do_municipio/p03.png"
         ]
       },
       {
@@ -4417,9 +4366,15 @@ const DISCIPLINAS = [
           },
           {
             "h": "Tratamento de água",
+            "visual": {
+              "src": "assets/infografico-tratamento-agua.webp",
+              "alt": "Infográfico em seis etapas: captação da água no rio, floculação, decantação, filtragem, desinfecção e distribuição da água tratada até as casas.",
+              "wide": true
+            },
             "p": [
               "A água usada para beber e cuidar da higiene deve ser <strong>potável</strong>, isto é, própria para o consumo. Antes de chegar às casas, ela passa por várias etapas de tratamento.",
-              "Primeiro vêm a <strong>captação</strong>, a <strong>floculação</strong> e a <strong>decantação</strong>, que ajudam a juntar e retirar a sujeira. Depois ocorrem a <strong>filtragem</strong>, a <strong>desinfecção</strong> e a <strong>distribuição</strong> pelos reservatórios e encanamentos.",
+              "Na <strong>captação</strong>, a água é retirada de rios, lagos ou represas e levada à estação de tratamento. Na <strong>floculação</strong>, pequenas partículas de sujeira se juntam e formam flocos maiores. Na <strong>decantação</strong>, esses flocos mais pesados se depositam no fundo do tanque.",
+              "Em seguida vem a <strong>filtragem</strong>: a água atravessa camadas de materiais como areia, cascalho e carvão, que retêm sujeiras menores. Na <strong>desinfecção</strong>, adiciona-se cloro para eliminar microrganismos que podem causar doenças; a água também pode receber flúor, que ajuda a proteger os dentes. Por fim, na <strong>distribuição</strong>, a água tratada segue por reservatórios e encanamentos até as casas.",
               "Tratar a água é fundamental para evitar a transmissão de doenças como diarreia e leptospirose. Também é preciso usá-la de forma consciente, evitando o desperdício."
             ]
           },
@@ -4636,10 +4591,6 @@ const DISCIPLINAS = [
             "answer": 0,
             "explain": "A bicicleta não emite poluentes, e o transporte coletivo leva muitas pessoas de uma vez, reduzindo o número de carros. Queimar lixo piora a poluição do ar; buzina é sonora e cartaz é visual."
           }
-        ],
-        "pageImages": [
-          "pages/GEO_HIST_CIENC__06_GEOGRAFIA_Modulo_11_Servicos_e_problemas_do_municipio/p01.png",
-          "pages/GEO_HIST_CIENC__06_GEOGRAFIA_Modulo_11_Servicos_e_problemas_do_municipio/p03.png"
         ]
       }
     ]
@@ -4659,7 +4610,8 @@ const DISCIPLINAS = [
             "h": "A cidade é feita de espaços compartilhados",
             "p": [
               "As cidades são formadas por diferentes espaços: ruas, casas, prédios, praças e parques. Nesses lugares convivemos com pessoas que não fazem parte da nossa família e que, em geral, nem conhecemos.",
-              "Para uma cidade existir, é preciso garantir que as necessidades dos habitantes sejam atendidas: moradia, água potável e saneamento básico, entre outras. Algumas cidades são <strong>planejadas</strong>, ou seja, pensadas com antecedência: onde ficará o governo? Onde as pessoas vão se encontrar para cerimônias religiosas? Onde vão se reunir para o lazer?"
+              "Para uma cidade existir, é preciso garantir que as necessidades dos habitantes sejam atendidas: moradia, água potável e saneamento básico, entre outras. Algumas cidades são <strong>planejadas</strong>, ou seja, pensadas com antecedência: onde ficará o governo? Onde as pessoas vão se encontrar para cerimônias religiosas? Onde vão se reunir para o lazer?",
+              "A <strong>prefeitura</strong> é a sede do governo do município: é onde trabalham o prefeito e parte da equipe responsável pela administração municipal. Outros espaços cumprem funções diferentes, como hospitais, que cuidam da saúde, e praças, usadas para lazer e encontro da comunidade."
             ]
           },
           {
@@ -4871,10 +4823,6 @@ const DISCIPLINAS = [
             ],
             "explain": "Estamos exercendo a cidadania: convivendo em harmonia com a sociedade, respeitando as regras que garantem a segurança e a preservação dos lugares que são de todos."
           }
-        ],
-        "pageImages": [
-          "pages/GEO_HIST_CIENC__01_HISTORIA_Modulo_09_Dividindo_espacos_em_comunidade/p01.png",
-          "pages/GEO_HIST_CIENC__01_HISTORIA_Modulo_09_Dividindo_espacos_em_comunidade/p03.png"
         ]
       },
       {
@@ -5110,10 +5058,6 @@ const DISCIPLINAS = [
             "answer": 1,
             "explain": "São espaços públicos, mas buracos, escadarias e ausência de rampas impedem que idosos, pessoas com deficiência e famílias com carrinhos circulem. Sem acessibilidade, o espaço não é efetivamente de todos."
           }
-        ],
-        "pageImages": [
-          "pages/GEO_HIST_CIENC__02_HISTORIA_Modulo_10_Espacos_publicos_e_privados/p01.png",
-          "pages/GEO_HIST_CIENC__02_HISTORIA_Modulo_10_Espacos_publicos_e_privados/p03.png"
         ]
       },
       {
@@ -5123,6 +5067,7 @@ const DISCIPLINAS = [
         "subtitle": "Espaços da comunidade · Serviços e prefeitura",
         "reviewImage": "assets/revisao-3b-historia.webp",
         "reviewImageAlt": "Crianças classificando espaços e serviços em uma maquete com praça, escola municipal, casa, mercado, prefeitura, iluminação e coleta de lixo.",
+        "video": "assets/videos/rev-historia-3bim-resumo.mp4",
         "theory": [
           {
             "h": "Revisão: espaços da comunidade",
@@ -5552,10 +5497,6 @@ const DISCIPLINAS = [
             "answer": 0,
             "explain": "Nessas unidades, a natureza recebe proteção especial. Pesquisa e visitação podem acontecer quando seguem as regras do local."
           }
-        ],
-        "pageImages": [
-          "pages/GEO_HIST_CIENC__03_HISTORIA_Modulo_11_Problemas_das_grandes_cidades/p01.png",
-          "pages/GEO_HIST_CIENC__03_HISTORIA_Modulo_11_Problemas_das_grandes_cidades/p03.png"
         ]
       }
     ]

@@ -25,9 +25,15 @@
     },
     {
       "h": "Tratamento de água",
+      "visual": {
+        "src": "assets/infografico-tratamento-agua.webp",
+        "alt": "Infográfico em seis etapas: captação da água no rio, floculação, decantação, filtragem, desinfecção e distribuição da água tratada até as casas.",
+        "wide": true
+      },
       "p": [
         "A água usada para beber e cuidar da higiene deve ser <strong>potável</strong>, isto é, própria para o consumo. Antes de chegar às casas, ela passa por várias etapas de tratamento.",
-        "Primeiro vêm a <strong>captação</strong>, a <strong>floculação</strong> e a <strong>decantação</strong>, que ajudam a juntar e retirar a sujeira. Depois ocorrem a <strong>filtragem</strong>, a <strong>desinfecção</strong> e a <strong>distribuição</strong> pelos reservatórios e encanamentos.",
+        "Na <strong>captação</strong>, a água é retirada de rios, lagos ou represas e levada à estação de tratamento. Na <strong>floculação</strong>, pequenas partículas de sujeira se juntam e formam flocos maiores. Na <strong>decantação</strong>, esses flocos mais pesados se depositam no fundo do tanque.",
+        "Em seguida vem a <strong>filtragem</strong>: a água atravessa camadas de materiais como areia, cascalho e carvão, que retêm sujeiras menores. Na <strong>desinfecção</strong>, adiciona-se cloro para eliminar microrganismos que podem causar doenças; a água também pode receber flúor, que ajuda a proteger os dentes. Por fim, na <strong>distribuição</strong>, a água tratada segue por reservatórios e encanamentos até as casas.",
         "Tratar a água é fundamental para evitar a transmissão de doenças como diarreia e leptospirose. Também é preciso usá-la de forma consciente, evitando o desperdício."
       ]
     },

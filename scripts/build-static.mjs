@@ -23,10 +23,7 @@ for (const file of [
   await cp(resolve(root, file), resolve(client, file));
 }
 
-await mkdir(resolve(client, "assets"), { recursive: true });
-for (const image of ["camadas-esferas-terra-v2.webp", "camadas-interior-terra-v2.webp"]) {
-  await cp(resolve(root, "assets", image), resolve(client, "assets", image));
-}
+await cp(resolve(root, "assets"), resolve(client, "assets"), { recursive: true });
 const worker = await readFile(resolve(root, "hosting-worker.js"), "utf8");
 await writeFile(resolve(dist, "server", "index.js"), worker);
 

@@ -164,6 +164,7 @@
     return 'ideia';
   }
   function visualDaDescoberta(bloco) {
+    if(bloco&&bloco.visual)return bloco.visual;
     var titulo=normalizar(bloco&&bloco.h);
     var visuaisEspecificos={
       'terra planeta azul':{
@@ -492,7 +493,8 @@
     if(fonteNumerada){recorte.resumo=fonteNumerada.split(/<strong>1\.<\/strong>/)[0].replace(/[\s:]+$/,'')+'.';recorte.detalhes=(bloco.p||[]).filter(function(p){return p!==fonteNumerada;});}
     card.innerHTML='<p class="bloco-leitura__etapa">Missão '+(idx+1)+' de '+cap.theory.length+'</p><h3>'+textoSeguro(bloco.h)+'</h3>'+
       '<p class="missao-convite">'+textoSeguro(conviteMissao(bloco,idx))+'</p>';
-    var visual=cap.reviewImage?{src:cap.reviewImage,alt:cap.reviewImageAlt||'Ilustração dos assuntos desta revisão.',tipo:'revisao'}:visualDaDescoberta(bloco), tipoVisual=visual.tipo==='diagrama'?'diagrama':(visual.tipo==='revisao'?'revisao':'');
+    var visual=cap.reviewImage?{src:cap.reviewImage,alt:cap.reviewImageAlt||'Ilustração dos assuntos desta revisão.',tipo:'revisao'}:visualDaDescoberta(bloco);
+    var tipoVisual=visual.tipo==='diagrama'?'diagrama':(visual.tipo==='revisao'?'revisao':(visual.wide?'amplo':''));
     var destaque=criar('div','descoberta-destaque'+(tipoVisual?' descoberta-destaque--'+tipoVisual:''));
     destaque.appendChild(criar('figure','descoberta-visual'+(tipoVisual?' descoberta-visual--'+tipoVisual:''),'<img src="'+textoSeguro(visual.src)+'" alt="'+textoSeguro(visual.alt)+'" loading="lazy">'));
     destaque.appendChild(criar('div','ideia-principal','<span>Ideia principal</span><p>'+explicarTermos(recorte.resumo)+'</p>'));

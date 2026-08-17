@@ -9,7 +9,8 @@
       "p": [
         "Imagine que você vai decorar uma festa e precisa escolher balões. Há 3 tamanhos (pequeno, médio e grande) e 3 cores (roxo, verde e rosa). Quantas combinações diferentes de 1 tamanho e 1 cor você consegue montar?",
         "Para não se perder, podemos desenhar um esquema ligando cada tamanho às cores possíveis. Esse esquema é chamado de <strong>árvore de possibilidades</strong>: cada balão (pequeno, médio, grande) pode ser roxo, verde ou rosa — 3 opções para cada um. Como são 3 tamanhos com 3 opções de cor cada, temos 3 + 3 + 3 = 9, ou seja, <strong>3 × 3 = 9 combinações</strong>.",
-        "Outro exemplo: uma sorveteria tem 2 tipos de sorvete (casquinha e picolé) e 3 sabores (morango, limão e uva). Um cliente pode combinar 1 tipo e 1 sabor de <strong>2 × 3 = 6 maneiras diferentes</strong>."
+        "Outro exemplo: uma sorveteria tem 2 tipos de sorvete (casquinha e picolé) e 3 sabores (morango, limão e uva). Um cliente pode combinar 1 tipo e 1 sabor de <strong>2 × 3 = 6 maneiras diferentes</strong>.",
+        "Também podemos contar <strong>ordens diferentes</strong>. Para colocar 3 fotos distintas lado a lado, há 3 escolhas para a primeira posição, depois restam 2 para a segunda e 1 para a última. Assim, existem <strong>3 × 2 × 1 = 6 ordens</strong>. Em cada posição usamos uma foto e não a repetimos."
       ]
     },
     {
