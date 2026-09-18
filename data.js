@@ -641,238 +641,329 @@ const DISCIPLINAS = [
       },
       {
         "id": "rev_lp3b",
-        "module": "R3",
-        "title": "Revisão do 3º bimestre",
-        "subtitle": "Texto instrucional · Substantivo · Adjetivo · Ortografia",
+        "module": "PROVA",
+        "title": "Revisão para a prova",
+        "subtitle": "Anúncios e classificados · Adjetivos · HQ · Pronomes pessoais",
         "reviewImage": "assets/revisao-3b-portugues.webp",
-        "reviewImageAlt": "Crianças organizando uma sequência ilustrada, comparando casas de tamanhos diferentes e relacionando figuras a características.",
-        "video": "assets/videos/rev-portugues-3bim-resumo.mp4",
+        "reviewImageAlt": "Crianças revisando anúncios, histórias em quadrinhos, adjetivos e pronomes.",
+        "video": "assets/videos/prova-portugues-modulos20-21.mp4",
         "theory": [
           {
-            "h": "Revisão: texto instrucional, aumentativo e diminutivo",
+            "h": "O anúncio classificado",
             "p": [
-              "O <strong>texto instrucional</strong> ensina como fazer algo. Ele usa comandos claros, materiais, etapas em ordem e, muitas vezes, imagens.",
-              "O substantivo pode aparecer no <strong>diminutivo</strong> ou no <strong>aumentativo</strong>. Além do tamanho, essas formas podem expressar carinho ou admiração.",
-              "No <strong>diminutivo</strong> usamos as terminações <strong>-inho(a), -zinho(a) e -sinho(a)</strong>: rosa → rosinha; pai → paizinho; sapato → sapatinho.",
-              "No <strong>aumentativo</strong> usamos terminações como <strong>-ão</strong>: casa → casarão; bola → bolão; livro → livrão."
+              "O <strong>anúncio classificado</strong> é um gênero textual <strong>curto</strong> em que é divulgada a venda, a troca ou o aluguel de produtos ou, ainda, o oferecimento e a contratação de serviços. Pode ser encontrado em jornais, revistas, <em>sites</em> e outros meios de comunicação.",
+              "O anúncio classificado costuma expor seu objetivo de modo <strong>mais direto</strong> do que o anúncio publicitário. Algumas informações que não podem faltar: <strong>o que é negociado</strong> e <strong>como os interessados podem entrar em contato</strong> com o anunciante.",
+              "Um anúncio classificado é composto de: título, descrição do produto ou serviço, preço e contato. A <strong>imagem</strong> torna o anúncio mais atrativo e completo, pois permite ver o estado real do produto."
             ]
           },
           {
-            "h": "Revisão: conto de memórias, adjetivo e ortografia",
+            "h": "Exemplo: aulas de tango argentino",
             "p": [
-              "O <strong>conto de memórias</strong> é um texto em que alguém narra <strong>lembranças do passado</strong>, quase sempre em 1ª pessoa (o \"eu\"). Costuma trazer sentimentos, pessoas queridas e lugares da infância.",
-              "O <strong>adjetivo</strong> atribui uma característica ao substantivo: menina curiosa, livro interessante, caminho perigoso.",
-              "Muitos adjetivos terminados em <strong>-oso</strong> e <strong>-osa</strong> são escritos com S: carinho → carinhoso; fama → famosa; perigo → perigoso."
+              "Um classificado anuncia: <em>\"AULAS DE TANGO ARGENTINO — Com professores experientes para adultos e crianças. Escola Internacional de Tango Argentino. Contato pelo e-mail aulas@escoladetangoargentino.com.br\"</em>.",
+              "Analisando esse anúncio: o <strong>serviço anunciado</strong> são aulas de tango; o <strong>anunciante</strong> é a Escola Internacional de Tango Argentino; e o <strong>objetivo</strong> é conseguir alunos, ou seja, divulgar a contratação de um serviço.",
+              "Dizer que os professores são <strong>experientes para adultos e crianças</strong> produz um efeito de <strong>confiança</strong>: convence o leitor de que a escola sabe ensinar pessoas de todas as idades. O tango, aliás, nasceu na Argentina — a Praça de Maio, em Buenos Aires, fica no país de origem dessa dança."
+            ]
+          },
+          {
+            "h": "Adjetivo: singular e plural",
+            "p": [
+              "Quando o substantivo está no <strong>singular</strong>, o adjetivo também fica no singular. Quando o substantivo está no <strong>plural</strong>, o adjetivo também fica no plural. Isso se chama <strong>concordância</strong>.",
+              "Exemplos: <em>A <strong>dança</strong> é <strong>envolvente</strong></em> / <em>As <strong>danças</strong> são <strong>envolventes</strong></em>. <em>Comprarei um vaso para a <strong>flor colorida</strong></em> / <em>...para as <strong>flores coloridas</strong></em>.",
+              "Cuidado ao escolher o adjetivo em uma frase: em <em>\"Encontrei no site anúncios ______ para aluguel de casas\"</em>, o substantivo <em>anúncios</em> é masculino e plural — então só cabe um adjetivo masculino plural, como <strong>maravilhosos</strong>. Não caberiam <em>sensacional</em> nem <em>incrível</em> (singular), nem <em>boas</em> (feminino)."
+            ]
+          },
+          {
+            "h": "Ortografia: as letras S e Z no fim da palavra",
+            "p": [
+              "O <strong>plural</strong> pode ser representado, entre outras formas, com a letra <strong>s</strong> no final das palavras, mas <strong>nunca com o acréscimo da letra z</strong>. Exemplos: <em>lobo → lobos</em>; <em>chapéu → chapéus</em>.",
+              "Quando uma palavra no singular <strong>termina com z</strong>, o plural é feito com o acréscimo da terminação <strong>-es</strong>. Exemplos: <em>cartaz → cartazes</em>; <em>perdiz → perdizes</em>; <em>arroz → arrozes</em>; <em>capaz → capazes</em>.",
+              "Palavras que terminam em <strong>z</strong>: feliz, giz, xadrez, lápis? Não! Preste atenção: <em>feli<strong>z</strong></em>, <em>rapa<strong>z</strong></em>, <em>xadre<strong>z</strong></em>, <em>cicatri<strong>z</strong></em>, <em>capa<strong>z</strong></em>, <em>arro<strong>z</strong></em>. Já com <strong>s</strong>: <em>burguê<strong>s</strong></em>, <em>siamê<strong>s</strong></em>, <em>ônibu<strong>s</strong></em>, <em>lápi<strong>s</strong></em>, <em>pire<strong>s</strong></em>, <em>avó<strong>s</strong></em>.",
+              "<strong>Dica do dicionário:</strong> nos dicionários, os verbetes (as palavras que procuramos) aparecem sempre no <strong>singular</strong>. Para ter certeza de que uma palavra termina com s ou com z, procure sempre no dicionário. Se ela estiver lá com z, é com z que se escreve!"
+            ]
+          },
+          {
+            "h": "Cantinho de leitura: \"Procura-se Lobo\"",
+            "p": [
+              "No livro <strong>\"Procura-se Lobo\"</strong>, de Ana Maria Machado, Manuel estava procurando emprego. Abriu o jornal e viu um anúncio classificado pedindo um \"Lobo, adulto, de boa aparência, com experiência comprovada, para trabalho de responsabilidade\".",
+              "A empresa queria um lobo <strong>bicho</strong> mesmo — daqueles peludos, de quatro patas — para um documentário. Mas Manuel era <strong>Lobo</strong> de sobrenome, como quem tem Coelho, Raposo ou Leitão. Achou que valia a pena arriscar e respondeu.",
+              "Deu certo por outro lado: como muitos lobos responderam ao anúncio, a empresa criou um emprego novo — <strong>respondedor de cartas de lobos</strong> — e contratou Manuel, porque ele escrevia muito bem e adorava ler. O mal-entendido aconteceu porque o texto do anúncio <strong>não estava claro</strong>. É por isso que um bom classificado precisa dizer exatamente o que está sendo procurado!"
+            ]
+          },
+          {
+            "h": "A história em quadrinhos (HQ)",
+            "p": [
+              "As <strong>histórias em quadrinhos</strong> são narrativas organizadas em <strong>quadros sequenciais</strong> que utilizam a linguagem <strong>verbal</strong> (os textos) e a <strong>não verbal</strong> (as imagens).",
+              "É comum o uso <strong>informal</strong> da língua para aproximar os diálogos da realidade — por isso os personagens falam como as pessoas falam de verdade. As falas são representadas dentro de <strong>balões</strong>.",
+              "As pessoas leem HQs principalmente para se <strong>divertir e entreter</strong>. Toda HQ precisa ter título, começo, meio e fim.",
+              "Curiosidade: a primeira história em quadrinhos moderna foi criada pelo artista americano <strong>Richard Outcault, em 1895</strong>, nos jornais de Nova York, com o personagem <em>Yellow Kid</em> (\"Menino Amarelo\"). Mas se buscarmos as primeiras raízes das HQs, podemos chegar até as <strong>pinturas rupestres</strong> feitas pelos homens pré-históricos, que contavam, por exemplo, como eram suas caçadas."
+            ]
+          },
+          {
+            "h": "Os tipos de balão",
+            "p": [
+              "Os balões deixam o texto mais interessante e detalhado, e ajudam a compreender o que está acontecendo na história. Cada formato tem um significado:",
+              "<strong>Balão de fala:</strong> contorno normal, arredondado — o personagem está falando.",
+              "<strong>Balão de pensamento:</strong> formato de nuvem, com bolinhas em vez de rabicho — o personagem está pensando.",
+              "<strong>Balão de grito:</strong> contorno em formato de estrela ou explosão — o personagem está gritando.",
+              "<strong>Balão de cochicho:</strong> contorno pontilhado ou tracejado — o personagem está falando baixinho, contando um segredo.",
+              "<strong>Balão de voz eletrônica:</strong> contorno em ziguezague ou serrilhado — a voz vem de um aparelho.",
+              "<strong>Balão de fala de muitas pessoas:</strong> um balão com vários rabichos — várias pessoas falam ao mesmo tempo.",
+              "O <strong>balão tremido</strong> (com linhas onduladas) mostra que o personagem está com medo ou nervoso: é como se a voz dele estivesse tremendo."
+            ]
+          },
+          {
+            "h": "\"Enfrentando o medinho\", com Mônica e Marina",
+            "p": [
+              "Na HQ, Mônica conta a Marina que <strong>morria de medo de altura</strong> e explica como venceu esse medo: <em>\"Fui me acostumando a perder o medo devagarzinho!\"</em>.",
+              "O caminho dela foi por etapas: primeiro subia em <strong>pedras</strong>; depois em <strong>banquinhos</strong>; em seguida uns <strong>degrauzinhos na escada do papai</strong>; e, na casa da avó, foi treinando <strong>olhar pela janela</strong>. <em>\"É só ir treinando! Se acostumando! E enfrentando o medinho!\"</em> — tudo aos pouquinhos, sem pressa.",
+              "Quando Mônica pergunta do que Marina tem medo, ela hesita (\"Eu? Bem... er...\") e revela: <strong>cachorros</strong>. E confessa: <em>\"Quando vejo um, fico com as pernas bambas e não paro de tremer!\"</em> — o balão dessa fala aparece <strong>tremido</strong>, mostrando o nervosismo dela.",
+              "Mônica sugere o mesmo método: <em>\"Vai se acostumando aos pouquinhos!\"</em>. No último quadrinho, Marina está rodeada de <strong>vários cachorros de uma vez</strong> e diz: <em>\"Pensando bem, Mônica... acho que não vai funcionar!\"</em> — porque começar com muitos cães ao mesmo tempo é o oposto de ir aos pouquinhos!"
+            ]
+          },
+          {
+            "h": "Pronomes pessoais do caso reto",
+            "p": [
+              "Os <strong>pronomes pessoais</strong> podem ser usados para <strong>substituir os substantivos</strong>, evitando repetições nos textos.",
+              "Eles também indicam a <strong>pessoa que fala</strong> (1ª pessoa), a <strong>pessoa com quem se fala</strong> (2ª pessoa) e a <strong>pessoa de quem se fala</strong> (3ª pessoa).",
+              "Os pronomes pessoais do <strong>caso reto</strong> são: <strong>eu, tu, ele, ela, nós, vós, eles, elas</strong>.",
+              "Exemplos de substituição: <em>\"Eu e meu irmão temos medo do escuro\"</em> → <em>\"<strong>Nós</strong> temos medo do escuro\"</em>. <em>\"O menino e sua amiga enfrentaram a situação com coragem\"</em> → <em>\"<strong>Eles</strong> enfrentaram a situação com coragem\"</em>. <em>\"Cascão e a mãe conversaram\"</em> → <em>\"<strong>Eles</strong> conversaram\"</em>."
+            ]
+          },
+          {
+            "h": "Pronomes pessoais do caso oblíquo",
+            "p": [
+              "Os pronomes pessoais do <strong>caso oblíquo</strong> são: <strong>me, mim, comigo, te, ti, contigo, lhe(s), o(s), a(s), se, si, consigo, nos e conosco</strong>.",
+              "Exemplos de uso: <em>\"Vou <strong>contigo</strong> para tua proteção\"</em>; <em>\"Não <strong>me</strong> sinto confortável quando estou com medo\"</em>; <em>\"Para <strong>mim</strong>, insetos são assustadores\"</em>; <em>\"Venha <strong>conosco</strong> ouvir histórias de arrepiar!\"</em>.",
+              "Como diferenciar? Compare: <em>\"<strong>Eu</strong> entendi a explicação\"</em> e <em>\"<strong>Ele</strong> completou o percurso\"</em> usam pronomes do caso reto (praticam a ação). Já <em>\"Vou <strong>te</strong> esperar aqui\"</em> e <em>\"Conto <strong>contigo</strong> para realizar a tarefa\"</em> usam pronomes do caso oblíquo.",
+              "<strong>Atenção!</strong> Na fala, é comum usar a expressão <strong>a gente</strong> no lugar do pronome <strong>nós</strong>. Nesses casos, a concordância é feita no <strong>singular</strong>: dizemos <em>\"<strong>Nós gostamos</strong> de ouvir histórias\"</em>, mas <em>\"<strong>A gente gosta</strong> de ouvir histórias\"</em>."
+            ]
+          },
+          {
+            "h": "Formas saudáveis de lidar com o medo",
+            "p": [
+              "Todos nós somos cheios de emoções: medo, alegria, tristeza, tédio... Os sentimentos nos ajudam a entender o que há ao nosso redor, <strong>nos protegem de situações de perigo</strong> ou nos preparam para novas situações.",
+              "Formas saudáveis de lidar com o medo: buscar uma <strong>técnica de relaxamento</strong>; <strong>conversar com um adulto</strong> sobre o medo; e <strong>ler histórias</strong> com personagens em situações parecidas com as que nos dão medo. O que <strong>não</strong> ajuda é fingir que não se tem medo nenhum.",
+              "O humor também é uma forma de enfrentar medos. O quadro <strong>\"O grito\"</strong>, de Edvard Munch (1863-1944), retrata uma figura em desespero. Mauricio de Sousa fez uma <strong>releitura</strong> bem-humorada dele em <strong>\"O berro\"</strong> (2008), transformando a cena assustadora em algo engraçado."
             ]
           }
         ],
         "games": [
           {
             "type": "sort",
-            "title": "Cada palavra em seu lugar",
-            "instructions": "Separe as palavras conforme sua função.",
+            "title": "Termina com S ou com Z?",
+            "instructions": "Arraste cada palavra para a letra com que ela termina.",
             "categories": [
-              "Substantivo",
-              "Adjetivo"
+              "Termina com S",
+              "Termina com Z"
             ],
             "items": [
               {
-                "text": "menina",
-                "cat": 0
-              },
-              {
-                "text": "cidade",
-                "cat": 0
-              },
-              {
-                "text": "livro",
-                "cat": 0
-              },
-              {
-                "text": "curiosa",
+                "text": "feli__",
                 "cat": 1
               },
               {
-                "text": "silenciosa",
+                "text": "burguê__",
+                "cat": 0
+              },
+              {
+                "text": "rapa__",
                 "cat": 1
               },
               {
-                "text": "perigoso",
+                "text": "ônibu__",
+                "cat": 0
+              },
+              {
+                "text": "xadre__",
                 "cat": 1
+              },
+              {
+                "text": "lápi__",
+                "cat": 0
+              },
+              {
+                "text": "cicatri__",
+                "cat": 1
+              },
+              {
+                "text": "pire__",
+                "cat": 0
               }
             ]
           },
           {
             "type": "pairs",
-            "title": "Palavras da revisão",
-            "instructions": "Ligue cada palavra à forma correspondente.",
+            "title": "Que balão usar?",
+            "instructions": "Ligue cada situação ao tipo de balão adequado.",
             "pairs": [
               [
-                "rosa",
-                "rosinha"
+                "\"Oi, Carolina!\" acenando de longe",
+                "Balão de fala"
               ],
               [
-                "pai",
-                "paizinho"
+                "\"O plural de cartaz é...\" estudando sozinho",
+                "Balão de pensamento"
               ],
               [
-                "sapato",
-                "sapatinho"
+                "\"Fernandooooo!\" chamando de longe",
+                "Balão de grito"
               ],
               [
-                "bola",
-                "bolão"
+                "\"Vou contar um segredo\" no ouvido",
+                "Balão de cochicho"
               ],
               [
-                "carinho",
-                "carinhoso"
+                "\"Você passou de fase!\" saindo do celular",
+                "Balão de voz eletrônica"
               ],
               [
-                "fama",
-                "famosa"
+                "\"Quatro.\" a turma responde junto",
+                "Balão de fala de muitas pessoas"
               ]
             ]
-          },
-          {
-            "type": "writing",
-            "title": "Produção textual",
-            "short": "Produção textual",
-            "instructions": "Escreva um texto instrucional ensinando como cuidar de uma planta em vaso.",
-            "orientation": "Dê um título ao texto e escreva pelo menos quatro etapas em ordem. Use verbos de comando e inclua ao menos um adjetivo para deixar uma orientação mais precisa.",
-            "checklist": [
-              "O título informa o que será ensinado.",
-              "As etapas aparecem em uma ordem que pode ser seguida.",
-              "O texto usa verbos de comando, como coloque, regue ou mantenha.",
-              "Há pelo menos um adjetivo, como ensolarado, úmida ou cuidadoso.",
-              "As frases começam com letra maiúscula e terminam com pontuação."
-            ],
-            "minLength": 80
           }
         ],
         "quiz": [
           {
             "type": "mc",
-            "q": "Qual é a finalidade de um texto instrucional?",
+            "q": "Sobre os anúncios classificados é correto afirmar que são textos:",
             "options": [
-              "Ensinar como fazer algo",
-              "Contar uma aventura",
-              "Expressar sentimentos em versos",
-              "Descrever um personagem"
-            ],
-            "answer": 0,
-            "explain": "Textos instrucionais orientam o leitor por meio de materiais, comandos e etapas organizadas."
-          },
-          {
-            "type": "mc",
-            "q": "Qual característica combina com um texto instrucional?",
-            "options": [
-              "Versos e rimas",
-              "Comandos em ordem",
-              "Diálogos entre personagens",
-              "Narrador de uma história"
-            ],
-            "answer": 1,
-            "explain": "As instruções precisam aparecer em uma ordem clara para que o leitor consiga realizar a tarefa."
-          },
-          {
-            "type": "mc",
-            "q": "Na frase 'Minha filhinha chegou', o diminutivo pode expressar o quê?",
-            "options": [
-              "Localização",
-              "Tempo",
-              "Carinho",
-              "Quantidade"
+              "Longos e sem imagens, que servem para informar o leitor sobre determinado assunto",
+              "Explicativos sobre o funcionamento de aparelhos eletrônicos",
+              "Curtos, encontrados em meios de comunicação nas seções de aluguel, venda, troca ou busca",
+              "Curtos, em que o anunciante escreve a própria opinião sobre o produto"
             ],
             "answer": 2,
-            "explain": "O diminutivo pode indicar tamanho, mas também pode demonstrar carinho."
-          },
-          {
-            "type": "text",
-            "q": "Escreva o diminutivo da palavra 'rosa'.",
-            "answers": [
-              "rosinha",
-              "rosinha."
-            ],
-            "explain": "Como rosa tem S na última sílaba, seu diminutivo é rosinha."
-          },
-          {
-            "type": "text",
-            "q": "Escreva o diminutivo da palavra 'pai'.",
-            "answers": [
-              "paizinho",
-              "paizinho."
-            ],
-            "explain": "A forma correta é paizinho, escrita com Z."
+            "explain": "O classificado é curto e direto, sempre ligado a uma negociação: venda, troca, aluguel ou busca. Ele não traz a opinião do anunciante nem explica funcionamento de aparelhos — isso seria um manual."
           },
           {
             "type": "mc",
-            "q": "Qual palavra é o adjetivo em 'A menina curiosa fez uma pergunta'?",
+            "q": "Leia: 'Encontrei no site anúncios ★ para aluguel de casas no centro da cidade.' Que adjetivo pode substituir o símbolo ★ mantendo a concordância?",
             "options": [
-              "Menina",
-              "Pergunta",
-              "Fez",
-              "Curiosa"
+              "Maravilhosos",
+              "Sensacional",
+              "Incrível",
+              "Boas"
+            ],
+            "answer": 0,
+            "explain": "O substantivo 'anúncios' é masculino e plural, então o adjetivo precisa ser masculino e plural: maravilhosos. 'Sensacional' e 'incrível' estão no singular, e 'boas' é feminino."
+          },
+          {
+            "type": "mc",
+            "q": "Assinale a alternativa em que há um exemplo de anúncio classificado.",
+            "options": [
+              "Uma página de jornal com a manchete 'Cidade recebe campeonato de dança'",
+              "Um cartaz com 'VENDEM-SE Sapatilhas de balé — Falar com Liza (00) 00000-0000'",
+              "Uma folha de calendário marcando 14 de fevereiro de 2023",
+              "Uma tirinha em quadrinhos com um personagem refletindo"
+            ],
+            "answer": 1,
+            "explain": "O anúncio informa o produto, a finalidade da negociação e uma forma de contato. Esses elementos ajudam o interessado a compreender e responder."
+          },
+          {
+            "type": "mc",
+            "q": "O anúncio dizia apenas 'Procura-se Lobo'. Por que Manuel Lobo pensou que poderia se candidatar?",
+            "options": [
+              "Porque ele era um lobo de verdade",
+              "Porque Lobo era seu sobrenome",
+              "Porque queria participar de um filme",
+              "Porque o anúncio pedia um leitor"
+            ],
+            "answer": 1,
+            "explain": "Como o anúncio não explicou que procurava o animal, Manuel pensou que 'Lobo' poderia ser o sobrenome do candidato."
+          },
+          {
+            "type": "text",
+            "q": "Escreva o plural da palavra 'cartaz':",
+            "answers": [
+              "cartazes",
+              "cartazes."
+            ],
+            "explain": "Quando a palavra no singular termina com z, o plural é feito com o acréscimo de -es: cartaz → cartazes. Nunca acrescentamos a letra z para formar plural!"
+          },
+          {
+            "type": "text",
+            "q": "Complete com S ou Z: 'burguê__'",
+            "answers": [
+              "s",
+              "burgues",
+              "burgues.",
+              "com s"
+            ],
+            "explain": "Burguês termina com S — vem do mesmo grupo de português, siamês e freguês. Na dúvida, procure no dicionário: os verbetes aparecem sempre no singular."
+          },
+          {
+            "type": "mc",
+            "q": "Cascão evita água. Para entrar em casa, teria de lavar os pés. Por que ele decide dormir do lado de fora?",
+            "options": [
+              "Não queria incomodar a mãe",
+              "Não gostaria de lavar os pés",
+              "Gosta de dormir do lado de fora",
+              "Estava uma noite quente"
+            ],
+            "answer": 1,
+            "explain": "A piada depende de conhecer o personagem: Cascão foge de água. Entrar em casa significaria lavar os pés, então ele preferiu passar a noite na calçada."
+          },
+          {
+            "type": "mc",
+            "q": "Na tira, Cascão dorme e no balão aparece apenas a letra 'Z'. Esse balão indica:",
+            "options": [
+              "Um pensamento",
+              "Uma dúvida",
+              "Uma ideia",
+              "Um som"
             ],
             "answer": 3,
-            "explain": "Curiosa atribui uma característica ao substantivo menina, por isso é um adjetivo."
+            "explain": "O 'Z' representa o som do ronco de quem está dormindo. Nas HQs, os balões também servem para registrar sons, não só falas e pensamentos."
           },
           {
             "type": "mc",
-            "q": "Qual palavra está escrita corretamente?",
+            "q": "Na frase 'Cascão e a mãe conversaram', as palavras sublinhadas podem ser substituídas por qual pronome?",
             "options": [
-              "Carinhozo",
-              "Carinhoso",
-              "Carinhoço",
-              "Carinozo"
+              "Eles",
+              "Elas",
+              "Nós",
+              "Vós"
             ],
-            "answer": 1,
-            "explain": "Adjetivos terminados em -oso e -osa são escritos com S: carinhoso."
+            "answer": 0,
+            "explain": "São duas pessoas de quem se fala (3ª pessoa do plural). Como um deles é do gênero masculino, usamos 'eles' — a forma masculina prevalece em português."
           },
           {
             "type": "mc",
-            "q": "Qual adjetivo pode caracterizar um caminho com perigo?",
+            "q": "Na frase 'Eu adoro ler as histórias em quadrinhos porque são cheias de aventura', o pronome 'eu' indica:",
             "options": [
-              "Perigo",
-              "Perigos",
-              "Perigoso",
-              "Perigosamente"
+              "A pessoa com quem se fala",
+              "A pessoa de quem se fala",
+              "A pessoa que fala",
+              "Depende da frase"
             ],
             "answer": 2,
-            "explain": "Perigoso é o adjetivo derivado de perigo e caracteriza o substantivo caminho."
-          },
-          {
-            "type": "mc",
-            "q": "O que um autor conta em um conto de memórias?",
-            "options": [
-              "Lembranças que viveu no passado",
-              "Uma receita de bolo",
-              "As regras de um jogo",
-              "Uma notícia do dia"
-            ],
-            "answer": 0,
-            "explain": "No conto de memórias, quem escreve relembra fatos e sentimentos que viveu no passado."
-          },
-          {
-            "type": "mc",
-            "q": "O conto de memórias costuma ser escrito em qual pessoa?",
-            "options": [
-              "Na 1ª pessoa, o \"eu\"",
-              "Sempre na terceira pessoa",
-              "Sem nenhum narrador",
-              "Somente em versos"
-            ],
-            "answer": 0,
-            "explain": "Como o autor conta as próprias lembranças, o texto costuma usar a 1ª pessoa, o \"eu\"."
+            "explain": "'Eu' é a 1ª pessoa: quem está falando. A 2ª pessoa (tu, vós) é a pessoa com quem se fala, e a 3ª (ele, ela, eles, elas) é a pessoa de quem se fala."
           },
           {
             "type": "text",
-            "q": "Escreva o aumentativo da palavra 'casa'.",
+            "q": "Mônica começou por pedras baixas, depois subiu em bancos e degraus. Ela enfrentou o medo de uma vez ou aos poucos?",
             "answers": [
-              "casarao",
-              "casarão",
-              "um casarao"
+              "pouquinhos",
+              "poucos",
+              "aos pouquinhos",
+              "pouquinhos.",
+              "devagarzinho",
+              "aos poucos"
             ],
-            "explain": "O aumentativo de casa é casarão."
+            "explain": "Ela foi aos pouquinhos: primeiro pedras, depois banquinhos, depois degraus da escada e, por fim, olhar pela janela da casa da avó. Treinando e se acostumando, sem pressa."
+          },
+          {
+            "type": "text",
+            "q": "Marina fica com as pernas bambas e o balão de fala aparece tremido. Que sentimento esses sinais mostram?",
+            "answers": [
+              "medo",
+              "o medo",
+              "nervosismo",
+              "nervosa",
+              "que ela esta com medo"
+            ],
+            "explain": "As pernas bambas e o balão tremido mostram medo ou nervosismo. Nos quadrinhos, palavras e desenhos trabalham juntos."
           }
         ]
       },
@@ -2305,197 +2396,202 @@ const DISCIPLINAS = [
       },
       {
         "id": "rev_mat3b",
-        "module": "R3",
-        "title": "Revisão do 3º bimestre",
-        "subtitle": "Multiplicação · Tempo · Localização",
+        "module": "PROVA",
+        "title": "Revisão para a prova",
+        "subtitle": "Multiplicação até 9 · Divisão exata e não exata · Partes de quantidades",
         "reviewImage": "assets/revisao-3b-matematica.webp",
-        "reviewImageAlt": "Crianças combinando roupas, formando grupos com blocos, observando um relógio e seguindo um trajeto entre escola, árvore e biblioteca.",
-        "video": "assets/videos/rev-matematica-3bim-resumo.mp4",
+        "reviewImageAlt": "Crianças praticando multiplicação, divisão e partes de quantidades.",
         "theory": [
           {
-            "h": "Revisão: possibilidades e multiplicação",
+            "h": "Repartir em partes iguais",
             "p": [
-              "Em problemas de possibilidades, podemos organizar as escolhas em uma tabela ou multiplicar as quantidades. Se há 3 camisetas e 2 bermudas, existem <strong>3 × 2 = 6</strong> combinações.",
-              "Multiplicar por 10, 100 ou 1.000 ajuda a resolver cálculos rapidamente. Também usamos a multiplicação em problemas com grupos de mesma quantidade."
+              "Dividir é <strong>repartir uma quantidade em partes iguais</strong>. Giovana tinha 12 figurinhas para colar igualmente em 3 cadernos: distribuindo de 1 em 1, cada caderno recebeu 4 figurinhas. Escrevemos: <strong>12 ÷ 3 = 4</strong>.",
+              "Se ela tivesse 4 cadernos, cada um receberia 3 figurinhas: 12 ÷ 4 = 3. Também podemos distribuir mais de 1 por vez — o resultado é o mesmo."
             ]
           },
           {
-            "h": "Revisão: tempo, localização e deslocamento",
+            "h": "Quantas vezes cabe?",
             "p": [
-              "Uma hora tem <strong>60 minutos</strong>; meia hora tem <strong>30 minutos</strong>; um minuto tem <strong>60 segundos</strong>. O ponteiro pequeno indica as horas e o grande, os minutos.",
-              "Para indicar localização e trajetos usamos pontos de referência e palavras como direita, esquerda, em frente, atrás, perto e longe."
+              "A divisão também responde à pergunta <strong>\"quantas vezes um número cabe em outro?\"</strong>. Marcos tem 30 caquis e quer formar caixas com meia dúzia (6) em cada: 30 ÷ 6 = 5, pois 5 × 6 = 30. Ele vai precisar de 5 caixas.",
+              "Repare que a divisão e a multiplicação são operações irmãs: para conferir uma divisão, basta multiplicar o resultado pelo divisor."
+            ]
+          },
+          {
+            "h": "Os termos da divisão",
+            "p": [
+              "Toda divisão tem quatro termos: o <strong>dividendo</strong> (quantidade que está sendo dividida), o <strong>divisor</strong> (em quantas partes dividimos), o <strong>quociente</strong> (o resultado) e o <strong>resto</strong> (o que sobra).",
+              "Em 72 ÷ 8 = 9: o 72 é o dividendo, o 8 é o divisor, o 9 é o quociente e o resto é 0."
+            ]
+          },
+          {
+            "h": "Divisão exata e não exata",
+            "p": [
+              "Uma divisão é <strong>exata</strong> quando não há sobra (resto zero). Aline dividiu 45 maços de espinafre em caixas de 9: 45 ÷ 9 = 5, resto 0 — exata!",
+              "Uma divisão <strong>não é exata</strong> quando há resto. Fernanda usa 2 cenouras por copo de suco e tem 17 cenouras: ela faz 8 copos e <strong>sobra 1 cenoura</strong>, pois 17 = 8 × 2 + 1. O quociente é 8 e o resto é 1."
+            ]
+          },
+          {
+            "h": "Estratégias para dividir",
+            "p": [
+              "<strong>Cálculo mental com a multiplicação:</strong> para 25 ÷ 3, pense: 3 × 8 = 24 (menor que 25) e 3 × 9 = 27 (passa). Então 25 ÷ 3 dá quociente 8 e resto 1.",
+              "<strong>Método da decomposição:</strong> para 72 ÷ 6, decompomos 72 = 60 + 12. Então 72 ÷ 6 = 60 ÷ 6 + 12 ÷ 6 = 10 + 2 = <strong>12</strong>.",
+              "<strong>Algoritmo (conta armada):</strong> para 56 ÷ 2, dividimos primeiro as dezenas (5 ÷ 2 = 2, resta 1 dezena), trocamos a dezena por 10 unidades (10 + 6 = 16) e dividimos: 16 ÷ 2 = 8. Resultado: 28."
+            ]
+          },
+          {
+            "h": "Metade, terça parte, quarta parte...",
+            "p": [
+              "Calculamos a <strong>metade</strong> dividindo por 2, a <strong>terça parte</strong> dividindo por 3, a <strong>quarta parte</strong> por 4, a <strong>quinta parte</strong> por 5 e a <strong>décima parte</strong> por 10.",
+              "Exemplos: metade de 84 = 42; terça parte de 69 = 23; quarta parte de 76 = 19; quinta parte de 95 = 19; décima parte de 50 = 5."
             ]
           }
         ],
         "games": [
           {
             "type": "pairs",
-            "title": "Revisão rápida de Matemática",
-            "instructions": "Ligue cada pergunta ao resultado.",
+            "title": "Divisões e resultados",
+            "instructions": "Ligue cada expressão ao seu valor.",
             "pairs": [
               [
-                "3 blusas e 2 saias",
-                "6 combinações"
+                "Terça parte de 21",
+                "7"
               ],
               [
-                "7 × 10",
-                "70"
+                "Metade de 50",
+                "25"
               ],
               [
-                "4 × 100",
-                "400"
+                "Quinta parte de 25",
+                "5"
               ],
               [
-                "2 × 1.000",
-                "2.000"
+                "Quarta parte de 16",
+                "4"
               ],
               [
-                "Meia hora",
-                "30 minutos"
+                "Décima parte de 100",
+                "10"
               ],
               [
-                "Um minuto",
-                "60 segundos"
+                "72 ÷ 6",
+                "12"
               ]
-            ]
-          },
-          {
-            "type": "sort",
-            "title": "Número, tempo ou caminho?",
-            "instructions": "Separe cada pista conforme o assunto.",
-            "categories": [
-              "Multiplicação",
-              "Tempo",
-              "Localização"
-            ],
-            "items": [
-              {
-                "text": "5 × 100",
-                "cat": 0
-              },
-              {
-                "text": "Quatro grupos de seis",
-                "cat": 0
-              },
-              {
-                "text": "30 minutos",
-                "cat": 1
-              },
-              {
-                "text": "Ponteiro dos segundos",
-                "cat": 1
-              },
-              {
-                "text": "Vire à esquerda",
-                "cat": 2
-              },
-              {
-                "text": "Atrás da escola",
-                "cat": 2
-              }
             ]
           }
         ],
         "quiz": [
           {
-            "type": "text",
-            "q": "Uma lanchonete oferece 3 sucos e 2 sanduíches. Quantas combinações são possíveis?",
-            "answers": [
-              "6",
-              "6 combinacoes",
-              "seis",
-              "seis combinacoes"
-            ],
-            "explain": "Cada um dos 3 sucos pode acompanhar 2 sanduíches: 3 × 2 = 6 combinações."
-          },
-          {
-            "type": "text",
-            "q": "Qual é o resultado de 8 × 100?",
-            "answers": [
-              "800",
-              "oitocentos"
-            ],
-            "explain": "Multiplicar 8 por 100 resulta em 800."
-          },
-          {
-            "type": "text",
-            "q": "Há 6 caixas com 4 lápis em cada uma. Quantos lápis há ao todo?",
-            "answers": [
-              "24",
-              "24 lapis",
-              "vinte e quatro"
-            ],
-            "explain": "São 6 grupos de 4 lápis: 6 × 4 = 24."
-          },
-          {
             "type": "mc",
-            "q": "Quantos minutos há em meia hora?",
+            "q": "Calculando a terça parte de 84 lápis, obtemos:",
             "options": [
-              "15 minutos",
-              "30 minutos",
-              "45 minutos",
-              "60 minutos"
-            ],
-            "answer": 1,
-            "explain": "Uma hora tem 60 minutos. A metade de 60 é 30, portanto meia hora tem 30 minutos."
-          },
-          {
-            "type": "mc",
-            "q": "Quantos segundos há em um minuto?",
-            "options": [
-              "30 segundos",
-              "100 segundos",
-              "60 segundos",
-              "24 segundos"
+              "42 lápis",
+              "32 lápis",
+              "28 lápis",
+              "18 lápis"
             ],
             "answer": 2,
-            "explain": "Um minuto corresponde a 60 segundos."
+            "explain": "Terça parte = dividir por 3. Decompondo: 84 = 60 + 24; 60 ÷ 3 = 20 e 24 ÷ 3 = 8; 20 + 8 = 28 lápis."
           },
           {
             "type": "mc",
-            "q": "No relógio, qual ponteiro indica os minutos?",
+            "q": "A professora organizou os 26 alunos do 3º ano em duplas. Quantas duplas ela formou?",
             "options": [
-              "Ponteiro pequeno",
-              "Os números",
-              "A moldura",
-              "Ponteiro grande"
+              "7 duplas",
+              "8 duplas",
+              "13 duplas",
+              "14 duplas"
+            ],
+            "answer": 2,
+            "explain": "Dupla = grupo de 2. Então 26 ÷ 2 = 13 duplas, pois 13 × 2 = 26. Divisão exata, ninguém fica de fora!"
+          },
+          {
+            "type": "mc",
+            "q": "Na divisão 72 ÷ 8 = 9, qual número é o divisor?",
+            "options": [
+              "72",
+              "8",
+              "9",
+              "0"
+            ],
+            "answer": 1,
+            "explain": "O divisor é 8. Ele indica em quantas partes iguais o número 72 será dividido."
+          },
+          {
+            "type": "mc",
+            "q": "Rafael quer cortar 14 metros de barbante em pedaços de 2 metros cada. Quantos pedaços ele vai obter?",
+            "options": [
+              "12 pedaços",
+              "13 pedaços",
+              "10 pedaços",
+              "7 pedaços"
             ],
             "answer": 3,
-            "explain": "O ponteiro grande indica os minutos; o pequeno indica as horas."
-          },
-          {
-            "type": "mc",
-            "q": "A biblioteca fica ao lado da escola. Essa frase informa o quê?",
-            "options": [
-              "Duração",
-              "Localização",
-              "Quantidade",
-              "Temperatura"
-            ],
-            "answer": 1,
-            "explain": "A expressão 'ao lado' indica a posição da biblioteca em relação à escola."
-          },
-          {
-            "type": "mc",
-            "q": "Qual instrução descreve um deslocamento?",
-            "options": [
-              "A praça fica perto",
-              "A aula dura uma hora",
-              "Ande duas quadras e vire à direita",
-              "Há três caminhos"
-            ],
-            "answer": 2,
-            "explain": "Um deslocamento descreve o movimento realizado ao longo de um trajeto."
+            "explain": "É a ideia de 'quantas vezes cabe': 14 ÷ 2 = 7, pois 7 × 2 = 14. Rafael obtém 7 pedaços de 2 metros."
           },
           {
             "type": "text",
-            "q": "Qual é o resultado de 5 × 1.000?",
+            "q": "Fernanda usa 2 cenouras para cada copo de suco e tem 17 cenouras. Quantos copos de suco ela consegue fazer? (escreva o número)",
             "answers": [
-              "5000",
-              "5 000",
-              "cinco mil"
+              "8",
+              "oito"
             ],
-            "explain": "Multiplicar 5 por 1.000 resulta em 5.000."
+            "explain": "17 ÷ 2 dá quociente 8 e resto 1: ela faz 8 copos e sobra 1 cenoura. A divisão não é exata."
+          },
+          {
+            "type": "text",
+            "q": "Artur vai ler um livro de 112 páginas, lendo 8 páginas por dia. Em quantos dias ele termina o livro? (escreva o número)",
+            "answers": [
+              "14",
+              "quatorze",
+              "catorze"
+            ],
+            "explain": "112 ÷ 8 = 14, pois 14 × 8 = 112. Trocamos a centena por dezenas: 11 dezenas ÷ 8 = 1 dezena e restam 3; 32 unidades ÷ 8 = 4. Resultado: 14 dias."
+          },
+          {
+            "type": "text",
+            "q": "Qual é a metade de 56? (escreva o número)",
+            "answers": [
+              "28",
+              "vinte e oito"
+            ],
+            "explain": "Metade = dividir por 2. 56 ÷ 2 = 28: 5 dezenas ÷ 2 = 2 dezenas (sobra 1); a dezena vira 10 unidades: 16 ÷ 2 = 8. Logo, 28."
+          },
+          {
+            "type": "text",
+            "q": "Maria levou R$ 80,00 à doceria e gastou a quinta parte desse valor. Quantos reais ela gastou? (escreva só o número)",
+            "answers": [
+              "16",
+              "16 reais",
+              "r$ 16",
+              "r$ 16,00",
+              "16,00",
+              "dezesseis"
+            ],
+            "explain": "Quinta parte = dividir por 5. 80 ÷ 5 = 16, pois 16 × 5 = 80. Maria gastou R$ 16,00."
+          },
+          {
+            "type": "mc",
+            "q": "Quatro irmãos vão dividir igualmente o preço de uma camiseta de R$ 56. Quanto cada pessoa pagará?",
+            "options": [
+              "R$ 28,00",
+              "R$ 14,00",
+              "R$ 12,00",
+              "R$ 26,00"
+            ],
+            "answer": 1,
+            "explain": "Com 4 pessoas: 56 ÷ 4 = 14. Conferindo: 14 × 4 = 56. Cada um pagaria R$ 14,00 (metade da metade de 56)."
+          },
+          {
+            "type": "mc",
+            "q": "A turma do 3º ano usa 2 botões para os olhos de cada boneco. Quantos bonecos é possível fazer com 256 botões?",
+            "options": [
+              "512 bonecos",
+              "254 bonecos",
+              "128 bonecos",
+              "64 bonecos"
+            ],
+            "answer": 2,
+            "explain": "256 ÷ 2 = 128. Decompondo: 200 ÷ 2 = 100; 56 ÷ 2 = 28; 100 + 28 = 128 bonecos."
           }
         ]
       },
@@ -3220,237 +3316,204 @@ const DISCIPLINAS = [
       },
       {
         "id": "rev_cie3b",
-        "module": "R3",
-        "title": "Revisão do 3º bimestre",
-        "subtitle": "Características da Terra · Céu diurno",
+        "module": "PROVA",
+        "title": "Revisão para a prova",
+        "subtitle": "Corpos celestes · Sol · Movimentos da Terra · Céu diurno",
         "reviewImage": "assets/revisao-3b-ciencias.webp",
-        "reviewImageAlt": "Crianças estudando um globo, um modelo correto das camadas da Terra, um vulcão, ondas, o Sol, a Lua e os movimentos terrestres.",
-        "video": "assets/videos/rev-ciencias-3bim-resumo.mp4",
+        "reviewImageAlt": "Crianças observando o Sol, a Terra e outros corpos celestes.",
+        "video": "assets/videos/prova-ciencias-ceu-diurno.mp4",
         "theory": [
           {
-            "h": "Revisão: características da Terra",
+            "h": "Os corpos celestes",
             "p": [
-              "A Terra pode ser representada por <strong>fotografias, planisférios e globos</strong>. O globo preserva melhor o formato esférico; o planisfério mostra toda a superfície em um plano.",
-              "A <strong>hidrosfera</strong> reúne a água; a <strong>litosfera</strong>, a parte sólida; a <strong>atmosfera</strong>, os gases; e a <strong>biosfera</strong>, os lugares onde existe vida.",
-              "No interior da Terra estão a <strong>crosta</strong>, o <strong>manto</strong> e o <strong>núcleo</strong>. Movimentos das placas tectônicas podem provocar terremotos, tsunamis e atividade vulcânica."
+              "A <strong>Astronomia</strong> é a área da ciência que estuda os astros. Chamamos de astros todos os corpos celestes que estão no espaço.",
+              "<strong>Estrelas:</strong> astros que têm <strong>luz própria</strong>. Existem muitos tipos, de diferentes cores e tamanhos. O Sol é a estrela mais próxima da Terra.",
+              "<strong>Planetas:</strong> corpos celestes que giram em torno de uma estrela e <strong>não têm luz própria</strong>. Saturno e a Terra são planetas.",
+              "<strong>Satélites:</strong> corpos celestes que gravitam em torno de outro, geralmente um planeta. A Lua é o satélite natural da Terra.",
+              "<strong>Cometas:</strong> esferas de poeira e gelo, que podem apresentar rochas em sua composição. Viajam ao redor do Sol.",
+              "<strong>Asteroides:</strong> corpos celestes que viajam pelo espaço girando ao redor do Sol.",
+              "<strong>Estrelas cadentes:</strong> são meteoros, corpos celestes originados de asteroides. O rastro brilhante de luz se forma quando o meteoro se aproxima da Terra e se incendeia."
             ]
           },
           {
-            "h": "Revisão: observando o céu diurno",
+            "h": "O Sol e sua influência na Terra",
             "p": [
-              "Estrelas têm luz própria; planetas giram ao redor de estrelas; satélites naturais giram ao redor de planetas. O <strong>Sol</strong> é a estrela mais próxima da Terra.",
-              "A luz e o calor do Sol ajudam a manter a água líquida e permitem a fotossíntese. A rotação da Terra dura cerca de <strong>24 horas</strong> e produz o dia e a noite; a translação dura cerca de <strong>365 dias</strong>."
+              "O Sol é a estrela mais próxima da Terra e o centro do Sistema Solar. Ao penetrar na atmosfera, a luz solar <strong>aquece o planeta</strong>, permitindo uma temperatura adequada à vida. Se não fosse pelo calor do Sol, não teríamos água no estado líquido, essencial para a manutenção da vida.",
+              "A luz solar também é usada na <strong>fotossíntese</strong>, processo pelo qual as plantas produzem alimento. As plantas servem de alimento para muitos animais, que podem servir de alimento para outros. Assim, a luz solar sustenta a maior parte das cadeias alimentares."
+            ]
+          },
+          {
+            "h": "Os astros se movimentam",
+            "p": [
+              "Ao observar o Sol durante o dia, temos a impressão de que ele se movimenta no céu — o mesmo ocorre com a Lua e as estrelas à noite. Esse é o <strong>movimento aparente</strong> dos astros: eles não se movem no horizonte; a impressão vem do movimento de <strong>rotação</strong> realizado pela Terra, que gira ao redor de si mesma como um pião.",
+              "Por causa da rotação, ao longo de um dia uma parte da Terra é iluminada pelo Sol enquanto a outra fica no escuro: temos o dia na parte iluminada e a noite na parte escura. Esse giro leva cerca de <strong>24 horas</strong> e ocorre de oeste para leste.",
+              "Além da rotação, a Terra realiza o movimento de <strong>translação</strong>, em que se move em torno do Sol. Uma volta completa demora aproximadamente <strong>um ano, ou 365 dias</strong>. O caminho percorrido é chamado de <strong>órbita da Terra</strong>."
+            ]
+          },
+          {
+            "h": "Os pontos cardeais",
+            "p": [
+              "O movimento aparente dá a impressão de que os astros surgem do lado direito e se põem do lado esquerdo — aproximadamente de <strong>leste para oeste</strong>.",
+              "Sabendo onde o Sol nasce, é possível encontrar os <strong>pontos cardeais</strong>. Posicione-se com os braços abertos em forma de cruz: o braço <strong>direito</strong> aponta para o <strong>leste</strong> (onde o Sol nasce), o braço <strong>esquerdo</strong> para o <strong>oeste</strong> (onde o Sol se põe), à sua <strong>frente</strong> estará o <strong>norte</strong> e às suas <strong>costas</strong>, o <strong>sul</strong>."
+            ]
+          },
+          {
+            "h": "O céu diurno",
+            "p": [
+              "Por que o céu é azul durante o dia? Isso acontece por causa da luz do Sol, que é composta das cores do arco-íris. Ao entrar na atmosfera, a luz solar se <strong>espalha em todas as direções</strong> por causa das partículas de ar e poeira. A <strong>luz azul se espalha mais</strong> do que as outras, por isso o céu parece azul para nós.",
+              "Durante o dia não conseguimos ver todos os astros, nem aqueles que refletem a luz solar (chamados de <strong>iluminados</strong>), porque a luz do Sol é tão forte que ofusca a luz refletida por eles.",
+              "As <strong>nuvens</strong> são formadas por pequenas gotas de água ou cristais de gelo suspensos no ar. Podem ter diferentes formas e tamanhos: algumas são brancas e fofas como algodão; outras são escuras e costumam sinalizar a chegada de chuva."
+            ]
+          },
+          {
+            "h": "O céu e a poluição do ar",
+            "p": [
+              "A poluição do ar é causada por substâncias prejudiciais liberadas na atmosfera, como a queima de vegetação e a fumaça de carros e fábricas.",
+              "Quando está poluído, o ar muda a aparência do céu diurno, tornando-o mais escuro, com tons de cinza ou marrom, e escondendo o Sol. Também dificulta a observação de elementos distantes, como montanhas e edifícios altos. A convivência frequente com o ar poluído pode afetar o humor e a saúde, causando ou agravando <strong>problemas respiratórios</strong>."
+            ]
+          },
+          {
+            "h": "Instrumentos para observar o céu",
+            "p": [
+              "Só com os olhos é muito difícil diferenciar as estrelas dos demais astros. Para uma observação mais detalhada usamos <strong>binóculos, lunetas e telescópios</strong>. Atenção: nunca devemos olhar diretamente para o Sol — isso pode causar danos à retina!",
+              "O <strong>telescópio</strong> aumenta a imagem dos objetos, facilitando a identificação dos astros. Os equipamentos potentes usados por astrônomos permitem estimar a idade de uma estrela, por quanto tempo ela ainda vai existir, sua fase do ciclo de vida (nascimento, evolução e morte), do que ela é feita e a que distância se encontra.",
+              "<strong>Telescópios ópticos</strong> utilizam lentes ou espelhos para focar a luz visível. São os mais comuns, encontrados em observatórios e até em versões menores para uso amador.",
+              "<strong>Telescópios espaciais:</strong> como a atmosfera dificulta a observação, os astrônomos passaram a colocar telescópios em órbita ao redor da Terra. O <strong>Kepler</strong> ficou quase dez anos em operação e permitiu a descoberta de mais de 2.600 planetas fora do Sistema Solar. Outros exemplos são o <strong>Hubble</strong> e o <strong>James Webb</strong>."
             ]
           }
         ],
         "games": [
           {
             "type": "pairs",
-            "title": "Pistas da Terra e do céu",
-            "instructions": "Ligue cada termo à explicação correspondente.",
+            "title": "Quem é quem no espaço",
+            "instructions": "Ligue cada corpo celeste à sua característica.",
             "pairs": [
               [
-                "Planisfério",
-                "Representação plana de toda a superfície terrestre"
-              ],
-              [
-                "Hidrosfera",
-                "Toda a água do planeta"
-              ],
-              [
-                "Atmosfera",
-                "Camada de gases ao redor da Terra"
-              ],
-              [
-                "Manto",
-                "Camada espessa abaixo da crosta"
-              ],
-              [
-                "Terremoto",
-                "Tremor ligado ao movimento das placas"
-              ],
-              [
                 "Estrela",
-                "Astro que tem luz própria"
+                "Tem luz própria — como o Sol"
               ],
               [
-                "Rotação",
-                "Giro da Terra em torno de si mesma"
+                "Planeta",
+                "Gira em torno de uma estrela, sem luz própria"
               ],
               [
-                "Translação",
-                "Movimento da Terra ao redor do Sol"
+                "Satélite",
+                "Gravita em torno de um planeta — como a Lua"
+              ],
+              [
+                "Cometa",
+                "Esfera de poeira e gelo que viaja ao redor do Sol"
+              ],
+              [
+                "Estrela cadente",
+                "Meteoro que se incendeia perto da Terra"
+              ],
+              [
+                "Asteroide",
+                "Corpo rochoso que gira ao redor do Sol"
               ]
-            ]
-          },
-          {
-            "type": "sort",
-            "title": "Terra ou céu?",
-            "instructions": "Separe as ideias conforme o assunto principal.",
-            "categories": [
-              "Características da Terra",
-              "Observando o céu"
-            ],
-            "items": [
-              {
-                "text": "Crosta, manto e núcleo",
-                "cat": 0
-              },
-              {
-                "text": "Hidrosfera e litosfera",
-                "cat": 0
-              },
-              {
-                "text": "Vulcões e terremotos",
-                "cat": 0
-              },
-              {
-                "text": "Rotação e translação",
-                "cat": 0
-              },
-              {
-                "text": "Estrelas e planetas",
-                "cat": 1
-              },
-              {
-                "text": "Luz e calor do Sol",
-                "cat": 1
-              }
             ]
           }
         ],
         "quiz": [
           {
             "type": "mc",
-            "q": "Qual representação mostra toda a superfície da Terra de forma plana?",
+            "q": "Por que o Sol, a Lua e as estrelas parecem atravessar o céu?",
             "options": [
-              "Planisfério",
-              "Telescópio",
-              "Bússola",
-              "Satélite"
+              "Porque a Terra gira em torno de si mesma",
+              "Porque todos giram ao redor da Terra a cada dia",
+              "Porque o vento empurra os astros",
+              "Porque as nuvens movimentam o céu"
             ],
             "answer": 0,
-            "explain": "O planisfério, também chamado de mapa-múndi, representa toda a superfície terrestre em um plano."
+            "explain": "A rotação da Terra cria o movimento aparente dos astros. Enquanto a Terra gira, temos a impressão de que eles atravessam o céu."
           },
           {
             "type": "mc",
-            "q": "Por que a Terra é chamada de planeta azul?",
+            "q": "A respeito do céu diurno e da observação do céu, marque a alternativa correta.",
             "options": [
-              "O núcleo é azul",
-              "Grande parte da superfície tem água",
-              "As rochas são azuis",
-              "O Sol ilumina somente os oceanos"
-            ],
-            "answer": 1,
-            "explain": "Vista do espaço, a Terra parece azul porque grande parte de sua superfície é coberta pelos oceanos."
-          },
-          {
-            "type": "mc",
-            "q": "Qual parte da Terra reúne continentes, rochas e o fundo dos oceanos?",
-            "options": [
-              "Hidrosfera",
-              "Atmosfera",
-              "Litosfera",
-              "Biosfera"
-            ],
-            "answer": 2,
-            "explain": "A litosfera é a parte sólida da Terra. Ela inclui as rochas dos continentes e do fundo oceânico."
-          },
-          {
-            "type": "mc",
-            "q": "Qual é a camada mais externa e fina do interior da Terra?",
-            "options": [
-              "Manto",
-              "Núcleo externo",
-              "Núcleo interno",
-              "Crosta"
+              "Sempre vemos o Sol e a Lua juntos",
+              "A poluição facilita a observação do céu",
+              "Óculos escuros servem para observar o Sol",
+              "Nunca devemos olhar diretamente para o Sol"
             ],
             "answer": 3,
-            "explain": "A crosta é a camada rochosa mais externa e fina. Abaixo dela fica o manto."
+            "explain": "Olhar direto para o Sol pode danificar a retina. A poluição DIFICULTA a observação, e óculos escuros não ampliam imagem nenhuma — só binóculos, lunetas e telescópios fazem isso."
           },
           {
             "type": "mc",
-            "q": "O que pode acontecer quando placas tectônicas se movimentam bruscamente?",
+            "q": "Quais são os quatro pontos cardeais?",
             "options": [
-              "Um terremoto",
-              "Uma fase da Lua",
-              "Uma mudança de estação",
-              "Um eclipse solar"
+              "Norte, sul, leste e oeste",
+              "Norte, sul, alto e baixo",
+              "Leste, oeste, perto e longe",
+              "Direita, esquerda, norte e sul"
             ],
             "answer": 0,
-            "explain": "Movimentos bruscos entre placas liberam energia e produzem tremores chamados terremotos."
+            "explain": "Os quatro pontos cardeais são norte, sul, leste e oeste. Eles ajudam a indicar direções."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama o movimento que a Terra faz ao redor de si mesma, girando como um pião?",
+            "answers": [
+              "rotacao",
+              "a rotacao",
+              "movimento de rotacao"
+            ],
+            "explain": "É a rotação. Ela dura cerca de 24 horas, determina a duração do dia e é a responsável pelo movimento aparente dos astros no céu."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama o movimento que a Terra faz ao redor do Sol, que dura aproximadamente 365 dias?",
+            "answers": [
+              "translacao",
+              "a translacao",
+              "movimento de translacao"
+            ],
+            "explain": "É a translação, que determina a duração do ano. O caminho percorrido pela Terra nesse movimento é chamado de órbita."
+          },
+          {
+            "type": "text",
+            "q": "Se você abrir os braços em cruz com o braço direito apontando para o leste, para que ponto cardeal estará apontando o braço esquerdo?",
+            "answers": [
+              "oeste",
+              "o oeste",
+              "para o oeste"
+            ],
+            "explain": "O braço esquerdo aponta para o oeste, onde o Sol se põe. À sua frente estará o norte e às suas costas, o sul."
           },
           {
             "type": "mc",
-            "q": "Como se chama o magma depois que ele sai de um vulcão?",
+            "q": "Por que o céu é azul durante o dia?",
             "options": [
-              "Crosta",
-              "Lava",
-              "Onda sísmica",
-              "Atmosfera"
+              "Porque a atmosfera é feita de gás azul",
+              "Porque a luz azul se espalha mais na atmosfera",
+              "Porque o céu reflete a cor dos oceanos",
+              "Porque as nuvens escondem as outras cores"
             ],
             "answer": 1,
-            "explain": "Dentro da Terra o material é chamado magma. Ao chegar à superfície, recebe o nome de lava."
+            "explain": "A luz do Sol tem várias cores. Na atmosfera, a luz azul se espalha mais e predomina no céu que enxergamos."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama o processo pelo qual as plantas usam a luz solar para produzir seu alimento?",
+            "answers": [
+              "fotossintese",
+              "a fotossintese"
+            ],
+            "explain": "É a fotossíntese. Ela é a base da alimentação de quase todos os seres vivos: as plantas viram alimento dos animais, que viram alimento de outros animais."
           },
           {
             "type": "mc",
-            "q": "Qual característica distingue uma estrela de um planeta?",
+            "q": "Por que os astrônomos enviam telescópios para o espaço, como o Kepler, o Hubble e o James Webb?",
             "options": [
-              "O planeta tem luz própria",
-              "A estrela gira ao redor da Terra",
-              "A estrela tem luz própria",
-              "O planeta não se movimenta"
+              "Porque no espaço eles ficam mais próximos das estrelas",
+              "Porque a atmosfera muitas vezes dificulta a observação dos astros a partir da Terra",
+              "Porque telescópios não funcionam com gravidade",
+              "Porque na Terra não existem observatórios"
             ],
-            "answer": 2,
-            "explain": "Estrelas produzem luz. Planetas não têm luz própria e giram ao redor de uma estrela."
-          },
-          {
-            "type": "mc",
-            "q": "Qual movimento da Terra dura cerca de 24 horas?",
-            "options": [
-              "Translação",
-              "Órbita lunar",
-              "Movimento das placas",
-              "Rotação"
-            ],
-            "answer": 3,
-            "explain": "A rotação é o giro da Terra em torno de si mesma. Ela produz a alternância entre dia e noite."
-          },
-          {
-            "type": "mc",
-            "q": "Como o Sol ajuda a existência da vida na Terra?",
-            "options": [
-              "Fornece luz e calor",
-              "Impede a fotossíntese",
-              "Apaga a atmosfera",
-              "Faz a Terra parar"
-            ],
-            "answer": 0,
-            "explain": "A luz e o calor do Sol mantêm condições adequadas à vida e permitem que as plantas façam fotossíntese."
-          },
-          {
-            "type": "mc",
-            "q": "O que é um tsunami?",
-            "options": [
-              "Uma onda gigante causada por abalos no fundo do mar",
-              "Uma fase da Lua",
-              "Um tipo de nuvem",
-              "Uma corrente de ar quente"
-            ],
-            "answer": 0,
-            "explain": "Terremotos no fundo do oceano podem empurrar a água e gerar ondas enormes chamadas tsunamis."
-          },
-          {
-            "type": "mc",
-            "q": "O que a Lua é em relação à Terra?",
-            "options": [
-              "Um satélite natural",
-              "Uma estrela",
-              "Um planeta",
-              "Uma galáxia"
-            ],
-            "answer": 0,
-            "explain": "A Lua é um satélite natural: um astro sem luz própria que gira ao redor da Terra."
+            "answer": 1,
+            "explain": "A atmosfera atrapalha a observação. Em órbita, livre dela, o Kepler permitiu descobrir mais de 2.600 planetas fora do Sistema Solar em quase dez anos de operação."
           }
         ]
       },
@@ -3920,192 +3983,203 @@ const DISCIPLINAS = [
       },
       {
         "id": "rev_geo3b",
-        "module": "R3",
-        "title": "Revisão do 3º bimestre",
-        "subtitle": "Município · Área urbana e área rural",
+        "module": "PROVA",
+        "title": "Revisão para a prova",
+        "subtitle": "População · Campo e cidade · Migrações · Mistura de culturas",
         "reviewImage": "assets/revisao-3b-geografia.webp",
-        "reviewImageAlt": "Crianças observando uma maquete de município com área urbana, área rural, poluição e trocas de produtos entre campo e cidade.",
-        "video": "assets/videos/rev-geografia-3bim-resumo.mp4",
+        "reviewImageAlt": "Crianças estudando população rural, população urbana e migrações.",
+        "video": "assets/videos/prova-geografia-populacao-municipio.mp4",
         "theory": [
           {
-            "h": "Revisão: conhecendo o município",
+            "h": "O que é população?",
             "p": [
-              "O <strong>município</strong> é formado pela cidade e pelas áreas rurais administradas pela mesma prefeitura. A área urbana concentra ruas, prédios, comércio e serviços.",
-              "A área rural tem mais campos, propriedades agrícolas e atividades ligadas à agricultura, pecuária e extrativismo. As áreas urbana e rural dependem uma da outra."
+              "<strong>População</strong> é o conjunto de pessoas que vivem em um mesmo local, como um município, um estado ou um país.",
+              "A população pode ser dividida de várias maneiras. Por <strong>idade</strong>, temos população infantil, jovem, adulta e idosa. Por <strong>local de moradia</strong>, temos população urbana (a que vive na cidade) e população rural (a que vive no campo).",
+              "Atualmente, no Brasil, a maior parte da população é <strong>urbana</strong>, e esse número tem crescido rapidamente. Já a população rural vem diminuindo no país."
             ]
           },
           {
-            "h": "Revisão: atividades e problemas ambientais",
+            "h": "O censo demográfico",
             "p": [
-              "Na área urbana são comuns comércio, indústria e prestação de serviços. Na área rural destacam-se agricultura e criação de animais.",
-              "Poluição do ar e da água, excesso de lixo, enchentes e retirada da vegetação são problemas ambientais. A população e o governo devem colaborar para diminuir esses problemas."
+              "Para conhecer a população total de um local, é preciso realizar uma pesquisa. No Brasil, ela se chama <strong>censo demográfico</strong> e é realizada pelo <strong>IBGE</strong> (Instituto Brasileiro de Geografia e Estatística) a cada <strong>10 anos</strong>.",
+              "Quantas pessoas vivem no Brasil? Como vivem? Onde vivem? Para descobrir, os <strong>recenseadores</strong> (pessoas que trabalham coletando dados por meio de entrevistas) visitam os <strong>domicílios</strong> (residências) de todos os municípios e fazem perguntas sobre idade, trabalho, cor, raça e outras.",
+              "As informações do censo ajudam o governo a compreender as características da população e a tomar as melhores decisões. Por exemplo: se um bairro tem muitas crianças, é ali que se devem construir escolas; se outro tem muitos idosos, é ali que fazem falta espaços de lazer para essa faixa etária."
+            ]
+          },
+          {
+            "h": "O jeito de viver no campo",
+            "p": [
+              "O dia a dia no campo costuma ser menos agitado do que na cidade. As atividades de trabalho da população rural estão mais ligadas aos <strong>ritmos da natureza</strong> (tempo, intervalo entre os acontecimentos): o dia e a noite, as estações do ano e o período de chuva.",
+              "O agricultor precisa da luz do dia para irrigar as plantas e colher os alimentos — tarefas difíceis de fazer à noite. Por isso, muitas famílias rurais acordam bem cedo para aproveitar todo o período de luz natural do Sol.",
+              "O descanso e o lazer nas áreas rurais geralmente acontecem junto à natureza: tomar banho em rios, lagos e cachoeiras, pescar, andar a cavalo, caminhar e participar de festas locais."
+            ]
+          },
+          {
+            "h": "O jeito de viver na cidade",
+            "p": [
+              "Nas cidades, as atividades não dependem tanto do ritmo da natureza. Muitas pessoas trabalham em locais fechados — escritórios, lojas, supermercados, hospitais e escolas —, por isso é possível trabalhar, estudar e realizar tarefas tanto de dia como à noite.",
+              "A circulação também é mais intensa: há muitos pedestres, automóveis, ônibus, motocicletas e bicicletas se deslocando pelas ruas e avenidas. A população costuma dizer que a vida nas cidades é <strong>muito agitada</strong>.",
+              "Para o lazer da população urbana existem parques e praças, além de cinemas, teatros, <em>shopping centers</em>, museus e estádios."
+            ]
+          },
+          {
+            "h": "As migrações",
+            "p": [
+              "<strong>Migração</strong> é o movimento de pessoas que deixam o local onde nasceram (<strong>lugar de origem</strong>) e buscam um novo local para viver (<strong>lugar de destino</strong>). Esse movimento pode ser <strong>temporário</strong> (alguns meses ou anos) ou <strong>permanente</strong> (que dura para sempre).",
+              "Vários fatores levam à decisão de migrar. O <strong>clima</strong> é um deles: a seca ou o excesso de chuva prejudicam as atividades do campo, e as famílias buscam outro lugar para cultivar e criar animais. A <strong>falta de emprego</strong> é outro fator importante: muitas pessoas migram para onde existem mais oportunidades de trabalho.",
+              "As migrações entre o campo e a cidade já foram muito comuns no Brasil. Muitas famílias saíram das áreas rurais por causa da seca ou da dificuldade de encontrar trabalho, migrando para as cidades em busca de emprego nas indústrias, no comércio e nos serviços. Assim, muitas cidades brasileiras cresceram bastante. Isso ainda acontece hoje, mas não de forma tão intensa como antigamente."
+            ]
+          },
+          {
+            "h": "Migrações e mistura de culturas",
+            "p": [
+              "Quando as pessoas migram, além da bagagem, elas levam consigo as <strong>características culturais</strong> do lugar de origem. Assim, o lugar de destino se transforma com a mistura de diferentes culturas.",
+              "<strong>Nas construções:</strong> a prefeitura de Blumenau (SC) tem estilo enxaimel, trazido pelos imigrantes alemães que chegaram nos séculos 19 e 20. Em Registro (SP) há um templo budista japonês, herança dos imigrantes do Japão.",
+              "<strong>Nas festas:</strong> São Paulo e Rio de Janeiro receberam muitos migrantes nordestinos e hoje abrigam festas e feiras típicas dessas tradições, como a Feira de São Cristóvão.",
+              "<strong>Na culinária:</strong> o acarajé, prato muito comum na Bahia, teve origem na África e foi trazido pelos africanos que foram forçados a vir ao Brasil como escravizados."
             ]
           }
         ],
         "games": [
           {
             "type": "sort",
-            "title": "Urbano ou rural?",
-            "instructions": "Leve cada característica para a área correspondente.",
+            "title": "Campo ou cidade?",
+            "instructions": "Arraste cada característica para o modo de vida correspondente.",
             "categories": [
-              "Área urbana",
-              "Área rural"
+              "Modo de vida rural",
+              "Modo de vida urbano"
             ],
             "items": [
               {
-                "text": "Grande concentração de prédios",
+                "text": "Trabalho segue o ritmo da natureza",
                 "cat": 0
               },
               {
-                "text": "Comércio e muitos serviços",
-                "cat": 0
-              },
-              {
-                "text": "Trânsito intenso",
-                "cat": 0
-              },
-              {
-                "text": "Plantação de alimentos",
+                "text": "Circulação intensa de veículos",
                 "cat": 1
               },
               {
-                "text": "Criação de animais",
+                "text": "Acorda cedo para usar a luz do Sol",
+                "cat": 0
+              },
+              {
+                "text": "É possível trabalhar de dia e à noite",
                 "cat": 1
               },
               {
-                "text": "Propriedades agrícolas",
+                "text": "Lazer em rios e cachoeiras",
+                "cat": 0
+              },
+              {
+                "text": "Lazer em cinemas e shoppings",
                 "cat": 1
               }
-            ]
-          },
-          {
-            "type": "pairs",
-            "title": "Município em revisão",
-            "instructions": "Ligue cada ideia ao exemplo.",
-            "pairs": [
-              [
-                "Município",
-                "Área urbana e rural administradas juntas"
-              ],
-              [
-                "Atividade urbana",
-                "Comércio em uma avenida"
-              ],
-              [
-                "Atividade rural",
-                "Cultivo de hortaliças"
-              ],
-              [
-                "Poluição do ar",
-                "Fumaça de muitos veículos"
-              ],
-              [
-                "Enchente",
-                "Água ocupa ruas após chuva forte"
-              ],
-              [
-                "Desmatamento",
-                "Retirada da vegetação"
-              ]
             ]
           }
         ],
         "quiz": [
           {
             "type": "mc",
-            "q": "O que forma um município?",
+            "q": "Assinale a alternativa que apresenta características do jeito de viver da população URBANA.",
             "options": [
-              "Área urbana e área rural",
-              "Somente o centro da cidade",
-              "Apenas as áreas agrícolas",
-              "Somente bairros com prédios"
-            ],
-            "answer": 0,
-            "explain": "O município reúne a cidade, seus bairros e as áreas rurais administradas pela mesma prefeitura."
-          },
-          {
-            "type": "mc",
-            "q": "Qual característica é comum na área urbana?",
-            "options": [
-              "Grandes plantações",
-              "Concentração de comércio e serviços",
-              "Criação extensiva de gado",
-              "Poucas construções"
+              "O trabalho está mais ligado ao ritmo da natureza",
+              "A circulação de veículos em ruas e avenidas é intensa",
+              "Geralmente é preciso da luz do dia para realizar as atividades de trabalho",
+              "O descanso e o lazer são atividades geralmente feitas junto à natureza"
             ],
             "answer": 1,
-            "explain": "A área urbana concentra moradias, comércio, serviços, ruas e prédios."
+            "explain": "As outras três descrevem a vida rural, onde o trabalho depende do Sol e das estações. Na cidade, muita gente trabalha em locais fechados e o trânsito é intenso o dia todo."
           },
           {
             "type": "mc",
-            "q": "Qual situação representa um problema ambiental urbano?",
+            "q": "Assinale a alternativa correta sobre as migrações:",
             "options": [
-              "Plantio de uma horta",
-              "Criação responsável de animais",
-              "Fumaça de muitos veículos",
-              "Preservação de uma praça"
+              "Poucas pessoas já migraram no Brasil",
+              "O clima nunca influencia uma migração",
+              "A falta de trabalho pode levar pessoas a deixar o campo",
+              "Não existem migrações entre campo e cidade"
             ],
             "answer": 2,
-            "explain": "A fumaça dos veículos libera poluentes e prejudica a qualidade do ar nas cidades."
+            "explain": "A migração campo-cidade foi muito comum no Brasil e ainda ocorre. O clima (seca ou excesso de chuva) e a falta de emprego são os dois principais fatores que levam as famílias a migrar."
           },
           {
             "type": "mc",
-            "q": "Qual característica é comum na área rural?",
+            "q": "Em que aspectos os imigrantes podem influenciar a cultura do lugar de destino?",
             "options": [
-              "Muitos edifícios altos",
-              "Trânsito de avenidas centrais",
-              "Grande número de lojas",
-              "Propriedades agrícolas"
-            ],
-            "answer": 3,
-            "explain": "Na área rural há propriedades agrícolas, plantações, pastagens e criação de animais."
-          },
-          {
-            "type": "mc",
-            "q": "Qual é uma atividade econômica rural?",
-            "options": [
-              "Cultivo de milho",
-              "Venda em shopping",
-              "Transporte por metrô",
-              "Trabalho em banco"
+              "Na culinária, nas festas e nas construções",
+              "Na duração dos dias e das noites",
+              "No movimento dos planetas",
+              "Na direção em que os rios correm"
             ],
             "answer": 0,
-            "explain": "O cultivo de alimentos é uma atividade agrícola realizada principalmente na área rural."
+            "explain": "Quem migra leva conhecimentos e costumes. Essa influência pode aparecer na culinária, nas festas, nas construções e em outras práticas culturais."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama a pesquisa feita pelo IBGE a cada 10 anos para conhecer a população brasileira?",
+            "answers": [
+              "censo demografico",
+              "censo",
+              "o censo demografico"
+            ],
+            "explain": "É o censo demográfico. Os recenseadores visitam os domicílios de todos os municípios e perguntam sobre idade, trabalho, cor e raça — dados que ajudam o governo a decidir onde investir."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama o movimento de pessoas que deixam seu lugar de origem para viver em um novo lugar de destino?",
+            "answers": [
+              "migracao",
+              "a migracao",
+              "migracoes",
+              "as migracoes"
+            ],
+            "explain": "É a migração. Ela pode ser temporária (dura alguns meses ou anos) ou permanente (dura para sempre)."
           },
           {
             "type": "mc",
-            "q": "Qual é uma atividade econômica urbana?",
+            "q": "No censo do bairro Lapa (área urbana) há 100 crianças, 60 jovens, 120 adultos e nenhum idoso. No bairro Jardim (área rural) há 0 crianças, 10 jovens, 30 adultos e 30 idosos. Se você fosse prefeito por um dia, onde criaria espaços de lazer para idosos?",
             "options": [
-              "Plantio de soja",
-              "Comércio em uma loja",
-              "Criação de gado",
-              "Colheita de café"
+              "Só no bairro Lapa",
+              "Só no bairro Jardim",
+              "Nos dois bairros",
+              "Em nenhum dos dois"
             ],
             "answer": 1,
-            "explain": "Comércio e prestação de serviços estão entre as atividades mais comuns das áreas urbanas."
+            "explain": "Os 30 idosos do município vivem todos no bairro Jardim; no bairro Lapa não há nenhum. É assim que o censo ajuda o prefeito a decidir onde investir o dinheiro público."
+          },
+          {
+            "type": "text",
+            "q": "Atualmente, no Brasil, a maior parte da população vive na cidade ou no campo? (responda: urbana ou rural)",
+            "answers": [
+              "urbana",
+              "cidade",
+              "na cidade",
+              "populacao urbana"
+            ],
+            "explain": "A maior parte da população brasileira é urbana, e esse número continua crescendo rapidamente. A população rural vem diminuindo no país."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama a pessoa que trabalha coletando os dados da população por meio de entrevistas nos domicílios?",
+            "answers": [
+              "recenseador",
+              "recenseadora",
+              "o recenseador",
+              "recenseadores"
+            ],
+            "explain": "É o recenseador (ou recenseadora). Domicílio, por sua vez, é o nome técnico para residência — a casa onde as pessoas moram."
           },
           {
             "type": "mc",
-            "q": "Como as áreas urbana e rural se relacionam?",
+            "q": "Por que as famílias que vivem no campo costumam acordar muito cedo?",
             "options": [
-              "Não dependem uma da outra",
-              "Produzem exatamente as mesmas coisas",
-              "Trocam produtos e serviços",
-              "Pertencem a municípios diferentes"
+              "Porque não existe energia elétrica no campo",
+              "Para aproveitar todo o período de luz natural do Sol no trabalho",
+              "Porque as escolas rurais abrem de madrugada",
+              "Porque no campo não é possível dormir tarde"
             ],
-            "answer": 2,
-            "explain": "O campo fornece muitos alimentos e matérias-primas; a cidade oferece produtos, comércio e serviços."
-          },
-          {
-            "type": "mc",
-            "q": "O que pode aumentar o risco de enchentes na área urbana?",
-            "options": [
-              "Muito lixo entupindo os bueiros",
-              "Praças bem cuidadas",
-              "Ruas com muitas árvores",
-              "Rios limpos"
-            ],
-            "answer": 0,
-            "explain": "O lixo jogado nas ruas entope os bueiros, a água da chuva não escoa e podem ocorrer enchentes."
+            "answer": 1,
+            "explain": "O agricultor precisa da luz do dia para irrigar as plantas e colher os alimentos — tarefas difíceis de realizar à noite. O trabalho rural segue os ritmos da natureza."
           }
         ]
       },
@@ -5062,202 +5136,333 @@ const DISCIPLINAS = [
       },
       {
         "id": "rev_hist3b",
-        "module": "R3",
-        "title": "Revisão do 3º bimestre",
-        "subtitle": "Espaços da comunidade · Serviços e prefeitura",
+        "module": "PROVA",
+        "title": "Revisão para a prova",
+        "subtitle": "Serviços · Prefeitura · Câmara · Moradia · Transporte · Lixo",
         "reviewImage": "assets/revisao-3b-historia.webp",
-        "reviewImageAlt": "Crianças classificando espaços e serviços em uma maquete com praça, escola municipal, casa, mercado, prefeitura, iluminação e coleta de lixo.",
-        "video": "assets/videos/rev-historia-3bim-resumo.mp4",
+        "reviewImageAlt": "Crianças revisando serviços, administração municipal e problemas das grandes cidades.",
+        "video": "assets/videos/prova-historia-modulos10-11.mp4",
         "theory": [
           {
-            "h": "Revisão: espaços da comunidade",
+            "h": "Quando a fronteira não é tão clara",
             "p": [
-              "Espaços <strong>públicos</strong> pertencem à coletividade e são administrados pelo poder público. Ruas, praças e parques são exemplos. Espaços <strong>privados</strong> pertencem a pessoas ou instituições.",
-              "Alguns espaços públicos têm <strong>acesso restrito</strong>, como escolas durante as aulas. Alguns espaços privados são de <strong>uso público</strong>, como mercados e cinemas, que recebem clientes seguindo regras."
+              "Já sabemos que espaços <strong>privados</strong> têm dono (como uma loja) e espaços <strong>públicos</strong> são administrados pelo governo e todos têm direito de frequentar. Mas em alguns casos é difícil diferenciar um do outro — e isso acontece por causa dos <strong>usos</strong> que fazemos desses espaços.",
+              "Um bar ou restaurante é privado, pois tem dono, mas é frequentado por muita gente. As ruas e calçadas são públicas, onde todos podem circular livremente. Às vezes esses limites entram em conflito: mesas de bar, lixeiras, postes e patinetes espalhados podem impedir a livre circulação dos pedestres pelas calçadas."
             ]
           },
           {
-            "h": "Revisão: serviços e administração municipal",
+            "h": "Espaços públicos de acesso restrito",
             "p": [
-              "Serviços públicos atendem necessidades coletivas, como iluminação das ruas, escolas e postos de saúde. Serviços privados são oferecidos por empresas ou profissionais.",
-              "A <strong>prefeitura</strong> administra o município. O prefeito e os secretários organizam serviços, cuidam dos espaços públicos e planejam melhorias para a população."
+              "Existem espaços públicos com <strong>regras para serem frequentados</strong>. Uma praça pode ser frequentada por todas as pessoas, sem restrição. Já uma <strong>creche</strong> só pode ser frequentada por funcionários, pelas crianças matriculadas e por seus responsáveis.",
+              "O mesmo vale para quase todos os prédios públicos: a Câmara dos Vereadores, a Prefeitura, os Correios e as escolas são espaços públicos, mas têm horário de funcionamento e regras de acesso. Dentro da escola há ainda restrições a certos espaços, como a sala dos professores."
+            ]
+          },
+          {
+            "h": "Espaços privados de uso público",
+            "p": [
+              "Em compensação, existem espaços <strong>privados que podem ser frequentados por qualquer pessoa</strong> em seu horário de funcionamento, porque qualquer um pode ser cliente: mercados, lojas, bares e <em>shopping centers</em>.",
+              "Nem sempre, porém, as pessoas conseguem circular livremente. Um motivo é a <strong>discriminação</strong>: o Brasil tem grande desigualdade econômica, e em locais frequentados por classes sociais altas, pessoas de classes mais baixas podem não se sentir bem-vindas. Outro é a <strong>falta de acesso a meios de locomoção</strong> e a falta de acessibilidade (calçadas esburacadas, ausência de rampas)."
+            ]
+          },
+          {
+            "h": "Serviços públicos e privados",
+            "p": [
+              "Os serviços também podem ser públicos ou privados. Os governos são responsáveis por serviços fundamentais — como <strong>saúde e educação</strong> —, que não têm dono e podem ser usados por todos sem pagar. É por isso que existem escolas e hospitais públicos, além do <strong>SUS</strong>, responsável pelas campanhas de vacinação em todo o território brasileiro.",
+              "Ônibus, trens e metrôs são <strong>transportes públicos coletivos</strong>. Em muitos lugares é preciso pagar passagem. Algumas pessoas têm gratuidade garantida por lei, e outras regras dependem do município. O táxi é um transporte privado de uso público."
+            ]
+          },
+          {
+            "h": "A Constituição garante direitos",
+            "p": [
+              "A <strong>Constituição</strong> é o conjunto das principais leis de um país. A brasileira foi publicada em <strong>1988</strong> e precisa ser respeitada por todos: governo e população.",
+              "O <strong>Artigo 205</strong> garante que a educação é direito de todos e dever do Estado e da família. O <strong>Artigo 196</strong> garante que a saúde é direito de todos e dever do Estado."
+            ]
+          },
+          {
+            "h": "Quem administra o município",
+            "p": [
+              "A administração pública da cidade é responsabilidade do <strong>prefeito</strong> e dos <strong>vereadores</strong>, eleitos a cada quatro anos por voto direto. São os políticos mais próximos da população, e é dever dos cidadãos fiscalizar o trabalho deles.",
+              "O <strong>prefeito</strong> cuida do patrimônio histórico e cultural, da limpeza da cidade e do saneamento básico. É responsabilidade da Prefeitura a educação básica (das creches ao Ensino Fundamental) e o primeiro atendimento de saúde, feito nos postos da rede municipal. O prefeito deve usar o dinheiro público, arrecadado pelos impostos, em benefício da população.",
+              "A <strong>Câmara Municipal</strong> é o espaço público onde as leis da cidade são elaboradas, propostas e votadas pelos vereadores, que também fiscalizam o prefeito. A quantidade de vereadores depende do tamanho da cidade: Borá, a menor do Brasil, tem 9; São Paulo, a maior, tem 55. As sessões são públicas e todo cidadão pode participar."
+            ]
+          },
+          {
+            "h": "8 bilhões de pessoas, 8 bilhões de resíduos",
+            "p": [
+              "O planeta Terra é compartilhado por mais de <strong>8 bilhões de pessoas</strong>. Todas moram em algum lugar, consomem comida, água e outros recursos.",
+              "Agora imagine que cada uma dessas 8 bilhões de pessoas gerasse apenas <strong>um resíduo por dia</strong> — uma embalagem de picolé, uma garrafinha de água. Seriam 8 bilhões de resíduos por dia. É por aí que começam vários dos problemas das grandes cidades."
+            ]
+          },
+          {
+            "h": "Problemas de moradia",
+            "p": [
+              "Existem casas de muitos tipos, feitas de materiais como barro, madeira, tijolo ou pedra. Elas também podem ter diferentes formatos.",
+              "Há <strong>palafitas</strong> apoiadas em estacas perto de rios, <strong>ocas</strong> de povos indígenas e prédios de apartamentos nas cidades. Cada moradia se relaciona com o lugar e o modo de vida de seus moradores.",
+              "Algumas pessoas vivem em situação de rua por uma combinação de dificuldades, como pobreza, desemprego, problemas de saúde ou rompimento de vínculos familiares. Elas continuam tendo direitos e precisam ser tratadas com respeito e atendidas por políticas públicas.",
+              "Quem não tem condições financeiras acaba construindo casas em áreas inadequadas, sem registro de endereço, saneamento básico, água ou energia elétrica."
+            ]
+          },
+          {
+            "h": "Saneamento básico",
+            "p": [
+              "O <strong>saneamento</strong> consiste no acesso à água tratada, à rede de esgoto e à limpeza urbana. Essas medidas garantem a saúde e a segurança das pessoas: evitam a transmissão de doenças e controlam pragas urbanas.",
+              "Quando o encanamento de uma casa não é ligado à rede de esgoto, toda a sujeira vai para a rua, riachos ou terrenos a céu aberto. O saneamento é garantido por lei: a <strong>Lei n. 11.445, de 5 de janeiro de 2007</strong>, estabelece as diretrizes nacionais do saneamento básico."
+            ]
+          },
+          {
+            "h": "Transporte e horário de pico",
+            "p": [
+              "Nas grandes cidades, as casas costumam ficar longe do centro, e as pessoas precisam se deslocar de carro, ônibus, trem ou metrô. Como os horários de escolas e trabalhos são parecidos, milhares de pessoas se movem <strong>no mesmo sentido e ao mesmo tempo</strong>, gerando lentidão, transportes lotados e <strong>engarrafamentos</strong>.",
+              "O <strong>horário de pico</strong> costuma ocupar o período das 7 h às 10 h da manhã e das 17 h às 20 h — a hora de ir e a hora de voltar. Nele, aumentam também os acidentes de trânsito.",
+              "Uma solução que algumas cidades adotam são as <strong>ciclovias</strong>, que estimulam o uso de bicicletas em trechos curtos. Além de promover um estilo de vida saudável, a bicicleta não emite gases tóxicos na atmosfera, melhorando a qualidade do ar.",
+              "Barulho, poluição e cansaço tornam o trânsito um espaço difícil. Por isso é importante a <strong>gentileza</strong>: evitar buzinar sem necessidade, dar carona, ter cuidado com ciclistas, respeitar os limites de velocidade e ceder lugar nos transportes públicos a gestantes, idosos e pessoas com dificuldade de mobilidade."
+            ]
+          },
+          {
+            "h": "Para onde vai o lixo",
+            "p": [
+              "Antigamente, a maior parte do lixo era composta de <strong>resíduos orgânicos</strong> (restos de comida), que se decompunham naturalmente e viravam nutrientes. Com o crescimento das cidades e a tecnologia, surgiram sacolas plásticas, garrafas, latinhas, pilhas e eletrônicos — materiais que demoram <strong>muito mais tempo</strong> para se decompor.",
+              "<strong>Lixões:</strong> grandes terrenos a céu aberto que recebem resíduos. São perigosos: contaminam o solo, atingem os <strong>lençóis freáticos</strong> (camada subterrânea onde os poros do solo estão cheios de água), poluem o ar, trazem pragas e espalham doenças.",
+              "<strong>Incineradores:</strong> grandes fornos que queimam o lixo. Sobram cinzas, e os gases da queima prejudicam o ar — por isso precisam de filtros, o que torna o processo muito caro. Geralmente são usados para lixo hospitalar.",
+              "<strong>Aterros sanitários:</strong> locais preparados para receber rejeitos de forma controlada. O solo é protegido, e os resíduos são cobertos para diminuir os danos à água, ao ar, ao solo e à saúde."
+            ]
+          },
+          {
+            "h": "Coleta seletiva e Unidades de Conservação",
+            "p": [
+              "No Brasil existe uma lei que torna os municípios responsáveis por criar e executar sistemas de <strong>coleta seletiva</strong>, o que facilita recolher materiais para reciclagem. As lixeiras têm cores diferentes justamente para separar cada tipo de material.",
+              "As <strong>Unidades de Conservação (UC)</strong> são espaços com características naturais importantes, protegidos por lei. Dividem-se em <strong>Proteção Integral</strong> (a extração de recursos é proibida; permitem-se apenas pesquisa científica e visitas turísticas, como no Parque Nacional da Serra da Bocaina) e <strong>Uso Sustentável</strong> (permitem uso controlado dos recursos: turismo ecológico, educação ambiental, agricultura e pesca ecológica).",
+              "Nas grandes cidades há poucas áreas verdes e muitas áreas <strong>pavimentadas</strong> (cobertas de asfalto e concreto), o que gera temperaturas mais altas e baixa qualidade do ar. Por isso as UCs próximas às cidades — como o Parque Nacional da Tijuca (RJ) e o Parque Estadual da Cantareira (SP) — são essenciais: bairros vizinhos a grandes áreas verdes registram <strong>temperaturas mais amenas</strong>."
             ]
           }
         ],
         "games": [
           {
             "type": "sort",
-            "title": "Que espaço é esse?",
-            "instructions": "Separe os espaços em públicos e privados.",
+            "title": "Classifique o espaço",
+            "instructions": "Nem tudo é só público ou privado. Arraste cada exemplo para a categoria certa.",
             "categories": [
-              "Espaço público",
-              "Espaço privado"
+              "Público de acesso livre",
+              "Público de acesso restrito",
+              "Privado de uso público"
             ],
             "items": [
               {
-                "text": "Praça municipal",
+                "text": "Praça da cidade",
                 "cat": 0
               },
               {
-                "text": "Rua do bairro",
-                "cat": 0
-              },
-              {
-                "text": "Escola municipal",
-                "cat": 0
-              },
-              {
-                "text": "Casa de uma família",
+                "text": "Creche municipal",
                 "cat": 1
               },
               {
-                "text": "Cinema de uma empresa",
+                "text": "Shopping center",
+                "cat": 2
+              },
+              {
+                "text": "Rua e calçada",
+                "cat": 0
+              },
+              {
+                "text": "Câmara dos Vereadores",
                 "cat": 1
               },
               {
                 "text": "Supermercado",
+                "cat": 2
+              },
+              {
+                "text": "Praia",
+                "cat": 0
+              },
+              {
+                "text": "Sala dos professores",
                 "cat": 1
               }
             ]
           },
           {
-            "type": "pairs",
-            "title": "Comunidade bem organizada",
-            "instructions": "Ligue cada conceito ao exemplo.",
-            "pairs": [
-              [
-                "Acesso restrito",
-                "Escola recebe alunos e responsáveis autorizados"
-              ],
-              [
-                "Privado de uso público",
-                "Mercado recebe clientes"
-              ],
-              [
-                "Serviço público",
-                "Coleta de lixo realizada pelo município"
-              ],
-              [
-                "Serviço privado",
-                "Conserto feito por uma empresa"
-              ],
-              [
-                "Prefeitura",
-                "Administra o município"
-              ],
-              [
-                "Praça",
-                "Espaço público de convivência"
-              ]
+            "type": "sort",
+            "title": "Desafio ou solução?",
+            "instructions": "Arraste cada item para o grupo certo.",
+            "categories": [
+              "Grande desafio da cidade",
+              "Solução inteligente"
+            ],
+            "items": [
+              {
+                "text": "Engarrafamento no horário de pico",
+                "cat": 0
+              },
+              {
+                "text": "Ciclovias para trechos curtos",
+                "cat": 1
+              },
+              {
+                "text": "Lixão a céu aberto",
+                "cat": 0
+              },
+              {
+                "text": "Coleta seletiva e reciclagem",
+                "cat": 1
+              },
+              {
+                "text": "Falta de saneamento básico",
+                "cat": 0
+              },
+              {
+                "text": "Unidades de Conservação",
+                "cat": 1
+              },
+              {
+                "text": "Pessoas em situação de rua",
+                "cat": 0
+              },
+              {
+                "text": "Aterro sanitário controlado",
+                "cat": 1
+              }
             ]
           }
         ],
         "quiz": [
           {
             "type": "mc",
-            "q": "Qual destes lugares é um espaço público?",
+            "q": "O que significa dizer que uma escola é pública?",
             "options": [
-              "Praça municipal",
-              "Quarto de uma casa",
-              "Clube particular",
-              "Loja de roupas"
+              "Ela é mantida pelo poder público",
+              "Ela pertence aos alunos matriculados",
+              "Ela é administrada por uma loja",
+              "Ela só pode receber visitantes"
             ],
             "answer": 0,
-            "explain": "A praça pertence à coletividade e é cuidada pelo poder público."
+            "explain": "Uma escola pública é mantida pelo poder público para oferecer educação à população."
           },
           {
             "type": "mc",
-            "q": "Qual é uma função dos espaços públicos da cidade?",
+            "q": "Ônibus, trens e metrôs são exemplos de transportes:",
             "options": [
-              "Servir somente ao proprietário",
-              "Permitir circulação e convivência",
-              "Impedir encontros entre moradores",
-              "Receber apenas funcionários"
-            ],
-            "answer": 1,
-            "explain": "Ruas, praças e parques permitem deslocamento, lazer e convivência entre as pessoas."
-          },
-          {
-            "type": "mc",
-            "q": "Por que uma escola municipal pode ter acesso restrito?",
-            "options": [
-              "Porque deixou de ser pública",
-              "Porque pertence a uma família",
-              "Para proteger e organizar a comunidade escolar",
-              "Porque não presta serviço público"
-            ],
-            "answer": 2,
-            "explain": "A escola continua pública, mas controla a entrada para proteger estudantes e organizar suas atividades."
-          },
-          {
-            "type": "mc",
-            "q": "Qual exemplo representa um espaço privado de uso público?",
-            "options": [
-              "Sala de uma residência",
-              "Quarto de hotel ocupado",
-              "Garagem de uma casa",
-              "Supermercado aberto aos clientes"
-            ],
-            "answer": 3,
-            "explain": "O supermercado pertence a uma empresa, mas recebe o público durante seu funcionamento."
-          },
-          {
-            "type": "mc",
-            "q": "Qual destes é um serviço público municipal?",
-            "options": [
-              "Iluminação das ruas",
-              "Venda de brinquedos",
-              "Aula particular",
-              "Conserto de celular"
+              "públicos e coletivos, usados no deslocamento das pessoas",
+              "privados e usados somente por seus proprietários",
+              "públicos, mas iguais aos táxis",
+              "privados e administrados apenas por famílias"
             ],
             "answer": 0,
-            "explain": "A iluminação das ruas atende toda a comunidade e é organizada pelo poder público."
+            "explain": "Ônibus, trens e metrôs são transportes públicos coletivos. A cobrança de passagem e as regras de gratuidade variam conforme o lugar e a legislação."
           },
           {
             "type": "mc",
-            "q": "Qual destes é um serviço privado?",
+            "q": "São exemplos de espaços públicos:",
             "options": [
-              "Limpeza de uma praça",
-              "Conserto oferecido por uma empresa",
-              "Sinalização das ruas",
-              "Administração do município"
+              "praças e parques",
+              "mercados e lojas",
+              "clubes e praias",
+              "praias e shopping centers"
+            ],
+            "answer": 0,
+            "explain": "Praças e parques pertencem à população e são administrados pelo governo. Mercados, lojas, clubes e shoppings têm donos — são privados, ainda que alguns sejam de uso público."
+          },
+          {
+            "type": "mc",
+            "q": "Um homem surdo foi impedido de entrar em um supermercado porque usava máscara transparente, necessária para a leitura labial. Sobre essa situação, é correto afirmar:",
+            "options": [
+              "O mercado pode criar qualquer regra",
+              "A regra excluiu uma pessoa com deficiência",
+              "Ninguém pode ser cliente de um espaço privado",
+              "Espaços privados não precisam respeitar direitos"
             ],
             "answer": 1,
-            "explain": "Empresas e profissionais particulares oferecem serviços privados aos clientes."
+            "explain": "Mercados são espaços privados de uso público: qualquer pessoa pode ser cliente. A regra aplicada sem considerar a deficiência gerou exclusão — ele mesmo disse que se sentiu excluído."
           },
           {
             "type": "text",
-            "q": "Como se chama o órgão que administra o município?",
+            "q": "Como se chama o documento que reúne as principais leis e direitos do país?",
             "answers": [
-              "prefeitura",
-              "a prefeitura",
-              "prefeitura municipal"
+              "constituicao",
+              "a constituicao",
+              "constituicao brasileira",
+              "a constituicao brasileira"
             ],
-            "explain": "A prefeitura administra o município e organiza serviços e melhorias para a população."
+            "explain": "É a Constituição brasileira. Ela reúne direitos, deveres e regras que devem ser respeitados pelo governo e pela população."
+          },
+          {
+            "type": "text",
+            "q": "Quem são os políticos responsáveis por elaborar e votar as leis da cidade na Câmara Municipal?",
+            "answers": [
+              "vereadores",
+              "os vereadores",
+              "vereador"
+            ],
+            "explain": "Os vereadores fazem as leis do município e fiscalizam o trabalho do prefeito. São eleitos por voto direto a cada quatro anos."
           },
           {
             "type": "mc",
-            "q": "Quem chefia o poder executivo do município?",
+            "q": "Muitas pessoas se deslocam dentro das cidades utilizando o transporte público. Sobre isso, podemos dizer que:",
             "options": [
-              "Diretor da escola",
-              "Dono do mercado",
-              "Prefeito",
-              "Presidente do bairro"
+              "na maior parte das vezes, ele é muito eficiente, com poucos engarrafamentos",
+              "não existem trens ou metrôs, apenas ônibus e carros de aplicativos",
+              "todas as cidades brasileiras têm ciclovias para aliviar a poluição dos carros",
+              "o transporte público ajuda nos deslocamentos das pessoas, mas nem sempre funciona perfeitamente"
             ],
-            "answer": 2,
-            "explain": "O prefeito chefia o poder executivo municipal e trabalha com secretários e servidores."
+            "answer": 3,
+            "explain": "As ciclovias separam as bicicletas dos veículos motorizados e ajudam a tornar o trajeto mais seguro."
           },
           {
             "type": "mc",
-            "q": "Como devemos tratar os espaços públicos, como praças e ruas?",
+            "q": "Qual situação representa um problema que uma cidade precisa enfrentar?",
             "options": [
-              "Cuidar, pois são de todos",
-              "Danificar, pois não têm dono",
-              "Usar só com permissão do prefeito",
-              "Deixar sempre fechados"
+              "Esgoto sem tratamento chegando aos rios",
+              "Criação de ciclovias seguras",
+              "Coleta seletiva funcionando",
+              "Parques bem cuidados"
             ],
             "answer": 0,
-            "explain": "Os espaços públicos pertencem a toda a comunidade, por isso todos devem cuidar deles."
+            "explain": "O esgoto sem tratamento polui a água e pode transmitir doenças. Ciclovias, coleta seletiva e parques cuidados são melhorias para a cidade."
+          },
+          {
+            "type": "mc",
+            "q": "Um depoimento sobre o trânsito de Porto Alegre relata que o fluxo começa às 17 h e segue até 19 h, com muitos acidentes na esquina. O depoimento informa que, no horário de pico:",
+            "options": [
+              "o número de carros nas ruas diminui",
+              "acidentes de carro, como batidas, podem acontecer",
+              "aumenta o número de carros circulando a partir das 19 h",
+              "não ocorrem engarrafamentos"
+            ],
+            "answer": 1,
+            "explain": "O texto diz que já presenciou bastante acidente na esquina, a maioria por motoristas colidindo ao tentar entrar e sair das vagas. O fluxo termina às 19 h, e não aumenta a partir dessa hora."
+          },
+          {
+            "type": "mc",
+            "q": "Numa charge, uma placa diz 'Bem-vindo a São Paulo — População: 8.000.000 de veículos', com a cidade tomada por carros e ônibus parados. Que característica o artista quis criticar?",
+            "options": [
+              "A poluição do ar causada por fábricas",
+              "O excesso de prédios e a pouca quantidade de áreas verdes",
+              "O excesso de veículos e o trânsito caótico",
+              "A sinalização de trânsito confusa"
+            ],
+            "answer": 2,
+            "explain": "Ao trocar a população de pessoas pela de veículos, o artista ironiza uma cidade dominada por carros. O que preenche toda a cena são veículos parados, não prédios nem fábricas."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama o terreno preparado, com solo protegido e camadas de resíduos cobertas por areia e argila, considerado a forma mais segura de descarte de lixo?",
+            "answers": [
+              "aterro sanitario",
+              "aterro",
+              "aterros sanitarios",
+              "o aterro sanitario"
+            ],
+            "explain": "É o aterro sanitário. Ele recebe rejeitos de forma controlada e ajuda a proteger o solo, a água e a saúde das pessoas."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama o conjunto de serviços que inclui água tratada, rede de esgoto e limpeza urbana?",
+            "answers": [
+              "saneamento basico",
+              "saneamento",
+              "o saneamento basico"
+            ],
+            "explain": "É o saneamento básico. Ele inclui água potável, tratamento de esgoto, manejo de resíduos e drenagem da chuva, ajudando a proteger a saúde."
           }
         ]
       },

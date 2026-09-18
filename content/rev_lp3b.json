@@ -1,148 +1,328 @@
 {
   "id": "rev_lp3b",
-  "module": "R3",
-  "title": "Revisão do 3º bimestre",
-  "subtitle": "Texto instrucional · Substantivo · Adjetivo · Ortografia",
+  "module": "PROVA",
+  "title": "Revisão para a prova",
+  "subtitle": "Anúncios e classificados · Adjetivos · HQ · Pronomes pessoais",
   "reviewImage": "assets/revisao-3b-portugues.webp",
-  "reviewImageAlt": "Crianças organizando uma sequência ilustrada, comparando casas de tamanhos diferentes e relacionando figuras a características.",
-  "video": "assets/videos/rev-portugues-3bim-resumo.mp4",
+  "reviewImageAlt": "Crianças revisando anúncios, histórias em quadrinhos, adjetivos e pronomes.",
+  "video": "assets/videos/prova-portugues-modulos20-21.mp4",
   "theory": [
     {
-      "h": "Revisão: texto instrucional, aumentativo e diminutivo",
+      "h": "O anúncio classificado",
       "p": [
-        "O <strong>texto instrucional</strong> ensina como fazer algo. Ele usa comandos claros, materiais, etapas em ordem e, muitas vezes, imagens.",
-        "O substantivo pode aparecer no <strong>diminutivo</strong> ou no <strong>aumentativo</strong>. Além do tamanho, essas formas podem expressar carinho ou admiração.",
-        "No <strong>diminutivo</strong> usamos as terminações <strong>-inho(a), -zinho(a) e -sinho(a)</strong>: rosa → rosinha; pai → paizinho; sapato → sapatinho.",
-        "No <strong>aumentativo</strong> usamos terminações como <strong>-ão</strong>: casa → casarão; bola → bolão; livro → livrão."
+        "O <strong>anúncio classificado</strong> é um gênero textual <strong>curto</strong> em que é divulgada a venda, a troca ou o aluguel de produtos ou, ainda, o oferecimento e a contratação de serviços. Pode ser encontrado em jornais, revistas, <em>sites</em> e outros meios de comunicação.",
+        "O anúncio classificado costuma expor seu objetivo de modo <strong>mais direto</strong> do que o anúncio publicitário. Algumas informações que não podem faltar: <strong>o que é negociado</strong> e <strong>como os interessados podem entrar em contato</strong> com o anunciante.",
+        "Um anúncio classificado é composto de: título, descrição do produto ou serviço, preço e contato. A <strong>imagem</strong> torna o anúncio mais atrativo e completo, pois permite ver o estado real do produto."
       ]
     },
     {
-      "h": "Revisão: conto de memórias, adjetivo e ortografia",
+      "h": "Exemplo: aulas de tango argentino",
       "p": [
-        "O <strong>conto de memórias</strong> é um texto em que alguém narra <strong>lembranças do passado</strong>, quase sempre em 1ª pessoa (o \"eu\"). Costuma trazer sentimentos, pessoas queridas e lugares da infância.",
-        "O <strong>adjetivo</strong> atribui uma característica ao substantivo: menina curiosa, livro interessante, caminho perigoso.",
-        "Muitos adjetivos terminados em <strong>-oso</strong> e <strong>-osa</strong> são escritos com S: carinho → carinhoso; fama → famosa; perigo → perigoso."
+        "Um classificado anuncia: <em>\"AULAS DE TANGO ARGENTINO — Com professores experientes para adultos e crianças. Escola Internacional de Tango Argentino. Contato pelo e-mail aulas@escoladetangoargentino.com.br\"</em>.",
+        "Analisando esse anúncio: o <strong>serviço anunciado</strong> são aulas de tango; o <strong>anunciante</strong> é a Escola Internacional de Tango Argentino; e o <strong>objetivo</strong> é conseguir alunos, ou seja, divulgar a contratação de um serviço.",
+        "Dizer que os professores são <strong>experientes para adultos e crianças</strong> produz um efeito de <strong>confiança</strong>: convence o leitor de que a escola sabe ensinar pessoas de todas as idades. O tango, aliás, nasceu na Argentina — a Praça de Maio, em Buenos Aires, fica no país de origem dessa dança."
+      ]
+    },
+    {
+      "h": "Adjetivo: singular e plural",
+      "p": [
+        "Quando o substantivo está no <strong>singular</strong>, o adjetivo também fica no singular. Quando o substantivo está no <strong>plural</strong>, o adjetivo também fica no plural. Isso se chama <strong>concordância</strong>.",
+        "Exemplos: <em>A <strong>dança</strong> é <strong>envolvente</strong></em> / <em>As <strong>danças</strong> são <strong>envolventes</strong></em>. <em>Comprarei um vaso para a <strong>flor colorida</strong></em> / <em>...para as <strong>flores coloridas</strong></em>.",
+        "Cuidado ao escolher o adjetivo em uma frase: em <em>\"Encontrei no site anúncios ______ para aluguel de casas\"</em>, o substantivo <em>anúncios</em> é masculino e plural — então só cabe um adjetivo masculino plural, como <strong>maravilhosos</strong>. Não caberiam <em>sensacional</em> nem <em>incrível</em> (singular), nem <em>boas</em> (feminino)."
+      ]
+    },
+    {
+      "h": "Ortografia: as letras S e Z no fim da palavra",
+      "p": [
+        "O <strong>plural</strong> pode ser representado, entre outras formas, com a letra <strong>s</strong> no final das palavras, mas <strong>nunca com o acréscimo da letra z</strong>. Exemplos: <em>lobo → lobos</em>; <em>chapéu → chapéus</em>.",
+        "Quando uma palavra no singular <strong>termina com z</strong>, o plural é feito com o acréscimo da terminação <strong>-es</strong>. Exemplos: <em>cartaz → cartazes</em>; <em>perdiz → perdizes</em>; <em>arroz → arrozes</em>; <em>capaz → capazes</em>.",
+        "Palavras que terminam em <strong>z</strong>: feliz, giz, xadrez, lápis? Não! Preste atenção: <em>feli<strong>z</strong></em>, <em>rapa<strong>z</strong></em>, <em>xadre<strong>z</strong></em>, <em>cicatri<strong>z</strong></em>, <em>capa<strong>z</strong></em>, <em>arro<strong>z</strong></em>. Já com <strong>s</strong>: <em>burguê<strong>s</strong></em>, <em>siamê<strong>s</strong></em>, <em>ônibu<strong>s</strong></em>, <em>lápi<strong>s</strong></em>, <em>pire<strong>s</strong></em>, <em>avó<strong>s</strong></em>.",
+        "<strong>Dica do dicionário:</strong> nos dicionários, os verbetes (as palavras que procuramos) aparecem sempre no <strong>singular</strong>. Para ter certeza de que uma palavra termina com s ou com z, procure sempre no dicionário. Se ela estiver lá com z, é com z que se escreve!"
+      ]
+    },
+    {
+      "h": "Cantinho de leitura: \"Procura-se Lobo\"",
+      "p": [
+        "No livro <strong>\"Procura-se Lobo\"</strong>, de Ana Maria Machado, Manuel estava procurando emprego. Abriu o jornal e viu um anúncio classificado pedindo um \"Lobo, adulto, de boa aparência, com experiência comprovada, para trabalho de responsabilidade\".",
+        "A empresa queria um lobo <strong>bicho</strong> mesmo — daqueles peludos, de quatro patas — para um documentário. Mas Manuel era <strong>Lobo</strong> de sobrenome, como quem tem Coelho, Raposo ou Leitão. Achou que valia a pena arriscar e respondeu.",
+        "Deu certo por outro lado: como muitos lobos responderam ao anúncio, a empresa criou um emprego novo — <strong>respondedor de cartas de lobos</strong> — e contratou Manuel, porque ele escrevia muito bem e adorava ler. O mal-entendido aconteceu porque o texto do anúncio <strong>não estava claro</strong>. É por isso que um bom classificado precisa dizer exatamente o que está sendo procurado!"
+      ]
+    },
+    {
+      "h": "A história em quadrinhos (HQ)",
+      "p": [
+        "As <strong>histórias em quadrinhos</strong> são narrativas organizadas em <strong>quadros sequenciais</strong> que utilizam a linguagem <strong>verbal</strong> (os textos) e a <strong>não verbal</strong> (as imagens).",
+        "É comum o uso <strong>informal</strong> da língua para aproximar os diálogos da realidade — por isso os personagens falam como as pessoas falam de verdade. As falas são representadas dentro de <strong>balões</strong>.",
+        "As pessoas leem HQs principalmente para se <strong>divertir e entreter</strong>. Toda HQ precisa ter título, começo, meio e fim.",
+        "Curiosidade: a primeira história em quadrinhos moderna foi criada pelo artista americano <strong>Richard Outcault, em 1895</strong>, nos jornais de Nova York, com o personagem <em>Yellow Kid</em> (\"Menino Amarelo\"). Mas se buscarmos as primeiras raízes das HQs, podemos chegar até as <strong>pinturas rupestres</strong> feitas pelos homens pré-históricos, que contavam, por exemplo, como eram suas caçadas."
+      ]
+    },
+    {
+      "h": "Os tipos de balão",
+      "p": [
+        "Os balões deixam o texto mais interessante e detalhado, e ajudam a compreender o que está acontecendo na história. Cada formato tem um significado:",
+        "<strong>Balão de fala:</strong> contorno normal, arredondado — o personagem está falando.",
+        "<strong>Balão de pensamento:</strong> formato de nuvem, com bolinhas em vez de rabicho — o personagem está pensando.",
+        "<strong>Balão de grito:</strong> contorno em formato de estrela ou explosão — o personagem está gritando.",
+        "<strong>Balão de cochicho:</strong> contorno pontilhado ou tracejado — o personagem está falando baixinho, contando um segredo.",
+        "<strong>Balão de voz eletrônica:</strong> contorno em ziguezague ou serrilhado — a voz vem de um aparelho.",
+        "<strong>Balão de fala de muitas pessoas:</strong> um balão com vários rabichos — várias pessoas falam ao mesmo tempo.",
+        "O <strong>balão tremido</strong> (com linhas onduladas) mostra que o personagem está com medo ou nervoso: é como se a voz dele estivesse tremendo."
+      ]
+    },
+    {
+      "h": "\"Enfrentando o medinho\", com Mônica e Marina",
+      "p": [
+        "Na HQ, Mônica conta a Marina que <strong>morria de medo de altura</strong> e explica como venceu esse medo: <em>\"Fui me acostumando a perder o medo devagarzinho!\"</em>.",
+        "O caminho dela foi por etapas: primeiro subia em <strong>pedras</strong>; depois em <strong>banquinhos</strong>; em seguida uns <strong>degrauzinhos na escada do papai</strong>; e, na casa da avó, foi treinando <strong>olhar pela janela</strong>. <em>\"É só ir treinando! Se acostumando! E enfrentando o medinho!\"</em> — tudo aos pouquinhos, sem pressa.",
+        "Quando Mônica pergunta do que Marina tem medo, ela hesita (\"Eu? Bem... er...\") e revela: <strong>cachorros</strong>. E confessa: <em>\"Quando vejo um, fico com as pernas bambas e não paro de tremer!\"</em> — o balão dessa fala aparece <strong>tremido</strong>, mostrando o nervosismo dela.",
+        "Mônica sugere o mesmo método: <em>\"Vai se acostumando aos pouquinhos!\"</em>. No último quadrinho, Marina está rodeada de <strong>vários cachorros de uma vez</strong> e diz: <em>\"Pensando bem, Mônica... acho que não vai funcionar!\"</em> — porque começar com muitos cães ao mesmo tempo é o oposto de ir aos pouquinhos!"
+      ]
+    },
+    {
+      "h": "Pronomes pessoais do caso reto",
+      "p": [
+        "Os <strong>pronomes pessoais</strong> podem ser usados para <strong>substituir os substantivos</strong>, evitando repetições nos textos.",
+        "Eles também indicam a <strong>pessoa que fala</strong> (1ª pessoa), a <strong>pessoa com quem se fala</strong> (2ª pessoa) e a <strong>pessoa de quem se fala</strong> (3ª pessoa).",
+        "Os pronomes pessoais do <strong>caso reto</strong> são: <strong>eu, tu, ele, ela, nós, vós, eles, elas</strong>.",
+        "Exemplos de substituição: <em>\"Eu e meu irmão temos medo do escuro\"</em> → <em>\"<strong>Nós</strong> temos medo do escuro\"</em>. <em>\"O menino e sua amiga enfrentaram a situação com coragem\"</em> → <em>\"<strong>Eles</strong> enfrentaram a situação com coragem\"</em>. <em>\"Cascão e a mãe conversaram\"</em> → <em>\"<strong>Eles</strong> conversaram\"</em>."
+      ]
+    },
+    {
+      "h": "Pronomes pessoais do caso oblíquo",
+      "p": [
+        "Os pronomes pessoais do <strong>caso oblíquo</strong> são: <strong>me, mim, comigo, te, ti, contigo, lhe(s), o(s), a(s), se, si, consigo, nos e conosco</strong>.",
+        "Exemplos de uso: <em>\"Vou <strong>contigo</strong> para tua proteção\"</em>; <em>\"Não <strong>me</strong> sinto confortável quando estou com medo\"</em>; <em>\"Para <strong>mim</strong>, insetos são assustadores\"</em>; <em>\"Venha <strong>conosco</strong> ouvir histórias de arrepiar!\"</em>.",
+        "Como diferenciar? Compare: <em>\"<strong>Eu</strong> entendi a explicação\"</em> e <em>\"<strong>Ele</strong> completou o percurso\"</em> usam pronomes do caso reto (praticam a ação). Já <em>\"Vou <strong>te</strong> esperar aqui\"</em> e <em>\"Conto <strong>contigo</strong> para realizar a tarefa\"</em> usam pronomes do caso oblíquo.",
+        "<strong>Atenção!</strong> Na fala, é comum usar a expressão <strong>a gente</strong> no lugar do pronome <strong>nós</strong>. Nesses casos, a concordância é feita no <strong>singular</strong>: dizemos <em>\"<strong>Nós gostamos</strong> de ouvir histórias\"</em>, mas <em>\"<strong>A gente gosta</strong> de ouvir histórias\"</em>."
+      ]
+    },
+    {
+      "h": "Formas saudáveis de lidar com o medo",
+      "p": [
+        "Todos nós somos cheios de emoções: medo, alegria, tristeza, tédio... Os sentimentos nos ajudam a entender o que há ao nosso redor, <strong>nos protegem de situações de perigo</strong> ou nos preparam para novas situações.",
+        "Formas saudáveis de lidar com o medo: buscar uma <strong>técnica de relaxamento</strong>; <strong>conversar com um adulto</strong> sobre o medo; e <strong>ler histórias</strong> com personagens em situações parecidas com as que nos dão medo. O que <strong>não</strong> ajuda é fingir que não se tem medo nenhum.",
+        "O humor também é uma forma de enfrentar medos. O quadro <strong>\"O grito\"</strong>, de Edvard Munch (1863-1944), retrata uma figura em desespero. Mauricio de Sousa fez uma <strong>releitura</strong> bem-humorada dele em <strong>\"O berro\"</strong> (2008), transformando a cena assustadora em algo engraçado."
       ]
     }
   ],
   "games": [
     {
       "type": "sort",
-      "title": "Cada palavra em seu lugar",
-      "instructions": "Separe as palavras conforme sua função.",
-      "categories": ["Substantivo", "Adjetivo"],
+      "title": "Termina com S ou com Z?",
+      "instructions": "Arraste cada palavra para a letra com que ela termina.",
+      "categories": [
+        "Termina com S",
+        "Termina com Z"
+      ],
       "items": [
-        {"text": "menina", "cat": 0},
-        {"text": "cidade", "cat": 0},
-        {"text": "livro", "cat": 0},
-        {"text": "curiosa", "cat": 1},
-        {"text": "silenciosa", "cat": 1},
-        {"text": "perigoso", "cat": 1}
+        {
+          "text": "feli__",
+          "cat": 1
+        },
+        {
+          "text": "burguê__",
+          "cat": 0
+        },
+        {
+          "text": "rapa__",
+          "cat": 1
+        },
+        {
+          "text": "ônibu__",
+          "cat": 0
+        },
+        {
+          "text": "xadre__",
+          "cat": 1
+        },
+        {
+          "text": "lápi__",
+          "cat": 0
+        },
+        {
+          "text": "cicatri__",
+          "cat": 1
+        },
+        {
+          "text": "pire__",
+          "cat": 0
+        }
       ]
     },
     {
       "type": "pairs",
-      "title": "Palavras da revisão",
-      "instructions": "Ligue cada palavra à forma correspondente.",
+      "title": "Que balão usar?",
+      "instructions": "Ligue cada situação ao tipo de balão adequado.",
       "pairs": [
-        ["rosa", "rosinha"],
-        ["pai", "paizinho"],
-        ["sapato", "sapatinho"],
-        ["bola", "bolão"],
-        ["carinho", "carinhoso"],
-        ["fama", "famosa"]
+        [
+          "\"Oi, Carolina!\" acenando de longe",
+          "Balão de fala"
+        ],
+        [
+          "\"O plural de cartaz é...\" estudando sozinho",
+          "Balão de pensamento"
+        ],
+        [
+          "\"Fernandooooo!\" chamando de longe",
+          "Balão de grito"
+        ],
+        [
+          "\"Vou contar um segredo\" no ouvido",
+          "Balão de cochicho"
+        ],
+        [
+          "\"Você passou de fase!\" saindo do celular",
+          "Balão de voz eletrônica"
+        ],
+        [
+          "\"Quatro.\" a turma responde junto",
+          "Balão de fala de muitas pessoas"
+        ]
       ]
-    },
-    {
-      "type": "writing",
-      "title": "Produção textual",
-      "short": "Produção textual",
-      "instructions": "Escreva um texto instrucional ensinando como cuidar de uma planta em vaso.",
-      "orientation": "Dê um título ao texto e escreva pelo menos quatro etapas em ordem. Use verbos de comando e inclua ao menos um adjetivo para deixar uma orientação mais precisa.",
-      "checklist": [
-        "O título informa o que será ensinado.",
-        "As etapas aparecem em uma ordem que pode ser seguida.",
-        "O texto usa verbos de comando, como coloque, regue ou mantenha.",
-        "Há pelo menos um adjetivo, como ensolarado, úmida ou cuidadoso.",
-        "As frases começam com letra maiúscula e terminam com pontuação."
-      ],
-      "minLength": 80
     }
   ],
   "quiz": [
     {
       "type": "mc",
-      "q": "Qual é a finalidade de um texto instrucional?",
-      "options": ["Ensinar como fazer algo", "Contar uma aventura", "Expressar sentimentos em versos", "Descrever um personagem"],
-      "answer": 0,
-      "explain": "Textos instrucionais orientam o leitor por meio de materiais, comandos e etapas organizadas."
-    },
-    {
-      "type": "mc",
-      "q": "Qual característica combina com um texto instrucional?",
-      "options": ["Versos e rimas", "Comandos em ordem", "Diálogos entre personagens", "Narrador de uma história"],
-      "answer": 1,
-      "explain": "As instruções precisam aparecer em uma ordem clara para que o leitor consiga realizar a tarefa."
-    },
-    {
-      "type": "mc",
-      "q": "Na frase 'Minha filhinha chegou', o diminutivo pode expressar o quê?",
-      "options": ["Localização", "Tempo", "Carinho", "Quantidade"],
+      "q": "Sobre os anúncios classificados é correto afirmar que são textos:",
+      "options": [
+        "Longos e sem imagens, que servem para informar o leitor sobre determinado assunto",
+        "Explicativos sobre o funcionamento de aparelhos eletrônicos",
+        "Curtos, encontrados em meios de comunicação nas seções de aluguel, venda, troca ou busca",
+        "Curtos, em que o anunciante escreve a própria opinião sobre o produto"
+      ],
       "answer": 2,
-      "explain": "O diminutivo pode indicar tamanho, mas também pode demonstrar carinho."
-    },
-    {
-      "type": "text",
-      "q": "Escreva o diminutivo da palavra 'rosa'.",
-      "answers": ["rosinha", "rosinha."],
-      "explain": "Como rosa tem S na última sílaba, seu diminutivo é rosinha."
-    },
-    {
-      "type": "text",
-      "q": "Escreva o diminutivo da palavra 'pai'.",
-      "answers": ["paizinho", "paizinho."],
-      "explain": "A forma correta é paizinho, escrita com Z."
+      "explain": "O classificado é curto e direto, sempre ligado a uma negociação: venda, troca, aluguel ou busca. Ele não traz a opinião do anunciante nem explica funcionamento de aparelhos — isso seria um manual."
     },
     {
       "type": "mc",
-      "q": "Qual palavra é o adjetivo em 'A menina curiosa fez uma pergunta'?",
-      "options": ["Menina", "Pergunta", "Fez", "Curiosa"],
+      "q": "Leia: 'Encontrei no site anúncios ★ para aluguel de casas no centro da cidade.' Que adjetivo pode substituir o símbolo ★ mantendo a concordância?",
+      "options": [
+        "Maravilhosos",
+        "Sensacional",
+        "Incrível",
+        "Boas"
+      ],
+      "answer": 0,
+      "explain": "O substantivo 'anúncios' é masculino e plural, então o adjetivo precisa ser masculino e plural: maravilhosos. 'Sensacional' e 'incrível' estão no singular, e 'boas' é feminino."
+    },
+    {
+      "type": "mc",
+      "q": "Assinale a alternativa em que há um exemplo de anúncio classificado.",
+      "options": [
+        "Uma página de jornal com a manchete 'Cidade recebe campeonato de dança'",
+        "Um cartaz com 'VENDEM-SE Sapatilhas de balé — Falar com Liza (00) 00000-0000'",
+        "Uma folha de calendário marcando 14 de fevereiro de 2023",
+        "Uma tirinha em quadrinhos com um personagem refletindo"
+      ],
+      "answer": 1,
+      "explain": "O anúncio informa o produto, a finalidade da negociação e uma forma de contato. Esses elementos ajudam o interessado a compreender e responder."
+    },
+    {
+      "type": "mc",
+      "q": "O anúncio dizia apenas 'Procura-se Lobo'. Por que Manuel Lobo pensou que poderia se candidatar?",
+      "options": [
+        "Porque ele era um lobo de verdade",
+        "Porque Lobo era seu sobrenome",
+        "Porque queria participar de um filme",
+        "Porque o anúncio pedia um leitor"
+      ],
+      "answer": 1,
+      "explain": "Como o anúncio não explicou que procurava o animal, Manuel pensou que 'Lobo' poderia ser o sobrenome do candidato."
+    },
+    {
+      "type": "text",
+      "q": "Escreva o plural da palavra 'cartaz':",
+      "answers": [
+        "cartazes",
+        "cartazes."
+      ],
+      "explain": "Quando a palavra no singular termina com z, o plural é feito com o acréscimo de -es: cartaz → cartazes. Nunca acrescentamos a letra z para formar plural!"
+    },
+    {
+      "type": "text",
+      "q": "Complete com S ou Z: 'burguê__'",
+      "answers": [
+        "s",
+        "burgues",
+        "burgues.",
+        "com s"
+      ],
+      "explain": "Burguês termina com S — vem do mesmo grupo de português, siamês e freguês. Na dúvida, procure no dicionário: os verbetes aparecem sempre no singular."
+    },
+    {
+      "type": "mc",
+      "q": "Cascão evita água. Para entrar em casa, teria de lavar os pés. Por que ele decide dormir do lado de fora?",
+      "options": [
+        "Não queria incomodar a mãe",
+        "Não gostaria de lavar os pés",
+        "Gosta de dormir do lado de fora",
+        "Estava uma noite quente"
+      ],
+      "answer": 1,
+      "explain": "A piada depende de conhecer o personagem: Cascão foge de água. Entrar em casa significaria lavar os pés, então ele preferiu passar a noite na calçada."
+    },
+    {
+      "type": "mc",
+      "q": "Na tira, Cascão dorme e no balão aparece apenas a letra 'Z'. Esse balão indica:",
+      "options": [
+        "Um pensamento",
+        "Uma dúvida",
+        "Uma ideia",
+        "Um som"
+      ],
       "answer": 3,
-      "explain": "Curiosa atribui uma característica ao substantivo menina, por isso é um adjetivo."
+      "explain": "O 'Z' representa o som do ronco de quem está dormindo. Nas HQs, os balões também servem para registrar sons, não só falas e pensamentos."
     },
     {
       "type": "mc",
-      "q": "Qual palavra está escrita corretamente?",
-      "options": ["Carinhozo", "Carinhoso", "Carinhoço", "Carinozo"],
-      "answer": 1,
-      "explain": "Adjetivos terminados em -oso e -osa são escritos com S: carinhoso."
+      "q": "Na frase 'Cascão e a mãe conversaram', as palavras sublinhadas podem ser substituídas por qual pronome?",
+      "options": [
+        "Eles",
+        "Elas",
+        "Nós",
+        "Vós"
+      ],
+      "answer": 0,
+      "explain": "São duas pessoas de quem se fala (3ª pessoa do plural). Como um deles é do gênero masculino, usamos 'eles' — a forma masculina prevalece em português."
     },
     {
       "type": "mc",
-      "q": "Qual adjetivo pode caracterizar um caminho com perigo?",
-      "options": ["Perigo", "Perigos", "Perigoso", "Perigosamente"],
+      "q": "Na frase 'Eu adoro ler as histórias em quadrinhos porque são cheias de aventura', o pronome 'eu' indica:",
+      "options": [
+        "A pessoa com quem se fala",
+        "A pessoa de quem se fala",
+        "A pessoa que fala",
+        "Depende da frase"
+      ],
       "answer": 2,
-      "explain": "Perigoso é o adjetivo derivado de perigo e caracteriza o substantivo caminho."
-    },
-    {
-      "type": "mc",
-      "q": "O que um autor conta em um conto de memórias?",
-      "options": ["Lembranças que viveu no passado", "Uma receita de bolo", "As regras de um jogo", "Uma notícia do dia"],
-      "answer": 0,
-      "explain": "No conto de memórias, quem escreve relembra fatos e sentimentos que viveu no passado."
-    },
-    {
-      "type": "mc",
-      "q": "O conto de memórias costuma ser escrito em qual pessoa?",
-      "options": ["Na 1ª pessoa, o \"eu\"", "Sempre na terceira pessoa", "Sem nenhum narrador", "Somente em versos"],
-      "answer": 0,
-      "explain": "Como o autor conta as próprias lembranças, o texto costuma usar a 1ª pessoa, o \"eu\"."
+      "explain": "'Eu' é a 1ª pessoa: quem está falando. A 2ª pessoa (tu, vós) é a pessoa com quem se fala, e a 3ª (ele, ela, eles, elas) é a pessoa de quem se fala."
     },
     {
       "type": "text",
-      "q": "Escreva o aumentativo da palavra 'casa'.",
-      "answers": ["casarao", "casarão", "um casarao"],
-      "explain": "O aumentativo de casa é casarão."
+      "q": "Mônica começou por pedras baixas, depois subiu em bancos e degraus. Ela enfrentou o medo de uma vez ou aos poucos?",
+      "answers": [
+        "pouquinhos",
+        "poucos",
+        "aos pouquinhos",
+        "pouquinhos.",
+        "devagarzinho",
+        "aos poucos"
+      ],
+      "explain": "Ela foi aos pouquinhos: primeiro pedras, depois banquinhos, depois degraus da escada e, por fim, olhar pela janela da casa da avó. Treinando e se acostumando, sem pressa."
+    },
+    {
+      "type": "text",
+      "q": "Marina fica com as pernas bambas e o balão de fala aparece tremido. Que sentimento esses sinais mostram?",
+      "answers": [
+        "medo",
+        "o medo",
+        "nervosismo",
+        "nervosa",
+        "que ela esta com medo"
+      ],
+      "explain": "As pernas bambas e o balão tremido mostram medo ou nervosismo. Nos quadrinhos, palavras e desenhos trabalham juntos."
     }
   ]
 }

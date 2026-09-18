@@ -60,7 +60,7 @@
 
     <section class="offline-card" id="offline-card" aria-labelledby="offline-titulo">
       <span class="offline-card__icone" aria-hidden="true">✈️</span>
-      <div><strong id="offline-titulo">Prepare para usar sem internet</strong><small id="offline-status">Baixe todo o conteúdo e os vídeos · cerca de 451 MB</small><div class="offline-card__barra" id="offline-barra" hidden><i id="offline-barra-fill"></i></div></div>
+      <div><strong id="offline-titulo">Prepare para usar sem internet</strong><small id="offline-status">Baixe todo o conteúdo e os vídeos · cerca de 208 MB</small><div class="offline-card__barra" id="offline-barra" hidden><i id="offline-barra-fill"></i></div></div>
       <button id="btn-offline" type="button">Baixar</button>
     </section>
 
@@ -68,10 +68,14 @@
     <div class="grade-disciplinas" id="grade-disciplinas"><!-- render via JS --></div>
 
     <section class="revisoes-extra" aria-labelledby="revisoes-extra-titulo">
-      <h2 class="secao__titulo" id="revisoes-extra-titulo">Folhas de revisão</h2>
+      <h2 class="secao__titulo" id="revisoes-extra-titulo">Revisões para as provas</h2>
       <div class="revisoes-extra__grade">
-        <button class="revisao-extra-card revisao-extra-card--mat" type="button" data-revisao="matematica"><span>➗</span><strong>Matemática</strong><small>10 questões · 3º bimestre</small></button>
-        <button class="revisao-extra-card revisao-extra-card--ing" type="button" data-revisao="ingles"><span>🇬🇧</span><strong>Inglês</strong><small>2 folhas · 3º bimestre</small></button>
+        <button class="revisao-extra-card" type="button" data-disciplina="portugues" data-capitulo-revisao="rev_lp3b"><span>📖</span><strong>Português</strong><small>Módulos 20 e 21</small></button>
+        <button class="revisao-extra-card revisao-extra-card--mat" type="button" data-disciplina="matematica" data-capitulo-revisao="rev_mat3b"><span>➗</span><strong>Matemática</strong><small>Módulo 11</small></button>
+        <button class="revisao-extra-card" type="button" data-disciplina="ciencias" data-capitulo-revisao="rev_cie3b"><span>🔭</span><strong>Ciências</strong><small>Módulo 10</small></button>
+        <button class="revisao-extra-card" type="button" data-disciplina="geografia" data-capitulo-revisao="rev_geo3b"><span>🗺️</span><strong>Geografia</strong><small>Módulo 10</small></button>
+        <button class="revisao-extra-card" type="button" data-disciplina="historia" data-capitulo-revisao="rev_hist3b"><span>🏙️</span><strong>História</strong><small>Módulos 10 e 11</small></button>
+        <button class="revisao-extra-card revisao-extra-card--ing" type="button" data-revisao="ingles"><span>🇬🇧</span><strong>Inglês</strong><small>Units 5 e 6</small></button>
       </div>
     </section>
 
@@ -146,8 +150,8 @@
   </section>
 
   <section class="tela" id="tela-revisoes" aria-labelledby="revisao-titulo" hidden>
-    <header class="revisao-extra-topo"><p>Folha de revisão · sem gabarito</p><h1 id="revisao-titulo">Revisão</h1><span>Preencha no seu ritmo. As respostas não são exibidas.</span></header>
-    <div class="revisao-abas" role="tablist" aria-label="Escolher revisão"><button type="button" role="tab" data-revisao="matematica">Matemática</button><button type="button" role="tab" data-revisao="ingles">Inglês</button></div>
+    <header class="revisao-extra-topo"><p>Revisão para a prova</p><h1 id="revisao-titulo">Revisão</h1><span>Responda e use o botão de correção ao terminar.</span></header>
+    <div class="revisao-abas" role="tablist" aria-label="Revisão de Inglês"><button type="button" role="tab" data-revisao="ingles">Inglês</button></div>
     <div class="revisao-folha" id="revisao-conteudo"></div>
   </section>
 </main>
@@ -164,10 +168,10 @@
 <!-- ================= TOAST ================= -->
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-<script src="data.js?v=24"></script>
+<script src="data.js?v=25"></script>
 <script src="experiences.js?v=21"></script>
-<script src="pedagogy.js?v=11"></script>
-<script src="reviews.js?v=3"></script>
-<script src="app.js?v=45"></script>
+<script src="pedagogy.js?v=12"></script>
+<script src="reviews.js?v=4"></script>
+<script src="app.js?v=46"></script>
 </body>
 </html>
