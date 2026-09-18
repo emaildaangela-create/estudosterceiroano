@@ -1,1159 +1,10 @@
-/* Estudos do 3¬∫ ano ‚Äî navega√ß√£o, atividades e progresso local. */
-(function () {
-  'use strict';
-
-  var CHAVE = 'estudos3ano.estado.v2';
-  var estado = { disciplina:null, capitulo:null, aba:'teoria', passoDescoberta:0, progresso:{}, tentativas:{}, experiencias:{}, leitura:{}, areas:{}, ultimo:null, som:true };
-  var jogoAtual = 0;
-  var quiz = null;
-  var promptInstalacao = null;
-  var focoAntesDaInstalacao = null;
-  var offlineDownloadEmAndamento = false;
-  var placar = { pontos:0, sequencia:0, melhor:0 };   /* vale pela partida atual */
-
-  function $(s) { return document.querySelector(s); }
-  function $$(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
-  function criar(tag, classe, html, attrs) {
-    var n = document.createElement(tag);
-    if (classe) n.className = classe;
-    if (html !== undefined && html !== null) n.innerHTML = html;
-    Object.keys(attrs || {}).forEach(function (k) { n.setAttribute(k, attrs[k]); });
-    return n;
-  }
-  function textoSeguro(v) { return String(v == null ? '' : v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-  function misturar(lista) {
-    var a = lista.slice();
-    for (var i=a.length-1;i>0;i--) { var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; }
-    return a;
-  }
-  function discPorId(id) { return DISCIPLINAS.find(function (d) { return d.id === id; }); }
-  function capPorId(disc,id) { return disc && disc.capitulos.find(function (c) { return c.id === id; }); }
-  function acento(disc) { return 'var(' + disc.cor + ')'; }
-  function totalCaps() { return DISCIPLINAS.reduce(function (n,d) { return n+d.capitulos.length; },0); }
-  function totalFeitos() { return Object.keys(estado.progresso).filter(function (id) { return estado.progresso[id] && estado.progresso[id].feito; }).length; }
-
-  function carregar() {
-    try {
-      var salvo = JSON.parse(localStorage.getItem(CHAVE) || 'null');
-      if (salvo && typeof salvo === 'object') {
-        estado.progresso = salvo.progresso || {};
-        estado.tentativas = salvo.tentativas || {};
-        estado.experiencias = salvo.experiencias || {};
-        estado.leitura = salvo.leitura || {};
-        estado.areas = salvo.areas || {};
-        estado.ultimo = salvo.ultimo || null;
-        estado.disciplina = salvo.disciplina || null;
-        estado.capitulo = salvo.capitulo || null;
-        estado.passoDescoberta = Number(salvo.passoDescoberta) || 0;
-        estado.som = salvo.som !== false;
-      }
-    } catch (_) {}
-  }
-  function salvar() {
-    try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (_) {}
-    atualizarTopo();
-  }
-  function atualizarTopo() {
-    var n=totalFeitos(), xp=$('#xp-num');
-    if (xp) xp.textContent=n;
-    var caixa=$('#topo-xp');
-    if (caixa) caixa.hidden=n===0;
-  }
-  function toast(msg) {
-    var t=$('#toast'); if(!t) return;
-    t.textContent=msg; t.hidden=false;
-    clearTimeout(toast.timer); toast.timer=setTimeout(function(){t.hidden=true;},2400);
-  }
-  function appEstaInstalado() {
-    return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-  }
-  function fecharAjudaInstalacao() {
-    var ajuda=$('#instalar-ajuda'); if(!ajuda)return;
-    ajuda.hidden=true;
-    if(focoAntesDaInstalacao)focoAntesDaInstalacao.focus();
-  }
-  function abrirAjudaInstalacao() {
-    var ajuda=$('#instalar-ajuda'), instrucao=$('#instalar-instrucao'); if(!ajuda||!instrucao)return;
-    var ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
-    instrucao.textContent=ios?'No Safari, toque em Compartilhar e depois em ‚ÄúAdicionar √† Tela de In√≠cio‚Äù.':'Abra o menu do navegador e escolha ‚ÄúInstalar aplicativo‚Äù ou ‚ÄúAdicionar √† tela inicial‚Äù.';
-    focoAntesDaInstalacao=document.activeElement; ajuda.hidden=false; $('#fechar-instalacao').focus();
-  }
-  function configurarInstalacao() {
-    var botao=$('#btn-instalar'), ajuda=$('#instalar-ajuda'), fechar=$('#fechar-instalacao'); if(!botao)return;
-    var ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
-    botao.hidden=appEstaInstalado()||!ios;
-    window.addEventListener('beforeinstallprompt',function(evento){evento.preventDefault();promptInstalacao=evento;if(!appEstaInstalado())botao.hidden=false;});
-    window.addEventListener('appinstalled',function(){promptInstalacao=null;botao.hidden=true;toast('Aplicativo instalado!');});
-    botao.addEventListener('click',function(){
-      if(!promptInstalacao){abrirAjudaInstalacao();return;}
-      promptInstalacao.prompt();
-      promptInstalacao.userChoice.then(function(escolha){
-        if(escolha.outcome==='accepted')botao.hidden=true;
-        promptInstalacao=null;
-      });
-    });
-    if(fechar)fechar.addEventListener('click',fecharAjudaInstalacao);
-    if(ajuda)ajuda.addEventListener('click',function(evento){if(evento.target===ajuda)fecharAjudaInstalacao();});
-    document.addEventListener('keydown',function(evento){if(evento.key==='Escape'&&ajuda&&!ajuda.hidden)fecharAjudaInstalacao();});
-  }
-  function videosDoApp(){var vistos={};return DISCIPLINAS.reduce(function(lista,disc){disc.capitulos.forEach(function(cap){if(cap.video&&!vistos[cap.video]){vistos[cap.video]=true;lista.push(cap.video);}});return lista;},[]);}
-  function atualizarOffline(pct,mensagem,pronto,erro){var card=$('#offline-card'),botao=$('#btn-offline'),status=$('#offline-status'),barra=$('#offline-barra'),fill=$('#offline-barra-fill');if(!card||!botao)return;card.classList.toggle('offline-card--pronto',!!pronto);card.classList.toggle('offline-card--erro',!!erro);status.textContent=mensagem;barra.hidden=pronto||erro||pct<=0;fill.style.width=Math.max(0,Math.min(100,pct))+'%';botao.disabled=offlineDownloadEmAndamento;botao.textContent=pronto?'Atualizar':(offlineDownloadEmAndamento?'Baixando‚Ä¶':(erro?'Tentar novamente':'Baixar'));}
-  function enviarAoServiceWorker(mensagem){return navigator.serviceWorker.ready.then(function(registro){var worker=registro.waiting||registro.active||registro.installing;if(!worker)throw new Error('Service worker indispon√≠vel');worker.postMessage(mensagem);});}
-  function configurarOffline(){var botao=$('#btn-offline');if(!botao)return;if(!('serviceWorker' in navigator)){atualizarOffline(0,'Este navegador n√£o permite o modo offline.',false,true);return;}navigator.serviceWorker.addEventListener('message',function(evento){var d=evento.data||{};if(d.tipo==='OFFLINE_STATUS'){offlineDownloadEmAndamento=!!d.baixando;var pct=d.total?d.concluidos/d.total*100:0;var msg=d.pronto?'Conte√∫do offline atualizado. Toque em Atualizar sempre que houver uma nova vers√£o.':(d.baixando?'Atualizando '+d.concluidos+' de '+d.total+' v√≠deos‚Ä¶':'Baixe todo o conte√∫do e os v√≠deos ¬∑ cerca de 451 MB');atualizarOffline(pct,msg,!!d.pronto,false);}if(d.tipo==='OFFLINE_ERRO'){offlineDownloadEmAndamento=false;atualizarOffline(0,'A atualiza√ß√£o parou. Conecte-se ao Wi-Fi e tente novamente.',false,true);}});botao.addEventListener('click',function(){if(offlineDownloadEmAndamento)return;offlineDownloadEmAndamento=true;atualizarOffline(1,'Verificando atualiza√ß√µes‚Ä¶',false,false);var persistir=navigator.storage&&navigator.storage.persist?navigator.storage.persist().catch(function(){return false;}):Promise.resolve(false);persistir.then(function(){return navigator.serviceWorker.getRegistration();}).then(function(registro){return registro?registro.update().catch(function(){}):null;}).then(function(){return enviarAoServiceWorker({tipo:'BAIXAR_OFFLINE',arquivos:videosDoApp()});}).catch(function(){offlineDownloadEmAndamento=false;atualizarOffline(0,'N√£o foi poss√≠vel atualizar. Recarregue e tente novamente.',false,true);});});}
-  function registrarServiceWorker() {
-    if(!('serviceWorker' in navigator))return;
-    navigator.serviceWorker.register('./sw.js').then(function(){return navigator.serviceWorker.ready;}).then(function(){return enviarAoServiceWorker({tipo:'VERIFICAR_OFFLINE',arquivos:videosDoApp()});}).catch(function(){atualizarOffline(0,'N√£o foi poss√≠vel preparar o modo offline.',false,true);});
-  }
-  var GLOSSARIO = {
-    'finalidade':'para que algo serve', 'g√™nero':'um tipo de texto', 'objetiva':'direta e f√°cil de entender',
-    'substantivo':'palavra que d√° nome a pessoas, lugares, animais, objetos ou ideias',
-    'sufixo':'peda√ßo acrescentado no final de uma palavra', 'ortografia':'maneira correta de escrever as palavras',
-    'munic√≠pio':'cidade e a √°rea administrada junto com ela', 'comunidade':'grupo de pessoas que compartilha um lugar ou interesses',
-    'patrim√¥nio':'algo importante que uma comunidade preserva', 'paisagem':'tudo o que podemos observar em um lugar',
-    'multiplica√ß√£o':'adi√ß√£o de parcelas iguais', 'divis√£o':'repartir ou formar grupos com a mesma quantidade',
-    'adjetivo':'palavra que mostra uma caracter√≠stica', 'pronome':'palavra que pode substituir ou acompanhar um nome',
-    'biografia':'hist√≥ria da vida de uma pessoa escrita por outra', 'autobiografia':'hist√≥ria que algu√©m escreve sobre a pr√≥pria vida',
-    'cronol√≥gica':'organizada na ordem em que os fatos aconteceram', 'rota√ß√£o':'giro da Terra em torno dela mesma',
-    'transla√ß√£o':'movimento da Terra ao redor do Sol', 'astro':'corpo natural que existe no espa√ßo',
-    'sat√©lite':'corpo que gira ao redor de um planeta', 'atmosfera':'camada de gases que envolve a Terra',
-    'litosfera':'parte s√≥lida mais externa da Terra', 'hidrosfera':'toda a √°gua existente no planeta',
-    'biosfera':'regi√µes da Terra onde existe vida', 'magma':'material muito quente encontrado dentro da Terra',
-    'rural':'relacionado ao campo', 'urbana':'relacionada √† cidade', 'migra√ß√£o':'mudan√ßa de pessoas de um lugar para outro',
-    'censo':'pesquisa que re√∫ne informa√ß√µes sobre a popula√ß√£o', 'democracia':'forma de governo com participa√ß√£o dos cidad√£os',
-    'pot√°vel':'pr√≥pria e segura para beber', 'triagem':'separa√ß√£o de materiais por tipo'
-  };
-  function palavras(txt) { return String(txt||'').replace(/<[^>]+>/g,' ').trim().split(/\s+/).filter(Boolean); }
-  function separarResumo(paragrafos) {
-    var todos=(paragrafos||[]).slice(), primeiro=todos.shift()||'', frases=primeiro.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[primeiro], resumo='', resto=[];
-    frases.forEach(function(f){ if(palavras(resumo+' '+f).length<=45 || !resumo) resumo+=(resumo?' ':'')+f.trim(); else resto.push(f.trim()); });
-    if(resto.length) todos.unshift(resto.join(' '));
-    return { resumo:resumo, detalhes:todos };
-  }
-  function explicarTermos(html) {
-    var saida=String(html||'');
-    Object.keys(GLOSSARIO).forEach(function(termo){
-      var rx=new RegExp('\\b('+termo+')\\b','gi');
-      saida=saida.replace(rx,'<span class="termo" tabindex="0" data-explica="'+textoSeguro(GLOSSARIO[termo])+'">$1</span>');
-    });
-    return saida;
-  }
-  function falaMascote(mensagem,compacta) {
-    return criar('aside','mascote-fala'+(compacta?' mascote-fala--compacta':''),
-      '<img src="assets/mascote-capivara-v2.webp" alt="Mascote do aplicativo"><p>'+textoSeguro(mensagem)+'</p>');
-  }
-  function conviteMissao(bloco,idx) {
-    var h=normalizar(bloco&&bloco.h);
-    if(/instrucional|instrucao/.test(h)) return 'Pense no cartaz de lavar as m√£os do banheiro da escola. O que precisa estar nele para algu√©m conseguir seguir?';
-    if(/anuncio|classificado|aulas de tango/.test(h)) return 'Onde voc√™ j√° viu algo sendo oferecido para vender, trocar, alugar ou prestar um servi√ßo?';
-    if(/memoria|biografia|santos dumont|aula de musica|linha do tempo/.test(h)) return 'Que pistas ajudam a perceber que um texto conta fatos da vida ou lembran√ßas do passado?';
-    if(/quadrinho|balao|monica|marina/.test(h)) return 'O que os desenhos, os quadros e os bal√µes ajudam a entender antes mesmo de ler todas as falas?';
-    if(/conto|zebra|lobo/.test(h)) return 'Que elementos fazem voc√™ perceber que este texto conta uma hist√≥ria?';
-    if(/diminutivo|aumentativo|plural|ortografia/.test(h)) return 'Observe como as palavras mudam. Tente descobrir o padr√£o antes de abrir a explica√ß√£o.';
-    if(/tempo|hora|calend/.test(h)) return 'Pense em uma situa√ß√£o do seu dia em que voc√™ usa essa ideia.';
-    if(/terra|ceu|lua|sol|estrela/.test(h)) return 'Observe o t√≠tulo e a imagem. O que voc√™ acha que acontece com esse elemento da natureza?';
-    if(/municipio|cidade|comunidade|espaco/.test(h)) return 'Pense no lugar onde voc√™ vive. O que voc√™ j√° viu que se parece com este assunto?';
-    return 'Observe o t√≠tulo e a imagem. O que voc√™ j√° sabe ou percebe sobre este assunto?';
-  }
-  function temaBloco(bloco) {
-    var h=normalizar(bloco&&bloco.h);
-    if(/anuncio|classificado|aulas de tango/.test(h))return 'anuncios';
-    if(/memoria|biografia|santos dumont|aula de musica|linha do tempo/.test(h))return 'memorias';
-    if(/quadrinho|balao|monica|marina/.test(h))return 'quadrinhos';
-    if(/conto|zebra|lobo/.test(h))return 'contos';
-    if(/instrucional|lavar as maos/.test(h))return 'instrucoes';
-    if(/substantivo|diminutivo|aumentativo|plural|ortografia|verbo|adjetivo|silaba/.test(h))return 'palavras';
-    if(/multiplica|divis|possibil|numero|calculo/.test(h))return 'numeros';
-    if(/tempo|hora|localiza|desloca/.test(h))return 'medidas';
-    if(/terra|ceu|lua|sol|estrela|planeta/.test(h))return 'natureza';
-    if(/municipio|cidade|comunidade|espaco|populacao|servico/.test(h))return 'lugares';
-    return 'ideia';
-  }
-  function visualDaDescoberta(bloco) {
-    if(bloco&&bloco.visual)return bloco.visual;
-    var titulo=normalizar(bloco&&bloco.h);
-    var visuaisEspecificos={
-      'terra planeta azul':{
-        src:'assets/camadas-esferas-terra-v2.webp',
-        tipo:'diagrama',
-        alt:'Esquema da Terra mostrando a hidrosfera na √°gua, a litosfera em rochas expostas e secas, a atmosfera ao redor do planeta e a biosfera onde h√° seres vivos.'
-      },
-      'o interior da terra':{
-        src:'assets/camadas-interior-terra-v2.webp',
-        tipo:'diagrama',
-        alt:'Corte do interior da Terra identificando a crosta fina, o manto espesso, o n√∫cleo externo l√≠quido e o n√∫cleo interno s√≥lido.'
-      }
-    };
-    if(visuaisEspecificos[titulo])return visuaisEspecificos[titulo];
-    var tema=temaBloco(bloco), visuais={
-      instrucoes:{src:'assets/descobrir-textos.webp',alt:'Crian√ßa observando uma sequ√™ncia ilustrada de instru√ß√µes para lavar as m√£os.'},
-      anuncios:{src:'assets/descobrir-anuncios.webp',alt:'Crian√ßas observando um an√∫ncio ilustrado em um mural da comunidade.'},
-      memorias:{src:'assets/descobrir-memorias.webp',alt:'Crian√ßa ouvindo uma pessoa idosa compartilhar fotografias e lembran√ßas de sua vida.'},
-      quadrinhos:{src:'assets/descobrir-quadrinhos.webp',alt:'Crian√ßas criando uma hist√≥ria em quadrinhos com quadros e diferentes bal√µes de fala.'},
-      contos:{src:'assets/descobrir-contos.webp',alt:'Crian√ßas ouvindo uma contadora de hist√≥rias enquanto personagens surgem de um livro.'},
-      palavras:{src:'assets/descobrir-palavras.webp',alt:'Crian√ßa montando e investigando palavras com pe√ßas coloridas.'},
-      numeros:{src:'assets/descobrir-numeros.webp',alt:'Crian√ßa explorando grupos, formas e quantidades com materiais de matem√°tica.'},
-      medidas:{src:'assets/descobrir-medidas.webp',alt:'Crian√ßa investigando tempo, caminhos e medidas com rel√≥gio e instrumentos.'},
-      natureza:{src:'assets/descobrir-natureza.webp',alt:'Crian√ßas investigando a Terra, a natureza, a Lua e o c√©u.'},
-      lugares:{src:'assets/descobrir-lugares.webp',alt:'Crian√ßas observando uma maquete com campo, cidade e espa√ßos da comunidade.'},
-      ideia:{src:'assets/descobrir-ideias.webp',alt:'Crian√ßa investigando pistas e organizando uma nova ideia.'}
-    };
-    return visuais[tema]||visuais.ideia;
-  }
-  function irTopo() {
-    var palco=document.body.classList.contains('modo-jogo-imersivo')&&$('.jogo-imersivo__palco');
-    if(palco)palco.scrollTo({top:0,behavior:semAnimacao()?'auto':'smooth'});
-    else window.scrollTo({top:0,behavior:semAnimacao()?'auto':'smooth'});
-  }
-  /* As p√°ginas do livro n√£o s√£o publicadas junto com o app. Se a imagem n√£o
-     estiver l√°, a figura inteira some em vez de deixar um √≠cone quebrado. */
-  function figuraOpcional(figura) {
-    var img=figura&&figura.querySelector('img'); if(!img)return figura;
-    img.addEventListener('error',function(){figura.remove();});
-    return figura;
-  }
-
-  /* --- Cara de jogo: som, confete e sequ√™ncia de acertos ------------------ */
-  var audio;
-  function bip(tipo) {
-    if(!estado.som)return;
-    try {
-      var Ctx=window.AudioContext||window.webkitAudioContext; if(!Ctx)return;
-      audio=audio||new Ctx();
-      var o=audio.createOscillator(), g=audio.createGain(), t=audio.currentTime;
-      o.connect(g); g.connect(audio.destination);
-      if(tipo==='ok'){o.frequency.setValueAtTime(660,t);o.frequency.setValueAtTime(880,t+.09);}
-      else if(tipo==='erro'){o.type='triangle';o.frequency.setValueAtTime(200,t);}
-      else {o.frequency.setValueAtTime(523,t);o.frequency.setValueAtTime(784,t+.12);o.frequency.setValueAtTime(1046,t+.24);}
-      g.gain.setValueAtTime(.0001,t);
-      g.gain.exponentialRampToValueAtTime(.16,t+.02);
-      g.gain.exponentialRampToValueAtTime(.0001,t+.35);
-      o.start(); o.stop(t+.36);
-    } catch(_) {}
-  }
-  var CORES_FESTA=['#ba376d','#20768e','#1d805c','#b45b16','#6b49b8','#8b6509'];
-  function palcoFesta(tipo,duracao) {
-    var caixa=criar('div','festa festa--'+tipo);
-    document.body.appendChild(caixa);
-    setTimeout(function(){caixa.remove();},duracao);
-    return caixa;
-  }
-  function aleatorio(min,max) { return min+Math.random()*(max-min); }
-  function confete(quantidade) {
-    var caixa=palcoFesta('confete',3600);
-    for(var i=0;i<quantidade;i++){
-      var p=criar('i');
-      p.style.left=aleatorio(0,100)+'vw';
-      p.style.background=CORES_FESTA[i%CORES_FESTA.length];
-      p.style.animationDuration=aleatorio(1.7,3.1)+'s';
-      p.style.animationDelay=aleatorio(0,.35)+'s';
-      p.style.transform='rotate('+Math.floor(aleatorio(0,360))+'deg)';
-      caixa.appendChild(p);
-    }
-  }
-  function estrelas(quantidade) {
-    var caixa=palcoFesta('estrelas',1400), simbolos=['‚≠ê','‚ú®','üåü','üí´'];
-    for(var i=0;i<quantidade;i++){
-      var angulo=(i/quantidade)*Math.PI*2, alcance=aleatorio(120,290);
-      var e=criar('i',null,simbolos[i%simbolos.length]);
-      e.style.setProperty('--x',Math.cos(angulo)*alcance+'px');
-      e.style.setProperty('--y',Math.sin(angulo)*alcance+'px');
-      e.style.fontSize=aleatorio(17,29)+'px';
-      e.style.animationDelay=aleatorio(0,.12)+'s';
-      caixa.appendChild(e);
-    }
-  }
-  function baloes(quantidade) {
-    var caixa=palcoFesta('baloes',4200);
-    for(var i=0;i<quantidade;i++){
-      var b=criar('i',null,'üéà');
-      b.style.left=aleatorio(4,92)+'vw';
-      b.style.fontSize=aleatorio(28,46)+'px';
-      b.style.animationDuration=aleatorio(2.6,4)+'s';
-      b.style.animationDelay=aleatorio(0,.6)+'s';
-      caixa.appendChild(b);
-    }
-  }
-  function carimbo() {
-    var caixa=palcoFesta('carimbo',1100), marcas=['üéâ','üëè','üí™','üôå','ü•≥'];
-    caixa.appendChild(criar('b',null,marcas[Math.floor(Math.random()*marcas.length)]));
-  }
-  /* Um repert√≥rio em vez de sempre o mesmo confete ‚Äî e nunca a mesma
-     comemora√ß√£o duas vezes seguidas. */
-  var FESTAS=[function(){confete(30);},function(){estrelas(16);},function(){baloes(9);},carimbo];
-  var ultimaFesta=-1;
-  function festejar(forte) {
-    if(semAnimacao())return;
-    if(forte){confete(70);estrelas(20);return;}   /* fim de jogo: as duas juntas */
-    var i;
-    do { i=Math.floor(Math.random()*FESTAS.length); } while(i===ultimaFesta);
-    ultimaFesta=i;
-    FESTAS[i]();
-  }
-  function zerarPlacar() { placar={pontos:0,sequencia:0,melhor:0}; }
-  function pontuar(certo) {
-    if(certo){
-      placar.sequencia++;
-      placar.melhor=Math.max(placar.melhor,placar.sequencia);
-      placar.pontos+=10+(placar.sequencia>=3?5:0);
-    } else placar.sequencia=0;
-    atualizarPlacar();
-  }
-  function atualizarPlacar() {
-    var hud=$('#hud-jogo'); if(!hud)return;
-    hud.querySelector('.hud__pontos b').textContent=placar.pontos;
-    hud.querySelector('.hud__seguidas b').textContent=placar.sequencia;
-    hud.querySelector('.hud__seguidas').classList.toggle('hud__pilula--quente',placar.sequencia>=3);
-  }
-  function montarHud() {
-    var hud=criar('div','hud',null,{id:'hud-jogo'});
-    hud.appendChild(criar('div','hud__pilula hud__pontos','<b>'+placar.pontos+'</b><span>Pontos</span>'));
-    hud.appendChild(criar('div','hud__pilula hud__seguidas'+(placar.sequencia>=3?' hud__pilula--quente':''),'<b>'+placar.sequencia+'</b><span>Seguidas</span>'));
-    var som=criar('button','hud__som',estado.som?'üîä':'üîá',{type:'button','aria-label':'Ligar ou desligar o som'});
-    som.addEventListener('click',function(){
-      estado.som=!estado.som; salvar(); som.textContent=estado.som?'üîä':'üîá';
-      som.setAttribute('aria-pressed',estado.som?'true':'false'); if(estado.som)bip('ok');
-    });
-    hud.appendChild(som);
-    return hud;
-  }
-  function semAnimacao() {
-    return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  }
-  /* Quando nasce conte√∫do embaixo (a nomea√ß√£o, o feedback, o bot√£o de seguir),
-     a p√°gina vai atr√°s dele: puxa o fim para dentro da tela, mas nunca esconde
-     o come√ßo debaixo do cabe√ßalho grudado. */
-  function revelar(inicio,fim) {
-    if(!inicio||!inicio.getBoundingClientRect)return;
-    var mexer=function(){
-      try {
-        var a=inicio.getBoundingClientRect(), b=(fim||inicio).getBoundingClientRect();
-        var palco=document.body.classList.contains('modo-jogo-imersivo')&&$('.jogo-imersivo__palco');
-        if(palco&&palco.contains(inicio)){
-          var rp=palco.getBoundingClientRect(), topoPalco=rp.top+12, chaoPalco=rp.bottom-14, ajuste=0;
-          if(b.bottom>chaoPalco)ajuste=b.bottom-chaoPalco;
-          if(a.top-ajuste<topoPalco)ajuste=a.top-topoPalco;
-          if(Math.abs(ajuste)>=4)palco.scrollBy({top:ajuste,behavior:semAnimacao()?'auto':'smooth'});
-          return;
-        }
-        /* O que cobre o alto da tela: o cabe√ßalho e, na tela de cap√≠tulo,
-           tamb√©m a barra de abas ‚Äî as duas s√£o grudentas. */
-        var teto=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--topo'),10)||58;
-        var abas=$('.abas');
-        if(abas){var ra=abas.getBoundingClientRect();if(ra.bottom>0&&ra.bottom<window.innerHeight/2)teto=Math.max(teto,ra.bottom);}
-        var topo=teto+14, chao=window.innerHeight-14, delta=0;
-        if(b.bottom>chao) delta=b.bottom-chao;
-        if(a.top-delta<topo) delta=a.top-topo;
-        if(Math.abs(delta)<4)return;
-        window.scrollBy({top:delta,behavior:semAnimacao()?'auto':'smooth'});
-      } catch(_) {}
-    };
-    if(window.requestAnimationFrame)window.requestAnimationFrame(mexer);else mexer();
-  }
-  function mostrar(id) {
-    if(id!=='tela-capitulo')definirModoJogo(false);
-    $$('.tela').forEach(function (t) { var ativa=t.id===id; t.hidden=!ativa; t.classList.toggle('tela--ativa',ativa); });
-    var home=id==='tela-home';
-    document.body.classList.toggle('body--home',home);
-    $('#btn-voltar').hidden=home;
-    irTopo();
-  }
-
-  function renderHome() {
-    estado.disciplina=null; estado.capitulo=null; estado.aba='teoria';
-    var grade=$('#grade-disciplinas'); grade.innerHTML='';
-    DISCIPLINAS.forEach(function (disc) {
-      var feitos=disc.capitulos.filter(function(c){return estado.progresso[c.id] && estado.progresso[c.id].feito;}).length;
-      var iniciados=disc.capitulos.some(function(c){return !!estado.progresso[c.id];});
-      var status=feitos ? feitos+' de '+disc.capitulos.length+' conclu√≠dos' : (iniciados?'Continuar':'');
-      var b=criar('button','disc-card','<span class="disc-card__nome">'+textoSeguro(disc.nome)+'</span>'+
-        (status?'<span class="disc-card__status">'+status+'</span>':'')+'<span class="disc-card__seta" aria-hidden="true">‚Üí</span>',{type:'button'});
-      b.style.setProperty('--acento',acento(disc));
-      b.addEventListener('click',function(){abrirDisciplina(disc.id);}); grade.appendChild(b);
-    });
-    var feitos=totalFeitos(), total=totalCaps(), pct=Math.round(feitos/total*100);
-    $('#painel-progresso').hidden=feitos===0;
-    $('#painel-pct').textContent=pct+'%'; $('#barra-fill').style.width=pct+'%';
-    $('#barra-geral').setAttribute('aria-valuenow',String(pct));
-    var cont=$('#btn-continuar'); cont.hidden=true;
-    if (estado.ultimo) {
-      var d=discPorId(estado.ultimo.disciplina), c=capPorId(d,estado.ultimo.capitulo);
-      if(d&&c){ cont.hidden=false; $('#continuar-titulo').textContent=c.title; $('#continuar-detalhe').textContent=d.nome+' ¬∑ m√≥dulo '+c.module; }
-    }
-    renderCalendarioProvas();
-    atualizarTopo(); mostrar('tela-home');
-  }
-
-  function abrirRevisaoExtra(nome){if(typeof REVISOES_EXTRAS==='undefined'||!REVISOES_EXTRAS[nome])return;var revisao=REVISOES_EXTRAS[nome],raiz=$('#revisao-conteudo');$('#revisao-titulo').textContent=revisao.titulo;raiz.innerHTML=revisao.html+'<button class="revisao-limpar" type="button">Limpar respostas</button>';$$('.revisao-abas [data-revisao]').forEach(function(b){b.setAttribute('aria-selected',b.dataset.revisao===nome?'true':'false');});raiz.querySelector('.revisao-limpar').addEventListener('click',function(){raiz.querySelectorAll('input').forEach(function(c){if(c.type==='radio'||c.type==='checkbox')c.checked=false;else c.value='';});raiz.querySelectorAll('textarea').forEach(function(c){c.value='';});toast('Respostas apagadas.');});mostrar('tela-revisoes');}
-
-  /* Calend√°rio de provas ‚Äî cada prova leva √† "Revis√£o do 3¬∫ bimestre" da
-     mat√©ria (um toque). O card lista os m√≥dulos e t√≥picos cobrados. Para
-     atualizar num pr√≥ximo bimestre, basta editar a lista PROVAS: data, dia,
-     o cap√≠tulo de revis√£o de destino e os m√≥dulos/t√≥picos exibidos. */
-  var PROVAS = {
-    titulo:'Calend√°rio de provas',
-    legenda:'Testes bimestrais ¬∑ 3¬∫ bimestre de 2026',
-    itens:[
-      { disciplina:'portugues', capitulo:'rev_lp3b', data:'17', mes:'08', dia:'Segunda', modulos:[
-        {n:17, titulo:'Lava uma m√£o, lava a outra', topicos:['Texto instrucional','Substantivo aumentativo e diminutivo','Ortografia: termina√ß√µes -sinho(a), -zinho(a), -inho(a)']},
-        {n:18, titulo:'Lembran√ßas de uma vida', topicos:['Contos de mem√≥rias','Adjetivo','Ortografia: -oso/-osa']}
-      ]},
-      { disciplina:'ciencias', capitulo:'rev_cie3b', data:'18', mes:'08', dia:'Ter√ßa', modulos:[
-        {n:9, titulo:'Caracter√≠sticas da Terra', topicos:['Representa√ß√µes da Terra','Terra, planeta azul','O interior da Terra','Vulc√µes, terremotos e tsunamis']},
-        {n:10, titulo:'Observando o c√©u diurno', topicos:['Os corpos celestes','O Sol e sua influ√™ncia na Terra','Os astros se movimentam']}
-      ]},
-      { disciplina:'matematica', capitulo:'rev_mat3b', data:'19', mes:'08', dia:'Quarta', modulos:[
-        {n:9, titulo:'Contagem de possibilidades e outras multiplica√ß√µes', topicos:['Problemas de contagem de possibilidades','Multiplica√ß√£o por 10, por 100 e por 1000','Problemas de multiplica√ß√£o']},
-        {n:10, titulo:'Medidas de tempo, localiza√ß√£o e deslocamento', topicos:['Hora e meia hora','Hora, minuto e segundo','Localiza√ß√£o','Trajetos e deslocamentos']}
-      ]},
-      { disciplina:'historia', capitulo:'rev_hist3b', data:'20', mes:'08', dia:'Quinta', modulos:[
-        {n:9, titulo:'Dividindo espa√ßos em comunidade', topicos:['Espa√ßos p√∫blicos e espa√ßos privados','Espa√ßos p√∫blicos de sua cidade']},
-        {n:10, titulo:'Espa√ßos p√∫blicos e espa√ßos privados', topicos:['Espa√ßos p√∫blicos de acesso restrito','Espa√ßos privados de uso p√∫blico','Servi√ßos p√∫blicos e privados','A administra√ß√£o do munic√≠pio (Prefeitura)']}
-      ]},
-      { disciplina:'geografia', capitulo:'rev_geo3b', data:'21', mes:'08', dia:'Sexta', modulos:[
-        {n:9, titulo:'Conhecendo o munic√≠pio', topicos:['O que √© munic√≠pio?','A √°rea urbana do munic√≠pio','Problemas ambientais nas √°reas urbanas','A √°rea rural do munic√≠pio','Atividades econ√¥micas rurais e urbanas']}
-      ]}
-    ]
-  };
-  function renderCalendarioProvas() {
-    var secao=$('#calendario-provas'); if(!secao) return;
-    secao.innerHTML='';
-    var itens=PROVAS.itens.filter(function(p){ var d=discPorId(p.disciplina); return d&&capPorId(d,p.capitulo); });
-    if(!itens.length){ secao.hidden=true; return; }
-    secao.hidden=false;
-    secao.appendChild(criar('h2','provas__titulo','<span class="provas__ico" aria-hidden="true">üìÖ</span> '+textoSeguro(PROVAS.titulo),{id:'provas-titulo'}));
-    secao.appendChild(criar('p','provas__legenda',textoSeguro(PROVAS.legenda)));
-    var lista=criar('div','provas__lista');
-    itens.forEach(function(p){
-      var disc=discPorId(p.disciplina);
-      var modulosHtml=(p.modulos||[]).map(function(m){
-        return '<span class="prova-modulo">'+
-          '<span class="prova-modulo__nome">M√≥dulo '+textoSeguro(m.n)+' ¬∑ '+textoSeguro(m.titulo)+'</span>'+
-          '<span class="prova-modulo__topicos">'+(m.topicos||[]).map(textoSeguro).join(' ¬∑ ')+'</span>'+
-        '</span>';
-      }).join('');
-      var card=criar('button','prova-card',
-        '<span class="prova-card__data"><strong>'+textoSeguro(p.data)+'</strong><span class="prova-card__mes">/'+textoSeguro(p.mes)+'</span><span class="prova-card__dia">'+textoSeguro(p.dia)+'</span></span>'+
-        '<span class="prova-card__info">'+
-          '<strong class="prova-card__disc">'+textoSeguro(disc.nome)+'</strong>'+
-          '<span class="prova-card__modulos">'+modulosHtml+'</span>'+
-          '<span class="prova-card__atalho">Revisar para a prova <span aria-hidden="true">‚Üí</span></span>'+
-        '</span>',
-        {type:'button','aria-label':'Revisar para a prova de '+disc.nome+' em '+p.data+'/'+p.mes});
-      card.style.setProperty('--acento',acento(disc));
-      card.addEventListener('click',function(){ abrirCapitulo(p.disciplina,p.capitulo); });
-      lista.appendChild(card);
-    });
-    secao.appendChild(lista);
-  }
-
-  function abrirDisciplina(id) {
-    var disc=discPorId(id); if(!disc) return renderHome();
-    estado.disciplina=id; estado.capitulo=null; salvar();
-    var cab=$('#cabecalho-disc'); cab.innerHTML='<p class="cabecalho-disc__trilha">Mat√©ria</p><h1 class="cabecalho-disc__titulo" id="disc-titulo">'+textoSeguro(disc.nome)+'</h1><p class="cabecalho-disc__texto">Escolha um assunto. Voc√™ pode explorar no seu ritmo e voltar quando quiser.</p>';
-    cab.style.setProperty('--acento',acento(disc));
-    var visuaisDisciplina={
-      portugues:{src:'assets/disciplina-portugues.webp',alt:'Crian√ßas lendo, escrevendo e imaginando hist√≥rias juntas.'},
-      matematica:{src:'assets/disciplina-matematica.webp',alt:'Crian√ßas explorando formas, quantidades, medidas, padr√µes e o tempo.'},
-      ciencias:{src:'assets/disciplina-ciencias.webp',alt:'Crian√ßas investigando plantas, animais, √°gua, a Terra e o c√©u.'},
-      geografia:{src:'assets/disciplina-geografia.webp',alt:'Crian√ßas explorando mapas, paisagens, cidade, campo e caminhos.'},
-      historia:{src:'assets/disciplina-historia.webp',alt:'Crian√ßas e pessoas idosas compartilhando fotografias, mem√≥rias e hist√≥rias da comunidade.'}
-    }, visual=visuaisDisciplina[disc.id], figura=$('#disc-visual');
-    figura.innerHTML=visual?'<img src="'+visual.src+'" alt="'+visual.alt+'">':'';
-    var lista=$('#lista-capitulos'); lista.innerHTML='';
-    disc.capitulos.forEach(function(cap){
-      var p=estado.progresso[cap.id], marca=p&&p.feito?'‚úì':'‚Üí';
-      var revisao=cap.id.indexOf('rev_')===0;
-      var b=criar('button','cap-card'+(revisao?' cap-card--revisao':''),'<span class="cap-card__num">'+cap.module+'</span><span><strong class="cap-card__titulo">'+textoSeguro(cap.title)+'</strong><span class="cap-card__sub">'+textoSeguro(cap.subtitle||'')+'</span></span><span class="cap-card__estado" aria-hidden="true">'+marca+'</span>',{type:'button'});
-      b.style.setProperty('--acento',acento(disc)); b.addEventListener('click',function(){abrirCapitulo(id,cap.id);}); lista.appendChild(b);
-    });
-    mostrar('tela-disciplina');
-  }
-
-  function abrirCapitulo(discId,capId,aba) {
-    var disc=discPorId(discId), cap=capPorId(disc,capId); if(!cap) return renderHome();
-    estado.disciplina=discId; estado.capitulo=capId; estado.ultimo={disciplina:discId,capitulo:capId};
-    /* O v√≠deo funciona como abertura do m√≥dulo. Uma aba expl√≠cita ainda √©
-       respeitada quando a navega√ß√£o vem de dentro da pr√≥pria experi√™ncia. */
-    estado.aba=aba||(cap.video?'video':estado.areas[capId]||'teoria');
-    estado.passoDescoberta=Number(estado.leitura[capId])||0;
-    estado.passoDescoberta=Math.min(estado.passoDescoberta||0,Math.max(0,cap.theory.length-1)); zerarPlacar(); salvar();
-    $('#tela-capitulo').style.setProperty('--acento',acento(disc));
-    $('#cap-trilha').textContent=disc.nome+' ¬∑ m√≥dulo '+cap.module;
-    $('#cap-titulo').textContent=cap.title; $('#cap-sub').textContent=cap.subtitle||'';
-    var plano=(typeof PEDAGOGY!=='undefined'&&PEDAGOGY[cap.id])||null;
-    $('#cap-pergunta').innerHTML=plano&&plano.objectives?'<strong>Voc√™ vai aprender a:</strong> '+plano.objectives.map(textoSeguro).join(' ¬∑ '):textoSeguro(conviteMissao(cap.theory[0]||{},0));
-    var videoTab=$('#aba-video'); videoTab.hidden=!cap.video;
-    renderTeoria(cap); renderVideo(cap); jogoAtual=0; renderJogos(cap); iniciarQuiz(cap);
-    selecionarAba((estado.aba==='video'&&!cap.video)?'teoria':estado.aba,false);
-    mostrar('tela-capitulo');
-  }
-
-  function renderTeoria(cap) {
-    var raiz=$('#teoria-conteudo'); raiz.innerHTML='';
-    var idx=Math.max(0,Math.min(estado.passoDescoberta,cap.theory.length-1)), bloco=cap.theory[idx];
-    /* Na leitura, o t√≠tulo e a imagem j√° anunciam a mudan√ßa de assunto. O
-       mascote fica reservado para pistas e feedbacks que ajudam de verdade. */
-    var passos=criar('div','passos');
-    cap.theory.forEach(function(_,i){var p=criar('button','passos__ponto'+(i===idx?' passos__ponto--ativo':''),null,{type:'button','aria-label':'Ir para a miss√£o '+(i+1)});p.addEventListener('click',function(){guardarPasso(cap,i);renderTeoria(cap);});passos.appendChild(p);});
-    raiz.appendChild(passos);
-    var card=criar('article','bloco-leitura'), recorte=separarResumo(bloco.p||[]), fonteNumerada=(bloco.p||[]).find(function(p){return /<strong>1\.<\/strong>/.test(p)&&/<strong>2\.<\/strong>/.test(p);});
-    if(fonteNumerada){recorte.resumo=fonteNumerada.split(/<strong>1\.<\/strong>/)[0].replace(/[\s:]+$/,'')+'.';recorte.detalhes=(bloco.p||[]).filter(function(p){return p!==fonteNumerada;});}
-    card.innerHTML='<p class="bloco-leitura__etapa">Miss√£o '+(idx+1)+' de '+cap.theory.length+'</p><h3>'+textoSeguro(bloco.h)+'</h3>'+
-      '<p class="missao-convite">'+textoSeguro(conviteMissao(bloco,idx))+'</p>';
-    var visual=cap.reviewImage?{src:cap.reviewImage,alt:cap.reviewImageAlt||'Ilustra√ß√£o dos assuntos desta revis√£o.',tipo:'revisao'}:visualDaDescoberta(bloco);
-    var tipoVisual=visual.tipo==='diagrama'?'diagrama':(visual.tipo==='revisao'?'revisao':(visual.wide?'amplo':''));
-    var destaque=criar('div','descoberta-destaque'+(tipoVisual?' descoberta-destaque--'+tipoVisual:''));
-    destaque.appendChild(criar('figure','descoberta-visual'+(tipoVisual?' descoberta-visual--'+tipoVisual:''),'<img src="'+textoSeguro(visual.src)+'" alt="'+textoSeguro(visual.alt)+'" loading="lazy">'));
-    destaque.appendChild(criar('div','ideia-principal','<span>Ideia principal</span><p>'+explicarTermos(recorte.resumo)+'</p>'));
-    card.appendChild(destaque);
-    var sequencia=montarSequencia(bloco.p||[]); if(sequencia) card.appendChild(sequencia);
-    if(recorte.detalhes.length){var det=criar('details');det.innerHTML='<summary>Entender melhor</summary>';recorte.detalhes.forEach(function(p){det.appendChild(criar('p',null,explicarTermos(p)));var transformacao=montarTransformacao(p);if(transformacao)det.appendChild(transformacao);});card.appendChild(det);}
-    if(cap.pageImages && cap.pageImages[idx%2] && (idx===1 || idx===cap.theory.length-1)) {
-      var fig=criar('figure','pagina-livro','<img src="'+textoSeguro(cap.pageImages[idx%2])+'" alt="P√°gina do material deste assunto" loading="lazy"><figcaption>Uma p√°gina do material para observar com calma</figcaption>'); card.appendChild(figuraOpcional(fig));
-    }
-    if(idx===cap.theory.length-1){card.appendChild(criar('aside','pausa','<strong>Pausa para pensar</strong>Como voc√™ explicaria esta descoberta para algu√©m da sua idade? N√£o precisa usar palavras de livro.'));}
-    raiz.appendChild(card);
-    var nav=criar('div','navegacao');
-    var ant=criar('button','botao','‚Üê Anterior',{type:'button'}); ant.disabled=idx===0; ant.addEventListener('click',function(){guardarPasso(cap,idx-1);renderTeoria(cap);irTopo();});
-    var prox=criar('button','botao botao--primario',idx===cap.theory.length-1?'Vamos jogar ‚Üí':'Pr√≥xima ‚Üí',{type:'button'}); prox.addEventListener('click',function(){if(idx===cap.theory.length-1){selecionarAba('jogos',true);}else{guardarPasso(cap,idx+1);renderTeoria(cap);irTopo();}});
-    nav.appendChild(ant);nav.appendChild(prox);raiz.appendChild(nav);
-  }
-  function guardarPasso(cap,indice) { estado.passoDescoberta=indice;estado.leitura[cap.id]=indice;salvar(); }
-
-  function montarSequencia(paragrafos) {
-    var fonte=(paragrafos||[]).find(function(p){return /<strong>1\.<\/strong>/.test(p)&&/<strong>2\.<\/strong>/.test(p);});
-    if(!fonte)return null;
-    var partes=fonte.split(/<strong>\d+\.<\/strong>/).slice(1).map(function(p){return p.replace(/^[\s,;:]+|[\s,;:]+$/g,'');}).filter(Boolean);
-    if(partes.length<2)return null;
-    var box=criar('div','sequencia-visual','<strong>Veja o passo a passo</strong>'), lista=criar('ol');
-    partes.forEach(function(p){lista.appendChild(criar('li',null,explicarTermos(p)));});box.appendChild(lista);return box;
-  }
-  function montarTransformacao(paragrafo) {
-    if(String(paragrafo).indexOf('‚Üí')<0)return null;
-    var limpo=String(paragrafo).replace(/<[^>]+>/g,'').replace(/^.*?:\s*/,'');
-    var partes=limpo.split('‚Üí').map(function(x){return x.trim().replace(/[.;]$/,'');}).filter(Boolean);
-    if(partes.length<2||partes.length>6)return null;
-    var box=criar('div','transformacao');
-    partes.forEach(function(p,i){box.appendChild(criar('span','transformacao__passo',textoSeguro(p)));if(i<partes.length-1)box.appendChild(criar('span','transformacao__seta','‚Üí'));});return box;
-  }
-
-  function renderVideo(cap) {
-    var raiz=$('#video-conteudo'); raiz.innerHTML=''; if(!cap.video)return;
-    var card=criar('section','video-abertura');
-    card.appendChild(criar('h3',null,'Veja uma apresenta√ß√£o deste m√≥dulo'));
-    card.appendChild(criar('p','video-abertura__convite','Assista ao v√≠deo para conhecer as ideias que voc√™ vai explorar.'));
-    var frame=criar('div','video-frame'), carregando=criar('div','video-carregando','<span class="video-carregando__giro" aria-hidden="true"></span><strong>Carregando o v√≠deo‚Ä¶</strong>',{role:'status','aria-live':'polite'});
-    var video=criar('video',null,null,{controls:'',preload:'metadata',playsinline:'','aria-label':'Apresenta√ß√£o do m√≥dulo '+cap.module});
-    video.src=cap.video;
-    function pronto(){carregando.hidden=true;frame.classList.add('video-frame--pronto');}
-    function esperando(){carregando.hidden=false;carregando.querySelector('strong').textContent='Carregando o v√≠deo‚Ä¶';}
-    video.addEventListener('loadeddata',pronto);video.addEventListener('canplay',pronto);video.addEventListener('playing',pronto);video.addEventListener('waiting',esperando);
-    video.addEventListener('error',function(){carregando.hidden=false;carregando.classList.add('video-carregando--erro');carregando.innerHTML='<span aria-hidden="true">‚ö†Ô∏è</span><strong>N√£o foi poss√≠vel carregar o v√≠deo. Tente novamente em instantes.</strong>';});
-    frame.appendChild(video);frame.appendChild(carregando);card.appendChild(frame);
-    var nav=criar('div','navegacao');nav.appendChild(criar('span'));var descobrir=criar('button','botao botao--primario','Come√ßar a descobrir ‚Üí',{type:'button'});descobrir.addEventListener('click',function(){selecionarAba('teoria',true);});nav.appendChild(descobrir);card.appendChild(nav);raiz.appendChild(card);
-  }
-
-  function renderJogos(cap) {
-    var raiz=$('#jogos-conteudo'); raiz.innerHTML='';
-    if(!cap.games||!cap.games.length){raiz.appendChild(criar('div','vazio','Ainda n√£o h√° experi√™ncias para este assunto.'));return;}
-    var salvo=progressoExperiencias(cap);jogoAtual=Math.max(0,Math.min(salvo.atual||0,cap.games.length-1));salvo.atual=jogoAtual;
-    var game=cap.games[jogoAtual], perfis=(typeof EXPERIENCE_PROFILES!=='undefined'&&EXPERIENCE_PROFILES[cap.id])||[], perfil=perfis[jogoAtual]||{mode:game.type==='pairs'?'explore':'choice',goal:game.title,prompt:game.instructions,result:'descoberta'};
-    var topo=criar('header','jogo-imersivo__topo');
-    var sair=criar('button','jogo-imersivo__sair','‚Üê <span>Sair do jogo</span>',{type:'button','aria-label':'Sair do jogo e voltar a descobrir'});
-    sair.addEventListener('click',function(){selecionarAba('teoria',false);});
-    topo.appendChild(sair);
-    topo.appendChild(criar('div','jogo-imersivo__identidade','<span>'+textoSeguro(discPorId(estado.disciplina).nome)+' ¬∑ m√≥dulo '+textoSeguro(cap.module)+'</span><strong>'+textoSeguro(game.short||game.title)+'</strong><small>Jogo '+(jogoAtual+1)+' de '+cap.games.length+'</small>'));
-    var controles=criar('div','jogo-imersivo__controles');
-    controles.appendChild(montarHud());
-    var cheia=criar('button','jogo-imersivo__tela-cheia','‚õ∂',{type:'button','aria-label':'Usar tela cheia','aria-pressed':'false',title:'Tela cheia'});
-    cheia.addEventListener('click',alternarTelaCheia);controles.appendChild(cheia);topo.appendChild(controles);raiz.appendChild(topo);
-    var palco=criar('main','jogo-imersivo__palco'), conteudo=criar('div','jogo-imersivo__conteudo');
-    if(cap.games.length>1)conteudo.appendChild(seletorDeJogos(cap,salvo));
-    if(game.type==='writing')renderProducaoTextualJogo(conteudo,cap,game,salvo);else montarNovaExperiencia(conteudo,cap,game,perfil,salvo);palco.appendChild(conteudo);raiz.appendChild(palco);
-  }
-  function alternarTelaCheia() {
-    var alvo=$('#jogos-conteudo');
-    if(!document.fullscreenElement){if(alvo.requestFullscreen)alvo.requestFullscreen();}
-    else if(document.exitFullscreen)document.exitFullscreen();
-  }
-  function atualizarBotaoTelaCheia() {
-    var b=$('.jogo-imersivo__tela-cheia');if(!b)return;
-    var ativa=!!document.fullscreenElement;b.textContent=ativa?'‚Üô':'‚õ∂';b.setAttribute('aria-pressed',ativa?'true':'false');b.setAttribute('aria-label',ativa?'Sair da tela cheia':'Usar tela cheia');b.title=ativa?'Sair da tela cheia':'Tela cheia';
-  }
-  function definirModoJogo(ativo) {
-    document.body.classList.toggle('modo-jogo-imersivo',!!ativo);
-    if(!ativo&&document.fullscreenElement&&document.exitFullscreen)document.exitFullscreen();
-  }
-  /* Todo jogo do cap√≠tulo fica sempre √† m√£o ‚Äî inclusive os j√° conclu√≠dos. */
-  function seletorDeJogos(cap,salvo) {
-    var barra=criar('div','seletor-jogos',null,{role:'tablist','aria-label':'Jogos deste assunto'});
-    cap.games.forEach(function(g,i){
-      var feito=!!salvo.feitas[i], atual=i===jogoAtual;
-      var b=criar('button','seletor-jogo'+(atual?' seletor-jogo--atual':'')+(feito?' seletor-jogo--feito':''),
-        '<span class="seletor-jogo__n">'+(feito?'‚úì':(i+1))+'</span><span>'+textoSeguro(g.short||g.title)+'</span>',
-        {type:'button',role:'tab','aria-selected':atual?'true':'false'});
-      b.addEventListener('click',function(){
-        if(i===jogoAtual)return;
-        jogoAtual=i;salvo.atual=i;zerarPlacar();salvar();renderJogos(cap);irTopo();
-      });
-      barra.appendChild(b);
-    });
-    return barra;
-  }
-
-  function progressoExperiencias(cap) {
-    if(!estado.experiencias[cap.id]){
-      var jaConcluido=estado.progresso[cap.id]&&estado.progresso[cap.id].feito;
-      estado.experiencias[cap.id]={feitas:cap.games.map(function(){return !!jaConcluido;}),passos:{},atual:0};
-      if(jaConcluido)cap.games.forEach(function(g,i){estado.experiencias[cap.id].passos[i]=totalItens(g,((typeof EXPERIENCE_PROFILES!=='undefined'&&EXPERIENCE_PROFILES[cap.id])||[])[i]||{});});
-      salvar();
-    }
-    var p=estado.experiencias[cap.id];p.feitas=p.feitas||[];p.passos=p.passos||{};return p;
-  }
-  function totalItens(game,perfil) { if(game.type==='writing')return 1;return perfil.mode==='sequence'?game.pairs.length:(game.type==='pairs'?game.pairs.length:game.items.length); }
-
-  /* --- Estrutura dos tr√™s tempos: mexer ‚Üí ver acontecer ‚Üí dar o nome. ------
-     O artefato √© a coisa que a crian√ßa constr√≥i. Ele fica vis√≠vel no topo e
-     ganha uma pe√ßa a cada rodada; a nomea√ß√£o fecha a rodada dizendo como o
-     que ela acabou de fazer se chama na prova. */
-  function pecasConquistadas(game,passo,indices) {
-    /* Na mem√≥ria os pares saem fora de ordem, ent√£o o artefato √© montado a
-       partir dos √≠ndices realmente achados, e n√£o dos N primeiros itens. */
-    var lista=indices?indices.map(function(i){return game.items[i];}):(game.items||[]).slice(0,passo);
-    return lista.filter(Boolean).map(function(item){
-      return item.piece ? {texto:item.piece,nome:item.name} : (item.result ? {texto:item.result,nome:item.name} : null);
-    }).filter(Boolean);
-  }
-  function renderArtefato(game,passo,completo,indices) {
-    var arte=game.artifact; if(!arte)return null;
-    var pecas=pecasConquistadas(game,completo?(game.items||[]).length:passo,completo?null:indices);
-    var caixa=criar('section','artefato artefato--'+(arte.kind||'objeto')+(completo?' artefato--pronto':'')+(!pecas.length?' artefato--vazio':''));
-    caixa.appendChild(criar('h4','artefato__titulo',textoSeguro(arte.title)));
-    if(!pecas.length){caixa.appendChild(criar('p','artefato__vazio',textoSeguro(arte.empty||'Ainda n√£o tem nada aqui.')));return caixa;}
-    var lista=criar('ol','artefato__pecas');
-    pecas.forEach(function(p){
-      var li=criar('li','artefato__peca','<span class="artefato__texto">'+textoSeguro(p.texto)+'</span>'+
-        (p.nome?'<span class="artefato__etiqueta">'+textoSeguro(p.nome)+'</span>':''));
-      lista.appendChild(li);
-    });
-    caixa.appendChild(lista);
-    if(completo&&arte.done)caixa.appendChild(criar('p','artefato__fecho',textoSeguro(arte.done)));
-    return caixa;
-  }
-  /* Terceiro tempo: a crian√ßa j√° fez a coisa; agora ela recebe o nome dela. */
-  function comemorar(forte) {
-    pontuar(true); bip(forte?'vitoria':'ok'); festejar(forte);
-  }
-  function elogio() {
-    if(placar.sequencia>=5)return 'üî• '+placar.sequencia+' seguidas! Voc√™ est√° voando.';
-    if(placar.sequencia>=3)return 'üî• '+placar.sequencia+' seguidas!';
-    return ['Boa!','Isso!','Mandou bem!','Acertou!'][Math.floor(Math.random()*4)];
-  }
-  function fecharRodada(stage,item,game,aoContinuar) {
-    stage.querySelectorAll('.feedback,.pista-dinamica,.nomeacao').forEach(function(n){n.remove();});
-    stage.querySelectorAll('button').forEach(function(b){b.disabled=true;});
-    comemorar(false);
-    var caixa=criar('div','nomeacao',null,{role:'status'});
-    caixa.appendChild(criar('p','nomeacao__viva',textoSeguro(elogio())));
-    if(item.name)caixa.appendChild(criar('p','nomeacao__rotulo','Isso tem nome: <strong>'+textoSeguro(item.name)+'</strong>'));
-    if(item.say)caixa.appendChild(criar('p','nomeacao__texto',item.say));
-    stage.appendChild(caixa);
-    var nav=criar('div','navegacao');nav.appendChild(criar('span'));
-    var seguir=criar('button','botao botao--primario','Continuar ‚Üí',{type:'button'});
-    seguir.addEventListener('click',aoContinuar);nav.appendChild(seguir);stage.appendChild(nav);
-    revelar(caixa,nav);
-  }
-  function errarRodada(stage,botao,erros,pista) {
-    pontuar(false); bip('erro');
-    botao.classList.add('decisao--errada');
-    setTimeout(function(){botao.classList.remove('decisao--errada');},500);
-    if(erros>=2&&pista)mostrarPista(stage,pista);
-  }
-  function marcarPasso(cap,game,perfil,salvo,manterTela) {
-    var total=totalItens(game,perfil), atual=Number(salvo.passos[jogoAtual])||0;atual++;salvo.passos[jogoAtual]=atual;
-    if(atual>=total)salvo.feitas[jogoAtual]=true;
-    salvar();
-    /* O tabuleiro da mem√≥ria n√£o pode ser redesenhado a cada par: as cartas
-       viradas se perderiam. Quem decide a hora de redesenhar √© o pr√≥prio jogo. */
-    if(manterTela)return;
-    renderJogos(cap);irTopo();
-  }
-  function reiniciarExperiencia(cap,salvo) {
-    salvo.feitas[jogoAtual]=false;salvo.passos[jogoAtual]=0;
-    if(salvo.achados)salvo.achados[jogoAtual]=[];
-    zerarPlacar();salvar();renderJogos(cap);
-  }
-  function criarCenarioRevisao(cap,game) {
-    if(!cap.reviewImage)return null;
-    var icones={portugues:'‚úèÔ∏è',matematica:'üß©',ciencias:'üî≠',geografia:'üó∫Ô∏è',historia:'üèõÔ∏è'},icone=icones[estado.disciplina]||'‚ú®';
-    return criar('figure','jogo-revisao__cenario','<img src="'+textoSeguro(cap.reviewImage)+'" alt="'+textoSeguro(cap.reviewImageAlt||'Ilustra√ß√£o desta revis√£o.')+'"><figcaption><span aria-hidden="true">'+icone+'</span><strong>'+textoSeguro(game.title)+'</strong><small>Miss√£o de revis√£o</small></figcaption>');
-  }
-  function renderProducaoTextualJogo(raiz,cap,game,salvo) {
-    salvo.textos=salvo.textos||{};var rascunho=salvo.textos[jogoAtual]||'';
-    if(salvo.feitas[jogoAtual]){
-      var concluida=criar('section','jogo-card jogo-conclusao producao-jogo__conclusao','<h3>üéâ Produ√ß√£o textual conclu√≠da!</h3><p>Voc√™ criou um texto instrucional. Releia o resultado e confira se outra pessoa conseguiria seguir as orienta√ß√µes.</p>');
-      concluida.appendChild(criar('div','producao-jogo__texto',textoSeguro(rascunho).replace(/\n/g,'<br>')));
-      var navPronto=criar('div','navegacao'),editar=criar('button','botao','Editar meu texto',{type:'button'}),desafio=criar('button','botao botao--primario','Ir para o desafio ‚Üí',{type:'button'});
-      editar.addEventListener('click',function(){salvo.feitas[jogoAtual]=false;salvo.passos[jogoAtual]=0;salvar();renderJogos(cap);});
-      desafio.addEventListener('click',function(){selecionarAba('desafio',true);});navPronto.appendChild(editar);navPronto.appendChild(desafio);concluida.appendChild(navPronto);raiz.appendChild(concluida);return;
-    }
-    var card=criar('section','jogo-card jogo-card--novo jogo-card--revisao producao-jogo'),cenario=criarCenarioRevisao(cap,game);if(cenario)card.appendChild(cenario);
-    card.appendChild(criar('p','jogo-objetivo','‚ú® Crie, revise e d√™ vida √†s suas ideias'));
-    card.appendChild(criar('p','atividade-progresso','Jogo '+(jogoAtual+1)+' de '+cap.games.length+' ¬∑ produ√ß√£o autoral'));
-    card.appendChild(criar('h3','jogo-pergunta',textoSeguro(game.instructions)));
-    if(game.orientation)card.appendChild(criar('p','producao-textual__orientacao',textoSeguro(game.orientation)));
-    if(game.checklist&&game.checklist.length){card.appendChild(criar('strong',null,'Antes de concluir, confira:'));var lista=criar('ul','producao-textual__lista');game.checklist.forEach(function(item){lista.appendChild(criar('li',null,textoSeguro(item)));});card.appendChild(lista);}
-    var campo=criar('textarea','campo producao-textual__campo',null,{rows:'12',placeholder:'Escreva aqui seu t√≠tulo e suas instru√ß√µes‚Ä¶','aria-label':'Sua produ√ß√£o textual'});campo.value=rascunho;
-    campo.addEventListener('input',function(){salvo.textos[jogoAtual]=campo.value;});campo.addEventListener('blur',salvar);card.appendChild(campo);
-    card.appendChild(criar('p','producao-textual__aviso','Seu texto √© autoral: n√£o existe uma √∫nica resposta correta. O rascunho fica salvo neste aparelho.'));
-    var feedback=criar('div',null,null,{role:'status','aria-live':'polite'}), concluirProducao=criar('button','botao botao--primario','Concluir produ√ß√£o',{type:'button'});
-    concluirProducao.addEventListener('click',function(){var texto=campo.value.trim(),minimo=game.minLength||60;if(texto.length<minimo){feedback.className='feedback feedback--erro';feedback.innerHTML='<strong>Desenvolva um pouco mais.</strong><p class="explicacao">Inclua o t√≠tulo e pelo menos quatro etapas completas.</p>';revelar(feedback);campo.focus();return;}salvo.textos[jogoAtual]=texto;salvo.passos[jogoAtual]=1;salvo.feitas[jogoAtual]=true;salvar();comemorar(true);renderJogos(cap);irTopo();});
-    card.appendChild(feedback);card.appendChild(concluirProducao);raiz.appendChild(card);
-  }
-  function montarNovaExperiencia(raiz,cap,game,perfil,salvo) {
-    var total=totalItens(game,perfil), passo=Math.min(Number(salvo.passos[jogoAtual])||0,total), feita=!!salvo.feitas[jogoAtual];
-    if(feita){renderConclusaoExperiencia(raiz,cap,game,perfil,salvo,total);return;}
-    var revisao=!!cap.reviewImage,card=criar('section','jogo-card jogo-card--novo jogo-card--'+textoSeguro(perfil.mode||'atividade')+(revisao?' jogo-card--revisao':''));
-    if(revisao){var cenario=criarCenarioRevisao(cap,game);if(cenario)card.appendChild(cenario);card.appendChild(criar('p','jogo-objetivo','‚ú® Miss√£o de revis√£o ¬∑ descubra uma pista por vez'));}
-    var artefato=renderArtefato(game,passo,false,perfil.mode==='memoria'?(salvo.achados&&salvo.achados[jogoAtual]||[]):null);
-    if(artefato){
-      /* Com artefato, quem marca o progresso √© o pr√≥prio objeto enchendo ‚Äî
-         n√£o precisa dizer √† crian√ßa quantas perguntas ainda faltam. */
-      card.appendChild(artefato);
-    } else {
-      card.appendChild(criar('div','progresso-jogo','<span style="width:'+Math.round(passo/total*100)+'%"></span>'));
-      card.appendChild(criar('p','atividade-progresso','Jogo '+(jogoAtual+1)+' de '+cap.games.length+' ¬∑ item '+(passo+1)+' de '+total));
-    }
-    card.appendChild(criar('h3','jogo-pergunta',textoSeguro(perfil.prompt)));
-    var stage=criar('div','game-stage');card.appendChild(stage);raiz.appendChild(card);
-    var concluir=function(){marcarPasso(cap,game,perfil,salvo);};
-    if(perfil.pilot) renderPilotoVisual(stage,cap,game,passo,perfil,concluir);
-    else if(perfil.mode==='memoria') renderMemoria(stage,game,perfil,cap,salvo,
-      function(){marcarPasso(cap,game,perfil,salvo,true);},    /* guarda, sem redesenhar */
-      function(){renderJogos(cap);irTopo();});                  /* a√≠ sim mostra o resultado */
-    else if(perfil.mode==='cartaz') renderCartaz(stage,game,passo,perfil,concluir);
-    else if(perfil.mode==='maquina') renderMaquina(stage,game,passo,perfil,concluir);
-    else if(perfil.mode==='scenario'&&game.type==='pairs')renderConstrucao(stage,game,passo,perfil,concluir);
-    else if(perfil.mode==='choice'||perfil.mode==='scenario'||perfil.mode==='combinations') renderEscolhaUnica(stage,game,passo,perfil,concluir);
-    else if(perfil.mode==='builder'||perfil.mode==='explore') renderConstrucao(stage,game,passo,perfil,concluir);
-    else if(perfil.mode==='clock') renderRelogio(stage,game,passo,perfil,concluir);
-    else if(perfil.mode==='distribute') renderDistribuicao(stage,game,passo,perfil,concluir);
-    else if(perfil.mode==='sequence') renderSequenciaJogo(stage,game,passo,perfil,concluir);
-    else if(perfil.mode==='transform') renderTransformacaoJogo(stage,game,passo,perfil,concluir);
-    else if(game.type==='pairs')renderConstrucao(stage,game,passo,perfil,concluir);else renderEscolhaUnica(stage,game,passo,perfil,concluir);
-  }
-  function renderPilotoVisual(stage,cap,game,passo,perfil,concluir) {
-    var cena=criar('div','piloto piloto--'+perfil.pilot);
-    cena.style.backgroundImage='url("'+perfil.scene+'")';
-    stage.appendChild(cena);
-    if(perfil.pilot==='outfit')renderPilotoArmario(stage,cena,game,passo,concluir);
-    else if(perfil.pilot==='municipality')renderPilotoMapa(stage,cena,game,passo,concluir,false);
-    else if(perfil.pilot==='community')renderPilotoMapa(stage,cena,game,passo,concluir,true);
-    else if(perfil.pilot==='factory')renderPilotoFabrica(stage,cena,game,passo,concluir);
-    else if(perfil.pilot==='earth')renderPilotoTerra(stage,cena,game,passo,concluir);
-    else if(['origins','clockwork','observatory','comics','mailroom','sharing','moonlog','geoglossary','cityservices','heritage','civiclab'].indexOf(perfil.pilot)>=0)renderPilotoPares(stage,cena,game,passo,concluir,perfil.pilot);
-    else if(['ruralurban','access','wordrepair','pollutionlab','citycouncil','gramclass','multideas','landforces','lifearchive','timecheck','orbitsim'].indexOf(perfil.pilot)>=0)renderPilotoClassificar(stage,cena,game,passo,concluir,perfil.pilot);
-  }
-  function escolhasPiloto(lista,correta,limite) {
-    return opcoesEmbaralhadas(lista.filter(function(x){return x!==correta;}),correta,limite||3);
-  }
-  function renderPilotoArmario(stage,cena,game,passo,concluir) {
-    var par=game.pairs[passo], nums=String(par[0]).match(/\d+/g)||[], a=Number(nums[0]||1), b=Number(nums[1]||1), respostas=game.pairs.map(function(p){return p[1];});
-    var painel=criar('div','piloto__painel piloto__painel--centro','<span class="piloto__chamada">M√°quina de multiplicar</span><strong>'+textoSeguro(par[0])+'</strong><p>Escolha a pe√ßa de sa√≠da</p>');cena.appendChild(painel);
-    var opcoes=criar('div','piloto-escolhas piloto-escolhas--cabides');
-    escolhasPiloto(respostas,par[1],4).forEach(function(op){var bt=criar('button','piloto-peca piloto-peca--cabide','<span aria-hidden="true">‚öôÔ∏è</span><strong>'+textoSeguro(op)+'</strong>',{type:'button'});bt.addEventListener('click',function(){if(op===par[1]){painel.innerHTML='<span class="piloto__chamada">M√°quina ligada!</span><strong>'+textoSeguro(par[0])+' = '+textoSeguro(op)+'</strong><p>resultado correto</p>';feedbackInterativo(stage,true,a+' √ó '+b+' = '+op+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,'Observe o que acontece quando multiplicamos por 1, 10 ou 100.');}});opcoes.appendChild(bt);});stage.appendChild(opcoes);
-  }
-  function renderPilotoMapa(stage,cena,game,passo,concluir,comunidade) {
-    var item=game.items[passo], zonas=comunidade?['Espa√ßo p√∫blico','Espa√ßo privado']:['√Årea rural','√Årea urbana'];
-    cena.appendChild(criar('div','piloto__cartao-movel','<span aria-hidden="true">'+(comunidade?'üìç':'üß≠')+'</span><strong>'+textoSeguro(item.text)+'</strong><small>Toque no destino</small>'));
-    var destinos=criar('div','piloto-destinos');zonas.forEach(function(nome,i){var bt=criar('button','piloto-destino piloto-destino--'+(i?'direita':'esquerda'),'<span>'+textoSeguro(nome)+'</span>',{type:'button'});bt.addEventListener('click',function(){if(i===item.cat){bt.classList.add('piloto-destino--certo');feedbackInterativo(stage,true,item.text+' foi colocado em '+nome.toLowerCase()+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,comunidade?'Pense em quem pode entrar e usar esse espa√ßo.':'Observe se essa atividade depende mais do campo ou da cidade.');}});destinos.appendChild(bt);});cena.appendChild(destinos);
-  }
-  function renderPilotoFabrica(stage,cena,game,passo,concluir) {
-    var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];});
-    cena.appendChild(criar('div','piloto__painel piloto__painel--maquina','<span class="piloto__chamada">Entra na f√°brica</span><strong>'+textoSeguro(par[0])+'</strong><p class="piloto__saida">?</p>'));
-    var pecas=criar('div','piloto-escolhas piloto-escolhas--letras');escolhasPiloto(respostas,par[1],3).forEach(function(op){var bt=criar('button','piloto-peca piloto-peca--letra',textoSeguro(op),{type:'button'});bt.addEventListener('click',function(){if(op===par[1]){cena.querySelector('.piloto__saida').textContent=op;cena.classList.add('piloto--ativado');feedbackInterativo(stage,true,par[0]+' vira '+op+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,'Procure a palavra terminada em -oso ou -osa que mant√©m a ideia da express√£o.');}});pecas.appendChild(bt);});stage.appendChild(pecas);
-  }
-  function renderPilotoTerra(stage,cena,game,passo,concluir) {
-    var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];});
-    cena.appendChild(criar('div','piloto__painel piloto__painel--terra','<span class="piloto__chamada">Pe√ßa do modelo</span><strong>'+textoSeguro(par[0])+'</strong>'));
-    var bandejas=criar('div','piloto-escolhas piloto-escolhas--bandejas');escolhasPiloto(respostas,par[1],3).forEach(function(op){var bt=criar('button','piloto-peca piloto-peca--bandeja',textoSeguro(op),{type:'button'});bt.addEventListener('click',function(){if(op===par[1]){cena.classList.add('piloto--ativado');feedbackInterativo(stage,true,par[0]+': '+op+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,'Observe se a palavra fala de √°gua, ar, rochas ou do interior do planeta.');}});bandejas.appendChild(bt);});stage.appendChild(bandejas);
-  }
-  function renderPilotoPares(stage,cena,game,passo,concluir,tipo) {
-    var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];}), icones={origins:'üß≥',clockwork:'üï∞Ô∏è',observatory:'üî≠',comics:'üí¨',mailroom:'‚úâÔ∏è',sharing:'üß∫',moonlog:'üåô',geoglossary:'üó∫Ô∏è',cityservices:'üèõÔ∏è',heritage:'üß≠',civiclab:'ü§ù'}, icone=icones[tipo]||'‚ú®';
-    var chamadas={origins:'Lugar de origem',clockwork:'Hor√°rio no cotidiano',observatory:'Corpo celeste',comics:'Cena dos quadrinhos',mailroom:'Forma de tratamento',sharing:'Desafio de divis√£o',moonlog:'Registro da Lua',geoglossary:'Cart√£o de campo',cityservices:'Lugar da cidade',heritage:'Pe√ßa do museu',civiclab:'Responsabilidade p√∫blica'};
-    cena.appendChild(criar('div','piloto__painel piloto__painel--topo','<span class="piloto__chamada">'+chamadas[tipo]+'</span><strong>'+icone+' '+textoSeguro(par[0])+'</strong><p>Escolha a combina√ß√£o</p>'));
-    var opcoes=criar('div','piloto-escolhas piloto-escolhas--no-tabuleiro');
-    escolhasPiloto(respostas,par[1],3).forEach(function(op){var bt=criar('button','piloto-peca piloto-peca--tabuleiro',textoSeguro(op),{type:'button'});bt.addEventListener('click',function(){if(op===par[1]){cena.classList.add('piloto--ativado');feedbackInterativo(stage,true,par[0]+' combina com '+op+'.','',concluir);}else{bt.classList.add('decisao--errada');var pistas={clockwork:'Depois do meio-dia, conte mais 12 horas.',origins:'Procure a palavra usada para indicar quem nasce nesse lugar.',observatory:'Pense em como esse corpo se move e se ele produz a pr√≥pria luz.',comics:'Observe se a cena √© fala, pensamento, grito ou cochicho.',mailroom:'Pense no cargo ou na rela√ß√£o entre as pessoas.',sharing:'Imagine a quantidade repartida em partes iguais.',moonlog:'Observe quanto da face da Lua aparece iluminada.'};mostrarPista(stage,pistas[tipo]||'Compare cada op√ß√£o com a situa√ß√£o.');}});opcoes.appendChild(bt);});cena.appendChild(opcoes);
-  }
-  function renderPilotoClassificar(stage,cena,game,passo,concluir,tipo) {
-    var item=game.items[passo], nomes=game.categories, tres=nomes.length===3, muitos=nomes.length>3, icones={access:'üîë',ruralurban:'üß≠',wordrepair:'‚úèÔ∏è',pollutionlab:'üö®',citycouncil:'üèôÔ∏è',gramclass:'üè∑Ô∏è',multideas:'üß™',landforces:'‚õ∞Ô∏è',lifearchive:'üìñ',timecheck:'‚è±Ô∏è',orbitsim:'üåç'};
-    cena.appendChild(criar('div','piloto__cartao-movel','<span aria-hidden="true">'+(icones[tipo]||'‚ú®')+'</span><strong>'+textoSeguro(item.text)+'</strong><small>Escolha o destino</small>'));
-    if(muitos){var opcoes=criar('div','piloto-escolhas piloto-escolhas--no-tabuleiro piloto-escolhas--quatro');nomes.forEach(function(nome,i){var bt=criar('button','piloto-peca piloto-peca--tabuleiro',textoSeguro(nome),{type:'button'});bt.addEventListener('click',function(){if(i===item.cat){cena.classList.add('piloto--ativado');feedbackInterativo(stage,true,item.text+' pertence a '+nome.toLowerCase()+'.','',concluir);}else{bt.classList.add('decisao--errada');mostrarPista(stage,'Observe se a situa√ß√£o afeta o ar, a √°gua, os sons ou a paisagem.');}});opcoes.appendChild(bt);});cena.appendChild(opcoes);return;}
-    var destinos=criar('div','piloto-destinos'+(tres?' piloto-destinos--tres':''));
-    nomes.forEach(function(nome,i){var pos=tres?(i===0?'esquerda':i===1?'centro':'direita'):(i?'direita':'esquerda');var bt=criar('button','piloto-destino piloto-destino--'+pos,'<span>'+textoSeguro(nome)+'</span>',{type:'button'});bt.addEventListener('click',function(){if(i===item.cat){bt.classList.add('piloto-destino--certo');feedbackInterativo(stage,true,item.text+' pertence a '+nome.toLowerCase()+'.','',concluir);}else{bt.classList.add('decisao--errada');var pistas={access:'Pense em quem √© dono do espa√ßo e se qualquer pessoa pode entrar.',ruralurban:'Observe o ritmo, o transporte e as atividades dessa situa√ß√£o.',wordrepair:'Leia a palavra completa em voz alta e lembre como ela √© escrita.',citycouncil:'Pergunte se a situa√ß√£o √© um problema atual ou uma a√ß√£o que pode melhorar a cidade.',gramclass:'Substantivos d√£o nome; adjetivos mostram caracter√≠sticas.',multideas:'Veja se h√° escolhas diferentes ou grupos repetidos.',landforces:'Vulc√µes e placas agem por dentro; vento, √°gua e temperatura agem por fora.',lifearchive:'Se aparece eu ou minha, a pr√≥pria pessoa conta; ele ou ela indica outra pessoa.',timecheck:'Converta tudo para a mesma unidade antes de comparar.',orbitsim:'Rota√ß√£o √© o giro da Terra em si mesma; transla√ß√£o √© o caminho ao redor do Sol.'};mostrarPista(stage,pistas[tipo]||'Observe as caracter√≠sticas da situa√ß√£o.');}});destinos.appendChild(bt);});cena.appendChild(destinos);
-  }
-  function renderConclusaoExperiencia(raiz,cap,game,perfil,salvo,total) {
-    var arte=game&&game.artifact, box;
-    if(arte){
-      /* A recompensa √© a coisa pronta na tela ‚Äî e s√≥ aqui o termo da prova
-         aparece sozinho, como nome do que a crian√ßa acabou de construir. */
-      box=criar('section','jogo-card jogo-conclusao','<h3>üéâ Voc√™ montou '+textoSeguro(perfil.result)+'.</h3>');
-      box.appendChild(renderArtefato(game,total,true));
-      if(arte.termLine)box.appendChild(criar('p','conclusao-termo',arte.termLine));
-    } else {
-      box=criar('section','jogo-card jogo-conclusao','<h3>üéâ Voc√™ completou '+textoSeguro(perfil.result)+'.</h3>');
-    }
-    var nav=criar('div','navegacao'), repetir=criar('button','botao','Jogar novamente',{type:'button'});repetir.addEventListener('click',function(){reiniciarExperiencia(cap,salvo);});nav.appendChild(repetir);
-    if(jogoAtual<cap.games.length-1){var proximo=criar('button','botao botao--primario','Pr√≥ximo jogo ‚Üí',{type:'button'});proximo.addEventListener('click',function(){jogoAtual++;salvo.atual=jogoAtual;salvar();renderJogos(cap);});nav.appendChild(proximo);}box.appendChild(nav);raiz.appendChild(box);
-  }
-  function opcoesEmbaralhadas(lista,correta,limite) {
-    var unicas=[];[correta].concat(misturar(lista)).forEach(function(x){if(unicas.indexOf(x)<0)unicas.push(x);});return misturar(unicas.slice(0,limite||3));
-  }
-  function feedbackInterativo(stage,certo,mensagem,pista,aoContinuar) {
-    stage.querySelectorAll('.feedback,.pista-dinamica').forEach(function(n){n.remove();});
-    pontuar(certo); bip(certo?'ok':'erro'); if(certo)festejar(false);
-    var fb=criar('div','feedback '+(certo?'feedback--ok':'feedback--erro'),'<strong>'+(certo?elogio():'Ainda n√£o.')+'</strong><p class="explicacao">'+textoSeguro(mensagem)+'</p>',{role:'status'});stage.appendChild(fb);
-    if(!certo&&pista)mostrarPista(stage,pista);
-    if(certo){stage.querySelectorAll('button').forEach(function(b){b.disabled=true;});var nav=criar('div','navegacao');nav.appendChild(criar('span'));var seguir=criar('button','botao botao--primario','Ver a pr√≥xima ‚Üí',{type:'button'});seguir.addEventListener('click',aoContinuar);nav.appendChild(seguir);stage.appendChild(nav);revelar(fb,nav);}
-    else revelar(fb);
-  }
-  function mostrarPista(stage,mensagem) {stage.querySelectorAll('.pista-dinamica').forEach(function(n){n.remove();});var m=falaMascote(mensagem,true);m.classList.add('pista-dinamica');stage.appendChild(m);revelar(m);}
-  /* Jogo da mem√≥ria: as cartas ficam viradas para baixo e a crian√ßa procura a
-     palavra que combina. Cada par achado nomeia o grau e vai para o artefato. */
-  function renderMemoria(stage,game,perfil,cap,salvo,registrar,verResultado) {
-    var achados=(salvo.achados&&salvo.achados[jogoAtual]||[]).slice();
-    var cartas=[];
-    game.items.forEach(function(item,i){
-      cartas.push({i:i,texto:item.base,lado:'base'});
-      cartas.push({i:i,texto:item.result,lado:'result'});
-    });
-    cartas=misturar(cartas);
-    var mesa=criar('div','memoria'), virada=null, travado=false;
-    cartas.forEach(function(carta){
-      var achada=achados.indexOf(carta.i)>=0;
-      var b=criar('button','carta'+(achada?' carta--achada':''),
-        '<span class="carta__verso" aria-hidden="true"><i>‚ú¶</i></span><span class="carta__frente">'+textoSeguro(carta.texto)+'</span>',
-        {type:'button','aria-label':achada?carta.texto:'Carta virada para baixo'});
-      b.dados=carta;
-      if(achada)b.disabled=true;
-      b.addEventListener('click',function(){
-        if(travado||b.disabled||b===virada)return;
-        b.classList.add('carta--aberta'); b.setAttribute('aria-label',carta.texto);
-        if(!virada){virada=b; bip('ok'); return;}
-        var outra=virada; virada=null;
-        if(outra.dados.i===carta.i){
-          [outra,b].forEach(function(x){x.classList.add('carta--achada');x.disabled=true;});
-          achados.push(carta.i);
-          salvo.achados=salvo.achados||{}; salvo.achados[jogoAtual]=achados.slice();
-          var ultimo=achados.length>=game.items.length;
-          comemorar(ultimo);
-          trocarArtefato(game,achados);
-          registrar();
-          /* Mesmo no √∫ltimo par a nomea√ß√£o aparece primeiro: o resultado s√≥
-             entra quando a crian√ßa tocar em continuar. */
-          nomearInline(stage,game.items[carta.i],ultimo?verResultado:null);
-        } else {
-          travado=true; pontuar(false); bip('erro');
-          [outra,b].forEach(function(x){x.classList.add('carta--errada');});
-          setTimeout(function(){
-            [outra,b].forEach(function(x){x.classList.remove('carta--aberta','carta--errada');x.setAttribute('aria-label','Carta virada para baixo');});
-            travado=false;
-          },900);
-        }
-      });
-      mesa.appendChild(b);
-    });
-    stage.appendChild(mesa);
-  }
-  /* Na mem√≥ria a nomea√ß√£o n√£o trava nada: a crian√ßa continua jogando. */
-  function nomearInline(stage,item,aoFechar) {
-    stage.querySelectorAll('.nomeacao').forEach(function(n){n.remove();});
-    stage.querySelectorAll('.navegacao').forEach(function(n){n.remove();});
-    var caixa=criar('div','nomeacao nomeacao--solta',null,{role:'status'});
-    caixa.appendChild(criar('p','nomeacao__viva',textoSeguro(aoFechar?'üéâ Achou todos os pares!':elogio())));
-    if(item.name)caixa.appendChild(criar('p','nomeacao__rotulo','Par achado: <strong>'+textoSeguro(item.name)+'</strong>'));
-    if(item.say)caixa.appendChild(criar('p','nomeacao__texto',item.say));
-    stage.appendChild(caixa);
-    var fim=caixa;
-    if(aoFechar){
-      var nav=criar('div','navegacao');nav.appendChild(criar('span'));
-      var b=criar('button','botao botao--primario','Ver o que voc√™ achou ‚Üí',{type:'button'});
-      b.addEventListener('click',aoFechar);nav.appendChild(b);stage.appendChild(nav);fim=nav;
-    }
-    revelar(caixa,fim);
-  }
-  function trocarArtefato(game,achados) {
-    var velho=$('.artefato'); if(!velho)return;
-    var novo=renderArtefato(game,achados.length,false,achados);
-    if(novo)velho.parentNode.replaceChild(novo,velho);
-  }
-
-  /* Jogo do cartaz: a crian√ßa l√™ um trecho de verdade e decide se ele ensina
-     algu√©m a fazer algo. O que entra vira um passo do cartaz, ali em cima. */
-  function renderCartaz(stage,game,passo,perfil,concluir) {
-    var item=game.items[passo], erros=0;
-    var cena=criar('div','cena-trecho','<span class="cena-trecho__selo">Trecho recortado</span><p class="cena-trecho__texto">'+textoSeguro(item.text)+'</p>');
-    stage.appendChild(cena);
-    var opcoes=criar('div','decisoes decisoes--cartaz');
-    game.categories.forEach(function(nome,i){
-      var b=criar('button','decisao decisao--grande'+(i===0?' decisao--aceitar':' decisao--recusar'),
-        (i===0?'<span aria-hidden="true">üìã</span> ':'<span aria-hidden="true">üóëÔ∏è</span> ')+textoSeguro(nome),{type:'button'});
-      b.addEventListener('click',function(){
-        if(i===item.cat){
-          b.classList.add('decisao--certa');
-          cena.classList.add(item.cat===0?'cena-trecho--aceita':'cena-trecho--recusada');
-          fecharRodada(stage,item,game,concluir);
-        } else {
-          erros++;
-          errarRodada(stage,b,erros,'Pergunte a si mesma: algu√©m consegue FAZER alguma coisa lendo isso?');
-        }
-      });
-      opcoes.appendChild(b);
-    });
-    stage.appendChild(opcoes);
-  }
-  /* M√°quina de encolher e crescer: a palavra entra INTEIRA e a sa√≠da fica em
-     branco ‚Äî nada de peda√ßo pr√©-quebrado, que s√≥ confunde. A crian√ßa escolhe
-     entre palavras inteiras (as erradas s√£o os erros que a prova cobra) e v√™
-     a palavra escolhida encolher ou crescer de verdade na tela. */
-  function renderMaquina(stage,game,passo,perfil,concluir) {
-    var item=game.items[passo], erros=0, cresce=item.dir==='maior';
-    var acao=(cresce?'CRESCER':'ENCOLHER')+(item.plural?' MUITOS':'');
-    var maquina=criar('div','maquina'+(cresce?' maquina--cresce':' maquina--encolhe'));
-    maquina.innerHTML='<figure class="maquina__ilustracao"><img src="assets/'+(cresce?'jogo-maquina-aumentar.webp':'jogo-maquina-encolher.webp')+'" alt="M√°quina '+(cresce?'aumentadora':'encolhedora')+' transformando um vaso"><figcaption>'+ (cresce?'M√°quina de aumentar':'M√°quina de encolher') +'</figcaption></figure>'+
-      '<div class="maquina__painel"><div class="maquina__lado"><span>1 ¬∑ entra</span><strong class="maquina__base">'+textoSeguro(item.base)+'</strong></div>'+
-      '<div class="maquina__corpo"><i class="maquina__engrenagem" aria-hidden="true">‚öô</i><span class="maquina__acao">'+textoSeguro(acao)+'</span></div>'+
-      '<div class="maquina__lado"><span>2 ¬∑ sai</span><strong class="maquina__saida">?</strong></div></div>';
-    stage.appendChild(maquina);
-    var escolhas=criar('div','palavras-maquina');
-    misturar([item.result].concat(item.wrong||[])).forEach(function(op){
-      var b=criar('button','palavra-maquina',textoSeguro(op),{type:'button'});
-      b.addEventListener('click',function(){
-        if(op===item.result){
-          b.classList.add('decisao--certa');
-          var saida=maquina.querySelector('.maquina__saida');
-          saida.textContent=op;
-          maquina.classList.add('maquina--pronta');
-          fecharRodada(stage,item,game,concluir);
-        } else {
-          erros++;
-          errarRodada(stage,b,erros,item.plural
-            ? 'Passe a palavra para o plural primeiro e olhe como ela termina.'
-            : 'Olhe a √∫ltima s√≠laba de ‚Äú'+item.base+'‚Äù. Ela tem a letra S?');
-        }
-      });
-      escolhas.appendChild(b);
-    });
-    stage.appendChild(escolhas);
-  }
-  function renderEscolhaUnica(stage,game,passo,perfil,concluir) {
-    var item=game.items[passo], erros=0, cena=criar('div','cena-decisao');
-    if(perfil.mode==='scenario')cena.appendChild(criar('span','cena-decisao__selo','Situa√ß√£o'));
-    if(perfil.mode==='combinations')cena.appendChild(criar('div','cena-objetos',visualizarNumeros(item.text)));
-    cena.appendChild(criar('p','cena-decisao__texto',textoSeguro(item.text)));stage.appendChild(cena);
-    var opcoes=criar('div','decisoes'+(game.categories.length>2?' decisoes--muitas':''));
-    game.categories.forEach(function(nome,i){var b=criar('button','decisao',textoSeguro(rotuloCurto(nome)),{type:'button'});b.addEventListener('click',function(){if(i===item.cat){b.classList.add('decisao--certa');if(/__/.test(item.text))cena.querySelector('.cena-decisao__texto').textContent=completarLacuna(item.text,nome);feedbackInterativo(stage,true,mensagemDaEscolha(item,nome,perfil),'',concluir);}else{erros++;b.classList.add('decisao--errada');setTimeout(function(){b.classList.remove('decisao--errada');},500);if(erros===1)feedbackInterativo(stage,false,'Leia o cart√£o novamente e compare com as respostas.','',function(){});else if(erros>=2)mostrarPista(stage,'Pista: a melhor resposta √© ‚Äú'+rotuloCurto(game.categories[item.cat])+'‚Äù.');}});opcoes.appendChild(b);});stage.appendChild(opcoes);
-  }
-  function mensagemDaEscolha(item,categoria,perfil) {
-    if(perfil.result==='conjunto de pistas')return item.cat===0?'Sim. Isso ajuda a pessoa a entender e seguir os passos.':'Certo. Isso aparece em outros tipos de texto, n√£o em uma instru√ß√£o.';
-    return 'Esta situa√ß√£o combina com ‚Äú'+rotuloCurto(categoria)+'‚Äù.';
-  }
-  function completarLacuna(texto,categoria) {var letra=/com S/i.test(categoria)?'s':(/com Z/i.test(categoria)?'z':'');return String(texto).replace('__',letra);}
-  function rotuloCurto(nome) {
-    return String(nome).replace('Caracter√≠stica do texto instrucional','Sim, √© uma pista').replace('N√ÉO √© caracter√≠stica dele','N√£o √© uma pista').replace('Combina√ß√£o de possibilidades','Combinar escolhas').replace('Adi√ß√£o de parcelas iguais','Repetir grupos iguais').replace(/^Substantivo$/,'D√° nome').replace(/^Adjetivo$/,'Mostra caracter√≠stica');
-  }
-  function visualizarNumeros(texto) {
-    var nums=String(texto).match(/\d+/g)||[];if(!nums.length)return '<span class="objeto-visual">?</span>';
-    return nums.slice(0,2).map(function(n){return '<span class="objeto-visual">'+n+'</span>';}).join('<span class="objeto-visual__vezes">√ó</span>');
-  }
-  function renderConstrucao(stage,game,passo,perfil,concluir) {
-    if(game.type==='sort'){renderEscolhaUnica(stage,game,passo,perfil,concluir);return;}
-    if(perfil.wordParts){renderConstrucaoPalavra(stage,game,passo,concluir);return;}
-    var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];}), opcoes=opcoesEmbaralhadas(respostas,par[1],3), erros=0;
-    var cena=criar('div','cena-construcao','<span class="cena-decisao__selo">'+(perfil.mode==='explore'?'Pista para investigar':'Pe√ßa inicial')+'</span><p>'+textoSeguro(par[0])+'</p><div class="construcao-resultado" aria-live="polite"><span>?</span></div>');stage.appendChild(cena);
-    var escolhas=criar('div','decisoes decisoes--coluna');opcoes.forEach(function(op){var b=criar('button','decisao',textoSeguro(op),{type:'button'});b.addEventListener('click',function(){if(op===par[1]){b.classList.add('decisao--certa');cena.querySelector('.construcao-resultado').innerHTML=montarPecasResposta(op);feedbackInterativo(stage,true,'A liga√ß√£o ficou completa. Observe as duas partes juntas.','',concluir);}else{erros++;b.classList.add('decisao--errada');setTimeout(function(){b.classList.remove('decisao--errada');},500);if(erros===1)feedbackInterativo(stage,false,'Essa pe√ßa n√£o completa a ideia.','',function(){});else if(erros>=2)mostrarPista(stage,'A resposta correta come√ßa com ‚Äú'+par[1].slice(0,Math.min(4,par[1].length))+'‚Ä¶‚Äù.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
-  }
-  function prefixoComum(a,b) {var i=0;a=String(a);b=String(b);while(i<a.length&&i<b.length&&normalizar(a[i])===normalizar(b[i]))i++;return a.slice(0,i);}
-  function partesDaPalavra(par) {var base=prefixoComum(par[0],par[1]);return {base:base,sufixo:String(par[1]).slice(base.length)};}
-  function renderConstrucaoPalavra(stage,game,passo,concluir) {
-    var par=game.pairs[passo], partes=partesDaPalavra(par), sufixos=game.pairs.map(partesDaPalavra).map(function(x){return x.sufixo;}), opcoes=opcoesEmbaralhadas(sufixos,partes.sufixo,4), erros=0;
-    var cena=criar('div','cena-construcao','<span class="cena-decisao__selo">Palavra original: '+textoSeguro(par[0])+'</span><div class="palavra-montagem"><span>'+textoSeguro(partes.base)+'</span><b>?</b></div>');stage.appendChild(cena);
-    var escolhas=criar('div','pecas-palavra');opcoes.forEach(function(op){var b=criar('button','peca-palavra',textoSeguro(op),{type:'button'});b.addEventListener('click',function(){if(op===partes.sufixo){b.classList.add('decisao--certa');cena.querySelector('.palavra-montagem b').textContent=op;feedbackInterativo(stage,true,partes.base+' + '+op+' forma '+par[1]+'.','',concluir);}else{erros++;b.classList.add('decisao--errada');setTimeout(function(){b.classList.remove('decisao--errada');},500);if(erros>=2)mostrarPista(stage,'Observe como come√ßa ‚Äú'+par[1]+'‚Äù. A parte que falta vem logo depois de ‚Äú'+partes.base+'‚Äù.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
-  }
-  function montarPecasResposta(resposta) {
-    var partes=String(resposta).split(/(\s+|‚Üí|=)/).filter(function(x){return x.trim();});return partes.map(function(p){return '<span>'+textoSeguro(p)+'</span>';}).join('');
-  }
-  function horaDoTexto(txt) {var t=normalizar(txt);if(t.indexOf('meia noite')>=0)return 0;if(t.indexOf('meio dia')>=0)return 12;var m=t.match(/\d+/);return m?Number(m[0])%12:0;}
-  function renderRelogio(stage,game,passo,perfil,concluir) {
-    var par=game.pairs[passo], hora=horaDoTexto(par[0]), respostas=game.pairs.map(function(p){return p[1];}), opcoes=opcoesEmbaralhadas(respostas,par[1],3), erros=0;
-    var relogio=criar('div','relogio-jogo','<span class="relogio__n r12">12</span><span class="relogio__n r3">3</span><span class="relogio__n r6">6</span><span class="relogio__n r9">9</span><i class="ponteiro ponteiro--hora" style="transform:rotate('+(hora*30)+'deg)"></i><i class="ponteiro ponteiro--minuto"></i><b></b>');stage.appendChild(criar('p','cena-legenda',textoSeguro(par[0])));stage.appendChild(relogio);
-    var escolhas=criar('div','decisoes');opcoes.forEach(function(op){var b=criar('button','decisao',textoSeguro(op),{type:'button'});b.addEventListener('click',function(){if(op===par[1]){b.classList.add('decisao--certa');feedbackInterativo(stage,true,'O rel√≥gio e o hor√°rio de 24 horas representam o mesmo momento.','',concluir);}else{erros++;b.classList.add('decisao--errada');if(erros>=2)mostrarPista(stage,'Depois do meio-dia, podemos somar 12 √† hora mostrada.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
-  }
-  function divisorDoTexto(txt) {var bruto=String(txt),m=bruto.match(/√∑\s*(\d+)/);if(m)return Number(m[1]);var t=normalizar(txt);if(/terca/.test(t))return 3;if(/metade/.test(t))return 2;if(/quinta/.test(t))return 5;if(/quarta/.test(t))return 4;if(/decima/.test(t))return 10;return 2;}
-  function renderDistribuicao(stage,game,passo,perfil,concluir) {
-    var par=game.pairs[passo], numeros=String(par[0]).match(/\d+/g)||[], total=String(par[0]).indexOf('√∑')>=0?Number(numeros[0]):Number(numeros[numeros.length-1]), divisor=divisorDoTexto(par[0]), resposta=Number(par[1]), alternativas=opcoesEmbaralhadas([String(Math.max(1,resposta-1)),String(resposta+1),String(resposta+2)],String(resposta),3), erros=0;
-    stage.appendChild(criar('p','cena-legenda',textoSeguro(par[0])));var objetos=criar('div','objetos-divisao');for(var i=0;i<Math.min(total,40);i++)objetos.appendChild(criar('i','objeto-divisao'));stage.appendChild(objetos);
-    var grupos=criar('div','grupos-divisao');for(var g=0;g<divisor;g++)grupos.appendChild(criar('div','grupo-divisao','<span>grupo '+(g+1)+'</span>'));stage.appendChild(grupos);
-    var escolhas=criar('div','decisoes');alternativas.forEach(function(op){var b=criar('button','decisao',op+' em cada grupo',{type:'button'});b.addEventListener('click',function(){if(Number(op)===resposta){b.classList.add('decisao--certa');objetos.classList.add('objetos-divisao--movidos');grupos.querySelectorAll('.grupo-divisao').forEach(function(gr){for(var j=0;j<resposta&&j<12;j++)gr.appendChild(criar('i','objeto-divisao'));});feedbackInterativo(stage,true,total+' objetos repartidos em '+divisor+' grupos deixam '+resposta+' em cada um.','',concluir);}else{erros++;b.classList.add('decisao--errada');if(erros>=2)mostrarPista(stage,'Experimente contar de '+divisor+' em '+divisor+' at√© chegar a '+total+'.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
-  }
-  function renderSequenciaJogo(stage,game,passo,perfil,concluir) {
-    var corretos=game.pairs.slice(0,passo), restantes=misturar(game.pairs.slice(passo)), esperado=game.pairs[passo], erros=0;
-    var fluxo=criar('ol','fluxo-etapas');corretos.forEach(function(p){fluxo.appendChild(criar('li',null,'<strong>'+textoSeguro(p[0])+'</strong><span>'+textoSeguro(p[1])+'</span>'));});fluxo.appendChild(criar('li','fluxo-etapas__vazio','Qual √© a etapa '+(passo+1)+'?'));stage.appendChild(fluxo);
-    var escolhas=criar('div','decisoes decisoes--coluna');restantes.forEach(function(par){var b=criar('button','decisao',textoSeguro(par[0]),{type:'button'});b.addEventListener('click',function(){if(par===esperado){b.classList.add('decisao--certa');feedbackInterativo(stage,true,par[0]+': '+par[1],'',concluir);}else{erros++;b.classList.add('decisao--errada');if(erros>=2)mostrarPista(stage,'Pista: a pr√≥xima etapa √© ‚Äú'+esperado[0]+'‚Äù.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
-  }
-  function renderTransformacaoJogo(stage,game,passo,perfil,concluir) {
-    var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];}), opcoes=opcoesEmbaralhadas(respostas,par[1],3), erros=0;
-    var painel=criar('div','painel-transformacao','<div><span>Antes</span><strong>'+textoSeguro(par[0])+'</strong></div><i>‚Üí</i><div class="painel-transformacao__depois"><span>Depois</span><strong>?</strong></div>');stage.appendChild(painel);
-    var escolhas=criar('div','decisoes decisoes--coluna');opcoes.forEach(function(op){var b=criar('button','decisao',textoSeguro(op),{type:'button'});b.addEventListener('click',function(){if(op===par[1]){b.classList.add('decisao--certa');painel.querySelector('.painel-transformacao__depois strong').textContent=op;painel.classList.add('painel-transformacao--pronto');feedbackInterativo(stage,true,'Observe o que mudou em todas as palavras da express√£o.','',concluir);}else{erros++;b.classList.add('decisao--errada');if(erros>=2)mostrarPista(stage,'Confira se substantivo, artigo e caracter√≠stica est√£o todos no plural.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
-  }
-
-  function iniciarQuiz(cap,reiniciar) {
-    var guardado=!reiniciar && estado.tentativas[cap.id];
-    if(guardado){
-      var errSet={};(guardado.erros||[]).forEach(function(i){errSet[i]=true;});
-      var feitas={};for(var k=0;k<(guardado.indice||0);k++){feitas[k]={acertou:!errSet[k],contou:!errSet[k],escolhaIdx:-1,escolhaTxt:null};}
-      quiz={indice:guardado.indice||0,acertos:guardado.acertos||0,respondidas:guardado.indice||0,erros:(guardado.erros||[]).map(function(i){return {questao:cap.quiz[i],indiceOriginal:i};}),indices:cap.quiz.map(function(_,i){return i;}),revisao:false,pausa:false,feitas:feitas};
-    } else {
-      quiz={indice:0,acertos:0,respondidas:0,erros:[],indices:cap.quiz.map(function(_,i){return i;}),revisao:false,pausa:false,feitas:{}};
-    }
-    if(reiniciar){delete estado.tentativas[cap.id];salvar();}
-    renderQuestao(cap);
-  }
-  function salvarTentativa(cap) {
-    if(quiz.revisao)return;
-    estado.tentativas[cap.id]={indice:quiz.indice,acertos:quiz.acertos,erros:quiz.erros.map(function(e){return e.indiceOriginal;})};salvar();
-  }
-  function perguntasAtuais(cap) { return quiz.revisao ? quiz.perguntas : cap.quiz; }
-  function contextualizarQuestao(cap,q) {
-    var texto=q.q, imagem=q.image||null, imagemAlt=q.imageAlt||'', imagemCaption=q.imageCaption||'', contexto='', indice=cap.quiz.indexOf(q), plano=(typeof PEDAGOGY!=='undefined'&&PEDAGOGY[cap.id])||null, ajuste=plano&&plano.questions&&plano.questions[indice];
-    if(ajuste){contexto=ajuste.context||'';texto=ajuste.prompt||texto;}
-    if(/^Na tirinha,/i.test(texto)) texto=texto.replace(/^Na tirinha,/i,'Leia este di√°logo de uma tirinha:');
-    if(cap.id==='cie11' && /Ant√°rtica aparece completamente escura/i.test(texto)) texto='Uma imagem das luzes noturnas da Terra mostra onde h√° muitas cidades. Nela, a Ant√°rtica aparece completamente escura. Por qu√™?';
-    if(imagem && !imagemAlt) imagemAlt='Ilustra√ß√£o de apoio para responder √† pergunta.';
-    if(imagem && !imagemCaption) imagemCaption='Observe a ilustra√ß√£o antes de responder.';
-    return {texto:texto,contexto:contexto,imagem:imagem,imagemAlt:imagemAlt,imagemCaption:imagemCaption};
-  }
-  function renderQuestao(cap) {
-    var raiz=$('#desafio-conteudo'); raiz.innerHTML='';
-    if(!cap.quiz||!cap.quiz.length){raiz.appendChild(criar('div','vazio','Ainda n√£o h√° perguntas para este assunto.'));return;}
-    var perguntas=perguntasAtuais(cap);
-    if(quiz.indice>=perguntas.length){renderResultado(cap);return;}
-    var q=perguntas[quiz.indice], contexto=contextualizarQuestao(cap,q), card=criar('section','quiz-card');
-    card.innerHTML='<p class="quiz-card__etapa">'+(quiz.revisao?'Revis√£o ¬∑ ':'')+'Pergunta '+(quiz.indice+1)+' de '+perguntas.length+'</p>';
-    var oi=quiz.indices[quiz.indice], feita=quiz.feitas&&quiz.feitas[oi];
-    var barraNav=criar('div','quiz-card__nav-topo');
-    var anterior=criar('button','botao botao--leve quiz-card__voltar','<span aria-hidden="true">‚Üê</span> Anterior',{type:'button','aria-label':'Voltar para a pergunta anterior'});
-    anterior.disabled=quiz.indice===0;
-    anterior.addEventListener('click',function(){if(quiz.indice===0)return;quiz.indice--;salvarTentativa(cap);renderQuestao(cap);irTopo();});
-    var recomecar=criar('button','botao botao--leve quiz-card__recomecar','<span aria-hidden="true">‚Üª</span> Recome√ßar',{type:'button','aria-label':'Recome√ßar o desafio desde a primeira pergunta'});
-    recomecar.disabled=quiz.indice===0;
-    recomecar.addEventListener('click',function(){iniciarQuiz(cap,true);irTopo();});
-    barraNav.appendChild(anterior);barraNav.appendChild(recomecar);
-    card.insertBefore(barraNav,card.firstChild);
-    if(contexto.imagem){
-      card.appendChild(figuraOpcional(criar('figure','questao-contexto','<a href="'+textoSeguro(contexto.imagem)+'" target="_blank" rel="noopener" aria-label="Ampliar a ilustra√ß√£o"><img src="'+textoSeguro(contexto.imagem)+'" alt="'+textoSeguro(contexto.imagemAlt)+'" loading="lazy"></a><figcaption>'+textoSeguro(contexto.imagemCaption)+' Toque na imagem para ampli√°-la.</figcaption>')));
-    }
-    if(contexto.contexto)card.appendChild(criar('div','questao-contexto-texto','<span>Informa√ß√µes para pensar</span><p>'+textoSeguro(contexto.contexto)+'</p>'));
-    card.appendChild(criar('p','quiz-card__pergunta',textoSeguro(contexto.texto)));
-    function navProxima(){
-      var nav=criar('div','navegacao'), ultima=quiz.indice===perguntas.length-1, prox=criar('button','botao botao--primario',ultima?(quiz.revisao?'Terminar revis√£o':'Ver resultado'):'Pr√≥xima ‚Üí',{type:'button'});
-      prox.addEventListener('click',function(){quiz.indice++;salvarTentativa(cap);renderQuestao(cap);irTopo();});
-      nav.appendChild(criar('span'));nav.appendChild(prox);return nav;
-    }
-    /* Pergunta j√° respondida: mostra em modo revis√£o, sem responder de novo
-       nem recontar pontos. Permite navegar com Anterior/Pr√≥xima. */
-    if(feita){
-      if(q.type==='mc'){
-        var opsR=criar('div','opcoes'); q.options.forEach(function(op,i){var cls='opcao';if(i===q.answer)cls+=' opcao--certa';else if(i===feita.escolhaIdx)cls+=' opcao--errada';var b=criar('button',cls,'<span class="opcao__letra">'+String.fromCharCode(65+i)+'</span><span>'+textoSeguro(op)+'</span>',{type:'button'});b.disabled=true;opsR.appendChild(b);});card.appendChild(opsR);
-      } else {
-        var infoR=criar('div','campo-resposta campo-resposta--revisto');
-        infoR.appendChild(criar('p','resposta-revista',feita.escolhaTxt?'Voc√™ respondeu: <strong>'+textoSeguro(feita.escolhaTxt)+'</strong>':'Pergunta j√° respondida.'));
-        if(!feita.acertou && q.answers && q.answers[0])infoR.appendChild(criar('p','resposta-revista','Resposta esperada: <strong>'+textoSeguro(q.answers[0])+'</strong>'));
-        card.appendChild(infoR);
-      }
-      var fbR=criar('div','feedback '+(feita.acertou?'feedback--ok':'feedback--erro'));
-      fbR.innerHTML='<strong>'+(feita.acertou?'Voc√™ acertou!':'Vamos entender juntos.')+'</strong>'+(q.explain?'<p class="explicacao">'+textoSeguro(q.explain)+'</p>':'');
-      card.appendChild(fbR);card.appendChild(navProxima());raiz.appendChild(card);return;
-    }
-    var resposta=criar('div',null,null,{role:'status','aria-live':'polite'}), bloqueado=false, errouAntes=false, erroRegistrado=false;
-    function registrarErro(escolha){if(erroRegistrado)return;erroRegistrado=true;quiz.erros.push({questao:q,escolha:escolha,indiceOriginal:oi});}
-    function mostrarNovaTentativa(mensagem){resposta.className='feedback feedback--erro';resposta.innerHTML='<strong>Tente mais uma vez.</strong><p class="explicacao">'+textoSeguro(mensagem)+'</p>';revelar(resposta);}
-    function concluir(certo,escolha,escolhaIdx){
-      if(bloqueado)return;bloqueado=true;quiz.respondidas++;var contaAcerto=certo&&(!errouAntes||quiz.revisao);if(contaAcerto)quiz.acertos++;if(!certo)registrarErro(escolha);
-      if(!quiz.feitas)quiz.feitas={};quiz.feitas[oi]={acertou:certo,contou:contaAcerto,escolhaIdx:(typeof escolhaIdx==='number'?escolhaIdx:-1),escolhaTxt:(typeof escolha==='string'?escolha:null)};
-      resposta.className='feedback '+(certo?'feedback--ok':'feedback--erro');resposta.innerHTML='<strong>'+(certo?(errouAntes?'Agora ficou claro!':'Voc√™ percebeu!'):'Vamos entender juntos.')+'</strong>'+(q.explain?'<p class="explicacao">'+textoSeguro(q.explain)+'</p>':'');
-      if(!certo)card.appendChild(falaMascote('Tudo bem n√£o acertar ainda. Esta explica√ß√£o mostra o caminho para a revis√£o.',true));
-      var nav=criar('div','navegacao'), ultima=quiz.indice===perguntas.length-1, prox=criar('button','botao botao--primario',ultima?(quiz.revisao?'Terminar revis√£o':'Ver resultado'):'Pr√≥xima ‚Üí',{type:'button'});
-      if(!quiz.revisao&&!ultima){var guardar=criar('button','botao botao--leve','Continuar depois',{type:'button'});guardar.addEventListener('click',function(){quiz.indice++;salvarTentativa(cap);abrirDisciplina(estado.disciplina);toast('Seu ponto foi guardado.');});nav.appendChild(guardar);}
-      prox.addEventListener('click',function(){quiz.indice++;salvarTentativa(cap);renderQuestao(cap);irTopo();});nav.appendChild(prox);card.appendChild(nav);
-      revelar(resposta,nav);
-    }
-    if(q.type==='mc'){
-      var errosMc=0, ops=criar('div','opcoes'); q.options.forEach(function(op,i){var b=criar('button','opcao','<span class="opcao__letra">'+String.fromCharCode(65+i)+'</span><span>'+textoSeguro(op)+'</span>',{type:'button'});b.addEventListener('click',function(){if(bloqueado||b.disabled)return;if(i===q.answer){ops.querySelectorAll('button').forEach(function(x){x.disabled=true;});b.classList.add('opcao--certa');concluir(true,op,i);}else{errosMc++;errouAntes=true;registrarErro(op);b.disabled=true;b.classList.add('opcao--errada');mostrarNovaTentativa(errosMc===1?'Elimine esta alternativa e releia a pergunta.':q.explain||'Compare as alternativas que ainda restam.');if(errosMc===2)card.appendChild(falaMascote(q.explain||'Observe as palavras mais importantes da pergunta.',true));}});ops.appendChild(b);});card.appendChild(ops);
-    } else {
-      var tentativasTexto=0, numerica=/n√∫mero|quantos|quantas|quanto|horas|segundos|dias/i.test(contexto.texto), linha=criar('div','campo-resposta'), campo=criar('input','campo',null,{type:'text',inputmode:numerica?'numeric':'text',autocomplete:'off',placeholder:numerica?'Escreva o n√∫mero':'Escreva uma palavra ou frase curta','aria-label':'Sua resposta'}), enviar=criar('button','botao botao--primario','Conferir',{type:'button'});
-      function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[]);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(pistaRespostaAberta(q,numerica));campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
-    }
-    card.appendChild(resposta);raiz.appendChild(card);
-  }
-  function normalizar(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();}
-  function validarResposta(v,aceitas){var a=normalizar(v);return aceitas.some(function(x){var b=normalizar(x);return a===b || (b.length>4 && a.indexOf(b)>=0);});}
-  function pistaRespostaAberta(q,numerica){if(numerica)return 'Volte aos n√∫meros do enunciado e confira a opera√ß√£o ou a unidade pedida.';var alvo=normalizar((q.answers||[])[0]);return alvo?'A resposta come√ßa com ‚Äú'+alvo.charAt(0).toUpperCase()+'‚Äù. Releia a pergunta.':'Releia a pergunta e responda com poucas palavras.';}
-  function categoriaQuestao(q) {
-    var t=normalizar(q.q);
-    if(/texto|instrucional|cartaz|manual|anuncio|memoria|tirinha/.test(t))return 'Compreender textos e informa√ß√µes';
-    if(/palavra|substantivo|diminutivo|aumentativo|plural|silaba|verbo|adjetivo/.test(t))return 'Observar como as palavras funcionam';
-    if(/numero|multiplica|divis|possibil|hora|minuto|calculo|resultado/.test(t))return 'Resolver situa√ß√µes com n√∫meros';
-    if(/ceu|terra|lua|sol|estrela|planeta|luz|atmosfera/.test(t))return 'Investigar a natureza e o c√©u';
-    if(/cidade|municipio|comunidade|bairro|populacao|espaco|publico|privado/.test(t))return 'Entender lugares e comunidades';
-    return 'Usar o que foi descoberto';
-  }
-  function resumoDominio(cap,erros) {
-    var grupos={}, errados={};erros.forEach(function(e){errados[e.indiceOriginal]=true;});
-    cap.quiz.forEach(function(q,i){var nome=categoriaQuestao(q);if(!grupos[nome])grupos[nome]={total:0,acertos:0};grupos[nome].total++;if(!errados[i])grupos[nome].acertos++;});
-    var box=criar('div','resumo-dominio','<h4>O que este resultado mostra</h4>'), lista=criar('ul');
-    Object.keys(grupos).forEach(function(nome){var g=grupos[nome], ok=g.acertos===g.total;lista.appendChild(criar('li',ok?'resumo-dominio__ok':'resumo-dominio__rever','<span>'+textoSeguro(nome)+'</span><strong>'+(ok?'J√° est√° firme':g.acertos+' de '+g.total+' ¬∑ vale rever')+'</strong>'));});box.appendChild(lista);return box;
-  }
-  function renderResultado(cap) {
-    var raiz=$('#desafio-conteudo'), total=perguntasAtuais(cap).length, pct=Math.round(quiz.acertos/Math.max(1,total)*100), disc=discPorId(estado.disciplina), erros=quiz.erros.slice();
-    if(!quiz.revisao){estado.progresso[cap.id]={feito:true,acertos:quiz.acertos,total:total,data:new Date().toISOString()};delete estado.tentativas[cap.id];salvar();}
-    var msg=quiz.revisao?'Voc√™ concluiu a revis√£o.':(erros.length?'Voc√™ acertou '+quiz.acertos+' de '+total+'. Revise '+erros.length+' '+(erros.length===1?'quest√£o':'quest√µes')+' para fortalecer o que aprendeu.':'Voc√™ acertou todas as '+total+' quest√µes!');
-    var box=criar('section','resultado resultado--final','<div class="resultado__palmas" aria-hidden="true"><span>üëè</span><span>üëè</span></div><h3>'+(quiz.revisao?'Revis√£o conclu√≠da':'Desafio conclu√≠do!')+'</h3><p class="resultado__placar"><strong>'+quiz.acertos+'</strong><span>de '+total+' acertos</span></p><p class="resultado__mensagem">'+msg+'</p>');
-    if(!quiz.revisao)box.appendChild(resumoDominio(cap,erros));
-    var nav=criar('div','navegacao');
-    if(!quiz.revisao && erros.length){var reverErros=criar('button','botao','Rever meus erros ('+erros.length+')',{type:'button'});reverErros.addEventListener('click',function(){quiz={indice:0,acertos:0,respondidas:0,erros:[],perguntas:erros.map(function(e){return e.questao;}),indices:erros.map(function(e){return e.indiceOriginal;}),revisao:true,pausa:false};renderQuestao(cap);});nav.appendChild(reverErros);}
-    var repetir=criar('button','botao','Refazer tudo',{type:'button'}), voltar=criar('button','botao botao--primario','Ver outros assuntos',{type:'button'});repetir.addEventListener('click',function(){iniciarQuiz(cap,true);});voltar.addEventListener('click',function(){abrirDisciplina(disc.id);});nav.appendChild(repetir);nav.appendChild(voltar);box.appendChild(nav);raiz.appendChild(box);
-    if(!quiz.celebrado){quiz.celebrado=true;bip('vitoria');festejar(true);}
-    if(!quiz.revisao)toast('Progresso salvo neste aparelho.');
-  }
-
-  function selecionarAba(nome,rolar) {
-    var cap=capPorId(discPorId(estado.disciplina),estado.capitulo); if(!cap)return;
-    if(nome==='video'&&!cap.video)nome='teoria'; estado.aba=nome; estado.areas[cap.id]=nome; salvar();
-    /* O convite amarelo fala do bloco de teoria que est√° aberto; fora do
-       Descobrir ele n√£o tem a ver com o que est√° na tela. */
-    $('#cap-pergunta').hidden = nome!=='teoria';
-    $$('.aba').forEach(function(b){var ativa=b.dataset.aba===nome;b.classList.toggle('aba--ativa',ativa);b.setAttribute('aria-selected',ativa?'true':'false');});
-    $$('.painel-aba').forEach(function(p){var ativa=p.id==='painel-'+nome;p.hidden=!ativa;p.classList.toggle('painel-aba--ativo',ativa);});
-    definirModoJogo(nome==='jogos');
-    if(nome==='jogos')irTopo();
-    if(rolar&&nome!=='jogos')document.querySelector('.abas').scrollIntoView({behavior:'smooth',block:'start'});
-  }
-  function voltar() {
-    if(!$('#tela-capitulo').hidden) abrirDisciplina(estado.disciplina);
-    else if(!$('#tela-disciplina').hidden) renderHome(); else renderHome();
-  }
-  function ligarEventos() {
-    $('#link-home').addEventListener('click',function(e){e.preventDefault();renderHome();});
-    $('#btn-voltar').addEventListener('click',voltar);
-    $('#btn-continuar').addEventListener('click',function(){if(estado.ultimo)abrirCapitulo(estado.ultimo.disciplina,estado.ultimo.capitulo);});
-    $$('[data-revisao]').forEach(function(b){b.addEventListener('click',function(){abrirRevisaoExtra(b.dataset.revisao);});});
-    $$('.aba').forEach(function(b){b.addEventListener('click',function(){selecionarAba(b.dataset.aba,true);});});
-    document.addEventListener('fullscreenchange',atualizarBotaoTelaCheia);
-  }
-  function iniciar() {
-    if(typeof DISCIPLINAS==='undefined'||!DISCIPLINAS.length){$('#grade-disciplinas').innerHTML='<div class="vazio">N√£o foi poss√≠vel carregar os assuntos.</div>';return;}
-    carregar(); ligarEventos(); configurarInstalacao(); configurarOffline(); registrarServiceWorker(); renderHome();
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',iniciar);else iniciar();
-})();
+Y™Áäx-ÆÈ‹j◊ù¢Îi∫⁄+äßj[hëÈ‹¢ÈÌﬂéµ—:-jZ.∂õ≠ñ)ﬁ≥RÚ¢W7GVF˜2FÚ<+¢ÊÚ(	BÊfVv:|:6Ú¬FófñFFW2R&ˆw&W76Ú∆ˆ6¬‚¢¢ÜgVÊ7Fñˆ‚Çí∞¢wW6R7G&ñ7Bs∞†¢f"4ÑdR“vW7GVF˜36ÊÚÊW7FFÚÁc"s∞¢f"W7FFÚ“≤Fó66ó∆ñÊ¶ÁV∆¬¬6óGV∆Û¶ÁV∆¬¬&¢wFV˜&ñr¬76ÙFW66ˆ&W'F£¬&ˆw&W76Ûß∑“¬FVÁFFóf3ß∑“¬WáW&ñVÊ6ñ3ß∑“¬∆VóGW&ß∑“¬&V3ß∑“¬V«Fñ÷Û¶ÁV∆¬¬6ˆ”ßG'VR”∞¢f"¶ˆvÙGV¬“∞¢f"Vó¢“ÁV∆√∞¢f"&ˆ◊DñÁ7F∆6Ú“ÁV∆√∞¢f"fˆ6ÙÁFW4FñÁ7F∆6Ú“ÁV∆√∞¢f"ˆff∆ñÊTF˜vÊ∆ˆDV‘ÊF÷VÁFÚ“f«6S∞¢f"∆6"“≤ˆÁF˜3£¬6WVVÊ6ñ£¬÷V∆Ü˜#£”≤Ú¢f∆RV∆'FñFGV¬¢†¢gVÊ7Fñˆ‚Bá2í≤&WGW&‚Fˆ7V÷VÁBÁVW'ï6V∆V7F˜"á2ì≤–¢gVÊ7Fñˆ‚BBá2í≤&WGW&‚'&íÁ&˜F˜GóRÁ6∆ñ6RÊ6∆¬ÜFˆ7V÷VÁBÁVW'ï6V∆V7F˜$∆¬á2íì≤–¢gVÊ7Fñˆ‚7&ñ"áFr¬6∆76R¬áF÷¬¬GG'2í∞¢f"‚“Fˆ7V÷VÁBÊ7&VFTV∆V÷VÁBáFrì∞¢ñbÜ6∆76Rí‚Ê6∆74Ê÷R“6∆76S∞¢ñbÜáF÷¬”“VÊFVfñÊVBbbáF÷¬”“ÁV∆¬í‚ÊñÊÊW$ÖD‘¬“áF÷√∞¢ˆ&¶V7BÊ∂Wó2ÜGG'2«¬∑“íÊf˜$V6ÇÜgVÊ7Fñˆ‚Ü≤í≤‚Á6WDGG&ñ'WFRÜ≤¬GG'5∂µ“ì≤“ì∞¢&WGW&‚„∞¢–¢gVÊ7Fñˆ‚FWáFı6VwW&Úábí≤&WGW&‚7G&ñÊráb”“ÁV∆¬Úrr¢bíÁ&W∆6RÇÚbˆr¬rf◊≤ríÁ&W∆6RÇÛ¬ˆr¬rf«C≤ríÁ&W∆6RÇÛ‚ˆr¬rfwC≤ríÁ&W∆6RÇÚ"ˆr¬rgV˜C≤rì≤–¢gVÊ7Fñˆ‚÷ó7GW&"Ü∆ó7Fí∞¢f"“∆ó7FÁ6∆ñ6RÇì∞¢f˜"áf"ì÷Ê∆VÊwFÇ”∂ì„∂í““í≤f"£‘÷FÇÊf∆ˆ˜"Ñ÷FÇÁ&ÊFˆ“Çí¢Üí≥íì≤f"C÷∂ï”∂∂ï”÷∂•”∂∂•”◊C≤–¢&WGW&‚∞¢–¢gVÊ7Fñˆ‚Fó65˜$ñBÜñBí≤&WGW&‚Dï44ïƒî‰2ÊfñÊBÜgVÊ7Fñˆ‚ÜBí≤&WGW&‚BÊñB””“ñC≤“ì≤–¢gVÊ7Fñˆ‚6˜$ñBÜFó62∆ñBí≤&WGW&‚Fó62bbFó62Ê6óGV∆˜2ÊfñÊBÜgVÊ7Fñˆ‚Ü2í≤&WGW&‚2ÊñB””“ñC≤“ì≤–¢gVÊ7Fñˆ‚6VÁFÚÜFó62í≤&WGW&‚wf"Çr≤Fó62Ê6˜"≤rís≤–¢gVÊ7Fñˆ‚F˜Fƒ62Çí≤&WGW&‚Dï44ïƒî‰2Á&VGV6RÜgVÊ7Fñˆ‚Ü‚∆Bí≤&WGW&‚‚∂BÊ6óGV∆˜2Ê∆VÊwFÉ≤“√ì≤–¢gVÊ7Fñˆ‚F˜FƒfVóF˜2Çí≤&WGW&‚ˆ&¶V7BÊ∂Wó2ÜW7FFÚÁ&ˆw&W76ÚíÊfñ«FW"ÜgVÊ7Fñˆ‚ÜñBí≤&WGW&‚W7FFÚÁ&ˆw&W76ı∂ñE“bbW7FFÚÁ&ˆw&W76ı∂ñE“ÊfVóFÛ≤“íÊ∆VÊwFÉ≤–†¢gVÊ7Fñˆ‚6'&Vv"Çí∞¢G'í∞¢f"6«fÚ“•4Ù‚Á'6RÜ∆ˆ6≈7F˜&vRÊvWDóFV“Ñ4ÑdRí«¬vÁV∆¬rì∞¢ñbá6«fÚbbGóVˆb6«fÚ””“vˆ&¶V7Brí∞¢W7FFÚÁ&ˆw&W76Ú“6«fÚÁ&ˆw&W76Ú«¬∑”∞¢W7FFÚÁFVÁFFóf2“6«fÚÁFVÁFFóf2«¬∑”∞¢W7FFÚÊWáW&ñVÊ6ñ2“6«fÚÊWáW&ñVÊ6ñ2«¬∑”∞¢W7FFÚÊ∆VóGW&“6«fÚÊ∆VóGW&«¬∑”∞¢W7FFÚÊ&V2“6«fÚÊ&V2«¬∑”∞¢W7FFÚÁV«Fñ÷Ú“6«fÚÁV«Fñ÷Ú«¬ÁV∆√∞¢W7FFÚÊFó66ó∆ñÊ“6«fÚÊFó66ó∆ñÊ«¬ÁV∆√∞¢W7FFÚÊ6óGV∆Ú“6«fÚÊ6óGV∆Ú«¬ÁV∆√∞¢W7FFÚÁ76ÙFW66ˆ&W'F“ÁV÷&W"á6«fÚÁ76ÙFW66ˆ&W'Fí«¬∞¢W7FFÚÁ6ˆ““6«fÚÁ6ˆ“”“f«6S∞¢–¢“6F6ÇÖÚí∑–¢–¢gVÊ7Fñˆ‚6«f"Çí∞¢G'í≤∆ˆ6≈7F˜&vRÁ6WDóFV“Ñ4ÑdR¬•4Ù‚Á7G&ñÊvñgíÜW7FFÚíì≤“6F6ÇÖÚí∑–¢GV∆ó¶%F˜ÚÇì∞¢–¢gVÊ7Fñˆ‚GV∆ó¶%F˜ÚÇí∞¢f"„◊F˜FƒfVóF˜2Çí¬á“BÇr7á÷ÁV“rì∞¢ñbááíáÁFWáD6ˆÁFVÁC÷„∞¢f"6óÜ“BÇr7F˜Ú◊árì∞¢ñbÜ6óÜí6óÜÊÜñFFV„÷„”””∞¢–¢gVÊ7Fñˆ‚Fˆ7BÜ◊6rí∞¢f"C“BÇr7Fˆ7Brì≤ñbÇBí&WGW&„∞¢BÁFWáD6ˆÁFVÁC÷◊6s≤BÊÜñFFV„÷f«6S∞¢6∆V%Fñ÷V˜WBáFˆ7BÁFñ÷W"ì≤Fˆ7BÁFñ÷W#◊6WEFñ÷V˜WBÜgVÊ7Fñˆ‚Çó∑BÊÜñFFV„◊G'VS∑“√#Cì∞¢–¢gVÊ7Fñˆ‚W7FñÁ7F∆FÚÇí∞¢&WGW&‚vñÊF˜rÊ÷F6Ñ÷VFñÇrÜFó7∆í÷÷ˆFS¢7FÊF∆ˆÊRíríÊ÷F6ÜW2«¬vñÊF˜rÊÊfñvF˜"Á7FÊF∆ˆÊR””“G'VS∞¢–¢gVÊ7Fñˆ‚fV6Ü$ßVFñÁ7F∆6ÚÇí∞¢f"ßVF“BÇr6ñÁ7F∆"÷ßVFrì≤ñbÇßVFó&WGW&„∞¢ßVFÊÜñFFV„◊G'VS∞¢ñbÜfˆ6ÙÁFW4FñÁ7F∆6Úñfˆ6ÙÁFW4FñÁ7F∆6ÚÊfˆ7W2Çì∞¢–¢gVÊ7Fñˆ‚'&ó$ßVFñÁ7F∆6ÚÇí∞¢f"ßVF“BÇr6ñÁ7F∆"÷ßVFrí¬ñÁ7G'V6Û“BÇr6ñÁ7F∆"÷ñÁ7G'V6Úrì≤ñbÇßVF«¬ñÁ7G'V6Úó&WGW&„∞¢f"ñ˜3“ˆóÜˆÊW∆óG∆óˆBˆíÁFW7BÜÊfñvF˜"ÁW6W$vVÁBì∞¢ñÁ7G'V6ÚÁFWáD6ˆÁFVÁC÷ñ˜3ÚtÊÚ6f&í¬F˜VRV“6ˆ◊'Fñ∆Ü"RFWˆó2V“(	ƒFñ6ñˆÊ":FV∆FRñÏ:÷6ñ˛(	“‚s¢t'&Ú÷VÁRFÚÊfVvF˜"RW66ˆ∆Ü(	ƒñÁ7F∆"∆ñ6Fóf˛(	“˜R(	ƒFñ6ñˆÊ":FV∆ñÊñ6ñŒ(	“‚s∞¢fˆ6ÙÁFW4FñÁ7F∆6Û÷Fˆ7V÷VÁBÊ7FófTV∆V÷VÁC≤ßVFÊÜñFFV„÷f«6S≤BÇr6fV6Ü"÷ñÁ7F∆6ÚríÊfˆ7W2Çì∞¢–¢gVÊ7Fñˆ‚6ˆÊfñwW&$ñÁ7F∆6ÚÇí∞¢f"&˜FÛ“BÇr6'F‚÷ñÁ7F∆"rí¬ßVF“BÇr6ñÁ7F∆"÷ßVFrí¬fV6Ü#“BÇr6fV6Ü"÷ñÁ7F∆6Úrì≤ñbÇ&˜FÚó&WGW&„∞¢f"ñ˜3“ˆóÜˆÊW∆óG∆óˆBˆíÁFW7BÜÊfñvF˜"ÁW6W$vVÁBì∞¢&˜FÚÊÜñFFV„÷W7FñÁ7F∆FÚÇó«¬ñ˜3∞¢vñÊF˜rÊFDWfVÁD∆ó7FVÊW"Çv&Vf˜&VñÁ7F∆«&ˆ◊Br∆gVÊ7Fñˆ‚ÜWfVÁFÚó∂WfVÁFÚÁ&WfVÁDFVfV«BÇì∑&ˆ◊DñÁ7F∆6Û÷WfVÁFÛ∂ñbÇW7FñÁ7F∆FÚÇíñ&˜FÚÊÜñFFV„÷f«6S∑“ì∞¢vñÊF˜rÊFDWfVÁD∆ó7FVÊW"ÇvñÁ7F∆∆VBr∆gVÊ7Fñˆ‚Çó∑&ˆ◊DñÁ7F∆6Û÷ÁV∆√∂&˜FÚÊÜñFFV„◊G'VS∑Fˆ7BÇt∆ñ6FófÚñÁ7F∆FÚrì∑“ì∞¢&˜FÚÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∞¢ñbÇ&ˆ◊DñÁ7F∆6Úó∂'&ó$ßVFñÁ7F∆6ÚÇì∑&WGW&„∑–¢&ˆ◊DñÁ7F∆6ÚÁ&ˆ◊BÇì∞¢&ˆ◊DñÁ7F∆6ÚÁW6W$6Üˆñ6RÁFÜV‚ÜgVÊ7Fñˆ‚ÜW66ˆ∆Üó∞¢ñbÜW66ˆ∆ÜÊ˜WF6ˆ÷S””“v66WFVBrñ&˜FÚÊÜñFFV„◊G'VS∞¢&ˆ◊DñÁ7F∆6Û÷ÁV∆√∞¢“ì∞¢“ì∞¢ñbÜfV6Ü"ñfV6Ü"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆fV6Ü$ßVFñÁ7F∆6Úì∞¢ñbÜßVFñßVFÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚ÜWfVÁFÚó∂ñbÜWfVÁFÚÁF&vWC””÷ßVFñfV6Ü$ßVFñÁ7F∆6ÚÇì∑“ì∞¢Fˆ7V÷VÁBÊFDWfVÁD∆ó7FVÊW"Çv∂WñF˜v‚r∆gVÊ7Fñˆ‚ÜWfVÁFÚó∂ñbÜWfVÁFÚÊ∂Wì””“tW66RrbfßVFbbßVFÊÜñFFV‚ñfV6Ü$ßVFñÁ7F∆6ÚÇì∑“ì∞¢–¢gVÊ7Fñˆ‚fñFV˜4FÙÇó∑f"fó7F˜3◊∑”∑&WGW&‚Dï44ïƒî‰2Á&VGV6RÜgVÊ7Fñˆ‚Ü∆ó7F∆Fó62ó∂Fó62Ê6óGV∆˜2Êf˜$V6ÇÜgVÊ7Fñˆ‚Ü6ó∂ñbÜ6ÁfñFVÚbbfó7F˜5∂6ÁfñFVı“ó∑fó7F˜5∂6ÁfñFVı”◊G'VS∂∆ó7FÁW6ÇÜ6ÁfñFVÚì∑◊“ì∑&WGW&‚∆ó7F∑“≈µ“ì∑–¢gVÊ7Fñˆ‚GV∆ó¶$ˆff∆ñÊRá7B∆÷VÁ6vV“«&ˆÁFÚ∆W'&Úó∑f"6&C“BÇr6ˆff∆ñÊR÷6&Brí∆&˜FÛ“BÇr6'F‚÷ˆff∆ñÊRrí«7FGW3“BÇr6ˆff∆ñÊR◊7FGW2rí∆&'&“BÇr6ˆff∆ñÊR÷&'&rí∆fñ∆√“BÇr6ˆff∆ñÊR÷&'&÷fñ∆¬rì∂ñbÇ6&G«¬&˜FÚó&WGW&„∂6&BÊ6∆74∆ó7BÁFˆvv∆RÇvˆff∆ñÊR÷6&B“◊&ˆÁFÚr¬&ˆÁFÚì∂6&BÊ6∆74∆ó7BÁFˆvv∆RÇvˆff∆ñÊR÷6&B“÷W'&Úr¬W'&Úì∑7FGW2ÁFWáD6ˆÁFVÁC÷÷VÁ6vV”∂&'&ÊÜñFFV„◊&ˆÁF˜«∆W'&˜««7C√”∂fñ∆¬Á7Gñ∆RÁvñGFÉ‘÷FÇÊ÷ÇÉƒ÷FÇÊ÷ñ‚É«7Bíí≤rRs∂&˜FÚÊFó6&∆VC÷ˆff∆ñÊTF˜vÊ∆ˆDV‘ÊF÷VÁFÛ∂&˜FÚÁFWáD6ˆÁFVÁC◊&ˆÁFÛÚtGV∆ó¶"s¢Üˆff∆ñÊTF˜vÊ∆ˆDV‘ÊF÷VÁFÛÚt&óÜÊF˛(
+bs¢ÜW'&ÛÚuFVÁF"Ê˜f÷VÁFRs¢t&óÜ"ríì∑–¢gVÊ7Fñˆ‚VÁfñ$ı6W'fñ6Uv˜&∂W"Ü÷VÁ6vV“ó∑&WGW&‚ÊfñvF˜"Á6W'fñ6Uv˜&∂W"Á&VGíÁFÜV‚ÜgVÊ7Fñˆ‚á&Vvó7G&Úó∑f"v˜&∂W#◊&Vvó7G&ÚÁvóFñÊw««&Vvó7G&ÚÊ7FófW««&Vvó7G&ÚÊñÁ7F∆∆ñÊs∂ñbÇv˜&∂W"óFá&˜rÊWrW'&˜"Çu6W'fñ6Rv˜&∂W"ñÊFó7ˆÏ:◊fV¬rì∑v˜&∂W"Á˜7D÷W76vRÜ÷VÁ6vV“ì∑“ì∑–¢gVÊ7Fñˆ‚6ˆÊfñwW&$ˆff∆ñÊRÇó∑f"&˜FÛ“BÇr6'F‚÷ˆff∆ñÊRrì∂ñbÇ&˜FÚó&WGW&„∂ñbÇÇw6W'fñ6Uv˜&∂W"rñ‚ÊfñvF˜"íó∂GV∆ó¶$ˆff∆ñÊRÉ¬tW7FRÊfVvF˜"Ï:6ÚW&÷óFRÚ÷ˆFÚˆff∆ñÊR‚r∆f«6R«G'VRì∑&WGW&„∑÷ÊfñvF˜"Á6W'fñ6Uv˜&∂W"ÊFDWfVÁD∆ó7FVÊW"Çv÷W76vRr∆gVÊ7Fñˆ‚ÜWfVÁFÚó∑f"C÷WfVÁFÚÊFF««∑”∂ñbÜBÁFóÛ””“tÙddƒî‰Uı5DEU2ró∂ˆff∆ñÊTF˜vÊ∆ˆDV‘ÊF÷VÁFÛ“BÊ&óÜÊFÛ∑f"7C÷BÁF˜F√ˆBÊ6ˆÊ6«VñF˜2ˆBÁF˜F¬££∑f"◊6s÷BÁ&ˆÁFÛÚt6ˆÁF\;¶FÚˆff∆ñÊRGV∆ó¶FÚ‚F˜VRV“GV∆ó¶"6V◊&RVRÜ˜WfW"V÷Ê˜ffW'<:6Ú‚s¢ÜBÊ&óÜÊFÛÚtGV∆ó¶ÊFÚr∂BÊ6ˆÊ6«VñF˜2≤rFRr∂BÁF˜F¬≤rl:÷FV˜>(
+bs¢t&óÜRFˆFÚÚ6ˆÁF\;¶FÚR˜2l:÷FV˜2+r6W&6FRCS‘"rì∂GV∆ó¶$ˆff∆ñÊRá7B∆◊6r¬BÁ&ˆÁFÚ∆f«6Rì∑÷ñbÜBÁFóÛ””“tÙddƒî‰UÙU%$Úró∂ˆff∆ñÊTF˜vÊ∆ˆDV‘ÊF÷VÁFÛ÷f«6S∂GV∆ó¶$ˆff∆ñÊRÉ¬tGV∆ó¶:|:6Ú&˜R‚6ˆÊV7FR◊6RÚví‘fíRFVÁFRÊ˜f÷VÁFR‚r∆f«6R«G'VRì∑◊“ì∂&˜FÚÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∂ñbÜˆff∆ñÊTF˜vÊ∆ˆDV‘ÊF÷VÁFÚó&WGW&„∂ˆff∆ñÊTF˜vÊ∆ˆDV‘ÊF÷VÁFÛ◊G'VS∂GV∆ó¶$ˆff∆ñÊRÉ¬ufW&ñfñ6ÊFÚGV∆ó¶:|;VW>(
+br∆f«6R∆f«6Rì∑f"W'6ó7Fó#÷ÊfñvF˜"Á7F˜&vRbfÊfñvF˜"Á7F˜&vRÁW'6ó7CˆÊfñvF˜"Á7F˜&vRÁW'6ó7BÇíÊ6F6ÇÜgVÊ7Fñˆ‚Çó∑&WGW&‚f«6S∑“ì•&ˆ÷ó6RÁ&W6ˆ«fRÜf«6Rì∑W'6ó7Fó"ÁFÜV‚ÜgVÊ7Fñˆ‚Çó∑&WGW&‚ÊfñvF˜"Á6W'fñ6Uv˜&∂W"ÊvWE&Vvó7G&Fñˆ‚Çì∑“íÁFÜV‚ÜgVÊ7Fñˆ‚á&Vvó7G&Úó∑&WGW&‚&Vvó7G&Û˜&Vvó7G&ÚÁWFFRÇíÊ6F6ÇÜgVÊ7Fñˆ‚Çó∑“ì¶ÁV∆√∑“íÁFÜV‚ÜgVÊ7Fñˆ‚Çó∑&WGW&‚VÁfñ$ı6W'fñ6Uv˜&∂W"á∑FóÛ¢t$ïÑ%ÙÙddƒî‰Rr∆'Vóf˜3ßfñFV˜4FÙÇó“ì∑“íÊ6F6ÇÜgVÊ7Fñˆ‚Çó∂ˆff∆ñÊTF˜vÊ∆ˆDV‘ÊF÷VÁFÛ÷f«6S∂GV∆ó¶$ˆff∆ñÊRÉ¬tÏ:6Úfˆí˜7<:◊fV¬GV∆ó¶"‚&V6'&VwVRRFVÁFRÊ˜f÷VÁFR‚r∆f«6R«G'VRì∑“ì∑“ì∑–¢gVÊ7Fñˆ‚&Vvó7G&%6W'fñ6Uv˜&∂W"Çí∞¢ñbÇÇw6W'fñ6Uv˜&∂W"rñ‚ÊfñvF˜"íó&WGW&„∞¢ÊfñvF˜"Á6W'fñ6Uv˜&∂W"Á&Vvó7FW"Çr‚˜7rÊß2ríÁFÜV‚ÜgVÊ7Fñˆ‚Çó∑&WGW&‚ÊfñvF˜"Á6W'fñ6Uv˜&∂W"Á&VGì∑“íÁFÜV‚ÜgVÊ7Fñˆ‚Çó∑&WGW&‚VÁfñ$ı6W'fñ6Uv˜&∂W"á∑FóÛ¢udU$îdî4%ÙÙddƒî‰Rr∆'Vóf˜3ßfñFV˜4FÙÇó“ì∑“íÊ6F6ÇÜgVÊ7Fñˆ‚Çó∂GV∆ó¶$ˆff∆ñÊRÉ¬tÏ:6Úfˆí˜7<:◊fV¬&W&"Ú÷ˆFÚˆff∆ñÊR‚r∆f«6R«G'VRì∑“ì∞¢–¢f"tƒı54$îÚ“∞¢vfñÊ∆ñFFRs¢w&VR∆vÚ6W'fRr¬v|:¶ÊW&Ús¢wV“FóÚFRFWáFÚr¬vˆ&¶WFófs¢vFó&WFRl:6ñ¬FRVÁFVÊFW"r¿¢w7V'7FÁFófÚs¢w∆g&VRL:Êˆ÷RW76ˆ2¬«Vv&W2¬Êñ÷ó2¬ˆ&¶WF˜2˜RñFVñ2r¿¢w7VfóÜÚs¢wVF:vÚ7&W66VÁFFÚÊÚfñÊ¬FRV÷∆g&r¬v˜'Fˆw&fñs¢v÷ÊVó&6˜'&WFFRW67&WfW"2∆g&2r¿¢v◊VÊñ<:◊ñÚs¢v6ñFFRR:&VF÷ñÊó7G&FßVÁFÚ6ˆ“V∆r¬v6ˆ◊VÊñFFRs¢vw'WÚFRW76ˆ2VR6ˆ◊'Fñ∆ÜV“«Vv"˜RñÁFW&W76W2r¿¢wG&ñ‹;FÊñÚs¢v∆vÚñ◊˜'FÁFRVRV÷6ˆ◊VÊñFFR&W6W'fr¬wó6vV“s¢wGVFÚÚVRˆFV÷˜2ˆ'6W'f"V“V“«Vv"r¿¢v◊V«Fó∆ñ6:|:6Ús¢vFú:|:6ÚFR&6V∆2ñwVó2r¬vFófó<:6Ús¢w&W'Fó"˜Rf˜&÷"w'W˜26ˆ“÷W6÷VÁFñFFRr¿¢vF¶WFófÚs¢w∆g&VR÷˜7G&V÷6&7FW,:◊7Fñ6r¬w&ˆÊˆ÷Rs¢w∆g&VRˆFR7V'7FóGVó"˜R6ˆ◊ÊÜ"V“Êˆ÷Rr¿¢v&ñˆw&fñs¢vÜó7L;7&ñFfñFFRV÷W76ˆW67&óF˜"˜WG&r¬vWFˆ&ñˆw&fñs¢vÜó7L;7&ñVR∆w\:ñ“W67&WfR6ˆ'&R,;7&ñfñFr¿¢v7&ˆÊˆÃ;6vñ6s¢v˜&vÊó¶FÊ˜&FV“V“VR˜2fF˜26ˆÁFV6W&“r¬w&˜F:|:6Ús¢vvó&ÚFFW'&V“F˜&ÊÚFV∆÷W6÷r¿¢wG&Á6∆:|:6Ús¢v÷˜fñ÷VÁFÚFFW'&Ú&VF˜"FÚ6ˆ¬r¬v7G&Ús¢v6˜'ÚÊGW&¬VRWÜó7FRÊÚW7:vÚr¿¢w6L:ñ∆óFRs¢v6˜'ÚVRvó&Ú&VF˜"FRV“∆ÊWFr¬vF÷˜6fW&s¢v6÷FFRv6W2VRVÁfˆ«fRFW'&r¿¢v∆óF˜6fW&s¢w'FR<;6∆ñF÷ó2WáFW&ÊFFW'&r¬vÜñG&˜6fW&s¢wFˆF:wVWÜó7FVÁFRÊÚ∆ÊWFr¿¢v&ñ˜6fW&s¢w&Vvú;VW2FFW'&ˆÊFRWÜó7FRfñFr¬v÷v÷s¢v÷FW&ñ¬◊VóFÚVVÁFRVÊ6ˆÁG&FÚFVÁG&ÚFFW'&r¿¢w'W&¬s¢w&V∆6ñˆÊFÚÚ6◊Úr¬wW&&Ês¢w&V∆6ñˆÊF:6ñFFRr¬v÷ñw&:|:6Ús¢v◊VFÏ:vFRW76ˆ2FRV“«Vv"&˜WG&Úr¿¢v6VÁ6Ús¢wW7Vó6VR&\;¶ÊRñÊf˜&÷:|;VW26ˆ'&R˜V∆:|:6Úr¬vFV÷ˆ7&6ñs¢vf˜&÷FRv˜fW&ÊÚ6ˆ“'Fñ6ó:|:6ÚF˜26ñFL:6˜2r¿¢w˜L:fV¬s¢w,;7&ñR6VwW&&&V&W"r¬wG&ñvV“s¢w6W&:|:6ÚFR÷FW&ñó2˜"FóÚp¢”∞¢gVÊ7Fñˆ‚∆g&2áGáBí≤&WGW&‚7G&ñÊráGáG«¬rríÁ&W∆6RÇÛ≈µ„Â“≥‚ˆr¬rríÁG&ñ“ÇíÁ7∆óBÇı«2≤ÚíÊfñ«FW"Ñ&ˆˆ∆V‚ì≤–¢gVÊ7Fñˆ‚6W&%&W7V÷Úá&w&f˜2í∞¢f"FˆF˜3“á&w&f˜7«≈µ“íÁ6∆ñ6RÇí¬&ñ÷Vó&Û◊FˆF˜2Á6ÜñgBÇó«¬rr¬g&6W3◊&ñ÷Vó&ÚÊ÷F6ÇÇıµ‚‚ı“µ≤‚ı“∑≈µ‚‚ı“≤Bˆró«≈∑&ñ÷Vó&ı“¬&W7V÷Û“rr¬&W7FÛ’µ”∞¢g&6W2Êf˜$V6ÇÜgVÊ7Fñˆ‚Übó≤ñbá∆g&2á&W7V÷Ú≤rr∂bíÊ∆VÊwFÉ√”CR«¬&W7V÷Úí&W7V÷Ú≥“á&W7V÷ÛÚrs¢rrí∂bÁG&ñ“Çì≤V«6R&W7FÚÁW6ÇÜbÁG&ñ“Çíì≤“ì∞¢ñbá&W7FÚÊ∆VÊwFÇíFˆF˜2ÁVÁ6ÜñgBá&W7FÚÊ¶ˆñ‚Çrríì∞¢&WGW&‚≤&W7V÷Ûß&W7V÷Ú¬FWF∆ÜW3ßFˆF˜2”∞¢–¢gVÊ7Fñˆ‚Wá∆ñ6%FW&÷˜2ÜáF÷¬í∞¢f"6ñF’7G&ñÊrÜáF÷««¬rrì∞¢ˆ&¶V7BÊ∂Wó2Ñtƒı54$îÚíÊf˜$V6ÇÜgVÊ7Fñˆ‚áFW&÷Úó∞¢f"'É÷ÊWr&VtWáÇu≈∆"Çr∑FW&÷Ú≤rï≈∆"r¬vvírì∞¢6ñF◊6ñFÁ&W∆6Rá'Ç¬s«7‚6∆73“'FW&÷Ú"F&ñÊFWÉ“#"FF÷Wá∆ñ6“"r∑FWáFı6VwW&ÚÑtƒı54$îı∑FW&÷ı“í≤r#‚C¬˜7„‚rì∞¢“ì∞¢&WGW&‚6ñF∞¢–¢gVÊ7Fñˆ‚f∆÷66˜FRÜ÷VÁ6vV“∆6ˆ◊7Fí∞¢&WGW&‚7&ñ"Çv6ñFRr¬v÷66˜FR÷f∆r≤Ü6ˆ◊7FÚr÷66˜FR÷f∆“÷6ˆ◊7Fs¢rrí¿¢s∆ñ÷r7&3“&76WG2ˆ÷66˜FR÷6óf&◊c"ÁvV'"«C“$÷66˜FRFÚ∆ñ6FófÚ#„«‚r∑FWáFı6VwW&ÚÜ÷VÁ6vV“í≤s¬˜‚rì∞¢–¢gVÊ7Fñˆ‚6ˆÁfóFT÷ó76ÚÜ&∆ˆ6Ú∆ñGÇí∞¢f"É÷Ê˜&÷∆ó¶"Ü&∆ˆ6Úbf&∆ˆ6ÚÊÇì∞¢ñbÇˆñÁ7G'V6ñˆÊ«∆ñÁ7G'V6ÚÚÁFW7BÜÇíí&WGW&‚uVÁ6RÊÚ6'F¢FR∆f"2‹:6˜2FÚ&ÊÜVó&ÚFW66ˆ∆‚ÚVR&V6ó6W7F"ÊV∆R&∆w\:ñ“6ˆÁ6VwVó"6VwVó#Ús∞¢ñbÇˆÁVÊ6ñ˜∆6∆76ñfñ6F˜∆V∆2FRFÊvÚÚÁFW7BÜÇíí&WGW&‚tˆÊFRfˆ<:¢¨:fóR∆vÚ6VÊFÚˆfW&V6ñFÚ&fVÊFW"¬G&ˆ6"¬«Vv"˜R&W7F"V“6W'fú:vÛÚs∞¢ñbÇˆ÷V÷˜&ñ∆&ñˆw&fñ«6ÁF˜2GV÷ˆÁG∆V∆FR◊W6ñ6∆∆ñÊÜFÚFV◊ÚÚÁFW7BÜÇíí&WGW&‚uVRó7F2ßVF“W&6V&W"VRV“FWáFÚ6ˆÁFfF˜2FfñF˜R∆V÷'&Ï:v2FÚ76FÛÚs∞¢ñbÇ˜VG&ñÊÜ˜∆&∆˜∆÷ˆÊñ6∆÷&ñÊÚÁFW7BÜÇíí&WGW&‚tÚVR˜2FW6VÊÜ˜2¬˜2VG&˜2R˜2&Ã;VW2ßVF“VÁFVÊFW"ÁFW2÷W6÷ÚFR∆W"FˆF22f∆3Ús∞¢ñbÇˆ6ˆÁF˜«¶V'&∆∆ˆ&ÚÚÁFW7BÜÇíí&WGW&‚uVRV∆V÷VÁF˜2f¶V“fˆ<:¢W&6V&W"VRW7FRFWáFÚ6ˆÁFV÷Üó7L;7&ñÚs∞¢ñbÇˆFñ÷ñÁWFóf˜∆V÷VÁFFóf˜««W&«∆˜'Fˆw&fñÚÁFW7BÜÇíí&WGW&‚tˆ'6W'fR6ˆ÷Ú2∆g&2◊VF“‚FVÁFRFW66ˆ'&ó"ÚG,:6ÚÁFW2FR'&ó"Wá∆ñ6:|:6Ú‚s∞¢ñbÇ˜FV◊˜∆Ü˜&∆6∆VÊBÚÁFW7BÜÇíí&WGW&‚uVÁ6RV“V÷6óGV:|:6ÚFÚ6WRFñV“VRfˆ<:¢W6W76ñFVñ‚s∞¢ñbÇ˜FW'&∆6WW∆«V«6ˆ«∆W7G&V∆ÚÁFW7BÜÇíí&WGW&‚tˆ'6W'fRÚL:◊GV∆ÚRñ÷vV“‚ÚVRfˆ<:¢6ÜVR6ˆÁFV6R6ˆ“W76RV∆V÷VÁFÚFÊGW&W¶Ús∞¢ñbÇˆ◊VÊñ6óñ˜∆6ñFFW∆6ˆ◊VÊñFFW∆W76ÚÚÁFW7BÜÇíí&WGW&‚uVÁ6RÊÚ«Vv"ˆÊFRfˆ<:¢fófR‚ÚVRfˆ<:¢¨:fóRVR6R&V6R6ˆ“W7FR77VÁFÛÚs∞¢&WGW&‚tˆ'6W'fRÚL:◊GV∆ÚRñ÷vV“‚ÚVRfˆ<:¢¨:6&R˜RW&6V&R6ˆ'&RW7FR77VÁFÛÚs∞¢–¢gVÊ7Fñˆ‚FV÷&∆ˆ6ÚÜ&∆ˆ6Úí∞¢f"É÷Ê˜&÷∆ó¶"Ü&∆ˆ6Úbf&∆ˆ6ÚÊÇì∞¢ñbÇˆÁVÊ6ñ˜∆6∆76ñfñ6F˜∆V∆2FRFÊvÚÚÁFW7BÜÇíó&WGW&‚vÁVÊ6ñ˜2s∞¢ñbÇˆ÷V÷˜&ñ∆&ñˆw&fñ«6ÁF˜2GV÷ˆÁG∆V∆FR◊W6ñ6∆∆ñÊÜFÚFV◊ÚÚÁFW7BÜÇíó&WGW&‚v÷V÷˜&ñ2s∞¢ñbÇ˜VG&ñÊÜ˜∆&∆˜∆÷ˆÊñ6∆÷&ñÊÚÁFW7BÜÇíó&WGW&‚wVG&ñÊÜ˜2s∞¢ñbÇˆ6ˆÁF˜«¶V'&∆∆ˆ&ÚÚÁFW7BÜÇíó&WGW&‚v6ˆÁF˜2s∞¢ñbÇˆñÁ7G'V6ñˆÊ«∆∆f"2÷˜2ÚÁFW7BÜÇíó&WGW&‚vñÁ7G'V6ˆW2s∞¢ñbÇ˜7V'7FÁFóf˜∆Fñ÷ñÁWFóf˜∆V÷VÁFFóf˜««W&«∆˜'Fˆw&fñ«fW&&˜∆F¶WFóf˜«6ñ∆&ÚÁFW7BÜÇíó&WGW&‚w∆g&2s∞¢ñbÇˆ◊V«Fó∆ñ6∆Fófó7«˜76ñ&ñ«∆ÁV÷W&˜∆6∆7V∆ÚÚÁFW7BÜÇíó&WGW&‚vÁV÷W&˜2s∞¢ñbÇ˜FV◊˜∆Ü˜&∆∆ˆ6∆ó¶∆FW6∆ˆ6ÚÁFW7BÜÇíó&WGW&‚v÷VFñF2s∞¢ñbÇ˜FW'&∆6WW∆«V«6ˆ«∆W7G&V∆«∆ÊWFÚÁFW7BÜÇíó&WGW&‚vÊGW&W¶s∞¢ñbÇˆ◊VÊñ6óñ˜∆6ñFFW∆6ˆ◊VÊñFFW∆W76˜«˜V∆6˜«6W'fñ6ÚÚÁFW7BÜÇíó&WGW&‚v«Vv&W2s∞¢&WGW&‚vñFVñs∞¢–¢gVÊ7Fñˆ‚fó7VƒFFW66ˆ&W'FÜ&∆ˆ6Úí∞¢ñbÜ&∆ˆ6Úbf&∆ˆ6ÚÁfó7V¬ó&WGW&‚&∆ˆ6ÚÁfó7V√∞¢f"FóGV∆Û÷Ê˜&÷∆ó¶"Ü&∆ˆ6Úbf&∆ˆ6ÚÊÇì∞¢f"fó7Vó4W7V6ñfñ6˜3◊∞¢wFW'&∆ÊWFßV¬sß∞¢7&3¢v76WG2ˆ6÷F2÷W6fW&2◊FW'&◊c"ÁvV'r¿¢FóÛ¢vFñw&÷r¿¢«C¢tW7VV÷FFW'&÷˜7G&ÊFÚÜñG&˜6fW&Ê:wV¬∆óF˜6fW&V“&ˆ6Ü2Wá˜7F2R6V62¬F÷˜6fW&Ú&VF˜"FÚ∆ÊWFR&ñ˜6fW&ˆÊFRå:6W&W2fóf˜2‚p¢“¿¢vÚñÁFW&ñ˜"FFW'&sß∞¢7&3¢v76WG2ˆ6÷F2÷ñÁFW&ñ˜"◊FW'&◊c"ÁvV'r¿¢FóÛ¢vFñw&÷r¿¢«C¢t6˜'FRFÚñÁFW&ñ˜"FFW'&ñFVÁFñfñ6ÊFÚ7&˜7FfñÊ¬Ú÷ÁFÚW7W76Ú¬ÚÏ;¶6∆VÚWáFW&ÊÚÃ:◊VñFÚRÚÏ;¶6∆VÚñÁFW&ÊÚ<;6∆ñFÚ‚p¢–¢”∞¢ñbáfó7Vó4W7V6ñfñ6˜5∑FóGV∆ı“ó&WGW&‚fó7Vó4W7V6ñfñ6˜5∑FóGV∆ı”∞¢f"FV÷◊FV÷&∆ˆ6ÚÜ&∆ˆ6Úí¬fó7Vó3◊∞¢ñÁ7G'V6ˆW3ß∑7&3¢v76WG2ˆFW66ˆ'&ó"◊FWáF˜2ÁvV'r∆«C¢t7&ñÏ:vˆ'6W'fÊFÚV÷6W\:¶Ê6ññ«W7G&FFRñÁ7G'\:|;VW2&∆f"2‹:6˜2‚w“¿¢ÁVÊ6ñ˜3ß∑7&3¢v76WG2ˆFW66ˆ'&ó"÷ÁVÊ6ñ˜2ÁvV'r∆«C¢t7&ñÏ:v2ˆ'6W'fÊFÚV“Ï;¶Ê6ñÚñ«W7G&FÚV“V“◊W&¬F6ˆ◊VÊñFFR‚w“¿¢÷V÷˜&ñ3ß∑7&3¢v76WG2ˆFW66ˆ'&ó"÷÷V÷˜&ñ2ÁvV'r∆«C¢t7&ñÏ:v˜WfñÊFÚV÷W76ˆñF˜66ˆ◊'Fñ∆Ü"f˜Fˆw&fñ2R∆V÷'&Ï:v2FR7VfñF‚w“¿¢VG&ñÊÜ˜3ß∑7&3¢v76WG2ˆFW66ˆ'&ó"◊VG&ñÊÜ˜2ÁvV'r∆«C¢t7&ñÏ:v27&ñÊFÚV÷Üó7L;7&ñV“VG&ñÊÜ˜26ˆ“VG&˜2RFñfW&VÁFW2&Ã;VW2FRf∆‚w“¿¢6ˆÁF˜3ß∑7&3¢v76WG2ˆFW66ˆ'&ó"÷6ˆÁF˜2ÁvV'r∆«C¢t7&ñÏ:v2˜WfñÊFÚV÷6ˆÁFF˜&FRÜó7L;7&ñ2VÁVÁFÚW'6ˆÊvVÁ27W&vV“FRV“∆óg&Ú‚w“¿¢∆g&3ß∑7&3¢v76WG2ˆFW66ˆ'&ó"◊∆g&2ÁvV'r∆«C¢t7&ñÏ:v÷ˆÁFÊFÚRñÁfW7FñvÊFÚ∆g&26ˆ“\:v26ˆ∆˜&ñF2‚w“¿¢ÁV÷W&˜3ß∑7&3¢v76WG2ˆFW66ˆ'&ó"÷ÁV÷W&˜2ÁvV'r∆«C¢t7&ñÏ:vWá∆˜&ÊFÚw'W˜2¬f˜&÷2RVÁFñFFW26ˆ“÷FW&ñó2FR÷FV‹:Fñ6‚w“¿¢÷VFñF3ß∑7&3¢v76WG2ˆFW66ˆ'&ó"÷÷VFñF2ÁvV'r∆«C¢t7&ñÏ:vñÁfW7FñvÊFÚFV◊Ú¬6÷ñÊÜ˜2R÷VFñF26ˆ“&VÃ;6vñÚRñÁ7G'V÷VÁF˜2‚w“¿¢ÊGW&W¶ß∑7&3¢v76WG2ˆFW66ˆ'&ó"÷ÊGW&W¶ÁvV'r∆«C¢t7&ñÏ:v2ñÁfW7FñvÊFÚFW'&¬ÊGW&W¶¬«VRÚ<:óR‚w“¿¢«Vv&W3ß∑7&3¢v76WG2ˆFW66ˆ'&ó"÷«Vv&W2ÁvV'r∆«C¢t7&ñÏ:v2ˆ'6W'fÊFÚV÷÷VWFR6ˆ“6◊Ú¬6ñFFRRW7:v˜2F6ˆ◊VÊñFFR‚w“¿¢ñFVñß∑7&3¢v76WG2ˆFW66ˆ'&ó"÷ñFVñ2ÁvV'r∆«C¢t7&ñÏ:vñÁfW7FñvÊFÚó7F2R˜&vÊó¶ÊFÚV÷Ê˜fñFVñ‚w–¢”∞¢&WGW&‚fó7Vó5∑FV÷◊««fó7Vó2ÊñFVñ∞¢–¢gVÊ7Fñˆ‚ó%F˜ÚÇí∞¢f"∆6Û÷Fˆ7V÷VÁBÊ&ˆGíÊ6∆74∆ó7BÊ6ˆÁFñÁ2Çv÷ˆFÚ÷¶ˆvÚ÷ñ÷W'6ófÚríbbBÇrÊ¶ˆvÚ÷ñ÷W'6ófıı˜∆6Úrì∞¢ñbá∆6Úó∆6ÚÁ67&ˆ∆≈FÚá∑F˜£∆&VÜfñ˜#ß6V‘Êñ÷6ÚÇìÚvWFÚs¢w6÷ˆ˜FÇw“ì∞¢V«6RvñÊF˜rÁ67&ˆ∆≈FÚá∑F˜£∆&VÜfñ˜#ß6V‘Êñ÷6ÚÇìÚvWFÚs¢w6÷ˆ˜FÇw“ì∞¢–¢Ú¢2:vñÊ2FÚ∆óg&ÚÏ:6Ú<:6ÚV&∆ñ6F2ßVÁFÚ6ˆ“Ú‚6Rñ÷vV“Ï:6¢W7FófW"Ã:¬fñwW&ñÁFVó&6ˆ÷RV“fW¢FRFVóÜ"V“:÷6ˆÊRVV'&FÚ‚¢¢gVÊ7Fñˆ‚fñwW&˜6ñˆÊ¬ÜfñwW&í∞¢f"ñ÷s÷fñwW&bffñwW&ÁVW'ï6V∆V7F˜"Çvñ÷rrì≤ñbÇñ÷ró&WGW&‚fñwW&∞¢ñ÷rÊFDWfVÁD∆ó7FVÊW"ÇvW'&˜"r∆gVÊ7Fñˆ‚Çó∂fñwW&Á&V÷˜fRÇì∑“ì∞¢&WGW&‚fñwW&∞¢–†¢Ú¢“““6&FR¶ˆvÛ¢6ˆ“¬6ˆÊfWFRR6W\:¶Ê6ñFR6W'F˜2““““““““““““““““““¢¢f"VFñÛ∞¢gVÊ7Fñˆ‚&óáFóÚí∞¢ñbÇW7FFÚÁ6ˆ“ó&WGW&„∞¢G'í∞¢f"7GÉ◊vñÊF˜r‰VFñÙ6ˆÁFWáG««vñÊF˜rÁvV&∂óDVFñÙ6ˆÁFWáC≤ñbÇ7GÇó&WGW&„∞¢VFñÛ÷VFñ˜«∆ÊWr7GÇÇì∞¢f"Û÷VFñÚÊ7&VFT˜66ñ∆∆F˜"Çí¬s÷VFñÚÊ7&VFTvñ‚Çí¬C÷VFñÚÊ7W'&VÁEFñ÷S∞¢ÚÊ6ˆÊÊV7BÜrì≤rÊ6ˆÊÊV7BÜVFñÚÊFW7FñÊFñˆ‚ì∞¢ñbáFóÛ””“vˆ≤ró∂ÚÊg&WVVÊ7íÁ6WEf«VTEFñ÷RÉcc«Bì∂ÚÊg&WVVÊ7íÁ6WEf«VTEFñ÷RÉÉÉ«B≤„íì∑–¢V«6RñbáFóÛ””“vW'&Úró∂ÚÁGóS“wG&ñÊv∆Rs∂ÚÊg&WVVÊ7íÁ6WEf«VTEFñ÷RÉ#«Bì∑–¢V«6R∂ÚÊg&WVVÊ7íÁ6WEf«VTEFñ÷RÉS#2«Bì∂ÚÊg&WVVÊ7íÁ6WEf«VTEFñ÷RÉsÉB«B≤„"ì∂ÚÊg&WVVÊ7íÁ6WEf«VTEFñ÷RÉCb«B≤„#Bì∑–¢rÊvñ‚Á6WEf«VTEFñ÷RÇ„«Bì∞¢rÊvñ‚ÊWáˆÊVÁFñ≈&◊Fıf«VTEFñ÷RÇ„b«B≤„"ì∞¢rÊvñ‚ÊWáˆÊVÁFñ≈&◊Fıf«VTEFñ÷RÇ„«B≤„3Rì∞¢ÚÁ7F'BÇì≤ÚÁ7F˜áB≤„3bì∞¢“6F6ÇÖÚí∑–¢–¢f"4ı$U5ÙdU5D’≤r6&3sfBr¬r3#scÜRr¬r3CÉV2r¬r6#CV#br¬r3f#Cñ#Çr¬r3Ü#cSíu”∞¢gVÊ7Fñˆ‚∆6ÙfW7FáFóÚ∆GW&6Úí∞¢f"6óÜ÷7&ñ"ÇvFóbr¬vfW7FfW7F““r∑FóÚì∞¢Fˆ7V÷VÁBÊ&ˆGíÊVÊD6Üñ∆BÜ6óÜì∞¢6WEFñ÷V˜WBÜgVÊ7Fñˆ‚Çó∂6óÜÁ&V÷˜fRÇì∑“∆GW&6Úì∞¢&WGW&‚6óÜ∞¢–¢gVÊ7Fñˆ‚∆VF˜&ñÚÜ÷ñ‚∆÷Çí≤&WGW&‚÷ñ‚¥÷FÇÁ&ÊFˆ“Çí¢Ü÷Ç÷÷ñ‚ì≤–¢gVÊ7Fñˆ‚6ˆÊfWFRáVÁFñFFRí∞¢f"6óÜ◊∆6ÙfW7FÇv6ˆÊfWFRr√3cì∞¢f˜"áf"ì”∂ì«VÁFñFFS∂í≤≤ó∞¢f"÷7&ñ"Çvírì∞¢Á7Gñ∆RÊ∆VgC÷∆VF˜&ñÚÉ√í≤wgrs∞¢Á7Gñ∆RÊ&6∂w&˜VÊC‘4ı$U5ÙdU5D∂íT4ı$U5ÙdU5DÊ∆VÊwFÖ”∞¢Á7Gñ∆RÊÊñ÷Fñˆ‰GW&Fñˆ„÷∆VF˜&ñÚÉ„r√2„í≤w2s∞¢Á7Gñ∆RÊÊñ÷Fñˆ‰FV∆ì÷∆VF˜&ñÚÉ¬„3Rí≤w2s∞¢Á7Gñ∆RÁG&Á6f˜&”“w&˜FFRÇr¥÷FÇÊf∆ˆ˜"Ü∆VF˜&ñÚÉ√3cíí≤vFVrís∞¢6óÜÊVÊD6Üñ∆Báì∞¢–¢–¢gVÊ7Fñˆ‚W7G&V∆2áVÁFñFFRí∞¢f"6óÜ◊∆6ÙfW7FÇvW7G&V∆2r√Cí¬6ñ÷&ˆ∆˜3’≤~*Ÿr¬~) Çr¬	¯…Úr¬	˘*≤u”∞¢f˜"áf"ì”∂ì«VÁFñFFS∂í≤≤ó∞¢f"ÊwV∆Û“Üí˜VÁFñFFRí§÷FÇÂí£"¬∆6Ê6S÷∆VF˜&ñÚÉ#√#ìì∞¢f"S÷7&ñ"Çvír∆ÁV∆¬«6ñ÷&ˆ∆˜5∂íW6ñ÷&ˆ∆˜2Ê∆VÊwFÖ“ì∞¢RÁ7Gñ∆RÁ6WE&˜W'GíÇr“◊Çrƒ÷FÇÊ6˜2ÜÊwV∆Úí¶∆6Ê6R≤wÇrì∞¢RÁ7Gñ∆RÁ6WE&˜W'GíÇr“◊írƒ÷FÇÁ6ñ‚ÜÊwV∆Úí¶∆6Ê6R≤wÇrì∞¢RÁ7Gñ∆RÊfˆÁE6ó¶S÷∆VF˜&ñÚÉr√#íí≤wÇs∞¢RÁ7Gñ∆RÊÊñ÷Fñˆ‰FV∆ì÷∆VF˜&ñÚÉ¬„"í≤w2s∞¢6óÜÊVÊD6Üñ∆BÜRì∞¢–¢–¢gVÊ7Fñˆ‚&∆ˆW2áVÁFñFFRí∞¢f"6óÜ◊∆6ÙfW7FÇv&∆ˆW2r√C#ì∞¢f˜"áf"ì”∂ì«VÁFñFFS∂í≤≤ó∞¢f"#÷7&ñ"Çvír∆ÁV∆¬¬	¯ËÇrì∞¢"Á7Gñ∆RÊ∆VgC÷∆VF˜&ñÚÉB√ì"í≤wgrs∞¢"Á7Gñ∆RÊfˆÁE6ó¶S÷∆VF˜&ñÚÉ#Ç√Cbí≤wÇs∞¢"Á7Gñ∆RÊÊñ÷Fñˆ‰GW&Fñˆ„÷∆VF˜&ñÚÉ"„b√Bí≤w2s∞¢"Á7Gñ∆RÊÊñ÷Fñˆ‰FV∆ì÷∆VF˜&ñÚÉ¬„bí≤w2s∞¢6óÜÊVÊD6Üñ∆BÜ"ì∞¢–¢–¢gVÊ7Fñˆ‚6&ñ÷&ÚÇí∞¢f"6óÜ◊∆6ÙfW7FÇv6&ñ÷&Úr√í¬÷&63’≤	¯Ëír¬	˘Úr¬	˘*¢r¬	˘ò¬r¬	˙[2u”∞¢6óÜÊVÊD6Üñ∆BÜ7&ñ"Çv"r∆ÁV∆¬∆÷&65¥÷FÇÊf∆ˆ˜"Ñ÷FÇÁ&ÊFˆ“Çí¶÷&62Ê∆VÊwFÇï“íì∞¢–¢Ú¢V“&WW'L;7&ñÚV“fW¢FR6V◊&RÚ÷W6÷Ú6ˆÊfWFR(	BRÁVÊ6÷W6÷¢6ˆ÷V÷˜&:|:6ÚGV2fW¶W26VwVñF2‚¢¢f"dU5D3’∂gVÊ7Fñˆ‚Çó∂6ˆÊfWFRÉ3ì∑“∆gVÊ7Fñˆ‚Çó∂W7G&V∆2Ébì∑“∆gVÊ7Fñˆ‚Çó∂&∆ˆW2Éíì∑“∆6&ñ÷&ı”∞¢f"V«Fñ÷fW7F“”∞¢gVÊ7Fñˆ‚fW7FV¶"Üf˜'FRí∞¢ñbá6V‘Êñ÷6ÚÇíó&WGW&„∞¢ñbÜf˜'FRó∂6ˆÊfWFRÉsì∂W7G&V∆2É#ì∑&WGW&„∑“Ú¢fñ“FR¶ˆvÛ¢2GV2ßVÁF2¢¢f"ì∞¢FÚ≤ì‘÷FÇÊf∆ˆ˜"Ñ÷FÇÁ&ÊFˆ“Çí§dU5D2Ê∆VÊwFÇì≤“vÜñ∆RÜì””◊V«Fñ÷fW7Fì∞¢V«Fñ÷fW7F÷ì∞¢dU5D5∂ï“Çì∞¢–¢gVÊ7Fñˆ‚¶W&%∆6"Çí≤∆6#◊∑ˆÁF˜3£«6WVVÊ6ñ£∆÷V∆Ü˜#£”≤–¢gVÊ7Fñˆ‚ˆÁGV"Ü6W'FÚí∞¢ñbÜ6W'FÚó∞¢∆6"Á6WVVÊ6ñ≤≥∞¢∆6"Ê÷V∆Ü˜#‘÷FÇÊ÷Çá∆6"Ê÷V∆Ü˜"«∆6"Á6WVVÊ6ñì∞¢∆6"ÁˆÁF˜2≥”≤á∆6"Á6WVVÊ6ñ„”3ÛS£ì∞¢“V«6R∆6"Á6WVVÊ6ñ”∞¢GV∆ó¶%∆6"Çì∞¢–¢gVÊ7Fñˆ‚GV∆ó¶%∆6"Çí∞¢f"áVC“BÇr6áVB÷¶ˆvÚrì≤ñbÇáVBó&WGW&„∞¢áVBÁVW'ï6V∆V7F˜"ÇrÊáVEı˜ˆÁF˜2"ríÁFWáD6ˆÁFVÁC◊∆6"ÁˆÁF˜3∞¢áVBÁVW'ï6V∆V7F˜"ÇrÊáVEı˜6VwVñF2"ríÁFWáD6ˆÁFVÁC◊∆6"Á6WVVÊ6ñ∞¢áVBÁVW'ï6V∆V7F˜"ÇrÊáVEı˜6VwVñF2ríÊ6∆74∆ó7BÁFˆvv∆RÇváVEı˜ñ«V∆“◊VVÁFRr«∆6"Á6WVVÊ6ñ„”2ì∞¢–¢gVÊ7Fñˆ‚÷ˆÁF$áVBÇí∞¢f"áVC÷7&ñ"ÇvFóbr¬váVBr∆ÁV∆¬«∂ñC¢váVB÷¶ˆvÚw“ì∞¢áVBÊVÊD6Üñ∆BÜ7&ñ"ÇvFóbr¬váVEı˜ñ«V∆áVEı˜ˆÁF˜2r¬s∆#‚r∑∆6"ÁˆÁF˜2≤s¬ˆ#„«7„ÂˆÁF˜3¬˜7„‚ríì∞¢áVBÊVÊD6Üñ∆BÜ7&ñ"ÇvFóbr¬váVEı˜ñ«V∆áVEı˜6VwVñF2r≤á∆6"Á6WVVÊ6ñ„”3ÚráVEı˜ñ«V∆“◊VVÁFRs¢rrí¬s∆#‚r∑∆6"Á6WVVÊ6ñ≤s¬ˆ#„«7„Â6VwVñF3¬˜7„‚ríì∞¢f"6ˆ”÷7&ñ"Çv'WGFˆ‚r¬váVEı˜6ˆ“r∆W7FFÚÁ6ˆ”Ú	˘H¢s¢	˘Hrr«∑GóS¢v'WGFˆ‚r¬v&ñ÷∆&V¬s¢t∆ñv"˜RFW6∆ñv"Ú6ˆ“w“ì∞¢6ˆ“ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∞¢W7FFÚÁ6ˆ”“W7FFÚÁ6ˆ”≤6«f"Çì≤6ˆ“ÁFWáD6ˆÁFVÁC÷W7FFÚÁ6ˆ”Ú	˘H¢s¢	˘Hrs∞¢6ˆ“Á6WDGG&ñ'WFRÇv&ñ◊&W76VBr∆W7FFÚÁ6ˆ”ÚwG'VRs¢vf«6Rrì≤ñbÜW7FFÚÁ6ˆ“ñ&óÇvˆ≤rì∞¢“ì∞¢áVBÊVÊD6Üñ∆Bá6ˆ“ì∞¢&WGW&‚áVC∞¢–¢gVÊ7Fñˆ‚6V‘Êñ÷6ÚÇí∞¢&WGW&‚ávñÊF˜rÊ÷F6Ñ÷VFñbbvñÊF˜rÊ÷F6Ñ÷VFñÇrá&VfW'2◊&VGV6VB÷÷˜Fñˆ„¢&VGV6RíríÊ÷F6ÜW2ì∞¢–¢Ú¢VÊFÚÊ66R6ˆÁF\;¶FÚV÷&óÜÚÜÊˆ÷V:|:6Ú¬ÚfVVF&6≤¬Ú&˜L:6ÚFR6VwVó"í¿¢:vñÊfíG,:2FV∆S¢WÜÚfñ“&FVÁG&ÚFFV∆¬÷2ÁVÊ6W66ˆÊFP¢Ú6ˆ÷\:vÚFV&óÜÚFÚ6&\:v∆ÜÚw'VFFÚ‚¢¢gVÊ7Fñˆ‚&WfV∆"ÜñÊñ6ñÚ∆fñ“í∞¢ñbÇñÊñ6ñ˜«¬ñÊñ6ñÚÊvWD&˜VÊFñÊt6∆ñVÁE&V7Bó&WGW&„∞¢f"÷WÜW#÷gVÊ7Fñˆ‚Çó∞¢G'í∞¢f"÷ñÊñ6ñÚÊvWD&˜VÊFñÊt6∆ñVÁE&V7BÇí¬#“Üfñ◊«∆ñÊñ6ñÚíÊvWD&˜VÊFñÊt6∆ñVÁE&V7BÇì∞¢f"∆6Û÷Fˆ7V÷VÁBÊ&ˆGíÊ6∆74∆ó7BÊ6ˆÁFñÁ2Çv÷ˆFÚ÷¶ˆvÚ÷ñ÷W'6ófÚríbbBÇrÊ¶ˆvÚ÷ñ÷W'6ófıı˜∆6Úrì∞¢ñbá∆6Úbg∆6ÚÊ6ˆÁFñÁ2ÜñÊñ6ñÚíó∞¢f"'◊∆6ÚÊvWD&˜VÊFñÊt6∆ñVÁE&V7BÇí¬F˜ı∆6Û◊'ÁF˜≥"¬6Üı∆6Û◊'Ê&˜GFˆ“”B¬ßW7FS”∞¢ñbÜ"Ê&˜GFˆ”Ê6Üı∆6ÚñßW7FS÷"Ê&˜GFˆ“÷6Üı∆6Û∞¢ñbÜÁF˜÷ßW7FS«F˜ı∆6ÚñßW7FS÷ÁF˜◊F˜ı∆6Û∞¢ñbÑ÷FÇÊ'2ÜßW7FRì„”Bó∆6ÚÁ67&ˆ∆ƒ'íá∑F˜¶ßW7FR∆&VÜfñ˜#ß6V‘Êñ÷6ÚÇìÚvWFÚs¢w6÷ˆ˜FÇw“ì∞¢&WGW&„∞¢–¢Ú¢ÚVR6ˆ'&RÚ«FÚFFV∆¢Ú6&\:v∆ÜÚR¬ÊFV∆FR6:◊GV∆Ú¿¢F÷,:ñ“&'&FR&2(	B2GV2<:6Úw'VFVÁF2‚¢¢f"FWFÛ◊'6TñÁBÜvWD6ˆ◊WFVE7Gñ∆RÜFˆ7V÷VÁBÊFˆ7V÷VÁDV∆V÷VÁBíÊvWE&˜W'Gïf«VRÇr“◊F˜Úrí√ó«√SÉ∞¢f"&3“BÇrÊ&2rì∞¢ñbÜ&2ó∑f"&÷&2ÊvWD&˜VÊFñÊt6∆ñVÁE&V7BÇì∂ñbá&Ê&˜GFˆ”„bg&Ê&˜GFˆ”«vñÊF˜rÊñÊÊW$ÜVñváBÛ"óFWFÛ‘÷FÇÊ÷ÇáFWFÚ«&Ê&˜GFˆ“ì∑–¢f"F˜Û◊FWFÚ≥B¬6ÜÛ◊vñÊF˜rÊñÊÊW$ÜVñváB”B¬FV«F”∞¢ñbÜ"Ê&˜GFˆ”Ê6ÜÚíFV«F÷"Ê&˜GFˆ“÷6ÜÛ∞¢ñbÜÁF˜÷FV«F«F˜ÚíFV«F÷ÁF˜◊F˜Û∞¢ñbÑ÷FÇÊ'2ÜFV«Fì√Bó&WGW&„∞¢vñÊF˜rÁ67&ˆ∆ƒ'íá∑F˜¶FV«F∆&VÜfñ˜#ß6V‘Êñ÷6ÚÇìÚvWFÚs¢w6÷ˆ˜FÇw“ì∞¢“6F6ÇÖÚí∑–¢”∞¢ñbávñÊF˜rÁ&WVW7DÊñ÷Fñˆ‰g&÷RóvñÊF˜rÁ&WVW7DÊñ÷Fñˆ‰g&÷RÜ÷WÜW"ì∂V«6R÷WÜW"Çì∞¢–¢gVÊ7Fñˆ‚÷˜7G&"ÜñBí∞¢ñbÜñB”“wFV∆÷6óGV∆ÚrñFVfñÊó$÷ˆFÙ¶ˆvÚÜf«6Rì∞¢BBÇrÁFV∆ríÊf˜$V6ÇÜgVÊ7Fñˆ‚áBí≤f"Fóf◊BÊñC””÷ñC≤BÊÜñFFV„“Fóf≤BÊ6∆74∆ó7BÁFˆvv∆RÇwFV∆“÷Fófr∆Fófì≤“ì∞¢f"Üˆ÷S÷ñC””“wFV∆÷Üˆ÷Rs∞¢Fˆ7V÷VÁBÊ&ˆGíÊ6∆74∆ó7BÁFˆvv∆RÇv&ˆGí“÷Üˆ÷Rr∆Üˆ÷Rì∞¢BÇr6'F‚◊fˆ«F"ríÊÜñFFV„÷Üˆ÷S∞¢ó%F˜ÚÇì∞¢–†¢gVÊ7Fñˆ‚&VÊFW$Üˆ÷RÇí∞¢W7FFÚÊFó66ó∆ñÊ÷ÁV∆√≤W7FFÚÊ6óGV∆Û÷ÁV∆√≤W7FFÚÊ&“wFV˜&ñs∞¢f"w&FS“BÇr6w&FR÷Fó66ó∆ñÊ2rì≤w&FRÊñÊÊW$ÖD‘√“rs∞¢Dï44ïƒî‰2Êf˜$V6ÇÜgVÊ7Fñˆ‚ÜFó62í∞¢f"fVóF˜3÷Fó62Ê6óGV∆˜2Êfñ«FW"ÜgVÊ7Fñˆ‚Ü2ó∑&WGW&‚W7FFÚÁ&ˆw&W76ı∂2ÊñE“bbW7FFÚÁ&ˆw&W76ı∂2ÊñE“ÊfVóFÛ∑“íÊ∆VÊwFÉ∞¢f"ñÊñ6ñF˜3÷Fó62Ê6óGV∆˜2Á6ˆ÷RÜgVÊ7Fñˆ‚Ü2ó∑&WGW&‚W7FFÚÁ&ˆw&W76ı∂2ÊñE”∑“ì∞¢f"7FGW3÷fVóF˜2ÚfVóF˜2≤rFRr∂Fó62Ê6óGV∆˜2Ê∆VÊwFÇ≤r6ˆÊ6«\:÷F˜2r¢ÜñÊñ6ñF˜3Út6ˆÁFñÁV"s¢rrì∞¢f"#÷7&ñ"Çv'WGFˆ‚r¬vFó62÷6&Br¬s«7‚6∆73“&Fó62÷6&EıˆÊˆ÷R#‚r∑FWáFı6VwW&ÚÜFó62ÊÊˆ÷Rí≤s¬˜7„‚r∞¢á7FGW3Ús«7‚6∆73“&Fó62÷6&Eı˜7FGW2#‚r∑7FGW2≤s¬˜7„‚s¢rrí≤s«7‚6∆73“&Fó62÷6&Eı˜6WF"&ñ÷ÜñFFV„“'G'VR#Ó(i#¬˜7„‚r«∑GóS¢v'WGFˆ‚w“ì∞¢"Á7Gñ∆RÁ6WE&˜W'GíÇr“÷6VÁFÚr∆6VÁFÚÜFó62íì∞¢"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∂'&ó$Fó66ó∆ñÊÜFó62ÊñBì∑“ì≤w&FRÊVÊD6Üñ∆BÜ"ì∞¢“ì∞¢f"fVóF˜3◊F˜FƒfVóF˜2Çí¬F˜F√◊F˜Fƒ62Çí¬7C‘÷FÇÁ&˜VÊBÜfVóF˜2˜F˜F¬£ì∞¢BÇr7ñÊV¬◊&ˆw&W76ÚríÊÜñFFV„÷fVóF˜3”””∞¢BÇr7ñÊV¬◊7BríÁFWáD6ˆÁFVÁC◊7B≤rRs≤BÇr6&'&÷fñ∆¬ríÁ7Gñ∆RÁvñGFÉ◊7B≤rRs∞¢BÇr6&'&÷vW&¬ríÁ6WDGG&ñ'WFRÇv&ñ◊f«VVÊ˜rr≈7G&ñÊrá7Bíì∞¢f"6ˆÁC“BÇr6'F‚÷6ˆÁFñÁV"rì≤6ˆÁBÊÜñFFV„◊G'VS∞¢ñbÜW7FFÚÁV«Fñ÷Úí∞¢f"C÷Fó65˜$ñBÜW7FFÚÁV«Fñ÷ÚÊFó66ó∆ñÊí¬3÷6˜$ñBÜB∆W7FFÚÁV«Fñ÷ÚÊ6óGV∆Úì∞¢ñbÜBbf2ó≤6ˆÁBÊÜñFFV„÷f«6S≤BÇr66ˆÁFñÁV"◊FóGV∆ÚríÁFWáD6ˆÁFVÁC÷2ÁFóF∆S≤BÇr66ˆÁFñÁV"÷FWF∆ÜRríÁFWáD6ˆÁFVÁC÷BÊÊˆ÷R≤r+r‹;6GV∆Úr∂2Ê÷ˆGV∆S≤–¢–¢&VÊFW$6∆VÊF&ñı&˜f2Çì∞¢GV∆ó¶%F˜ÚÇì≤÷˜7G&"ÇwFV∆÷Üˆ÷Rrì∞¢–†¢gVÊ7Fñˆ‚'&ó%&Wfó6ÙWáG&ÜÊˆ÷Ró∂ñbáGóVˆb$Udï4ÙU5ÙUÖE$3””“wVÊFVfñÊVBw«¬$Udï4ÙU5ÙUÖE$5∂Êˆ÷U“ó&WGW&„∑f"&Wfó6Û’$Udï4ÙU5ÙUÖE$5∂Êˆ÷U“«&ó£“BÇr7&Wfó6Ú÷6ˆÁFWVFÚrì≤BÇr7&Wfó6Ú◊FóGV∆ÚríÁFWáD6ˆÁFVÁC◊&Wfó6ÚÁFóGV∆Û∑&ó¢ÊñÊÊW$ÖD‘√◊&Wfó6ÚÊáF÷¬≤s«6V7Fñˆ‚6∆73“&v&&óFÚ◊&W7ˆÁ6fV¬#„«6∆73“&v&&óFÚ◊&W7ˆÁ6fV≈ıˆ&V#Ï8&VFÚ&W7ˆÁ<:fV√¬˜„∆É#‰v&&óFÚ&6˜'&\:|:6Û¬ˆÉ#„«Â&W7˜7F26ˆÊfW&ñF2'Fó"F˜2VÁVÊ6ñF˜2¬6V“6˜ñ"2&W7˜7F2÷ÁW67&óF2„¬˜„∆'WGFˆ‚6∆73“&v&&óFÚ◊&W7ˆÁ6fV≈ıˆ&˜FÚ"GóS“&'WGFˆ‚"&ñ÷WáÊFVC“&f«6R#‰÷˜7G&"v&&óFÛ¬ˆ'WGFˆ„„∆Fób6∆73“&v&&óFÚ◊&W7ˆÁ6fV≈ıˆ6ˆÁFWVFÚ"ÜñFFV„‚r∑&Wfó6ÚÊv&&óFÚ≤s¬ˆFóc„¬˜6V7Fñˆ„„∆'WGFˆ‚6∆73“'&Wfó6Ú÷∆ñ◊""GóS“&'WGFˆ‚#‰∆ñ◊"&W7˜7F3¬ˆ'WGFˆ„‚s≤BBÇrÁ&Wfó6Ú÷&2∂FF◊&Wfó6ı“ríÊf˜$V6ÇÜgVÊ7Fñˆ‚Ü"ó∂"Á6WDGG&ñ'WFRÇv&ñ◊6V∆V7FVBr∆"ÊFF6WBÁ&Wfó6Û””÷Êˆ÷SÚwG'VRs¢vf«6Rrì∑“ì∑f"&˜FÙv&&óFÛ◊&ó¢ÁVW'ï6V∆V7F˜"ÇrÊv&&óFÚ◊&W7ˆÁ6fV≈ıˆ&˜FÚrí∆6ˆÁFWVFÙv&&óFÛ◊&ó¢ÁVW'ï6V∆V7F˜"ÇrÊv&&óFÚ◊&W7ˆÁ6fV≈ıˆ6ˆÁFWVFÚrì∂&˜FÙv&&óFÚÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∑f"'&ó#÷6ˆÁFWVFÙv&&óFÚÊÜñFFV„∂6ˆÁFWVFÙv&&óFÚÊÜñFFV„“'&ó#∂&˜FÙv&&óFÚÁ6WDGG&ñ'WFRÇv&ñ÷WáÊFVBr∆'&ó#ÚwG'VRs¢vf«6Rrì∂&˜FÙv&&óFÚÁFWáD6ˆÁFVÁC÷'&ó#Útˆ7V«F"v&&óFÚs¢t÷˜7G&"v&&óFÚs∑“ì∑&ó¢ÁVW'ï6V∆V7F˜"ÇrÁ&Wfó6Ú÷∆ñ◊"ríÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∑&ó¢ÁVW'ï6V∆V7F˜$∆¬ÇvñÁWBríÊf˜$V6ÇÜgVÊ7Fñˆ‚Ü2ó∂ñbÜ2ÁGóS””“w&FñÚw«∆2ÁGóS””“v6ÜV6∂&˜Çrñ2Ê6ÜV6∂VC÷f«6S∂V«6R2Áf«VS“rs∑“ì∑&ó¢ÁVW'ï6V∆V7F˜$∆¬ÇwFWáF&VríÊf˜$V6ÇÜgVÊ7Fñˆ‚Ü2ó∂2Áf«VS“rs∑“ì∑Fˆ7BÇu&W7˜7F2vF2‚rì∑“ì∂÷˜7G&"ÇwFV∆◊&Wfó6ˆW2rì∑–†¢Ú¢6∆VÊL:&ñÚFR&˜f2(	B6F&˜f∆Wf:%&Wfó<:6ÚFÚ<+¢&ñ÷W7G&R"F¢÷L:ó&ñáV“F˜VRí‚Ú6&B∆ó7F˜2‹;6GV∆˜2RL;7ñ6˜26ˆ'&F˜2‚&¢GV∆ó¶"ÁV“,;7Üñ÷Ú&ñ÷W7G&R¬&7FVFóF"∆ó7F$ıd3¢FF¬Fñ¿¢Ú6:◊GV∆ÚFR&Wfó<:6ÚFRFW7FñÊÚR˜2‹;6GV∆˜2˜L;7ñ6˜2WÜñ&ñF˜2‚¢¢f"$ıd2“∞¢FóGV∆Û¢t6∆VÊL:&ñÚFR&˜f2r¿¢∆VvVÊF¢uFW7FW2&ñ÷W7G&ó2+r<+¢&ñ÷W7G&RFR##br¿¢óFVÁ3•∞¢≤Fó66ó∆ñÊ¢w˜'GVwVW2r¬6óGV∆Û¢w&Weˆ«6"r¬FF¢srr¬÷W3¢sÇr¬Fñ¢u6VwVÊFr¬÷ˆGV∆˜3•∞¢∂„£r¬FóGV∆Û¢t∆fV÷‹:6Ú¬∆f˜WG&r¬F˜ñ6˜3•≤uFWáFÚñÁ7G'V6ñˆÊ¬r¬u7V'7FÁFófÚV÷VÁFFófÚRFñ÷ñÁWFófÚr¬t˜'Fˆw&fñ¢FW&÷ñÊ:|;VW2◊6ñÊÜÚÜí¬◊¶ñÊÜÚÜí¬÷ñÊÜÚÜíu◊“¿¢∂„£Ç¬FóGV∆Û¢t∆V÷'&Ï:v2FRV÷fñFr¬F˜ñ6˜3•≤t6ˆÁF˜2FR÷V‹;7&ñ2r¬tF¶WFófÚr¬t˜'Fˆw&fñ¢÷˜6ÚÚ÷˜6u◊–¢◊“¿¢≤Fó66ó∆ñÊ¢v6ñVÊ6ñ2r¬6óGV∆Û¢w&Weˆ6ñS6"r¬FF¢sÇr¬÷W3¢sÇr¬Fñ¢uFW,:vr¬÷ˆGV∆˜3•∞¢∂„£í¬FóGV∆Û¢t6&7FW,:◊7Fñ62FFW'&r¬F˜ñ6˜3•≤u&W&W6VÁF:|;VW2FFW'&r¬uFW'&¬∆ÊWFßV¬r¬tÚñÁFW&ñ˜"FFW'&r¬ugV∆<;VW2¬FW'&V÷˜F˜2RG7VÊ÷ó2u◊“¿¢∂„£¬FóGV∆Û¢tˆ'6W'fÊFÚÚ<:óRFóW&ÊÚr¬F˜ñ6˜3•≤t˜26˜'˜26V∆W7FW2r¬tÚ6ˆ¬R7VñÊf«\:¶Ê6ñÊFW'&r¬t˜27G&˜26R÷˜fñ÷VÁF“u◊–¢◊“¿¢≤Fó66ó∆ñÊ¢v÷FV÷Fñ6r¬6óGV∆Û¢w&Weˆ÷C6"r¬FF¢sír¬÷W3¢sÇr¬Fñ¢uV'Fr¬÷ˆGV∆˜3•∞¢∂„£í¬FóGV∆Û¢t6ˆÁFvV“FR˜76ñ&ñ∆ñFFW2R˜WG&2◊V«Fó∆ñ6:|;VW2r¬F˜ñ6˜3•≤u&ˆ&∆V÷2FR6ˆÁFvV“FR˜76ñ&ñ∆ñFFW2r¬t◊V«Fó∆ñ6:|:6Ú˜"¬˜"R˜"r¬u&ˆ&∆V÷2FR◊V«Fó∆ñ6:|:6Úu◊“¿¢∂„£¬FóGV∆Û¢t÷VFñF2FRFV◊Ú¬∆ˆ6∆ó¶:|:6ÚRFW6∆ˆ6÷VÁFÚr¬F˜ñ6˜3•≤tÜ˜&R÷VñÜ˜&r¬tÜ˜&¬÷ñÁWFÚR6VwVÊFÚr¬t∆ˆ6∆ó¶:|:6Úr¬uG&¶WF˜2RFW6∆ˆ6÷VÁF˜2u◊–¢◊“¿¢≤Fó66ó∆ñÊ¢vÜó7F˜&ñr¬6óGV∆Û¢w&WeˆÜó7C6"r¬FF¢s#r¬÷W3¢sÇr¬Fñ¢uVñÁFr¬÷ˆGV∆˜3•∞¢∂„£í¬FóGV∆Û¢tFófñFñÊFÚW7:v˜2V“6ˆ◊VÊñFFRr¬F˜ñ6˜3•≤tW7:v˜2;¶&∆ñ6˜2RW7:v˜2&ófF˜2r¬tW7:v˜2;¶&∆ñ6˜2FR7V6ñFFRu◊“¿¢∂„£¬FóGV∆Û¢tW7:v˜2;¶&∆ñ6˜2RW7:v˜2&ófF˜2r¬F˜ñ6˜3•≤tW7:v˜2;¶&∆ñ6˜2FR6W76Ú&W7G&óFÚr¬tW7:v˜2&ófF˜2FRW6Ú;¶&∆ñ6Úr¬u6W'fú:v˜2;¶&∆ñ6˜2R&ófF˜2r¬tF÷ñÊó7G&:|:6ÚFÚ◊VÊñ<:◊ñÚÖ&VfVóGW&íu◊–¢◊“¿¢≤Fó66ó∆ñÊ¢vvVˆw&fñr¬6óGV∆Û¢w&WeˆvVÛ6"r¬FF¢s#r¬÷W3¢sÇr¬Fñ¢u6WáFr¬÷ˆGV∆˜3•∞¢∂„£í¬FóGV∆Û¢t6ˆÊÜV6VÊFÚÚ◊VÊñ<:◊ñÚr¬F˜ñ6˜3•≤tÚVR:í◊VÊñ<:◊ñÛÚr¬t:&VW&&ÊFÚ◊VÊñ<:◊ñÚr¬u&ˆ&∆V÷2÷&ñVÁFó2Ê2:&V2W&&Ê2r¬t:&V'W&¬FÚ◊VÊñ<:◊ñÚr¬tFófñFFW2V6ˆÏ;F÷ñ62'W&ó2RW&&Ê2u◊–¢◊–¢–¢”∞¢gVÊ7Fñˆ‚&VÊFW$6∆VÊF&ñı&˜f2Çí∞¢f"6V6Û“BÇr66∆VÊF&ñÚ◊&˜f2rì≤ñbÇ6V6Úí&WGW&„∞¢6V6ÚÊñÊÊW$ÖD‘√“rs∞¢f"óFVÁ3’$ıd2ÊóFVÁ2Êfñ«FW"ÜgVÊ7Fñˆ‚áó≤f"C÷Fó65˜$ñBáÊFó66ó∆ñÊì≤&WGW&‚Bbf6˜$ñBÜB«Ê6óGV∆Úì≤“ì∞¢ñbÇóFVÁ2Ê∆VÊwFÇó≤6V6ÚÊÜñFFV„◊G'VS≤&WGW&„≤–¢6V6ÚÊÜñFFV„÷f«6S∞¢6V6ÚÊVÊD6Üñ∆BÜ7&ñ"ÇvÉ"r¬w&˜f5ı˜FóGV∆Úr¬s«7‚6∆73“'&˜f5ıˆñ6Ú"&ñ÷ÜñFFV„“'G'VR#Ô	˘8S¬˜7„‚r∑FWáFı6VwW&ÚÖ$ıd2ÁFóGV∆Úí«∂ñC¢w&˜f2◊FóGV∆Úw“íì∞¢6V6ÚÊVÊD6Üñ∆BÜ7&ñ"Çwr¬w&˜f5ıˆ∆VvVÊFr«FWáFı6VwW&ÚÖ$ıd2Ê∆VvVÊFííì∞¢f"∆ó7F÷7&ñ"ÇvFóbr¬w&˜f5ıˆ∆ó7Frì∞¢óFVÁ2Êf˜$V6ÇÜgVÊ7Fñˆ‚áó∞¢f"Fó63÷Fó65˜$ñBáÊFó66ó∆ñÊì∞¢f"÷ˆGV∆˜4áF÷√“áÊ÷ˆGV∆˜7«≈µ“íÊ÷ÜgVÊ7Fñˆ‚Ü“ó∞¢&WGW&‚s«7‚6∆73“'&˜f÷÷ˆGV∆Ú#‚r∞¢s«7‚6∆73“'&˜f÷÷ˆGV∆ııˆÊˆ÷R#‰‹;6GV∆Úr∑FWáFı6VwW&ÚÜ“Ê‚í≤r+rr∑FWáFı6VwW&ÚÜ“ÁFóGV∆Úí≤s¬˜7„‚r∞¢s«7‚6∆73“'&˜f÷÷ˆGV∆ıı˜F˜ñ6˜2#‚r≤Ü“ÁF˜ñ6˜7«≈µ“íÊ÷áFWáFı6VwW&ÚíÊ¶ˆñ‚Çr+rrí≤s¬˜7„‚r∞¢s¬˜7„‚s∞¢“íÊ¶ˆñ‚Çrrì∞¢f"6&C÷7&ñ"Çv'WGFˆ‚r¬w&˜f÷6&Br¿¢s«7‚6∆73“'&˜f÷6&EıˆFF#„«7G&ˆÊs‚r∑FWáFı6VwW&ÚáÊFFí≤s¬˜7G&ˆÊs„«7‚6∆73“'&˜f÷6&Eıˆ÷W2#‚Úr∑FWáFı6VwW&ÚáÊ÷W2í≤s¬˜7„„«7‚6∆73“'&˜f÷6&EıˆFñ#‚r∑FWáFı6VwW&ÚáÊFñí≤s¬˜7„„¬˜7„‚r∞¢s«7‚6∆73“'&˜f÷6&EıˆñÊfÚ#‚r∞¢s«7G&ˆÊr6∆73“'&˜f÷6&EıˆFó62#‚r∑FWáFı6VwW&ÚÜFó62ÊÊˆ÷Rí≤s¬˜7G&ˆÊs‚r∞¢s«7‚6∆73“'&˜f÷6&Eıˆ÷ˆGV∆˜2#‚r∂÷ˆGV∆˜4áF÷¬≤s¬˜7„‚r∞¢s«7‚6∆73“'&˜f÷6&EıˆF∆ÜÚ#Â&Wfó6"&&˜f«7‚&ñ÷ÜñFFV„“'G'VR#Ó(i#¬˜7„„¬˜7„‚r∞¢s¬˜7„‚r¿¢∑GóS¢v'WGFˆ‚r¬v&ñ÷∆&V¬s¢u&Wfó6"&&˜fFRr∂Fó62ÊÊˆ÷R≤rV“r∑ÊFF≤rÚr∑Ê÷W7“ì∞¢6&BÁ7Gñ∆RÁ6WE&˜W'GíÇr“÷6VÁFÚr∆6VÁFÚÜFó62íì∞¢6&BÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó≤'&ó$6óGV∆ÚáÊFó66ó∆ñÊ«Ê6óGV∆Úì≤“ì∞¢∆ó7FÊVÊD6Üñ∆BÜ6&Bì∞¢“ì∞¢6V6ÚÊVÊD6Üñ∆BÜ∆ó7Fì∞¢–†¢gVÊ7Fñˆ‚'&ó$Fó66ó∆ñÊÜñBí∞¢f"Fó63÷Fó65˜$ñBÜñBì≤ñbÇFó62í&WGW&‚&VÊFW$Üˆ÷RÇì∞¢W7FFÚÊFó66ó∆ñÊ÷ñC≤W7FFÚÊ6óGV∆Û÷ÁV∆√≤6«f"Çì∞¢f"6#“BÇr66&V6∆ÜÚ÷Fó62rì≤6"ÊñÊÊW$ÖD‘√“s«6∆73“&6&V6∆ÜÚ÷Fó65ı˜G&ñ∆Ü#‰÷L:ó&ñ¬˜„∆É6∆73“&6&V6∆ÜÚ÷Fó65ı˜FóGV∆Ú"ñC“&Fó62◊FóGV∆Ú#‚r∑FWáFı6VwW&ÚÜFó62ÊÊˆ÷Rí≤s¬ˆÉ„«6∆73“&6&V6∆ÜÚ÷Fó65ı˜FWáFÚ#‰W66ˆ∆ÜV“77VÁFÚ‚fˆ<:¢ˆFRWá∆˜&"ÊÚ6WR&óF÷ÚRfˆ«F"VÊFÚVó6W"„¬˜‚s∞¢6"Á7Gñ∆RÁ6WE&˜W'GíÇr“÷6VÁFÚr∆6VÁFÚÜFó62íì∞¢f"fó7Vó4Fó66ó∆ñÊ◊∞¢˜'GVwVW3ß∑7&3¢v76WG2ˆFó66ó∆ñÊ◊˜'GVwVW2ÁvV'r∆«C¢t7&ñÏ:v2∆VÊFÚ¬W67&WfVÊFÚRñ÷vñÊÊFÚÜó7L;7&ñ2ßVÁF2‚w“¿¢÷FV÷Fñ6ß∑7&3¢v76WG2ˆFó66ó∆ñÊ÷÷FV÷Fñ6ÁvV'r∆«C¢t7&ñÏ:v2Wá∆˜&ÊFÚf˜&÷2¬VÁFñFFW2¬÷VFñF2¬G,;VW2RÚFV◊Ú‚w“¿¢6ñVÊ6ñ3ß∑7&3¢v76WG2ˆFó66ó∆ñÊ÷6ñVÊ6ñ2ÁvV'r∆«C¢t7&ñÏ:v2ñÁfW7FñvÊFÚ∆ÁF2¬Êñ÷ó2¬:wV¬FW'&RÚ<:óR‚w“¿¢vVˆw&fñß∑7&3¢v76WG2ˆFó66ó∆ñÊ÷vVˆw&fñÁvV'r∆«C¢t7&ñÏ:v2Wá∆˜&ÊFÚ÷2¬ó6vVÁ2¬6ñFFR¬6◊ÚR6÷ñÊÜ˜2‚w“¿¢Üó7F˜&ñß∑7&3¢v76WG2ˆFó66ó∆ñÊ÷Üó7F˜&ñÁvV'r∆«C¢t7&ñÏ:v2RW76ˆ2ñF˜626ˆ◊'Fñ∆ÜÊFÚf˜Fˆw&fñ2¬÷V‹;7&ñ2RÜó7L;7&ñ2F6ˆ◊VÊñFFR‚w–¢“¬fó7V√◊fó7Vó4Fó66ó∆ñÊ∂Fó62ÊñE“¬fñwW&“BÇr6Fó62◊fó7V¬rì∞¢fñwW&ÊñÊÊW$ÖD‘√◊fó7V√Ús∆ñ÷r7&3“"r∑fó7V¬Á7&2≤r"«C“"r∑fó7V¬Ê«B≤r#‚s¢rs∞¢f"∆ó7F“BÇr6∆ó7F÷6óGV∆˜2rì≤∆ó7FÊñÊÊW$ÖD‘√“rs∞¢Fó62Ê6óGV∆˜2Êf˜$V6ÇÜgVÊ7Fñˆ‚Ü6ó∞¢f"÷W7FFÚÁ&ˆw&W76ı∂6ÊñE“¬÷&6◊bgÊfVóFÛÚ~)…2s¢~(i"s∞¢f"&Wfó6Û÷6ÊñBÊñÊFWÑˆbÇw&WeÚrì”””∞¢f"#÷7&ñ"Çv'WGFˆ‚r¬v6÷6&Br≤á&Wfó6ÛÚr6÷6&B“◊&Wfó6Ús¢rrí¬s«7‚6∆73“&6÷6&EıˆÁV“#‚r∂6Ê÷ˆGV∆R≤s¬˜7„„«7„„«7G&ˆÊr6∆73“&6÷6&Eı˜FóGV∆Ú#‚r∑FWáFı6VwW&ÚÜ6ÁFóF∆Rí≤s¬˜7G&ˆÊs„«7‚6∆73“&6÷6&Eı˜7V"#‚r∑FWáFı6VwW&ÚÜ6Á7V'FóF∆W«¬rrí≤s¬˜7„„¬˜7„„«7‚6∆73“&6÷6&EıˆW7FFÚ"&ñ÷ÜñFFV„“'G'VR#‚r∂÷&6≤s¬˜7„‚r«∑GóS¢v'WGFˆ‚w“ì∞¢"Á7Gñ∆RÁ6WE&˜W'GíÇr“÷6VÁFÚr∆6VÁFÚÜFó62íì≤"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∂'&ó$6óGV∆ÚÜñB∆6ÊñBì∑“ì≤∆ó7FÊVÊD6Üñ∆BÜ"ì∞¢“ì∞¢÷˜7G&"ÇwFV∆÷Fó66ó∆ñÊrì∞¢–†¢gVÊ7Fñˆ‚'&ó$6óGV∆ÚÜFó64ñB∆6ñB∆&í∞¢f"Fó63÷Fó65˜$ñBÜFó64ñBí¬6÷6˜$ñBÜFó62∆6ñBì≤ñbÇ6í&WGW&‚&VÊFW$Üˆ÷RÇì∞¢W7FFÚÊFó66ó∆ñÊ÷Fó64ñC≤W7FFÚÊ6óGV∆Û÷6ñC≤W7FFÚÁV«Fñ÷Û◊∂Fó66ó∆ñÊ¶Fó64ñB∆6óGV∆Û¶6ñG”∞¢Ú¢Úl:÷FVÚgVÊ6ñˆÊ6ˆ÷Ú&W'GW&FÚ‹;6GV∆Ú‚V÷&WáÃ:÷6óFñÊF:ê¢&W7VóFFVÊFÚÊfVv:|:6ÚfV“FRFVÁG&ÚF,;7&ñWáW&ú:¶Ê6ñ‚¢¢W7FFÚÊ&÷&«¬Ü6ÁfñFVÛÚwfñFVÚs¶W7FFÚÊ&V5∂6ñE◊«¬wFV˜&ñrì∞¢W7FFÚÁ76ÙFW66ˆ&W'F‘ÁV÷&W"ÜW7FFÚÊ∆VóGW&∂6ñE“ó«√∞¢W7FFÚÁ76ÙFW66ˆ&W'F‘÷FÇÊ÷ñ‚ÜW7FFÚÁ76ÙFW66ˆ&W'F«√ƒ÷FÇÊ÷ÇÉ∆6ÁFÜV˜'íÊ∆VÊwFÇ”íì≤¶W&%∆6"Çì≤6«f"Çì∞¢BÇr7FV∆÷6óGV∆ÚríÁ7Gñ∆RÁ6WE&˜W'GíÇr“÷6VÁFÚr∆6VÁFÚÜFó62íì∞¢BÇr66◊G&ñ∆ÜríÁFWáD6ˆÁFVÁC÷Fó62ÊÊˆ÷R≤r+r‹;6GV∆Úr∂6Ê÷ˆGV∆S∞¢BÇr66◊FóGV∆ÚríÁFWáD6ˆÁFVÁC÷6ÁFóF∆S≤BÇr66◊7V"ríÁFWáD6ˆÁFVÁC÷6Á7V'FóF∆W«¬rs∞¢f"∆ÊÛ“áGóVˆbTDtÙuí”“wVÊFVfñÊVBrbeTDtÙuï∂6ÊñE“ó«∆ÁV∆√∞¢BÇr66◊W&wVÁFríÊñÊÊW$ÖD‘√◊∆ÊÚbg∆ÊÚÊˆ&¶V7FófW3Ús«7G&ˆÊsÂfˆ<:¢fí&VÊFW"£¬˜7G&ˆÊs‚r∑∆ÊÚÊˆ&¶V7FófW2Ê÷áFWáFı6VwW&ÚíÊ¶ˆñ‚Çr+rrìßFWáFı6VwW&ÚÜ6ˆÁfóFT÷ó76ÚÜ6ÁFÜV˜'ï≥◊««∑“√íì∞¢f"fñFVıF#“BÇr6&◊fñFVÚrì≤fñFVıF"ÊÜñFFV„“6ÁfñFVÛ∞¢&VÊFW%FV˜&ñÜ6ì≤&VÊFW%fñFVÚÜ6ì≤¶ˆvÙGV√”≤&VÊFW$¶ˆv˜2Ü6ì≤ñÊñ6ñ%Vó¢Ü6ì∞¢6V∆V6ñˆÊ$&ÇÜW7FFÚÊ&””“wfñFVÚrbb6ÁfñFVÚìÚwFV˜&ñs¶W7FFÚÊ&∆f«6Rì∞¢÷˜7G&"ÇwFV∆÷6óGV∆Úrì∞¢–†¢gVÊ7Fñˆ‚&VÊFW%FV˜&ñÜ6í∞¢f"&ó£“BÇr7FV˜&ñ÷6ˆÁFWVFÚrì≤&ó¢ÊñÊÊW$ÖD‘√“rs∞¢f"ñGÉ‘÷FÇÊ÷ÇÉƒ÷FÇÊ÷ñ‚ÜW7FFÚÁ76ÙFW66ˆ&W'F∆6ÁFÜV˜'íÊ∆VÊwFÇ”íí¬&∆ˆ6Û÷6ÁFÜV˜'ï∂ñGÖ”∞¢Ú¢Ê∆VóGW&¬ÚL:◊GV∆ÚRñ÷vV“¨:ÁVÊ6ñ“◊VFÏ:vFR77VÁFÚ‚¢÷66˜FRfñ6&W6W'fFÚ&ó7F2RfVVF&6∑2VRßVF“FRfW&FFR‚¢¢f"76˜3÷7&ñ"ÇvFóbr¬w76˜2rì∞¢6ÁFÜV˜'íÊf˜$V6ÇÜgVÊ7Fñˆ‚ÖÚ∆íó∑f"÷7&ñ"Çv'WGFˆ‚r¬w76˜5ı˜ˆÁFÚr≤Üì””÷ñGÉÚr76˜5ı˜ˆÁFÚ“÷FófÚs¢rrí∆ÁV∆¬«∑GóS¢v'WGFˆ‚r¬v&ñ÷∆&V¬s¢tó"&÷ó7<:6Úr≤Üí≥ó“ì∑ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∂wV&F%76ÚÜ6∆íì∑&VÊFW%FV˜&ñÜ6ì∑“ì∑76˜2ÊVÊD6Üñ∆Báì∑“ì∞¢&ó¢ÊVÊD6Üñ∆Bá76˜2ì∞¢f"6&C÷7&ñ"Çv'Fñ6∆Rr¬v&∆ˆ6Ú÷∆VóGW&rí¬&V6˜'FS◊6W&%&W7V÷ÚÜ&∆ˆ6ÚÁ«≈µ“í¬fˆÁFTÁV÷W&F“Ü&∆ˆ6ÚÁ«≈µ“íÊfñÊBÜgVÊ7Fñˆ‚áó∑&WGW&‚Û«7G&ˆÊs„¬„≈¬˜7G&ˆÊs‚ÚÁFW7BáíbbÛ«7G&ˆÊs„%¬„≈¬˜7G&ˆÊs‚ÚÁFW7Báì∑“ì∞¢ñbÜfˆÁFTÁV÷W&Fó∑&V6˜'FRÁ&W7V÷Û÷fˆÁFTÁV÷W&FÁ7∆óBÇÛ«7G&ˆÊs„¬„≈¬˜7G&ˆÊs‚Úï≥“Á&W∆6RÇıµ«3•“≤BÚ¬rrí≤r‚s∑&V6˜'FRÊFWF∆ÜW3“Ü&∆ˆ6ÚÁ«≈µ“íÊfñ«FW"ÜgVÊ7Fñˆ‚áó∑&WGW&‚”÷fˆÁFTÁV÷W&F∑“ì∑–¢6&BÊñÊÊW$ÖD‘√“s«6∆73“&&∆ˆ6Ú÷∆VóGW&ıˆWF#‰÷ó7<:6Úr≤ÜñGÇ≥í≤rFRr∂6ÁFÜV˜'íÊ∆VÊwFÇ≤s¬˜„∆É3‚r∑FWáFı6VwW&ÚÜ&∆ˆ6ÚÊÇí≤s¬ˆÉ3‚r∞¢s«6∆73“&÷ó76Ú÷6ˆÁfóFR#‚r∑FWáFı6VwW&ÚÜ6ˆÁfóFT÷ó76ÚÜ&∆ˆ6Ú∆ñGÇíí≤s¬˜‚s∞¢f"fó7V√÷6Á&WfñWtñ÷vS˜∑7&3¶6Á&WfñWtñ÷vR∆«C¶6Á&WfñWtñ÷vT«G«¬tñ«W7G&:|:6ÚF˜277VÁF˜2FW7F&Wfó<:6Ú‚r«FóÛ¢w&Wfó6Úw”ßfó7VƒFFW66ˆ&W'FÜ&∆ˆ6Úì∞¢f"Fóıfó7V√◊fó7V¬ÁFóÛ””“vFñw&÷sÚvFñw&÷s¢áfó7V¬ÁFóÛ””“w&Wfó6ÚsÚw&Wfó6Ús¢áfó7V¬ÁvñFSÚv◊∆Ús¢rríì∞¢f"FW7FVS÷7&ñ"ÇvFóbr¬vFW66ˆ&W'F÷FW7FVRr≤áFóıfó7V√ÚrFW66ˆ&W'F÷FW7FVR““r∑Fóıfó7V√¢rríì∞¢FW7FVRÊVÊD6Üñ∆BÜ7&ñ"ÇvfñwW&Rr¬vFW66ˆ&W'F◊fó7V¬r≤áFóıfó7V√ÚrFW66ˆ&W'F◊fó7V¬““r∑Fóıfó7V√¢rrí¬s∆ñ÷r7&3“"r∑FWáFı6VwW&Úáfó7V¬Á7&2í≤r"«C“"r∑FWáFı6VwW&Úáfó7V¬Ê«Bí≤r"∆ˆFñÊs“&∆ßí#‚ríì∞¢FW7FVRÊVÊD6Üñ∆BÜ7&ñ"ÇvFóbr¬vñFVñ◊&ñÊ6ó¬r¬s«7„‰ñFVñ&ñÊ6ó√¬˜7„„«‚r∂Wá∆ñ6%FW&÷˜2á&V6˜'FRÁ&W7V÷Úí≤s¬˜‚ríì∞¢6&BÊVÊD6Üñ∆BÜFW7FVRì∞¢f"6WVVÊ6ñ÷÷ˆÁF%6WVVÊ6ñÜ&∆ˆ6ÚÁ«≈µ“ì≤ñbá6WVVÊ6ñí6&BÊVÊD6Üñ∆Bá6WVVÊ6ñì∞¢ñbá&V6˜'FRÊFWF∆ÜW2Ê∆VÊwFÇó∑f"FWC÷7&ñ"ÇvFWFñ«2rì∂FWBÊñÊÊW$ÖD‘√“s«7V÷÷'ì‰VÁFVÊFW"÷V∆Ü˜#¬˜7V÷÷'ì‚s∑&V6˜'FRÊFWF∆ÜW2Êf˜$V6ÇÜgVÊ7Fñˆ‚áó∂FWBÊVÊD6Üñ∆BÜ7&ñ"Çwr∆ÁV∆¬∆Wá∆ñ6%FW&÷˜2áííì∑f"G&Á6f˜&÷6Û÷÷ˆÁF%G&Á6f˜&÷6Úáì∂ñbáG&Á6f˜&÷6ÚñFWBÊVÊD6Üñ∆BáG&Á6f˜&÷6Úì∑“ì∂6&BÊVÊD6Üñ∆BÜFWBì∑–¢ñbÜ6ÁvTñ÷vW2bb6ÁvTñ÷vW5∂ñGÇS%“bbÜñGÉ”””«¬ñGÉ””÷6ÁFÜV˜'íÊ∆VÊwFÇ”íí∞¢f"fñs÷7&ñ"ÇvfñwW&Rr¬wvñÊ÷∆óg&Úr¬s∆ñ÷r7&3“"r∑FWáFı6VwW&ÚÜ6ÁvTñ÷vW5∂ñGÇS%“í≤r"«C“%:vñÊFÚ÷FW&ñ¬FW7FR77VÁFÚ"∆ˆFñÊs“&∆ßí#„∆fñv6Fñˆ„ÂV÷:vñÊFÚ÷FW&ñ¬&ˆ'6W'f"6ˆ“6∆÷¬ˆfñv6Fñˆ„‚rì≤6&BÊVÊD6Üñ∆BÜfñwW&˜6ñˆÊ¬Üfñríì∞¢–¢ñbÜñGÉ””÷6ÁFÜV˜'íÊ∆VÊwFÇ”ó∂6&BÊVÊD6Üñ∆BÜ7&ñ"Çv6ñFRr¬wW6r¬s«7G&ˆÊsÂW6&VÁ6#¬˜7G&ˆÊs‰6ˆ÷Úfˆ<:¢Wá∆ñ6&ñW7FFW66ˆ&W'F&∆w\:ñ“F7VñFFSÚÏ:6Ú&V6ó6W6"∆g&2FR∆óg&Ú‚ríì∑–¢&ó¢ÊVÊD6Üñ∆BÜ6&Bì∞¢f"Êc÷7&ñ"ÇvFóbr¬vÊfVv6Úrì∞¢f"ÁC÷7&ñ"Çv'WGFˆ‚r¬v&˜FÚr¬~(iÁFW&ñ˜"r«∑GóS¢v'WGFˆ‚w“ì≤ÁBÊFó6&∆VC÷ñGÉ”””≤ÁBÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∂wV&F%76ÚÜ6∆ñGÇ”ì∑&VÊFW%FV˜&ñÜ6ì∂ó%F˜ÚÇì∑“ì∞¢f"&˜É÷7&ñ"Çv'WGFˆ‚r¬v&˜FÚ&˜FÚ“◊&ñ÷&ñÚr∆ñGÉ””÷6ÁFÜV˜'íÊ∆VÊwFÇ”Úuf÷˜2¶ˆv"(i"s¢u,;7Üñ÷(i"r«∑GóS¢v'WGFˆ‚w“ì≤&˜ÇÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∂ñbÜñGÉ””÷6ÁFÜV˜'íÊ∆VÊwFÇ”ó∑6V∆V6ñˆÊ$&Çv¶ˆv˜2r«G'VRì∑÷V«6W∂wV&F%76ÚÜ6∆ñGÇ≥ì∑&VÊFW%FV˜&ñÜ6ì∂ó%F˜ÚÇì∑◊“ì∞¢ÊbÊVÊD6Üñ∆BÜÁBì∂ÊbÊVÊD6Üñ∆Bá&˜Çì∑&ó¢ÊVÊD6Üñ∆BÜÊbì∞¢–¢gVÊ7Fñˆ‚wV&F%76ÚÜ6∆ñÊFñ6Rí≤W7FFÚÁ76ÙFW66ˆ&W'F÷ñÊFñ6S∂W7FFÚÊ∆VóGW&∂6ÊñE”÷ñÊFñ6S∑6«f"Çì≤–†¢gVÊ7Fñˆ‚÷ˆÁF%6WVVÊ6ñá&w&f˜2í∞¢f"fˆÁFS“á&w&f˜7«≈µ“íÊfñÊBÜgVÊ7Fñˆ‚áó∑&WGW&‚Û«7G&ˆÊs„¬„≈¬˜7G&ˆÊs‚ÚÁFW7BáíbbÛ«7G&ˆÊs„%¬„≈¬˜7G&ˆÊs‚ÚÁFW7Báì∑“ì∞¢ñbÇfˆÁFRó&WGW&‚ÁV∆√∞¢f"'FW3÷fˆÁFRÁ7∆óBÇÛ«7G&ˆÊsÂ∆Bµ¬„≈¬˜7G&ˆÊs‚ÚíÁ6∆ñ6RÉíÊ÷ÜgVÊ7Fñˆ‚áó∑&WGW&‚Á&W∆6RÇıÂµ«2√≥•“∑≈µ«2√≥•“≤Bˆr¬rrì∑“íÊfñ«FW"Ñ&ˆˆ∆V‚ì∞¢ñbá'FW2Ê∆VÊwFÉ√"ó&WGW&‚ÁV∆√∞¢f"&˜É÷7&ñ"ÇvFóbr¬w6WVVÊ6ñ◊fó7V¬r¬s«7G&ˆÊsÂfV¶Ú76Ú76Û¬˜7G&ˆÊs‚rí¬∆ó7F÷7&ñ"Çvˆ¬rì∞¢'FW2Êf˜$V6ÇÜgVÊ7Fñˆ‚áó∂∆ó7FÊVÊD6Üñ∆BÜ7&ñ"Çv∆ír∆ÁV∆¬∆Wá∆ñ6%FW&÷˜2áííì∑“ì∂&˜ÇÊVÊD6Üñ∆BÜ∆ó7Fì∑&WGW&‚&˜É∞¢–¢gVÊ7Fñˆ‚÷ˆÁF%G&Á6f˜&÷6Úá&w&fÚí∞¢ñbÖ7G&ñÊrá&w&fÚíÊñÊFWÑˆbÇ~(i"rì√ó&WGW&‚ÁV∆√∞¢f"∆ñ◊Û’7G&ñÊrá&w&fÚíÁ&W∆6RÇÛ≈µ„Â“≥‚ˆr¬rríÁ&W∆6RÇı‚‚£Û•«2¢Ú¬rrì∞¢f"'FW3÷∆ñ◊ÚÁ7∆óBÇ~(i"ríÊ÷ÜgVÊ7Fñˆ‚áÇó∑&WGW&‚ÇÁG&ñ“ÇíÁ&W∆6RÇı≤„µ“BÚ¬rrì∑“íÊfñ«FW"Ñ&ˆˆ∆V‚ì∞¢ñbá'FW2Ê∆VÊwFÉ√'««'FW2Ê∆VÊwFÉ„bó&WGW&‚ÁV∆√∞¢f"&˜É÷7&ñ"ÇvFóbr¬wG&Á6f˜&÷6Úrì∞¢'FW2Êf˜$V6ÇÜgVÊ7Fñˆ‚á∆íó∂&˜ÇÊVÊD6Üñ∆BÜ7&ñ"Çw7‚r¬wG&Á6f˜&÷6ıı˜76Úr«FWáFı6VwW&Úáííì∂ñbÜì«'FW2Ê∆VÊwFÇ”ñ&˜ÇÊVÊD6Üñ∆BÜ7&ñ"Çw7‚r¬wG&Á6f˜&÷6ıı˜6WFr¬~(i"ríì∑“ì∑&WGW&‚&˜É∞¢–†¢gVÊ7Fñˆ‚&VÊFW%fñFVÚÜ6í∞¢f"&ó£“BÇr7fñFVÚ÷6ˆÁFWVFÚrì≤&ó¢ÊñÊÊW$ÖD‘√“rs≤ñbÇ6ÁfñFVÚó&WGW&„∞¢f"6&C÷7&ñ"Çw6V7Fñˆ‚r¬wfñFVÚ÷&W'GW&rì∞¢6&BÊVÊD6Üñ∆BÜ7&ñ"ÇvÉ2r∆ÁV∆¬¬ufV¶V÷&W6VÁF:|:6ÚFW7FR‹;6GV∆Úríì∞¢6&BÊVÊD6Üñ∆BÜ7&ñ"Çwr¬wfñFVÚ÷&W'GW&ıˆ6ˆÁfóFRr¬t76ó7FÚl:÷FVÚ&6ˆÊÜV6W"2ñFVñ2VRfˆ<:¢fíWá∆˜&"‚ríì∞¢f"g&÷S÷7&ñ"ÇvFóbr¬wfñFVÚ÷g&÷Rrí¬6'&VvÊFÛ÷7&ñ"ÇvFóbr¬wfñFVÚ÷6'&VvÊFÚr¬s«7‚6∆73“'fñFVÚ÷6'&VvÊFııˆvó&Ú"&ñ÷ÜñFFV„“'G'VR#„¬˜7„„«7G&ˆÊs‰6'&VvÊFÚÚl:÷FV˛(
+c¬˜7G&ˆÊs‚r«∑&ˆ∆S¢w7FGW2r¬v&ñ÷∆ófRs¢wˆ∆óFRw“ì∞¢f"fñFVÛ÷7&ñ"ÇwfñFVÚr∆ÁV∆¬∆ÁV∆¬«∂6ˆÁG&ˆ«3¢rr«&V∆ˆC¢v÷WFFFr«∆ó6ñÊ∆ñÊS¢rr¬v&ñ÷∆&V¬s¢t&W6VÁF:|:6ÚFÚ‹;6GV∆Úr∂6Ê÷ˆGV∆W“ì∞¢fñFVÚÁ7&3÷6ÁfñFVÛ∞¢gVÊ7Fñˆ‚&ˆÁFÚÇó∂6'&VvÊFÚÊÜñFFV„◊G'VS∂g&÷RÊ6∆74∆ó7BÊFBÇwfñFVÚ÷g&÷R“◊&ˆÁFÚrì∑–¢gVÊ7Fñˆ‚W7W&ÊFÚÇó∂6'&VvÊFÚÊÜñFFV„÷f«6S∂6'&VvÊFÚÁVW'ï6V∆V7F˜"Çw7G&ˆÊrríÁFWáD6ˆÁFVÁC“t6'&VvÊFÚÚl:÷FV˛(
+bs∑–¢fñFVÚÊFDWfVÁD∆ó7FVÊW"Çv∆ˆFVFFFr«&ˆÁFÚì∑fñFVÚÊFDWfVÁD∆ó7FVÊW"Çv6Á∆ír«&ˆÁFÚì∑fñFVÚÊFDWfVÁD∆ó7FVÊW"Çw∆ññÊrr«&ˆÁFÚì∑fñFVÚÊFDWfVÁD∆ó7FVÊW"ÇwvóFñÊrr∆W7W&ÊFÚì∞¢fñFVÚÊFDWfVÁD∆ó7FVÊW"ÇvW'&˜"r∆gVÊ7Fñˆ‚Çó∂6'&VvÊFÚÊÜñFFV„÷f«6S∂6'&VvÊFÚÊ6∆74∆ó7BÊFBÇwfñFVÚ÷6'&VvÊFÚ“÷W'&Úrì∂6'&VvÊFÚÊñÊÊW$ÖD‘√“s«7‚&ñ÷ÜñFFV„“'G'VR#Ó)™˚àÛ¬˜7„„«7G&ˆÊs‰Ï:6Úfˆí˜7<:◊fV¬6'&Vv"Úl:÷FVÚ‚FVÁFRÊ˜f÷VÁFRV“ñÁ7FÁFW2„¬˜7G&ˆÊs‚s∑“ì∞¢g&÷RÊVÊD6Üñ∆BáfñFVÚì∂g&÷RÊVÊD6Üñ∆BÜ6'&VvÊFÚì∂6&BÊVÊD6Üñ∆BÜg&÷Rì∞¢f"Êc÷7&ñ"ÇvFóbr¬vÊfVv6Úrì∂ÊbÊVÊD6Üñ∆BÜ7&ñ"Çw7‚ríì∑f"FW66ˆ'&ó#÷7&ñ"Çv'WGFˆ‚r¬v&˜FÚ&˜FÚ“◊&ñ÷&ñÚr¬t6ˆ÷\:v"FW66ˆ'&ó"(i"r«∑GóS¢v'WGFˆ‚w“ì∂FW66ˆ'&ó"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∑6V∆V6ñˆÊ$&ÇwFV˜&ñr«G'VRì∑“ì∂ÊbÊVÊD6Üñ∆BÜFW66ˆ'&ó"ì∂6&BÊVÊD6Üñ∆BÜÊbì∑&ó¢ÊVÊD6Üñ∆BÜ6&Bì∞¢–†¢gVÊ7Fñˆ‚&VÊFW$¶ˆv˜2Ü6í∞¢f"&ó£“BÇr6¶ˆv˜2÷6ˆÁFWVFÚrì≤&ó¢ÊñÊÊW$ÖD‘√“rs∞¢ñbÇ6Êv÷W7«¬6Êv÷W2Ê∆VÊwFÇó∑&ó¢ÊVÊD6Üñ∆BÜ7&ñ"ÇvFóbr¬wf¶ñÚr¬tñÊFÏ:6Úå:WáW&ú:¶Ê6ñ2&W7FR77VÁFÚ‚ríì∑&WGW&„∑–¢f"6«fÛ◊&ˆw&W76ÙWáW&ñVÊ6ñ2Ü6ì∂¶ˆvÙGV√‘÷FÇÊ÷ÇÉƒ÷FÇÊ÷ñ‚á6«fÚÊGV««√∆6Êv÷W2Ê∆VÊwFÇ”íì∑6«fÚÊGV√÷¶ˆvÙGV√∞¢f"v÷S÷6Êv÷W5∂¶ˆvÙGV≈“¬W&fó3“áGóVˆbUÖU$îT‰4Uı$ÙdîƒU2”“wVÊFVfñÊVBrbdUÖU$îT‰4Uı$ÙdîƒU5∂6ÊñE“ó«≈µ“¬W&fñ√◊W&fó5∂¶ˆvÙGV≈◊««∂÷ˆFS¶v÷RÁGóS””“wó'2sÚvWá∆˜&Rs¢v6Üˆñ6Rr∆vˆ√¶v÷RÁFóF∆R«&ˆ◊C¶v÷RÊñÁ7G'V7FñˆÁ2«&W7V«C¢vFW66ˆ&W'Fw”∞¢f"F˜Û÷7&ñ"ÇvÜVFW"r¬v¶ˆvÚ÷ñ÷W'6ófıı˜F˜Úrì∞¢f"6ó#÷7&ñ"Çv'WGFˆ‚r¬v¶ˆvÚ÷ñ÷W'6ófıı˜6ó"r¬~(i«7„Â6ó"FÚ¶ˆvÛ¬˜7„‚r«∑GóS¢v'WGFˆ‚r¬v&ñ÷∆&V¬s¢u6ó"FÚ¶ˆvÚRfˆ«F"FW66ˆ'&ó"w“ì∞¢6ó"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∑6V∆V6ñˆÊ$&ÇwFV˜&ñr∆f«6Rì∑“ì∞¢F˜ÚÊVÊD6Üñ∆Bá6ó"ì∞¢F˜ÚÊVÊD6Üñ∆BÜ7&ñ"ÇvFóbr¬v¶ˆvÚ÷ñ÷W'6ófııˆñFVÁFñFFRr¬s«7„‚r∑FWáFı6VwW&ÚÜFó65˜$ñBÜW7FFÚÊFó66ó∆ñÊíÊÊˆ÷Rí≤r+r‹;6GV∆Úr∑FWáFı6VwW&ÚÜ6Ê÷ˆGV∆Rí≤s¬˜7„„«7G&ˆÊs‚r∑FWáFı6VwW&ÚÜv÷RÁ6Ü˜'G«∆v÷RÁFóF∆Rí≤s¬˜7G&ˆÊs„«6÷∆√‰¶ˆvÚr≤Ü¶ˆvÙGV¬≥í≤rFRr∂6Êv÷W2Ê∆VÊwFÇ≤s¬˜6÷∆√‚ríì∞¢f"6ˆÁG&ˆ∆W3÷7&ñ"ÇvFóbr¬v¶ˆvÚ÷ñ÷W'6ófııˆ6ˆÁG&ˆ∆W2rì∞¢6ˆÁG&ˆ∆W2ÊVÊD6Üñ∆BÜ÷ˆÁF$áVBÇíì∞¢f"6ÜVñ÷7&ñ"Çv'WGFˆ‚r¬v¶ˆvÚ÷ñ÷W'6ófıı˜FV∆÷6ÜVñr¬~)ªbr«∑GóS¢v'WGFˆ‚r¬v&ñ÷∆&V¬s¢uW6"FV∆6ÜVñr¬v&ñ◊&W76VBs¢vf«6Rr«FóF∆S¢uFV∆6ÜVñw“ì∞¢6ÜVñÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆«FW&Ê%FV∆6ÜVñì∂6ˆÁG&ˆ∆W2ÊVÊD6Üñ∆BÜ6ÜVñì∑F˜ÚÊVÊD6Üñ∆BÜ6ˆÁG&ˆ∆W2ì∑&ó¢ÊVÊD6Üñ∆BáF˜Úì∞¢f"∆6Û÷7&ñ"Çv÷ñ‚r¬v¶ˆvÚ÷ñ÷W'6ófıı˜∆6Úrí¬6ˆÁFWVFÛ÷7&ñ"ÇvFóbr¬v¶ˆvÚ÷ñ÷W'6ófııˆ6ˆÁFWVFÚrì∞¢ñbÜ6Êv÷W2Ê∆VÊwFÉ„ñ6ˆÁFWVFÚÊVÊD6Üñ∆Bá6V∆WF˜$FT¶ˆv˜2Ü6«6«fÚíì∞¢ñbÜv÷RÁGóS””“ww&óFñÊrró&VÊFW%&ˆGV6ıFWáGVƒ¶ˆvÚÜ6ˆÁFWVFÚ∆6∆v÷R«6«fÚì∂V«6R÷ˆÁF$Ê˜fWáW&ñVÊ6ñÜ6ˆÁFWVFÚ∆6∆v÷R«W&fñ¬«6«fÚì∑∆6ÚÊVÊD6Üñ∆BÜ6ˆÁFWVFÚì∑&ó¢ÊVÊD6Üñ∆Bá∆6Úì∞¢–¢gVÊ7Fñˆ‚«FW&Ê%FV∆6ÜVñÇí∞¢f"«fÛ“BÇr6¶ˆv˜2÷6ˆÁFWVFÚrì∞¢ñbÇFˆ7V÷VÁBÊgV∆«67&VV‰V∆V÷VÁBó∂ñbÜ«fÚÁ&WVW7DgV∆«67&VV‚ñ«fÚÁ&WVW7DgV∆«67&VV‚Çì∑–¢V«6RñbÜFˆ7V÷VÁBÊWÜóDgV∆«67&VV‚ñFˆ7V÷VÁBÊWÜóDgV∆«67&VV‚Çì∞¢–¢gVÊ7Fñˆ‚GV∆ó¶$&˜FıFV∆6ÜVñÇí∞¢f"#“BÇrÊ¶ˆvÚ÷ñ÷W'6ófıı˜FV∆÷6ÜVñrì∂ñbÇ"ó&WGW&„∞¢f"Fóf“Fˆ7V÷VÁBÊgV∆«67&VV‰V∆V÷VÁC∂"ÁFWáD6ˆÁFVÁC÷FófÚ~(iís¢~)ªbs∂"Á6WDGG&ñ'WFRÇv&ñ◊&W76VBr∆FófÚwG'VRs¢vf«6Rrì∂"Á6WDGG&ñ'WFRÇv&ñ÷∆&V¬r∆FófÚu6ó"FFV∆6ÜVñs¢uW6"FV∆6ÜVñrì∂"ÁFóF∆S÷FófÚu6ó"FFV∆6ÜVñs¢uFV∆6ÜVñs∞¢–¢gVÊ7Fñˆ‚FVfñÊó$÷ˆFÙ¶ˆvÚÜFófÚí∞¢Fˆ7V÷VÁBÊ&ˆGíÊ6∆74∆ó7BÁFˆvv∆RÇv÷ˆFÚ÷¶ˆvÚ÷ñ÷W'6ófÚr¬FófÚì∞¢ñbÇFófÚbfFˆ7V÷VÁBÊgV∆«67&VV‰V∆V÷VÁBbfFˆ7V÷VÁBÊWÜóDgV∆«67&VV‚ñFˆ7V÷VÁBÊWÜóDgV∆«67&VV‚Çì∞¢–¢Ú¢FˆFÚ¶ˆvÚFÚ6:◊GV∆Úfñ66V◊&R:‹:6Ú(	BñÊ6«W6ófR˜2¨:6ˆÊ6«\:÷F˜2‚¢¢gVÊ7Fñˆ‚6V∆WF˜$FT¶ˆv˜2Ü6«6«fÚí∞¢f"&'&÷7&ñ"ÇvFóbr¬w6V∆WF˜"÷¶ˆv˜2r∆ÁV∆¬«∑&ˆ∆S¢wF&∆ó7Br¬v&ñ÷∆&V¬s¢t¶ˆv˜2FW7FR77VÁFÚw“ì∞¢6Êv÷W2Êf˜$V6ÇÜgVÊ7Fñˆ‚Ür∆íó∞¢f"fVóFÛ“6«fÚÊfVóF5∂ï“¬GV√÷ì””÷¶ˆvÙGV√∞¢f"#÷7&ñ"Çv'WGFˆ‚r¬w6V∆WF˜"÷¶ˆvÚr≤ÜGV√Úr6V∆WF˜"÷¶ˆvÚ“÷GV¬s¢rrí≤ÜfVóFÛÚr6V∆WF˜"÷¶ˆvÚ“÷fVóFÚs¢rrí¿¢s«7‚6∆73“'6V∆WF˜"÷¶ˆvııˆ‚#‚r≤ÜfVóFÛÚ~)…2s¢Üí≥íí≤s¬˜7„„«7„‚r∑FWáFı6VwW&ÚÜrÁ6Ü˜'G«∆rÁFóF∆Rí≤s¬˜7„‚r¿¢∑GóS¢v'WGFˆ‚r«&ˆ∆S¢wF"r¬v&ñ◊6V∆V7FVBs¶GV√ÚwG'VRs¢vf«6Rw“ì∞¢"ÊFDWfVÁD∆ó7FVÊW"Çv6∆ñ6≤r∆gVÊ7Fñˆ‚Çó∞¢ñbÜì””÷¶ˆvÙGV¬ó&WGW&„∞¢¶ˆvÙGV√÷ì∑6«fÚÊGV√÷ì∑¶W&%∆6"Çì∑6«f"Çì∑&VÊFW$¶ˆv˜2Ü6ì∂ó%F˜ÚÇì∞¢“ì∞¢&'&ÊVÊD6Üñ∆BÜ"ì∞¢“ì∞¢&WGW&‚&'&∞¢–†¢gVÊ7Fñˆ‚&ˆw&W76ÙWáW&ñVÊ6ñ2Ü6í∞¢ñbÇW7FFÚÊWáW&ñVÊ6ñ5∂6ÊñE“ó∞¢f"¶6ˆÊ6«VñFÛ÷W7FFÚÁ&ˆw&W76ı∂6ÊñE“bfW7FFÚÁ&ˆw&W76ı∂6ÊñE“ÊfVóFÛ∞¢:◊KhëÈÏ∂ªßq´^uµ’±—•¡±•çÖµΩÃÅ¡Ω»Äƒ∞Äƒ¿ÅΩ‘Äƒ¿¿∏ú§ÌıÙ§ÌΩ¡çΩïÃπÖ¡¡ïπë°•±ê°â–§ÌÙ§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°Ω¡çΩïÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…A•±Ω—Ω5Ö¡Ñ°Õ—Öùî±çïπÑ±ùÖµî±¡ÖÕÕº±çΩπç±’•»±çΩµ’π•ëÖëî§ÅÏ(ÄÄÄÅŸÖ»Å•—ï¥ıùÖµîπ•—ïµÕm¡ÖÕÕΩt∞ÅÈΩπÖÃıçΩµ’π•ëÖëî˝lùÕ¡áùºÅ√Èâ±•çºú∞ùÕ¡áùºÅ¡…•ŸÖëºùtÈlü…ïÑÅ…’…Ö∞ú∞ü…ïÑÅ’…âÖπÑùtÏ(ÄÄÄÅçïπÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ùë•ÿú∞ù¡•±Ω—Ω}}çÖ…—ÖºµµΩŸï∞ú∞úÒÕ¡Ö∏ÅÖ…•Ñµ°•ëëï∏Ùâ—…’îà¯ú¨°çΩµ’π•ëÖëî¸ü¬~N4úËü¬~û¥ú§¨úΩÕ¡Ö∏¯ÒÕ—…Ωπú¯ú≠—ï·—ΩMïù’…º°•—ï¥π—ï·–§¨úΩÕ—…Ωπú¯ÒÕµÖ±∞˘QΩ≈’îÅπºÅëïÕ—•πºΩÕµÖ±∞¯ú§§Ï(ÄÄÄÅŸÖ»ÅëïÕ—•πΩÃıç…•Ö»†ùë•ÿú∞ù¡•±Ω—ºµëïÕ—•πΩÃú§ÌÈΩπÖÃπôΩ…Öç†°ô’πç—•Ω∏°πΩµî±§•ÌŸÖ»Åâ–ıç…•Ö»†ùâ’——Ω∏ú∞ù¡•±Ω—ºµëïÕ—•πºÅ¡•±Ω—ºµëïÕ—•πº¥¥ú¨°§¸ùë•…ï•—ÑúËùïÕ≈’ï…ëÑú§∞úÒÕ¡Ö∏¯ú≠—ï·—ΩMïù’…º°πΩµî§¨úΩÕ¡Ö∏¯ú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ìâ–πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°§ÙÙı•—ï¥πçÖ–•Ìâ–πç±ÖÕÕ1•Õ–πÖëê†ù¡•±Ω—ºµëïÕ—•πº¥µçï…—ºú§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î±•—ï¥π—ï·–¨úÅôΩ§ÅçΩ±ΩçÖëºÅï¥Äú≠πΩµîπ—Ω1Ω›ï…ÖÕî†§¨ú∏ú∞úú±çΩπç±’•»§Ìıï±ÕïÌâ–πç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§ÌµΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî±çΩµ’π•ëÖëî¸ùAïπÕîÅï¥Å≈’ï¥Å¡ΩëîÅïπ—…Ö»ÅîÅ’ÕÖ»ÅïÕÕîÅïÕ¡áùº∏úËù=âÕï…ŸîÅÕîÅïÕÕÑÅÖ—•Ÿ•ëÖëîÅëï¡ïπëîÅµÖ•ÃÅëºÅçÖµ¡ºÅΩ‘ÅëÑÅç•ëÖëî∏ú§ÌıÙ§ÌëïÕ—•πΩÃπÖ¡¡ïπë°•±ê°â–§ÌÙ§ÌçïπÑπÖ¡¡ïπë°•±ê°ëïÕ—•πΩÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…A•±Ω—ΩÖâ…•çÑ°Õ—Öùî±çïπÑ±ùÖµî±¡ÖÕÕº±çΩπç±’•»§ÅÏ(ÄÄÄÅŸÖ»Å¡Ö»ıùÖµîπ¡Ö•…Õm¡ÖÕÕΩt∞Å…ïÕ¡ΩÕ—ÖÃıùÖµîπ¡Ö•…ÃπµÖ¿°ô’πç—•Ω∏°¿•Ì…ï—’…∏Å¡l≈tÌÙ§Ï(ÄÄÄÅçïπÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ùë•ÿú∞ù¡•±Ω—Ω}}¡Ö•πï∞Å¡•±Ω—Ω}}¡Ö•πï∞¥µµÖ≈’•πÑú∞úÒÕ¡Ö∏Åç±ÖÕÃÙâ¡•±Ω—Ω}}ç°ÖµÖëÑà˘π—…ÑÅπÑÅõÖâ…•çÑΩÕ¡Ö∏¯ÒÕ—…Ωπú¯ú≠—ï·—ΩMïù’…º°¡Ö…l¡t§¨úΩÕ—…Ωπú¯Ò¿Åç±ÖÕÃÙâ¡•±Ω—Ω}}ÕÖ•ëÑà¯¸Ω¿¯ú§§Ï(ÄÄÄÅŸÖ»Å¡ïçÖÃıç…•Ö»†ùë•ÿú∞ù¡•±Ω—ºµïÕçΩ±°ÖÃÅ¡•±Ω—ºµïÕçΩ±°ÖÃ¥µ±ï—…ÖÃú§ÌïÕçΩ±°ÖÕA•±Ω—º°…ïÕ¡ΩÕ—ÖÃ±¡Ö…l≈t∞Ã§πôΩ…Öç†°ô’πç—•Ω∏°Ω¿•ÌŸÖ»Åâ–ıç…•Ö»†ùâ’——Ω∏ú∞ù¡•±Ω—ºµ¡ïçÑÅ¡•±Ω—ºµ¡ïçÑ¥µ±ï—…Ñú±—ï·—ΩMïù’…º°Ω¿§±Ì—Â¡îËùâ’——Ω∏ùÙ§Ìâ–πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°Ω¿ÙÙı¡Ö…l≈t•ÌçïπÑπ≈’ï…ÂMï±ïç—Ω»†úπ¡•±Ω—Ω}}ÕÖ•ëÑú§π—ï·—Ωπ—ïπ–ıΩ¿ÌçïπÑπç±ÖÕÕ1•Õ–πÖëê†ù¡•±Ω—º¥µÖ—•ŸÖëºú§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î±¡Ö…l¡t¨úÅŸ•…ÑÄú≠Ω¿¨ú∏ú∞úú±çΩπç±’•»§Ìıï±ÕïÌâ–πç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§ÌµΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî∞ùA…Ωç’…îÅÑÅ¡Ö±ÖŸ…ÑÅ—ï…µ•πÖëÑÅï¥ÄµΩÕºÅΩ‘ÄµΩÕÑÅ≈’îÅµÖπ”•¥ÅÑÅ•ëï•ÑÅëÑÅï·¡…ïÕœçº∏ú§ÌıÙ§Ì¡ïçÖÃπÖ¡¡ïπë°•±ê°â–§ÌÙ§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°¡ïçÖÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…A•±Ω—ΩQï……Ñ°Õ—Öùî±çïπÑ±ùÖµî±¡ÖÕÕº±çΩπç±’•»§ÅÏ(ÄÄÄÅŸÖ»Å¡Ö»ıùÖµîπ¡Ö•…Õm¡ÖÕÕΩt∞Å…ïÕ¡ΩÕ—ÖÃıùÖµîπ¡Ö•…ÃπµÖ¿°ô’πç—•Ω∏°¿•Ì…ï—’…∏Å¡l≈tÌÙ§Ï(ÄÄÄÅçïπÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ùë•ÿú∞ù¡•±Ω—Ω}}¡Ö•πï∞Å¡•±Ω—Ω}}¡Ö•πï∞¥µ—ï……Ñú∞úÒÕ¡Ö∏Åç±ÖÕÃÙâ¡•±Ω—Ω}}ç°ÖµÖëÑà˘AóùÑÅëºÅµΩëï±ºΩÕ¡Ö∏¯ÒÕ—…Ωπú¯ú≠—ï·—ΩMïù’…º°¡Ö…l¡t§¨úΩÕ—…Ωπú¯ú§§Ï(ÄÄÄÅŸÖ»ÅâÖπëï©ÖÃıç…•Ö»†ùë•ÿú∞ù¡•±Ω—ºµïÕçΩ±°ÖÃÅ¡•±Ω—ºµïÕçΩ±°ÖÃ¥µâÖπëï©ÖÃú§ÌïÕçΩ±°ÖÕA•±Ω—º°…ïÕ¡ΩÕ—ÖÃ±¡Ö…l≈t∞Ã§πôΩ…Öç†°ô’πç—•Ω∏°Ω¿•ÌŸÖ»Åâ–ıç…•Ö»†ùâ’——Ω∏ú∞ù¡•±Ω—ºµ¡ïçÑÅ¡•±Ω—ºµ¡ïçÑ¥µâÖπëï©Ñú±—ï·—ΩMïù’…º°Ω¿§±Ì—Â¡îËùâ’——Ω∏ùÙ§Ìâ–πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°Ω¿ÙÙı¡Ö…l≈t•ÌçïπÑπç±ÖÕÕ1•Õ–πÖëê†ù¡•±Ω—º¥µÖ—•ŸÖëºú§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î±¡Ö…l¡t¨úËÄú≠Ω¿¨ú∏ú∞úú±çΩπç±’•»§Ìıï±ÕïÌâ–πç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§ÌµΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî∞ù=âÕï…ŸîÅÕîÅÑÅ¡Ö±ÖŸ…ÑÅôÖ±ÑÅëîÉÖù’Ñ∞ÅÖ»∞Å…Ωç°ÖÃÅΩ‘ÅëºÅ•π—ï…•Ω»ÅëºÅ¡±Öπï—Ñ∏ú§ÌıÙ§ÌâÖπëï©ÖÃπÖ¡¡ïπë°•±ê°â–§ÌÙ§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°âÖπëï©ÖÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…A•±Ω—ΩAÖ…ïÃ°Õ—Öùî±çïπÑ±ùÖµî±¡ÖÕÕº±çΩπç±’•»±—•¡º§ÅÏ(ÄÄÄÅŸÖ»Å¡Ö»ıùÖµîπ¡Ö•…Õm¡ÖÕÕΩt∞Å…ïÕ¡ΩÕ—ÖÃıùÖµîπ¡Ö•…ÃπµÖ¿°ô’πç—•Ω∏°¿•Ì…ï—’…∏Å¡l≈tÌÙ§∞Å•çΩπïÃıÌΩ…•ù•πÃËü¬~ûÃú±ç±Ωç≠›Ω…¨Ëü¬~V√æ‚<ú±ΩâÕï…ŸÖ—Ω…‰Ëü¬~R¥ú±çΩµ•çÃËü¬~J∞ú±µÖ•±…ΩΩ¥Ëüär'æ‚<ú±Õ°Ö…•πúËü¬~ûËú±µΩΩπ±ΩúËü¬~2dú±ùïΩù±ΩÕÕÖ…‰Ëü¬~^Îæ‚<ú±ç•—ÂÕï…Ÿ•çïÃËü¬~>oæ‚<ú±°ï…•—ÖùîËü¬~û¥ú±ç•Ÿ•ç±ÖàËü¬~ítùÙ∞Å•çΩπîı•çΩπïÕm—•¡ΩuÒüär†úÏ(ÄÄÄÅŸÖ»Åç°ÖµÖëÖÃıÌΩ…•ù•πÃËù1’ùÖ»ÅëîÅΩ…•ùï¥ú±ç±Ωç≠›Ω…¨Ëù!ΩÀÖ…•ºÅπºÅçΩ—•ë•Öπºú±ΩâÕï…ŸÖ—Ω…‰ËùΩ…¡ºÅçï±ïÕ—îú±çΩµ•çÃËùïπÑÅëΩÃÅ≈’Öë…•π°ΩÃú±µÖ•±…ΩΩ¥ËùΩ…µÑÅëîÅ—…Ö—Öµïπ—ºú±Õ°Ö…•πúËùïÕÖô•ºÅëîÅë•Ÿ•œçºú±µΩΩπ±ΩúËùIïù•Õ—…ºÅëÑÅ1’Ñú±ùïΩù±ΩÕÕÖ…‰ËùÖ…”çºÅëîÅçÖµ¡ºú±ç•—ÂÕï…Ÿ•çïÃËù1’ùÖ»ÅëÑÅç•ëÖëîú±°ï…•—ÖùîËùAóùÑÅëºÅµ’Õï‘ú±ç•Ÿ•ç±ÖàËùIïÕ¡ΩπÕÖâ•±•ëÖëîÅ√Èâ±•çÑùÙÏ(ÄÄÄÅçïπÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ùë•ÿú∞ù¡•±Ω—Ω}}¡Ö•πï∞Å¡•±Ω—Ω}}¡Ö•πï∞¥µ—Ω¡ºú∞úÒÕ¡Ö∏Åç±ÖÕÃÙâ¡•±Ω—Ω}}ç°ÖµÖëÑà¯ú≠ç°ÖµÖëÖÕm—•¡Ωt¨úΩÕ¡Ö∏¯ÒÕ—…Ωπú¯ú≠•çΩπî¨úÄú≠—ï·—ΩMïù’…º°¡Ö…l¡t§¨úΩÕ—…Ωπú¯Ò¿˘ÕçΩ±°ÑÅÑÅçΩµâ•πáüçºΩ¿¯ú§§Ï(ÄÄÄÅŸÖ»ÅΩ¡çΩïÃıç…•Ö»†ùë•ÿú∞ù¡•±Ω—ºµïÕçΩ±°ÖÃÅ¡•±Ω—ºµïÕçΩ±°ÖÃ¥µπºµ—Öâ’±ï•…ºú§Ï(ÄÄÄÅïÕçΩ±°ÖÕA•±Ω—º°…ïÕ¡ΩÕ—ÖÃ±¡Ö…l≈t∞Ã§πôΩ…Öç†°ô’πç—•Ω∏°Ω¿•ÌŸÖ»Åâ–ıç…•Ö»†ùâ’——Ω∏ú∞ù¡•±Ω—ºµ¡ïçÑÅ¡•±Ω—ºµ¡ïçÑ¥µ—Öâ’±ï•…ºú±—ï·—ΩMïù’…º°Ω¿§±Ì—Â¡îËùâ’——Ω∏ùÙ§Ìâ–πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°Ω¿ÙÙı¡Ö…l≈t•ÌçïπÑπç±ÖÕÕ1•Õ–πÖëê†ù¡•±Ω—º¥µÖ—•ŸÖëºú§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î±¡Ö…l¡t¨úÅçΩµâ•πÑÅçΩ¥Äú≠Ω¿¨ú∏ú∞úú±çΩπç±’•»§Ìıï±ÕïÌâ–πç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§ÌŸÖ»Å¡•Õ—ÖÃıÌç±Ωç≠›Ω…¨Ëùï¡Ω•ÃÅëºÅµï•ºµë•Ñ∞ÅçΩπ—îÅµÖ•ÃÄƒ»Å°Ω…ÖÃ∏ú±Ω…•ù•πÃËùA…Ωç’…îÅÑÅ¡Ö±ÖŸ…ÑÅ’ÕÖëÑÅ¡Ö…ÑÅ•πë•çÖ»Å≈’ï¥ÅπÖÕçîÅπïÕÕîÅ±’ùÖ»∏ú±ΩâÕï…ŸÖ—Ω…‰ËùAïπÕîÅï¥ÅçΩµºÅïÕÕîÅçΩ…¡ºÅÕîÅµΩŸîÅîÅÕîÅï±îÅ¡…Ωë’ËÅÑÅ¡ÀÕ¡…•ÑÅ±’Ë∏ú±çΩµ•çÃËù=âÕï…ŸîÅÕîÅÑÅçïπÑÉ§ÅôÖ±Ñ∞Å¡ïπÕÖµïπ—º∞Åù…•—ºÅΩ‘ÅçΩç°•ç°º∏ú±µÖ•±…ΩΩ¥ËùAïπÕîÅπºÅçÖ…ùºÅΩ‘ÅπÑÅ…ï±áüçºÅïπ—…îÅÖÃÅ¡ïÕÕΩÖÃ∏ú±Õ°Ö…•πúËù%µÖù•πîÅÑÅ≈’Öπ—•ëÖëîÅ…ï¡Ö…—•ëÑÅï¥Å¡Ö…—ïÃÅ•ù’Ö•Ã∏ú±µΩΩπ±ΩúËù=âÕï…ŸîÅ≈’Öπ—ºÅëÑÅôÖçîÅëÑÅ1’ÑÅÖ¡Ö…ïçîÅ•±’µ•πÖëÑ∏ùÙÌµΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî±¡•Õ—ÖÕm—•¡ΩuÒùΩµ¡Ö…îÅçÖëÑÅΩ√üçºÅçΩ¥ÅÑÅÕ•—’áüçº∏ú§ÌıÙ§ÌΩ¡çΩïÃπÖ¡¡ïπë°•±ê°â–§ÌÙ§ÌçïπÑπÖ¡¡ïπë°•±ê°Ω¡çΩïÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…A•±Ω—Ω±ÖÕÕ•ô•çÖ»°Õ—Öùî±çïπÑ±ùÖµî±¡ÖÕÕº±çΩπç±’•»±—•¡º§ÅÏ(ÄÄÄÅŸÖ»Å•—ï¥ıùÖµîπ•—ïµÕm¡ÖÕÕΩt∞ÅπΩµïÃıùÖµîπçÖ—ïùΩ…•ïÃ∞Å—…ïÃıπΩµïÃπ±ïπù—†ÙÙÙÃ∞Åµ’•—ΩÃıπΩµïÃπ±ïπù—†¯Ã∞Å•çΩπïÃıÌÖççïÕÃËü¬~RDú±…’…Ö±’…âÖ∏Ëü¬~û¥ú±›Ω…ë…ï¡Ö•»Ëüär?æ‚<ú±¡Ω±±’—•Ωπ±ÖàËü¬~j†ú±ç•—ÂçΩ’πç•∞Ëü¬~>gæ‚<ú±ù…Öµç±ÖÕÃËü¬~>ﬂæ‚<ú±µ’±—•ëïÖÃËü¬~û®ú±±ÖπëôΩ…çïÃËüän√æ‚<ú±±•ôïÖ…ç°•ŸîËü¬~NXú±—•µïç°ïç¨Ëüä>«æ‚<ú±Ω…â•—Õ•¥Ëü¬~24ùÙÏ(ÄÄÄÅçïπÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ùë•ÿú∞ù¡•±Ω—Ω}}çÖ…—ÖºµµΩŸï∞ú∞úÒÕ¡Ö∏ÅÖ…•Ñµ°•ëëï∏Ùâ—…’îà¯ú¨°•çΩπïÕm—•¡ΩuÒüär†ú§¨úΩÕ¡Ö∏¯ÒÕ—…Ωπú¯ú≠—ï·—ΩMïù’…º°•—ï¥π—ï·–§¨úΩÕ—…Ωπú¯ÒÕµÖ±∞˘ÕçΩ±°ÑÅºÅëïÕ—•πºΩÕµÖ±∞¯ú§§Ï(ÄÄÄÅ•ò°µ’•—ΩÃ•ÌŸÖ»ÅΩ¡çΩïÃıç…•Ö»†ùë•ÿú∞ù¡•±Ω—ºµïÕçΩ±°ÖÃÅ¡•±Ω—ºµïÕçΩ±°ÖÃ¥µπºµ—Öâ’±ï•…ºÅ¡•±Ω—ºµïÕçΩ±°ÖÃ¥µ≈’Ö—…ºú§ÌπΩµïÃπôΩ…Öç†°ô’πç—•Ω∏°πΩµî±§•ÌŸÖ»Åâ–ıç…•Ö»†ùâ’——Ω∏ú∞ù¡•±Ω—ºµ¡ïçÑÅ¡•±Ω—ºµ¡ïçÑ¥µ—Öâ’±ï•…ºú±—ï·—ΩMïù’…º°πΩµî§±Ì—Â¡îËùâ’——Ω∏ùÙ§Ìâ–πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°§ÙÙı•—ï¥πçÖ–•ÌçïπÑπç±ÖÕÕ1•Õ–πÖëê†ù¡•±Ω—º¥µÖ—•ŸÖëºú§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î±•—ï¥π—ï·–¨úÅ¡ï…—ïπçîÅÑÄú≠πΩµîπ—Ω1Ω›ï…ÖÕî†§¨ú∏ú∞úú±çΩπç±’•»§Ìıï±ÕïÌâ–πç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§ÌµΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî∞ù=âÕï…ŸîÅÕîÅÑÅÕ•—’áüçºÅÖôï—ÑÅºÅÖ»∞ÅÑÉÖù’Ñ∞ÅΩÃÅÕΩπÃÅΩ‘ÅÑÅ¡Ö•ÕÖùï¥∏ú§ÌıÙ§ÌΩ¡çΩïÃπÖ¡¡ïπë°•±ê°â–§ÌÙ§ÌçïπÑπÖ¡¡ïπë°•±ê°Ω¡çΩïÃ§Ì…ï—’…∏ÌÙ(ÄÄÄÅŸÖ»ÅëïÕ—•πΩÃıç…•Ö»†ùë•ÿú∞ù¡•±Ω—ºµëïÕ—•πΩÃú¨°—…ïÃ¸úÅ¡•±Ω—ºµëïÕ—•πΩÃ¥µ—…ïÃúËúú§§Ï(ÄÄÄÅπΩµïÃπôΩ…Öç†°ô’πç—•Ω∏°πΩµî±§•ÌŸÖ»Å¡ΩÃı—…ïÃ¸°§ÙÙÙ¿¸ùïÕ≈’ï…ëÑúÈ§ÙÙÙƒ¸ùçïπ—…ºúËùë•…ï•—Ñú§Ë°§¸ùë•…ï•—ÑúËùïÕ≈’ï…ëÑú§ÌŸÖ»Åâ–ıç…•Ö»†ùâ’——Ω∏ú∞ù¡•±Ω—ºµëïÕ—•πºÅ¡•±Ω—ºµëïÕ—•πº¥¥ú≠¡ΩÃ∞úÒÕ¡Ö∏¯ú≠—ï·—ΩMïù’…º°πΩµî§¨úΩÕ¡Ö∏¯ú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ìâ–πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°§ÙÙı•—ï¥πçÖ–•Ìâ–πç±ÖÕÕ1•Õ–πÖëê†ù¡•±Ω—ºµëïÕ—•πº¥µçï…—ºú§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î±•—ï¥π—ï·–¨úÅ¡ï…—ïπçîÅÑÄú≠πΩµîπ—Ω1Ω›ï…ÖÕî†§¨ú∏ú∞úú±çΩπç±’•»§Ìıï±ÕïÌâ–πç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§ÌŸÖ»Å¡•Õ—ÖÃıÌÖççïÕÃËùAïπÕîÅï¥Å≈’ï¥É§ÅëΩπºÅëºÅïÕ¡áùºÅîÅÕîÅ≈’Ö±≈’ï»Å¡ïÕÕΩÑÅ¡ΩëîÅïπ—…Ö»∏ú±…’…Ö±’…âÖ∏Ëù=âÕï…ŸîÅºÅ…•—µº∞ÅºÅ—…ÖπÕ¡Ω…—îÅîÅÖÃÅÖ—•Ÿ•ëÖëïÃÅëïÕÕÑÅÕ•—’áüçº∏ú±›Ω…ë…ï¡Ö•»Ëù1ï•ÑÅÑÅ¡Ö±ÖŸ…ÑÅçΩµ¡±ï—ÑÅï¥ÅŸΩËÅÖ±—ÑÅîÅ±ïµâ…îÅçΩµºÅï±ÑÉ§ÅïÕç…•—Ñ∏ú±ç•—ÂçΩ’πç•∞ËùAï…ù’π—îÅÕîÅÑÅÕ•—’áüçºÉ§Å’¥Å¡…Ωâ±ïµÑÅÖ—’Ö∞ÅΩ‘Å’µÑÅáüçºÅ≈’îÅ¡ΩëîÅµï±°Ω…Ö»ÅÑÅç•ëÖëî∏ú±ù…Öµç±ÖÕÃËùM’âÕ—Öπ—•ŸΩÃÅìçºÅπΩµîÏÅÖë©ï—•ŸΩÃÅµΩÕ—…Ö¥ÅçÖ…Öç—ïÀµÕ—•çÖÃ∏ú±µ’±—•ëïÖÃËùYï©ÑÅÕîÅ£ÑÅïÕçΩ±°ÖÃÅë•ôï…ïπ—ïÃÅΩ‘Åù…’¡ΩÃÅ…ï¡ï—•ëΩÃ∏ú±±ÖπëôΩ…çïÃËùY’±è’ïÃÅîÅ¡±ÖçÖÃÅÖùï¥Å¡Ω»Åëïπ—…ºÏÅŸïπ—º∞ÉÖù’ÑÅîÅ—ïµ¡ï…Ö—’…ÑÅÖùï¥Å¡Ω»ÅôΩ…Ñ∏ú±±•ôïÖ…ç°•ŸîËùMîÅÖ¡Ö…ïçîÅï‘ÅΩ‘Åµ•π°Ñ∞ÅÑÅ¡ÀÕ¡…•ÑÅ¡ïÕÕΩÑÅçΩπ—ÑÏÅï±îÅΩ‘Åï±ÑÅ•πë•çÑÅΩ’—…ÑÅ¡ïÕÕΩÑ∏ú±—•µïç°ïç¨ËùΩπŸï…—ÑÅ—’ëºÅ¡Ö…ÑÅÑÅµïÕµÑÅ’π•ëÖëîÅÖπ—ïÃÅëîÅçΩµ¡Ö…Ö»∏ú±Ω…â•—Õ•¥ËùIΩ—áüçºÉ§ÅºÅù•…ºÅëÑÅQï……ÑÅï¥ÅÕ§ÅµïÕµÑÏÅ—…ÖπÕ±áüçºÉ§ÅºÅçÖµ•π°ºÅÖºÅ…ïëΩ»ÅëºÅMΩ∞∏ùÙÌµΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî±¡•Õ—ÖÕm—•¡ΩuÒù=âÕï…ŸîÅÖÃÅçÖ…Öç—ïÀµÕ—•çÖÃÅëÑÅÕ•—’áüçº∏ú§ÌıÙ§ÌëïÕ—•πΩÃπÖ¡¡ïπë°•±ê°â–§ÌÙ§ÌçïπÑπÖ¡¡ïπë°•±ê°ëïÕ—•πΩÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…Ωπç±’ÕÖΩ·¡ï…•ïπç•Ñ°…Ö•Ë±çÖ¿±ùÖµî±¡ï…ô•∞±ÕÖ±Ÿº±—Ω—Ö∞§ÅÏ(ÄÄÄÅŸÖ»ÅÖ…—îıùÖµîòôùÖµîπÖ…—•ôÖç–∞ÅâΩ‡Ï(ÄÄÄÅ•ò°Ö…—î•Ï(ÄÄÄÄÄÄº®ÅÅ…ïçΩµ¡ïπÕÑÉ§ÅÑÅçΩ•ÕÑÅ¡…Ωπ—ÑÅπÑÅ—ï±ÑÉäPÅîÅœÃÅÖ≈’§ÅºÅ—ï…µºÅëÑÅ¡…ΩŸÑ(ÄÄÄÄÄÄÄÄÅÖ¡Ö…ïçîÅÕΩÈ•π°º∞ÅçΩµºÅπΩµîÅëºÅ≈’îÅÑÅç…•ÖªùÑÅÖçÖâΩ‘ÅëîÅçΩπÕ—…’•»∏Ä®º(ÄÄÄÄÄÅâΩ‡ıç…•Ö»†ùÕïç—•Ω∏ú∞ù©ΩùºµçÖ…êÅ©ΩùºµçΩπç±’ÕÖºú∞úÒ†Ã˚¬~:$ÅYΩè®ÅµΩπ—Ω‘Äú≠—ï·—ΩMïù’…º°¡ï…ô•∞π…ïÕ’±–§¨ú∏Ω†Ã¯ú§Ï(ÄÄÄÄÄÅâΩ‡πÖ¡¡ïπë°•±ê°…ïπëï……—ïôÖ—º°ùÖµî±—Ω—Ö∞±—…’î§§Ï(ÄÄÄÄÄÅ•ò°Ö…—îπ—ï…µ1•πî•âΩ‡πÖ¡¡ïπë°•±ê°ç…•Ö»†ù¿ú∞ùçΩπç±’ÕÖºµ—ï…µºú±Ö…—îπ—ï…µ1•πî§§Ï(ÄÄÄÅÙÅï±ÕîÅÏ(ÄÄÄÄÄÅâΩ‡ıç…•Ö»†ùÕïç—•Ω∏ú∞ù©ΩùºµçÖ…êÅ©ΩùºµçΩπç±’ÕÖºú∞úÒ†Ã˚¬~:$ÅYΩè®ÅçΩµ¡±ï—Ω‘Äú≠—ï·—ΩMïù’…º°¡ï…ô•∞π…ïÕ’±–§¨ú∏Ω†Ã¯ú§Ï(ÄÄÄÅÙ(ÄÄÄÅŸÖ»ÅπÖÿıç…•Ö»†ùë•ÿú∞ùπÖŸïùÖçÖºú§∞Å…ï¡ï—•»ıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—Öºú∞ù)ΩùÖ»ÅπΩŸÖµïπ—îú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ì…ï¡ï—•»πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì…ï•π•ç•Ö…·¡ï…•ïπç•Ñ°çÖ¿±ÕÖ±Ÿº§ÌÙ§ÌπÖÿπÖ¡¡ïπë°•±ê°…ï¡ï—•»§Ï(ÄÄÄÅ•ò°©ΩùΩ—’Ö∞ÒçÖ¿πùÖµïÃπ±ïπù—†¥ƒ•ÌŸÖ»Å¡…Ω·•µºıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—ÖºÅâΩ—Öº¥µ¡…•µÖ…•ºú∞ùAÀÕ·•µºÅ©ΩùºÉäHú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ì¡…Ω·•µºπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì©ΩùΩ—’Ö∞¨¨ÌÕÖ±ŸºπÖ—’Ö∞ı©ΩùΩ—’Ö∞ÌÕÖ±ŸÖ»†§Ì…ïπëï…)ΩùΩÃ°çÖ¿§ÌÙ§ÌπÖÿπÖ¡¡ïπë°•±ê°¡…Ω·•µº§ÌıâΩ‡πÖ¡¡ïπë°•±ê°πÖÿ§Ì…Ö•ËπÖ¡¡ïπë°•±ê°âΩ‡§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏ÅΩ¡çΩïÕµâÖ…Ö±°ÖëÖÃ°±•Õ—Ñ±çΩ……ï—Ñ±±•µ•—î§ÅÏ(ÄÄÄÅŸÖ»Å’π•çÖÃımtÌmçΩ……ï—ÖtπçΩπçÖ–°µ•Õ—’…Ö»°±•Õ—Ñ§§πôΩ…Öç†°ô’πç—•Ω∏°‡•Ì•ò°’π•çÖÃπ•πëï·=ò°‡§¿•’π•çÖÃπ¡’Õ†°‡§ÌÙ§Ì…ï—’…∏Åµ•Õ—’…Ö»°’π•çÖÃπÕ±•çî†¿±±•µ•—ïÒÃ§§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏ÅôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±çï…—º±µïπÕÖùï¥±¡•Õ—Ñ±ÖΩΩπ—•π’Ö»§ÅÏ(ÄÄÄÅÕ—Öùîπ≈’ï…ÂMï±ïç—Ω…±∞†úπôïïëâÖç¨∞π¡•Õ—Ñµë•πÖµ•çÑú§πôΩ…Öç†°ô’πç—•Ω∏°∏•Ì∏π…ïµΩŸî†§ÌÙ§Ï(ÄÄÄÅ¡Ωπ—’Ö»°çï…—º§ÏÅâ•¿°çï…—º¸ùΩ¨úËùï……ºú§ÏÅ•ò°çï…—º•ôïÕ—ï©Ö»°ôÖ±Õî§Ï(ÄÄÄÅŸÖ»Åôàıç…•Ö»†ùë•ÿú∞ùôïïëâÖç¨Äú¨°çï…—º¸ùôïïëâÖç¨¥µΩ¨úËùôïïëâÖç¨¥µï……ºú§∞úÒÕ—…Ωπú¯ú¨°çï…—º˝ï±Ωù•º†§Ëù•πëÑÅªçº∏ú§¨úΩÕ—…Ωπú¯Ò¿Åç±ÖÕÃÙâï·¡±•çÖçÖºà¯ú≠—ï·—ΩMïù’…º°µïπÕÖùï¥§¨úΩ¿¯ú±Ì…Ω±îËùÕ—Ö—’ÃùÙ§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°ôà§Ï(ÄÄÄÅ•ò†Öçï…—ºòô¡•Õ—Ñ•µΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî±¡•Õ—Ñ§Ï(ÄÄÄÅ•ò°çï…—º•ÌÕ—Öùîπ≈’ï…ÂMï±ïç—Ω…±∞†ùâ’——Ω∏ú§πôΩ…Öç†°ô’πç—•Ω∏°à•Ìàπë•ÕÖâ±ïêı—…’îÌÙ§ÌŸÖ»ÅπÖÿıç…•Ö»†ùë•ÿú∞ùπÖŸïùÖçÖºú§ÌπÖÿπÖ¡¡ïπë°•±ê°ç…•Ö»†ùÕ¡Ö∏ú§§ÌŸÖ»ÅÕïù’•»ıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—ÖºÅâΩ—Öº¥µ¡…•µÖ…•ºú∞ùYï»ÅÑÅ¡ÀÕ·•µÑÉäHú±Ì—Â¡îËùâ’——Ω∏ùÙ§ÌÕïù’•»πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ÖΩΩπ—•π’Ö»§ÌπÖÿπÖ¡¡ïπë°•±ê°Õïù’•»§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°πÖÿ§Ì…ïŸï±Ö»°ôà±πÖÿ§ÌÙ(ÄÄÄÅï±ÕîÅ…ïŸï±Ö»°ôà§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏ÅµΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî±µïπÕÖùï¥§ÅÌÕ—Öùîπ≈’ï…ÂMï±ïç—Ω…±∞†úπ¡•Õ—Ñµë•πÖµ•çÑú§πôΩ…Öç†°ô’πç—•Ω∏°∏•Ì∏π…ïµΩŸî†§ÌÙ§ÌŸÖ»Å¥ıôÖ±Ö5ÖÕçΩ—î°µïπÕÖùï¥±—…’î§Ì¥πç±ÖÕÕ1•Õ–πÖëê†ù¡•Õ—Ñµë•πÖµ•çÑú§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°¥§Ì…ïŸï±Ö»°¥§ÌÙ(ÄÄº®Å)ΩùºÅëÑÅµï∑Õ…•ÑËÅÖÃÅçÖ…—ÖÃÅô•çÖ¥ÅŸ•…ÖëÖÃÅ¡Ö…ÑÅâÖ•·ºÅîÅÑÅç…•ÖªùÑÅ¡…Ωç’…ÑÅÑ(ÄÄÄÄÅ¡Ö±ÖŸ…ÑÅ≈’îÅçΩµâ•πÑ∏ÅÖëÑÅ¡Ö»ÅÖç°ÖëºÅπΩµï•ÑÅºÅù…Ö‘ÅîÅŸÖ§Å¡Ö…ÑÅºÅÖ…—ïôÖ—º∏Ä®º(ÄÅô’πç—•Ω∏Å…ïπëï…5ïµΩ…•Ñ°Õ—Öùî±ùÖµî±¡ï…ô•∞±çÖ¿±ÕÖ±Ÿº±…ïù•Õ—…Ö»±Ÿï…IïÕ’±—Öëº§ÅÏ(ÄÄÄÅŸÖ»ÅÖç°ÖëΩÃÙ°ÕÖ±ŸºπÖç°ÖëΩÃòôÕÖ±ŸºπÖç°ÖëΩÕm©ΩùΩ—’Ö±uÒÒmt§πÕ±•çî†§Ï(ÄÄÄÅŸÖ»ÅçÖ…—ÖÃımtÏ(ÄÄÄÅùÖµîπ•—ïµÃπôΩ…Öç†°ô’πç—•Ω∏°•—ï¥±§•Ï(ÄÄÄÄÄÅçÖ…—ÖÃπ¡’Õ†°Ì§È§±—ï·—ºÈ•—ï¥πâÖÕî±±ÖëºËùâÖÕîùÙ§Ï(ÄÄÄÄÄÅçÖ…—ÖÃπ¡’Õ†°Ì§È§±—ï·—ºÈ•—ï¥π…ïÕ’±–±±ÖëºËù…ïÕ’±–ùÙ§Ï(ÄÄÄÅÙ§Ï(ÄÄÄÅçÖ…—ÖÃıµ•Õ—’…Ö»°çÖ…—ÖÃ§Ï(ÄÄÄÅŸÖ»ÅµïÕÑıç…•Ö»†ùë•ÿú∞ùµïµΩ…•Ñú§∞ÅŸ•…ÖëÑıπ’±∞∞Å—…ÖŸÖëºıôÖ±ÕîÏ(ÄÄÄÅçÖ…—ÖÃπôΩ…Öç†°ô’πç—•Ω∏°çÖ…—Ñ•Ï(ÄÄÄÄÄÅŸÖ»ÅÖç°ÖëÑıÖç°ÖëΩÃπ•πëï·=ò°çÖ…—Ñπ§§¯Ù¿Ï(ÄÄÄÄÄÅŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ùçÖ…—Ñú¨°Öç°ÖëÑ¸úÅçÖ…—Ñ¥µÖç°ÖëÑúËúú§∞(ÄÄÄÄÄÄÄÄúÒÕ¡Ö∏Åç±ÖÕÃÙâçÖ…—Ö}}Ÿï…ÕºàÅÖ…•Ñµ°•ëëï∏Ùâ—…’îà¯Ò§˚äròΩ§¯ΩÕ¡Ö∏¯ÒÕ¡Ö∏Åç±ÖÕÃÙâçÖ…—Ö}}ô…ïπ—îà¯ú≠—ï·—ΩMïù’…º°çÖ…—Ñπ—ï·—º§¨úΩÕ¡Ö∏¯ú∞(ÄÄÄÄÄÄÄÅÌ—Â¡îËùâ’——Ω∏ú∞ùÖ…•Ñµ±Öâï∞úÈÖç°ÖëÑ˝çÖ…—Ñπ—ï·—ºËùÖ…—ÑÅŸ•…ÖëÑÅ¡Ö…ÑÅâÖ•·ºùÙ§Ï(ÄÄÄÄÄÅàπëÖëΩÃıçÖ…—ÑÏ(ÄÄÄÄÄÅ•ò°Öç°ÖëÑ•àπë•ÕÖâ±ïêı—…’îÏ(ÄÄÄÄÄÅàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ï(ÄÄÄÄÄÄÄÅ•ò°—…ÖŸÖëΩÒÒàπë•ÕÖâ±ïëÒÒàÙÙıŸ•…ÖëÑ•…ï—’…∏Ï(ÄÄÄÄÄÄÄÅàπç±ÖÕÕ1•Õ–πÖëê†ùçÖ…—Ñ¥µÖâï…—Ñú§ÏÅàπÕï———…•â’—î†ùÖ…•Ñµ±Öâï∞ú±çÖ…—Ñπ—ï·—º§Ï(ÄÄÄÄÄÄÄÅ•ò†ÖŸ•…ÖëÑ•ÌŸ•…ÖëÑıàÏÅâ•¿†ùΩ¨ú§ÏÅ…ï—’…∏ÌÙ(ÄÄÄÄÄÄÄÅŸÖ»ÅΩ’—…ÑıŸ•…ÖëÑÏÅŸ•…ÖëÑıπ’±∞Ï(ÄÄÄÄÄÄÄÅ•ò°Ω’—…ÑπëÖëΩÃπ§ÙÙıçÖ…—Ñπ§•Ï(ÄÄÄÄÄÄÄÄÄÅmΩ’—…Ñ±âtπôΩ…Öç†°ô’πç—•Ω∏°‡•Ì‡πç±ÖÕÕ1•Õ–πÖëê†ùçÖ…—Ñ¥µÖç°ÖëÑú§Ì‡πë•ÕÖâ±ïêı—…’îÌÙ§Ï(ÄÄÄÄÄÄÄÄÄÅÖç°ÖëΩÃπ¡’Õ†°çÖ…—Ñπ§§Ï(ÄÄÄÄÄÄÄÄÄÅÕÖ±ŸºπÖç°ÖëΩÃıÕÖ±ŸºπÖç°ÖëΩÕÒÒÌÙÏÅÕÖ±ŸºπÖç°ÖëΩÕm©ΩùΩ—’Ö±tıÖç°ÖëΩÃπÕ±•çî†§Ï(ÄÄÄÄÄÄÄÄÄÅŸÖ»Å’±—•µºıÖç°ÖëΩÃπ±ïπù—†¯ıùÖµîπ•—ïµÃπ±ïπù—†Ï(ÄÄÄÄÄÄÄÄÄÅçΩµïµΩ…Ö»°’±—•µº§Ï(ÄÄÄÄÄÄÄÄÄÅ—…ΩçÖ……—ïôÖ—º°ùÖµî±Öç°ÖëΩÃ§Ï(ÄÄÄÄÄÄÄÄÄÅ…ïù•Õ—…Ö»†§Ï(ÄÄÄÄÄÄÄÄÄÄº®Å5ïÕµºÅπºÉÈ±—•µºÅ¡Ö»ÅÑÅπΩµïáüçºÅÖ¡Ö…ïçîÅ¡…•µï•…ºËÅºÅ…ïÕ’±—ÖëºÅœÃ(ÄÄÄÄÄÄÄÄÄÄÄÄÅïπ—…ÑÅ≈’ÖπëºÅÑÅç…•ÖªùÑÅ—ΩçÖ»Åï¥ÅçΩπ—•π’Ö»∏Ä®º(ÄÄÄÄÄÄÄÄÄÅπΩµïÖ…%π±•πî°Õ—Öùî±ùÖµîπ•—ïµÕmçÖ…—Ñπ•t±’±—•µº˝Ÿï…IïÕ’±—ÖëºÈπ’±∞§Ï(ÄÄÄÄÄÄÄÅÙÅï±ÕîÅÏ(ÄÄÄÄÄÄÄÄÄÅ—…ÖŸÖëºı—…’îÏÅ¡Ωπ—’Ö»°ôÖ±Õî§ÏÅâ•¿†ùï……ºú§Ï(ÄÄÄÄÄÄÄÄÄÅmΩ’—…Ñ±âtπôΩ…Öç†°ô’πç—•Ω∏°‡•Ì‡πç±ÖÕÕ1•Õ–πÖëê†ùçÖ…—Ñ¥µï……ÖëÑú§ÌÙ§Ï(ÄÄÄÄÄÄÄÄÄÅÕï—Q•µïΩ’–°ô’πç—•Ω∏†•Ï(ÄÄÄÄÄÄÄÄÄÄÄÅmΩ’—…Ñ±âtπôΩ…Öç†°ô’πç—•Ω∏°‡•Ì‡πç±ÖÕÕ1•Õ–π…ïµΩŸî†ùçÖ…—Ñ¥µÖâï…—Ñú∞ùçÖ…—Ñ¥µï……ÖëÑú§Ì‡πÕï———…•â’—î†ùÖ…•Ñµ±Öâï∞ú∞ùÖ…—ÑÅŸ•…ÖëÑÅ¡Ö…ÑÅâÖ•·ºú§ÌÙ§Ï(ÄÄÄÄÄÄÄÄÄÄÄÅ—…ÖŸÖëºıôÖ±ÕîÏ(ÄÄÄÄÄÄÄÄÄÅÙ∞‰¿¿§Ï(ÄÄÄÄÄÄÄÅÙ(ÄÄÄÄÄÅÙ§Ï(ÄÄÄÄÄÅµïÕÑπÖ¡¡ïπë°•±ê°à§Ï(ÄÄÄÅÙ§Ï(ÄÄÄÅÕ—ÖùîπÖ¡¡ïπë°•±ê°µïÕÑ§Ï(ÄÅÙ(ÄÄº®Å9ÑÅµï∑Õ…•ÑÅÑÅπΩµïáüçºÅªçºÅ—…ÖŸÑÅπÖëÑËÅÑÅç…•ÖªùÑÅçΩπ—•π’ÑÅ©ΩùÖπëº∏Ä®º(ÄÅô’πç—•Ω∏ÅπΩµïÖ…%π±•πî°Õ—Öùî±•—ï¥±ÖΩïç°Ö»§ÅÏ(ÄÄÄÅÕ—Öùîπ≈’ï…ÂMï±ïç—Ω…±∞†úππΩµïÖçÖºú§πôΩ…Öç†°ô’πç—•Ω∏°∏•Ì∏π…ïµΩŸî†§ÌÙ§Ï(ÄÄÄÅÕ—Öùîπ≈’ï…ÂMï±ïç—Ω…±∞†úππÖŸïùÖçÖºú§πôΩ…Öç†°ô’πç—•Ω∏°∏•Ì∏π…ïµΩŸî†§ÌÙ§Ï(ÄÄÄÅŸÖ»ÅçÖ•·Ñıç…•Ö»†ùë•ÿú∞ùπΩµïÖçÖºÅπΩµïÖçÖº¥µÕΩ±—Ñú±π’±∞±Ì…Ω±îËùÕ—Ö—’ÃùÙ§Ï(ÄÄÄÅçÖ•·ÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ù¿ú∞ùπΩµïÖçÖΩ}}Ÿ•ŸÑú±—ï·—ΩMïù’…º°ÖΩïç°Ö»¸ü¬~:$Åç°Ω‘Å—ΩëΩÃÅΩÃÅ¡Ö…ïÃÑúÈï±Ωù•º†§§§§Ï(ÄÄÄÅ•ò°•—ï¥ππÖµî•çÖ•·ÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ù¿ú∞ùπΩµïÖçÖΩ}}…Ω—’±ºú∞ùAÖ»ÅÖç°ÖëºËÄÒÕ—…Ωπú¯ú≠—ï·—ΩMïù’…º°•—ï¥ππÖµî§¨úΩÕ—…Ωπú¯ú§§Ï(ÄÄÄÅ•ò°•—ï¥πÕÖ‰•çÖ•·ÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ù¿ú∞ùπΩµïÖçÖΩ}}—ï·—ºú±•—ï¥πÕÖ‰§§Ï(ÄÄÄÅÕ—ÖùîπÖ¡¡ïπë°•±ê°çÖ•·Ñ§Ï(ÄÄÄÅŸÖ»Åô•¥ıçÖ•·ÑÏ(ÄÄÄÅ•ò°ÖΩïç°Ö»•Ï(ÄÄÄÄÄÅŸÖ»ÅπÖÿıç…•Ö»†ùë•ÿú∞ùπÖŸïùÖçÖºú§ÌπÖÿπÖ¡¡ïπë°•±ê°ç…•Ö»†ùÕ¡Ö∏ú§§Ï(ÄÄÄÄÄÅŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—ÖºÅâΩ—Öº¥µ¡…•µÖ…•ºú∞ùYï»ÅºÅ≈’îÅŸΩè®ÅÖç°Ω‘ÉäHú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ï(ÄÄÄÄÄÅàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ÖΩïç°Ö»§ÌπÖÿπÖ¡¡ïπë°•±ê°à§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°πÖÿ§Ìô•¥ıπÖÿÏ(ÄÄÄÅÙ(ÄÄÄÅ…ïŸï±Ö»°çÖ•·Ñ±ô•¥§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å—…ΩçÖ……—ïôÖ—º°ùÖµî±Öç°ÖëΩÃ§ÅÏ(ÄÄÄÅŸÖ»ÅŸï±°ºÙê†úπÖ…—ïôÖ—ºú§ÏÅ•ò†ÖŸï±°º•…ï—’…∏Ï(ÄÄÄÅŸÖ»ÅπΩŸºı…ïπëï……—ïôÖ—º°ùÖµî±Öç°ÖëΩÃπ±ïπù—†±ôÖ±Õî±Öç°ÖëΩÃ§Ï(ÄÄÄÅ•ò°πΩŸº•Ÿï±°ºπ¡Ö…ïπ—9Ωëîπ…ï¡±Öçï°•±ê°πΩŸº±Ÿï±°º§Ï(ÄÅÙ((ÄÄº®Å)ΩùºÅëºÅçÖ…—ÖËËÅÑÅç…•ÖªùÑÅ≥®Å’¥Å—…ïç°ºÅëîÅŸï…ëÖëîÅîÅëïç•ëîÅÕîÅï±îÅïπÕ•πÑ(ÄÄÄÄÅÖ±ù◊•¥ÅÑÅôÖÈï»ÅÖ±ùº∏Å<Å≈’îÅïπ—…ÑÅŸ•…ÑÅ’¥Å¡ÖÕÕºÅëºÅçÖ…—ÖË∞ÅÖ±§Åï¥Åç•µÑ∏Ä®º(ÄÅô’πç—•Ω∏Å…ïπëï…Ö…—ÖË°Õ—Öùî±ùÖµî±¡ÖÕÕº±¡ï…ô•∞±çΩπç±’•»§ÅÏ(ÄÄÄÅŸÖ»Å•—ï¥ıùÖµîπ•—ïµÕm¡ÖÕÕΩt∞Åï……ΩÃÙ¿Ï(ÄÄÄÅŸÖ»ÅçïπÑıç…•Ö»†ùë•ÿú∞ùçïπÑµ—…ïç°ºú∞úÒÕ¡Ö∏Åç±ÖÕÃÙâçïπÑµ—…ïç°Ω}}Õï±ºà˘Q…ïç°ºÅ…ïçΩ…—ÖëºΩÕ¡Ö∏¯Ò¿Åç±ÖÕÃÙâçïπÑµ—…ïç°Ω}}—ï·—ºà¯ú≠—ï·—ΩMïù’…º°•—ï¥π—ï·–§¨úΩ¿¯ú§Ï(ÄÄÄÅÕ—ÖùîπÖ¡¡ïπë°•±ê°çïπÑ§Ï(ÄÄÄÅŸÖ»ÅΩ¡çΩïÃıç…•Ö»†ùë•ÿú∞ùëïç•ÕΩïÃÅëïç•ÕΩïÃ¥µçÖ…—ÖËú§Ï(ÄÄÄÅùÖµîπçÖ—ïùΩ…•ïÃπôΩ…Öç†°ô’πç—•Ω∏°πΩµî±§•Ï(ÄÄÄÄÄÅŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ùëïç•ÕÖºÅëïç•ÕÖº¥µù…Öπëîú¨°§ÙÙÙ¿¸úÅëïç•ÕÖº¥µÖçï•—Ö»úËúÅëïç•ÕÖº¥µ…ïç’ÕÖ»ú§∞(ÄÄÄÄÄÄÄÄ°§ÙÙÙ¿¸úÒÕ¡Ö∏ÅÖ…•Ñµ°•ëëï∏Ùâ—…’îà˚¬~N,ΩÕ¡Ö∏¯ÄúËúÒÕ¡Ö∏ÅÖ…•Ñµ°•ëëï∏Ùâ—…’îà˚¬~^Gæ‚<ΩÕ¡Ö∏¯Äú§≠—ï·—ΩMïù’…º°πΩµî§±Ì—Â¡îËùâ’——Ω∏ùÙ§Ï(ÄÄÄÄÄÅàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ï(ÄÄÄÄÄÄÄÅ•ò°§ÙÙı•—ï¥πçÖ–•Ï(ÄÄÄÄÄÄÄÄÄÅàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µçï…—Ñú§Ï(ÄÄÄÄÄÄÄÄÄÅçïπÑπç±ÖÕÕ1•Õ–πÖëê°•—ï¥πçÖ–ÙÙÙ¿¸ùçïπÑµ—…ïç°º¥µÖçï•—ÑúËùçïπÑµ—…ïç°º¥µ…ïç’ÕÖëÑú§Ï(ÄÄÄÄÄÄÄÄÄÅôïç°Ö…IΩëÖëÑ°Õ—Öùî±•—ï¥±ùÖµî±çΩπç±’•»§Ï(ÄÄÄÄÄÄÄÅÙÅï±ÕîÅÏ(ÄÄÄÄÄÄÄÄÄÅï……ΩÃ¨¨Ï(ÄÄÄÄÄÄÄÄÄÅï……Ö…IΩëÖëÑ°Õ—Öùî±à±ï……ΩÃ∞ùAï…ù’π—îÅÑÅÕ§ÅµïÕµÑËÅÖ±ù◊•¥ÅçΩπÕïù’îÅiHÅÖ±ù’µÑÅçΩ•ÕÑÅ±ïπëºÅ•ÕÕº¸ú§Ï(ÄÄÄÄÄÄÄÅÙ(ÄÄÄÄÄÅÙ§Ï(ÄÄÄÄÄÅΩ¡çΩïÃπÖ¡¡ïπë°•±ê°à§Ï(ÄÄÄÅÙ§Ï(ÄÄÄÅÕ—ÖùîπÖ¡¡ïπë°•±ê°Ω¡çΩïÃ§Ï(ÄÅÙ(ÄÄº®Å7Ö≈’•πÑÅëîÅïπçΩ±°ï»ÅîÅç…ïÕçï»ËÅÑÅ¡Ö±ÖŸ…ÑÅïπ—…ÑÅ%9Q%IÅîÅÑÅÕáµëÑÅô•çÑÅï¥(ÄÄÄÄÅâ…ÖπçºÉäPÅπÖëÑÅëîÅ¡ïëáùºÅ¡À§µ≈’ïâ…Öëº∞Å≈’îÅœÃÅçΩπô’πëî∏ÅÅç…•ÖªùÑÅïÕçΩ±°î(ÄÄÄÄÅïπ—…îÅ¡Ö±ÖŸ…ÖÃÅ•π—ï•…ÖÃÄ°ÖÃÅï……ÖëÖÃÅœçºÅΩÃÅï……ΩÃÅ≈’îÅÑÅ¡…ΩŸÑÅçΩâ…Ñ§ÅîÅ€®(ÄÄÄÄÅÑÅ¡Ö±ÖŸ…ÑÅïÕçΩ±°•ëÑÅïπçΩ±°ï»ÅΩ‘Åç…ïÕçï»ÅëîÅŸï…ëÖëîÅπÑÅ—ï±Ñ∏Ä®º(ÄÅô’πç—•Ω∏Å…ïπëï…5Ö≈’•πÑ°Õ—Öùî±ùÖµî±¡ÖÕÕº±¡ï…ô•∞±çΩπç±’•»§ÅÏ(ÄÄÄÅŸÖ»Å•—ï¥ıùÖµîπ•—ïµÕm¡ÖÕÕΩt∞Åï……ΩÃÙ¿∞Åç…ïÕçîı•—ï¥πë•»ÙÙÙùµÖ•Ω»úÏ(ÄÄÄÅŸÖ»ÅÖçÖºÙ°ç…ïÕçî¸ùIMHúËù9=1!Hú§¨°•—ï¥π¡±’…Ö∞¸úÅ5U%Q=LúËúú§Ï(ÄÄÄÅŸÖ»ÅµÖ≈’•πÑıç…•Ö»†ùë•ÿú∞ùµÖ≈’•πÑú¨°ç…ïÕçî¸úÅµÖ≈’•πÑ¥µç…ïÕçîúËúÅµÖ≈’•πÑ¥µïπçΩ±°îú§§Ï(ÄÄÄÅµÖ≈’•πÑπ•ππï…!Q50ÙúÒô•ù’…îÅç±ÖÕÃÙâµÖ≈’•πÖ}}•±’Õ—…ÖçÖºà¯Ò•µúÅÕ…åÙâÖÕÕï—Ãºú¨°ç…ïÕçî¸ù©ΩùºµµÖ≈’•πÑµÖ’µïπ—Ö»π›ïâ¿úËù©ΩùºµµÖ≈’•πÑµïπçΩ±°ï»π›ïâ¿ú§¨úàÅÖ±–Ùâ7Ö≈’•πÑÄú¨°ç…ïÕçî¸ùÖ’µïπ—ÖëΩ…ÑúËùïπçΩ±°ïëΩ…Ñú§¨úÅ—…ÖπÕôΩ…µÖπëºÅ’¥ÅŸÖÕºà¯Òô•ùçÖ¡—•Ω∏¯ú¨Ä°ç…ïÕçî¸ù7Ö≈’•πÑÅëîÅÖ’µïπ—Ö»úËù7Ö≈’•πÑÅëîÅïπçΩ±°ï»ú§Ä¨úΩô•ùçÖ¡—•Ω∏¯Ωô•ù’…î¯ú¨(ÄÄÄÄÄÄúÒë•ÿÅç±ÖÕÃÙâµÖ≈’•πÖ}}¡Ö•πï∞à¯Òë•ÿÅç±ÖÕÃÙâµÖ≈’•πÖ}}±Öëºà¯ÒÕ¡Ö∏¯ƒÉ
+‹Åïπ—…ÑΩÕ¡Ö∏¯ÒÕ—…ΩπúÅç±ÖÕÃÙâµÖ≈’•πÖ}}âÖÕîà¯ú≠—ï·—ΩMïù’…º°•—ï¥πâÖÕî§¨úΩÕ—…Ωπú¯Ωë•ÿ¯ú¨(ÄÄÄÄÄÄúÒë•ÿÅç±ÖÕÃÙâµÖ≈’•πÖ}}çΩ…¡ºà¯Ò§Åç±ÖÕÃÙâµÖ≈’•πÖ}}ïπù…ïπÖùï¥àÅÖ…•Ñµ°•ëëï∏Ùâ—…’îà˚äjdΩ§¯ÒÕ¡Ö∏Åç±ÖÕÃÙâµÖ≈’•πÖ}}ÖçÖºà¯ú≠—ï·—ΩMïù’…º°ÖçÖº§¨úΩÕ¡Ö∏¯Ωë•ÿ¯ú¨(ÄÄÄÄÄÄúÒë•ÿÅç±ÖÕÃÙâµÖ≈’•πÖ}}±Öëºà¯ÒÕ¡Ö∏¯»É
+‹ÅÕÖ§ΩÕ¡Ö∏¯ÒÕ—…ΩπúÅç±ÖÕÃÙâµÖ≈’•πÖ}}ÕÖ•ëÑà¯¸ΩÕ—…Ωπú¯Ωë•ÿ¯Ωë•ÿ¯úÏ(ÄÄÄÅÕ—ÖùîπÖ¡¡ïπë°•±ê°µÖ≈’•πÑ§Ï(ÄÄÄÅŸÖ»ÅïÕçΩ±°ÖÃıç…•Ö»†ùë•ÿú∞ù¡Ö±ÖŸ…ÖÃµµÖ≈’•πÑú§Ï(ÄÄÄÅµ•Õ—’…Ö»°m•—ï¥π…ïÕ’±—tπçΩπçÖ–°•—ï¥π›…ΩπùÒÒmt§§πôΩ…Öç†°ô’πç—•Ω∏°Ω¿•Ï(ÄÄÄÄÄÅŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ù¡Ö±ÖŸ…ÑµµÖ≈’•πÑú±—ï·—ΩMïù’…º°Ω¿§±Ì—Â¡îËùâ’——Ω∏ùÙ§Ï(ÄÄÄÄÄÅàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ï(ÄÄÄÄÄÄÄÅ•ò°Ω¿ÙÙı•—ï¥π…ïÕ’±–•Ï(ÄÄÄÄÄÄÄÄÄÅàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µçï…—Ñú§Ï(ÄÄÄÄÄÄÄÄÄÅŸÖ»ÅÕÖ•ëÑıµÖ≈’•πÑπ≈’ï…ÂMï±ïç—Ω»†úπµÖ≈’•πÖ}}ÕÖ•ëÑú§Ï(ÄÄÄÄÄÄÄÄÄÅÕÖ•ëÑπ—ï·—Ωπ—ïπ–ıΩ¿Ï(ÄÄÄÄÄÄÄÄÄÅµÖ≈’•πÑπç±ÖÕÕ1•Õ–πÖëê†ùµÖ≈’•πÑ¥µ¡…Ωπ—Ñú§Ï(ÄÄÄÄÄÄÄÄÄÅôïç°Ö…IΩëÖëÑ°Õ—Öùî±•—ï¥±ùÖµî±çΩπç±’•»§Ï(ÄÄÄÄÄÄÄÅÙÅï±ÕîÅÏ(ÄÄÄÄÄÄÄÄÄÅï……ΩÃ¨¨Ï(ÄÄÄÄÄÄÄÄÄÅï……Ö…IΩëÖëÑ°Õ—Öùî±à±ï……ΩÃ±•—ï¥π¡±’…Ö∞(ÄÄÄÄÄÄÄÄÄÄÄÄ¸ÄùAÖÕÕîÅÑÅ¡Ö±ÖŸ…ÑÅ¡Ö…ÑÅºÅ¡±’…Ö∞Å¡…•µï•…ºÅîÅΩ±°îÅçΩµºÅï±ÑÅ—ï…µ•πÑ∏ú(ÄÄÄÄÄÄÄÄÄÄÄÄËÄù=±°îÅÑÉÈ±—•µÑÅœµ±ÖâÑÅëîÉäpú≠•—ï¥πâÖÕî¨üät∏Å±ÑÅ—ï¥ÅÑÅ±ï—…ÑÅL¸ú§Ï(ÄÄÄÄÄÄÄÅÙ(ÄÄÄÄÄÅÙ§Ï(ÄÄÄÄÄÅïÕçΩ±°ÖÃπÖ¡¡ïπë°•±ê°à§Ï(ÄÄÄÅÙ§Ï(ÄÄÄÅÕ—ÖùîπÖ¡¡ïπë°•±ê°ïÕçΩ±°ÖÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…ÕçΩ±°ÖUπ•çÑ°Õ—Öùî±ùÖµî±¡ÖÕÕº±¡ï…ô•∞±çΩπç±’•»§ÅÏ(ÄÄÄÅŸÖ»Å•—ï¥ıùÖµîπ•—ïµÕm¡ÖÕÕΩt∞Åï……ΩÃÙ¿∞ÅçïπÑıç…•Ö»†ùë•ÿú∞ùçïπÑµëïç•ÕÖºú§Ï(ÄÄÄÅ•ò°¡ï…ô•∞πµΩëîÙÙÙùÕçïπÖ…•ºú•çïπÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ùÕ¡Ö∏ú∞ùçïπÑµëïç•ÕÖΩ}}Õï±ºú∞ùM•—’áüçºú§§Ï(ÄÄÄÅ•ò°¡ï…ô•∞πµΩëîÙÙÙùçΩµâ•πÖ—•ΩπÃú•çïπÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ùë•ÿú∞ùçïπÑµΩâ©ï—ΩÃú±Ÿ•Õ’Ö±•ÈÖ…9’µï…ΩÃ°•—ï¥π—ï·–§§§Ï(ÄÄÄÅçïπÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ù¿ú∞ùçïπÑµëïç•ÕÖΩ}}—ï·—ºú±—ï·—ΩMïù’…º°•—ï¥π—ï·–§§§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°çïπÑ§Ï(ÄÄÄÅŸÖ»ÅΩ¡çΩïÃıç…•Ö»†ùë•ÿú∞ùëïç•ÕΩïÃú¨°ùÖµîπçÖ—ïùΩ…•ïÃπ±ïπù—†¯»¸úÅëïç•ÕΩïÃ¥µµ’•—ÖÃúËúú§§Ï(ÄÄÄÅùÖµîπçÖ—ïùΩ…•ïÃπôΩ…Öç†°ô’πç—•Ω∏°πΩµî±§•ÌŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ùëïç•ÕÖºú±—ï·—ΩMïù’…º°…Ω—’±Ω’…—º°πΩµî§§±Ì—Â¡îËùâ’——Ω∏ùÙ§ÌàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°§ÙÙı•—ï¥πçÖ–•Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µçï…—Ñú§Ì•ò†Ω}|ºπ—ïÕ–°•—ï¥π—ï·–§•çïπÑπ≈’ï…ÂMï±ïç—Ω»†úπçïπÑµëïç•ÕÖΩ}}—ï·—ºú§π—ï·—Ωπ—ïπ–ıçΩµ¡±ï—Ö…1Öç’πÑ°•—ï¥π—ï·–±πΩµî§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î±µïπÕÖùïµÖÕçΩ±°Ñ°•—ï¥±πΩµî±¡ï…ô•∞§∞úú±çΩπç±’•»§Ìıï±ÕïÌï……ΩÃ¨¨Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§ÌÕï—Q•µïΩ’–°ô’πç—•Ω∏†•Ìàπç±ÖÕÕ1•Õ–π…ïµΩŸî†ùëïç•ÕÖº¥µï……ÖëÑú§ÌÙ∞‘¿¿§Ì•ò°ï……ΩÃÙÙÙƒ•ôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±ôÖ±Õî∞ù1ï•ÑÅºÅçÖ…”çºÅπΩŸÖµïπ—îÅîÅçΩµ¡Ö…îÅçΩ¥ÅÖÃÅ…ïÕ¡ΩÕ—ÖÃ∏ú∞úú±ô’πç—•Ω∏†•ÌÙ§Ìï±ÕîÅ•ò°ï……ΩÃ¯Ù»•µΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî∞ùA•Õ—ÑËÅÑÅµï±°Ω»Å…ïÕ¡ΩÕ—ÑÉ§Éäpú≠…Ω—’±Ω’…—º°ùÖµîπçÖ—ïùΩ…•ïÕm•—ï¥πçÖ—t§¨üät∏ú§ÌıÙ§ÌΩ¡çΩïÃπÖ¡¡ïπë°•±ê°à§ÌÙ§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°Ω¡çΩïÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏ÅµïπÕÖùïµÖÕçΩ±°Ñ°•—ï¥±çÖ—ïùΩ…•Ñ±¡ï…ô•∞§ÅÏ(ÄÄÄÅ•ò°¡ï…ô•∞π…ïÕ’±–ÙÙÙùçΩπ©’π—ºÅëîÅ¡•Õ—ÖÃú•…ï—’…∏Å•—ï¥πçÖ–ÙÙÙ¿¸ùM•¥∏Å%ÕÕºÅÖ©’ëÑÅÑÅ¡ïÕÕΩÑÅÑÅïπ—ïπëï»ÅîÅÕïù’•»ÅΩÃÅ¡ÖÕÕΩÃ∏úËùï…—º∏Å%ÕÕºÅÖ¡Ö…ïçîÅï¥ÅΩ’—…ΩÃÅ—•¡ΩÃÅëîÅ—ï·—º∞ÅªçºÅï¥Å’µÑÅ•πÕ—…◊üçº∏úÏ(ÄÄÄÅ…ï—’…∏ÄùÕ—ÑÅÕ•—’áüçºÅçΩµâ•πÑÅçΩ¥Éäpú≠…Ω—’±Ω’…—º°çÖ—ïùΩ…•Ñ§¨üät∏úÏ(ÄÅÙ(ÄÅô’πç—•Ω∏ÅçΩµ¡±ï—Ö…1Öç’πÑ°—ï·—º±çÖ—ïùΩ…•Ñ§ÅÌŸÖ»Å±ï—…ÑÙΩçΩ¥ÅLΩ§π—ïÕ–°çÖ—ïùΩ…•Ñ§¸ùÃúË†ΩçΩ¥ÅhΩ§π—ïÕ–°çÖ—ïùΩ…•Ñ§¸ùËúËúú§Ì…ï—’…∏ÅM—…•πú°—ï·—º§π…ï¡±Öçî†ù}|ú±±ï—…Ñ§ÌÙ(ÄÅô’πç—•Ω∏Å…Ω—’±Ω’…—º°πΩµî§ÅÏ(ÄÄÄÅ…ï—’…∏ÅM—…•πú°πΩµî§π…ï¡±Öçî†ùÖ…Öç—ïÀµÕ—•çÑÅëºÅ—ï·—ºÅ•πÕ—…’ç•ΩπÖ∞ú∞ùM•¥∞É§Å’µÑÅ¡•Õ—Ñú§π…ï¡±Öçî†ù;<É§ÅçÖ…Öç—ïÀµÕ—•çÑÅëï±îú∞ù;çºÉ§Å’µÑÅ¡•Õ—Ñú§π…ï¡±Öçî†ùΩµâ•πáüçºÅëîÅ¡ΩÕÕ•â•±•ëÖëïÃú∞ùΩµâ•πÖ»ÅïÕçΩ±°ÖÃú§π…ï¡±Öçî†ùëßüçºÅëîÅ¡Ö…çï±ÖÃÅ•ù’Ö•Ãú∞ùIï¡ï—•»Åù…’¡ΩÃÅ•ù’Ö•Ãú§π…ï¡±Öçî†ΩyM’âÕ—Öπ—•Ÿºêº∞ùÑÅπΩµîú§π…ï¡±Öçî†Ωyë©ï—•Ÿºêº∞ù5ΩÕ—…ÑÅçÖ…Öç—ïÀµÕ—•çÑú§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏ÅŸ•Õ’Ö±•ÈÖ…9’µï…ΩÃ°—ï·—º§ÅÏ(ÄÄÄÅŸÖ»Åπ’µÃıM—…•πú°—ï·—º§πµÖ—ç††Ωqê¨Ωú•ÒÒmtÌ•ò†Öπ’µÃπ±ïπù—†•…ï—’…∏ÄúÒÕ¡Ö∏Åç±ÖÕÃÙâΩâ©ï—ºµŸ•Õ’Ö∞à¯¸ΩÕ¡Ö∏¯úÏ(ÄÄÄÅ…ï—’…∏Åπ’µÃπÕ±•çî†¿∞»§πµÖ¿°ô’πç—•Ω∏°∏•Ì…ï—’…∏ÄúÒÕ¡Ö∏Åç±ÖÕÃÙâΩâ©ï—ºµŸ•Õ’Ö∞à¯ú≠∏¨úΩÕ¡Ö∏¯úÌÙ§π©Ω•∏†úÒÕ¡Ö∏Åç±ÖÕÃÙâΩâ©ï—ºµŸ•Õ’Ö±}}ŸïÈïÃà˚\ΩÕ¡Ö∏¯ú§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…ΩπÕ—…’çÖº°Õ—Öùî±ùÖµî±¡ÖÕÕº±¡ï…ô•∞±çΩπç±’•»§ÅÏ(ÄÄÄÅ•ò°ùÖµîπ—Â¡îÙÙÙùÕΩ…–ú•Ì…ïπëï…ÕçΩ±°ÖUπ•çÑ°Õ—Öùî±ùÖµî±¡ÖÕÕº±¡ï…ô•∞±çΩπç±’•»§Ì…ï—’…∏ÌÙ(ÄÄÄÅ•ò°¡ï…ô•∞π›Ω…ëAÖ…—Ã•Ì…ïπëï…ΩπÕ—…’çÖΩAÖ±ÖŸ…Ñ°Õ—Öùî±ùÖµî±¡ÖÕÕº±çΩπç±’•»§Ì…ï—’…∏ÌÙ(ÄÄÄÅŸÖ»Å¡Ö»ıùÖµîπ¡Ö•…Õm¡ÖÕÕΩt∞Å…ïÕ¡ΩÕ—ÖÃıùÖµîπ¡Ö•…ÃπµÖ¿°ô’πç—•Ω∏°¿•Ì…ï—’…∏Å¡l≈tÌÙ§∞ÅΩ¡çΩïÃıΩ¡çΩïÕµâÖ…Ö±°ÖëÖÃ°…ïÕ¡ΩÕ—ÖÃ±¡Ö…l≈t∞Ã§∞Åï……ΩÃÙ¿Ï(ÄÄÄÅŸÖ»ÅçïπÑıç…•Ö»†ùë•ÿú∞ùçïπÑµçΩπÕ—…’çÖºú∞úÒÕ¡Ö∏Åç±ÖÕÃÙâçïπÑµëïç•ÕÖΩ}}Õï±ºà¯ú¨°¡ï…ô•∞πµΩëîÙÙÙùï·¡±Ω…îú¸ùA•Õ—ÑÅ¡Ö…ÑÅ•πŸïÕ—•ùÖ»úËùAóùÑÅ•π•ç•Ö∞ú§¨úΩÕ¡Ö∏¯Ò¿¯ú≠—ï·—ΩMïù’…º°¡Ö…l¡t§¨úΩ¿¯Òë•ÿÅç±ÖÕÃÙâçΩπÕ—…’çÖºµ…ïÕ’±—ÖëºàÅÖ…•Ñµ±•ŸîÙâ¡Ω±•—îà¯ÒÕ¡Ö∏¯¸ΩÕ¡Ö∏¯Ωë•ÿ¯ú§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°çïπÑ§Ï(ÄÄÄÅŸÖ»ÅïÕçΩ±°ÖÃıç…•Ö»†ùë•ÿú∞ùëïç•ÕΩïÃÅëïç•ÕΩïÃ¥µçΩ±’πÑú§ÌΩ¡çΩïÃπôΩ…Öç†°ô’πç—•Ω∏°Ω¿•ÌŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ùëïç•ÕÖºú±—ï·—ΩMïù’…º°Ω¿§±Ì—Â¡îËùâ’——Ω∏ùÙ§ÌàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°Ω¿ÙÙı¡Ö…l≈t•Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µçï…—Ñú§ÌçïπÑπ≈’ï…ÂMï±ïç—Ω»†úπçΩπÕ—…’çÖºµ…ïÕ’±—Öëºú§π•ππï…!Q50ıµΩπ—Ö…AïçÖÕIïÕ¡ΩÕ—Ñ°Ω¿§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î∞ùÅ±•ùáüçºÅô•çΩ‘ÅçΩµ¡±ï—Ñ∏Å=âÕï…ŸîÅÖÃÅë’ÖÃÅ¡Ö…—ïÃÅ©’π—ÖÃ∏ú∞úú±çΩπç±’•»§Ìıï±ÕïÌï……ΩÃ¨¨Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§ÌÕï—Q•µïΩ’–°ô’πç—•Ω∏†•Ìàπç±ÖÕÕ1•Õ–π…ïµΩŸî†ùëïç•ÕÖº¥µï……ÖëÑú§ÌÙ∞‘¿¿§Ì•ò°ï……ΩÃÙÙÙƒ•ôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±ôÖ±Õî∞ùÕÕÑÅ¡óùÑÅªçºÅçΩµ¡±ï—ÑÅÑÅ•ëï•Ñ∏ú∞úú±ô’πç—•Ω∏†•ÌÙ§Ìï±ÕîÅ•ò°ï……ΩÃ¯Ù»•µΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî∞ùÅ…ïÕ¡ΩÕ—ÑÅçΩ……ï—ÑÅçΩµóùÑÅçΩ¥Éäpú≠¡Ö…l≈tπÕ±•çî†¿±5Ö—†πµ•∏†–±¡Ö…l≈tπ±ïπù—†§§¨üäõät∏ú§ÌıÙ§ÌïÕçΩ±°ÖÃπÖ¡¡ïπë°•±ê°à§ÌÙ§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°ïÕçΩ±°ÖÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å¡…ïô•·ΩΩµ’¥°Ñ±à§ÅÌŸÖ»Å§Ù¿ÌÑıM—…•πú°Ñ§ÌàıM—…•πú°à§Ì›°•±î°§ÒÑπ±ïπù—†òô§Òàπ±ïπù—†òôπΩ…µÖ±•ÈÖ»°Öm•t§ÙÙıπΩ…µÖ±•ÈÖ»°âm•t§•§¨¨Ì…ï—’…∏ÅÑπÕ±•çî†¿±§§ÌÙ(ÄÅô’πç—•Ω∏Å¡Ö…—ïÕÖAÖ±ÖŸ…Ñ°¡Ö»§ÅÌŸÖ»ÅâÖÕîı¡…ïô•·ΩΩµ’¥°¡Ö…l¡t±¡Ö…l≈t§Ì…ï—’…∏ÅÌâÖÕîÈâÖÕî±Õ’ô•·ºÈM—…•πú°¡Ö…l≈t§πÕ±•çî°âÖÕîπ±ïπù—†•ÙÌÙ(ÄÅô’πç—•Ω∏Å…ïπëï…ΩπÕ—…’çÖΩAÖ±ÖŸ…Ñ°Õ—Öùî±ùÖµî±¡ÖÕÕº±çΩπç±’•»§ÅÏ(ÄÄÄÅŸÖ»Å¡Ö»ıùÖµîπ¡Ö•…Õm¡ÖÕÕΩt∞Å¡Ö…—ïÃı¡Ö…—ïÕÖAÖ±ÖŸ…Ñ°¡Ö»§∞ÅÕ’ô•·ΩÃıùÖµîπ¡Ö•…ÃπµÖ¿°¡Ö…—ïÕÖAÖ±ÖŸ…Ñ§πµÖ¿°ô’πç—•Ω∏°‡•Ì…ï—’…∏Å‡πÕ’ô•·ºÌÙ§∞ÅΩ¡çΩïÃıΩ¡çΩïÕµâÖ…Ö±°ÖëÖÃ°Õ’ô•·ΩÃ±¡Ö…—ïÃπÕ’ô•·º∞–§∞Åï……ΩÃÙ¿Ï(ÄÄÄÅŸÖ»ÅçïπÑıç…•Ö»†ùë•ÿú∞ùçïπÑµçΩπÕ—…’çÖºú∞úÒÕ¡Ö∏Åç±ÖÕÃÙâçïπÑµëïç•ÕÖΩ}}Õï±ºà˘AÖ±ÖŸ…ÑÅΩ…•ù•πÖ∞ËÄú≠—ï·—ΩMïù’…º°¡Ö…l¡t§¨úΩÕ¡Ö∏¯Òë•ÿÅç±ÖÕÃÙâ¡Ö±ÖŸ…ÑµµΩπ—Öùï¥à¯ÒÕ¡Ö∏¯ú≠—ï·—ΩMïù’…º°¡Ö…—ïÃπâÖÕî§¨úΩÕ¡Ö∏¯Òà¯¸Ωà¯Ωë•ÿ¯ú§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°çïπÑ§Ï(ÄÄÄÅŸÖ»ÅïÕçΩ±°ÖÃıç…•Ö»†ùë•ÿú∞ù¡ïçÖÃµ¡Ö±ÖŸ…Ñú§ÌΩ¡çΩïÃπôΩ…Öç†°ô’πç—•Ω∏°Ω¿•ÌŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ù¡ïçÑµ¡Ö±ÖŸ…Ñú±—ï·—ΩMïù’…º°Ω¿§±Ì—Â¡îËùâ’——Ω∏ùÙ§ÌàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°Ω¿ÙÙı¡Ö…—ïÃπÕ’ô•·º•Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µçï…—Ñú§ÌçïπÑπ≈’ï…ÂMï±ïç—Ω»†úπ¡Ö±ÖŸ…ÑµµΩπ—Öùï¥Åàú§π—ï·—Ωπ—ïπ–ıΩ¿ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î±¡Ö…—ïÃπâÖÕî¨úÄ¨Äú≠Ω¿¨úÅôΩ…µÑÄú≠¡Ö…l≈t¨ú∏ú∞úú±çΩπç±’•»§Ìıï±ÕïÌï……ΩÃ¨¨Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§ÌÕï—Q•µïΩ’–°ô’πç—•Ω∏†•Ìàπç±ÖÕÕ1•Õ–π…ïµΩŸî†ùëïç•ÕÖº¥µï……ÖëÑú§ÌÙ∞‘¿¿§Ì•ò°ï……ΩÃ¯Ù»•µΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî∞ù=âÕï…ŸîÅçΩµºÅçΩµóùÑÉäpú≠¡Ö…l≈t¨üät∏ÅÅ¡Ö…—îÅ≈’îÅôÖ±—ÑÅŸï¥Å±ΩùºÅëï¡Ω•ÃÅëîÉäpú≠¡Ö…—ïÃπâÖÕî¨üät∏ú§ÌıÙ§ÌïÕçΩ±°ÖÃπÖ¡¡ïπë°•±ê°à§ÌÙ§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°ïÕçΩ±°ÖÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏ÅµΩπ—Ö…AïçÖÕIïÕ¡ΩÕ—Ñ°…ïÕ¡ΩÕ—Ñ§ÅÏ(ÄÄÄÅŸÖ»Å¡Ö…—ïÃıM—…•πú°…ïÕ¡ΩÕ—Ñ§πÕ¡±•–†º°qÃ≠ÛäIÙ§º§πô•±—ï»°ô’πç—•Ω∏°‡•Ì…ï—’…∏Å‡π—…•¥†§ÌÙ§Ì…ï—’…∏Å¡Ö…—ïÃπµÖ¿°ô’πç—•Ω∏°¿•Ì…ï—’…∏ÄúÒÕ¡Ö∏¯ú≠—ï·—ΩMïù’…º°¿§¨úΩÕ¡Ö∏¯úÌÙ§π©Ω•∏†úú§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å°Ω…ÖΩQï·—º°—·–§ÅÌŸÖ»Å–ıπΩ…µÖ±•ÈÖ»°—·–§Ì•ò°–π•πëï·=ò†ùµï•ÑÅπΩ•—îú§¯Ù¿•…ï—’…∏Ä¿Ì•ò°–π•πëï·=ò†ùµï•ºÅë•Ñú§¯Ù¿•…ï—’…∏Äƒ»ÌŸÖ»Å¥ı–πµÖ—ç††Ωqê¨º§Ì…ï—’…∏Å¥˝9’µâï»°µl¡t§îƒ»Ë¿ÌÙ(ÄÅô’πç—•Ω∏Å…ïπëï…Iï±Ωù•º°Õ—Öùî±ùÖµî±¡ÖÕÕº±¡ï…ô•∞±çΩπç±’•»§ÅÏ(ÄÄÄÅŸÖ»Å¡Ö»ıùÖµîπ¡Ö•…Õm¡ÖÕÕΩt∞Å°Ω…Ñı°Ω…ÖΩQï·—º°¡Ö…l¡t§∞Å…ïÕ¡ΩÕ—ÖÃıùÖµîπ¡Ö•…ÃπµÖ¿°ô’πç—•Ω∏°¿•Ì…ï—’…∏Å¡l≈tÌÙ§∞ÅΩ¡çΩïÃıΩ¡çΩïÕµâÖ…Ö±°ÖëÖÃ°…ïÕ¡ΩÕ—ÖÃ±¡Ö…l≈t∞Ã§∞Åï……ΩÃÙ¿Ï(ÄÄÄÅŸÖ»Å…ï±Ωù•ºıç…•Ö»†ùë•ÿú∞ù…ï±Ωù•ºµ©Ωùºú∞úÒÕ¡Ö∏Åç±ÖÕÃÙâ…ï±Ωù•Ω}}∏Å»ƒ»à¯ƒ»ΩÕ¡Ö∏¯ÒÕ¡Ö∏Åç±ÖÕÃÙâ…ï±Ωù•Ω}}∏Å»Ãà¯ÃΩÕ¡Ö∏¯ÒÕ¡Ö∏Åç±ÖÕÃÙâ…ï±Ωù•Ω}}∏Å»ÿà¯ÿΩÕ¡Ö∏¯ÒÕ¡Ö∏Åç±ÖÕÃÙâ…ï±Ωù•Ω}}∏Å»‰à¯‰ΩÕ¡Ö∏¯Ò§Åç±ÖÕÃÙâ¡Ωπ—ï•…ºÅ¡Ωπ—ï•…º¥µ°Ω…ÑàÅÕ—Â±îÙâ—…ÖπÕôΩ…¥È…Ω—Ö—î†ú¨°°Ω…Ñ®Ã¿§¨ùëïú§à¯Ω§¯Ò§Åç±ÖÕÃÙâ¡Ωπ—ï•…ºÅ¡Ωπ—ï•…º¥µµ•π’—ºà¯Ω§¯Òà¯Ωà¯ú§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°ç…•Ö»†ù¿ú∞ùçïπÑµ±ïùïπëÑú±—ï·—ΩMïù’…º°¡Ö…l¡t§§§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°…ï±Ωù•º§Ï(ÄÄÄÅŸÖ»ÅïÕçΩ±°ÖÃıç…•Ö»†ùë•ÿú∞ùëïç•ÕΩïÃú§ÌΩ¡çΩïÃπôΩ…Öç†°ô’πç—•Ω∏°Ω¿•ÌŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ùëïç•ÕÖºú±—ï·—ΩMïù’…º°Ω¿§±Ì—Â¡îËùâ’——Ω∏ùÙ§ÌàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°Ω¿ÙÙı¡Ö…l≈t•Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µçï…—Ñú§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î∞ù<Å…ï≥Õù•ºÅîÅºÅ°ΩÀÖ…•ºÅëîÄ»–Å°Ω…ÖÃÅ…ï¡…ïÕïπ—Ö¥ÅºÅµïÕµºÅµΩµïπ—º∏ú∞úú±çΩπç±’•»§Ìıï±ÕïÌï……ΩÃ¨¨Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§Ì•ò°ï……ΩÃ¯Ù»•µΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî∞ùï¡Ω•ÃÅëºÅµï•ºµë•Ñ∞Å¡ΩëïµΩÃÅÕΩµÖ»Äƒ»ÉÄÅ°Ω…ÑÅµΩÕ—…ÖëÑ∏ú§ÌıÙ§ÌïÕçΩ±°ÖÃπÖ¡¡ïπë°•±ê°à§ÌÙ§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°ïÕçΩ±°ÖÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Åë•Ÿ•ÕΩ…ΩQï·—º°—·–§ÅÌŸÖ»Åâ…’—ºıM—…•πú°—·–§±¥ıâ…’—ºπµÖ—ç††ø›qÃ®°qê¨§º§Ì•ò°¥•…ï—’…∏Å9’µâï»°µl≈t§ÌŸÖ»Å–ıπΩ…µÖ±•ÈÖ»°—·–§Ì•ò†Ω—ï…çÑºπ—ïÕ–°–§•…ï—’…∏ÄÃÌ•ò†Ωµï—Öëîºπ—ïÕ–°–§•…ï—’…∏Ä»Ì•ò†Ω≈’•π—Ñºπ—ïÕ–°–§•…ï—’…∏Ä‘Ì•ò†Ω≈’Ö…—Ñºπ—ïÕ–°–§•…ï—’…∏Ä–Ì•ò†Ωëïç•µÑºπ—ïÕ–°–§•…ï—’…∏Äƒ¿Ì…ï—’…∏Ä»ÌÙ(ÄÅô’πç—•Ω∏Å…ïπëï…•Õ—…•â’•çÖº°Õ—Öùî±ùÖµî±¡ÖÕÕº±¡ï…ô•∞±çΩπç±’•»§ÅÏ(ÄÄÄÅŸÖ»Å¡Ö»ıùÖµîπ¡Ö•…Õm¡ÖÕÕΩt∞Åπ’µï…ΩÃıM—…•πú°¡Ö…l¡t§πµÖ—ç††Ωqê¨Ωú•ÒÒmt∞Å—Ω—Ö∞ıM—…•πú°¡Ö…l¡t§π•πëï·=ò†ü‹ú§¯Ù¿˝9’µâï»°π’µï…ΩÕl¡t§È9’µâï»°π’µï…ΩÕmπ’µï…ΩÃπ±ïπù—†¥≈t§∞Åë•Ÿ•ÕΩ»ıë•Ÿ•ÕΩ…ΩQï·—º°¡Ö…l¡t§∞Å…ïÕ¡ΩÕ—Ñı9’µâï»°¡Ö…l≈t§∞ÅÖ±—ï…πÖ—•ŸÖÃıΩ¡çΩïÕµâÖ…Ö±°ÖëÖÃ°mM—…•πú°5Ö—†πµÖ‡†ƒ±…ïÕ¡ΩÕ—Ñ¥ƒ§§±M—…•πú°…ïÕ¡ΩÕ—Ñ¨ƒ§±M—…•πú°…ïÕ¡ΩÕ—Ñ¨»•t±M—…•πú°…ïÕ¡ΩÕ—Ñ§∞Ã§∞Åï……ΩÃÙ¿Ï(ÄÄÄÅÕ—ÖùîπÖ¡¡ïπë°•±ê°ç…•Ö»†ù¿ú∞ùçïπÑµ±ïùïπëÑú±—ï·—ΩMïù’…º°¡Ö…l¡t§§§ÌŸÖ»ÅΩâ©ï—ΩÃıç…•Ö»†ùë•ÿú∞ùΩâ©ï—ΩÃµë•Ÿ•ÕÖºú§ÌôΩ»°ŸÖ»Å§Ù¿Ì§Ò5Ö—†πµ•∏°—Ω—Ö∞∞–¿§Ì§¨¨•Ωâ©ï—ΩÃπÖ¡¡ïπë°•±ê°ç…•Ö»†ù§ú∞ùΩâ©ï—ºµë•Ÿ•ÕÖºú§§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°Ωâ©ï—ΩÃ§Ï(ÄÄÄÅŸÖ»Åù…’¡ΩÃıç…•Ö»†ùë•ÿú∞ùù…’¡ΩÃµë•Ÿ•ÕÖºú§ÌôΩ»°ŸÖ»ÅúÙ¿ÌúÒë•Ÿ•ÕΩ»Ìú¨¨•ù…’¡ΩÃπÖ¡¡ïπë°•±ê°ç…•Ö»†ùë•ÿú∞ùù…’¡ºµë•Ÿ•ÕÖºú∞úÒÕ¡Ö∏˘ù…’¡ºÄú¨°ú¨ƒ§¨úΩÕ¡Ö∏¯ú§§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°ù…’¡ΩÃ§Ï(ÄÄÄÅŸÖ»ÅïÕçΩ±°ÖÃıç…•Ö»†ùë•ÿú∞ùëïç•ÕΩïÃú§ÌÖ±—ï…πÖ—•ŸÖÃπôΩ…Öç†°ô’πç—•Ω∏°Ω¿•ÌŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ùëïç•ÕÖºú±Ω¿¨úÅï¥ÅçÖëÑÅù…’¡ºú±Ì—Â¡îËùâ’——Ω∏ùÙ§ÌàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°9’µâï»°Ω¿§ÙÙı…ïÕ¡ΩÕ—Ñ•Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µçï…—Ñú§ÌΩâ©ï—ΩÃπç±ÖÕÕ1•Õ–πÖëê†ùΩâ©ï—ΩÃµë•Ÿ•ÕÖº¥µµΩŸ•ëΩÃú§Ìù…’¡ΩÃπ≈’ï…ÂMï±ïç—Ω…±∞†úπù…’¡ºµë•Ÿ•ÕÖºú§πôΩ…Öç†°ô’πç—•Ω∏°ù»•ÌôΩ»°ŸÖ»Å®Ù¿Ì®Ò…ïÕ¡ΩÕ—Ñòô®ƒ»Ì®¨¨•ù»πÖ¡¡ïπë°•±ê°ç…•Ö»†ù§ú∞ùΩâ©ï—ºµë•Ÿ•ÕÖºú§§ÌÙ§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î±—Ω—Ö∞¨úÅΩâ©ï—ΩÃÅ…ï¡Ö…—•ëΩÃÅï¥Äú≠ë•Ÿ•ÕΩ»¨úÅù…’¡ΩÃÅëï•·Ö¥Äú≠…ïÕ¡ΩÕ—Ñ¨úÅï¥ÅçÖëÑÅ’¥∏ú∞úú±çΩπç±’•»§Ìıï±ÕïÌï……ΩÃ¨¨Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§Ì•ò°ï……ΩÃ¯Ù»•µΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî∞ù·¡ï…•µïπ—îÅçΩπ—Ö»ÅëîÄú≠ë•Ÿ•ÕΩ»¨úÅï¥Äú≠ë•Ÿ•ÕΩ»¨úÅÖ”§Åç°ïùÖ»ÅÑÄú≠—Ω—Ö∞¨ú∏ú§ÌıÙ§ÌïÕçΩ±°ÖÃπÖ¡¡ïπë°•±ê°à§ÌÙ§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°ïÕçΩ±°ÖÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…Mï≈’ïπç•Ö)Ωùº°Õ—Öùî±ùÖµî±¡ÖÕÕº±¡ï…ô•∞±çΩπç±’•»§ÅÏ(ÄÄÄÅŸÖ»ÅçΩ……ï—ΩÃıùÖµîπ¡Ö•…ÃπÕ±•çî†¿±¡ÖÕÕº§∞Å…ïÕ—Öπ—ïÃıµ•Õ—’…Ö»°ùÖµîπ¡Ö•…ÃπÕ±•çî°¡ÖÕÕº§§∞ÅïÕ¡ï…ÖëºıùÖµîπ¡Ö•…Õm¡ÖÕÕΩt∞Åï……ΩÃÙ¿Ï(ÄÄÄÅŸÖ»Åô±’·ºıç…•Ö»†ùΩ∞ú∞ùô±’·ºµï—Ö¡ÖÃú§ÌçΩ……ï—ΩÃπôΩ…Öç†°ô’πç—•Ω∏°¿•Ìô±’·ºπÖ¡¡ïπë°•±ê°ç…•Ö»†ù±§ú±π’±∞∞úÒÕ—…Ωπú¯ú≠—ï·—ΩMïù’…º°¡l¡t§¨úΩÕ—…Ωπú¯ÒÕ¡Ö∏¯ú≠—ï·—ΩMïù’…º°¡l≈t§¨úΩÕ¡Ö∏¯ú§§ÌÙ§Ìô±’·ºπÖ¡¡ïπë°•±ê°ç…•Ö»†ù±§ú∞ùô±’·ºµï—Ö¡ÖÕ}}ŸÖÈ•ºú∞ùE’Ö∞É§ÅÑÅï—Ö¡ÑÄú¨°¡ÖÕÕº¨ƒ§¨ú¸ú§§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°ô±’·º§Ï(ÄÄÄÅŸÖ»ÅïÕçΩ±°ÖÃıç…•Ö»†ùë•ÿú∞ùëïç•ÕΩïÃÅëïç•ÕΩïÃ¥µçΩ±’πÑú§Ì…ïÕ—Öπ—ïÃπôΩ…Öç†°ô’πç—•Ω∏°¡Ö»•ÌŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ùëïç•ÕÖºú±—ï·—ΩMïù’…º°¡Ö…l¡t§±Ì—Â¡îËùâ’——Ω∏ùÙ§ÌàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°¡Ö»ÙÙıïÕ¡ï…Öëº•Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µçï…—Ñú§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î±¡Ö…l¡t¨úËÄú≠¡Ö…l≈t∞úú±çΩπç±’•»§Ìıï±ÕïÌï……ΩÃ¨¨Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§Ì•ò°ï……ΩÃ¯Ù»•µΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî∞ùA•Õ—ÑËÅÑÅ¡ÀÕ·•µÑÅï—Ö¡ÑÉ§Éäpú≠ïÕ¡ï…ÖëΩl¡t¨üät∏ú§ÌıÙ§ÌïÕçΩ±°ÖÃπÖ¡¡ïπë°•±ê°à§ÌÙ§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°ïÕçΩ±°ÖÃ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…Q…ÖπÕôΩ…µÖçÖΩ)Ωùº°Õ—Öùî±ùÖµî±¡ÖÕÕº±¡ï…ô•∞±çΩπç±’•»§ÅÏ(ÄÄÄÅŸÖ»Å¡Ö»ıùÖµîπ¡Ö•…Õm¡ÖÕÕΩt∞Å…ïÕ¡ΩÕ—ÖÃıùÖµîπ¡Ö•…ÃπµÖ¿°ô’πç—•Ω∏°¿•Ì…ï—’…∏Å¡l≈tÌÙ§∞ÅΩ¡çΩïÃıΩ¡çΩïÕµâÖ…Ö±°ÖëÖÃ°…ïÕ¡ΩÕ—ÖÃ±¡Ö…l≈t∞Ã§∞Åï……ΩÃÙ¿Ï(ÄÄÄÅŸÖ»Å¡Ö•πï∞ıç…•Ö»†ùë•ÿú∞ù¡Ö•πï∞µ—…ÖπÕôΩ…µÖçÖºú∞úÒë•ÿ¯ÒÕ¡Ö∏˘π—ïÃΩÕ¡Ö∏¯ÒÕ—…Ωπú¯ú≠—ï·—ΩMïù’…º°¡Ö…l¡t§¨úΩÕ—…Ωπú¯Ωë•ÿ¯Ò§˚äHΩ§¯Òë•ÿÅç±ÖÕÃÙâ¡Ö•πï∞µ—…ÖπÕôΩ…µÖçÖΩ}}ëï¡Ω•Ãà¯ÒÕ¡Ö∏˘ï¡Ω•ÃΩÕ¡Ö∏¯ÒÕ—…Ωπú¯¸ΩÕ—…Ωπú¯Ωë•ÿ¯ú§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°¡Ö•πï∞§Ï(ÄÄÄÅŸÖ»ÅïÕçΩ±°ÖÃıç…•Ö»†ùë•ÿú∞ùëïç•ÕΩïÃÅëïç•ÕΩïÃ¥µçΩ±’πÑú§ÌΩ¡çΩïÃπôΩ…Öç†°ô’πç—•Ω∏°Ω¿•ÌŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ùëïç•ÕÖºú±—ï·—ΩMïù’…º°Ω¿§±Ì—Â¡îËùâ’——Ω∏ùÙ§ÌàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°Ω¿ÙÙı¡Ö…l≈t•Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µçï…—Ñú§Ì¡Ö•πï∞π≈’ï…ÂMï±ïç—Ω»†úπ¡Ö•πï∞µ—…ÖπÕôΩ…µÖçÖΩ}}ëï¡Ω•ÃÅÕ—…Ωπúú§π—ï·—Ωπ—ïπ–ıΩ¿Ì¡Ö•πï∞πç±ÖÕÕ1•Õ–πÖëê†ù¡Ö•πï∞µ—…ÖπÕôΩ…µÖçÖº¥µ¡…Ωπ—ºú§ÌôïïëâÖç≠%π—ï…Ö—•Ÿº°Õ—Öùî±—…’î∞ù=âÕï…ŸîÅºÅ≈’îÅµ’ëΩ‘Åï¥Å—ΩëÖÃÅÖÃÅ¡Ö±ÖŸ…ÖÃÅëÑÅï·¡…ïÕœçº∏ú∞úú±çΩπç±’•»§Ìıï±ÕïÌï……ΩÃ¨¨Ìàπç±ÖÕÕ1•Õ–πÖëê†ùëïç•ÕÖº¥µï……ÖëÑú§Ì•ò°ï……ΩÃ¯Ù»•µΩÕ—…Ö…A•Õ—Ñ°Õ—Öùî∞ùΩπô•…ÑÅÕîÅÕ’âÕ—Öπ—•Ÿº∞ÅÖ…—•ùºÅîÅçÖ…Öç—ïÀµÕ—•çÑÅïÕ”çºÅ—ΩëΩÃÅπºÅ¡±’…Ö∞∏ú§ÌıÙ§ÌïÕçΩ±°ÖÃπÖ¡¡ïπë°•±ê°à§ÌÙ§ÌÕ—ÖùîπÖ¡¡ïπë°•±ê°ïÕçΩ±°ÖÃ§Ï(ÄÅÙ((ÄÅô’πç—•Ω∏Å•π•ç•Ö…E’•Ë°çÖ¿±…ï•π•ç•Ö»§ÅÏ(ÄÄÄÅŸÖ»Åù’Ö…ëÖëºÙÖ…ï•π•ç•Ö»ÄòòÅïÕ—Öëºπ—ïπ—Ö—•ŸÖÕmçÖ¿π•ëtÏ(ÄÄÄÅ•ò°ù’Ö…ëÖëº•Ï(ÄÄÄÄÄÅŸÖ»Åï……Mï–ıÌÙÏ°ù’Ö…ëÖëºπï……ΩÕÒÒmt§πôΩ…Öç†°ô’πç—•Ω∏°§•Ìï……Mï—m•tı—…’îÌÙ§Ï(ÄÄÄÄÄÅŸÖ»Åôï•—ÖÃıÌÙÌôΩ»°ŸÖ»Å¨Ù¿Ì¨°ù’Ö…ëÖëºπ•πë•çïÒ¿§Ì¨¨¨•Ìôï•—ÖÕm≠tıÌÖçï…—Ω‘ËÖï……Mï—m≠t±çΩπ—Ω‘ËÖï……Mï—m≠t±ïÕçΩ±°Ö%ë‡Ë¥ƒ±ïÕçΩ±°ÖQ·–Èπ’±±ÙÌÙ(ÄÄÄÄÄÅ≈’•ËıÌ•πë•çîÈù’Ö…ëÖëºπ•πë•çïÒ¿±Öçï…—ΩÃÈù’Ö…ëÖëºπÖçï…—ΩÕÒ¿±…ïÕ¡Ωπë•ëÖÃÈù’Ö…ëÖëºπ•πë•çïÒ¿±ï……ΩÃË°ù’Ö…ëÖëºπï……ΩÕÒÒmt§πµÖ¿°ô’πç—•Ω∏°§•Ì…ï—’…∏ÅÌ≈’ïÕ—ÖºÈçÖ¿π≈’•Èm•t±•πë•çï=…•ù•πÖ∞È•ÙÌÙ§±•πë•çïÃÈçÖ¿π≈’•ËπµÖ¿°ô’πç—•Ω∏°|±§•Ì…ï—’…∏Å§ÌÙ§±…ïŸ•ÕÖºÈôÖ±Õî±¡Ö’ÕÑÈôÖ±Õî±ôï•—ÖÃÈôï•—ÖÕÙÏ(ÄÄÄÅÙÅï±ÕîÅÏ(ÄÄÄÄÄÅ≈’•ËıÌ•πë•çîË¿±Öçï…—ΩÃË¿±…ïÕ¡Ωπë•ëÖÃË¿±ï……ΩÃÈmt±•πë•çïÃÈçÖ¿π≈’•ËπµÖ¿°ô’πç—•Ω∏°|±§•Ì…ï—’…∏Å§ÌÙ§±…ïŸ•ÕÖºÈôÖ±Õî±¡Ö’ÕÑÈôÖ±Õî±ôï•—ÖÃÈÌıÙÏ(ÄÄÄÅÙ(ÄÄÄÅ•ò°…ï•π•ç•Ö»•Ìëï±ï—îÅïÕ—Öëºπ—ïπ—Ö—•ŸÖÕmçÖ¿π•ëtÌÕÖ±ŸÖ»†§ÌÙ(ÄÄÄÅ…ïπëï…E’ïÕ—Öº°çÖ¿§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏ÅÕÖ±ŸÖ…Qïπ—Ö—•ŸÑ°çÖ¿§ÅÏ(ÄÄÄÅ•ò°≈’•Ëπ…ïŸ•ÕÖº•…ï—’…∏Ï(ÄÄÄÅïÕ—Öëºπ—ïπ—Ö—•ŸÖÕmçÖ¿π•ëtıÌ•πë•çîÈ≈’•Ëπ•πë•çî±Öçï…—ΩÃÈ≈’•ËπÖçï…—ΩÃ±ï……ΩÃÈ≈’•Ëπï……ΩÃπµÖ¿°ô’πç—•Ω∏°î•Ì…ï—’…∏Åîπ•πë•çï=…•ù•πÖ∞ÌÙ•ÙÌÕÖ±ŸÖ»†§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å¡ï…ù’π—ÖÕ—’Ö•Ã°çÖ¿§ÅÏÅ…ï—’…∏Å≈’•Ëπ…ïŸ•ÕÖºÄ¸Å≈’•Ëπ¡ï…ù’π—ÖÃÄËÅçÖ¿π≈’•ËÏÅÙ(ÄÅô’πç—•Ω∏ÅçΩπ—ï·—’Ö±•ÈÖ…E’ïÕ—Öº°çÖ¿±ƒ§ÅÏ(ÄÄÄÅŸÖ»Å—ï·—ºıƒπƒ∞Å•µÖùï¥ıƒπ•µÖùïÒÒπ’±∞∞Å•µÖùïµ±–ıƒπ•µÖùï±—Òúú∞Å•µÖùïµÖ¡—•Ω∏ıƒπ•µÖùïÖ¡—•ΩπÒúú∞ÅçΩπ—ï·—ºÙúú∞Å•πë•çîıçÖ¿π≈’•Ëπ•πëï·=ò°ƒ§∞Å¡±ÖπºÙ°—Â¡ïΩòÅA=dÑÙÙù’πëïô•πïêúòôA=emçÖ¿π•ët•ÒÒπ’±∞∞ÅÖ©’Õ—îı¡±Öπºòô¡±Öπºπ≈’ïÕ—•ΩπÃòô¡±Öπºπ≈’ïÕ—•ΩπÕm•πë•çïtÏ(ÄÄÄÅ•ò°Ö©’Õ—î•ÌçΩπ—ï·—ºıÖ©’Õ—îπçΩπ—ï·—ÒúúÌ—ï·—ºıÖ©’Õ—îπ¡…Ωµ¡—ÒÒ—ï·—ºÌÙ(ÄÄÄÅ•ò†Ωy9ÑÅ—•…•π°Ñ∞Ω§π—ïÕ–°—ï·—º§§Å—ï·—ºı—ï·—ºπ…ï¡±Öçî†Ωy9ÑÅ—•…•π°Ñ∞Ω§∞ù1ï•ÑÅïÕ—îÅëßÖ±ΩùºÅëîÅ’µÑÅ—•…•π°ÑËú§Ï(ÄÄÄÅ•ò°çÖ¿π•êÙÙÙùç•îƒƒúÄòòÄΩπ”Ö…—•çÑÅÖ¡Ö…ïçîÅçΩµ¡±ï—Öµïπ—îÅïÕç’…ÑΩ§π—ïÕ–°—ï·—º§§Å—ï·—ºÙùUµÑÅ•µÖùï¥ÅëÖÃÅ±’ÈïÃÅπΩ—’…πÖÃÅëÑÅQï……ÑÅµΩÕ—…ÑÅΩπëîÅ£ÑÅµ’•—ÖÃÅç•ëÖëïÃ∏Å9ï±Ñ∞ÅÑÅπ”Ö…—•çÑÅÖ¡Ö…ïçîÅçΩµ¡±ï—Öµïπ—îÅïÕç’…Ñ∏ÅAΩ»Å≈◊®¸úÏ(ÄÄÄÅ•ò°•µÖùï¥ÄòòÄÖ•µÖùïµ±–§Å•µÖùïµ±–Ùù%±’Õ—…áüçºÅëîÅÖ¡Ω•ºÅ¡Ö…ÑÅ…ïÕ¡Ωπëï»ÉÄÅ¡ï…ù’π—Ñ∏úÏ(ÄÄÄÅ•ò°•µÖùï¥ÄòòÄÖ•µÖùïµÖ¡—•Ω∏§Å•µÖùïµÖ¡—•Ω∏Ùù=âÕï…ŸîÅÑÅ•±’Õ—…áüçºÅÖπ—ïÃÅëîÅ…ïÕ¡Ωπëï»∏úÏ(ÄÄÄÅ…ï—’…∏ÅÌ—ï·—ºÈ—ï·—º±çΩπ—ï·—ºÈçΩπ—ï·—º±•µÖùï¥È•µÖùï¥±•µÖùïµ±–È•µÖùïµ±–±•µÖùïµÖ¡—•Ω∏È•µÖùïµÖ¡—•ΩπÙÏ(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…E’ïÕ—Öº°çÖ¿§ÅÏ(ÄÄÄÅŸÖ»Å…Ö•ËÙê†úçëïÕÖô•ºµçΩπ—ï’ëºú§ÏÅ…Ö•Ëπ•ππï…!Q50ÙúúÏ(ÄÄÄÅ•ò†ÖçÖ¿π≈’•ÈÒÖçÖ¿π≈’•Ëπ±ïπù—†•Ì…Ö•ËπÖ¡¡ïπë°•±ê°ç…•Ö»†ùë•ÿú∞ùŸÖÈ•ºú∞ù•πëÑÅªçºÅ£ÑÅ¡ï…ù’π—ÖÃÅ¡Ö…ÑÅïÕ—îÅÖÕÕ’π—º∏ú§§Ì…ï—’…∏ÌÙ(ÄÄÄÅŸÖ»Å¡ï…ù’π—ÖÃı¡ï…ù’π—ÖÕ—’Ö•Ã°çÖ¿§Ï(ÄÄÄÅ•ò°≈’•Ëπ•πë•çî¯ı¡ï…ù’π—ÖÃπ±ïπù—†•Ì…ïπëï…IïÕ’±—Öëº°çÖ¿§Ì…ï—’…∏ÌÙ(ÄÄÄÅŸÖ»Åƒı¡ï…ù’π—ÖÕm≈’•Ëπ•πë•çït∞ÅçΩπ—ï·—ºıçΩπ—ï·—’Ö±•ÈÖ…E’ïÕ—Öº°çÖ¿±ƒ§∞ÅçÖ…êıç…•Ö»†ùÕïç—•Ω∏ú∞ù≈’•ËµçÖ…êú§Ï(ÄÄÄÅçÖ…êπ•ππï…!Q50ÙúÒ¿Åç±ÖÕÃÙâ≈’•ËµçÖ…ë}}ï—Ö¡Ñà¯ú¨°≈’•Ëπ…ïŸ•ÕÖº¸ùIïŸ•œçºÉ
+‹ÄúËúú§¨ùAï…ù’π—ÑÄú¨°≈’•Ëπ•πë•çî¨ƒ§¨úÅëîÄú≠¡ï…ù’π—ÖÃπ±ïπù—†¨úΩ¿¯úÏ(ÄÄÄÅŸÖ»ÅΩ§ı≈’•Ëπ•πë•çïÕm≈’•Ëπ•πë•çït∞Åôï•—Ñı≈’•Ëπôï•—ÖÃòô≈’•Ëπôï•—ÖÕmΩ•tÏ(ÄÄÄÅŸÖ»ÅâÖ……Ö9Öÿıç…•Ö»†ùë•ÿú∞ù≈’•ËµçÖ…ë}}πÖÿµ—Ω¡ºú§Ï(ÄÄÄÅŸÖ»ÅÖπ—ï…•Ω»ıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—ÖºÅâΩ—Öº¥µ±ïŸîÅ≈’•ËµçÖ…ë}}ŸΩ±—Ö»ú∞úÒÕ¡Ö∏ÅÖ…•Ñµ°•ëëï∏Ùâ—…’îà˚ä@ΩÕ¡Ö∏¯Åπ—ï…•Ω»ú±Ì—Â¡îËùâ’——Ω∏ú∞ùÖ…•Ñµ±Öâï∞úËùYΩ±—Ö»Å¡Ö…ÑÅÑÅ¡ï…ù’π—ÑÅÖπ—ï…•Ω»ùÙ§Ï(ÄÄÄÅÖπ—ï…•Ω»πë•ÕÖâ±ïêı≈’•Ëπ•πë•çîÙÙÙ¿Ï(ÄÄÄÅÖπ—ï…•Ω»πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°≈’•Ëπ•πë•çîÙÙÙ¿•…ï—’…∏Ì≈’•Ëπ•πë•çî¥¥ÌÕÖ±ŸÖ…Qïπ—Ö—•ŸÑ°çÖ¿§Ì…ïπëï…E’ïÕ—Öº°çÖ¿§Ì•…QΩ¡º†§ÌÙ§Ï(ÄÄÄÅŸÖ»Å…ïçΩµïçÖ»ıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—ÖºÅâΩ—Öº¥µ±ïŸîÅ≈’•ËµçÖ…ë}}…ïçΩµïçÖ»ú∞úÒÕ¡Ö∏ÅÖ…•Ñµ°•ëëï∏Ùâ—…’îà˚äÏΩÕ¡Ö∏¯ÅIïçΩµóùÖ»ú±Ì—Â¡îËùâ’——Ω∏ú∞ùÖ…•Ñµ±Öâï∞úËùIïçΩµóùÖ»ÅºÅëïÕÖô•ºÅëïÕëîÅÑÅ¡…•µï•…ÑÅ¡ï…ù’π—ÑùÙ§Ï(ÄÄÄÅ…ïçΩµïçÖ»πë•ÕÖâ±ïêı≈’•Ëπ•πë•çîÙÙÙ¿Ï(ÄÄÄÅ…ïçΩµïçÖ»πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•π•ç•Ö…E’•Ë°çÖ¿±—…’î§Ì•…QΩ¡º†§ÌÙ§Ï(ÄÄÄÅâÖ……Ö9ÖÿπÖ¡¡ïπë°•±ê°Öπ—ï…•Ω»§ÌâÖ……Ö9ÖÿπÖ¡¡ïπë°•±ê°…ïçΩµïçÖ»§Ï(ÄÄÄÅçÖ…êπ•πÕï…—	ïôΩ…î°âÖ……Ö9Öÿ±çÖ…êπô•…Õ—°•±ê§Ï(ÄÄÄÅ•ò°çΩπ—ï·—ºπ•µÖùï¥•Ï(ÄÄÄÄÄÅçÖ…êπÖ¡¡ïπë°•±ê°ô•ù’…Ö=¡ç•ΩπÖ∞°ç…•Ö»†ùô•ù’…îú∞ù≈’ïÕ—ÖºµçΩπ—ï·—ºú∞úÒÑÅ°…ïòÙàú≠—ï·—ΩMïù’…º°çΩπ—ï·—ºπ•µÖùï¥§¨úàÅ—Ö…ùï–Ùâ}â±Öπ¨àÅ…ï∞ÙâπΩΩ¡ïπï»àÅÖ…•Ñµ±Öâï∞Ùâµ¡±•Ö»ÅÑÅ•±’Õ—…áüçºà¯Ò•µúÅÕ…åÙàú≠—ï·—ΩMïù’…º°çΩπ—ï·—ºπ•µÖùï¥§¨úàÅÖ±–Ùàú≠—ï·—ΩMïù’…º°çΩπ—ï·—ºπ•µÖùïµ±–§¨úàÅ±ΩÖë•πúÙâ±ÖÈ‰à¯ΩÑ¯Òô•ùçÖ¡—•Ω∏¯ú≠—ï·—ΩMïù’…º°çΩπ—ï·—ºπ•µÖùïµÖ¡—•Ω∏§¨úÅQΩ≈’îÅπÑÅ•µÖùï¥Å¡Ö…ÑÅÖµ¡±ßÑµ±Ñ∏Ωô•ùçÖ¡—•Ω∏¯ú§§§Ï(ÄÄÄÅÙ(ÄÄÄÅ•ò°çΩπ—ï·—ºπçΩπ—ï·—º•çÖ…êπÖ¡¡ïπë°•±ê°ç…•Ö»†ùë•ÿú∞ù≈’ïÕ—ÖºµçΩπ—ï·—ºµ—ï·—ºú∞úÒÕ¡Ö∏˘%πôΩ…µáü’ïÃÅ¡Ö…ÑÅ¡ïπÕÖ»ΩÕ¡Ö∏¯Ò¿¯ú≠—ï·—ΩMïù’…º°çΩπ—ï·—ºπçΩπ—ï·—º§¨úΩ¿¯ú§§Ï(ÄÄÄÅçÖ…êπÖ¡¡ïπë°•±ê°ç…•Ö»†ù¿ú∞ù≈’•ËµçÖ…ë}}¡ï…ù’π—Ñú±—ï·—ΩMïù’…º°çΩπ—ï·—ºπ—ï·—º§§§Ï(ÄÄÄÅô’πç—•Ω∏ÅπÖŸA…Ω·•µÑ†•Ï(ÄÄÄÄÄÅŸÖ»ÅπÖÿıç…•Ö»†ùë•ÿú∞ùπÖŸïùÖçÖºú§∞Å’±—•µÑı≈’•Ëπ•πë•çîÙÙı¡ï…ù’π—ÖÃπ±ïπù—†¥ƒ∞Å¡…Ω‡ıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—ÖºÅâΩ—Öº¥µ¡…•µÖ…•ºú±’±—•µÑ¸°≈’•Ëπ…ïŸ•ÕÖº¸ùQï…µ•πÖ»Å…ïŸ•œçºúËùYï»Å…ïÕ’±—Öëºú§ËùAÀÕ·•µÑÉäHú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ï(ÄÄÄÄÄÅ¡…Ω‡πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì≈’•Ëπ•πë•çî¨¨ÌÕÖ±ŸÖ…Qïπ—Ö—•ŸÑ°çÖ¿§Ì…ïπëï…E’ïÕ—Öº°çÖ¿§Ì•…QΩ¡º†§ÌÙ§Ï(ÄÄÄÄÄÅπÖÿπÖ¡¡ïπë°•±ê°ç…•Ö»†ùÕ¡Ö∏ú§§ÌπÖÿπÖ¡¡ïπë°•±ê°¡…Ω‡§Ì…ï—’…∏ÅπÖÿÏ(ÄÄÄÅÙ(ÄÄÄÄº®ÅAï…ù’π—ÑÅ´ÑÅ…ïÕ¡Ωπë•ëÑËÅµΩÕ—…ÑÅï¥ÅµΩëºÅ…ïŸ•œçº∞ÅÕï¥Å…ïÕ¡Ωπëï»ÅëîÅπΩŸº(ÄÄÄÄÄÄÅπï¥Å…ïçΩπ—Ö»Å¡Ωπ—ΩÃ∏ÅAï…µ•—îÅπÖŸïùÖ»ÅçΩ¥Åπ—ï…•Ω»ΩAÀÕ·•µÑ∏Ä®º(ÄÄÄÅ•ò°ôï•—Ñ•Ï(ÄÄÄÄÄÅ•ò°ƒπ—Â¡îÙÙÙùµåú•Ï(ÄÄÄÄÄÄÄÅŸÖ»ÅΩ¡ÕHıç…•Ö»†ùë•ÿú∞ùΩ¡çΩïÃú§ÏÅƒπΩ¡—•ΩπÃπôΩ…Öç†°ô’πç—•Ω∏°Ω¿±§•ÌŸÖ»Åç±ÃÙùΩ¡çÖºúÌ•ò°§ÙÙıƒπÖπÕ›ï»•ç±Ã¨ÙúÅΩ¡çÖº¥µçï…—ÑúÌï±ÕîÅ•ò°§ÙÙıôï•—ÑπïÕçΩ±°Ö%ë‡•ç±Ã¨ÙúÅΩ¡çÖº¥µï……ÖëÑúÌŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú±ç±Ã∞úÒÕ¡Ö∏Åç±ÖÕÃÙâΩ¡çÖΩ}}±ï—…Ñà¯ú≠M—…•πúπô…Ωµ°Ö…Ωëî†ÿ‘≠§§¨úΩÕ¡Ö∏¯ÒÕ¡Ö∏¯ú≠—ï·—ΩMïù’…º°Ω¿§¨úΩÕ¡Ö∏¯ú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ìàπë•ÕÖâ±ïêı—…’îÌΩ¡ÕHπÖ¡¡ïπë°•±ê°à§ÌÙ§ÌçÖ…êπÖ¡¡ïπë°•±ê°Ω¡ÕH§Ï(ÄÄÄÄÄÅÙÅï±ÕîÅÏ(ÄÄÄÄÄÄÄÅŸÖ»Å•πôΩHıç…•Ö»†ùë•ÿú∞ùçÖµ¡ºµ…ïÕ¡ΩÕ—ÑÅçÖµ¡ºµ…ïÕ¡ΩÕ—Ñ¥µ…ïŸ•Õ—ºú§Ï(ÄÄÄÄÄÄÄÅ•πôΩHπÖ¡¡ïπë°•±ê°ç…•Ö»†ù¿ú∞ù…ïÕ¡ΩÕ—Ñµ…ïŸ•Õ—Ñú±ôï•—ÑπïÕçΩ±°ÖQ·–¸ùYΩè®Å…ïÕ¡Ωπëï‘ËÄÒÕ—…Ωπú¯ú≠—ï·—ΩMïù’…º°ôï•—ÑπïÕçΩ±°ÖQ·–§¨úΩÕ—…Ωπú¯úËùAï…ù’π—ÑÅ´ÑÅ…ïÕ¡Ωπë•ëÑ∏ú§§Ï(ÄÄÄÄÄÄÄÅ•ò†Öôï•—ÑπÖçï…—Ω‘ÄòòÅƒπÖπÕ›ï…ÃÄòòÅƒπÖπÕ›ï…Õl¡t••πôΩHπÖ¡¡ïπë°•±ê°ç…•Ö»†ù¿ú∞ù…ïÕ¡ΩÕ—Ñµ…ïŸ•Õ—Ñú∞ùIïÕ¡ΩÕ—ÑÅïÕ¡ï…ÖëÑËÄÒÕ—…Ωπú¯ú≠—ï·—ΩMïù’…º°ƒπÖπÕ›ï…Õl¡t§¨úΩÕ—…Ωπú¯ú§§Ï(ÄÄÄÄÄÄÄÅçÖ…êπÖ¡¡ïπë°•±ê°•πôΩH§Ï(ÄÄÄÄÄÅÙ(ÄÄÄÄÄÅŸÖ»ÅôâHıç…•Ö»†ùë•ÿú∞ùôïïëâÖç¨Äú¨°ôï•—ÑπÖçï…—Ω‘¸ùôïïëâÖç¨¥µΩ¨úËùôïïëâÖç¨¥µï……ºú§§Ï(ÄÄÄÄÄÅôâHπ•ππï…!Q50ÙúÒÕ—…Ωπú¯ú¨°ôï•—ÑπÖçï…—Ω‘¸ùYΩè®ÅÖçï…—Ω‘ÑúËùYÖµΩÃÅïπ—ïπëï»Å©’π—ΩÃ∏ú§¨úΩÕ—…Ωπú¯ú¨°ƒπï·¡±Ö•∏¸úÒ¿Åç±ÖÕÃÙâï·¡±•çÖçÖºà¯ú≠—ï·—ΩMïù’…º°ƒπï·¡±Ö•∏§¨úΩ¿¯úËúú§Ï(ÄÄÄÄÄÅçÖ…êπÖ¡¡ïπë°•±ê°ôâH§ÌçÖ…êπÖ¡¡ïπë°•±ê°πÖŸA…Ω·•µÑ†§§Ì…Ö•ËπÖ¡¡ïπë°•±ê°çÖ…ê§Ì…ï—’…∏Ï(ÄÄÄÅÙ(ÄÄÄÅŸÖ»Å…ïÕ¡ΩÕ—Ñıç…•Ö»†ùë•ÿú±π’±∞±π’±∞±Ì…Ω±îËùÕ—Ö—’Ãú∞ùÖ…•Ñµ±•ŸîúËù¡Ω±•—îùÙ§∞Åâ±Ω≈’ïÖëºıôÖ±Õî∞Åï……Ω’π—ïÃıôÖ±Õî∞Åï……ΩIïù•Õ—…ÖëºıôÖ±ÕîÏ(ÄÄÄÅô’πç—•Ω∏Å…ïù•Õ—…Ö………º°ïÕçΩ±°Ñ•Ì•ò°ï……ΩIïù•Õ—…Öëº•…ï—’…∏Ìï……ΩIïù•Õ—…Öëºı—…’îÌ≈’•Ëπï……ΩÃπ¡’Õ†°Ì≈’ïÕ—ÖºÈƒ±ïÕçΩ±°ÑÈïÕçΩ±°Ñ±•πë•çï=…•ù•πÖ∞ÈΩ•Ù§ÌÙ(ÄÄÄÅô’πç—•Ω∏ÅµΩÕ—…Ö…9ΩŸÖQïπ—Ö—•ŸÑ°µïπÕÖùï¥•Ì…ïÕ¡ΩÕ—Ñπç±ÖÕÕ9ÖµîÙùôïïëâÖç¨ÅôïïëâÖç¨¥µï……ºúÌ…ïÕ¡ΩÕ—Ñπ•ππï…!Q50ÙúÒÕ—…Ωπú˘Qïπ—îÅµÖ•ÃÅ’µÑÅŸïË∏ΩÕ—…Ωπú¯Ò¿Åç±ÖÕÃÙâï·¡±•çÖçÖºà¯ú≠—ï·—ΩMïù’…º°µïπÕÖùï¥§¨úΩ¿¯úÌ…ïŸï±Ö»°…ïÕ¡ΩÕ—Ñ§ÌÙ(ÄÄÄÅô’πç—•Ω∏ÅçΩπç±’•»°çï…—º±ïÕçΩ±°Ñ±ïÕçΩ±°Ö%ë‡•Ï(ÄÄÄÄÄÅ•ò°â±Ω≈’ïÖëº•…ï—’…∏Ìâ±Ω≈’ïÖëºı—…’îÌ≈’•Ëπ…ïÕ¡Ωπë•ëÖÃ¨¨ÌŸÖ»ÅçΩπ—Öçï…—ºıçï…—ºòò†Öï……Ω’π—ïÕÒÒ≈’•Ëπ…ïŸ•ÕÖº§Ì•ò°çΩπ—Öçï…—º•≈’•ËπÖçï…—ΩÃ¨¨Ì•ò†Öçï…—º•…ïù•Õ—…Ö………º°ïÕçΩ±°Ñ§Ï(ÄÄÄÄÄÅ•ò†Ö≈’•Ëπôï•—ÖÃ•≈’•Ëπôï•—ÖÃıÌÙÌ≈’•Ëπôï•—ÖÕmΩ•tıÌÖçï…—Ω‘Èçï…—º±çΩπ—Ω‘ÈçΩπ—Öçï…—º±ïÕçΩ±°Ö%ë‡Ë°—Â¡ïΩòÅïÕçΩ±°Ö%ë‡ÙÙÙùπ’µâï»ú˝ïÕçΩ±°Ö%ë‡Ë¥ƒ§±ïÕçΩ±°ÖQ·–Ë°—Â¡ïΩòÅïÕçΩ±°ÑÙÙÙùÕ—…•πúú˝ïÕçΩ±°ÑÈπ’±∞•ÙÏ(ÄÄÄÄÄÅ…ïÕ¡ΩÕ—Ñπç±ÖÕÕ9ÖµîÙùôïïëâÖç¨Äú¨°çï…—º¸ùôïïëâÖç¨¥µΩ¨úËùôïïëâÖç¨¥µï……ºú§Ì…ïÕ¡ΩÕ—Ñπ•ππï…!Q50ÙúÒÕ—…Ωπú¯ú¨°çï…—º¸°ï……Ω’π—ïÃ¸ùùΩ…ÑÅô•çΩ‘Åç±Ö…ºÑúËùYΩè®Å¡ï…çïâï‘Ñú§ËùYÖµΩÃÅïπ—ïπëï»Å©’π—ΩÃ∏ú§¨úΩÕ—…Ωπú¯ú¨°ƒπï·¡±Ö•∏¸úÒ¿Åç±ÖÕÃÙâï·¡±•çÖçÖºà¯ú≠—ï·—ΩMïù’…º°ƒπï·¡±Ö•∏§¨úΩ¿¯úËúú§Ï(ÄÄÄÄÄÅ•ò†Öçï…—º•çÖ…êπÖ¡¡ïπë°•±ê°ôÖ±Ö5ÖÕçΩ—î†ùQ’ëºÅâï¥ÅªçºÅÖçï…—Ö»ÅÖ•πëÑ∏ÅÕ—ÑÅï·¡±•çáüçºÅµΩÕ—…ÑÅºÅçÖµ•π°ºÅ¡Ö…ÑÅÑÅ…ïŸ•œçº∏ú±—…’î§§Ï(ÄÄÄÄÄÅŸÖ»ÅπÖÿıç…•Ö»†ùë•ÿú∞ùπÖŸïùÖçÖºú§∞Å’±—•µÑı≈’•Ëπ•πë•çîÙÙı¡ï…ù’π—ÖÃπ±ïπù—†¥ƒ∞Å¡…Ω‡ıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—ÖºÅâΩ—Öº¥µ¡…•µÖ…•ºú±’±—•µÑ¸°≈’•Ëπ…ïŸ•ÕÖº¸ùQï…µ•πÖ»Å…ïŸ•œçºúËùYï»Å…ïÕ’±—Öëºú§ËùAÀÕ·•µÑÉäHú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ï(ÄÄÄÄÄÅ•ò†Ö≈’•Ëπ…ïŸ•ÕÖºòòÖ’±—•µÑ•ÌŸÖ»Åù’Ö…ëÖ»ıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—ÖºÅâΩ—Öº¥µ±ïŸîú∞ùΩπ—•π’Ö»Åëï¡Ω•Ãú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ìù’Ö…ëÖ»πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì≈’•Ëπ•πë•çî¨¨ÌÕÖ±ŸÖ…Qïπ—Ö—•ŸÑ°çÖ¿§ÌÖâ…•…•Õç•¡±•πÑ°ïÕ—Öëºπë•Õç•¡±•πÑ§Ì—ΩÖÕ–†ùMï‘Å¡Ωπ—ºÅôΩ§Åù’Ö…ëÖëº∏ú§ÌÙ§ÌπÖÿπÖ¡¡ïπë°•±ê°ù’Ö…ëÖ»§ÌÙ(ÄÄÄÄÄÅ¡…Ω‡πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì≈’•Ëπ•πë•çî¨¨ÌÕÖ±ŸÖ…Qïπ—Ö—•ŸÑ°çÖ¿§Ì…ïπëï…E’ïÕ—Öº°çÖ¿§Ì•…QΩ¡º†§ÌÙ§ÌπÖÿπÖ¡¡ïπë°•±ê°¡…Ω‡§ÌçÖ…êπÖ¡¡ïπë°•±ê°πÖÿ§Ï(ÄÄÄÄÄÅ…ïŸï±Ö»°…ïÕ¡ΩÕ—Ñ±πÖÿ§Ï(ÄÄÄÅÙ(ÄÄÄÅ•ò°ƒπ—Â¡îÙÙÙùµåú•Ï(ÄÄÄÄÄÅŸÖ»Åï……ΩÕ5åÙ¿∞ÅΩ¡Ãıç…•Ö»†ùë•ÿú∞ùΩ¡çΩïÃú§ÏÅƒπΩ¡—•ΩπÃπôΩ…Öç†°ô’πç—•Ω∏°Ω¿±§•ÌŸÖ»Åàıç…•Ö»†ùâ’——Ω∏ú∞ùΩ¡çÖºú∞úÒÕ¡Ö∏Åç±ÖÕÃÙâΩ¡çÖΩ}}±ï—…Ñà¯ú≠M—…•πúπô…Ωµ°Ö…Ωëî†ÿ‘≠§§¨úΩÕ¡Ö∏¯ÒÕ¡Ö∏¯ú≠—ï·—ΩMïù’…º°Ω¿§¨úΩÕ¡Ö∏¯ú±Ì—Â¡îËùâ’——Ω∏ùÙ§ÌàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°â±Ω≈’ïÖëΩÒÒàπë•ÕÖâ±ïê•…ï—’…∏Ì•ò°§ÙÙıƒπÖπÕ›ï»•ÌΩ¡Ãπ≈’ï…ÂMï±ïç—Ω…±∞†ùâ’——Ω∏ú§πôΩ…Öç†°ô’πç—•Ω∏°‡•Ì‡πë•ÕÖâ±ïêı—…’îÌÙ§Ìàπç±ÖÕÕ1•Õ–πÖëê†ùΩ¡çÖº¥µçï…—Ñú§ÌçΩπç±’•»°—…’î±Ω¿±§§Ìıï±ÕïÌï……ΩÕ5å¨¨Ìï……Ω’π—ïÃı—…’îÌ…ïù•Õ—…Ö………º°Ω¿§Ìàπë•ÕÖâ±ïêı—…’îÌàπç±ÖÕÕ1•Õ–πÖëê†ùΩ¡çÖº¥µï……ÖëÑú§ÌµΩÕ—…Ö…9ΩŸÖQïπ—Ö—•ŸÑ°ï……ΩÕ5åÙÙÙƒ¸ù±•µ•πîÅïÕ—ÑÅÖ±—ï…πÖ—•ŸÑÅîÅ…ï±ï•ÑÅÑÅ¡ï…ù’π—Ñ∏úÈƒπï·¡±Ö•πÒùΩµ¡Ö…îÅÖÃÅÖ±—ï…πÖ—•ŸÖÃÅ≈’îÅÖ•πëÑÅ…ïÕ—Ö¥∏ú§Ì•ò°ï……ΩÕ5åÙÙÙ»•çÖ…êπÖ¡¡ïπë°•±ê°ôÖ±Ö5ÖÕçΩ—î°ƒπï·¡±Ö•πÒù=âÕï…ŸîÅÖÃÅ¡Ö±ÖŸ…ÖÃÅµÖ•ÃÅ•µ¡Ω…—Öπ—ïÃÅëÑÅ¡ï…ù’π—Ñ∏ú±—…’î§§ÌıÙ§ÌΩ¡ÃπÖ¡¡ïπë°•±ê°à§ÌÙ§ÌçÖ…êπÖ¡¡ïπë°•±ê°Ω¡Ã§Ï(ÄÄÄÅÙÅï±ÕîÅÏ(ÄÄÄÄÄÅŸÖ»Å—ïπ—Ö—•ŸÖÕQï·—ºÙ¿∞Åπ’µï…•çÑÙΩªÈµï…ΩÒ≈’Öπ—ΩÕÒ≈’Öπ—ÖÕÒ≈’Öπ—ΩÒ°Ω…ÖÕÒÕïù’πëΩÕÒë•ÖÃΩ§π—ïÕ–°çΩπ—ï·—ºπ—ï·—º§∞Å±•π°Ñıç…•Ö»†ùë•ÿú∞ùçÖµ¡ºµ…ïÕ¡ΩÕ—Ñú§∞ÅçÖµ¡ºıç…•Ö»†ù•π¡’–ú∞ùçÖµ¡ºú±π’±∞±Ì—Â¡îËù—ï·–ú±•π¡’—µΩëîÈπ’µï…•çÑ¸ùπ’µï…•åúËù—ï·–ú±Ö’—ΩçΩµ¡±ï—îËùΩôòú±¡±Öçï°Ω±ëï»Èπ’µï…•çÑ¸ùÕç…ïŸÑÅºÅªÈµï…ºúËùÕç…ïŸÑÅ’µÑÅ¡Ö±ÖŸ…ÑÅΩ‘Åô…ÖÕîÅç’…—Ñú∞ùÖ…•Ñµ±Öâï∞úËùM’ÑÅ…ïÕ¡ΩÕ—ÑùÙ§∞ÅïπŸ•Ö»ıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—ÖºÅâΩ—Öº¥µ¡…•µÖ…•ºú∞ùΩπôï…•»ú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ï(ÄÄÄÄÄÅô’πç—•Ω∏Åç°ïçÖ»†•Ì•ò†ÖçÖµ¡ºπŸÖ±’îπ—…•¥†•ÒÒâ±Ω≈’ïÖëº•…ï—’…∏ÌŸÖ»ÅŸÖ±Ω»ıçÖµ¡ºπŸÖ±’îπ—…•¥†§±çï…—ºıŸÖ±•ëÖ…IïÕ¡ΩÕ—Ñ°ŸÖ±Ω»±ƒπÖπÕ›ï…ÕÒÒmt§Ì•ò°çï…—º•ÌçÖµ¡ºπë•ÕÖâ±ïêı—…’îÌïπŸ•Ö»πë•ÕÖâ±ïêı—…’îÌçΩπç±’•»°—…’î±ŸÖ±Ω»§Ì…ï—’…∏Ìı—ïπ—Ö—•ŸÖÕQï·—º¨¨Ìï……Ω’π—ïÃı—…’îÌ…ïù•Õ—…Ö………º°ŸÖ±Ω»§Ì•ò°—ïπ—Ö—•ŸÖÕQï·—ºÙÙÙƒ•ÌµΩÕ—…Ö…9ΩŸÖQïπ—Ö—•ŸÑ°¡•Õ—ÖIïÕ¡ΩÕ—Öâï…—Ñ°ƒ±π’µï…•çÑ§§ÌçÖµ¡ºπŸÖ±’îÙúúÌçÖµ¡ºπôΩç’Ã†§Ìıï±ÕïÌçÖµ¡ºπë•ÕÖâ±ïêı—…’îÌïπŸ•Ö»πë•ÕÖâ±ïêı—…’îÌçΩπç±’•»°ôÖ±Õî±ŸÖ±Ω»§ÌıÙÅïπŸ•Ö»πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ç°ïçÖ»§ÌçÖµ¡ºπÖëëŸïπ—1•Õ—ïπï»†ù≠ïÂëΩ›∏ú±ô’πç—•Ω∏°î•Ì•ò°îπ≠ï‰ÙÙÙùπ—ï»ú•ç°ïçÖ»†§ÌÙ§Ì±•π°ÑπÖ¡¡ïπë°•±ê°çÖµ¡º§Ì±•π°ÑπÖ¡¡ïπë°•±ê°ïπŸ•Ö»§ÌçÖ…êπÖ¡¡ïπë°•±ê°±•π°Ñ§Ï(ÄÄÄÅÙ(ÄÄÄÅçÖ…êπÖ¡¡ïπë°•±ê°…ïÕ¡ΩÕ—Ñ§Ì…Ö•ËπÖ¡¡ïπë°•±ê°çÖ…ê§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏ÅπΩ…µÖ±•ÈÖ»°Ã•Ì…ï—’…∏ÅM—…•πú°ÕÒúú§π—Ω1Ω›ï…ÖÕî†§ππΩ…µÖ±•Èî†ù9ú§π…ï¡±Öçî†Ωmq‘¿Ã¿¿µq‘¿ÃŸôtΩú∞úú§π…ï¡±Öçî†ΩmyÑµË¿¥ÂqÕtΩú∞úÄú§π…ï¡±Öçî†ΩqÃ¨Ωú∞úÄú§π—…•¥†§ÌÙ(ÄÅô’πç—•Ω∏ÅŸÖ±•ëÖ…IïÕ¡ΩÕ—Ñ°ÿ±Öçï•—ÖÃ•ÌŸÖ»ÅÑıπΩ…µÖ±•ÈÖ»°ÿ§Ì…ï—’…∏ÅÖçï•—ÖÃπÕΩµî°ô’πç—•Ω∏°‡•ÌŸÖ»ÅàıπΩ…µÖ±•ÈÖ»°‡§Ì…ï—’…∏ÅÑÙÙıàÅÒÄ°àπ±ïπù—†¯–ÄòòÅÑπ•πëï·=ò°à§¯Ù¿§ÌÙ§ÌÙ(ÄÅô’πç—•Ω∏Å¡•Õ—ÖIïÕ¡ΩÕ—Öâï…—Ñ°ƒ±π’µï…•çÑ•Ì•ò°π’µï…•çÑ•…ï—’…∏ÄùYΩ±—îÅÖΩÃÅªÈµï…ΩÃÅëºÅïπ’πç•ÖëºÅîÅçΩπô•…ÑÅÑÅΩ¡ï…áüçºÅΩ‘ÅÑÅ’π•ëÖëîÅ¡ïë•ëÑ∏úÌŸÖ»ÅÖ±ŸºıπΩ…µÖ±•ÈÖ»†°ƒπÖπÕ›ï…ÕÒÒmt•l¡t§Ì…ï—’…∏ÅÖ±Ÿº¸ùÅ…ïÕ¡ΩÕ—ÑÅçΩµóùÑÅçΩ¥Éäpú≠Ö±Ÿºπç°Ö…–†¿§π—ΩU¡¡ï…ÖÕî†§¨üät∏ÅIï±ï•ÑÅÑÅ¡ï…ù’π—Ñ∏úËùIï±ï•ÑÅÑÅ¡ï…ù’π—ÑÅîÅ…ïÕ¡ΩπëÑÅçΩ¥Å¡Ω’çÖÃÅ¡Ö±ÖŸ…ÖÃ∏úÌÙ(ÄÅô’πç—•Ω∏ÅçÖ—ïùΩ…•ÖE’ïÕ—Öº°ƒ§ÅÏ(ÄÄÄÅŸÖ»Å–ıπΩ…µÖ±•ÈÖ»°ƒπƒ§Ï(ÄÄÄÅ•ò†Ω—ï·—ΩÒ•πÕ—…’ç•ΩπÖ±ÒçÖ…—ÖÈÒµÖπ’Ö±ÒÖπ’πç•ΩÒµïµΩ…•ÖÒ—•…•π°Ñºπ—ïÕ–°–§•…ï—’…∏ÄùΩµ¡…ïïπëï»Å—ï·—ΩÃÅîÅ•πôΩ…µáü’ïÃúÏ(ÄÄÄÅ•ò†Ω¡Ö±ÖŸ…ÖÒÕ’âÕ—Öπ—•ŸΩÒë•µ•π’—•ŸΩÒÖ’µïπ—Ö—•ŸΩÒ¡±’…Ö±ÒÕ•±ÖâÖÒŸï…âΩÒÖë©ï—•Ÿººπ—ïÕ–°–§•…ï—’…∏Äù=âÕï…ŸÖ»ÅçΩµºÅÖÃÅ¡Ö±ÖŸ…ÖÃÅô’πç•ΩπÖ¥úÏ(ÄÄÄÅ•ò†Ωπ’µï…ΩÒµ’±—•¡±•çÖÒë•Ÿ•ÕÒ¡ΩÕÕ•â•±Ò°Ω…ÖÒµ•π’—ΩÒçÖ±ç’±ΩÒ…ïÕ’±—Öëººπ—ïÕ–°–§•…ï—’…∏ÄùIïÕΩ±Ÿï»ÅÕ•—’áü’ïÃÅçΩ¥ÅªÈµï…ΩÃúÏ(ÄÄÄÅ•ò†Ωçï’Ò—ï……ÖÒ±’ÖÒÕΩ±ÒïÕ—…ï±ÖÒ¡±Öπï—ÖÒ±’ÈÒÖ—µΩÕôï…Ñºπ—ïÕ–°–§•…ï—’…∏Äù%πŸïÕ—•ùÖ»ÅÑÅπÖ—’…ïÈÑÅîÅºÅè•‘úÏ(ÄÄÄÅ•ò†Ωç•ëÖëïÒµ’π•ç•¡•ΩÒçΩµ’π•ëÖëïÒâÖ•……ΩÒ¡Ω¡’±ÖçÖΩÒïÕ¡ÖçΩÒ¡’â±•çΩÒ¡…•ŸÖëººπ—ïÕ–°–§•…ï—’…∏Äùπ—ïπëï»Å±’ùÖ…ïÃÅîÅçΩµ’π•ëÖëïÃúÏ(ÄÄÄÅ…ï—’…∏ÄùUÕÖ»ÅºÅ≈’îÅôΩ§ÅëïÕçΩâï…—ºúÏ(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïÕ’µΩΩµ•π•º°çÖ¿±ï……ΩÃ§ÅÏ(ÄÄÄÅŸÖ»Åù…’¡ΩÃıÌÙ∞Åï……ÖëΩÃıÌÙÌï……ΩÃπôΩ…Öç†°ô’πç—•Ω∏°î•Ìï……ÖëΩÕmîπ•πë•çï=…•ù•πÖ±tı—…’îÌÙ§Ï(ÄÄÄÅçÖ¿π≈’•ËπôΩ…Öç†°ô’πç—•Ω∏°ƒ±§•ÌŸÖ»ÅπΩµîıçÖ—ïùΩ…•ÖE’ïÕ—Öº°ƒ§Ì•ò†Öù…’¡ΩÕmπΩµït•ù…’¡ΩÕmπΩµïtıÌ—Ω—Ö∞Ë¿±Öçï…—ΩÃË¡ÙÌù…’¡ΩÕmπΩµïtπ—Ω—Ö∞¨¨Ì•ò†Öï……ÖëΩÕm•t•ù…’¡ΩÕmπΩµïtπÖçï…—ΩÃ¨¨ÌÙ§Ï(ÄÄÄÅŸÖ»ÅâΩ‡ıç…•Ö»†ùë•ÿú∞ù…ïÕ’µºµëΩµ•π•ºú∞úÒ†–˘<Å≈’îÅïÕ—îÅ…ïÕ’±—ÖëºÅµΩÕ—…ÑΩ†–¯ú§∞Å±•Õ—Ñıç…•Ö»†ù’∞ú§Ï(ÄÄÄÅ=â©ïç–π≠ïÂÃ°ù…’¡ΩÃ§πôΩ…Öç†°ô’πç—•Ω∏°πΩµî•ÌŸÖ»Åúıù…’¡ΩÕmπΩµït∞ÅΩ¨ıúπÖçï…—ΩÃÙÙıúπ—Ω—Ö∞Ì±•Õ—ÑπÖ¡¡ïπë°•±ê°ç…•Ö»†ù±§ú±Ω¨¸ù…ïÕ’µºµëΩµ•π•Ω}}Ω¨úËù…ïÕ’µºµëΩµ•π•Ω}}…ïŸï»ú∞úÒÕ¡Ö∏¯ú≠—ï·—ΩMïù’…º°πΩµî§¨úΩÕ¡Ö∏¯ÒÕ—…Ωπú¯ú¨°Ω¨¸ù+ÑÅïÕ”ÑÅô•…µîúÈúπÖçï…—ΩÃ¨úÅëîÄú≠úπ—Ω—Ö∞¨úÉ
+‹ÅŸÖ±îÅ…ïŸï»ú§¨úΩÕ—…Ωπú¯ú§§ÌÙ§ÌâΩ‡πÖ¡¡ïπë°•±ê°±•Õ—Ñ§Ì…ï—’…∏ÅâΩ‡Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å…ïπëï…IïÕ’±—Öëº°çÖ¿§ÅÏ(ÄÄÄÅŸÖ»Å…Ö•ËÙê†úçëïÕÖô•ºµçΩπ—ï’ëºú§∞Å—Ω—Ö∞ı¡ï…ù’π—ÖÕ—’Ö•Ã°çÖ¿§π±ïπù—†∞Å¡ç–ı5Ö—†π…Ω’πê°≈’•ËπÖçï…—ΩÃΩ5Ö—†πµÖ‡†ƒ±—Ω—Ö∞§®ƒ¿¿§∞Åë•Õåıë•ÕçAΩ…%ê°ïÕ—Öëºπë•Õç•¡±•πÑ§∞Åï……ΩÃı≈’•Ëπï……ΩÃπÕ±•çî†§Ï(ÄÄÄÅ•ò†Ö≈’•Ëπ…ïŸ•ÕÖº•ÌïÕ—Öëºπ¡…Ωù…ïÕÕΩmçÖ¿π•ëtıÌôï•—ºÈ—…’î±Öçï…—ΩÃÈ≈’•ËπÖçï…—ΩÃ±—Ω—Ö∞È—Ω—Ö∞±ëÖ—ÑÈπï‹ÅÖ—î†§π—Ω%M=M—…•πú†•ÙÌëï±ï—îÅïÕ—Öëºπ—ïπ—Ö—•ŸÖÕmçÖ¿π•ëtÌÕÖ±ŸÖ»†§ÌÙ(ÄÄÄÅŸÖ»ÅµÕúı≈’•Ëπ…ïŸ•ÕÖº¸ùYΩè®ÅçΩπç±’•‘ÅÑÅ…ïŸ•œçº∏úË°ï……ΩÃπ±ïπù—†¸ùYΩè®ÅÖçï…—Ω‘Äú≠≈’•ËπÖçï…—ΩÃ¨úÅëîÄú≠—Ω—Ö∞¨ú∏ÅIïŸ•ÕîÄú≠ï……ΩÃπ±ïπù—†¨úÄú¨°ï……ΩÃπ±ïπù—†ÙÙÙƒ¸ù≈’ïÕ”çºúËù≈’ïÕ”’ïÃú§¨úÅ¡Ö…ÑÅôΩ…—Ö±ïçï»ÅºÅ≈’îÅÖ¡…ïπëï‘∏úËùYΩè®ÅÖçï…—Ω‘Å—ΩëÖÃÅÖÃÄú≠—Ω—Ö∞¨úÅ≈’ïÕ”’ïÃÑú§Ï(ÄÄÄÅŸÖ»ÅâΩ‡ıç…•Ö»†ùÕïç—•Ω∏ú∞ù…ïÕ’±—ÖëºÅ…ïÕ’±—Öëº¥µô•πÖ∞ú∞úÒë•ÿÅç±ÖÕÃÙâ…ïÕ’±—ÖëΩ}}¡Ö±µÖÃàÅÖ…•Ñµ°•ëëï∏Ùâ—…’îà¯ÒÕ¡Ö∏˚¬~F<ΩÕ¡Ö∏¯ÒÕ¡Ö∏˚¬~F<ΩÕ¡Ö∏¯Ωë•ÿ¯Ò†Ã¯ú¨°≈’•Ëπ…ïŸ•ÕÖº¸ùIïŸ•œçºÅçΩπç±◊µëÑúËùïÕÖô•ºÅçΩπç±◊µëºÑú§¨úΩ†Ã¯Ò¿Åç±ÖÕÃÙâ…ïÕ’±—ÖëΩ}}¡±ÖçÖ»à¯ÒÕ—…Ωπú¯ú≠≈’•ËπÖçï…—ΩÃ¨úΩÕ—…Ωπú¯ÒÕ¡Ö∏˘ëîÄú≠—Ω—Ö∞¨úÅÖçï…—ΩÃΩÕ¡Ö∏¯Ω¿¯Ò¿Åç±ÖÕÃÙâ…ïÕ’±—ÖëΩ}}µïπÕÖùï¥à¯ú≠µÕú¨úΩ¿¯ú§Ï(ÄÄÄÅ•ò†Ö≈’•Ëπ…ïŸ•ÕÖº•âΩ‡πÖ¡¡ïπë°•±ê°…ïÕ’µΩΩµ•π•º°çÖ¿±ï……ΩÃ§§Ï(ÄÄÄÅŸÖ»ÅπÖÿıç…•Ö»†ùë•ÿú∞ùπÖŸïùÖçÖºú§Ï(ÄÄÄÅ•ò†Ö≈’•Ëπ…ïŸ•ÕÖºÄòòÅï……ΩÃπ±ïπù—†•ÌŸÖ»Å…ïŸï………ΩÃıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—Öºú∞ùIïŸï»Åµï’ÃÅï……ΩÃÄ†ú≠ï……ΩÃπ±ïπù—†¨ú§ú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ì…ïŸï………ΩÃπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì≈’•ËıÌ•πë•çîË¿±Öçï…—ΩÃË¿±…ïÕ¡Ωπë•ëÖÃË¿±ï……ΩÃÈmt±¡ï…ù’π—ÖÃÈï……ΩÃπµÖ¿°ô’πç—•Ω∏°î•Ì…ï—’…∏Åîπ≈’ïÕ—ÖºÌÙ§±•πë•çïÃÈï……ΩÃπµÖ¿°ô’πç—•Ω∏°î•Ì…ï—’…∏Åîπ•πë•çï=…•ù•πÖ∞ÌÙ§±…ïŸ•ÕÖºÈ—…’î±¡Ö’ÕÑÈôÖ±ÕïÙÌ…ïπëï…E’ïÕ—Öº°çÖ¿§ÌÙ§ÌπÖÿπÖ¡¡ïπë°•±ê°…ïŸï………ΩÃ§ÌÙ(ÄÄÄÅŸÖ»Å…ï¡ï—•»ıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—Öºú∞ùIïôÖÈï»Å—’ëºú±Ì—Â¡îËùâ’——Ω∏ùÙ§∞ÅŸΩ±—Ö»ıç…•Ö»†ùâ’——Ω∏ú∞ùâΩ—ÖºÅâΩ—Öº¥µ¡…•µÖ…•ºú∞ùYï»ÅΩ’—…ΩÃÅÖÕÕ’π—ΩÃú±Ì—Â¡îËùâ’——Ω∏ùÙ§Ì…ï¡ï—•»πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•π•ç•Ö…E’•Ë°çÖ¿±—…’î§ÌÙ§ÌŸΩ±—Ö»πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•ÌÖâ…•…•Õç•¡±•πÑ°ë•Õåπ•ê§ÌÙ§ÌπÖÿπÖ¡¡ïπë°•±ê°…ï¡ï—•»§ÌπÖÿπÖ¡¡ïπë°•±ê°ŸΩ±—Ö»§ÌâΩ‡πÖ¡¡ïπë°•±ê°πÖÿ§Ì…Ö•ËπÖ¡¡ïπë°•±ê°âΩ‡§Ï(ÄÄÄÅ•ò†Ö≈’•Ëπçï±ïâ…Öëº•Ì≈’•Ëπçï±ïâ…Öëºı—…’îÌâ•¿†ùŸ•—Ω…•Ñú§ÌôïÕ—ï©Ö»°—…’î§ÌÙ(ÄÄÄÅ•ò†Ö≈’•Ëπ…ïŸ•ÕÖº•—ΩÖÕ–†ùA…Ωù…ïÕÕºÅÕÖ±ŸºÅπïÕ—îÅÖ¡Ö…ï±°º∏ú§Ï(ÄÅÙ((ÄÅô’πç—•Ω∏ÅÕï±ïç•ΩπÖ…âÑ°πΩµî±…Ω±Ö»§ÅÏ(ÄÄÄÅŸÖ»ÅçÖ¿ıçÖ¡AΩ…%ê°ë•ÕçAΩ…%ê°ïÕ—Öëºπë•Õç•¡±•πÑ§±ïÕ—ÖëºπçÖ¡•—’±º§ÏÅ•ò†ÖçÖ¿•…ï—’…∏Ï(ÄÄÄÅ•ò°πΩµîÙÙÙùŸ•ëïºúòòÖçÖ¿πŸ•ëïº•πΩµîÙù—ïΩ…•ÑúÏÅïÕ—ÖëºπÖâÑıπΩµîÏÅïÕ—ÖëºπÖ…ïÖÕmçÖ¿π•ëtıπΩµîÏÅÕÖ±ŸÖ»†§Ï(ÄÄÄÄº®Å<ÅçΩπŸ•—îÅÖµÖ…ï±ºÅôÖ±ÑÅëºÅâ±ΩçºÅëîÅ—ïΩ…•ÑÅ≈’îÅïÕ”ÑÅÖâï…—ºÏÅôΩ…ÑÅëº(ÄÄÄÄÄÄÅïÕçΩâ…•»Åï±îÅªçºÅ—ï¥ÅÑÅŸï»ÅçΩ¥ÅºÅ≈’îÅïÕ”ÑÅπÑÅ—ï±Ñ∏Ä®º(ÄÄÄÄê†úççÖ¿µ¡ï…ù’π—Ñú§π°•ëëï∏ÄÙÅπΩµîÑÙÙù—ïΩ…•ÑúÏ(ÄÄÄÄêê†úπÖâÑú§πôΩ…Öç†°ô’πç—•Ω∏°à•ÌŸÖ»ÅÖ—•ŸÑıàπëÖ—ÖÕï–πÖâÑÙÙıπΩµîÌàπç±ÖÕÕ1•Õ–π—Ωùù±î†ùÖâÑ¥µÖ—•ŸÑú±Ö—•ŸÑ§ÌàπÕï———…•â’—î†ùÖ…•ÑµÕï±ïç—ïêú±Ö—•ŸÑ¸ù—…’îúËùôÖ±Õîú§ÌÙ§Ï(ÄÄÄÄêê†úπ¡Ö•πï∞µÖâÑú§πôΩ…Öç†°ô’πç—•Ω∏°¿•ÌŸÖ»ÅÖ—•ŸÑı¿π•êÙÙÙù¡Ö•πï∞¥ú≠πΩµîÌ¿π°•ëëï∏ÙÖÖ—•ŸÑÌ¿πç±ÖÕÕ1•Õ–π—Ωùù±î†ù¡Ö•πï∞µÖâÑ¥µÖ—•Ÿºú±Ö—•ŸÑ§ÌÙ§Ï(ÄÄÄÅëïô•π•…5ΩëΩ)Ωùº°πΩµîÙÙÙù©ΩùΩÃú§Ï(ÄÄÄÅ•ò°πΩµîÙÙÙù©ΩùΩÃú••…QΩ¡º†§Ï(ÄÄÄÅ•ò°…Ω±Ö»òôπΩµîÑÙÙù©ΩùΩÃú•ëΩç’µïπ–π≈’ï…ÂMï±ïç—Ω»†úπÖâÖÃú§πÕç…Ω±±%π—ΩY•ï‹°Ìâï°ÖŸ•Ω»ËùÕµΩΩ—†ú±â±Ωç¨ËùÕ—Ö…–ùÙ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏ÅŸΩ±—Ö»†§ÅÏ(ÄÄÄÅ•ò†Ñê†úç—ï±ÑµçÖ¡•—’±ºú§π°•ëëï∏§ÅÖâ…•…•Õç•¡±•πÑ°ïÕ—Öëºπë•Õç•¡±•πÑ§Ï(ÄÄÄÅï±ÕîÅ•ò†Ñê†úç—ï±Ñµë•Õç•¡±•πÑú§π°•ëëï∏§Å…ïπëï…!Ωµî†§ÏÅï±ÕîÅ…ïπëï…!Ωµî†§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å±•ùÖ…Ÿïπ—ΩÃ†§ÅÏ(ÄÄÄÄê†úç±•π¨µ°Ωµîú§πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏°î•Ìîπ¡…ïŸïπ—ïôÖ’±–†§Ì…ïπëï…!Ωµî†§ÌÙ§Ï(ÄÄÄÄê†úçâ—∏µŸΩ±—Ö»ú§πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ŸΩ±—Ö»§Ï(ÄÄÄÄê†úçâ—∏µçΩπ—•π’Ö»ú§πÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•Ì•ò°ïÕ—Öëºπ’±—•µº•Öâ…•…Ö¡•—’±º°ïÕ—Öëºπ’±—•µºπë•Õç•¡±•πÑ±ïÕ—Öëºπ’±—•µºπçÖ¡•—’±º§ÌÙ§Ï(ÄÄÄÄêê†ùmëÖ—Ñµ…ïŸ•ÕÖΩtú§πôΩ…Öç†°ô’πç—•Ω∏°à•ÌàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•ÌÖâ…•…IïŸ•ÕÖΩ·—…Ñ°àπëÖ—ÖÕï–π…ïŸ•ÕÖº§ÌÙ§ÌÙ§Ï(ÄÄÄÄêê†úπÖâÑú§πôΩ…Öç†°ô’πç—•Ω∏°à•ÌàπÖëëŸïπ—1•Õ—ïπï»†ùç±•ç¨ú±ô’πç—•Ω∏†•ÌÕï±ïç•ΩπÖ…âÑ°àπëÖ—ÖÕï–πÖâÑ±—…’î§ÌÙ§ÌÙ§Ï(ÄÄÄÅëΩç’µïπ–πÖëëŸïπ—1•Õ—ïπï»†ùô’±±Õç…ïïπç°Öπùîú±Ö—’Ö±•ÈÖ…	Ω—ÖΩQï±Ö°ï•Ñ§Ï(ÄÅÙ(ÄÅô’πç—•Ω∏Å•π•ç•Ö»†§ÅÏ(ÄÄÄÅ•ò°—Â¡ïΩòÅ%M%A1%9LÙÙÙù’πëïô•πïêùÒÖ%M%A1%9Lπ±ïπù—†•Ïê†úçù…Öëîµë•Õç•¡±•πÖÃú§π•ππï…!Q50ÙúÒë•ÿÅç±ÖÕÃÙâŸÖÈ•ºà˘;çºÅôΩ§Å¡ΩÕœµŸï∞ÅçÖ……ïùÖ»ÅΩÃÅÖÕÕ’π—ΩÃ∏Ωë•ÿ¯úÌ…ï—’…∏ÌÙ(ÄÄÄÅçÖ……ïùÖ»†§ÏÅ±•ùÖ…Ÿïπ—ΩÃ†§ÏÅçΩπô•ù’…Ö…%πÕ—Ö±ÖçÖº†§ÏÅçΩπô•ù’…Ö…=ôô±•πî†§ÏÅ…ïù•Õ—…Ö…Mï…Ÿ•çï]Ω…≠ï»†§ÏÅ…ïπëï…!Ωµî†§Ï(ÄÅÙ(ÄÅ•ò°ëΩç’µïπ–π…ïÖëÂM—Ö—îÙÙÙù±ΩÖë•πúú•ëΩç’µïπ–πÖëëŸïπ—1•Õ—ïπï»†ù=5Ωπ—ïπ—1ΩÖëïêú±•π•ç•Ö»§Ìï±ÕîÅ•π•ç•Ö»†§Ï)Ù§†§Ï(
