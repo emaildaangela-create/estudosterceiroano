@@ -8,6 +8,7 @@
   var quiz = null;
   var promptInstalacao = null;
   var focoAntesDaInstalacao = null;
+  var offlineDownloadEmAndamento = false;
   var placar = { pontos:0, sequencia:0, melhor:0 };   /* vale pela partida atual */
 
   function $(s) { return document.querySelector(s); }
@@ -95,9 +96,13 @@
     if(ajuda)ajuda.addEventListener('click',function(evento){if(evento.target===ajuda)fecharAjudaInstalacao();});
     document.addEventListener('keydown',function(evento){if(evento.key==='Escape'&&ajuda&&!ajuda.hidden)fecharAjudaInstalacao();});
   }
+  function videosDoApp(){var vistos={};return DISCIPLINAS.reduce(function(lista,disc){disc.capitulos.forEach(function(cap){if(cap.video&&!vistos[cap.video]){vistos[cap.video]=true;lista.push(cap.video);}});return lista;},[]);}
+  function atualizarOffline(pct,mensagem,pronto,erro){var card=$('#offline-card'),botao=$('#btn-offline'),status=$('#offline-status'),barra=$('#offline-barra'),fill=$('#offline-barra-fill');if(!card||!botao)return;card.classList.toggle('offline-card--pronto',!!pronto);card.classList.toggle('offline-card--erro',!!erro);status.textContent=mensagem;barra.hidden=pronto||erro||pct<=0;fill.style.width=Math.max(0,Math.min(100,pct))+'%';botao.disabled=offlineDownloadEmAndamento||pronto;botao.textContent=pronto?'Pronto ✓':(offlineDownloadEmAndamento?'Baixando…':(erro?'Tentar novamente':'Baixar'));}
+  function enviarAoServiceWorker(mensagem){return navigator.serviceWorker.ready.then(function(registro){var worker=registro.waiting||registro.active||registro.installing;if(!worker)throw new Error('Service worker indisponível');worker.postMessage(mensagem);});}
+  function configurarOffline(){var botao=$('#btn-offline');if(!botao)return;if(!('serviceWorker' in navigator)){atualizarOffline(0,'Este navegador não permite o modo offline.',false,true);return;}navigator.serviceWorker.addEventListener('message',function(evento){var d=evento.data||{};if(d.tipo==='OFFLINE_STATUS'){offlineDownloadEmAndamento=!!d.baixando;var pct=d.total?d.concluidos/d.total*100:0;var msg=d.pronto?'Tudo baixado. O app funcionará sem internet.':(d.baixando?'Baixando '+d.concluidos+' de '+d.total+' vídeos…':'Baixe todo o conteúdo e os vídeos · cerca de 451 MB');atualizarOffline(pct,msg,!!d.pronto,false);}if(d.tipo==='OFFLINE_ERRO'){offlineDownloadEmAndamento=false;atualizarOffline(0,'O download parou. Conecte-se ao Wi-Fi e tente novamente.',false,true);}});botao.addEventListener('click',function(){if(offlineDownloadEmAndamento)return;offlineDownloadEmAndamento=true;atualizarOffline(1,'Preparando o download…',false,false);var p=navigator.storage&&navigator.storage.persist?navigator.storage.persist().catch(function(){return false;}):Promise.resolve(false);p.then(function(){return enviarAoServiceWorker({tipo:'BAIXAR_OFFLINE',arquivos:videosDoApp()});}).catch(function(){offlineDownloadEmAndamento=false;atualizarOffline(0,'Não foi possível iniciar. Recarregue e tente novamente.',false,true);});});}
   function registrarServiceWorker() {
     if(!('serviceWorker' in navigator))return;
-    window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').catch(function(){});});
+    navigator.serviceWorker.register('./sw.js').then(function(){return navigator.serviceWorker.ready;}).then(function(){return enviarAoServiceWorker({tipo:'VERIFICAR_OFFLINE',arquivos:videosDoApp()});}).catch(function(){atualizarOffline(0,'Não foi possível preparar o modo offline.',false,true);});
   }
   var GLOSSARIO = {
     'finalidade':'para que algo serve', 'gênero':'um tipo de texto', 'objetiva':'direta e fácil de entender',
@@ -377,6 +382,8 @@
     renderCalendarioProvas();
     atualizarTopo(); mostrar('tela-home');
   }
+
+  function abrirRevisaoExtra(nome){if(typeof REVISOES_EXTRAS==='undefined'||!REVISOES_EXTRAS[nome])return;var revisao=REVISOES_EXTRAS[nome],raiz=$('#revisao-conteudo');$('#revisao-titulo').textContent=revisao.titulo;raiz.innerHTML=revisao.html+'<button class="revisao-limpar" type="button">Limpar respostas</button>';$$('.revisao-abas [data-revisao]').forEach(function(b){b.setAttribute('aria-selected',b.dataset.revisao===nome?'true':'false');});raiz.querySelector('.revisao-limpar').addEventListener('click',function(){raiz.querySelectorAll('input').forEach(function(c){if(c.type==='radio'||c.type==='checkbox')c.checked=false;else c.value='';});raiz.querySelectorAll('textarea').forEach(function(c){c.value='';});toast('Respostas apagadas.');});mostrar('tela-revisoes');}
 
   /* Calendário de provas — cada prova leva à "Revisão do 3º bimestre" da
      matéria (um toque). O card lista os módulos e tópicos cobrados. Para
@@ -1140,12 +1147,13 @@
     $('#link-home').addEventListener('click',function(e){e.preventDefault();renderHome();});
     $('#btn-voltar').addEventListener('click',voltar);
     $('#btn-continuar').addEventListener('click',function(){if(estado.ultimo)abrirCapitulo(estado.ultimo.disciplina,estado.ultimo.capitulo);});
+    $$('[data-revisao]').forEach(function(b){b.addEventListener('click',function(){abrirRevisaoExtra(b.dataset.revisao);});});
     $$('.aba').forEach(function(b){b.addEventListener('click',function(){selecionarAba(b.dataset.aba,true);});});
     document.addEventListener('fullscreenchange',atualizarBotaoTelaCheia);
   }
   function iniciar() {
     if(typeof DISCIPLINAS==='undefined'||!DISCIPLINAS.length){$('#grade-disciplinas').innerHTML='<div class="vazio">Não foi possível carregar os assuntos.</div>';return;}
-    carregar(); ligarEventos(); configurarInstalacao(); registrarServiceWorker(); renderHome();
+    carregar(); ligarEventos(); configurarInstalacao(); configurarOffline(); registrarServiceWorker(); renderHome();
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',iniciar);else iniciar();
 })();

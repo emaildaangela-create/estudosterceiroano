@@ -1,7 +1,7 @@
-const CACHE = 'estudos-3-ano-v45';
+const CACHE = 'estudos-3-ano-v47';
 const ARQUIVOS = [
   './', './index.html', './style.css', './data.js', './experiences.js',
-  './pedagogy.js', './app.js', './manifest.webmanifest',
+  './pedagogy.js', './reviews.js', './app.js', './manifest.webmanifest',
   './assets/app-icon.svg', './assets/app-icon-192.png', './assets/app-icon-512.png',
   './assets/capa-aprender.webp',
   './assets/capa-aprender.png', './assets/mascote-capivara-v2.webp',
@@ -14,6 +14,7 @@ const ARQUIVOS = [
   './assets/descobrir-ideias.webp',
   './assets/descobrir-anuncios.webp', './assets/descobrir-memorias.webp',
   './assets/descobrir-quadrinhos.webp', './assets/descobrir-contos.webp',
+  './assets/infografico-tratamento-agua.webp',
   './assets/disciplina-portugues.webp', './assets/disciplina-matematica.webp',
   './assets/disciplina-ciencias.webp', './assets/disciplina-geografia.webp',
   './assets/disciplina-historia.webp',
@@ -53,17 +54,20 @@ self.addEventListener('activate', function (evento) {
   }).then(function () { return self.clients.claim(); }));
 });
 
+function avisarClientes(mensagem){return self.clients.matchAll({type:'window',includeUncontrolled:true}).then(function(clientes){clientes.forEach(function(cliente){cliente.postMessage(mensagem);});});}
+function verificarOffline(arquivos,baixando){return caches.open(CACHE).then(function(cache){return Promise.all(arquivos.map(function(a){return cache.match(a).then(Boolean);}));}).then(function(rs){var n=rs.filter(Boolean).length;return avisarClientes({tipo:'OFFLINE_STATUS',concluidos:n,total:arquivos.length,pronto:n===arquivos.length,baixando:!!baixando});});}
+self.addEventListener('message',function(evento){var d=evento.data||{},arquivos=Array.isArray(d.arquivos)?d.arquivos:[];if(d.tipo==='VERIFICAR_OFFLINE')evento.waitUntil(verificarOffline(arquivos,false));if(d.tipo==='BAIXAR_OFFLINE')evento.waitUntil(caches.open(CACHE).then(async function(cache){for(var i=0;i<arquivos.length;i++){var a=arquivos[i],salvo=await cache.match(a);if(!salvo){var resposta=await fetch(a,{cache:'no-cache'});if(!resposta.ok)throw new Error('Falha ao baixar '+a);await cache.put(a,resposta);}await avisarClientes({tipo:'OFFLINE_STATUS',concluidos:i+1,total:arquivos.length,pronto:i+1===arquivos.length,baixando:i+1<arquivos.length});}}).catch(function(){return avisarClientes({tipo:'OFFLINE_ERRO'});}));});
+function respostaParcial(resposta,range){return resposta.arrayBuffer().then(function(buffer){var total=buffer.byteLength,p=/bytes=(\d+)-(\d*)/.exec(range||''),inicio=p?Number(p[1]):0,fim=p&&p[2]?Number(p[2]):total-1;if(inicio>=total)return new Response(null,{status:416,headers:{'Content-Range':'bytes */'+total}});fim=Math.min(fim,total-1);var h=new Headers(resposta.headers);h.set('Content-Range','bytes '+inicio+'-'+fim+'/'+total);h.set('Accept-Ranges','bytes');h.set('Content-Length',String(fim-inicio+1));return new Response(buffer.slice(inicio,fim+1),{status:206,statusText:'Partial Content',headers:h});});}
+
 self.addEventListener('fetch', function (evento) {
   if (evento.request.method !== 'GET' || new URL(evento.request.url).origin !== self.location.origin) return;
-  /* Vídeos usam requisições parciais (Range). Deixamos o navegador cuidar
-     delas diretamente para iniciar a reprodução sem baixar o arquivo todo. */
-  if (evento.request.destination === 'video' || evento.request.headers.has('range')) return;
+  if(evento.request.destination==='video'||evento.request.headers.has('range')){evento.respondWith(caches.open(CACHE).then(function(cache){return cache.match(evento.request.url).then(function(resposta){if(!resposta)return fetch(evento.request);var range=evento.request.headers.get('range');return range?respostaParcial(resposta,range):resposta;});}));return;}
   evento.respondWith(fetch(evento.request).then(function (resposta) {
     var copia = resposta.clone();
     caches.open(CACHE).then(function (cache) { cache.put(evento.request, copia); });
     return resposta;
   }).catch(function () {
-    return caches.match(evento.request).then(function (resposta) {
+    return caches.match(evento.request,{ignoreSearch:true}).then(function (resposta) {
       return resposta || (evento.request.mode === 'navigate' ? caches.match('./index.html') : Promise.reject());
     });
   }));

@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Estudos do 3º ano</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="style.css?v=35">
+  <link rel="stylesheet" href="style.css?v=36">
   <link rel="icon" href="assets/app-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/app-icon-192.png">
 </head>
@@ -58,8 +58,22 @@
       <span class="continuar__seta" aria-hidden="true">›</span>
     </button>
 
+    <section class="offline-card" id="offline-card" aria-labelledby="offline-titulo">
+      <span class="offline-card__icone" aria-hidden="true">✈️</span>
+      <div><strong id="offline-titulo">Prepare para usar sem internet</strong><small id="offline-status">Baixe todo o conteúdo e os vídeos · cerca de 451 MB</small><div class="offline-card__barra" id="offline-barra" hidden><i id="offline-barra-fill"></i></div></div>
+      <button id="btn-offline" type="button">Baixar</button>
+    </section>
+
     <h2 class="secao__titulo" id="materias-titulo">Matérias</h2>
     <div class="grade-disciplinas" id="grade-disciplinas"><!-- render via JS --></div>
+
+    <section class="revisoes-extra" aria-labelledby="revisoes-extra-titulo">
+      <h2 class="secao__titulo" id="revisoes-extra-titulo">Folhas de revisão</h2>
+      <div class="revisoes-extra__grade">
+        <button class="revisao-extra-card revisao-extra-card--mat" type="button" data-revisao="matematica"><span>➗</span><strong>Matemática</strong><small>10 questões · 3º bimestre</small></button>
+        <button class="revisao-extra-card revisao-extra-card--ing" type="button" data-revisao="ingles"><span>🇬🇧</span><strong>Inglês</strong><small>2 folhas · 3º bimestre</small></button>
+      </div>
+    </section>
 
     <section class="provas" id="calendario-provas" aria-labelledby="provas-titulo" hidden>
       <!-- render via JS -->
@@ -130,6 +144,12 @@
       <div class="desafio" id="desafio-conteudo"></div>
     </div>
   </section>
+
+  <section class="tela" id="tela-revisoes" aria-labelledby="revisao-titulo" hidden>
+    <header class="revisao-extra-topo"><p>Folha de revisão · sem gabarito</p><h1 id="revisao-titulo">Revisão</h1><span>Preencha no seu ritmo. As respostas não são exibidas.</span></header>
+    <div class="revisao-abas" role="tablist" aria-label="Escolher revisão"><button type="button" role="tab" data-revisao="matematica">Matemática</button><button type="button" role="tab" data-revisao="ingles">Inglês</button></div>
+    <div class="revisao-folha" id="revisao-conteudo"></div>
+  </section>
 </main>
 
 <div class="instalar-ajuda" id="instalar-ajuda" role="dialog" aria-modal="true" aria-labelledby="instalar-titulo" hidden>
@@ -147,6 +167,7 @@
 <script src="data.js?v=24"></script>
 <script src="experiences.js?v=21"></script>
 <script src="pedagogy.js?v=11"></script>
-<script src="app.js?v=39"></script>
+<script src="reviews.js?v=1"></script>
+<script src="app.js?v=41"></script>
 </body>
 </html>
