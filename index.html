@@ -79,6 +79,14 @@
       </div>
     </section>
 
+    <section class="revisoes-extra" aria-labelledby="bonus-estudo-titulo">
+      <h2 class="secao__titulo" id="bonus-estudo-titulo">Bônus de estudo para as provas</h2>
+      <div class="revisoes-extra__grade">
+        <button class="revisao-extra-card revisao-extra-card--mat" type="button" data-revisao="bonus-matematica"><span>➗</span><strong>Matemática</strong><small>Folha de revisão · 10 questões</small></button>
+        <button class="revisao-extra-card revisao-extra-card--ing" type="button" data-revisao="bonus-ingles"><span>🇬🇧</span><strong>Inglês</strong><small>2 folhas de revisão · Grasslands e atividades</small></button>
+      </div>
+    </section>
+
     <section class="provas" id="calendario-provas" aria-labelledby="provas-titulo" hidden>
       <!-- render via JS -->
     </section>
@@ -150,8 +158,8 @@
   </section>
 
   <section class="tela" id="tela-revisoes" aria-labelledby="revisao-titulo" hidden>
-    <header class="revisao-extra-topo"><p>Revisão para a prova</p><h1 id="revisao-titulo">Revisão</h1><span>Responda e use o botão de correção ao terminar.</span></header>
-    <div class="revisao-abas" role="tablist" aria-label="Revisão de Inglês"><button type="button" role="tab" data-revisao="ingles">Inglês</button></div>
+    <header class="revisao-extra-topo"><p id="revisao-contexto">Revisão para a prova</p><h1 id="revisao-titulo">Revisão</h1><span>Responda e use o botão de correção ao terminar.</span></header>
+    <div class="revisao-abas" role="tablist" aria-label="Escolher revisão"><button type="button" role="tab" data-revisao="ingles">Inglês · prova</button><button type="button" role="tab" data-revisao="bonus-matematica">Bônus · Matemática</button><button type="button" role="tab" data-revisao="bonus-ingles">Bônus · Inglês</button></div>
     <div class="revisao-folha" id="revisao-conteudo"></div>
   </section>
 </main>
@@ -171,7 +179,7 @@
 <script src="data.js?v=25"></script>
 <script src="experiences.js?v=21"></script>
 <script src="pedagogy.js?v=12"></script>
-<script src="reviews.js?v=4"></script>
-<script src="app.js?v=46"></script>
+<script src="reviews.js?v=5"></script>
+<script src="app.js?v=47"></script>
 </body>
 </html>

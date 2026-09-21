@@ -1,4 +1,4 @@
-const CACHE_CORE = 'estudos-3-ano-core-v52';
+const CACHE_CORE = 'estudos-3-ano-core-v53';
 const CACHE_VIDEOS = 'estudos-3-ano-videos-v1';
 const CACHE_LEGADO = 'estudos-3-ano-v47';
 const ARQUIVOS = [
