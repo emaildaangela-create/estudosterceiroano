@@ -800,3 +800,4 @@ body.modo-jogo-imersivo { overflow:hidden; }
 .revisao-ilustrada{display:grid;grid-template-columns:170px minmax(0,1fr);align-items:center;gap:18px;padding:12px 0;border-bottom:1px solid var(--borda);break-inside:avoid}
 .revisao-ilustrada .revisao-campo{max-width:100%;min-width:0}
 @media(max-width:560px){.revisao-ilustrada{grid-template-columns:minmax(0,1fr);gap:8px}.revisao-figura{width:150px}.revisao-ilustrada .revisao-linha{line-height:1.8}}
+.revisao-questoes>.revisao-radio-item{padding:18px;border:1px solid var(--borda);border-radius:14px;break-inside:avoid}.revisao-radio-item>.revisao-enunciado{margin:0 0 14px;font-weight:700}.revisao-radio-item>.revisao-figura{margin:0 0 18px}.revisao-radio-item>.revisao-subitens{margin-top:12px}
