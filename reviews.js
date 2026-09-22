@@ -412,7 +412,7 @@ var FIGURAS_REVISAO_INGLES = {
 function figuraRevisaoIngles(texto) {
   var f = FIGURAS_REVISAO_INGLES[texto];
   if (!f) return '';
-  return '<span class="revisao-figura" style="aspect-ratio:'+f.w+'/'+f.h+'"><img src="'+f.src+'" alt="'+f.alt+'" loading="lazy" decoding="async" width="1200" height="1600" style="width:'+(1200/f.w*100)+'%;left:'+(-f.x/f.w*100)+'%;top:'+(-f.y/f.h*100)+'%"></span>';
+  return '<svg class="revisao-figura" xmlns="http://www.w3.org/2000/svg" viewBox="'+f.x+' '+f.y+' '+f.w+' '+f.h+'" width="170" height="'+Math.round(170*f.h/f.w)+'" role="img" aria-label="'+f.alt+'" overflow="hidden"><title>'+f.alt+'</title><image href="'+f.src+'" x="0" y="0" width="1200" height="1600" /></svg>';
 }
 /* Revisão de Inglês para a prova - conteúdos indicados pela escola. */
 (function(){
