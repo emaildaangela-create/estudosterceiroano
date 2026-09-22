@@ -1,7 +1,8 @@
-const CACHE_CORE = 'estudos-3-ano-core-v53';
+const CACHE_CORE = 'estudos-3-ano-core-v54';
 const CACHE_VIDEOS = 'estudos-3-ano-videos-v1';
 const CACHE_LEGADO = 'estudos-3-ano-v47';
 const ARQUIVOS = [
+  './assets/english/review-1.png', './assets/english/review-2.png', './assets/english/review-3.png', './assets/english/review-4.png',
   './', './index.html', './style.css', './data.js', './experiences.js',
   './pedagogy.js', './reviews.js', './app.js', './manifest.webmanifest',
   './assets/app-icon.svg', './assets/app-icon-192.png', './assets/app-icon-512.png',

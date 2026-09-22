@@ -17,6 +17,7 @@ for (const file of [
   "data.js",
   "experiences.js",
   "pedagogy.js",
+  "reviews.js",
   "sw.js",
   "manifest.webmanifest",
 ]) {

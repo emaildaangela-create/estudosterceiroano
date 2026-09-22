@@ -1,3 +1,419 @@
+/* Figuras das folhas: a janela mostra somente a ilustração, sem o gabarito manuscrito. */
+var FIGURAS_REVISAO_INGLES = {
+  "There are {} apples in the basket.": {
+    "src": "assets/english/review-1.png",
+    "x": 210,
+    "y": 240,
+    "w": 187,
+    "h": 150,
+    "alt": "Maçãs em uma cesta."
+  },
+  "There is {} milk in the glass.": {
+    "src": "assets/english/review-1.png",
+    "x": 440,
+    "y": 234,
+    "w": 152,
+    "h": 151,
+    "alt": "Caixa de leite e um copo."
+  },
+  "There aren’t {} cookies on the plate.": {
+    "src": "assets/english/review-1.png",
+    "x": 612,
+    "y": 251,
+    "w": 176,
+    "h": 117,
+    "alt": "Biscoitos em um prato."
+  },
+  "Is there {} rice in the bowl?": {
+    "src": "assets/english/review-1.png",
+    "x": 819,
+    "y": 245,
+    "w": 160,
+    "h": 136,
+    "alt": "Tigela com arroz."
+  },
+  "There is {} sugar in the jar.": {
+    "src": "assets/english/review-1.png",
+    "x": 228,
+    "y": 491,
+    "w": 171,
+    "h": 139,
+    "alt": "Açucareiro e cubos de açúcar."
+  },
+  "There aren’t {} vegetables in the fridge.": {
+    "src": "assets/english/review-1.png",
+    "x": 450,
+    "y": 479,
+    "w": 151,
+    "h": 153,
+    "alt": "Geladeira aberta com alimentos."
+  },
+  "Are there {} sandwiches on the plate?": {
+    "src": "assets/english/review-1.png",
+    "x": 624,
+    "y": 497,
+    "w": 188,
+    "h": 142,
+    "alt": "Sanduíches em um prato."
+  },
+  "There is {} ice in the glass.": {
+    "src": "assets/english/review-1.png",
+    "x": 858,
+    "y": 468,
+    "w": 102,
+    "h": 159,
+    "alt": "Copo com cubos de gelo."
+  },
+  "There isn’t {} soup in the bowl.": {
+    "src": "assets/english/review-1.png",
+    "x": 228,
+    "y": 751,
+    "w": 182,
+    "h": 153,
+    "alt": "Tigela de sopa."
+  },
+  "Are there {} chips in the packet?": {
+    "src": "assets/english/review-1.png",
+    "x": 457,
+    "y": 740,
+    "w": 126,
+    "h": 153,
+    "alt": "Pacote de batatas chips."
+  },
+  "There are {} vegetables in the bowl.": {
+    "src": "assets/english/review-1.png",
+    "x": 642,
+    "y": 736,
+    "w": 177,
+    "h": 147,
+    "alt": "Tigela com salada."
+  },
+  "There aren’t {} bananas on the table.": {
+    "src": "assets/english/review-1.png",
+    "x": 847,
+    "y": 718,
+    "w": 174,
+    "h": 165,
+    "alt": "Bananas."
+  },
+  "I don’t want {} coffee.": {
+    "src": "assets/english/review-3.png",
+    "x": 266,
+    "y": 210,
+    "w": 155,
+    "h": 132,
+    "alt": "Xícara."
+  },
+  "I would like {} apples.": {
+    "src": "assets/english/review-3.png",
+    "x": 254,
+    "y": 399,
+    "w": 167,
+    "h": 122,
+    "alt": "Uma maçã inteira e uma metade."
+  },
+  "I need {} bread.": {
+    "src": "assets/english/review-3.png",
+    "x": 226,
+    "y": 558,
+    "w": 214,
+    "h": 144,
+    "alt": "Pão de forma com fatias."
+  },
+  "I would love {} pears.": {
+    "src": "assets/english/review-3.png",
+    "x": 253,
+    "y": 735,
+    "w": 166,
+    "h": 136,
+    "alt": "Uma pera inteira e uma metade."
+  },
+  "I don’t have {} cheese.": {
+    "src": "assets/english/review-3.png",
+    "x": 236,
+    "y": 907,
+    "w": 188,
+    "h": 150,
+    "alt": "Pedaço de queijo."
+  },
+  "I can’t eat {} nuts.": {
+    "src": "assets/english/review-3.png",
+    "x": 197,
+    "y": 1102,
+    "w": 269,
+    "h": 145,
+    "alt": "Um grupo de castanhas."
+  },
+  "There are {} apples.": {
+    "src": "assets/english/review-1.png",
+    "x": 210,
+    "y": 240,
+    "w": 187,
+    "h": 150,
+    "alt": "Maçãs em uma cesta."
+  },
+  "There is {} milk.": {
+    "src": "assets/english/review-1.png",
+    "x": 440,
+    "y": 234,
+    "w": 152,
+    "h": 151,
+    "alt": "Caixa de leite e um copo."
+  },
+  "There is {} sugar.": {
+    "src": "assets/english/review-1.png",
+    "x": 228,
+    "y": 491,
+    "w": 171,
+    "h": 139,
+    "alt": "Açucareiro e cubos de açúcar."
+  },
+  "There are {} sandwiches.": {
+    "src": "assets/english/review-1.png",
+    "x": 624,
+    "y": 497,
+    "w": 188,
+    "h": 142,
+    "alt": "Sanduíches em um prato."
+  },
+  "There is {} salad.": {
+    "src": "assets/english/review-1.png",
+    "x": 642,
+    "y": 736,
+    "w": 177,
+    "h": 147,
+    "alt": "Tigela com salada."
+  },
+  "Are there any tomatoes in the salad? Yes, there are {}.": {
+    "src": "assets/english/review-1.png",
+    "x": 642,
+    "y": 736,
+    "w": 177,
+    "h": 147,
+    "alt": "Tigela com salada."
+  },
+  "Is there any coffee in the cup? Yes, there is {}.": {
+    "src": "assets/english/review-3.png",
+    "x": 266,
+    "y": 210,
+    "w": 155,
+    "h": 132,
+    "alt": "Xícara."
+  },
+  "Are there any bananas in the basket? Yes, there are {}.": {
+    "src": "assets/english/review-1.png",
+    "x": 847,
+    "y": 718,
+    "w": 174,
+    "h": 165,
+    "alt": "Bananas."
+  },
+  "I need a {} of water. I’m thirsty.": {
+    "src": "assets/english/review-2.png",
+    "x": 645,
+    "y": 200,
+    "w": 88,
+    "h": 124,
+    "alt": "Copo com água."
+  },
+  "There is a {} of grapes.": {
+    "src": "assets/english/review-2.png",
+    "x": 584,
+    "y": 390,
+    "w": 162,
+    "h": 120,
+    "alt": "Cacho de uvas."
+  },
+  "I have a {} of honey.": {
+    "src": "assets/english/review-2.png",
+    "x": 565,
+    "y": 555,
+    "w": 109,
+    "h": 115,
+    "alt": "Pote de mel."
+  },
+  "Peter always eats a {} of strawberry cake.": {
+    "src": "assets/english/review-2.png",
+    "x": 766,
+    "y": 687,
+    "w": 140,
+    "h": 154,
+    "alt": "Uma fatia de bolo de morango em um prato."
+  },
+  "A {} of juice.": {
+    "src": "assets/english/review-4.png",
+    "x": 527,
+    "y": 457,
+    "w": 99,
+    "h": 81,
+    "alt": "Copo de suco com canudo."
+  },
+  "A {} of oil.": {
+    "src": "assets/english/review-4.png",
+    "x": 548,
+    "y": 540,
+    "w": 77,
+    "h": 95,
+    "alt": "Garrafa de óleo com azeitonas ao lado."
+  },
+  "A {} of grapes.": {
+    "src": "assets/english/review-4.png",
+    "x": 551,
+    "y": 634,
+    "w": 89,
+    "h": 76,
+    "alt": "Cacho de uvas."
+  },
+  "A {} of cookies.": {
+    "src": "assets/english/review-4.png",
+    "x": 553,
+    "y": 715,
+    "w": 91,
+    "h": 111,
+    "alt": "Pote de biscoitos com tampa."
+  },
+  "A {} of salad.": {
+    "src": "assets/english/review-4.png",
+    "x": 550,
+    "y": 834,
+    "w": 116,
+    "h": 94,
+    "alt": "Tigela de salada."
+  },
+  "There isn’t {} vegetable in the fridge.": {
+    "src": "assets/english/review-1.png",
+    "x": 450,
+    "y": 479,
+    "w": 151,
+    "h": 153,
+    "alt": "Geladeira aberta com alimentos."
+  },
+  "apples: {}": {
+    "src": "assets/english/review-1.png",
+    "x": 210,
+    "y": 240,
+    "w": 187,
+    "h": 150,
+    "alt": "Maçãs em uma cesta."
+  },
+  "milk: {}": {
+    "src": "assets/english/review-1.png",
+    "x": 440,
+    "y": 234,
+    "w": 152,
+    "h": 151,
+    "alt": "Caixa de leite e um copo."
+  },
+  "sugar: {}": {
+    "src": "assets/english/review-1.png",
+    "x": 228,
+    "y": 491,
+    "w": 171,
+    "h": 139,
+    "alt": "Açucareiro e cubos de açúcar."
+  },
+  "sandwiches: {}": {
+    "src": "assets/english/review-1.png",
+    "x": 624,
+    "y": 497,
+    "w": 188,
+    "h": 142,
+    "alt": "Sanduíches em um prato."
+  },
+  "salad: {}": {
+    "src": "assets/english/review-1.png",
+    "x": 642,
+    "y": 736,
+    "w": 177,
+    "h": 147,
+    "alt": "Tigela com salada."
+  },
+  "Tomatoes": {
+    "src": "assets/english/review-1.png",
+    "x": 642,
+    "y": 736,
+    "w": 177,
+    "h": 147,
+    "alt": "Tigela com salada."
+  },
+  "Coffee": {
+    "src": "assets/english/review-3.png",
+    "x": 266,
+    "y": 210,
+    "w": 155,
+    "h": 132,
+    "alt": "Xícara."
+  },
+  "Bananas": {
+    "src": "assets/english/review-1.png",
+    "x": 847,
+    "y": 718,
+    "w": 174,
+    "h": 165,
+    "alt": "Bananas."
+  },
+  "exam-2": {
+    "src": "assets/english/review-1.png",
+    "x": 210,
+    "y": 240,
+    "w": 187,
+    "h": 150,
+    "alt": "Maçãs em uma cesta."
+  },
+  "exam-3": {
+    "src": "assets/english/review-1.png",
+    "x": 440,
+    "y": 234,
+    "w": 152,
+    "h": 151,
+    "alt": "Caixa de leite e um copo."
+  },
+  "exam-6": {
+    "src": "assets/english/review-1.png",
+    "x": 847,
+    "y": 718,
+    "w": 174,
+    "h": 165,
+    "alt": "Bananas."
+  },
+  "exam-7": {
+    "src": "assets/english/review-4.png",
+    "x": 527,
+    "y": 457,
+    "w": 99,
+    "h": 81,
+    "alt": "Copo de suco com canudo."
+  },
+  "exam-14": {
+    "src": "assets/english/review-2.png",
+    "x": 645,
+    "y": 200,
+    "w": 88,
+    "h": 124,
+    "alt": "Copo com água."
+  },
+  "exam-15": {
+    "src": "assets/english/review-2.png",
+    "x": 584,
+    "y": 390,
+    "w": 162,
+    "h": 120,
+    "alt": "Cacho de uvas."
+  },
+  "exam-16": {
+    "src": "assets/english/review-2.png",
+    "x": 565,
+    "y": 555,
+    "w": 109,
+    "h": 115,
+    "alt": "Pote de mel."
+  }
+};
+function figuraRevisaoIngles(texto) {
+  var f = FIGURAS_REVISAO_INGLES[texto];
+  if (!f) return '';
+  return '<span class="revisao-figura" style="aspect-ratio:'+f.w+'/'+f.h+'"><img src="'+f.src+'" alt="'+f.alt+'" loading="lazy" decoding="async" width="1200" height="1600" style="width:'+(1200/f.w*100)+'%;left:'+(-f.x/f.w*100)+'%;top:'+(-f.y/f.h*100)+'%"></span>';
+}
 /* Revisão de Inglês para a prova - conteúdos indicados pela escola. */
 (function(){
   var questoes=[
@@ -26,7 +442,7 @@
     '<div class="revisao-texto"><h3>Quick review</h3><p><strong>Why...?</strong> asks for a reason. Answer with <strong>Because...</strong></p><p>Use <strong>to + verb</strong> to explain a purpose: “I study to learn.”</p><p>Use <strong>some</strong> mainly in affirmative sentences and <strong>any</strong> mainly in questions and negative sentences.</p><p>Use <strong>a few</strong> with countable plural nouns and <strong>a little</strong> with uncountable nouns.</p></div>'+
     '<div class="revisao-texto"><h3>Read</h3><p>Lucy goes to the market <strong>to buy fruit</strong>. She buys <strong>some apples</strong> and <strong>a few bananas</strong>. She doesn’t buy <strong>any milk</strong> because there is <strong>a little milk</strong> at home. Then she visits a pet shop to see the animals.</p></div>'+
     '<h3>Choose the best answer.</h3><ol class="revisao-questoes">';
-  questoes.forEach(function(item,i){var nome='ing-prova-'+i;html+='<li class="revisao-radio-item"><p>'+item.q+'</p><div class="revisao-subitens">'+item.o.map(function(opcao,j){return '<label><input type="radio" name="'+nome+'"> '+String.fromCharCode(97+j)+') '+opcao+'</label>';}).join('')+'</div></li>';});
+  questoes.forEach(function(item,i){var nome='ing-prova-'+i;html+='<li class="revisao-radio-item">'+figuraRevisaoIngles('exam-'+i)+'<p>'+item.q+'</p><div class="revisao-subitens">'+item.o.map(function(opcao,j){return '<label><input type="radio" name="'+nome+'"> '+String.fromCharCode(97+j)+') '+opcao+'</label>';}).join('')+'</div></li>';});
   html+='</ol></section>';
   var correcao={textos:[],radios:questoes.map(function(item,i){return{n:'ing-prova-'+i,c:item.a,r:item.e};})};
   window.REVISOES_EXTRAS={ingles:{titulo:'Revisão de Inglês para a prova',html:html,correcao:correcao}};
@@ -35,7 +451,7 @@
 /* Bônus de estudo: folhas originais de Matemática e Inglês, com correção automática. */
 (function(){
   function campo(curto){return '<input class="revisao-campo'+(curto?' revisao-campo--curto':'')+'" type="text">';}
-  function linha(texto,curto){return '<label class="revisao-linha">'+texto.replace('{}',campo(curto))+'</label>';}
+  function linha(texto,curto){var figura=figuraRevisaoIngles(texto);return (figura?'<div class="revisao-ilustrada">'+figura:'')+'<label class="revisao-linha">'+texto.replace('{}',campo(curto))+'</label>'+(figura?'</div>':'');}
   var mat=[
     'O chef de uma confeitaria assou 45 biscoitos de chocolate e quer arrumá-los em bandejas, colocando exatamente 9 biscoitos em cada uma. Quantas bandejas serão necessárias?',
     'Uma professora de Artes tem 50 pincéis e precisa distribuí-los igualmente entre 7 grupos de alunos.',
@@ -66,7 +482,7 @@
   eng1+='<h3>1. Write T (true) or F (false).</h3><div class="revisao-subitens">'+linha('a) Grasslands have a few trees. {}',true)+linha('b) A savanna has a cold temperature. {}',true)+linha('c) Many animals in grasslands don’t eat grass. {}',true)+linha('d) Bears and penguins don’t live in the grasslands. {}',true)+'</div>';
   eng1+='<h3>2. Complete.</h3><div class="revisao-banco"><span>tongue</span><span>fur</span><span>pouch</span><span>horns</span><span>wings</span></div><div class="revisao-subitens">'+linha('A rhino uses its {} to protect itself.')+linha('A chameleon uses its {} to catch insects.')+linha('A kangaroo has a {} to carry its baby.')+linha('A bird uses its {} to fly.')+linha('A bear has thick {} to keep warm.')+'</div>';
   eng1+='<h3>3. Containers and quantities.</h3><div class="revisao-subitens">'+linha('I need a {} of water. I’m thirsty.')+linha('There is a {} of grapes.')+linha('I have a {} of honey.')+linha('Peter always eats a {} of strawberry cake.')+'</div>';
-  eng1+='<h3>4. Choose a few or a little.</h3><div class="revisao-subitens"><div>Tomatoes: <span class="revisao-opcoes"><label><input type="radio" name="e4a"> a few</label><label><input type="radio" name="e4a"> a little</label></span></div><div>Coffee: <span class="revisao-opcoes"><label><input type="radio" name="e4b"> a few</label><label><input type="radio" name="e4b"> a little</label></span></div><div>Bananas: <span class="revisao-opcoes"><label><input type="radio" name="e4c"> a few</label><label><input type="radio" name="e4c"> a little</label></span></div></div>';
+  eng1+='<h3>4. Choose a few or a little.</h3><div class="revisao-subitens"><div>'+figuraRevisaoIngles('Tomatoes')+'Tomatoes: <span class="revisao-opcoes"><label><input type="radio" name="e4a"> a few</label><label><input type="radio" name="e4a"> a little</label></span></div><div>'+figuraRevisaoIngles('Coffee')+'Coffee: <span class="revisao-opcoes"><label><input type="radio" name="e4b"> a few</label><label><input type="radio" name="e4b"> a little</label></span></div><div>'+figuraRevisaoIngles('Bananas')+'Bananas: <span class="revisao-opcoes"><label><input type="radio" name="e4c"> a few</label><label><input type="radio" name="e4c"> a little</label></span></div></div>';
   eng1+='<h3>5. Unscramble.</h3><div class="revisao-subitens">'+linha('ECIRP → {}')+linha('YENOM → {}')+linha('ERAPMOC → {}')+linha('YUB → {}')+linha('TUP → {}')+'</div>';
   eng1+='<h3>6. Complete with SOME or ANY.</h3><div class="revisao-subitens">'+['I don’t want {} coffee.','I would like {} apples.','I need {} bread.','I would love {} pears.','I don’t have {} cheese.','I can’t eat {} nuts.'].map(function(x){return linha(x);}).join('')+'</div></section>';
 
