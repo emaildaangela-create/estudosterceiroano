@@ -60,6 +60,16 @@ def validar_quiz(cap):
     destacar das outras (por exemplo, por ser muito mais comprida)."""
     for indice, questao in enumerate(cap.get("quiz", []), start=1):
         identificador = "%s, questao %d" % (cap.get("id", "capitulo"), indice)
+        if cap.get("assessmentVersion"):
+            skill = questao.get("skill")
+            if skill not in ("listening", "reading", "use"):
+                raise ValueError("Habilidade de inglês ausente em " + identificador)
+            if skill == "reading" and (not questao.get("context") or questao.get("contextLang") != "en"):
+                raise ValueError("Reading sem texto de apoio em inglês em " + identificador)
+            if skill == "listening" and not questao.get("listen"):
+                raise ValueError("Listening sem áudio em " + identificador)
+            if questao.get("type") == "text" and questao.get("answerMode") != "english-exact":
+                raise ValueError("Resposta aberta de inglês sem validação exata em " + identificador)
         enunciado = normalizar(questao.get("q"))
         if not enunciado:
             raise ValueError("Enunciado ausente em " + identificador)
@@ -131,6 +141,17 @@ def montar_simulado(disc, caps):
         "games": extra.get("games", []),
         "quiz": banco,
     }
+    if disc["id"] == "ingles":
+        sim["assessmentVersion"] = extra.get("assessmentVersion", 1)
+        sim["exam"]["skills"] = {"listening": 3, "reading": 3, "use": 9}
+        sim["exam"]["requiredFocus"] = ["did-short", "too-enough", "past-regular-long", "past-irregular-long", "didnt-long"]
+        quantidades = Counter(q.get("skill") for q in banco)
+        if sum(sim["exam"]["skills"].values()) != sim["exam"]["size"]:
+            raise ValueError("Tamanho do simulado de inglês incompatível com as habilidades")
+        if any(quantidades[skill] < n for skill, n in sim["exam"]["skills"].items()):
+            raise ValueError("Banco de inglês insuficiente para o sorteio por habilidade")
+        if any(not any(q.get("focus") == foco and q.get("skill") == "use" for q in banco) for foco in sim["exam"]["requiredFocus"]):
+            raise ValueError("Banco de inglês sem um dos pontos gramaticais obrigatórios")
     validar_quiz(sim)
     return sim
 

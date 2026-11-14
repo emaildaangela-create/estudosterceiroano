@@ -328,7 +328,8 @@
         "O texto compara duas celebrações. No <strong>Day of the Dead</strong> (Dia dos Mortos), no <strong>México</strong>, as famílias lembram pessoas queridas que morreram. O livro destaca 1º de novembro; as tradições acontecem entre o fim de outubro e o início de novembro e variam entre comunidades.",
         "Flores, velas, alimentos e retratos podem fazer parte das homenagens. O livro descreve famílias levando um banquete (<strong>a big feast</strong>) ao cemitério. As caveiras decoradas fazem parte da celebração e da memória; não representam uma festa de terror.",
         "O <strong>Yi Peng</strong>, na <strong>Tailândia</strong>, também acontece em novembro. Tem desfile, fantasias bonitas e milhares de <strong>lanternas de papel de arroz</strong> que sobem ao céu. As pessoas acreditam que as lanternas levam embora as coisas ruins. No último dia há fogos de artifício.",
-        "Na escrita do Hiro, <em>The Sapporo Snow Festival</em>, ele usa o passado: <em>I <strong>went</strong>… I <strong>wore</strong> a snowsuit… We <strong>saw</strong> snow sculptures… We <strong>played</strong>… We <strong>listened</strong>, <strong>ate</strong> and <strong>drank</strong>…</em>"
+        "Na escrita do Hiro, <em>The Sapporo Snow Festival</em>, ele usa o passado: <em>I <strong>went</strong>… I <strong>wore</strong> a snowsuit… We <strong>saw</strong> snow sculptures… We <strong>played</strong>… We <strong>listened</strong>, <strong>ate</strong> and <strong>drank</strong>…</em>",
+        "<strong>Treino de leitura:</strong> <span lang=\"en\">In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things.</span>"
       ],
       "art": {
         "scenes": [
@@ -386,6 +387,10 @@
         [
           "Many people walk, dance and play music on the street. 🎺",
           "a parade"
+        ],
+        [
+          "You hang these colorful things to make a party room look special. 🎊",
+          "decorations"
         ]
       ]
     },
@@ -426,6 +431,14 @@
         {
           "base": "give",
           "result": "gave"
+        },
+        {
+          "base": "have",
+          "result": "had"
+        },
+        {
+          "base": "take",
+          "result": "took"
         }
       ]
     },
@@ -484,29 +497,70 @@
       ],
       "items": [
         {
-          "text": "It is a big festival in Mexico.",
+          "text": "Families share a feast at the cemetery.",
           "cat": 0
         },
         {
-          "text": "It happens in Thailand.",
+          "text": "It is celebrated in Thailand.",
           "cat": 1
         },
         {
-          "text": "Families take a big feast to the cemetery.",
+          "text": "Families remember relatives who died.",
           "cat": 0
         },
         {
-          "text": "Thousands of lanterns go up into the sky.",
+          "text": "Paper lanterns rise into the sky.",
           "cat": 1
         },
         {
-          "text": "People give candy and chocolate skulls.",
+          "text": "Some people give candy skulls.",
           "cat": 0
         },
         {
-          "text": "Lanterns take away the bad things.",
+          "text": "People believe the lanterns take away bad things.",
           "cat": 1
         }
+      ],
+      "context": "In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things."
+    },
+    {
+      "type": "pairs",
+      "title": "Questions and long answers",
+      "short": "Respostas completas",
+      "instructions": "Escolha a resposta completa para cada pergunta. Todas as pistas indicam que a ação aconteceu.",
+      "pairs": [
+        [
+          "Did you watch the parade? ✅",
+          "Yes, I watched the parade."
+        ],
+        [
+          "Did they play games at the party? ✅",
+          "Yes, they played games at the party."
+        ],
+        [
+          "Did she listen to music? ✅",
+          "Yes, she listened to music."
+        ],
+        [
+          "Did he dance at the festival? ✅",
+          "Yes, he danced at the festival."
+        ],
+        [
+          "Did you see the fireworks? ✅",
+          "Yes, I saw the fireworks."
+        ],
+        [
+          "Did she wear a costume? ✅",
+          "Yes, she wore a costume."
+        ],
+        [
+          "Did they eat cake? ✅",
+          "Yes, they ate cake."
+        ],
+        [
+          "Did he take a present to the party? ✅",
+          "Yes, he took a present to the party."
+        ]
       ]
     }
   ],
@@ -522,7 +576,8 @@
         "um banquete"
       ],
       "answer": 0,
-      "explain": "Parade é desfile. Convite é invitation, fantasia é costume e banquete é feast."
+      "explain": "Parade é desfile. Convite é invitation, fantasia é costume e banquete é feast.",
+      "skill": "listening"
     },
     {
       "type": "mc",
@@ -534,7 +589,8 @@
         "masks"
       ],
       "answer": 0,
-      "explain": "Candles (velas) são compridas e finas e vão em cima do bolo de aniversário."
+      "explain": "Candles (velas) são compridas e finas e vão em cima do bolo de aniversário.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -546,7 +602,8 @@
         "watchs"
       ],
       "answer": 0,
-      "explain": "Watch é regular: ganha -ed e vira watched."
+      "explain": "Watch é regular: ganha -ed e vira watched.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -558,7 +615,8 @@
         "goes"
       ],
       "answer": 0,
-      "explain": "Go é irregular: no passado vira went. Exemplo: I went to the parade."
+      "explain": "Go é irregular: no passado vira went. Exemplo: I went to the parade.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -570,7 +628,9 @@
         "Yes, I seeing the fireworks."
       ],
       "answer": 0,
-      "explain": "See é irregular. No passado vira saw: Yes, I saw the fireworks."
+      "explain": "See é irregular. No passado vira saw: Yes, I saw the fireworks.",
+      "focus": "past-irregular-long",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -582,7 +642,9 @@
         "Yes, I eaten a piece of cake."
       ],
       "answer": 0,
-      "explain": "Eat é irregular: o passado é ate."
+      "explain": "Eat é irregular: o passado é ate.",
+      "focus": "past-irregular-long",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -594,7 +656,8 @@
         "dresses up"
       ],
       "answer": 0,
-      "explain": "Yesterday mostra que é passado. Dress é regular: dress up vira dressed up."
+      "explain": "Yesterday mostra que é passado. Dress é regular: dress up vira dressed up.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -606,7 +669,8 @@
         "listen"
       ],
       "answer": 0,
-      "explain": "Sing vira sang no passado (muda de forma). Os outros ganham -ed: played, danced, listened."
+      "explain": "Sing vira sang no passado (muda de forma). Os outros ganham -ed: played, danced, listened.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -619,43 +683,53 @@
         "drinks"
       ],
       "answer": 0,
-      "explain": "Você ouviu drink (beber). No passado ele vira drank."
+      "explain": "Você ouviu drink (beber). No passado ele vira drank.",
+      "skill": "listening"
     },
     {
       "type": "mc",
-      "q": "Segundo o texto “November Celebrations”, onde acontece o Day of the Dead?",
+      "q": "Leia o texto. Where do families share a feast during the Day of the Dead?",
       "options": [
-        "In Mexico",
-        "In Thailand",
-        "In Brazil",
-        "In Japan"
+        "At the cemetery.",
+        "At the cinema.",
+        "At the swimming pool.",
+        "At the beach."
       ],
       "answer": 0,
-      "explain": "O Day of the Dead é um grande festival no México, no primeiro dia de novembro."
+      "explain": "O texto localiza o banquete no cemitério: at the cemetery.",
+      "context": "In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things.",
+      "contextLang": "en",
+      "skill": "reading"
     },
     {
       "type": "mc",
-      "q": "No texto, o Day of the Dead é uma festa triste?",
+      "q": "Leia o texto. Who do families remember during the Day of the Dead?",
       "options": [
-        "Não, é uma festa alegre",
-        "Sim, é muito triste",
-        "Sim, porque é assustadora",
-        "Não, porque ninguém vai"
+        "Relatives who died.",
+        "Players who won a game.",
+        "Friends at the cinema.",
+        "Children at a museum."
       ],
       "answer": 0,
-      "explain": "O texto diz que para os mexicanos caveiras e esqueletos não são assustadores e que a festa é a time for fun and happy celebrations."
+      "explain": "A primeira frase informa que as famílias lembram parentes que morreram: relatives who died.",
+      "context": "In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things.",
+      "contextLang": "en",
+      "skill": "reading"
     },
     {
       "type": "mc",
-      "q": "No festival Yi Peng, na Tailândia, o que milhares de pessoas soltam no céu?",
+      "q": "Leia o texto. What rises into the sky at Yi Peng?",
       "options": [
-        "lanterns",
-        "balloons",
-        "masks",
-        "presents"
+        "Paper lanterns.",
+        "Birthday balloons.",
+        "Colorful costumes.",
+        "Candy skulls."
       ],
       "answer": 0,
-      "explain": "Thousands of bright lanterns go up into the sky. As pessoas acreditam que elas levam embora as coisas ruins."
+      "explain": "O texto diz que as lanternas de papel sobem ao céu: paper lanterns rise into the sky.",
+      "context": "In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things.",
+      "contextLang": "en",
+      "skill": "reading"
     },
     {
       "type": "text",
@@ -663,7 +737,84 @@
       "answers": [
         "played"
       ],
-      "explain": "Play é regular: play + ed = played. Exemplo: After dinner all the children played games."
+      "explain": "Play é regular: play + ed = played. Exemplo: After dinner all the children played games.",
+      "skill": "use",
+      "answerMode": "english-exact"
+    },
+    {
+      "type": "mc",
+      "q": "Did they watch the parade? ✅ Escolha a resposta completa.",
+      "options": [
+        "Yes, they watched the parade.",
+        "Yes, they watch the parade.",
+        "Yes, they watching the parade.",
+        "Yes, they watches the parade."
+      ],
+      "answer": 0,
+      "explain": "Na pergunta, Did acompanha watch. Na resposta afirmativa, watch vira watched.",
+      "focus": "past-regular-long",
+      "skill": "use"
+    },
+    {
+      "type": "text",
+      "q": "Complete a resposta com a frase inteira: “Did you play games?” ✅ Comece com “Yes, I…” e use play games.",
+      "answers": [
+        "Yes, I played games."
+      ],
+      "explain": "Play é regular: a resposta completa é Yes, I played games.",
+      "skill": "use",
+      "focus": "past-regular-long",
+      "answerMode": "english-exact"
+    },
+    {
+      "type": "text",
+      "q": "Responda com a frase inteira: “Did she dance at the party?” ✅ Comece com “Yes, she…” e use dance at the party.",
+      "answers": [
+        "Yes, she danced at the party."
+      ],
+      "explain": "Dance já termina em e; acrescentamos d: Yes, she danced at the party.",
+      "skill": "use",
+      "focus": "past-regular-long",
+      "answerMode": "english-exact"
+    },
+    {
+      "type": "text",
+      "q": "Responda com a frase inteira: “Did he go to the festival?” ✅ Comece com “Yes, he…” e use go to the festival.",
+      "answers": [
+        "Yes, he went to the festival."
+      ],
+      "explain": "Go muda para went na resposta afirmativa: Yes, he went to the festival.",
+      "skill": "use",
+      "focus": "past-irregular-long",
+      "answerMode": "english-exact"
+    },
+    {
+      "type": "mc",
+      "q": "Ouça o relato. What did Ana see at the festival?",
+      "options": [
+        "She saw fireworks.",
+        "She saw dinosaurs.",
+        "She saw fish.",
+        "She saw stars in a planetarium."
+      ],
+      "answer": 0,
+      "explain": "Ana diz I saw fireworks. Ela também conta que dançou e comeu bolo.",
+      "listen": "Yesterday I went to a festival with my family. I danced and ate cake. At night, I saw fireworks. It was exciting!",
+      "skill": "listening"
+    },
+    {
+      "type": "mc",
+      "q": "Complete a pergunta: “______ she ______ a costume at the party?”",
+      "options": [
+        "Did / wear",
+        "Did / wore",
+        "Does / wore",
+        "Did / wears"
+      ],
+      "answer": 0,
+      "explain": "A pergunta usa Did + pessoa + verbo na forma base: Did she wear a costume?",
+      "skill": "use"
     }
-  ]
+  ],
+  "assessmentVersion": 1
 }

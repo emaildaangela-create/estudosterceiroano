@@ -138,7 +138,7 @@
         "Para perguntar sobre algo que <strong>já aconteceu</strong> (no passado), começamos com <strong>Did</strong>: <strong>Did</strong> + pessoa + verbo + resto? Exemplo: <em>Did you wash your hands?</em>",
         "Depois de <strong>Did</strong>, o verbo fica na forma normal, sem mudar: <em>Did you <strong>brush</strong> your teeth?</em> (e não <em>brushed</em>).",
         "A <strong>resposta curta</strong> repete a pessoa e usa <strong>did</strong> ou <strong>didn't</strong>: <em>Yes, I did.</em> / <em>No, I didn't.</em> — <em>Did he take a shower?</em> → <em>Yes, he did.</em> ou <em>No, he didn't.</em>",
-        "<strong>Didn't</strong> é a forma curta de <strong>did not</strong>. Pense assim: <strong>did</strong> = sim, fiz; <strong>didn't</strong> = não fiz.",
+        "<strong>Did</strong> é o auxiliar usado nas perguntas e respostas curtas do passado. <strong>Didn't</strong> é a forma curta de <strong>did not</strong>. Na resposta curta, use <em>Yes, I did.</em> ou <em>No, I didn't.</em>",
         "Na música <em>Let's Move</em>: <em>Did you move your legs? Yes, I did! Did you eat a healthy snack? Oops, I forgot!</em>"
       ],
       "art": {
@@ -343,7 +343,8 @@
         "O texto <em>Take Care of Your Brain!</em> diz que exercício é bom para o <strong>corpo</strong> e para o <strong>cérebro</strong> (brain). Só <strong>10 minutos</strong> por dia já ajudam o cérebro a pensar mais rápido.",
         "Ficar ao ar livre (<strong>outdoors</strong>), num lugar natural como a floresta, também faz bem: é o <strong>forest bath</strong> (banho de floresta).",
         "Rir também é bom! Quando você ri alto (<strong>laugh out loud</strong>), o cérebro recebe mais sangue e o corpo pode se sentir melhor por até <strong>45 minutos</strong>.",
-        "Curiosidade: <strong>gelotologist</strong> é a pessoa que estuda os efeitos do riso no corpo humano."
+        "Curiosidade: <strong>gelotologist</strong> é a pessoa que estuda os efeitos do riso no corpo humano.",
+        "<strong>Treino de leitura:</strong> <span lang=\"en\">Mia gets exercise in the park every day. She stretches her arms and bends her knees. After exercise, she drinks water and gets rest. She likes the park because she can spend time outdoors with her friends.</span>"
       ],
       "art": {
         "scenes": [
@@ -409,6 +410,14 @@
         {
           "base": "back",
           "result": "costas 🎒"
+        },
+        {
+          "base": "chest",
+          "result": "peito 🫁"
+        },
+        {
+          "base": "muscle",
+          "result": "músculo 💪"
         }
       ]
     },
@@ -464,7 +473,7 @@
           "cat": 1
         },
         {
-          "text": "I sleep nine hours. I get __ sleep. 😴",
+          "text": "I sleep well and feel rested. I get __ sleep. 😴",
           "cat": 2
         },
         {
@@ -476,7 +485,7 @@
           "cat": 1
         },
         {
-          "text": "I drink eight glasses of water. That's __ water. 💧",
+          "text": "I drink the water I need. I get __ water: just the right amount. 💧",
           "cat": 2
         },
         {
@@ -484,7 +493,7 @@
           "cat": 0
         },
         {
-          "text": "I play outside every day. I get __ exercise. ⚽",
+          "text": "I get __ exercise: just the right amount, not too little. ⚽",
           "cat": 2
         }
       ]
@@ -546,7 +555,8 @@
         "costas"
       ],
       "answer": 0,
-      "explain": "Elbow é o cotovelo. Knee é joelho, shoulder é ombro e back são as costas."
+      "explain": "Elbow é o cotovelo. Knee é joelho, shoulder é ombro e back são as costas.",
+      "skill": "listening"
     },
     {
       "type": "mc",
@@ -558,7 +568,8 @@
         "bones"
       ],
       "answer": 0,
-      "explain": "Toes são os dedos dos pés. Fingers são os dedos das mãos."
+      "explain": "Toes são os dedos dos pés. Fingers são os dedos das mãos.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -570,7 +581,9 @@
         "Yes, I brush."
       ],
       "answer": 0,
-      "explain": "Pergunta com Did pede resposta curta com did: Yes, I did. Didn't seria se você NÃO tivesse escovado."
+      "explain": "Pergunta com Did pede resposta curta com did: Yes, I did. Didn't seria se você NÃO tivesse escovado.",
+      "focus": "did-short",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -582,7 +595,9 @@
         "No, she didn't."
       ],
       "answer": 0,
-      "explain": "A pergunta fala de he (ele) e a resposta é não: No, he didn't. A resposta repete a mesma pessoa da pergunta."
+      "explain": "A pergunta fala de he (ele) e a resposta é não: No, he didn't. A resposta repete a mesma pessoa da pergunta.",
+      "focus": "did-short",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -594,7 +609,9 @@
         "Are"
       ],
       "answer": 0,
-      "explain": "Yesterday (ontem) mostra que é passado. Para perguntar no passado usamos Did."
+      "explain": "Yesterday (ontem) mostra que é passado. Para perguntar no passado usamos Did.",
+      "focus": "did-short",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -606,19 +623,23 @@
         "She did eat fruit?"
       ],
       "answer": 0,
-      "explain": "Depois de Did, o verbo fica na forma normal: Did she eat fruit? (e não ate nem eats)."
+      "explain": "Depois de Did, o verbo fica na forma normal: Did she eat fruit? (e não ate nem eats).",
+      "focus": "did-short",
+      "skill": "use"
     },
     {
       "type": "mc",
-      "q": "Complete: “I don't watch ________ TV. Only one hour a day.”",
+      "q": "Complete com a ideia de excesso: “I don't watch ______ TV. I watch a little.”",
       "options": [
         "too much",
         "too many",
-        "enough",
-        "a"
+        "a",
+        "an"
       ],
       "answer": 0,
-      "explain": "TV não se conta uma por uma, então usamos too much. A frase diz que a pessoa NÃO vê TV demais."
+      "explain": "Too much indica excesso com TV; too many acompanha nomes contáveis no plural.",
+      "focus": "too-enough",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -629,12 +650,14 @@
         "enough",
         "an"
       ],
-      "answer": 1,
-      "explain": "Chips são coisas que podemos contar (um, dois, três salgadinhos), então usamos too many."
+      "answer": 0,
+      "explain": "Chips são coisas que podemos contar (um, dois, três salgadinhos), então usamos too many.",
+      "focus": "too-enough",
+      "skill": "use"
     },
     {
       "type": "mc",
-      "q": "“I sleep nine hours every night. I get ________ sleep.” Qual palavra mostra que está na medida certa?",
+      "q": "“I sleep well and feel rested. I get ______ sleep.” Qual palavra significa “o suficiente”?",
       "options": [
         "too much",
         "too many",
@@ -642,7 +665,9 @@
         "junk"
       ],
       "answer": 2,
-      "explain": "Enough quer dizer o suficiente, a quantidade certa."
+      "explain": "Enough quer dizer o suficiente, a quantidade certa.",
+      "focus": "too-enough",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -654,7 +679,8 @@
         "get enough rest"
       ],
       "answer": 0,
-      "explain": "Comer junk food (porcarias) todo dia não faz bem. Os outros são bons hábitos."
+      "explain": "Comer junk food (porcarias) todo dia não faz bem. Os outros são bons hábitos.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -667,31 +693,38 @@
         "Mexa os dedos!"
       ],
       "answer": 0,
-      "explain": "Stretch é esticar, e arms são os braços. Dobrar seria bend."
+      "explain": "Stretch é esticar, e arms são os braços. Dobrar seria bend.",
+      "skill": "listening"
     },
     {
       "type": "mc",
-      "q": "Segundo o texto “Take Care of Your Brain!”, quantos minutos de exercício por dia já ajudam o cérebro?",
+      "q": "Leia o texto. What does Mia do after exercise?",
       "options": [
-        "10 minutos",
-        "45 minutos",
-        "2 horas",
-        "10 horas"
+        "She drinks water and gets rest.",
+        "She watches TV and eats cookies.",
+        "She visits a museum with her sister.",
+        "She goes to a party at school."
       ],
       "answer": 0,
-      "explain": "O texto diz que só ten minutes (10 minutos) por dia já fazem o corpo e o cérebro se sentirem melhor. Os 45 minutos são o tempo que o corpo fica bem depois de uma boa risada."
+      "explain": "O texto informa que, depois de se exercitar, Mia bebe água e descansa. Localize a frase com After exercise.",
+      "context": "Mia gets exercise in the park every day. She stretches her arms and bends her knees. After exercise, she drinks water and gets rest. She likes the park because she can spend time outdoors with her friends.",
+      "contextLang": "en",
+      "skill": "reading"
     },
     {
       "type": "mc",
-      "q": "No texto, o que é um “forest bath”?",
+      "q": "Leia o texto. Why does Mia like the park?",
       "options": [
-        "Passar um tempo na natureza",
-        "Tomar banho de chuveiro",
-        "Nadar na piscina",
-        "Lavar as mãos"
+        "She can be outdoors with friends.",
+        "She can watch TV with her family.",
+        "She can see a movie with friends.",
+        "She can eat cake at a party."
       ],
       "answer": 0,
-      "explain": "Forest bath (banho de floresta) é passar um tempo ao ar livre, em um lugar natural como a floresta. Isso relaxa o cérebro."
+      "explain": "A frase com because explica a razão: ela gosta de passar tempo ao ar livre com os amigos.",
+      "context": "Mia gets exercise in the park every day. She stretches her arms and bends her knees. After exercise, she drinks water and gets rest. She likes the park because she can spend time outdoors with her friends.",
+      "contextLang": "en",
+      "skill": "reading"
     },
     {
       "type": "text",
@@ -699,10 +732,50 @@
       "answers": [
         "knee",
         "a knee",
-        "the knee",
-        "knees"
+        "the knee"
       ],
-      "explain": "Joelho em inglês é knee (o k não é pronunciado: /ni:/)."
+      "explain": "Joelho em inglês é knee (o k não é pronunciado: /ni:/).",
+      "skill": "use",
+      "answerMode": "english-exact"
+    },
+    {
+      "type": "mc",
+      "q": "Ouça o diálogo. What did Leo do yesterday?",
+      "options": [
+        "He rode his bike.",
+        "He watched a movie.",
+        "He ate out.",
+        "He went fishing."
+      ],
+      "answer": 0,
+      "explain": "Leo responde que andou de bicicleta. Ele diz que não assistiu TV.",
+      "listen": "Mia: Did you ride your bike yesterday? Leo: Yes, I did. Mia: Did you watch TV? Leo: No, I did not.",
+      "skill": "listening"
+    },
+    {
+      "type": "text",
+      "q": "Responda com uma resposta curta negativa: “Did she wash her hands?” ❌",
+      "answers": [
+        "No, she didn't."
+      ],
+      "explain": "A resposta curta mantém she e usa didn't: No, she didn't.",
+      "skill": "use",
+      "focus": "did-short",
+      "answerMode": "english-exact"
+    },
+    {
+      "type": "mc",
+      "q": "Complete: “______ your knees!” (Dobre os joelhos.)",
+      "options": [
+        "Bend",
+        "Stretch",
+        "Drink",
+        "Rest"
+      ],
+      "answer": 0,
+      "explain": "Bend significa dobrar. Stretch significa esticar.",
+      "skill": "use"
     }
-  ]
+  ],
+  "assessmentVersion": 1
 }

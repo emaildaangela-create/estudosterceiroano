@@ -1,4 +1,4 @@
-const CACHE_CORE = 'estudos-3-ano-core-ae80b1d1';
+const CACHE_CORE = 'estudos-3-ano-core-609c80a5';
 const CACHE_VIDEOS = 'estudos-3-ano-videos-v1';
 const CACHE_LEGADO = 'estudos-3-ano-v47';
 /* A lista entre os marcadores é atualizada pelo build_data.py. */

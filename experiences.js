@@ -4,7 +4,7 @@
 const EXPERIENCE_PROFILES = {
   ing07: [
     { mode:'memoria', goal:'Jogo da memória do corpo', prompt:'Vire duas cartas e ache a palavra e o seu significado.', result:'todos os pares do corpo' },
-    { mode:'transform', goal:'Responder com Yes, I did / No, I didn\'t', prompt:'✅ fez · ❌ não fez. Qual é a resposta curta?', result:'painel de respostas' },
+    { mode:'transform', goal:'Responder com Yes, I did / No, I didn\'t', prompt:'✅ fez · ❌ não fez. Qual é a resposta curta?', result:'painel de respostas', hint:'Observe a pessoa: you → I, he → he, she → she, they → they. ✅ pede Yes + did; ❌ pede No + didn\'t.', feedback:'A resposta usa a pessoa certa e did ou didn\'t, de acordo com a pista.' },
     { mode:'choice', goal:'Too much, too many ou enough?', prompt:'Qual expressão completa a frase?', result:'frases completas' },
     { mode:'choice', goal:'Separar bons e maus hábitos', prompt:'Este hábito é bom ou ruim para você?', result:'pôster de hábitos' }
   ],
@@ -12,17 +12,19 @@ const EXPERIENCE_PROFILES = {
     { mode:'explore', goal:'Descobrir as palavras de festa', prompt:'Leia a pista. Qual objeto de festa é esse?', result:'kit de festa' },
     { mode:'memoria', goal:'Memória dos verbos irregulares', prompt:'Ache cada verbo e o seu passado.', result:'todos os pares do passado' },
     { mode:'choice', goal:'Regular ou irregular?', prompt:'Este verbo ganha -ed ou muda de forma?', result:'coleção de verbos' },
-    { mode:'choice', goal:'Comparar duas festas de novembro', prompt:'Day of the Dead ou Yi Peng?', result:'mural das festas' }
+    { mode:'choice', goal:'Comparar duas festas de novembro', prompt:'Consulte o texto: Day of the Dead ou Yi Peng?', result:'mural das festas' },
+    { mode:'explore', goal:'Responder às perguntas sobre a festa', prompt:'Observe o verbo e a pista. Qual resposta completa combina?', result:'relato da festa' }
   ],
   ing09: [
     { mode:'memoria', goal:'Memória do fim de semana', prompt:'Ache cada atividade e o seu significado.', result:'agenda do fim de semana' },
     { mode:'choice', goal:'Went ou didn\'t go?', prompt:'Leia a pista. A pessoa foi ou não foi?', result:'diário do fim de semana' },
     { mode:'explore', goal:'Completar as histórias do fim de semana', prompt:'Qual frase continua a história?', result:'histórias completas' },
-    { mode:'choice', goal:'Emocionante ou chato?', prompt:'Como foi esse fim de semana?', result:'mural de fins de semana' }
+    { mode:'choice', goal:'Emocionante ou chato?', prompt:'Como a pessoa descreveu a experiência?', result:'mural de fins de semana' },
+    { mode:'explore', goal:'Responder com didn\'t em uma frase completa', prompt:'A pista diz o que não aconteceu. Qual resposta completa combina?', result:'diário do fim de semana' }
   ]
 };
 EXPERIENCE_PROFILES.sim_ingles = [
-  { mode:'choice', goal:'Separar as palavras por Unit', prompt:'Em qual Unit esta palavra apareceu?', result:'mapa das Units' },
+  { mode:'explore', goal:'Usar o vocabulário em situações', prompt:'Leia a pista em inglês. Qual expressão combina?', result:'vocabulário em uso' },
   { mode:'memoria', goal:'Memória do passado', prompt:'Ache o verbo e o seu passado.', result:'todos os pares' }
 ];
 Object.assign(EXPERIENCE_PROFILES, {

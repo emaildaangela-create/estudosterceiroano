@@ -301,7 +301,8 @@
         "O texto fala do <strong>Children's Museum</strong> (Museu das Crianças) em <strong>Indianapolis, USA</strong>. Do lado de fora há <strong>modelos gigantes de dinossauros</strong>: alguns parecem fugir e outros olham pela janela.",
         "Dentro do museu há fósseis de dinossauros de verdade e salas de ciência, arte, cultura e história. Na exposição <em>Treasures of the Earth</em> aprende-se sobre a história do <strong>Egito</strong>.",
         "Você pode aprender sobre as estrelas no <strong>planetarium</strong> (planetário), ir ao <strong>theater</strong> (teatro) e até fazer <strong>rock climbing</strong> (escalada)!",
-        "Na escrita <em>My Perfect Weekend</em>, Hassan usa palavras de sequência: <strong>first</strong> (primeiro), <strong>then</strong> (então), <strong>next</strong> (em seguida) e <strong>after that</strong> (depois disso)."
+        "<strong>Complemento de leitura:</strong> palavras como <em>first</em>, <em>then</em>, <em>next</em> e <em>after that</em> ajudam a acompanhar a ordem dos acontecimentos. Para esta prova, priorize compreender as atividades e dizer o que aconteceu ou não aconteceu com <strong>didn't + verbo na forma base</strong>.",
+        "<strong>Treino de leitura:</strong> <span lang=\"en\">On Saturday, Ben visited a museum with his sister. They saw dinosaur fossils. Then they went to the planetarium and learned about the stars. They wanted to see a play, but the theater was closed. They did not go to the theater.</span>"
       ],
       "art": {
         "scenes": [
@@ -371,62 +372,62 @@
       ],
       "items": [
         {
-          "text": "It was raining. We __ on a picnic. 🌧️",
+          "text": "We canceled our picnic because of the rain. We __ on a picnic. 🌧️",
           "cat": 1
         },
         {
-          "text": "We __ to the movies. We saw a great movie! 🎬",
+          "text": "We __ to the movies. We watched a film at the cinema! 🎬",
           "cat": 0
         },
         {
-          "text": "The weather was bad. We __ to the beach. ⛈️",
+          "text": "The beach trip was canceled. We __ to the beach. ⛈️",
           "cat": 1
         },
         {
-          "text": "Last Sunday I __ fishing with my dad. 🎣",
+          "text": "Last Sunday I __ fishing with my dad. We caught two fish! 🎣",
           "cat": 0
         },
         {
-          "text": "I was sick. I __ to the party. 🤒",
+          "text": "I was sick and stayed home all day. I __ to the party. 🤒",
           "cat": 1
         },
         {
-          "text": "We __ swimming. The water was great! 🏊",
+          "text": "We __ swimming. We swam in the pool for an hour! 🏊",
           "cat": 0
         }
       ]
     },
     {
       "type": "pairs",
-      "title": "Win or lose?",
-      "short": "Ganhar ou perder",
-      "instructions": "Escolha a frase que completa a história.",
+      "title": "What did they do?",
+      "short": "Histórias do fim de semana",
+      "instructions": "Leia o que aconteceu e escolha a frase que expressa a mesma informação.",
       "pairs": [
         [
-          "We played basketball on Saturday. We lost!",
+          "Our team lost the game.",
           "We didn't win."
         ],
         [
-          "I went to the game. It was great!",
+          "Our team won the final game.",
           "We won!"
         ],
         [
-          "On Sunday we had lunch at home.",
+          "We had every meal at home on Sunday.",
           "We didn't eat out."
         ],
         [
-          "Yesterday I played video games.",
+          "The TV was broken. I played video games on my computer instead.",
           "I didn't watch TV."
         ],
         [
-          "Monday we didn't eat out.",
+          "We took a blanket and lunch to the park and ate on the grass.",
           "We went on a picnic."
         ]
       ]
     },
     {
       "type": "sort",
-      "title": "Free time or not?",
+      "title": "How did they feel?",
       "short": "Descrever o fim de semana",
       "instructions": "A frase descreve um fim de semana divertido ou chato?",
       "categories": [
@@ -435,29 +436,61 @@
       ],
       "items": [
         {
-          "text": "We won the game! We sang and shouted a lot!",
+          "text": "The game was exciting! We cheered and shouted. 🤩",
           "cat": 0
         },
         {
-          "text": "I didn't do anything special.",
+          "text": "I was bored all day. Nothing interested me. 🥱",
           "cat": 1
         },
         {
-          "text": "We saw giant dinosaurs at the museum!",
+          "text": "The museum visit was exciting. I loved the dinosaurs! 🦖",
           "cat": 0
         },
         {
-          "text": "It rained. I didn't go out.",
+          "text": "The film was boring. I wanted it to end. 🥱",
           "cat": 1
         },
         {
-          "text": "I went rock climbing for the first time!",
+          "text": "I stayed home and played a new game. It was exciting! 🎮",
           "cat": 0
         },
         {
-          "text": "I stayed home alone all day.",
+          "text": "I went out, but the show was boring. I felt bored. 🥱",
           "cat": 1
         }
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Long answers with didn't",
+      "short": "Frases com didn’t",
+      "instructions": "Escolha a resposta completa. ❌ indica que a ação não aconteceu.",
+      "pairs": [
+        [
+          "Did you go swimming? ❌",
+          "No, I didn't go swimming."
+        ],
+        [
+          "Did she eat out? ❌",
+          "No, she didn't eat out."
+        ],
+        [
+          "Did they visit a museum? ❌",
+          "No, they didn't visit a museum."
+        ],
+        [
+          "Did he text his friends? ❌",
+          "No, he didn't text his friends."
+        ],
+        [
+          "Did you win the game? ❌",
+          "No, I didn't win the game."
+        ],
+        [
+          "Did they go horseback riding? ❌",
+          "No, they didn't go horseback riding."
+        ]
       ]
     }
   ],
@@ -473,7 +506,8 @@
         "patinar no gelo"
       ],
       "answer": 0,
-      "explain": "Go hiking é fazer trilha (caminhar na natureza). Pescar é go fishing, nadar é go swimming e patinar no gelo é go ice skating."
+      "explain": "Go hiking é fazer trilha (caminhar na natureza). Pescar é go fishing, nadar é go swimming e patinar no gelo é go ice skating.",
+      "skill": "listening"
     },
     {
       "type": "mc",
@@ -485,11 +519,12 @@
         "eat out"
       ],
       "answer": 0,
-      "explain": "Go to the movies = ir ao cinema."
+      "explain": "Go to the movies = ir ao cinema.",
+      "skill": "use"
     },
     {
       "type": "mc",
-      "q": "Complete: “We ________ on a picnic because it was raining!”",
+      "q": "O piquenique foi cancelado por causa da chuva. Complete: “We ______ on a picnic.”",
       "options": [
         "didn't go",
         "went",
@@ -497,7 +532,8 @@
         "didn't went"
       ],
       "answer": 0,
-      "explain": "Com chuva o piquenique não aconteceu, então usamos didn't go. Didn't went está errado: depois de didn't o verbo fica normal."
+      "explain": "A pista informa que o passeio foi cancelado: didn't go. Depois de didn't usamos go, nunca went.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -509,7 +545,8 @@
         "didn't lose"
       ],
       "answer": 0,
-      "explain": "Se perderam (lost), então não ganharam: didn't win."
+      "explain": "Se perderam (lost), então não ganharam: didn't win.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -521,7 +558,9 @@
         "I not watch TV."
       ],
       "answer": 0,
-      "explain": "Depois de didn't o verbo fica na forma normal: I didn't watch TV."
+      "explain": "Depois de didn't o verbo fica na forma normal: I didn't watch TV.",
+      "focus": "didnt-long",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -533,7 +572,8 @@
         "It is Monday and it is sunny."
       ],
       "answer": 0,
-      "explain": "How was…? pergunta como foi. A resposta descreve o fim de semana: It was boring (foi chato)."
+      "explain": "How was…? pergunta como foi. A resposta descreve o fim de semana: It was boring (foi chato).",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -545,7 +585,8 @@
         "Yes, I did."
       ],
       "answer": 0,
-      "explain": "Last weekend é passado, então a resposta usa went: I went swimming."
+      "explain": "Last weekend é passado, então a resposta usa went: I went swimming.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -558,7 +599,9 @@
         "Fiquei em casa e cozinhei."
       ],
       "answer": 0,
-      "explain": "Didn't eat out = não comi fora. Stayed home = fiquei em casa."
+      "explain": "Didn't eat out = não comi fora. Stayed home = fiquei em casa.",
+      "focus": "didnt-long",
+      "skill": "listening"
     },
     {
       "type": "mc",
@@ -570,53 +613,125 @@
         "interesting"
       ],
       "answer": 0,
-      "explain": "Exciting = emocionante. Boring = chato, busy = ocupado, interesting = interessante."
+      "explain": "Exciting = emocionante. Boring = chato, busy = ocupado, interesting = interessante.",
+      "skill": "use"
     },
     {
       "type": "mc",
-      "q": "Segundo o texto “Wow! Look at That!”, onde fica o Children's Museum?",
+      "q": "Leia o texto. Where did Ben learn about the stars?",
       "options": [
-        "In Indianapolis, USA",
-        "In Mexico City",
-        "In Thailand",
-        "In Rio de Janeiro"
+        "In the planetarium.",
+        "In the theater.",
+        "At the beach.",
+        "At a birthday party."
       ],
       "answer": 0,
-      "explain": "The Children's Museum fica em Indianapolis, nos Estados Unidos (USA)."
+      "explain": "O texto diz que Ben e a irmã foram ao planetário e aprenderam sobre as estrelas.",
+      "context": "On Saturday, Ben visited a museum with his sister. They saw dinosaur fossils. Then they went to the planetarium and learned about the stars. They wanted to see a play, but the theater was closed. They did not go to the theater.",
+      "contextLang": "en",
+      "skill": "reading"
     },
     {
       "type": "mc",
-      "q": "No Children's Museum, onde você aprende sobre as estrelas?",
+      "q": "Leia o texto. Why didn't Ben go to the theater?",
       "options": [
-        "in the planetarium",
-        "in the theater",
-        "outside the museum",
-        "at the beach"
+        "The theater was closed.",
+        "He did not like dinosaurs.",
+        "He wanted to go fishing.",
+        "His sister stayed home."
       ],
       "answer": 0,
-      "explain": "You can learn about the stars in the planetarium (planetário)."
+      "explain": "O teatro estava fechado. A palavra but apresenta o obstáculo ao plano de assistir à peça.",
+      "context": "On Saturday, Ben visited a museum with his sister. They saw dinosaur fossils. Then they went to the planetarium and learned about the stars. They wanted to see a play, but the theater was closed. They did not go to the theater.",
+      "contextLang": "en",
+      "skill": "reading"
     },
     {
       "type": "mc",
-      "q": "Qual palavra Hassan usa para dizer a ordem das coisas no texto “My Perfect Weekend”?",
+      "q": "Leia o texto. Which activity did Ben NOT do?",
       "options": [
-        "first",
-        "busy",
-        "lose",
-        "boring"
+        "Go to the theater.",
+        "Visit a museum.",
+        "See dinosaur fossils.",
+        "Go to the planetarium."
       ],
       "answer": 0,
-      "explain": "First, then, next e after that mostram quando as coisas aconteceram: First I ate my favorite breakfast. After that I went fishing."
+      "explain": "Ben realizou as outras três atividades. O texto informa que ele não foi ao teatro.",
+      "context": "On Saturday, Ben visited a museum with his sister. They saw dinosaur fossils. Then they went to the planetarium and learned about the stars. They wanted to see a play, but the theater was closed. They did not go to the theater.",
+      "contextLang": "en",
+      "skill": "reading"
     },
     {
       "type": "text",
       "q": "Escreva em inglês: “nadar”, usando go + -ing.",
       "answers": [
-        "go swimming",
-        "swimming",
-        "went swimming"
+        "go swimming"
       ],
-      "explain": "Go swimming. No passado: I went swimming."
+      "explain": "A instrução pede go + -ing: go swimming. Swimming sozinho não inclui go; went swimming está no passado.",
+      "skill": "use",
+      "answerMode": "english-exact"
+    },
+    {
+      "type": "text",
+      "q": "Responda com a frase inteira: “Did you go hiking?” ❌ Comece com “No, I…” e use go hiking.",
+      "answers": [
+        "No, I didn't go hiking."
+      ],
+      "explain": "Depois de didn't, use go: No, I didn't go hiking.",
+      "skill": "use",
+      "focus": "didnt-long",
+      "answerMode": "english-exact"
+    },
+    {
+      "type": "text",
+      "q": "Responda com a frase inteira: “Did she eat out?” ❌ Comece com “No, she…” e use eat out.",
+      "answers": [
+        "No, she didn't eat out."
+      ],
+      "explain": "Depois de didn't, use eat, não ate: No, she didn't eat out.",
+      "skill": "use",
+      "focus": "didnt-long",
+      "answerMode": "english-exact"
+    },
+    {
+      "type": "text",
+      "q": "Responda com a frase inteira: “Did they visit a museum?” ❌ Comece com “No, they…” e use visit a museum.",
+      "answers": [
+        "No, they didn't visit a museum."
+      ],
+      "explain": "A resposta mantém they e usa didn't visit: No, they didn't visit a museum.",
+      "skill": "use",
+      "focus": "didnt-long",
+      "answerMode": "english-exact"
+    },
+    {
+      "type": "mc",
+      "q": "Ouça o diálogo. What did Sam do on Sunday?",
+      "options": [
+        "He went fishing.",
+        "He went swimming.",
+        "He went to the movies.",
+        "He went ice skating."
+      ],
+      "answer": 0,
+      "explain": "Sam diz que não foi nadar. Ele foi pescar com o pai.",
+      "listen": "Emma: Did you go swimming on Sunday? Sam: No, I did not go swimming. I went fishing with my dad. Emma: Did you catch any fish? Sam: Yes, I did.",
+      "skill": "listening"
+    },
+    {
+      "type": "mc",
+      "q": "“Lia texted her friends yesterday.” Qual frase diz que ela NÃO fez isso?",
+      "options": [
+        "She didn't text her friends yesterday.",
+        "She didn't texted her friends yesterday.",
+        "She doesn't texted her friends yesterday.",
+        "She did text her friends yesterday."
+      ],
+      "answer": 0,
+      "explain": "Didn't pede a forma base text, sem -ed. She did text é afirmativa, não negativa.",
+      "focus": "didnt-long",
+      "skill": "use"
     }
-  ]
+  ],
+  "assessmentVersion": 1
 }

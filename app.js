@@ -628,6 +628,7 @@
     cheia.addEventListener('click',alternarTelaCheia);controles.appendChild(cheia);topo.appendChild(controles);raiz.appendChild(topo);
     var palco=criar('main','jogo-imersivo__palco'), conteudo=criar('div','jogo-imersivo__conteudo');
     if(cap.games.length>1)conteudo.appendChild(seletorDeJogos(cap,salvo));
+    if(game.context)conteudo.appendChild(criar('section','questao-contexto-texto','<span>Leia para jogar</span><p lang="en">'+textoSeguro(game.context)+'</p>'));
     if(game.type==='writing')renderProducaoTextualJogo(conteudo,cap,game,salvo);else montarNovaExperiencia(conteudo,cap,game,perfil,salvo);palco.appendChild(conteudo);raiz.appendChild(palco);
   }
   /* Cada partida sorteia a ordem das rodadas. A ordem fica guardada até o
@@ -673,9 +674,11 @@
   }
 
   function progressoExperiencias(cap) {
+    if(cap.assessmentVersion&&estado.experiencias[cap.id]&&estado.experiencias[cap.id].version!==cap.assessmentVersion)delete estado.experiencias[cap.id];
     if(!estado.experiencias[cap.id]){
       var jaConcluido=estado.progresso[cap.id]&&estado.progresso[cap.id].feito;
-      estado.experiencias[cap.id]={feitas:cap.games.map(function(){return !!jaConcluido;}),passos:{},atual:0};
+      if(cap.assessmentVersion)jaConcluido=false;
+      estado.experiencias[cap.id]={feitas:cap.games.map(function(){return !!jaConcluido;}),passos:{},atual:0,version:cap.assessmentVersion};
       if(jaConcluido)cap.games.forEach(function(g,i){estado.experiencias[cap.id].passos[i]=totalItens(g,((typeof EXPERIENCE_PROFILES!=='undefined'&&EXPERIENCE_PROFILES[cap.id])||[])[i]||{});});
       salvar();
     }
@@ -1089,17 +1092,28 @@
   function renderTransformacaoJogo(stage,game,passo,perfil,concluir) {
     var par=game.pairs[passo], respostas=game.pairs.map(function(p){return p[1];}), opcoes=opcoesEmbaralhadas(respostas,par[1],3), erros=0;
     var painel=criar('div','painel-transformacao','<div><span>Antes</span><strong>'+textoSeguro(par[0])+'</strong></div><i>→</i><div class="painel-transformacao__depois"><span>Depois</span><strong>?</strong></div>');stage.appendChild(painel);
-    var escolhas=criar('div','decisoes decisoes--coluna');opcoes.forEach(function(op){var b=criar('button','decisao',textoSeguro(op),{type:'button'});b.addEventListener('click',function(){if(op===par[1]){b.classList.add('decisao--certa');painel.querySelector('.painel-transformacao__depois strong').textContent=op;painel.classList.add('painel-transformacao--pronto');feedbackInterativo(stage,true,'Observe o que mudou em todas as palavras da expressão.','',concluir);}else{erros++;b.classList.add('decisao--errada');if(erros>=2)mostrarPista(stage,'Confira se substantivo, artigo e característica estão todos no plural.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
+    var escolhas=criar('div','decisoes decisoes--coluna');opcoes.forEach(function(op){var b=criar('button','decisao',textoSeguro(op),{type:'button'});b.addEventListener('click',function(){if(op===par[1]){b.classList.add('decisao--certa');painel.querySelector('.painel-transformacao__depois strong').textContent=op;painel.classList.add('painel-transformacao--pronto');feedbackInterativo(stage,true,perfil.feedback||'Observe o que mudou em todas as palavras da expressão.','',concluir);}else{erros++;b.classList.add('decisao--errada');if(erros>=2)mostrarPista(stage,perfil.hint||'Confira se substantivo, artigo e característica estão todos no plural.');}});escolhas.appendChild(b);});stage.appendChild(escolhas);
   }
 
+  function sortearQuestoes(cap) {
+    var todos=misturar(cap.quiz.map(function(_,i){return i;})), exame=cap.exam||{}, tamanho=Math.min(exame.size||15,todos.length);
+    if(!exame.skills)return todos.slice(0,tamanho);
+    var escolhidos=[], contagem={};
+    function incluir(i){if(escolhidos.indexOf(i)>=0||escolhidos.length>=tamanho)return;escolhidos.push(i);var skill=cap.quiz[i].skill;contagem[skill]=(contagem[skill]||0)+1;}
+    (exame.requiredFocus||[]).forEach(function(foco){var i=todos.find(function(n){var q=cap.quiz[n];return q.focus===foco&&escolhidos.indexOf(n)<0&&(contagem[q.skill]||0)<(exame.skills[q.skill]||0);});if(i!==undefined)incluir(i);});
+    Object.keys(exame.skills).forEach(function(skill){todos.forEach(function(i){if(cap.quiz[i].skill===skill&&(contagem[skill]||0)<exame.skills[skill])incluir(i);});});
+    todos.forEach(incluir);
+    return misturar(escolhidos);
+  }
   function iniciarQuiz(cap,reiniciar) {
     var guardado=!reiniciar && estado.tentativas[cap.id];
+    if(guardado&&cap.assessmentVersion&&guardado.version!==cap.assessmentVersion)guardado=null;
     /* No simulado, cada tentativa sorteia um conjunto diferente de questões
        do banco de todos os módulos; o sorteio fica guardado até terminar. */
     var indices=cap.quiz.map(function(_,i){return i;});
     if(cap.exam){
       var sorteio=guardado&&guardado.sorteio&&guardado.sorteio.every(function(i){return i<cap.quiz.length;})?guardado.sorteio:null;
-      indices=sorteio||misturar(indices).slice(0,cap.exam.size||15);
+      indices=sorteio||sortearQuestoes(cap);
       if(!sorteio)guardado=null;
     }
     if(guardado){
@@ -1114,11 +1128,11 @@
   }
   function salvarTentativa(cap) {
     if(quiz.revisao)return;
-    estado.tentativas[cap.id]={indice:quiz.indice,acertos:quiz.acertos,erros:quiz.erros.map(function(e){return e.indiceOriginal;}),sorteio:cap.exam?quiz.indices:undefined};salvar();
+    estado.tentativas[cap.id]={indice:quiz.indice,acertos:quiz.acertos,erros:quiz.erros.map(function(e){return e.indiceOriginal;}),sorteio:cap.exam?quiz.indices:undefined,version:cap.assessmentVersion};salvar();
   }
   function perguntasAtuais(cap) { return quiz.revisao ? quiz.perguntas : quiz.indices.map(function(i){return cap.quiz[i];}); }
   function contextualizarQuestao(cap,q) {
-    var texto=q.q, imagem=q.image||null, imagemAlt=q.imageAlt||'', imagemCaption=q.imageCaption||'', contexto='', indice=cap.quiz.indexOf(q), plano=(typeof PEDAGOGY!=='undefined'&&PEDAGOGY[cap.id])||null, ajuste=plano&&plano.questions&&plano.questions[indice];
+    var texto=q.q, imagem=q.image||null, imagemAlt=q.imageAlt||'', imagemCaption=q.imageCaption||'', contexto=q.context||'', indice=cap.quiz.indexOf(q), plano=(typeof PEDAGOGY!=='undefined'&&PEDAGOGY[cap.id])||null, ajuste=plano&&plano.questions&&plano.questions[indice];
     if(ajuste){contexto=ajuste.context||'';texto=ajuste.prompt||texto;}
     if(/^Na tirinha,/i.test(texto)) texto=texto.replace(/^Na tirinha,/i,'Leia este diálogo de uma tirinha:');
     if(cap.id==='cie11' && /Antártica aparece completamente escura/i.test(texto)) texto='Uma imagem das luzes noturnas da Terra mostra onde há muitas cidades. Nela, a Antártica aparece completamente escura. Por quê?';
@@ -1146,7 +1160,7 @@
     if(contexto.imagem){
       card.appendChild(figuraOpcional(criar('figure','questao-contexto','<a href="'+textoSeguro(contexto.imagem)+'" target="_blank" rel="noopener" aria-label="Ampliar a ilustração"><img src="'+textoSeguro(contexto.imagem)+'" alt="'+textoSeguro(contexto.imagemAlt)+'" loading="lazy"></a><figcaption>'+textoSeguro(contexto.imagemCaption)+' Toque na imagem para ampliá-la.</figcaption>')));
     }
-    if(contexto.contexto)card.appendChild(criar('div','questao-contexto-texto','<span>Informações para pensar</span><p>'+textoSeguro(contexto.contexto)+'</p>'));
+    if(contexto.contexto)card.appendChild(criar('div','questao-contexto-texto','<span>'+(q.skill==='reading'?'Leia o texto em inglês':'Informações para pensar')+'</span><p'+(q.contextLang==='en'?' lang="en"':'')+'>'+textoSeguro(contexto.contexto)+'</p>'));
     if(q.from&&cap.exam)card.appendChild(criar('p','quiz-card__origem','Módulo: '+textoSeguro(q.from)));
     card.appendChild(criar('p','quiz-card__pergunta',textoSeguro(contexto.texto)));
     if(q.listen){var ouvir=botaoOuvir(q.listen,'Ouvir');ouvir.classList.add('ouvir--grande');card.appendChild(ouvir);}
@@ -1190,15 +1204,18 @@
       ordem.forEach(function(i,pos){var op=q.options[i];var b=criar('button','opcao','<span class="opcao__letra">'+String.fromCharCode(65+pos)+'</span><span>'+textoSeguro(op)+'</span>',{type:'button'});b.addEventListener('click',function(){if(bloqueado||b.disabled)return;if(i===q.answer){ops.querySelectorAll('button').forEach(function(x){x.disabled=true;});b.classList.add('opcao--certa');concluir(true,op,i);}else{errosMc++;errouAntes=true;registrarErro(op);b.disabled=true;b.classList.add('opcao--errada');mostrarNovaTentativa(errosMc===1?'Elimine esta alternativa e releia a pergunta.':q.explain||'Compare as alternativas que ainda restam.');if(errosMc===2)card.appendChild(falaMascote(q.explain||'Observe as palavras mais importantes da pergunta.',true));}});ops.appendChild(b);});card.appendChild(ops);
     } else {
       var tentativasTexto=0, numerica=/número|quantos|quantas|quanto|horas|segundos|dias/i.test(contexto.texto), linha=criar('div','campo-resposta'), campo=criar('input','campo',null,{type:'text',inputmode:numerica?'numeric':'text',autocomplete:'off',placeholder:numerica?'Escreva o número':'Escreva uma palavra ou frase curta','aria-label':'Sua resposta'}), enviar=criar('button','botao botao--primario','Conferir',{type:'button'});
-      function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[]);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(pistaRespostaAberta(q,numerica));campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
+      function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[],q.answerMode);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(pistaRespostaAberta(q,numerica));campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
     }
     card.appendChild(resposta);raiz.appendChild(card);
   }
   function normalizar(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();}
-  function validarResposta(v,aceitas){var a=normalizar(v);return aceitas.some(function(x){var b=normalizar(x);return a===b || (b.length>4 && a.indexOf(b)>=0);});}
+  function normalizarRespostaIngles(v){return normalizar(String(v).toLowerCase().replace(/[’‘]/g,"'").replace(/\bdidn't\b/g,'did not'));}
+  function validarResposta(v,aceitas,modo){if(modo==='english-exact'){var ingles=normalizarRespostaIngles(v);return aceitas.some(function(x){return ingles===normalizarRespostaIngles(x);});}var a=normalizar(v);return aceitas.some(function(x){var b=normalizar(x);return a===b || (b.length>4 && a.indexOf(b)>=0);});}
   function pistaRespostaAberta(q,numerica){if(numerica)return 'Volte aos números do enunciado e confira a operação ou a unidade pedida.';var alvo=normalizar((q.answers||[])[0]);return alvo?'A resposta começa com “'+alvo.charAt(0).toUpperCase()+'”. Releia a pergunta.':'Releia a pergunta e responda com poucas palavras.';}
   function categoriaQuestao(q) {
     var t=normalizar(q.q);
+    if(q.skill==='reading')return 'Reading: entender o texto';
+    if(q.skill==='use')return 'Use of English: vocabulário e gramática';
     if(q.listen)return 'Listening: ouvir e entender';
     if(/did|didn|past|passado|went|verbo|verb/.test(t)&&estado.disciplina==='ingles')return 'Grammar: simple past';
     if(estado.disciplina==='ingles'&&/texto|reading|museum|celebrations|brain/.test(t))return 'Reading: entender o texto';

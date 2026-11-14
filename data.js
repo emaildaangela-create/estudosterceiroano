@@ -152,7 +152,7 @@ const DISCIPLINAS = [
               "Para perguntar sobre algo que <strong>já aconteceu</strong> (no passado), começamos com <strong>Did</strong>: <strong>Did</strong> + pessoa + verbo + resto? Exemplo: <em>Did you wash your hands?</em>",
               "Depois de <strong>Did</strong>, o verbo fica na forma normal, sem mudar: <em>Did you <strong>brush</strong> your teeth?</em> (e não <em>brushed</em>).",
               "A <strong>resposta curta</strong> repete a pessoa e usa <strong>did</strong> ou <strong>didn't</strong>: <em>Yes, I did.</em> / <em>No, I didn't.</em> — <em>Did he take a shower?</em> → <em>Yes, he did.</em> ou <em>No, he didn't.</em>",
-              "<strong>Didn't</strong> é a forma curta de <strong>did not</strong>. Pense assim: <strong>did</strong> = sim, fiz; <strong>didn't</strong> = não fiz.",
+              "<strong>Did</strong> é o auxiliar usado nas perguntas e respostas curtas do passado. <strong>Didn't</strong> é a forma curta de <strong>did not</strong>. Na resposta curta, use <em>Yes, I did.</em> ou <em>No, I didn't.</em>",
               "Na música <em>Let's Move</em>: <em>Did you move your legs? Yes, I did! Did you eat a healthy snack? Oops, I forgot!</em>"
             ],
             "art": {
@@ -357,7 +357,8 @@ const DISCIPLINAS = [
               "O texto <em>Take Care of Your Brain!</em> diz que exercício é bom para o <strong>corpo</strong> e para o <strong>cérebro</strong> (brain). Só <strong>10 minutos</strong> por dia já ajudam o cérebro a pensar mais rápido.",
               "Ficar ao ar livre (<strong>outdoors</strong>), num lugar natural como a floresta, também faz bem: é o <strong>forest bath</strong> (banho de floresta).",
               "Rir também é bom! Quando você ri alto (<strong>laugh out loud</strong>), o cérebro recebe mais sangue e o corpo pode se sentir melhor por até <strong>45 minutos</strong>.",
-              "Curiosidade: <strong>gelotologist</strong> é a pessoa que estuda os efeitos do riso no corpo humano."
+              "Curiosidade: <strong>gelotologist</strong> é a pessoa que estuda os efeitos do riso no corpo humano.",
+              "<strong>Treino de leitura:</strong> <span lang=\"en\">Mia gets exercise in the park every day. She stretches her arms and bends her knees. After exercise, she drinks water and gets rest. She likes the park because she can spend time outdoors with her friends.</span>"
             ],
             "art": {
               "scenes": [
@@ -423,6 +424,14 @@ const DISCIPLINAS = [
               {
                 "base": "back",
                 "result": "costas 🎒"
+              },
+              {
+                "base": "chest",
+                "result": "peito 🫁"
+              },
+              {
+                "base": "muscle",
+                "result": "músculo 💪"
               }
             ]
           },
@@ -478,7 +487,7 @@ const DISCIPLINAS = [
                 "cat": 1
               },
               {
-                "text": "I sleep nine hours. I get __ sleep. 😴",
+                "text": "I sleep well and feel rested. I get __ sleep. 😴",
                 "cat": 2
               },
               {
@@ -490,7 +499,7 @@ const DISCIPLINAS = [
                 "cat": 1
               },
               {
-                "text": "I drink eight glasses of water. That's __ water. 💧",
+                "text": "I drink the water I need. I get __ water: just the right amount. 💧",
                 "cat": 2
               },
               {
@@ -498,7 +507,7 @@ const DISCIPLINAS = [
                 "cat": 0
               },
               {
-                "text": "I play outside every day. I get __ exercise. ⚽",
+                "text": "I get __ exercise: just the right amount, not too little. ⚽",
                 "cat": 2
               }
             ]
@@ -560,7 +569,8 @@ const DISCIPLINAS = [
               "costas"
             ],
             "answer": 0,
-            "explain": "Elbow é o cotovelo. Knee é joelho, shoulder é ombro e back são as costas."
+            "explain": "Elbow é o cotovelo. Knee é joelho, shoulder é ombro e back são as costas.",
+            "skill": "listening"
           },
           {
             "type": "mc",
@@ -572,7 +582,8 @@ const DISCIPLINAS = [
               "bones"
             ],
             "answer": 0,
-            "explain": "Toes são os dedos dos pés. Fingers são os dedos das mãos."
+            "explain": "Toes são os dedos dos pés. Fingers são os dedos das mãos.",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -584,7 +595,9 @@ const DISCIPLINAS = [
               "Yes, I brush."
             ],
             "answer": 0,
-            "explain": "Pergunta com Did pede resposta curta com did: Yes, I did. Didn't seria se você NÃO tivesse escovado."
+            "explain": "Pergunta com Did pede resposta curta com did: Yes, I did. Didn't seria se você NÃO tivesse escovado.",
+            "focus": "did-short",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -596,7 +609,9 @@ const DISCIPLINAS = [
               "No, she didn't."
             ],
             "answer": 0,
-            "explain": "A pergunta fala de he (ele) e a resposta é não: No, he didn't. A resposta repete a mesma pessoa da pergunta."
+            "explain": "A pergunta fala de he (ele) e a resposta é não: No, he didn't. A resposta repete a mesma pessoa da pergunta.",
+            "focus": "did-short",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -608,7 +623,9 @@ const DISCIPLINAS = [
               "Are"
             ],
             "answer": 0,
-            "explain": "Yesterday (ontem) mostra que é passado. Para perguntar no passado usamos Did."
+            "explain": "Yesterday (ontem) mostra que é passado. Para perguntar no passado usamos Did.",
+            "focus": "did-short",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -620,19 +637,23 @@ const DISCIPLINAS = [
               "She did eat fruit?"
             ],
             "answer": 0,
-            "explain": "Depois de Did, o verbo fica na forma normal: Did she eat fruit? (e não ate nem eats)."
+            "explain": "Depois de Did, o verbo fica na forma normal: Did she eat fruit? (e não ate nem eats).",
+            "focus": "did-short",
+            "skill": "use"
           },
           {
             "type": "mc",
-            "q": "Complete: “I don't watch ________ TV. Only one hour a day.”",
+            "q": "Complete com a ideia de excesso: “I don't watch ______ TV. I watch a little.”",
             "options": [
               "too much",
               "too many",
-              "enough",
-              "a"
+              "a",
+              "an"
             ],
             "answer": 0,
-            "explain": "TV não se conta uma por uma, então usamos too much. A frase diz que a pessoa NÃO vê TV demais."
+            "explain": "Too much indica excesso com TV; too many acompanha nomes contáveis no plural.",
+            "focus": "too-enough",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -643,12 +664,14 @@ const DISCIPLINAS = [
               "enough",
               "an"
             ],
-            "answer": 1,
-            "explain": "Chips são coisas que podemos contar (um, dois, três salgadinhos), então usamos too many."
+            "answer": 0,
+            "explain": "Chips são coisas que podemos contar (um, dois, três salgadinhos), então usamos too many.",
+            "focus": "too-enough",
+            "skill": "use"
           },
           {
             "type": "mc",
-            "q": "“I sleep nine hours every night. I get ________ sleep.” Qual palavra mostra que está na medida certa?",
+            "q": "“I sleep well and feel rested. I get ______ sleep.” Qual palavra significa “o suficiente”?",
             "options": [
               "too much",
               "too many",
@@ -656,7 +679,9 @@ const DISCIPLINAS = [
               "junk"
             ],
             "answer": 2,
-            "explain": "Enough quer dizer o suficiente, a quantidade certa."
+            "explain": "Enough quer dizer o suficiente, a quantidade certa.",
+            "focus": "too-enough",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -668,7 +693,8 @@ const DISCIPLINAS = [
               "get enough rest"
             ],
             "answer": 0,
-            "explain": "Comer junk food (porcarias) todo dia não faz bem. Os outros são bons hábitos."
+            "explain": "Comer junk food (porcarias) todo dia não faz bem. Os outros são bons hábitos.",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -681,31 +707,38 @@ const DISCIPLINAS = [
               "Mexa os dedos!"
             ],
             "answer": 0,
-            "explain": "Stretch é esticar, e arms são os braços. Dobrar seria bend."
+            "explain": "Stretch é esticar, e arms são os braços. Dobrar seria bend.",
+            "skill": "listening"
           },
           {
             "type": "mc",
-            "q": "Segundo o texto “Take Care of Your Brain!”, quantos minutos de exercício por dia já ajudam o cérebro?",
+            "q": "Leia o texto. What does Mia do after exercise?",
             "options": [
-              "10 minutos",
-              "45 minutos",
-              "2 horas",
-              "10 horas"
+              "She drinks water and gets rest.",
+              "She watches TV and eats cookies.",
+              "She visits a museum with her sister.",
+              "She goes to a party at school."
             ],
             "answer": 0,
-            "explain": "O texto diz que só ten minutes (10 minutos) por dia já fazem o corpo e o cérebro se sentirem melhor. Os 45 minutos são o tempo que o corpo fica bem depois de uma boa risada."
+            "explain": "O texto informa que, depois de se exercitar, Mia bebe água e descansa. Localize a frase com After exercise.",
+            "context": "Mia gets exercise in the park every day. She stretches her arms and bends her knees. After exercise, she drinks water and gets rest. She likes the park because she can spend time outdoors with her friends.",
+            "contextLang": "en",
+            "skill": "reading"
           },
           {
             "type": "mc",
-            "q": "No texto, o que é um “forest bath”?",
+            "q": "Leia o texto. Why does Mia like the park?",
             "options": [
-              "Passar um tempo na natureza",
-              "Tomar banho de chuveiro",
-              "Nadar na piscina",
-              "Lavar as mãos"
+              "She can be outdoors with friends.",
+              "She can watch TV with her family.",
+              "She can see a movie with friends.",
+              "She can eat cake at a party."
             ],
             "answer": 0,
-            "explain": "Forest bath (banho de floresta) é passar um tempo ao ar livre, em um lugar natural como a floresta. Isso relaxa o cérebro."
+            "explain": "A frase com because explica a razão: ela gosta de passar tempo ao ar livre com os amigos.",
+            "context": "Mia gets exercise in the park every day. She stretches her arms and bends her knees. After exercise, she drinks water and gets rest. She likes the park because she can spend time outdoors with her friends.",
+            "contextLang": "en",
+            "skill": "reading"
           },
           {
             "type": "text",
@@ -713,12 +746,52 @@ const DISCIPLINAS = [
             "answers": [
               "knee",
               "a knee",
-              "the knee",
-              "knees"
+              "the knee"
             ],
-            "explain": "Joelho em inglês é knee (o k não é pronunciado: /ni:/)."
+            "explain": "Joelho em inglês é knee (o k não é pronunciado: /ni:/).",
+            "skill": "use",
+            "answerMode": "english-exact"
+          },
+          {
+            "type": "mc",
+            "q": "Ouça o diálogo. What did Leo do yesterday?",
+            "options": [
+              "He rode his bike.",
+              "He watched a movie.",
+              "He ate out.",
+              "He went fishing."
+            ],
+            "answer": 0,
+            "explain": "Leo responde que andou de bicicleta. Ele diz que não assistiu TV.",
+            "listen": "Mia: Did you ride your bike yesterday? Leo: Yes, I did. Mia: Did you watch TV? Leo: No, I did not.",
+            "skill": "listening"
+          },
+          {
+            "type": "text",
+            "q": "Responda com uma resposta curta negativa: “Did she wash her hands?” ❌",
+            "answers": [
+              "No, she didn't."
+            ],
+            "explain": "A resposta curta mantém she e usa didn't: No, she didn't.",
+            "skill": "use",
+            "focus": "did-short",
+            "answerMode": "english-exact"
+          },
+          {
+            "type": "mc",
+            "q": "Complete: “______ your knees!” (Dobre os joelhos.)",
+            "options": [
+              "Bend",
+              "Stretch",
+              "Drink",
+              "Rest"
+            ],
+            "answer": 0,
+            "explain": "Bend significa dobrar. Stretch significa esticar.",
+            "skill": "use"
           }
-        ]
+        ],
+        "assessmentVersion": 1
       },
       {
         "id": "ing08",
@@ -1050,7 +1123,8 @@ const DISCIPLINAS = [
               "O texto compara duas celebrações. No <strong>Day of the Dead</strong> (Dia dos Mortos), no <strong>México</strong>, as famílias lembram pessoas queridas que morreram. O livro destaca 1º de novembro; as tradições acontecem entre o fim de outubro e o início de novembro e variam entre comunidades.",
               "Flores, velas, alimentos e retratos podem fazer parte das homenagens. O livro descreve famílias levando um banquete (<strong>a big feast</strong>) ao cemitério. As caveiras decoradas fazem parte da celebração e da memória; não representam uma festa de terror.",
               "O <strong>Yi Peng</strong>, na <strong>Tailândia</strong>, também acontece em novembro. Tem desfile, fantasias bonitas e milhares de <strong>lanternas de papel de arroz</strong> que sobem ao céu. As pessoas acreditam que as lanternas levam embora as coisas ruins. No último dia há fogos de artifício.",
-              "Na escrita do Hiro, <em>The Sapporo Snow Festival</em>, ele usa o passado: <em>I <strong>went</strong>… I <strong>wore</strong> a snowsuit… We <strong>saw</strong> snow sculptures… We <strong>played</strong>… We <strong>listened</strong>, <strong>ate</strong> and <strong>drank</strong>…</em>"
+              "Na escrita do Hiro, <em>The Sapporo Snow Festival</em>, ele usa o passado: <em>I <strong>went</strong>… I <strong>wore</strong> a snowsuit… We <strong>saw</strong> snow sculptures… We <strong>played</strong>… We <strong>listened</strong>, <strong>ate</strong> and <strong>drank</strong>…</em>",
+              "<strong>Treino de leitura:</strong> <span lang=\"en\">In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things.</span>"
             ],
             "art": {
               "scenes": [
@@ -1108,6 +1182,10 @@ const DISCIPLINAS = [
               [
                 "Many people walk, dance and play music on the street. 🎺",
                 "a parade"
+              ],
+              [
+                "You hang these colorful things to make a party room look special. 🎊",
+                "decorations"
               ]
             ]
           },
@@ -1148,6 +1226,14 @@ const DISCIPLINAS = [
               {
                 "base": "give",
                 "result": "gave"
+              },
+              {
+                "base": "have",
+                "result": "had"
+              },
+              {
+                "base": "take",
+                "result": "took"
               }
             ]
           },
@@ -1206,29 +1292,70 @@ const DISCIPLINAS = [
             ],
             "items": [
               {
-                "text": "It is a big festival in Mexico.",
+                "text": "Families share a feast at the cemetery.",
                 "cat": 0
               },
               {
-                "text": "It happens in Thailand.",
+                "text": "It is celebrated in Thailand.",
                 "cat": 1
               },
               {
-                "text": "Families take a big feast to the cemetery.",
+                "text": "Families remember relatives who died.",
                 "cat": 0
               },
               {
-                "text": "Thousands of lanterns go up into the sky.",
+                "text": "Paper lanterns rise into the sky.",
                 "cat": 1
               },
               {
-                "text": "People give candy and chocolate skulls.",
+                "text": "Some people give candy skulls.",
                 "cat": 0
               },
               {
-                "text": "Lanterns take away the bad things.",
+                "text": "People believe the lanterns take away bad things.",
                 "cat": 1
               }
+            ],
+            "context": "In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things."
+          },
+          {
+            "type": "pairs",
+            "title": "Questions and long answers",
+            "short": "Respostas completas",
+            "instructions": "Escolha a resposta completa para cada pergunta. Todas as pistas indicam que a ação aconteceu.",
+            "pairs": [
+              [
+                "Did you watch the parade? ✅",
+                "Yes, I watched the parade."
+              ],
+              [
+                "Did they play games at the party? ✅",
+                "Yes, they played games at the party."
+              ],
+              [
+                "Did she listen to music? ✅",
+                "Yes, she listened to music."
+              ],
+              [
+                "Did he dance at the festival? ✅",
+                "Yes, he danced at the festival."
+              ],
+              [
+                "Did you see the fireworks? ✅",
+                "Yes, I saw the fireworks."
+              ],
+              [
+                "Did she wear a costume? ✅",
+                "Yes, she wore a costume."
+              ],
+              [
+                "Did they eat cake? ✅",
+                "Yes, they ate cake."
+              ],
+              [
+                "Did he take a present to the party? ✅",
+                "Yes, he took a present to the party."
+              ]
             ]
           }
         ],
@@ -1244,7 +1371,8 @@ const DISCIPLINAS = [
               "um banquete"
             ],
             "answer": 0,
-            "explain": "Parade é desfile. Convite é invitation, fantasia é costume e banquete é feast."
+            "explain": "Parade é desfile. Convite é invitation, fantasia é costume e banquete é feast.",
+            "skill": "listening"
           },
           {
             "type": "mc",
@@ -1256,7 +1384,8 @@ const DISCIPLINAS = [
               "masks"
             ],
             "answer": 0,
-            "explain": "Candles (velas) são compridas e finas e vão em cima do bolo de aniversário."
+            "explain": "Candles (velas) são compridas e finas e vão em cima do bolo de aniversário.",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1268,7 +1397,8 @@ const DISCIPLINAS = [
               "watchs"
             ],
             "answer": 0,
-            "explain": "Watch é regular: ganha -ed e vira watched."
+            "explain": "Watch é regular: ganha -ed e vira watched.",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1280,7 +1410,8 @@ const DISCIPLINAS = [
               "goes"
             ],
             "answer": 0,
-            "explain": "Go é irregular: no passado vira went. Exemplo: I went to the parade."
+            "explain": "Go é irregular: no passado vira went. Exemplo: I went to the parade.",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1292,7 +1423,9 @@ const DISCIPLINAS = [
               "Yes, I seeing the fireworks."
             ],
             "answer": 0,
-            "explain": "See é irregular. No passado vira saw: Yes, I saw the fireworks."
+            "explain": "See é irregular. No passado vira saw: Yes, I saw the fireworks.",
+            "focus": "past-irregular-long",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1304,7 +1437,9 @@ const DISCIPLINAS = [
               "Yes, I eaten a piece of cake."
             ],
             "answer": 0,
-            "explain": "Eat é irregular: o passado é ate."
+            "explain": "Eat é irregular: o passado é ate.",
+            "focus": "past-irregular-long",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1316,7 +1451,8 @@ const DISCIPLINAS = [
               "dresses up"
             ],
             "answer": 0,
-            "explain": "Yesterday mostra que é passado. Dress é regular: dress up vira dressed up."
+            "explain": "Yesterday mostra que é passado. Dress é regular: dress up vira dressed up.",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1328,7 +1464,8 @@ const DISCIPLINAS = [
               "listen"
             ],
             "answer": 0,
-            "explain": "Sing vira sang no passado (muda de forma). Os outros ganham -ed: played, danced, listened."
+            "explain": "Sing vira sang no passado (muda de forma). Os outros ganham -ed: played, danced, listened.",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1341,43 +1478,53 @@ const DISCIPLINAS = [
               "drinks"
             ],
             "answer": 0,
-            "explain": "Você ouviu drink (beber). No passado ele vira drank."
+            "explain": "Você ouviu drink (beber). No passado ele vira drank.",
+            "skill": "listening"
           },
           {
             "type": "mc",
-            "q": "Segundo o texto “November Celebrations”, onde acontece o Day of the Dead?",
+            "q": "Leia o texto. Where do families share a feast during the Day of the Dead?",
             "options": [
-              "In Mexico",
-              "In Thailand",
-              "In Brazil",
-              "In Japan"
+              "At the cemetery.",
+              "At the cinema.",
+              "At the swimming pool.",
+              "At the beach."
             ],
             "answer": 0,
-            "explain": "O Day of the Dead é um grande festival no México, no primeiro dia de novembro."
+            "explain": "O texto localiza o banquete no cemitério: at the cemetery.",
+            "context": "In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things.",
+            "contextLang": "en",
+            "skill": "reading"
           },
           {
             "type": "mc",
-            "q": "No texto, o Day of the Dead é uma festa triste?",
+            "q": "Leia o texto. Who do families remember during the Day of the Dead?",
             "options": [
-              "Não, é uma festa alegre",
-              "Sim, é muito triste",
-              "Sim, porque é assustadora",
-              "Não, porque ninguém vai"
+              "Relatives who died.",
+              "Players who won a game.",
+              "Friends at the cinema.",
+              "Children at a museum."
             ],
             "answer": 0,
-            "explain": "O texto diz que para os mexicanos caveiras e esqueletos não são assustadores e que a festa é a time for fun and happy celebrations."
+            "explain": "A primeira frase informa que as famílias lembram parentes que morreram: relatives who died.",
+            "context": "In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things.",
+            "contextLang": "en",
+            "skill": "reading"
           },
           {
             "type": "mc",
-            "q": "No festival Yi Peng, na Tailândia, o que milhares de pessoas soltam no céu?",
+            "q": "Leia o texto. What rises into the sky at Yi Peng?",
             "options": [
-              "lanterns",
-              "balloons",
-              "masks",
-              "presents"
+              "Paper lanterns.",
+              "Birthday balloons.",
+              "Colorful costumes.",
+              "Candy skulls."
             ],
             "answer": 0,
-            "explain": "Thousands of bright lanterns go up into the sky. As pessoas acreditam que elas levam embora as coisas ruins."
+            "explain": "O texto diz que as lanternas de papel sobem ao céu: paper lanterns rise into the sky.",
+            "context": "In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things.",
+            "contextLang": "en",
+            "skill": "reading"
           },
           {
             "type": "text",
@@ -1385,9 +1532,86 @@ const DISCIPLINAS = [
             "answers": [
               "played"
             ],
-            "explain": "Play é regular: play + ed = played. Exemplo: After dinner all the children played games."
+            "explain": "Play é regular: play + ed = played. Exemplo: After dinner all the children played games.",
+            "skill": "use",
+            "answerMode": "english-exact"
+          },
+          {
+            "type": "mc",
+            "q": "Did they watch the parade? ✅ Escolha a resposta completa.",
+            "options": [
+              "Yes, they watched the parade.",
+              "Yes, they watch the parade.",
+              "Yes, they watching the parade.",
+              "Yes, they watches the parade."
+            ],
+            "answer": 0,
+            "explain": "Na pergunta, Did acompanha watch. Na resposta afirmativa, watch vira watched.",
+            "focus": "past-regular-long",
+            "skill": "use"
+          },
+          {
+            "type": "text",
+            "q": "Complete a resposta com a frase inteira: “Did you play games?” ✅ Comece com “Yes, I…” e use play games.",
+            "answers": [
+              "Yes, I played games."
+            ],
+            "explain": "Play é regular: a resposta completa é Yes, I played games.",
+            "skill": "use",
+            "focus": "past-regular-long",
+            "answerMode": "english-exact"
+          },
+          {
+            "type": "text",
+            "q": "Responda com a frase inteira: “Did she dance at the party?” ✅ Comece com “Yes, she…” e use dance at the party.",
+            "answers": [
+              "Yes, she danced at the party."
+            ],
+            "explain": "Dance já termina em e; acrescentamos d: Yes, she danced at the party.",
+            "skill": "use",
+            "focus": "past-regular-long",
+            "answerMode": "english-exact"
+          },
+          {
+            "type": "text",
+            "q": "Responda com a frase inteira: “Did he go to the festival?” ✅ Comece com “Yes, he…” e use go to the festival.",
+            "answers": [
+              "Yes, he went to the festival."
+            ],
+            "explain": "Go muda para went na resposta afirmativa: Yes, he went to the festival.",
+            "skill": "use",
+            "focus": "past-irregular-long",
+            "answerMode": "english-exact"
+          },
+          {
+            "type": "mc",
+            "q": "Ouça o relato. What did Ana see at the festival?",
+            "options": [
+              "She saw fireworks.",
+              "She saw dinosaurs.",
+              "She saw fish.",
+              "She saw stars in a planetarium."
+            ],
+            "answer": 0,
+            "explain": "Ana diz I saw fireworks. Ela também conta que dançou e comeu bolo.",
+            "listen": "Yesterday I went to a festival with my family. I danced and ate cake. At night, I saw fireworks. It was exciting!",
+            "skill": "listening"
+          },
+          {
+            "type": "mc",
+            "q": "Complete a pergunta: “______ she ______ a costume at the party?”",
+            "options": [
+              "Did / wear",
+              "Did / wore",
+              "Does / wore",
+              "Did / wears"
+            ],
+            "answer": 0,
+            "explain": "A pergunta usa Did + pessoa + verbo na forma base: Did she wear a costume?",
+            "skill": "use"
           }
-        ]
+        ],
+        "assessmentVersion": 1
       },
       {
         "id": "ing09",
@@ -1692,7 +1916,8 @@ const DISCIPLINAS = [
               "O texto fala do <strong>Children's Museum</strong> (Museu das Crianças) em <strong>Indianapolis, USA</strong>. Do lado de fora há <strong>modelos gigantes de dinossauros</strong>: alguns parecem fugir e outros olham pela janela.",
               "Dentro do museu há fósseis de dinossauros de verdade e salas de ciência, arte, cultura e história. Na exposição <em>Treasures of the Earth</em> aprende-se sobre a história do <strong>Egito</strong>.",
               "Você pode aprender sobre as estrelas no <strong>planetarium</strong> (planetário), ir ao <strong>theater</strong> (teatro) e até fazer <strong>rock climbing</strong> (escalada)!",
-              "Na escrita <em>My Perfect Weekend</em>, Hassan usa palavras de sequência: <strong>first</strong> (primeiro), <strong>then</strong> (então), <strong>next</strong> (em seguida) e <strong>after that</strong> (depois disso)."
+              "<strong>Complemento de leitura:</strong> palavras como <em>first</em>, <em>then</em>, <em>next</em> e <em>after that</em> ajudam a acompanhar a ordem dos acontecimentos. Para esta prova, priorize compreender as atividades e dizer o que aconteceu ou não aconteceu com <strong>didn't + verbo na forma base</strong>.",
+              "<strong>Treino de leitura:</strong> <span lang=\"en\">On Saturday, Ben visited a museum with his sister. They saw dinosaur fossils. Then they went to the planetarium and learned about the stars. They wanted to see a play, but the theater was closed. They did not go to the theater.</span>"
             ],
             "art": {
               "scenes": [
@@ -1762,62 +1987,62 @@ const DISCIPLINAS = [
             ],
             "items": [
               {
-                "text": "It was raining. We __ on a picnic. 🌧️",
+                "text": "We canceled our picnic because of the rain. We __ on a picnic. 🌧️",
                 "cat": 1
               },
               {
-                "text": "We __ to the movies. We saw a great movie! 🎬",
+                "text": "We __ to the movies. We watched a film at the cinema! 🎬",
                 "cat": 0
               },
               {
-                "text": "The weather was bad. We __ to the beach. ⛈️",
+                "text": "The beach trip was canceled. We __ to the beach. ⛈️",
                 "cat": 1
               },
               {
-                "text": "Last Sunday I __ fishing with my dad. 🎣",
+                "text": "Last Sunday I __ fishing with my dad. We caught two fish! 🎣",
                 "cat": 0
               },
               {
-                "text": "I was sick. I __ to the party. 🤒",
+                "text": "I was sick and stayed home all day. I __ to the party. 🤒",
                 "cat": 1
               },
               {
-                "text": "We __ swimming. The water was great! 🏊",
+                "text": "We __ swimming. We swam in the pool for an hour! 🏊",
                 "cat": 0
               }
             ]
           },
           {
             "type": "pairs",
-            "title": "Win or lose?",
-            "short": "Ganhar ou perder",
-            "instructions": "Escolha a frase que completa a história.",
+            "title": "What did they do?",
+            "short": "Histórias do fim de semana",
+            "instructions": "Leia o que aconteceu e escolha a frase que expressa a mesma informação.",
             "pairs": [
               [
-                "We played basketball on Saturday. We lost!",
+                "Our team lost the game.",
                 "We didn't win."
               ],
               [
-                "I went to the game. It was great!",
+                "Our team won the final game.",
                 "We won!"
               ],
               [
-                "On Sunday we had lunch at home.",
+                "We had every meal at home on Sunday.",
                 "We didn't eat out."
               ],
               [
-                "Yesterday I played video games.",
+                "The TV was broken. I played video games on my computer instead.",
                 "I didn't watch TV."
               ],
               [
-                "Monday we didn't eat out.",
+                "We took a blanket and lunch to the park and ate on the grass.",
                 "We went on a picnic."
               ]
             ]
           },
           {
             "type": "sort",
-            "title": "Free time or not?",
+            "title": "How did they feel?",
             "short": "Descrever o fim de semana",
             "instructions": "A frase descreve um fim de semana divertido ou chato?",
             "categories": [
@@ -1826,29 +2051,61 @@ const DISCIPLINAS = [
             ],
             "items": [
               {
-                "text": "We won the game! We sang and shouted a lot!",
+                "text": "The game was exciting! We cheered and shouted. 🤩",
                 "cat": 0
               },
               {
-                "text": "I didn't do anything special.",
+                "text": "I was bored all day. Nothing interested me. 🥱",
                 "cat": 1
               },
               {
-                "text": "We saw giant dinosaurs at the museum!",
+                "text": "The museum visit was exciting. I loved the dinosaurs! 🦖",
                 "cat": 0
               },
               {
-                "text": "It rained. I didn't go out.",
+                "text": "The film was boring. I wanted it to end. 🥱",
                 "cat": 1
               },
               {
-                "text": "I went rock climbing for the first time!",
+                "text": "I stayed home and played a new game. It was exciting! 🎮",
                 "cat": 0
               },
               {
-                "text": "I stayed home alone all day.",
+                "text": "I went out, but the show was boring. I felt bored. 🥱",
                 "cat": 1
               }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Long answers with didn't",
+            "short": "Frases com didn’t",
+            "instructions": "Escolha a resposta completa. ❌ indica que a ação não aconteceu.",
+            "pairs": [
+              [
+                "Did you go swimming? ❌",
+                "No, I didn't go swimming."
+              ],
+              [
+                "Did she eat out? ❌",
+                "No, she didn't eat out."
+              ],
+              [
+                "Did they visit a museum? ❌",
+                "No, they didn't visit a museum."
+              ],
+              [
+                "Did he text his friends? ❌",
+                "No, he didn't text his friends."
+              ],
+              [
+                "Did you win the game? ❌",
+                "No, I didn't win the game."
+              ],
+              [
+                "Did they go horseback riding? ❌",
+                "No, they didn't go horseback riding."
+              ]
             ]
           }
         ],
@@ -1864,7 +2121,8 @@ const DISCIPLINAS = [
               "patinar no gelo"
             ],
             "answer": 0,
-            "explain": "Go hiking é fazer trilha (caminhar na natureza). Pescar é go fishing, nadar é go swimming e patinar no gelo é go ice skating."
+            "explain": "Go hiking é fazer trilha (caminhar na natureza). Pescar é go fishing, nadar é go swimming e patinar no gelo é go ice skating.",
+            "skill": "listening"
           },
           {
             "type": "mc",
@@ -1876,11 +2134,12 @@ const DISCIPLINAS = [
               "eat out"
             ],
             "answer": 0,
-            "explain": "Go to the movies = ir ao cinema."
+            "explain": "Go to the movies = ir ao cinema.",
+            "skill": "use"
           },
           {
             "type": "mc",
-            "q": "Complete: “We ________ on a picnic because it was raining!”",
+            "q": "O piquenique foi cancelado por causa da chuva. Complete: “We ______ on a picnic.”",
             "options": [
               "didn't go",
               "went",
@@ -1888,7 +2147,8 @@ const DISCIPLINAS = [
               "didn't went"
             ],
             "answer": 0,
-            "explain": "Com chuva o piquenique não aconteceu, então usamos didn't go. Didn't went está errado: depois de didn't o verbo fica normal."
+            "explain": "A pista informa que o passeio foi cancelado: didn't go. Depois de didn't usamos go, nunca went.",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1900,7 +2160,8 @@ const DISCIPLINAS = [
               "didn't lose"
             ],
             "answer": 0,
-            "explain": "Se perderam (lost), então não ganharam: didn't win."
+            "explain": "Se perderam (lost), então não ganharam: didn't win.",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1912,7 +2173,9 @@ const DISCIPLINAS = [
               "I not watch TV."
             ],
             "answer": 0,
-            "explain": "Depois de didn't o verbo fica na forma normal: I didn't watch TV."
+            "explain": "Depois de didn't o verbo fica na forma normal: I didn't watch TV.",
+            "focus": "didnt-long",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1924,7 +2187,8 @@ const DISCIPLINAS = [
               "It is Monday and it is sunny."
             ],
             "answer": 0,
-            "explain": "How was…? pergunta como foi. A resposta descreve o fim de semana: It was boring (foi chato)."
+            "explain": "How was…? pergunta como foi. A resposta descreve o fim de semana: It was boring (foi chato).",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1936,7 +2200,8 @@ const DISCIPLINAS = [
               "Yes, I did."
             ],
             "answer": 0,
-            "explain": "Last weekend é passado, então a resposta usa went: I went swimming."
+            "explain": "Last weekend é passado, então a resposta usa went: I went swimming.",
+            "skill": "use"
           },
           {
             "type": "mc",
@@ -1949,7 +2214,9 @@ const DISCIPLINAS = [
               "Fiquei em casa e cozinhei."
             ],
             "answer": 0,
-            "explain": "Didn't eat out = não comi fora. Stayed home = fiquei em casa."
+            "explain": "Didn't eat out = não comi fora. Stayed home = fiquei em casa.",
+            "focus": "didnt-long",
+            "skill": "listening"
           },
           {
             "type": "mc",
@@ -1961,55 +2228,127 @@ const DISCIPLINAS = [
               "interesting"
             ],
             "answer": 0,
-            "explain": "Exciting = emocionante. Boring = chato, busy = ocupado, interesting = interessante."
+            "explain": "Exciting = emocionante. Boring = chato, busy = ocupado, interesting = interessante.",
+            "skill": "use"
           },
           {
             "type": "mc",
-            "q": "Segundo o texto “Wow! Look at That!”, onde fica o Children's Museum?",
+            "q": "Leia o texto. Where did Ben learn about the stars?",
             "options": [
-              "In Indianapolis, USA",
-              "In Mexico City",
-              "In Thailand",
-              "In Rio de Janeiro"
+              "In the planetarium.",
+              "In the theater.",
+              "At the beach.",
+              "At a birthday party."
             ],
             "answer": 0,
-            "explain": "The Children's Museum fica em Indianapolis, nos Estados Unidos (USA)."
+            "explain": "O texto diz que Ben e a irmã foram ao planetário e aprenderam sobre as estrelas.",
+            "context": "On Saturday, Ben visited a museum with his sister. They saw dinosaur fossils. Then they went to the planetarium and learned about the stars. They wanted to see a play, but the theater was closed. They did not go to the theater.",
+            "contextLang": "en",
+            "skill": "reading"
           },
           {
             "type": "mc",
-            "q": "No Children's Museum, onde você aprende sobre as estrelas?",
+            "q": "Leia o texto. Why didn't Ben go to the theater?",
             "options": [
-              "in the planetarium",
-              "in the theater",
-              "outside the museum",
-              "at the beach"
+              "The theater was closed.",
+              "He did not like dinosaurs.",
+              "He wanted to go fishing.",
+              "His sister stayed home."
             ],
             "answer": 0,
-            "explain": "You can learn about the stars in the planetarium (planetário)."
+            "explain": "O teatro estava fechado. A palavra but apresenta o obstáculo ao plano de assistir à peça.",
+            "context": "On Saturday, Ben visited a museum with his sister. They saw dinosaur fossils. Then they went to the planetarium and learned about the stars. They wanted to see a play, but the theater was closed. They did not go to the theater.",
+            "contextLang": "en",
+            "skill": "reading"
           },
           {
             "type": "mc",
-            "q": "Qual palavra Hassan usa para dizer a ordem das coisas no texto “My Perfect Weekend”?",
+            "q": "Leia o texto. Which activity did Ben NOT do?",
             "options": [
-              "first",
-              "busy",
-              "lose",
-              "boring"
+              "Go to the theater.",
+              "Visit a museum.",
+              "See dinosaur fossils.",
+              "Go to the planetarium."
             ],
             "answer": 0,
-            "explain": "First, then, next e after that mostram quando as coisas aconteceram: First I ate my favorite breakfast. After that I went fishing."
+            "explain": "Ben realizou as outras três atividades. O texto informa que ele não foi ao teatro.",
+            "context": "On Saturday, Ben visited a museum with his sister. They saw dinosaur fossils. Then they went to the planetarium and learned about the stars. They wanted to see a play, but the theater was closed. They did not go to the theater.",
+            "contextLang": "en",
+            "skill": "reading"
           },
           {
             "type": "text",
             "q": "Escreva em inglês: “nadar”, usando go + -ing.",
             "answers": [
-              "go swimming",
-              "swimming",
-              "went swimming"
+              "go swimming"
             ],
-            "explain": "Go swimming. No passado: I went swimming."
+            "explain": "A instrução pede go + -ing: go swimming. Swimming sozinho não inclui go; went swimming está no passado.",
+            "skill": "use",
+            "answerMode": "english-exact"
+          },
+          {
+            "type": "text",
+            "q": "Responda com a frase inteira: “Did you go hiking?” ❌ Comece com “No, I…” e use go hiking.",
+            "answers": [
+              "No, I didn't go hiking."
+            ],
+            "explain": "Depois de didn't, use go: No, I didn't go hiking.",
+            "skill": "use",
+            "focus": "didnt-long",
+            "answerMode": "english-exact"
+          },
+          {
+            "type": "text",
+            "q": "Responda com a frase inteira: “Did she eat out?” ❌ Comece com “No, she…” e use eat out.",
+            "answers": [
+              "No, she didn't eat out."
+            ],
+            "explain": "Depois de didn't, use eat, não ate: No, she didn't eat out.",
+            "skill": "use",
+            "focus": "didnt-long",
+            "answerMode": "english-exact"
+          },
+          {
+            "type": "text",
+            "q": "Responda com a frase inteira: “Did they visit a museum?” ❌ Comece com “No, they…” e use visit a museum.",
+            "answers": [
+              "No, they didn't visit a museum."
+            ],
+            "explain": "A resposta mantém they e usa didn't visit: No, they didn't visit a museum.",
+            "skill": "use",
+            "focus": "didnt-long",
+            "answerMode": "english-exact"
+          },
+          {
+            "type": "mc",
+            "q": "Ouça o diálogo. What did Sam do on Sunday?",
+            "options": [
+              "He went fishing.",
+              "He went swimming.",
+              "He went to the movies.",
+              "He went ice skating."
+            ],
+            "answer": 0,
+            "explain": "Sam diz que não foi nadar. Ele foi pescar com o pai.",
+            "listen": "Emma: Did you go swimming on Sunday? Sam: No, I did not go swimming. I went fishing with my dad. Emma: Did you catch any fish? Sam: Yes, I did.",
+            "skill": "listening"
+          },
+          {
+            "type": "mc",
+            "q": "“Lia texted her friends yesterday.” Qual frase diz que ela NÃO fez isso?",
+            "options": [
+              "She didn't text her friends yesterday.",
+              "She didn't texted her friends yesterday.",
+              "She doesn't texted her friends yesterday.",
+              "She did text her friends yesterday."
+            ],
+            "answer": 0,
+            "explain": "Didn't pede a forma base text, sem -ed. She did text é afirmativa, não negativa.",
+            "focus": "didnt-long",
+            "skill": "use"
           }
-        ]
+        ],
+        "assessmentVersion": 1
       },
       {
         "id": "sim_ingles",
@@ -2017,13 +2356,25 @@ const DISCIPLINAS = [
         "title": "Simulado da prova",
         "subtitle": "Resumo final + 15 questões sorteadas de todos os módulos",
         "exam": {
-          "size": 15
+          "size": 15,
+          "skills": {
+            "listening": 3,
+            "reading": 3,
+            "use": 9
+          },
+          "requiredFocus": [
+            "did-short",
+            "too-enough",
+            "past-regular-long",
+            "past-irregular-long",
+            "didnt-long"
+          ]
         },
         "theory": [
           {
             "h": "Resumo da prova: vocabulary",
             "p": [
-              "A prova cobra <strong>Listening</strong> (ouvir), <strong>Reading Comprehension</strong> (ler e entender) e <strong>Use of English</strong> (usar as palavras e a gramática). Revise as três Units com os cartões abaixo.",
+              "A prova cobra <strong>Listening</strong>, <strong>Reading Comprehension</strong> e <strong>Use of English</strong>. Neste treino, cada tentativa tem 3 questões de áudio, 3 de leitura com texto em inglês e 9 de vocabulário e gramática. Essa distribuição organiza a revisão; não informa o número de questões da prova da escola.",
               "<strong>Unit 7 – Feeling Fit:</strong> partes do corpo (shoulder, elbow, chest, stomach, back, knee, fingers, toes, muscle, bone) e hábitos (get exercise, eat fruit, eat vegetables, get rest, eat junk food).",
               "<strong>Unit 8 – Let's Celebrate:</strong> costume, mask, party, feast, lantern, fireworks, decorations, parade, celebrate, remember, dance, dress up; present, birthday cake, candles, invitation, balloons.",
               "<strong>Unit 9 – My Weekend:</strong> eat out, go to the movies, visit a museum, go on a picnic, stay home, go to the beach, text my friends, win, lose, exciting, interesting, busy; go swimming, go fishing, go hiking, go horseback riding, go ice skating."
@@ -2157,52 +2508,51 @@ const DISCIPLINAS = [
         ],
         "games": [
           {
-            "type": "sort",
-            "title": "Which unit?",
-            "short": "De qual Unit?",
-            "instructions": "Em qual Unit esta palavra apareceu?",
-            "categories": [
-              "Unit 7 · Feeling Fit 💪",
-              "Unit 8 · Let's Celebrate 🎉",
-              "Unit 9 · My Weekend 🏖️"
-            ],
-            "items": [
-              {
-                "text": "elbow",
-                "cat": 0
-              },
-              {
-                "text": "lantern",
-                "cat": 1
-              },
-              {
-                "text": "go hiking",
-                "cat": 2
-              },
-              {
-                "text": "get rest",
-                "cat": 0
-              },
-              {
-                "text": "fireworks",
-                "cat": 1
-              },
-              {
-                "text": "eat out",
-                "cat": 2
-              },
-              {
-                "text": "stomach",
-                "cat": 0
-              },
-              {
-                "text": "costume",
-                "cat": 1
-              },
-              {
-                "text": "visit a museum",
-                "cat": 2
-              }
+            "type": "pairs",
+            "title": "Vocabulary in context",
+            "short": "Palavras em contexto",
+            "instructions": "Leia a pista e escolha a palavra ou expressão em inglês.",
+            "pairs": [
+              [
+                "You bend your arm at this joint.",
+                "an elbow"
+              ],
+              [
+                "People share a large meal at a celebration.",
+                "a feast"
+              ],
+              [
+                "You walk along a trail in the woods.",
+                "go hiking"
+              ],
+              [
+                "You relax after exercise or sleep.",
+                "get rest"
+              ],
+              [
+                "These bright lights explode in the night sky.",
+                "fireworks"
+              ],
+              [
+                "You have a meal at a restaurant.",
+                "eat out"
+              ],
+              [
+                "You wear these special clothes to dress up.",
+                "a costume"
+              ],
+              [
+                "You look at exhibits and learn about the past.",
+                "visit a museum"
+              ],
+              [
+                "You have many things to do and little free time.",
+                "busy"
+              ],
+              [
+                "You want to learn more because something catches your attention.",
+                "interesting"
+              ]
             ]
           },
           {
@@ -2251,6 +2601,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Elbow é o cotovelo. Knee é joelho, shoulder é ombro e back são as costas.",
+            "skill": "listening",
             "from": "Feeling Fit"
           },
           {
@@ -2264,6 +2615,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Toes são os dedos dos pés. Fingers são os dedos das mãos.",
+            "skill": "use",
             "from": "Feeling Fit"
           },
           {
@@ -2277,6 +2629,8 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Pergunta com Did pede resposta curta com did: Yes, I did. Didn't seria se você NÃO tivesse escovado.",
+            "focus": "did-short",
+            "skill": "use",
             "from": "Feeling Fit"
           },
           {
@@ -2290,6 +2644,8 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "A pergunta fala de he (ele) e a resposta é não: No, he didn't. A resposta repete a mesma pessoa da pergunta.",
+            "focus": "did-short",
+            "skill": "use",
             "from": "Feeling Fit"
           },
           {
@@ -2303,6 +2659,8 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Yesterday (ontem) mostra que é passado. Para perguntar no passado usamos Did.",
+            "focus": "did-short",
+            "skill": "use",
             "from": "Feeling Fit"
           },
           {
@@ -2316,19 +2674,23 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Depois de Did, o verbo fica na forma normal: Did she eat fruit? (e não ate nem eats).",
+            "focus": "did-short",
+            "skill": "use",
             "from": "Feeling Fit"
           },
           {
             "type": "mc",
-            "q": "Complete: “I don't watch ________ TV. Only one hour a day.”",
+            "q": "Complete com a ideia de excesso: “I don't watch ______ TV. I watch a little.”",
             "options": [
               "too much",
               "too many",
-              "enough",
-              "a"
+              "a",
+              "an"
             ],
             "answer": 0,
-            "explain": "TV não se conta uma por uma, então usamos too much. A frase diz que a pessoa NÃO vê TV demais.",
+            "explain": "Too much indica excesso com TV; too many acompanha nomes contáveis no plural.",
+            "focus": "too-enough",
+            "skill": "use",
             "from": "Feeling Fit"
           },
           {
@@ -2340,13 +2702,15 @@ const DISCIPLINAS = [
               "enough",
               "an"
             ],
-            "answer": 1,
+            "answer": 0,
             "explain": "Chips são coisas que podemos contar (um, dois, três salgadinhos), então usamos too many.",
+            "focus": "too-enough",
+            "skill": "use",
             "from": "Feeling Fit"
           },
           {
             "type": "mc",
-            "q": "“I sleep nine hours every night. I get ________ sleep.” Qual palavra mostra que está na medida certa?",
+            "q": "“I sleep well and feel rested. I get ______ sleep.” Qual palavra significa “o suficiente”?",
             "options": [
               "too much",
               "too many",
@@ -2355,6 +2719,8 @@ const DISCIPLINAS = [
             ],
             "answer": 2,
             "explain": "Enough quer dizer o suficiente, a quantidade certa.",
+            "focus": "too-enough",
+            "skill": "use",
             "from": "Feeling Fit"
           },
           {
@@ -2368,6 +2734,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Comer junk food (porcarias) todo dia não faz bem. Os outros são bons hábitos.",
+            "skill": "use",
             "from": "Feeling Fit"
           },
           {
@@ -2382,32 +2749,39 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Stretch é esticar, e arms são os braços. Dobrar seria bend.",
+            "skill": "listening",
             "from": "Feeling Fit"
           },
           {
             "type": "mc",
-            "q": "Segundo o texto “Take Care of Your Brain!”, quantos minutos de exercício por dia já ajudam o cérebro?",
+            "q": "Leia o texto. What does Mia do after exercise?",
             "options": [
-              "10 minutos",
-              "45 minutos",
-              "2 horas",
-              "10 horas"
+              "She drinks water and gets rest.",
+              "She watches TV and eats cookies.",
+              "She visits a museum with her sister.",
+              "She goes to a party at school."
             ],
             "answer": 0,
-            "explain": "O texto diz que só ten minutes (10 minutos) por dia já fazem o corpo e o cérebro se sentirem melhor. Os 45 minutos são o tempo que o corpo fica bem depois de uma boa risada.",
+            "explain": "O texto informa que, depois de se exercitar, Mia bebe água e descansa. Localize a frase com After exercise.",
+            "context": "Mia gets exercise in the park every day. She stretches her arms and bends her knees. After exercise, she drinks water and gets rest. She likes the park because she can spend time outdoors with her friends.",
+            "contextLang": "en",
+            "skill": "reading",
             "from": "Feeling Fit"
           },
           {
             "type": "mc",
-            "q": "No texto, o que é um “forest bath”?",
+            "q": "Leia o texto. Why does Mia like the park?",
             "options": [
-              "Passar um tempo na natureza",
-              "Tomar banho de chuveiro",
-              "Nadar na piscina",
-              "Lavar as mãos"
+              "She can be outdoors with friends.",
+              "She can watch TV with her family.",
+              "She can see a movie with friends.",
+              "She can eat cake at a party."
             ],
             "answer": 0,
-            "explain": "Forest bath (banho de floresta) é passar um tempo ao ar livre, em um lugar natural como a floresta. Isso relaxa o cérebro.",
+            "explain": "A frase com because explica a razão: ela gosta de passar tempo ao ar livre com os amigos.",
+            "context": "Mia gets exercise in the park every day. She stretches her arms and bends her knees. After exercise, she drinks water and gets rest. She likes the park because she can spend time outdoors with her friends.",
+            "contextLang": "en",
+            "skill": "reading",
             "from": "Feeling Fit"
           },
           {
@@ -2416,10 +2790,52 @@ const DISCIPLINAS = [
             "answers": [
               "knee",
               "a knee",
-              "the knee",
-              "knees"
+              "the knee"
             ],
             "explain": "Joelho em inglês é knee (o k não é pronunciado: /ni:/).",
+            "skill": "use",
+            "answerMode": "english-exact",
+            "from": "Feeling Fit"
+          },
+          {
+            "type": "mc",
+            "q": "Ouça o diálogo. What did Leo do yesterday?",
+            "options": [
+              "He rode his bike.",
+              "He watched a movie.",
+              "He ate out.",
+              "He went fishing."
+            ],
+            "answer": 0,
+            "explain": "Leo responde que andou de bicicleta. Ele diz que não assistiu TV.",
+            "listen": "Mia: Did you ride your bike yesterday? Leo: Yes, I did. Mia: Did you watch TV? Leo: No, I did not.",
+            "skill": "listening",
+            "from": "Feeling Fit"
+          },
+          {
+            "type": "text",
+            "q": "Responda com uma resposta curta negativa: “Did she wash her hands?” ❌",
+            "answers": [
+              "No, she didn't."
+            ],
+            "explain": "A resposta curta mantém she e usa didn't: No, she didn't.",
+            "skill": "use",
+            "focus": "did-short",
+            "answerMode": "english-exact",
+            "from": "Feeling Fit"
+          },
+          {
+            "type": "mc",
+            "q": "Complete: “______ your knees!” (Dobre os joelhos.)",
+            "options": [
+              "Bend",
+              "Stretch",
+              "Drink",
+              "Rest"
+            ],
+            "answer": 0,
+            "explain": "Bend significa dobrar. Stretch significa esticar.",
+            "skill": "use",
             "from": "Feeling Fit"
           },
           {
@@ -2434,6 +2850,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Parade é desfile. Convite é invitation, fantasia é costume e banquete é feast.",
+            "skill": "listening",
             "from": "Let's Celebrate"
           },
           {
@@ -2447,6 +2864,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Candles (velas) são compridas e finas e vão em cima do bolo de aniversário.",
+            "skill": "use",
             "from": "Let's Celebrate"
           },
           {
@@ -2460,6 +2878,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Watch é regular: ganha -ed e vira watched.",
+            "skill": "use",
             "from": "Let's Celebrate"
           },
           {
@@ -2473,6 +2892,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Go é irregular: no passado vira went. Exemplo: I went to the parade.",
+            "skill": "use",
             "from": "Let's Celebrate"
           },
           {
@@ -2486,6 +2906,8 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "See é irregular. No passado vira saw: Yes, I saw the fireworks.",
+            "focus": "past-irregular-long",
+            "skill": "use",
             "from": "Let's Celebrate"
           },
           {
@@ -2499,6 +2921,8 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Eat é irregular: o passado é ate.",
+            "focus": "past-irregular-long",
+            "skill": "use",
             "from": "Let's Celebrate"
           },
           {
@@ -2512,6 +2936,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Yesterday mostra que é passado. Dress é regular: dress up vira dressed up.",
+            "skill": "use",
             "from": "Let's Celebrate"
           },
           {
@@ -2525,6 +2950,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Sing vira sang no passado (muda de forma). Os outros ganham -ed: played, danced, listened.",
+            "skill": "use",
             "from": "Let's Celebrate"
           },
           {
@@ -2539,45 +2965,55 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Você ouviu drink (beber). No passado ele vira drank.",
+            "skill": "listening",
             "from": "Let's Celebrate"
           },
           {
             "type": "mc",
-            "q": "Segundo o texto “November Celebrations”, onde acontece o Day of the Dead?",
+            "q": "Leia o texto. Where do families share a feast during the Day of the Dead?",
             "options": [
-              "In Mexico",
-              "In Thailand",
-              "In Brazil",
-              "In Japan"
+              "At the cemetery.",
+              "At the cinema.",
+              "At the swimming pool.",
+              "At the beach."
             ],
             "answer": 0,
-            "explain": "O Day of the Dead é um grande festival no México, no primeiro dia de novembro.",
+            "explain": "O texto localiza o banquete no cemitério: at the cemetery.",
+            "context": "In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things.",
+            "contextLang": "en",
+            "skill": "reading",
             "from": "Let's Celebrate"
           },
           {
             "type": "mc",
-            "q": "No texto, o Day of the Dead é uma festa triste?",
+            "q": "Leia o texto. Who do families remember during the Day of the Dead?",
             "options": [
-              "Não, é uma festa alegre",
-              "Sim, é muito triste",
-              "Sim, porque é assustadora",
-              "Não, porque ninguém vai"
+              "Relatives who died.",
+              "Players who won a game.",
+              "Friends at the cinema.",
+              "Children at a museum."
             ],
             "answer": 0,
-            "explain": "O texto diz que para os mexicanos caveiras e esqueletos não são assustadores e que a festa é a time for fun and happy celebrations.",
+            "explain": "A primeira frase informa que as famílias lembram parentes que morreram: relatives who died.",
+            "context": "In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things.",
+            "contextLang": "en",
+            "skill": "reading",
             "from": "Let's Celebrate"
           },
           {
             "type": "mc",
-            "q": "No festival Yi Peng, na Tailândia, o que milhares de pessoas soltam no céu?",
+            "q": "Leia o texto. What rises into the sky at Yi Peng?",
             "options": [
-              "lanterns",
-              "balloons",
-              "masks",
-              "presents"
+              "Paper lanterns.",
+              "Birthday balloons.",
+              "Colorful costumes.",
+              "Candy skulls."
             ],
             "answer": 0,
-            "explain": "Thousands of bright lanterns go up into the sky. As pessoas acreditam que elas levam embora as coisas ruins.",
+            "explain": "O texto diz que as lanternas de papel sobem ao céu: paper lanterns rise into the sky.",
+            "context": "In Mexico, families remember relatives who died during the Day of the Dead. They share a feast at the cemetery and light candles. Some give candy skulls. At Yi Peng in Thailand, people watch paper lanterns rise into the sky. They believe the lanterns take away bad things.",
+            "contextLang": "en",
+            "skill": "reading",
             "from": "Let's Celebrate"
           },
           {
@@ -2587,6 +3023,88 @@ const DISCIPLINAS = [
               "played"
             ],
             "explain": "Play é regular: play + ed = played. Exemplo: After dinner all the children played games.",
+            "skill": "use",
+            "answerMode": "english-exact",
+            "from": "Let's Celebrate"
+          },
+          {
+            "type": "mc",
+            "q": "Did they watch the parade? ✅ Escolha a resposta completa.",
+            "options": [
+              "Yes, they watched the parade.",
+              "Yes, they watch the parade.",
+              "Yes, they watching the parade.",
+              "Yes, they watches the parade."
+            ],
+            "answer": 0,
+            "explain": "Na pergunta, Did acompanha watch. Na resposta afirmativa, watch vira watched.",
+            "focus": "past-regular-long",
+            "skill": "use",
+            "from": "Let's Celebrate"
+          },
+          {
+            "type": "text",
+            "q": "Complete a resposta com a frase inteira: “Did you play games?” ✅ Comece com “Yes, I…” e use play games.",
+            "answers": [
+              "Yes, I played games."
+            ],
+            "explain": "Play é regular: a resposta completa é Yes, I played games.",
+            "skill": "use",
+            "focus": "past-regular-long",
+            "answerMode": "english-exact",
+            "from": "Let's Celebrate"
+          },
+          {
+            "type": "text",
+            "q": "Responda com a frase inteira: “Did she dance at the party?” ✅ Comece com “Yes, she…” e use dance at the party.",
+            "answers": [
+              "Yes, she danced at the party."
+            ],
+            "explain": "Dance já termina em e; acrescentamos d: Yes, she danced at the party.",
+            "skill": "use",
+            "focus": "past-regular-long",
+            "answerMode": "english-exact",
+            "from": "Let's Celebrate"
+          },
+          {
+            "type": "text",
+            "q": "Responda com a frase inteira: “Did he go to the festival?” ✅ Comece com “Yes, he…” e use go to the festival.",
+            "answers": [
+              "Yes, he went to the festival."
+            ],
+            "explain": "Go muda para went na resposta afirmativa: Yes, he went to the festival.",
+            "skill": "use",
+            "focus": "past-irregular-long",
+            "answerMode": "english-exact",
+            "from": "Let's Celebrate"
+          },
+          {
+            "type": "mc",
+            "q": "Ouça o relato. What did Ana see at the festival?",
+            "options": [
+              "She saw fireworks.",
+              "She saw dinosaurs.",
+              "She saw fish.",
+              "She saw stars in a planetarium."
+            ],
+            "answer": 0,
+            "explain": "Ana diz I saw fireworks. Ela também conta que dançou e comeu bolo.",
+            "listen": "Yesterday I went to a festival with my family. I danced and ate cake. At night, I saw fireworks. It was exciting!",
+            "skill": "listening",
+            "from": "Let's Celebrate"
+          },
+          {
+            "type": "mc",
+            "q": "Complete a pergunta: “______ she ______ a costume at the party?”",
+            "options": [
+              "Did / wear",
+              "Did / wore",
+              "Does / wore",
+              "Did / wears"
+            ],
+            "answer": 0,
+            "explain": "A pergunta usa Did + pessoa + verbo na forma base: Did she wear a costume?",
+            "skill": "use",
             "from": "Let's Celebrate"
           },
           {
@@ -2601,6 +3119,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Go hiking é fazer trilha (caminhar na natureza). Pescar é go fishing, nadar é go swimming e patinar no gelo é go ice skating.",
+            "skill": "listening",
             "from": "My Weekend"
           },
           {
@@ -2614,11 +3133,12 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Go to the movies = ir ao cinema.",
+            "skill": "use",
             "from": "My Weekend"
           },
           {
             "type": "mc",
-            "q": "Complete: “We ________ on a picnic because it was raining!”",
+            "q": "O piquenique foi cancelado por causa da chuva. Complete: “We ______ on a picnic.”",
             "options": [
               "didn't go",
               "went",
@@ -2626,7 +3146,8 @@ const DISCIPLINAS = [
               "didn't went"
             ],
             "answer": 0,
-            "explain": "Com chuva o piquenique não aconteceu, então usamos didn't go. Didn't went está errado: depois de didn't o verbo fica normal.",
+            "explain": "A pista informa que o passeio foi cancelado: didn't go. Depois de didn't usamos go, nunca went.",
+            "skill": "use",
             "from": "My Weekend"
           },
           {
@@ -2640,6 +3161,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Se perderam (lost), então não ganharam: didn't win.",
+            "skill": "use",
             "from": "My Weekend"
           },
           {
@@ -2653,6 +3175,8 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Depois de didn't o verbo fica na forma normal: I didn't watch TV.",
+            "focus": "didnt-long",
+            "skill": "use",
             "from": "My Weekend"
           },
           {
@@ -2666,6 +3190,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "How was…? pergunta como foi. A resposta descreve o fim de semana: It was boring (foi chato).",
+            "skill": "use",
             "from": "My Weekend"
           },
           {
@@ -2679,6 +3204,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Last weekend é passado, então a resposta usa went: I went swimming.",
+            "skill": "use",
             "from": "My Weekend"
           },
           {
@@ -2693,6 +3219,8 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Didn't eat out = não comi fora. Stayed home = fiquei em casa.",
+            "focus": "didnt-long",
+            "skill": "listening",
             "from": "My Weekend"
           },
           {
@@ -2706,56 +3234,132 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Exciting = emocionante. Boring = chato, busy = ocupado, interesting = interessante.",
+            "skill": "use",
             "from": "My Weekend"
           },
           {
             "type": "mc",
-            "q": "Segundo o texto “Wow! Look at That!”, onde fica o Children's Museum?",
+            "q": "Leia o texto. Where did Ben learn about the stars?",
             "options": [
-              "In Indianapolis, USA",
-              "In Mexico City",
-              "In Thailand",
-              "In Rio de Janeiro"
+              "In the planetarium.",
+              "In the theater.",
+              "At the beach.",
+              "At a birthday party."
             ],
             "answer": 0,
-            "explain": "The Children's Museum fica em Indianapolis, nos Estados Unidos (USA).",
+            "explain": "O texto diz que Ben e a irmã foram ao planetário e aprenderam sobre as estrelas.",
+            "context": "On Saturday, Ben visited a museum with his sister. They saw dinosaur fossils. Then they went to the planetarium and learned about the stars. They wanted to see a play, but the theater was closed. They did not go to the theater.",
+            "contextLang": "en",
+            "skill": "reading",
             "from": "My Weekend"
           },
           {
             "type": "mc",
-            "q": "No Children's Museum, onde você aprende sobre as estrelas?",
+            "q": "Leia o texto. Why didn't Ben go to the theater?",
             "options": [
-              "in the planetarium",
-              "in the theater",
-              "outside the museum",
-              "at the beach"
+              "The theater was closed.",
+              "He did not like dinosaurs.",
+              "He wanted to go fishing.",
+              "His sister stayed home."
             ],
             "answer": 0,
-            "explain": "You can learn about the stars in the planetarium (planetário).",
+            "explain": "O teatro estava fechado. A palavra but apresenta o obstáculo ao plano de assistir à peça.",
+            "context": "On Saturday, Ben visited a museum with his sister. They saw dinosaur fossils. Then they went to the planetarium and learned about the stars. They wanted to see a play, but the theater was closed. They did not go to the theater.",
+            "contextLang": "en",
+            "skill": "reading",
             "from": "My Weekend"
           },
           {
             "type": "mc",
-            "q": "Qual palavra Hassan usa para dizer a ordem das coisas no texto “My Perfect Weekend”?",
+            "q": "Leia o texto. Which activity did Ben NOT do?",
             "options": [
-              "first",
-              "busy",
-              "lose",
-              "boring"
+              "Go to the theater.",
+              "Visit a museum.",
+              "See dinosaur fossils.",
+              "Go to the planetarium."
             ],
             "answer": 0,
-            "explain": "First, then, next e after that mostram quando as coisas aconteceram: First I ate my favorite breakfast. After that I went fishing.",
+            "explain": "Ben realizou as outras três atividades. O texto informa que ele não foi ao teatro.",
+            "context": "On Saturday, Ben visited a museum with his sister. They saw dinosaur fossils. Then they went to the planetarium and learned about the stars. They wanted to see a play, but the theater was closed. They did not go to the theater.",
+            "contextLang": "en",
+            "skill": "reading",
             "from": "My Weekend"
           },
           {
             "type": "text",
             "q": "Escreva em inglês: “nadar”, usando go + -ing.",
             "answers": [
-              "go swimming",
-              "swimming",
-              "went swimming"
+              "go swimming"
             ],
-            "explain": "Go swimming. No passado: I went swimming.",
+            "explain": "A instrução pede go + -ing: go swimming. Swimming sozinho não inclui go; went swimming está no passado.",
+            "skill": "use",
+            "answerMode": "english-exact",
+            "from": "My Weekend"
+          },
+          {
+            "type": "text",
+            "q": "Responda com a frase inteira: “Did you go hiking?” ❌ Comece com “No, I…” e use go hiking.",
+            "answers": [
+              "No, I didn't go hiking."
+            ],
+            "explain": "Depois de didn't, use go: No, I didn't go hiking.",
+            "skill": "use",
+            "focus": "didnt-long",
+            "answerMode": "english-exact",
+            "from": "My Weekend"
+          },
+          {
+            "type": "text",
+            "q": "Responda com a frase inteira: “Did she eat out?” ❌ Comece com “No, she…” e use eat out.",
+            "answers": [
+              "No, she didn't eat out."
+            ],
+            "explain": "Depois de didn't, use eat, não ate: No, she didn't eat out.",
+            "skill": "use",
+            "focus": "didnt-long",
+            "answerMode": "english-exact",
+            "from": "My Weekend"
+          },
+          {
+            "type": "text",
+            "q": "Responda com a frase inteira: “Did they visit a museum?” ❌ Comece com “No, they…” e use visit a museum.",
+            "answers": [
+              "No, they didn't visit a museum."
+            ],
+            "explain": "A resposta mantém they e usa didn't visit: No, they didn't visit a museum.",
+            "skill": "use",
+            "focus": "didnt-long",
+            "answerMode": "english-exact",
+            "from": "My Weekend"
+          },
+          {
+            "type": "mc",
+            "q": "Ouça o diálogo. What did Sam do on Sunday?",
+            "options": [
+              "He went fishing.",
+              "He went swimming.",
+              "He went to the movies.",
+              "He went ice skating."
+            ],
+            "answer": 0,
+            "explain": "Sam diz que não foi nadar. Ele foi pescar com o pai.",
+            "listen": "Emma: Did you go swimming on Sunday? Sam: No, I did not go swimming. I went fishing with my dad. Emma: Did you catch any fish? Sam: Yes, I did.",
+            "skill": "listening",
+            "from": "My Weekend"
+          },
+          {
+            "type": "mc",
+            "q": "“Lia texted her friends yesterday.” Qual frase diz que ela NÃO fez isso?",
+            "options": [
+              "She didn't text her friends yesterday.",
+              "She didn't texted her friends yesterday.",
+              "She doesn't texted her friends yesterday.",
+              "She did text her friends yesterday."
+            ],
+            "answer": 0,
+            "explain": "Didn't pede a forma base text, sem -ed. She did text é afirmativa, não negativa.",
+            "focus": "didnt-long",
+            "skill": "use",
             "from": "My Weekend"
           },
           {
@@ -2770,6 +3374,8 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "A pergunta é no passado (Did). Go é irregular: a resposta longa usa went.",
+            "focus": "past-irregular-long",
+            "skill": "listening",
             "from": "Simulado"
           },
           {
@@ -2784,6 +3390,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Você ouviu fireworks (fogos de artifício). Todas começam com f, por isso preste atenção no som do final.",
+            "skill": "listening",
             "from": "Simulado"
           },
           {
@@ -2797,6 +3404,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Fingers são os dedos das mãos; toes são os dedos dos pés.",
+            "skill": "use",
             "from": "Simulado"
           },
           {
@@ -2810,6 +3418,8 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "O time perdeu (lost), então não ganhou: No, they didn't win. Depois de didn't o verbo fica normal (win, não won).",
+            "focus": "didnt-long",
+            "skill": "use",
             "from": "Simulado"
           },
           {
@@ -2823,6 +3433,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Write é irregular: write → wrote.",
+            "skill": "use",
             "from": "Simulado"
           },
           {
@@ -2836,6 +3447,8 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "A pessoa faz exercício na medida certa: enough exercise.",
+            "focus": "too-enough",
+            "skill": "use",
             "from": "Simulado"
           },
           {
@@ -2849,6 +3462,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Candles (velas) vão no bolo de aniversário (birthday cake).",
+            "skill": "use",
             "from": "Simulado"
           },
           {
@@ -2863,9 +3477,11 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Went é o passado de go: we went swimming = nós fomos nadar.",
+            "skill": "listening",
             "from": "Simulado"
           }
-        ]
+        ],
+        "assessmentVersion": 1
       }
     ]
   },

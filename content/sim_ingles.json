@@ -3,7 +3,7 @@
     {
       "h": "Resumo da prova: vocabulary",
       "p": [
-        "A prova cobra <strong>Listening</strong> (ouvir), <strong>Reading Comprehension</strong> (ler e entender) e <strong>Use of English</strong> (usar as palavras e a gramática). Revise as três Units com os cartões abaixo.",
+        "A prova cobra <strong>Listening</strong>, <strong>Reading Comprehension</strong> e <strong>Use of English</strong>. Neste treino, cada tentativa tem 3 questões de áudio, 3 de leitura com texto em inglês e 9 de vocabulário e gramática. Essa distribuição organiza a revisão; não informa o número de questões da prova da escola.",
         "<strong>Unit 7 – Feeling Fit:</strong> partes do corpo (shoulder, elbow, chest, stomach, back, knee, fingers, toes, muscle, bone) e hábitos (get exercise, eat fruit, eat vegetables, get rest, eat junk food).",
         "<strong>Unit 8 – Let's Celebrate:</strong> costume, mask, party, feast, lantern, fireworks, decorations, parade, celebrate, remember, dance, dress up; present, birthday cake, candles, invitation, balloons.",
         "<strong>Unit 9 – My Weekend:</strong> eat out, go to the movies, visit a museum, go on a picnic, stay home, go to the beach, text my friends, win, lose, exciting, interesting, busy; go swimming, go fishing, go hiking, go horseback riding, go ice skating."
@@ -147,7 +147,9 @@
         "Yes, you did go."
       ],
       "answer": 0,
-      "explain": "A pergunta é no passado (Did). Go é irregular: a resposta longa usa went."
+      "explain": "A pergunta é no passado (Did). Go é irregular: a resposta longa usa went.",
+      "focus": "past-irregular-long",
+      "skill": "listening"
     },
     {
       "type": "mc",
@@ -160,7 +162,8 @@
         "fishing"
       ],
       "answer": 0,
-      "explain": "Você ouviu fireworks (fogos de artifício). Todas começam com f, por isso preste atenção no som do final."
+      "explain": "Você ouviu fireworks (fogos de artifício). Todas começam com f, por isso preste atenção no som do final.",
+      "skill": "listening"
     },
     {
       "type": "mc",
@@ -172,7 +175,8 @@
         "bones"
       ],
       "answer": 0,
-      "explain": "Fingers são os dedos das mãos; toes são os dedos dos pés."
+      "explain": "Fingers são os dedos das mãos; toes são os dedos dos pés.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -184,7 +188,9 @@
         "Yes, they did win a lot."
       ],
       "answer": 0,
-      "explain": "O time perdeu (lost), então não ganhou: No, they didn't win. Depois de didn't o verbo fica normal (win, não won)."
+      "explain": "O time perdeu (lost), então não ganhou: No, they didn't win. Depois de didn't o verbo fica normal (win, não won).",
+      "focus": "didnt-long",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -196,7 +202,8 @@
         "writes"
       ],
       "answer": 0,
-      "explain": "Write é irregular: write → wrote."
+      "explain": "Write é irregular: write → wrote.",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -208,7 +215,9 @@
         "didn't"
       ],
       "answer": 0,
-      "explain": "A pessoa faz exercício na medida certa: enough exercise."
+      "explain": "A pessoa faz exercício na medida certa: enough exercise.",
+      "focus": "too-enough",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -220,7 +229,8 @@
         "a museum"
       ],
       "answer": 0,
-      "explain": "Candles (velas) vão no bolo de aniversário (birthday cake)."
+      "explain": "Candles (velas) vão no bolo de aniversário (birthday cake).",
+      "skill": "use"
     },
     {
       "type": "mc",
@@ -233,57 +243,57 @@
         "Nós gostamos de nadar."
       ],
       "answer": 0,
-      "explain": "Went é o passado de go: we went swimming = nós fomos nadar."
+      "explain": "Went é o passado de go: we went swimming = nós fomos nadar.",
+      "skill": "listening"
     }
   ],
   "games": [
     {
-      "type": "sort",
-      "title": "Which unit?",
-      "short": "De qual Unit?",
-      "instructions": "Em qual Unit esta palavra apareceu?",
-      "categories": [
-        "Unit 7 · Feeling Fit 💪",
-        "Unit 8 · Let's Celebrate 🎉",
-        "Unit 9 · My Weekend 🏖️"
-      ],
-      "items": [
-        {
-          "text": "elbow",
-          "cat": 0
-        },
-        {
-          "text": "lantern",
-          "cat": 1
-        },
-        {
-          "text": "go hiking",
-          "cat": 2
-        },
-        {
-          "text": "get rest",
-          "cat": 0
-        },
-        {
-          "text": "fireworks",
-          "cat": 1
-        },
-        {
-          "text": "eat out",
-          "cat": 2
-        },
-        {
-          "text": "stomach",
-          "cat": 0
-        },
-        {
-          "text": "costume",
-          "cat": 1
-        },
-        {
-          "text": "visit a museum",
-          "cat": 2
-        }
+      "type": "pairs",
+      "title": "Vocabulary in context",
+      "short": "Palavras em contexto",
+      "instructions": "Leia a pista e escolha a palavra ou expressão em inglês.",
+      "pairs": [
+        [
+          "You bend your arm at this joint.",
+          "an elbow"
+        ],
+        [
+          "People share a large meal at a celebration.",
+          "a feast"
+        ],
+        [
+          "You walk along a trail in the woods.",
+          "go hiking"
+        ],
+        [
+          "You relax after exercise or sleep.",
+          "get rest"
+        ],
+        [
+          "These bright lights explode in the night sky.",
+          "fireworks"
+        ],
+        [
+          "You have a meal at a restaurant.",
+          "eat out"
+        ],
+        [
+          "You wear these special clothes to dress up.",
+          "a costume"
+        ],
+        [
+          "You look at exhibits and learn about the past.",
+          "visit a museum"
+        ],
+        [
+          "You have many things to do and little free time.",
+          "busy"
+        ],
+        [
+          "You want to learn more because something catches your attention.",
+          "interesting"
+        ]
       ]
     },
     {
@@ -318,5 +328,6 @@
         }
       ]
     }
-  ]
+  ],
+  "assessmentVersion": 1
 }
