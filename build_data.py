@@ -190,3 +190,17 @@ ini = sw.index("// <arquivos-offline>") + len("// <arquivos-offline>")
 fim = sw.index("  // </arquivos-offline>")
 sw = sw[:ini] + "\n" + linhas + "\n" + sw[fim:]
 io.open(sw_caminho, "w", encoding="utf-8").write(sw)
+
+# --- Versão dos arquivos no index.html (evita o navegador usar cópia velha) ---
+import hashlib
+html_caminho = os.path.join(base, "index.html")
+html = io.open(html_caminho, encoding="utf-8").read()
+for nome in ("style.css", "data.js", "experiences.js", "pedagogy.js", "app.js"):
+    with open(os.path.join(base, nome), "rb") as f:
+        h = hashlib.sha1(f.read()).hexdigest()[:8]
+    html = re.sub(r'(%s)\?v=[\w]+' % re.escape(nome), r'\1?v=' + h, html)
+io.open(html_caminho, "w", encoding="utf-8").write(html)
+versoes = re.findall(r'\?v=(\w+)', html)
+sw = io.open(sw_caminho, encoding="utf-8").read()
+sw = re.sub(r"estudos-3-ano-core-[\w-]+'", "estudos-3-ano-core-%s'" % hashlib.sha1("".join(versoes).encode()).hexdigest()[:8], sw)
+io.open(sw_caminho, "w", encoding="utf-8").write(sw)
