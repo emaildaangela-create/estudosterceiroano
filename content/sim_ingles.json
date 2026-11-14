@@ -54,22 +54,85 @@
           "en": "stay home",
           "pt": "ficar em casa"
         }
-      ]
+      ],
+      "art": {
+        "scenes": [
+          {
+            "src": "assets/english/watercolor/weekend.png",
+            "col": 0,
+            "row": 0,
+            "cols": 2,
+            "rows": 3,
+            "en": "eat out",
+            "pt": "comer fora",
+            "alt": "Família à mesa de um restaurante, atendida por um garçom."
+          },
+          {
+            "src": "assets/english/watercolor/hobbies.png",
+            "col": 0,
+            "row": 1,
+            "cols": 2,
+            "rows": 3,
+            "en": "go hiking",
+            "pt": "fazer trilha",
+            "alt": "Crianças com mochilas caminham com um adulto por uma trilha."
+          }
+        ]
+      }
     },
     {
       "h": "Resumo da prova: grammar",
-      "figure": {
-        "src": "assets/4b/ing09-didnt.svg",
-        "alt": "Duas colunas: coisas que eu fiz (went, won, watched) e coisas que eu não fiz (didn't go, didn't win, didn't watch).",
-        "tipo": "diagrama"
-      },
       "p": [
         "Tudo gira em torno do <strong>simple past</strong> (passado). Pergunta: <strong>Did</strong> + pessoa + verbo normal? → <em>Did you watch the parade?</em>",
         "<strong>Resposta curta (Unit 7):</strong> <em>Yes, I did.</em> / <em>No, I didn't.</em> — repita a pessoa: <em>Did she…? → Yes, she did.</em>",
         "<strong>Resposta longa (Unit 8):</strong> verbo no passado. Regulares ganham <strong>-ed</strong> (watched, played, danced). Irregulares mudam: <strong>went, saw, ate, sang, drank, wore, had, wrote, gave, took</strong>.",
         "<strong>Negativa (Unit 9):</strong> <strong>didn't</strong> + verbo normal: <em>I didn't go. We didn't win.</em> Nunca: <em>didn't went</em>.",
         "<strong>Too / Enough (Unit 7):</strong> too much (TV, soda, junk food), too many (cookies, candies, chips), enough (sleep, water, exercise)."
-      ]
+      ],
+      "art": {
+        "scenes": [
+          {
+            "src": "assets/english/watercolor/weekend.png",
+            "col": 0,
+            "row": 2,
+            "cols": 2,
+            "rows": 3,
+            "en": "I stayed home.",
+            "pt": "Eu fiquei em casa.",
+            "alt": "Crianças leem e jogam juntas na sala de casa."
+          }
+        ],
+        "grammar": [
+          [
+            "I didn't go to the movies.",
+            "Eu não fui ao cinema."
+          ],
+          [
+            "I didn't eat out.",
+            "Eu não comi fora."
+          ],
+          [
+            "We went to the beach.",
+            "Nós fomos à praia."
+          ],
+          [
+            "We didn't go to the beach.",
+            "Nós não fomos à praia."
+          ],
+          [
+            "We won the game.",
+            "Nós ganhamos o jogo."
+          ],
+          [
+            "We didn't win. We lost.",
+            "Nós não ganhamos. Perdemos."
+          ],
+          [
+            "didn't + verbo na forma base",
+            "Use didn't go, didn't win, didn't watch."
+          ]
+        ]
+      }
     }
   ],
   "quiz": [

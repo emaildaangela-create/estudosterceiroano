@@ -7,11 +7,6 @@
   "theory": [
     {
       "h": "Celebrations and festivals",
-      "figure": {
-        "src": "assets/4b/ing08-festa.svg",
-        "alt": "Cena de festa com máscara, fantasia, lanternas, fogos de artifício, desfile e decorações.",
-        "tipo": "diagrama"
-      },
       "p": [
         "Pessoas do mundo todo têm <strong>celebrations</strong> (celebrações) e <strong>festivals</strong> (festivais). Elas lembram o passado, encontram a família e os amigos, comem e se divertem.",
         "Palavras de festa: <strong>a costume</strong> (fantasia), <strong>a mask</strong> (máscara), <strong>a party</strong> (festa), <strong>a feast</strong> (banquete), <strong>a lantern</strong> (lanterna), <strong>fireworks</strong> (fogos de artifício), <strong>decorations</strong> (enfeites) e <strong>a parade</strong> (desfile).",
@@ -78,7 +73,42 @@
           "en": "dress up",
           "pt": "fantasiar-se"
         }
-      ]
+      ],
+      "art": {
+        "scenes": [
+          {
+            "src": "assets/english/watercolor/celebrations.png",
+            "col": 0,
+            "row": 0,
+            "cols": 1,
+            "rows": 3,
+            "en": "a parade",
+            "pt": "um desfile",
+            "alt": "Crianças marcham com bandeira e instrumentos enquanto pessoas assistem na rua."
+          },
+          {
+            "src": "assets/english/watercolor/celebrations.png",
+            "col": 0,
+            "row": 1,
+            "cols": 1,
+            "rows": 3,
+            "en": "a feast",
+            "pt": "um banquete",
+            "alt": "Uma família de várias gerações compartilha uma mesa com muitos pratos."
+          },
+          {
+            "src": "assets/english/watercolor/celebrations.png",
+            "col": 0,
+            "row": 2,
+            "cols": 1,
+            "rows": 3,
+            "en": "a party",
+            "pt": "uma festa",
+            "alt": "Crianças reunidas ao redor de um bolo de aniversário, com balões e enfeites."
+          }
+        ],
+        "wide": true
+      }
     },
     {
       "h": "Birthday party words",
@@ -112,29 +142,71 @@
           "en": "balloons",
           "pt": "balões"
         }
-      ]
+      ],
+      "art": {
+        "scenes": [
+          {
+            "src": "assets/english/watercolor/celebrations.png",
+            "col": 0,
+            "row": 2,
+            "cols": 1,
+            "rows": 3,
+            "en": "a party",
+            "pt": "uma festa",
+            "alt": "Crianças reunidas ao redor de um bolo de aniversário, com balões e enfeites."
+          }
+        ],
+        "wide": true
+      }
     },
     {
       "h": "Simple past: regular verbs (-ed)",
-      "figure": {
-        "src": "assets/4b/ing08-regular.svg",
-        "alt": "Verbos regulares ganham -ed no passado: watch vira watched, play vira played, dance vira danced.",
-        "tipo": "diagrama"
-      },
       "p": [
         "Para contar o que <strong>aconteceu</strong>, usamos o <strong>simple past</strong>. Nos <strong>verbos regulares</strong>, acrescentamos <strong>-ed</strong> no final: <em>watch → watched, play → played, listen → listened, celebrate → celebrated</em>.",
         "Se o verbo já termina em <strong>e</strong>, colocamos só <strong>-d</strong>: <em>dance → danced, like → liked</em>.",
         "Pergunta e resposta longa: <em>Did you watch the parade?</em> → <em>Yes, we <strong>watched</strong> the parade.</em> / <em>Did you like the music?</em> → <em>Yes, we <strong>liked</strong> it a lot!</em>",
         "Atenção: na pergunta com <strong>Did</strong> o verbo fica normal (<em>Did you <strong>watch</strong>…?</em>); na resposta longa ele vai para o passado (<em>We <strong>watched</strong>…</em>)."
-      ]
+      ],
+      "art": {
+        "scenes": [
+          {
+            "src": "assets/english/watercolor/celebrations.png",
+            "col": 0,
+            "row": 0,
+            "cols": 1,
+            "rows": 3,
+            "en": "We watched the parade.",
+            "pt": "Nós assistimos ao desfile.",
+            "alt": "Crianças marcham com bandeira e instrumentos enquanto pessoas assistem na rua."
+          }
+        ],
+        "wide": true,
+        "grammar": [
+          [
+            "watch → watched",
+            "Acrescente -ed."
+          ],
+          [
+            "play → played",
+            "Acrescente -ed."
+          ],
+          [
+            "listen → listened",
+            "Acrescente -ed."
+          ],
+          [
+            "dance → danced",
+            "Já termina em e: acrescente só -d."
+          ],
+          [
+            "like → liked",
+            "Já termina em e: acrescente só -d."
+          ]
+        ]
+      }
     },
     {
       "h": "Simple past: irregular verbs",
-      "figure": {
-        "src": "assets/4b/ing08-irregular.svg",
-        "alt": "Pares de verbos irregulares: go/went, see/saw, eat/ate, sing/sang, drink/drank, wear/wore, have/had, write/wrote, give/gave, take/took.",
-        "tipo": "diagrama"
-      },
       "p": [
         "Alguns verbos <strong>não ganham -ed</strong>: eles mudam de forma no passado. São os <strong>verbos irregulares</strong>, e precisamos memorizá-los.",
         "<em>go → <strong>went</strong>, see → <strong>saw</strong>, eat → <strong>ate</strong>, sing → <strong>sang</strong>, drink → <strong>drank</strong>, wear → <strong>wore</strong>, have → <strong>had</strong>, write → <strong>wrote</strong>, give → <strong>gave</strong>, take → <strong>took</strong></em>.",
@@ -191,21 +263,97 @@
           "en": "take → took",
           "pt": "pegar/levar → pegou"
         }
-      ]
+      ],
+      "art": {
+        "scenes": [
+          {
+            "src": "assets/english/watercolor/celebrations.png",
+            "col": 0,
+            "row": 2,
+            "cols": 1,
+            "rows": 3,
+            "en": "We had a party.",
+            "pt": "Nós fizemos uma festa.",
+            "alt": "Crianças reunidas ao redor de um bolo de aniversário, com balões e enfeites."
+          }
+        ],
+        "wide": true,
+        "grammar": [
+          [
+            "go → went",
+            "ir"
+          ],
+          [
+            "see → saw",
+            "ver"
+          ],
+          [
+            "eat → ate",
+            "comer"
+          ],
+          [
+            "sing → sang",
+            "cantar"
+          ],
+          [
+            "drink → drank",
+            "beber"
+          ],
+          [
+            "wear → wore",
+            "vestir"
+          ],
+          [
+            "have → had",
+            "ter"
+          ],
+          [
+            "write → wrote",
+            "escrever"
+          ],
+          [
+            "give → gave",
+            "dar"
+          ],
+          [
+            "take → took",
+            "pegar / levar"
+          ]
+        ]
+      }
     },
     {
       "h": "Reading: November Celebrations",
-      "figure": {
-        "src": "assets/4b/ing08-novembro.svg",
-        "alt": "Comparação: Day of the Dead no México, com caveiras coloridas e velas; Yi Peng na Tailândia, com lanternas subindo ao céu.",
-        "tipo": "diagrama"
-      },
       "p": [
-        "O texto compara duas festas de novembro. O <strong>Day of the Dead</strong> (Dia dos Mortos), no <strong>México</strong>, é no primeiro dia de novembro: as famílias lembram e celebram as pessoas da família que morreram.",
-        "No Day of the Dead, as famílias levam um banquete (<strong>a big feast</strong>) ao cemitério, acendem velas e tocam música. Caveiras e esqueletos <strong>não são assustadores</strong>: a festa é alegre, não triste.",
+        "O texto compara duas celebrações. No <strong>Day of the Dead</strong> (Dia dos Mortos), no <strong>México</strong>, as famílias lembram pessoas queridas que morreram. O livro destaca 1º de novembro; as tradições acontecem entre o fim de outubro e o início de novembro e variam entre comunidades.",
+        "Flores, velas, alimentos e retratos podem fazer parte das homenagens. O livro descreve famílias levando um banquete (<strong>a big feast</strong>) ao cemitério. As caveiras decoradas fazem parte da celebração e da memória; não representam uma festa de terror.",
         "O <strong>Yi Peng</strong>, na <strong>Tailândia</strong>, também acontece em novembro. Tem desfile, fantasias bonitas e milhares de <strong>lanternas de papel de arroz</strong> que sobem ao céu. As pessoas acreditam que as lanternas levam embora as coisas ruins. No último dia há fogos de artifício.",
         "Na escrita do Hiro, <em>The Sapporo Snow Festival</em>, ele usa o passado: <em>I <strong>went</strong>… I <strong>wore</strong> a snowsuit… We <strong>saw</strong> snow sculptures… We <strong>played</strong>… We <strong>listened</strong>, <strong>ate</strong> and <strong>drank</strong>…</em>"
-      ]
+      ],
+      "art": {
+        "scenes": [
+          {
+            "src": "assets/english/watercolor/cultures.png",
+            "col": 0,
+            "row": 0,
+            "cols": 2,
+            "rows": 1,
+            "en": "Day of the Dead · Mexico",
+            "pt": "Memórias em família, flores e oferendas.",
+            "alt": "Família mexicana organiza flores alaranjadas, velas, alimentos e um retrato em uma oferenda."
+          },
+          {
+            "src": "assets/english/watercolor/cultures.png",
+            "col": 1,
+            "row": 0,
+            "cols": 2,
+            "rows": 1,
+            "en": "Yi Peng · Thailand",
+            "pt": "Lanternas de papel iluminam o céu.",
+            "alt": "Família tailandesa observa lanternas claras de papel subindo ao céu ao anoitecer."
+          }
+        ]
+      }
     }
   ],
   "games": [

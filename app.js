@@ -451,8 +451,9 @@
       ciencias:{src:'assets/disciplina-ciencias.webp',alt:'Crianças investigando plantas, animais, água, a Terra e o céu.'},
       geografia:{src:'assets/disciplina-geografia.webp',alt:'Crianças explorando mapas, paisagens, cidade, campo e caminhos.'},
       historia:{src:'assets/disciplina-historia.webp',alt:'Crianças e pessoas idosas compartilhando fotografias, memórias e histórias da comunidade.'},
-      ingles:{src:'assets/4b/disciplina-ingles.svg',alt:'Crianças conversando em inglês com balões de fala: Hello!, Did you…?, Yes, I did!'}
+      ingles:{src:'assets/english/watercolor/celebrations.png',alt:'Três cenas em aquarela: crianças em um desfile, uma família compartilhando um banquete e uma festa de aniversário.'}
     }, visual=visuaisDisciplina[disc.id], figura=$('#disc-visual');
+    figura.classList.toggle('disc-visual--inteira',disc.id==='ingles');
     figura.innerHTML=visual?'<img src="'+visual.src+'" alt="'+visual.alt+'">':'';
     var lista=$('#lista-capitulos'); lista.innerHTML='';
     disc.capitulos.forEach(function(cap){
@@ -498,7 +499,12 @@
     var visual=cap.reviewImage?{src:cap.reviewImage,alt:cap.reviewImageAlt||'Ilustração dos assuntos desta revisão.',tipo:'revisao'}:visualDaDescoberta(bloco);
     var tipoVisual=visual.tipo==='diagrama'?'diagrama':(visual.tipo==='revisao'?'revisao':(visual.wide?'amplo':''));
     var destaque=criar('div','descoberta-destaque'+(tipoVisual?' descoberta-destaque--'+tipoVisual:''));
-    destaque.appendChild(criar('figure','descoberta-visual'+(tipoVisual?' descoberta-visual--'+tipoVisual:''),'<img src="'+textoSeguro(visual.src)+'" alt="'+textoSeguro(visual.alt)+'" loading="lazy">'));
+    if(bloco.art){
+      destaque.className='descoberta-destaque descoberta-destaque--aquarela';
+      destaque.appendChild(montarArteIngles(bloco.art));
+    }else{
+      destaque.appendChild(criar('figure','descoberta-visual'+(tipoVisual?' descoberta-visual--'+tipoVisual:''),'<img src="'+textoSeguro(visual.src)+'" alt="'+textoSeguro(visual.alt)+'" loading="lazy">'));
+    }
     destaque.appendChild(criar('div','ideia-principal','<span>Ideia principal</span><p>'+explicarTermos(recorte.resumo)+'</p>'));
     card.appendChild(destaque);
     if(bloco.cards&&bloco.cards.length)card.appendChild(montarCartoes(bloco.cards));
@@ -515,11 +521,56 @@
     nav.appendChild(ant);nav.appendChild(prox);raiz.appendChild(nav);
   }
   /* Cartões de vocabulário: em Inglês, tocar no cartão lê a palavra em voz alta. */
+  function cenaAquarela(cena) {
+    var moldura=criar('div','aquarela-cena');
+    var cols=cena.cols||1, rows=cena.rows||1;
+    moldura.style.aspectRatio=String(1.5*rows/cols);
+    var img=criar('img',null,null,{src:cena.src,alt:cena.alt||'',loading:'lazy'});
+    img.style.width=(cols*100)+'%'; img.style.height=(rows*100)+'%';
+    img.style.left=(-(cena.col||0)*100)+'%'; img.style.top=(-(cena.row||0)*100)+'%';
+    moldura.appendChild(img);return moldura;
+  }
+  function montarArteIngles(arte) {
+    var box=criar('section','aquarela-livro',null,{'aria-label':'Explore as ilustrações'});
+    if(arte.body){
+      var corpo=cenaAquarela(arte.body), marcador=criar('span','aquarela-marcador',null,{'aria-hidden':'true'});
+      marcador.hidden=true;corpo.appendChild(marcador);box.appendChild(corpo);
+      box.appendChild(criar('p','aquarela-instrucao','Toque em uma palavra para localizar a parte do corpo e ouvir em inglês.'));
+      var legenda=criar('p','aquarela-legenda','Escolha uma parte do corpo.',{'aria-live':'polite'}), botoes=criar('div','aquarela-partes');
+      arte.body.points.forEach(function(pt){
+        var b=criar('button','aquarela-parte','<strong lang="en">'+textoSeguro(pt.en)+'</strong><span>'+textoSeguro(pt.pt)+'</span>',{type:'button','aria-pressed':'false'});
+        b.addEventListener('click',function(){
+          botoes.querySelectorAll('button').forEach(function(el){el.setAttribute('aria-pressed','false');});
+          b.setAttribute('aria-pressed','true');marcador.hidden=false;marcador.style.left=pt.x+'%';marcador.style.top=pt.y+'%';
+          legenda.textContent=pt.en+' — '+pt.pt;falar(pt.en,false);
+        });botoes.appendChild(b);
+      });box.appendChild(legenda);box.appendChild(botoes);
+    }
+    if(arte.scenes){
+      var galeria=criar('div','aquarela-galeria'+(arte.wide?' aquarela-galeria--larga':''));
+      if(arte.scenes.length===3&&arte.scenes.every(function(c){return c.cols===3&&c.rows===1;}))galeria.classList.add('aquarela-galeria--tripla');
+      arte.scenes.forEach(function(cena){
+        var fig=criar('figure','aquarela-vinheta');fig.appendChild(cenaAquarela(cena));
+        var caption=criar('figcaption'), ouvir=criar('button','aquarela-ouvir',textoSeguro(cena.en),{type:'button',lang:'en','aria-label':'Ouvir: '+cena.en});
+        ouvir.addEventListener('click',function(){falar(cena.en,false);});caption.appendChild(ouvir);
+        caption.appendChild(criar('span',null,textoSeguro(cena.pt)));fig.appendChild(caption);galeria.appendChild(fig);
+      });box.appendChild(galeria);
+    }
+    if(arte.grammar){
+      var regras=criar('div','aquarela-regras');
+      arte.grammar.forEach(function(regra){
+        var item=criar('div','aquarela-regra');item.appendChild(criar('strong',null,textoSeguro(regra[0]),{lang:'en'}));
+        item.appendChild(criar('span',null,textoSeguro(regra[1])));regras.appendChild(item);
+      });box.appendChild(regras);
+    }
+    return box;
+  }
   function montarCartoes(cartoes) {
     var ingles=emIngles(), grade=criar('div','cartoes-vocab'+(ingles?' cartoes-vocab--ouvir':''));
     if(ingles)grade.appendChild(criar('p','cartoes-vocab__dica','🔊 Toque em um cartão para ouvir. Toque de novo para ouvir mais devagar.'));
     cartoes.forEach(function(c){
       var termo=c.en||c.t||'', b=criar(ingles?'button':'div','cartao-vocab','<span class="cartao-vocab__icone" aria-hidden="true">'+textoSeguro(c.icon||'✦')+'</span><strong>'+textoSeguro(termo)+'</strong><small>'+textoSeguro(c.pt||c.d||'')+'</small>',ingles?{type:'button','aria-label':'Ouvir '+termo}:null);
+      if(ingles)b.querySelector('strong').lang='en';
       if(ingles){var vezes=0;b.addEventListener('click',function(){vezes++;b.classList.add('cartao-vocab--tocando');setTimeout(function(){b.classList.remove('cartao-vocab--tocando');},700);falar(termo.split('→').join(', '),vezes%2===0);});}
       grade.appendChild(b);
     });

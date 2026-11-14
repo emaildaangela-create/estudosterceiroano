@@ -7,11 +7,6 @@
   "theory": [
     {
       "h": "Weekend activities",
-      "figure": {
-        "src": "assets/4b/ing09-fimdesemana.svg",
-        "alt": "Calendário de fim de semana com atividades: go to the movies, go to the beach, go on a picnic, visit a museum, eat out e stay home.",
-        "tipo": "diagrama"
-      },
       "p": [
         "O <strong>weekend</strong> (fim de semana) é um tempo para relaxar e fazer coisas divertidas. Às vezes ficamos em casa; outras vezes saímos, visitamos lugares e encontramos amigos.",
         "Atividades: <strong>eat out</strong> (comer fora), <strong>go to the movies</strong> (ir ao cinema), <strong>visit a museum</strong> (visitar um museu), <strong>go on a picnic</strong> (fazer piquenique), <strong>stay home</strong> (ficar em casa), <strong>go to the beach</strong> (ir à praia), <strong>text my friends</strong> (mandar mensagem para os amigos).",
@@ -78,15 +73,74 @@
           "en": "busy",
           "pt": "ocupado"
         }
-      ]
+      ],
+      "art": {
+        "scenes": [
+          {
+            "src": "assets/english/watercolor/weekend.png",
+            "col": 0,
+            "row": 0,
+            "cols": 2,
+            "rows": 3,
+            "en": "eat out",
+            "pt": "comer fora",
+            "alt": "Família à mesa de um restaurante, atendida por um garçom."
+          },
+          {
+            "src": "assets/english/watercolor/weekend.png",
+            "col": 1,
+            "row": 0,
+            "cols": 2,
+            "rows": 3,
+            "en": "go to the movies",
+            "pt": "ir ao cinema",
+            "alt": "Crianças nas poltronas de um cinema assistem a um filme na tela."
+          },
+          {
+            "src": "assets/english/watercolor/weekend.png",
+            "col": 0,
+            "row": 1,
+            "cols": 2,
+            "rows": 3,
+            "en": "visit a museum",
+            "pt": "visitar um museu",
+            "alt": "Crianças observam um esqueleto de dinossauro exposto em um museu."
+          },
+          {
+            "src": "assets/english/watercolor/weekend.png",
+            "col": 1,
+            "row": 1,
+            "cols": 2,
+            "rows": 3,
+            "en": "go on a picnic",
+            "pt": "fazer um piquenique",
+            "alt": "Família compartilha alimentos sobre uma toalha no parque."
+          },
+          {
+            "src": "assets/english/watercolor/weekend.png",
+            "col": 0,
+            "row": 2,
+            "cols": 2,
+            "rows": 3,
+            "en": "stay home",
+            "pt": "ficar em casa",
+            "alt": "Crianças leem e jogam juntas na sala de casa."
+          },
+          {
+            "src": "assets/english/watercolor/weekend.png",
+            "col": 1,
+            "row": 2,
+            "cols": 2,
+            "rows": 3,
+            "en": "go to the beach",
+            "pt": "ir à praia",
+            "alt": "Crianças constroem um castelo de areia perto do mar, acompanhadas por adultos."
+          }
+        ]
+      }
     },
     {
       "h": "Hobbies: go + -ing",
-      "figure": {
-        "src": "assets/4b/ing09-go-ing.svg",
-        "alt": "Fórmula go + verbo com -ing: go swimming, go fishing, go hiking, go horseback riding, go ice skating.",
-        "tipo": "diagrama"
-      },
       "p": [
         "Muitas atividades de lazer em inglês usam <strong>go + verbo com -ing</strong>: <em>go swimming</em> (nadar), <em>go fishing</em> (pescar), <em>go hiking</em> (fazer trilha), <em>go horseback riding</em> (andar a cavalo), <em>go ice skating</em> (patinar no gelo).",
         "No presente: <em>We usually <strong>go hiking</strong>.</em> No passado, go vira <strong>went</strong>: <em>We <strong>went swimming</strong>.</em> Na negativa: <em>We <strong>didn't go</strong> hiking.</em>",
@@ -118,21 +172,128 @@
           "en": "go ice skating",
           "pt": "patinar no gelo"
         }
-      ]
+      ],
+      "art": {
+        "scenes": [
+          {
+            "src": "assets/english/watercolor/hobbies.png",
+            "col": 0,
+            "row": 0,
+            "cols": 2,
+            "rows": 3,
+            "en": "go swimming",
+            "pt": "nadar",
+            "alt": "Crianças nadam numa piscina acompanhadas por um adulto."
+          },
+          {
+            "src": "assets/english/watercolor/hobbies.png",
+            "col": 1,
+            "row": 0,
+            "cols": 2,
+            "rows": 3,
+            "en": "go fishing",
+            "pt": "pescar",
+            "alt": "Criança pesca com um adulto na margem de um rio."
+          },
+          {
+            "src": "assets/english/watercolor/hobbies.png",
+            "col": 0,
+            "row": 1,
+            "cols": 2,
+            "rows": 3,
+            "en": "go hiking",
+            "pt": "fazer trilha",
+            "alt": "Crianças com mochilas caminham com um adulto por uma trilha."
+          },
+          {
+            "src": "assets/english/watercolor/hobbies.png",
+            "col": 1,
+            "row": 1,
+            "cols": 2,
+            "rows": 3,
+            "en": "go horseback riding",
+            "pt": "andar a cavalo",
+            "alt": "Criança de capacete monta um cavalo conduzido por um adulto."
+          },
+          {
+            "src": "assets/english/watercolor/hobbies.png",
+            "col": 0,
+            "row": 2,
+            "cols": 2,
+            "rows": 3,
+            "en": "go ice skating",
+            "pt": "patinar no gelo",
+            "alt": "Criança com capacete patina numa pista de gelo."
+          }
+        ],
+        "grammar": [
+          [
+            "go + atividade em -ing",
+            "go swimming · go fishing · go hiking"
+          ],
+          [
+            "We went hiking.",
+            "No passado: go → went."
+          ],
+          [
+            "We didn't go hiking.",
+            "Na negativa: didn't + go."
+          ]
+        ]
+      }
     },
     {
       "h": "Didn't: what you did NOT do",
-      "figure": {
-        "src": "assets/4b/ing09-didnt.svg",
-        "alt": "Duas colunas: Things I did (went, won, watched) e Things I didn't do (didn't go, didn't win, didn't watch).",
-        "tipo": "diagrama"
-      },
       "p": [
         "Para dizer que algo <strong>não aconteceu</strong> no passado, usamos <strong>didn't</strong> + verbo na forma normal: <em>I <strong>didn't go</strong> to the movies. I <strong>didn't eat</strong> out. I stayed home.</em>",
         "Compare: <em>We <strong>went</strong> to the beach.</em> (fomos) × <em>We <strong>didn't go</strong> to the beach.</em> (não fomos). <em>We <strong>won</strong>!</em> (ganhamos) × <em>We <strong>didn't win</strong>. We lost.</em> (não ganhamos, perdemos).",
         "Cuidado: depois de <strong>didn't</strong> o verbo NÃO vai para o passado. Certo: <em>I didn't <strong>watch</strong> TV.</em> Errado: <em>I didn't watched TV.</em>",
         "Perguntas com <strong>wh-</strong>: <em><strong>How</strong> was your weekend?</em> → <em>It was boring. I didn't do anything special.</em> / <em><strong>What</strong> did you do?</em> → <em>I went to a soccer game.</em> / <em>Did your team win?</em> → <em>No, they didn't win. They lost.</em>"
-      ]
+      ],
+      "art": {
+        "scenes": [
+          {
+            "src": "assets/english/watercolor/weekend.png",
+            "col": 0,
+            "row": 2,
+            "cols": 2,
+            "rows": 3,
+            "en": "I stayed home.",
+            "pt": "Eu fiquei em casa.",
+            "alt": "Crianças leem e jogam juntas na sala de casa."
+          }
+        ],
+        "grammar": [
+          [
+            "I didn't go to the movies.",
+            "Eu não fui ao cinema."
+          ],
+          [
+            "I didn't eat out.",
+            "Eu não comi fora."
+          ],
+          [
+            "We went to the beach.",
+            "Nós fomos à praia."
+          ],
+          [
+            "We didn't go to the beach.",
+            "Nós não fomos à praia."
+          ],
+          [
+            "We won the game.",
+            "Nós ganhamos o jogo."
+          ],
+          [
+            "We didn't win. We lost.",
+            "Nós não ganhamos. Perdemos."
+          ],
+          [
+            "didn't + verbo na forma base",
+            "Use didn't go, didn't win, didn't watch."
+          ]
+        ]
+      }
     },
     {
       "h": "Reading: Wow! Look at That!",
@@ -141,7 +302,21 @@
         "Dentro do museu há fósseis de dinossauros de verdade e salas de ciência, arte, cultura e história. Na exposição <em>Treasures of the Earth</em> aprende-se sobre a história do <strong>Egito</strong>.",
         "Você pode aprender sobre as estrelas no <strong>planetarium</strong> (planetário), ir ao <strong>theater</strong> (teatro) e até fazer <strong>rock climbing</strong> (escalada)!",
         "Na escrita <em>My Perfect Weekend</em>, Hassan usa palavras de sequência: <strong>first</strong> (primeiro), <strong>then</strong> (então), <strong>next</strong> (em seguida) e <strong>after that</strong> (depois disso)."
-      ]
+      ],
+      "art": {
+        "scenes": [
+          {
+            "src": "assets/english/watercolor/weekend.png",
+            "col": 0,
+            "row": 1,
+            "cols": 2,
+            "rows": 3,
+            "en": "visit a museum",
+            "pt": "Um museu pode ter exposições de dinossauros. Ilustração imaginada; não é uma reprodução do museu citado no texto.",
+            "alt": "Crianças observam um esqueleto de dinossauro exposto em um museu."
+          }
+        ]
+      }
     }
   ],
   "games": [

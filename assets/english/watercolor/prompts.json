@@ -1,0 +1,37 @@
+{
+  "mode": "built-in image_gen",
+  "style": "Use case: illustration-story. Original watercolor illustration for a Brazilian third-grade English textbook, children age 8–9. Hand-painted translucent washes on warm ivory paper, fine soft pencil contours, restrained sage green, ochre, soft blue and coral palette, natural child anatomy, expressive but not babyish, generous white space, no digital gradients, no emoji, no typography, no letters, no numbers, no labels, no watermark. Recurring cast: brown-skinned girl with dark curly bob and coral shirt, tan boy with short dark hair and blue shirt, dark-skinned boy in sage green shirt. Actions must be unmistakable. Landscape 3:2 composition.",
+  "pilots": [
+    [
+      "body",
+      "Educational body reference: one tan boy with short dark hair, plain blue short sleeve shirt and ochre shorts, barefoot, standing facing viewer, relaxed arms extended diagonally down away from torso, both elbows slightly bent and fully visible, hands open with FIVE anatomically correct separated fingers each, two natural feet with five toes each, knees visible. Full body fills central 70% height with margins all around. To the right a smaller rear view of SAME boy showing back. Plain ivory background, no scenery. Accurate natural anatomy suitable for later body-part labels."
+    ],
+    [
+      "celebrations",
+      "Three distinct narrative vignettes, vertically stacked in three equal horizontal bands on one landscape sheet, separated by wide blank ivory gutters. TOP: a parade, children marching together along a street, one carrying flag, another beating drum, spectators watching. MIDDLE: a feast, a multigenerational family seated around a long table full of different shared dishes, visibly eating together. BOTTOM: a birthday party, children gathered around a cake with candles, hanging paper decorations and balloons. Each band is a complete wide scene, no borders, subjects small enough to fit entirely within their band."
+    ],
+    [
+      "weekend",
+      "Six distinct small scenes laid out in an exact 2 column by 3 row grid, generous blank ivory gutters, no frames. Reading order: TOP LEFT children and parent eating at a restaurant with a waiter serving their table; TOP RIGHT children seated in cinema looking toward movie screen; MIDDLE LEFT children observing a large mounted dinosaur skeleton inside museum; MIDDLE RIGHT children and parent sharing picnic on blanket in park; BOTTOM LEFT children reading and playing board game inside cozy home; BOTTOM RIGHT children building sandcastle at beach beside sea with adult nearby. Clear actions, same recurring characters, full scenes contained in own cells."
+    ]
+  ],
+  "additional": [
+    [
+      "habits",
+      "Six distinct scenes in exact 2 columns by 3 rows grid, generous ivory gutters, no frames. TOP LEFT children running and playing outdoors; TOP RIGHT curly-haired girl eating fruit at table. MIDDLE LEFT boy eating vegetables with fork; MIDDLE RIGHT child sleeping peacefully in bed. BOTTOM LEFT boy drinking water from a transparent glass; BOTTOM RIGHT girl rubbing soapy hands together under running faucet over sink. Focus on actions, no floating object icons."
+    ],
+    [
+      "hobbies",
+      "Six scenes exact 2 columns by 3 rows grid, blank ivory gutters. TOP LEFT children swimming in swimming pool with adult instructor; TOP RIGHT child fishing from safe grassy river bank with parent. MIDDLE LEFT children and adult hiking up woodland trail wearing backpacks and boots; MIDDLE RIGHT child with riding helmet riding horse with adult guide holding lead rope. BOTTOM LEFT child ice skating on frozen indoor rink wearing helmet and gloves; BOTTOM RIGHT three recurring children sitting together talking about a photo album at a park picnic table. Natural safe scenes, clear actions."
+    ],
+    [
+      "cultures",
+      "Two equally wide scenes side by side with wide ivory gutter. LEFT: Mexican family with grandmother and child thoughtfully arranging orange marigolds, food, candles and framed family portrait on an ofrenda for Dia de Muertos. Warm remembrance, respectful everyday clothing, decorative cut paper above, no Halloween costumes or horror. RIGHT: northern Thai family watching large pale ivory cylindrical hot-air paper sky lanterns floating upward in deep blue twilight at Yi Peng, a few small temple roof silhouettes distant, lanterns visibly open-bottomed pale paper cylinders, NOT red ribbed hanging lanterns. Human connection, warm luminous watercolor. No text."
+    ],
+    [
+      "quantities",
+      "Three equal vertical panels side by side separated by generous blank ivory gutters. LEFT boy tired on couch watching television, wall clock and dark window suggest long time, no words or numbers on clock. CENTER girl at a table with an excessive large pile of cookies on platter and a modest plate in front, thoughtful expression not shame. RIGHT boy after outdoor play drinking water from a clear glass, water jug nearby, relaxed refreshed expression. These support too much TV, too many cookies, enough water. No good/bad icons, no text."
+    ]
+  ],
+  "revision": "Use weekend.png as style and character reference only. Match illustrated watercolor faces and paper wash; no photography. Landscape 1536x1024."
+}

@@ -21,11 +21,6 @@ const DISCIPLINAS = [
         "theory": [
           {
             "h": "Parts of the body",
-            "figure": {
-              "src": "assets/4b/ing07-corpo.svg",
-              "alt": "Criança com setas indicando shoulder, elbow, chest, stomach, back, knee, fingers e toes.",
-              "tipo": "diagrama"
-            },
             "p": [
               "Na Unit 7 aprendemos o nome das <strong>partes do corpo</strong> em inglês. Toque em cada cartão para ouvir a palavra.",
               "Repare no <strong>a</strong> e no <strong>an</strong>: usamos <strong>an</strong> antes de som de vogal (<strong>an elbow</strong>) e <strong>a</strong> antes de som de consoante (<strong>a knee</strong>, <strong>a back</strong>).",
@@ -93,30 +88,108 @@ const DISCIPLINAS = [
                 "en": "bend",
                 "pt": "dobrar"
               }
-            ]
+            ],
+            "art": {
+              "body": {
+                "src": "assets/english/watercolor/body.png",
+                "alt": "Menino de frente, de braços abertos, e o mesmo menino de costas. Os botões abaixo localizam oito partes do corpo.",
+                "points": [
+                  {
+                    "en": "a shoulder",
+                    "pt": "ombro",
+                    "x": 29,
+                    "y": 26
+                  },
+                  {
+                    "en": "an elbow",
+                    "pt": "cotovelo",
+                    "x": 25,
+                    "y": 38
+                  },
+                  {
+                    "en": "fingers",
+                    "pt": "dedos das mãos",
+                    "x": 19.5,
+                    "y": 53
+                  },
+                  {
+                    "en": "a chest",
+                    "pt": "peito",
+                    "x": 36,
+                    "y": 32
+                  },
+                  {
+                    "en": "a stomach",
+                    "pt": "barriga",
+                    "x": 36,
+                    "y": 44
+                  },
+                  {
+                    "en": "a knee",
+                    "pt": "joelho",
+                    "x": 32,
+                    "y": 68
+                  },
+                  {
+                    "en": "toes",
+                    "pt": "dedos dos pés",
+                    "x": 28.7,
+                    "y": 96
+                  },
+                  {
+                    "en": "a back",
+                    "pt": "costas",
+                    "x": 74.5,
+                    "y": 43
+                  }
+                ]
+              }
+            }
           },
           {
             "h": "Did you…? Yes, I did. No, I didn't.",
-            "figure": {
-              "src": "assets/4b/ing07-did.svg",
-              "alt": "Esquema: Did + pessoa + verbo? Respostas curtas Yes, I did ou No, I didn't.",
-              "tipo": "diagrama"
-            },
             "p": [
               "Para perguntar sobre algo que <strong>já aconteceu</strong> (no passado), começamos com <strong>Did</strong>: <strong>Did</strong> + pessoa + verbo + resto? Exemplo: <em>Did you wash your hands?</em>",
               "Depois de <strong>Did</strong>, o verbo fica na forma normal, sem mudar: <em>Did you <strong>brush</strong> your teeth?</em> (e não <em>brushed</em>).",
               "A <strong>resposta curta</strong> repete a pessoa e usa <strong>did</strong> ou <strong>didn't</strong>: <em>Yes, I did.</em> / <em>No, I didn't.</em> — <em>Did he take a shower?</em> → <em>Yes, he did.</em> ou <em>No, he didn't.</em>",
               "<strong>Didn't</strong> é a forma curta de <strong>did not</strong>. Pense assim: <strong>did</strong> = sim, fiz; <strong>didn't</strong> = não fiz.",
               "Na música <em>Let's Move</em>: <em>Did you move your legs? Yes, I did! Did you eat a healthy snack? Oops, I forgot!</em>"
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/habits.png",
+                  "col": 1,
+                  "row": 2,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "wash your hands",
+                  "pt": "lavar as mãos",
+                  "alt": "Menina esfrega as mãos com sabão na pia."
+                }
+              ],
+              "grammar": [
+                [
+                  "Did you wash your hands?",
+                  "Did + pessoa + verbo na forma base."
+                ],
+                [
+                  "Yes, I did.",
+                  "Sim, lavei."
+                ],
+                [
+                  "No, I didn't.",
+                  "Não, não lavei."
+                ],
+                [
+                  "Did she wash her hands?",
+                  "Yes, she did. / No, she didn't. A resposta repete a pessoa."
+                ]
+              ]
+            }
           },
           {
             "h": "Healthy habits",
-            "figure": {
-              "src": "assets/4b/ing07-habitos.svg",
-              "alt": "Hábitos bons (get exercise, eat fruit, eat vegetables, get rest) e hábito ruim (eat junk food).",
-              "tipo": "diagrama"
-            },
             "p": [
               "<strong>Habits</strong> são hábitos: coisas que fazemos sempre. Alguns são <strong>good for you</strong> (bons para você) e outros são <strong>bad for you</strong> (ruins para você).",
               "Bons hábitos: <strong>get exercise</strong> (fazer exercício), <strong>eat fruit</strong> (comer frutas), <strong>eat vegetables</strong> (comer verduras e legumes), <strong>get rest</strong> (descansar), <strong>drink water</strong> (beber água), <strong>sleep eight hours</strong>.",
@@ -154,22 +227,129 @@ const DISCIPLINAS = [
                 "en": "drink water",
                 "pt": "beber água"
               }
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/habits.png",
+                  "col": 0,
+                  "row": 0,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "get exercise",
+                  "pt": "fazer exercício",
+                  "alt": "Crianças correm e brincam ao ar livre."
+                },
+                {
+                  "src": "assets/english/watercolor/habits.png",
+                  "col": 1,
+                  "row": 0,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "eat fruit",
+                  "pt": "comer frutas",
+                  "alt": "Menina come frutas à mesa."
+                },
+                {
+                  "src": "assets/english/watercolor/habits.png",
+                  "col": 0,
+                  "row": 1,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "eat vegetables",
+                  "pt": "comer verduras e legumes",
+                  "alt": "Menino come legumes com um garfo."
+                },
+                {
+                  "src": "assets/english/watercolor/habits.png",
+                  "col": 1,
+                  "row": 1,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "get rest",
+                  "pt": "descansar",
+                  "alt": "Criança dorme confortavelmente na cama."
+                },
+                {
+                  "src": "assets/english/watercolor/habits.png",
+                  "col": 0,
+                  "row": 2,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "drink water",
+                  "pt": "beber água",
+                  "alt": "Menino bebe água em um copo transparente."
+                },
+                {
+                  "src": "assets/english/watercolor/habits.png",
+                  "col": 1,
+                  "row": 2,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "wash your hands",
+                  "pt": "lavar as mãos",
+                  "alt": "Menina esfrega as mãos com sabão na pia."
+                }
+              ]
+            }
           },
           {
             "h": "Too much, too many, enough",
-            "figure": {
-              "src": "assets/4b/ing07-too-enough.svg",
-              "alt": "Três copos: um transbordando (too much), um no ponto certo (enough) e muitos doces empilhados (too many).",
-              "tipo": "diagrama"
-            },
             "p": [
               "<strong>Too much</strong> e <strong>too many</strong> querem dizer <strong>demais</strong> (mais do que faz bem). <strong>Enough</strong> quer dizer <strong>o suficiente</strong> (a quantidade certa).",
               "<strong>Too much</strong> + coisas que <strong>não contamos</strong> uma por uma: <em>too much TV, too much junk food, too much soda, too much sugar</em>.",
               "<strong>Too many</strong> + coisas que <strong>contamos</strong>: <em>too many chips, too many candies, too many cookies</em>.",
               "<strong>Enough</strong> mostra que está bom: <em>I get <strong>enough</strong> sleep. I drink <strong>enough</strong> water. I get <strong>enough</strong> exercise.</em>",
               "Exemplos do livro: <em>I don't watch too much TV. I think I get enough exercise. I drink enough water. I don't eat too much junk food.</em>"
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/quantities.png",
+                  "col": 0,
+                  "row": 0,
+                  "cols": 3,
+                  "rows": 1,
+                  "en": "too much TV",
+                  "pt": "TV demais",
+                  "alt": "Menino cansado diante da televisão; a janela escura sugere que o tempo passou."
+                },
+                {
+                  "src": "assets/english/watercolor/quantities.png",
+                  "col": 1,
+                  "row": 0,
+                  "cols": 3,
+                  "rows": 1,
+                  "en": "too many cookies",
+                  "pt": "biscoitos demais",
+                  "alt": "Menina observa uma grande pilha de biscoitos sobre a mesa."
+                },
+                {
+                  "src": "assets/english/watercolor/quantities.png",
+                  "col": 2,
+                  "row": 0,
+                  "cols": 3,
+                  "rows": 1,
+                  "en": "enough water",
+                  "pt": "água suficiente",
+                  "alt": "Menino bebe água depois de brincar ao ar livre."
+                }
+              ],
+              "grammar": [
+                [
+                  "too much",
+                  "Com nomes não contáveis: TV, soda, sugar."
+                ],
+                [
+                  "too many",
+                  "Com nomes contáveis no plural: cookies, candies, chips."
+                ],
+                [
+                  "enough",
+                  "O suficiente: water, sleep, exercise."
+                ]
+              ]
+            }
           },
           {
             "h": "Reading: Take Care of Your Brain!",
@@ -178,7 +358,31 @@ const DISCIPLINAS = [
               "Ficar ao ar livre (<strong>outdoors</strong>), num lugar natural como a floresta, também faz bem: é o <strong>forest bath</strong> (banho de floresta).",
               "Rir também é bom! Quando você ri alto (<strong>laugh out loud</strong>), o cérebro recebe mais sangue e o corpo pode se sentir melhor por até <strong>45 minutos</strong>.",
               "Curiosidade: <strong>gelotologist</strong> é a pessoa que estuda os efeitos do riso no corpo humano."
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/hobbies.png",
+                  "col": 0,
+                  "row": 1,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "go hiking",
+                  "pt": "fazer trilha",
+                  "alt": "Crianças com mochilas caminham com um adulto por uma trilha."
+                },
+                {
+                  "src": "assets/english/watercolor/hobbies.png",
+                  "col": 1,
+                  "row": 2,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "talk with friends",
+                  "pt": "conversar com amigos",
+                  "alt": "Três crianças conversam enquanto observam um álbum no parque."
+                }
+              ]
+            }
           }
         ],
         "games": [
@@ -525,11 +729,6 @@ const DISCIPLINAS = [
         "theory": [
           {
             "h": "Celebrations and festivals",
-            "figure": {
-              "src": "assets/4b/ing08-festa.svg",
-              "alt": "Cena de festa com máscara, fantasia, lanternas, fogos de artifício, desfile e decorações.",
-              "tipo": "diagrama"
-            },
             "p": [
               "Pessoas do mundo todo têm <strong>celebrations</strong> (celebrações) e <strong>festivals</strong> (festivais). Elas lembram o passado, encontram a família e os amigos, comem e se divertem.",
               "Palavras de festa: <strong>a costume</strong> (fantasia), <strong>a mask</strong> (máscara), <strong>a party</strong> (festa), <strong>a feast</strong> (banquete), <strong>a lantern</strong> (lanterna), <strong>fireworks</strong> (fogos de artifício), <strong>decorations</strong> (enfeites) e <strong>a parade</strong> (desfile).",
@@ -596,7 +795,42 @@ const DISCIPLINAS = [
                 "en": "dress up",
                 "pt": "fantasiar-se"
               }
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/celebrations.png",
+                  "col": 0,
+                  "row": 0,
+                  "cols": 1,
+                  "rows": 3,
+                  "en": "a parade",
+                  "pt": "um desfile",
+                  "alt": "Crianças marcham com bandeira e instrumentos enquanto pessoas assistem na rua."
+                },
+                {
+                  "src": "assets/english/watercolor/celebrations.png",
+                  "col": 0,
+                  "row": 1,
+                  "cols": 1,
+                  "rows": 3,
+                  "en": "a feast",
+                  "pt": "um banquete",
+                  "alt": "Uma família de várias gerações compartilha uma mesa com muitos pratos."
+                },
+                {
+                  "src": "assets/english/watercolor/celebrations.png",
+                  "col": 0,
+                  "row": 2,
+                  "cols": 1,
+                  "rows": 3,
+                  "en": "a party",
+                  "pt": "uma festa",
+                  "alt": "Crianças reunidas ao redor de um bolo de aniversário, com balões e enfeites."
+                }
+              ],
+              "wide": true
+            }
           },
           {
             "h": "Birthday party words",
@@ -630,29 +864,71 @@ const DISCIPLINAS = [
                 "en": "balloons",
                 "pt": "balões"
               }
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/celebrations.png",
+                  "col": 0,
+                  "row": 2,
+                  "cols": 1,
+                  "rows": 3,
+                  "en": "a party",
+                  "pt": "uma festa",
+                  "alt": "Crianças reunidas ao redor de um bolo de aniversário, com balões e enfeites."
+                }
+              ],
+              "wide": true
+            }
           },
           {
             "h": "Simple past: regular verbs (-ed)",
-            "figure": {
-              "src": "assets/4b/ing08-regular.svg",
-              "alt": "Verbos regulares ganham -ed no passado: watch vira watched, play vira played, dance vira danced.",
-              "tipo": "diagrama"
-            },
             "p": [
               "Para contar o que <strong>aconteceu</strong>, usamos o <strong>simple past</strong>. Nos <strong>verbos regulares</strong>, acrescentamos <strong>-ed</strong> no final: <em>watch → watched, play → played, listen → listened, celebrate → celebrated</em>.",
               "Se o verbo já termina em <strong>e</strong>, colocamos só <strong>-d</strong>: <em>dance → danced, like → liked</em>.",
               "Pergunta e resposta longa: <em>Did you watch the parade?</em> → <em>Yes, we <strong>watched</strong> the parade.</em> / <em>Did you like the music?</em> → <em>Yes, we <strong>liked</strong> it a lot!</em>",
               "Atenção: na pergunta com <strong>Did</strong> o verbo fica normal (<em>Did you <strong>watch</strong>…?</em>); na resposta longa ele vai para o passado (<em>We <strong>watched</strong>…</em>)."
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/celebrations.png",
+                  "col": 0,
+                  "row": 0,
+                  "cols": 1,
+                  "rows": 3,
+                  "en": "We watched the parade.",
+                  "pt": "Nós assistimos ao desfile.",
+                  "alt": "Crianças marcham com bandeira e instrumentos enquanto pessoas assistem na rua."
+                }
+              ],
+              "wide": true,
+              "grammar": [
+                [
+                  "watch → watched",
+                  "Acrescente -ed."
+                ],
+                [
+                  "play → played",
+                  "Acrescente -ed."
+                ],
+                [
+                  "listen → listened",
+                  "Acrescente -ed."
+                ],
+                [
+                  "dance → danced",
+                  "Já termina em e: acrescente só -d."
+                ],
+                [
+                  "like → liked",
+                  "Já termina em e: acrescente só -d."
+                ]
+              ]
+            }
           },
           {
             "h": "Simple past: irregular verbs",
-            "figure": {
-              "src": "assets/4b/ing08-irregular.svg",
-              "alt": "Pares de verbos irregulares: go/went, see/saw, eat/ate, sing/sang, drink/drank, wear/wore, have/had, write/wrote, give/gave, take/took.",
-              "tipo": "diagrama"
-            },
             "p": [
               "Alguns verbos <strong>não ganham -ed</strong>: eles mudam de forma no passado. São os <strong>verbos irregulares</strong>, e precisamos memorizá-los.",
               "<em>go → <strong>went</strong>, see → <strong>saw</strong>, eat → <strong>ate</strong>, sing → <strong>sang</strong>, drink → <strong>drank</strong>, wear → <strong>wore</strong>, have → <strong>had</strong>, write → <strong>wrote</strong>, give → <strong>gave</strong>, take → <strong>took</strong></em>.",
@@ -709,21 +985,97 @@ const DISCIPLINAS = [
                 "en": "take → took",
                 "pt": "pegar/levar → pegou"
               }
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/celebrations.png",
+                  "col": 0,
+                  "row": 2,
+                  "cols": 1,
+                  "rows": 3,
+                  "en": "We had a party.",
+                  "pt": "Nós fizemos uma festa.",
+                  "alt": "Crianças reunidas ao redor de um bolo de aniversário, com balões e enfeites."
+                }
+              ],
+              "wide": true,
+              "grammar": [
+                [
+                  "go → went",
+                  "ir"
+                ],
+                [
+                  "see → saw",
+                  "ver"
+                ],
+                [
+                  "eat → ate",
+                  "comer"
+                ],
+                [
+                  "sing → sang",
+                  "cantar"
+                ],
+                [
+                  "drink → drank",
+                  "beber"
+                ],
+                [
+                  "wear → wore",
+                  "vestir"
+                ],
+                [
+                  "have → had",
+                  "ter"
+                ],
+                [
+                  "write → wrote",
+                  "escrever"
+                ],
+                [
+                  "give → gave",
+                  "dar"
+                ],
+                [
+                  "take → took",
+                  "pegar / levar"
+                ]
+              ]
+            }
           },
           {
             "h": "Reading: November Celebrations",
-            "figure": {
-              "src": "assets/4b/ing08-novembro.svg",
-              "alt": "Comparação: Day of the Dead no México, com caveiras coloridas e velas; Yi Peng na Tailândia, com lanternas subindo ao céu.",
-              "tipo": "diagrama"
-            },
             "p": [
-              "O texto compara duas festas de novembro. O <strong>Day of the Dead</strong> (Dia dos Mortos), no <strong>México</strong>, é no primeiro dia de novembro: as famílias lembram e celebram as pessoas da família que morreram.",
-              "No Day of the Dead, as famílias levam um banquete (<strong>a big feast</strong>) ao cemitério, acendem velas e tocam música. Caveiras e esqueletos <strong>não são assustadores</strong>: a festa é alegre, não triste.",
+              "O texto compara duas celebrações. No <strong>Day of the Dead</strong> (Dia dos Mortos), no <strong>México</strong>, as famílias lembram pessoas queridas que morreram. O livro destaca 1º de novembro; as tradições acontecem entre o fim de outubro e o início de novembro e variam entre comunidades.",
+              "Flores, velas, alimentos e retratos podem fazer parte das homenagens. O livro descreve famílias levando um banquete (<strong>a big feast</strong>) ao cemitério. As caveiras decoradas fazem parte da celebração e da memória; não representam uma festa de terror.",
               "O <strong>Yi Peng</strong>, na <strong>Tailândia</strong>, também acontece em novembro. Tem desfile, fantasias bonitas e milhares de <strong>lanternas de papel de arroz</strong> que sobem ao céu. As pessoas acreditam que as lanternas levam embora as coisas ruins. No último dia há fogos de artifício.",
               "Na escrita do Hiro, <em>The Sapporo Snow Festival</em>, ele usa o passado: <em>I <strong>went</strong>… I <strong>wore</strong> a snowsuit… We <strong>saw</strong> snow sculptures… We <strong>played</strong>… We <strong>listened</strong>, <strong>ate</strong> and <strong>drank</strong>…</em>"
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/cultures.png",
+                  "col": 0,
+                  "row": 0,
+                  "cols": 2,
+                  "rows": 1,
+                  "en": "Day of the Dead · Mexico",
+                  "pt": "Memórias em família, flores e oferendas.",
+                  "alt": "Família mexicana organiza flores alaranjadas, velas, alimentos e um retrato em uma oferenda."
+                },
+                {
+                  "src": "assets/english/watercolor/cultures.png",
+                  "col": 1,
+                  "row": 0,
+                  "cols": 2,
+                  "rows": 1,
+                  "en": "Yi Peng · Thailand",
+                  "pt": "Lanternas de papel iluminam o céu.",
+                  "alt": "Família tailandesa observa lanternas claras de papel subindo ao céu ao anoitecer."
+                }
+              ]
+            }
           }
         ],
         "games": [
@@ -1046,11 +1398,6 @@ const DISCIPLINAS = [
         "theory": [
           {
             "h": "Weekend activities",
-            "figure": {
-              "src": "assets/4b/ing09-fimdesemana.svg",
-              "alt": "Calendário de fim de semana com atividades: go to the movies, go to the beach, go on a picnic, visit a museum, eat out e stay home.",
-              "tipo": "diagrama"
-            },
             "p": [
               "O <strong>weekend</strong> (fim de semana) é um tempo para relaxar e fazer coisas divertidas. Às vezes ficamos em casa; outras vezes saímos, visitamos lugares e encontramos amigos.",
               "Atividades: <strong>eat out</strong> (comer fora), <strong>go to the movies</strong> (ir ao cinema), <strong>visit a museum</strong> (visitar um museu), <strong>go on a picnic</strong> (fazer piquenique), <strong>stay home</strong> (ficar em casa), <strong>go to the beach</strong> (ir à praia), <strong>text my friends</strong> (mandar mensagem para os amigos).",
@@ -1117,15 +1464,74 @@ const DISCIPLINAS = [
                 "en": "busy",
                 "pt": "ocupado"
               }
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/weekend.png",
+                  "col": 0,
+                  "row": 0,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "eat out",
+                  "pt": "comer fora",
+                  "alt": "Família à mesa de um restaurante, atendida por um garçom."
+                },
+                {
+                  "src": "assets/english/watercolor/weekend.png",
+                  "col": 1,
+                  "row": 0,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "go to the movies",
+                  "pt": "ir ao cinema",
+                  "alt": "Crianças nas poltronas de um cinema assistem a um filme na tela."
+                },
+                {
+                  "src": "assets/english/watercolor/weekend.png",
+                  "col": 0,
+                  "row": 1,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "visit a museum",
+                  "pt": "visitar um museu",
+                  "alt": "Crianças observam um esqueleto de dinossauro exposto em um museu."
+                },
+                {
+                  "src": "assets/english/watercolor/weekend.png",
+                  "col": 1,
+                  "row": 1,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "go on a picnic",
+                  "pt": "fazer um piquenique",
+                  "alt": "Família compartilha alimentos sobre uma toalha no parque."
+                },
+                {
+                  "src": "assets/english/watercolor/weekend.png",
+                  "col": 0,
+                  "row": 2,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "stay home",
+                  "pt": "ficar em casa",
+                  "alt": "Crianças leem e jogam juntas na sala de casa."
+                },
+                {
+                  "src": "assets/english/watercolor/weekend.png",
+                  "col": 1,
+                  "row": 2,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "go to the beach",
+                  "pt": "ir à praia",
+                  "alt": "Crianças constroem um castelo de areia perto do mar, acompanhadas por adultos."
+                }
+              ]
+            }
           },
           {
             "h": "Hobbies: go + -ing",
-            "figure": {
-              "src": "assets/4b/ing09-go-ing.svg",
-              "alt": "Fórmula go + verbo com -ing: go swimming, go fishing, go hiking, go horseback riding, go ice skating.",
-              "tipo": "diagrama"
-            },
             "p": [
               "Muitas atividades de lazer em inglês usam <strong>go + verbo com -ing</strong>: <em>go swimming</em> (nadar), <em>go fishing</em> (pescar), <em>go hiking</em> (fazer trilha), <em>go horseback riding</em> (andar a cavalo), <em>go ice skating</em> (patinar no gelo).",
               "No presente: <em>We usually <strong>go hiking</strong>.</em> No passado, go vira <strong>went</strong>: <em>We <strong>went swimming</strong>.</em> Na negativa: <em>We <strong>didn't go</strong> hiking.</em>",
@@ -1157,21 +1563,128 @@ const DISCIPLINAS = [
                 "en": "go ice skating",
                 "pt": "patinar no gelo"
               }
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/hobbies.png",
+                  "col": 0,
+                  "row": 0,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "go swimming",
+                  "pt": "nadar",
+                  "alt": "Crianças nadam numa piscina acompanhadas por um adulto."
+                },
+                {
+                  "src": "assets/english/watercolor/hobbies.png",
+                  "col": 1,
+                  "row": 0,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "go fishing",
+                  "pt": "pescar",
+                  "alt": "Criança pesca com um adulto na margem de um rio."
+                },
+                {
+                  "src": "assets/english/watercolor/hobbies.png",
+                  "col": 0,
+                  "row": 1,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "go hiking",
+                  "pt": "fazer trilha",
+                  "alt": "Crianças com mochilas caminham com um adulto por uma trilha."
+                },
+                {
+                  "src": "assets/english/watercolor/hobbies.png",
+                  "col": 1,
+                  "row": 1,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "go horseback riding",
+                  "pt": "andar a cavalo",
+                  "alt": "Criança de capacete monta um cavalo conduzido por um adulto."
+                },
+                {
+                  "src": "assets/english/watercolor/hobbies.png",
+                  "col": 0,
+                  "row": 2,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "go ice skating",
+                  "pt": "patinar no gelo",
+                  "alt": "Criança com capacete patina numa pista de gelo."
+                }
+              ],
+              "grammar": [
+                [
+                  "go + atividade em -ing",
+                  "go swimming · go fishing · go hiking"
+                ],
+                [
+                  "We went hiking.",
+                  "No passado: go → went."
+                ],
+                [
+                  "We didn't go hiking.",
+                  "Na negativa: didn't + go."
+                ]
+              ]
+            }
           },
           {
             "h": "Didn't: what you did NOT do",
-            "figure": {
-              "src": "assets/4b/ing09-didnt.svg",
-              "alt": "Duas colunas: Things I did (went, won, watched) e Things I didn't do (didn't go, didn't win, didn't watch).",
-              "tipo": "diagrama"
-            },
             "p": [
               "Para dizer que algo <strong>não aconteceu</strong> no passado, usamos <strong>didn't</strong> + verbo na forma normal: <em>I <strong>didn't go</strong> to the movies. I <strong>didn't eat</strong> out. I stayed home.</em>",
               "Compare: <em>We <strong>went</strong> to the beach.</em> (fomos) × <em>We <strong>didn't go</strong> to the beach.</em> (não fomos). <em>We <strong>won</strong>!</em> (ganhamos) × <em>We <strong>didn't win</strong>. We lost.</em> (não ganhamos, perdemos).",
               "Cuidado: depois de <strong>didn't</strong> o verbo NÃO vai para o passado. Certo: <em>I didn't <strong>watch</strong> TV.</em> Errado: <em>I didn't watched TV.</em>",
               "Perguntas com <strong>wh-</strong>: <em><strong>How</strong> was your weekend?</em> → <em>It was boring. I didn't do anything special.</em> / <em><strong>What</strong> did you do?</em> → <em>I went to a soccer game.</em> / <em>Did your team win?</em> → <em>No, they didn't win. They lost.</em>"
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/weekend.png",
+                  "col": 0,
+                  "row": 2,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "I stayed home.",
+                  "pt": "Eu fiquei em casa.",
+                  "alt": "Crianças leem e jogam juntas na sala de casa."
+                }
+              ],
+              "grammar": [
+                [
+                  "I didn't go to the movies.",
+                  "Eu não fui ao cinema."
+                ],
+                [
+                  "I didn't eat out.",
+                  "Eu não comi fora."
+                ],
+                [
+                  "We went to the beach.",
+                  "Nós fomos à praia."
+                ],
+                [
+                  "We didn't go to the beach.",
+                  "Nós não fomos à praia."
+                ],
+                [
+                  "We won the game.",
+                  "Nós ganhamos o jogo."
+                ],
+                [
+                  "We didn't win. We lost.",
+                  "Nós não ganhamos. Perdemos."
+                ],
+                [
+                  "didn't + verbo na forma base",
+                  "Use didn't go, didn't win, didn't watch."
+                ]
+              ]
+            }
           },
           {
             "h": "Reading: Wow! Look at That!",
@@ -1180,7 +1693,21 @@ const DISCIPLINAS = [
               "Dentro do museu há fósseis de dinossauros de verdade e salas de ciência, arte, cultura e história. Na exposição <em>Treasures of the Earth</em> aprende-se sobre a história do <strong>Egito</strong>.",
               "Você pode aprender sobre as estrelas no <strong>planetarium</strong> (planetário), ir ao <strong>theater</strong> (teatro) e até fazer <strong>rock climbing</strong> (escalada)!",
               "Na escrita <em>My Perfect Weekend</em>, Hassan usa palavras de sequência: <strong>first</strong> (primeiro), <strong>then</strong> (então), <strong>next</strong> (em seguida) e <strong>after that</strong> (depois disso)."
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/weekend.png",
+                  "col": 0,
+                  "row": 1,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "visit a museum",
+                  "pt": "Um museu pode ter exposições de dinossauros. Ilustração imaginada; não é uma reprodução do museu citado no texto.",
+                  "alt": "Crianças observam um esqueleto de dinossauro exposto em um museu."
+                }
+              ]
+            }
           }
         ],
         "games": [
@@ -1547,22 +2074,85 @@ const DISCIPLINAS = [
                 "en": "stay home",
                 "pt": "ficar em casa"
               }
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/weekend.png",
+                  "col": 0,
+                  "row": 0,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "eat out",
+                  "pt": "comer fora",
+                  "alt": "Família à mesa de um restaurante, atendida por um garçom."
+                },
+                {
+                  "src": "assets/english/watercolor/hobbies.png",
+                  "col": 0,
+                  "row": 1,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "go hiking",
+                  "pt": "fazer trilha",
+                  "alt": "Crianças com mochilas caminham com um adulto por uma trilha."
+                }
+              ]
+            }
           },
           {
             "h": "Resumo da prova: grammar",
-            "figure": {
-              "src": "assets/4b/ing09-didnt.svg",
-              "alt": "Duas colunas: coisas que eu fiz (went, won, watched) e coisas que eu não fiz (didn't go, didn't win, didn't watch).",
-              "tipo": "diagrama"
-            },
             "p": [
               "Tudo gira em torno do <strong>simple past</strong> (passado). Pergunta: <strong>Did</strong> + pessoa + verbo normal? → <em>Did you watch the parade?</em>",
               "<strong>Resposta curta (Unit 7):</strong> <em>Yes, I did.</em> / <em>No, I didn't.</em> — repita a pessoa: <em>Did she…? → Yes, she did.</em>",
               "<strong>Resposta longa (Unit 8):</strong> verbo no passado. Regulares ganham <strong>-ed</strong> (watched, played, danced). Irregulares mudam: <strong>went, saw, ate, sang, drank, wore, had, wrote, gave, took</strong>.",
               "<strong>Negativa (Unit 9):</strong> <strong>didn't</strong> + verbo normal: <em>I didn't go. We didn't win.</em> Nunca: <em>didn't went</em>.",
               "<strong>Too / Enough (Unit 7):</strong> too much (TV, soda, junk food), too many (cookies, candies, chips), enough (sleep, water, exercise)."
-            ]
+            ],
+            "art": {
+              "scenes": [
+                {
+                  "src": "assets/english/watercolor/weekend.png",
+                  "col": 0,
+                  "row": 2,
+                  "cols": 2,
+                  "rows": 3,
+                  "en": "I stayed home.",
+                  "pt": "Eu fiquei em casa.",
+                  "alt": "Crianças leem e jogam juntas na sala de casa."
+                }
+              ],
+              "grammar": [
+                [
+                  "I didn't go to the movies.",
+                  "Eu não fui ao cinema."
+                ],
+                [
+                  "I didn't eat out.",
+                  "Eu não comi fora."
+                ],
+                [
+                  "We went to the beach.",
+                  "Nós fomos à praia."
+                ],
+                [
+                  "We didn't go to the beach.",
+                  "Nós não fomos à praia."
+                ],
+                [
+                  "We won the game.",
+                  "Nós ganhamos o jogo."
+                ],
+                [
+                  "We didn't win. We lost.",
+                  "Nós não ganhamos. Perdemos."
+                ],
+                [
+                  "didn't + verbo na forma base",
+                  "Use didn't go, didn't win, didn't watch."
+                ]
+              ]
+            }
           }
         ],
         "games": [

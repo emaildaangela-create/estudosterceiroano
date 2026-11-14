@@ -1,4 +1,4 @@
-const CACHE_CORE = 'estudos-3-ano-core-4386d289';
+const CACHE_CORE = 'estudos-3-ano-core-ae80b1d1';
 const CACHE_VIDEOS = 'estudos-3-ano-videos-v1';
 const CACHE_LEGADO = 'estudos-3-ano-v47';
 /* A lista entre os marcadores é atualizada pelo build_data.py. */
@@ -50,7 +50,14 @@ const ARQUIVOS = [
   './assets/4b/lp27-reportagem.svg',
   './assets/4b/lp27-sujeito.svg',
   './assets/4b/lpg-misterio.svg',
-  './assets/4b/lpg-poema.svg'
+  './assets/4b/lpg-poema.svg',
+  './assets/english/watercolor/body.png',
+  './assets/english/watercolor/celebrations.png',
+  './assets/english/watercolor/cultures.png',
+  './assets/english/watercolor/habits.png',
+  './assets/english/watercolor/hobbies.png',
+  './assets/english/watercolor/quantities.png',
+  './assets/english/watercolor/weekend.png'
   // </arquivos-offline>
 ];
 
