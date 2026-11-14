@@ -3,10 +3,15 @@
   "module": "7",
   "title": "Feeling Fit",
   "subtitle": "Body parts · Did…? Yes, I did / No, I didn't · Too / Enough",
+  "video": "assets/videos/ing07.mp4",
   "theory": [
     {
       "h": "Parts of the body",
-      "figure": {"src": "assets/4b/ing07-corpo.svg", "alt": "Criança com setas indicando shoulder, elbow, chest, stomach, back, knee, fingers e toes.", "tipo": "diagrama"},
+      "figure": {
+        "src": "assets/4b/ing07-corpo.svg",
+        "alt": "Criança com setas indicando shoulder, elbow, chest, stomach, back, knee, fingers e toes.",
+        "tipo": "diagrama"
+      },
       "p": [
         "Na Unit 7 aprendemos o nome das <strong>partes do corpo</strong> em inglês. Toque em cada cartão para ouvir a palavra.",
         "Repare no <strong>a</strong> e no <strong>an</strong>: usamos <strong>an</strong> antes de som de vogal (<strong>an elbow</strong>) e <strong>a</strong> antes de som de consoante (<strong>a knee</strong>, <strong>a back</strong>).",
@@ -14,23 +19,75 @@
         "Dois verbos de movimento também apareceram: <strong>stretch</strong> (esticar) e <strong>bend</strong> (dobrar). Exemplo: <em>Stretch your arms! Bend your knees!</em>"
       ],
       "cards": [
-        {"icon": "🤷", "en": "a shoulder", "pt": "ombro"},
-        {"icon": "💪", "en": "an elbow", "pt": "cotovelo"},
-        {"icon": "🫁", "en": "a chest", "pt": "peito"},
-        {"icon": "🍽️", "en": "a stomach", "pt": "barriga / estômago"},
-        {"icon": "🎒", "en": "a back", "pt": "costas"},
-        {"icon": "🦵", "en": "a knee", "pt": "joelho"},
-        {"icon": "🖐️", "en": "fingers", "pt": "dedos das mãos"},
-        {"icon": "🦶", "en": "toes", "pt": "dedos dos pés"},
-        {"icon": "🏋️", "en": "a muscle", "pt": "músculo"},
-        {"icon": "🦴", "en": "a bone", "pt": "osso"},
-        {"icon": "🙆", "en": "stretch", "pt": "esticar"},
-        {"icon": "🙇", "en": "bend", "pt": "dobrar"}
+        {
+          "icon": "🤷",
+          "en": "a shoulder",
+          "pt": "ombro"
+        },
+        {
+          "icon": "💪",
+          "en": "an elbow",
+          "pt": "cotovelo"
+        },
+        {
+          "icon": "🫁",
+          "en": "a chest",
+          "pt": "peito"
+        },
+        {
+          "icon": "🍽️",
+          "en": "a stomach",
+          "pt": "barriga / estômago"
+        },
+        {
+          "icon": "🎒",
+          "en": "a back",
+          "pt": "costas"
+        },
+        {
+          "icon": "🦵",
+          "en": "a knee",
+          "pt": "joelho"
+        },
+        {
+          "icon": "🖐️",
+          "en": "fingers",
+          "pt": "dedos das mãos"
+        },
+        {
+          "icon": "🦶",
+          "en": "toes",
+          "pt": "dedos dos pés"
+        },
+        {
+          "icon": "🏋️",
+          "en": "a muscle",
+          "pt": "músculo"
+        },
+        {
+          "icon": "🦴",
+          "en": "a bone",
+          "pt": "osso"
+        },
+        {
+          "icon": "🙆",
+          "en": "stretch",
+          "pt": "esticar"
+        },
+        {
+          "icon": "🙇",
+          "en": "bend",
+          "pt": "dobrar"
+        }
       ]
     },
     {
       "h": "Did you…? Yes, I did. No, I didn't.",
-      "figure": {"src": "assets/4b/ing07-did.svg", "alt": "Esquema: Did + pessoa + verbo? Respostas curtas Yes, I did ou No, I didn't.", "tipo": "diagrama"},
+      "figure": {
+        "src": "assets/4b/ing07-did.svg",
+        "alt": "Esquema: Did + pessoa + verbo? Respostas curtas Yes, I did ou No, I didn't.",
+        "tipo": "diagrama"
+      },
       "p": [
         "Para perguntar sobre algo que <strong>já aconteceu</strong> (no passado), começamos com <strong>Did</strong>: <strong>Did</strong> + pessoa + verbo + resto? Exemplo: <em>Did you wash your hands?</em>",
         "Depois de <strong>Did</strong>, o verbo fica na forma normal, sem mudar: <em>Did you <strong>brush</strong> your teeth?</em> (e não <em>brushed</em>).",
@@ -41,7 +98,11 @@
     },
     {
       "h": "Healthy habits",
-      "figure": {"src": "assets/4b/ing07-habitos.svg", "alt": "Hábitos bons (get exercise, eat fruit, eat vegetables, get rest) e hábito ruim (eat junk food).", "tipo": "diagrama"},
+      "figure": {
+        "src": "assets/4b/ing07-habitos.svg",
+        "alt": "Hábitos bons (get exercise, eat fruit, eat vegetables, get rest) e hábito ruim (eat junk food).",
+        "tipo": "diagrama"
+      },
       "p": [
         "<strong>Habits</strong> são hábitos: coisas que fazemos sempre. Alguns são <strong>good for you</strong> (bons para você) e outros são <strong>bad for you</strong> (ruins para você).",
         "Bons hábitos: <strong>get exercise</strong> (fazer exercício), <strong>eat fruit</strong> (comer frutas), <strong>eat vegetables</strong> (comer verduras e legumes), <strong>get rest</strong> (descansar), <strong>drink water</strong> (beber água), <strong>sleep eight hours</strong>.",
@@ -49,17 +110,45 @@
         "No pôster <em>Good Habits</em> do livro aparecem quatro grupos: <strong>Keep fit</strong> (manter a forma), <strong>Stay clean</strong> (ficar limpo), <strong>Eat good food</strong> (comer bem) e <strong>Keep safe</strong> (ficar seguro)."
       ],
       "cards": [
-        {"icon": "🏃", "en": "get exercise", "pt": "fazer exercício"},
-        {"icon": "🍎", "en": "eat fruit", "pt": "comer frutas"},
-        {"icon": "🥦", "en": "eat vegetables", "pt": "comer verduras e legumes"},
-        {"icon": "😴", "en": "get rest", "pt": "descansar"},
-        {"icon": "🍟", "en": "eat junk food", "pt": "comer porcarias"},
-        {"icon": "💧", "en": "drink water", "pt": "beber água"}
+        {
+          "icon": "🏃",
+          "en": "get exercise",
+          "pt": "fazer exercício"
+        },
+        {
+          "icon": "🍎",
+          "en": "eat fruit",
+          "pt": "comer frutas"
+        },
+        {
+          "icon": "🥦",
+          "en": "eat vegetables",
+          "pt": "comer verduras e legumes"
+        },
+        {
+          "icon": "😴",
+          "en": "get rest",
+          "pt": "descansar"
+        },
+        {
+          "icon": "🍟",
+          "en": "eat junk food",
+          "pt": "comer porcarias"
+        },
+        {
+          "icon": "💧",
+          "en": "drink water",
+          "pt": "beber água"
+        }
       ]
     },
     {
       "h": "Too much, too many, enough",
-      "figure": {"src": "assets/4b/ing07-too-enough.svg", "alt": "Três copos: um transbordando (too much), um no ponto certo (enough) e muitos doces empilhados (too many).", "tipo": "diagrama"},
+      "figure": {
+        "src": "assets/4b/ing07-too-enough.svg",
+        "alt": "Três copos: um transbordando (too much), um no ponto certo (enough) e muitos doces empilhados (too many).",
+        "tipo": "diagrama"
+      },
       "p": [
         "<strong>Too much</strong> e <strong>too many</strong> querem dizer <strong>demais</strong> (mais do que faz bem). <strong>Enough</strong> quer dizer <strong>o suficiente</strong> (a quantidade certa).",
         "<strong>Too much</strong> + coisas que <strong>não contamos</strong> uma por uma: <em>too much TV, too much junk food, too much soda, too much sugar</em>.",
@@ -85,14 +174,38 @@
       "short": "Memória do corpo",
       "instructions": "Ache o par: a palavra em inglês e o seu significado.",
       "items": [
-        {"base": "elbow", "result": "cotovelo 💪"},
-        {"base": "knee", "result": "joelho 🦵"},
-        {"base": "shoulder", "result": "ombro 🤷"},
-        {"base": "toes", "result": "dedos dos pés 🦶"},
-        {"base": "fingers", "result": "dedos das mãos 🖐️"},
-        {"base": "stomach", "result": "barriga 🍽️"},
-        {"base": "bone", "result": "osso 🦴"},
-        {"base": "back", "result": "costas 🎒"}
+        {
+          "base": "elbow",
+          "result": "cotovelo 💪"
+        },
+        {
+          "base": "knee",
+          "result": "joelho 🦵"
+        },
+        {
+          "base": "shoulder",
+          "result": "ombro 🤷"
+        },
+        {
+          "base": "toes",
+          "result": "dedos dos pés 🦶"
+        },
+        {
+          "base": "fingers",
+          "result": "dedos das mãos 🖐️"
+        },
+        {
+          "base": "stomach",
+          "result": "barriga 🍽️"
+        },
+        {
+          "base": "bone",
+          "result": "osso 🦴"
+        },
+        {
+          "base": "back",
+          "result": "costas 🎒"
+        }
       ]
     },
     {
@@ -101,12 +214,30 @@
       "short": "Respostas curtas",
       "instructions": "✅ quer dizer que fez; ❌ quer dizer que não fez. Escolha a resposta curta certa.",
       "pairs": [
-        ["Did you wash your hands? ✅", "Yes, I did."],
-        ["Did he take a shower? ❌", "No, he didn't."],
-        ["Did she brush her teeth? ✅", "Yes, she did."],
-        ["Did they play soccer? ❌", "No, they didn't."],
-        ["Did you ride your bike? ❌", "No, I didn't."],
-        ["Did he eat fruit? ✅", "Yes, he did."]
+        [
+          "Did you wash your hands? ✅",
+          "Yes, I did."
+        ],
+        [
+          "Did he take a shower? ❌",
+          "No, he didn't."
+        ],
+        [
+          "Did she brush her teeth? ✅",
+          "Yes, she did."
+        ],
+        [
+          "Did they play soccer? ❌",
+          "No, they didn't."
+        ],
+        [
+          "Did you ride your bike? ❌",
+          "No, I didn't."
+        ],
+        [
+          "Did he eat fruit? ✅",
+          "Yes, he did."
+        ]
       ]
     },
     {
@@ -114,16 +245,44 @@
       "title": "Too much, too many or enough?",
       "short": "Too / Enough",
       "instructions": "Complete cada frase com a expressão certa.",
-      "categories": ["too much", "too many", "enough"],
+      "categories": [
+        "too much",
+        "too many",
+        "enough"
+      ],
       "items": [
-        {"text": "I watch __ TV. Five hours every day! 📺", "cat": 0},
-        {"text": "He eats __ candies. Twenty candies! 🍬", "cat": 1},
-        {"text": "I sleep nine hours. I get __ sleep. 😴", "cat": 2},
-        {"text": "She drinks __ soda. Four cans a day! 🥤", "cat": 0},
-        {"text": "We eat __ cookies after school. Ten each! 🍪", "cat": 1},
-        {"text": "I drink eight glasses of water. That's __ water. 💧", "cat": 2},
-        {"text": "They eat __ junk food. Every meal! 🍟", "cat": 0},
-        {"text": "I play outside every day. I get __ exercise. ⚽", "cat": 2}
+        {
+          "text": "I watch __ TV. Five hours every day! 📺",
+          "cat": 0
+        },
+        {
+          "text": "He eats __ candies. Twenty candies! 🍬",
+          "cat": 1
+        },
+        {
+          "text": "I sleep nine hours. I get __ sleep. 😴",
+          "cat": 2
+        },
+        {
+          "text": "She drinks __ soda. Four cans a day! 🥤",
+          "cat": 0
+        },
+        {
+          "text": "We eat __ cookies after school. Ten each! 🍪",
+          "cat": 1
+        },
+        {
+          "text": "I drink eight glasses of water. That's __ water. 💧",
+          "cat": 2
+        },
+        {
+          "text": "They eat __ junk food. Every meal! 🍟",
+          "cat": 0
+        },
+        {
+          "text": "I play outside every day. I get __ exercise. ⚽",
+          "cat": 2
+        }
       ]
     },
     {
@@ -131,16 +290,43 @@
       "title": "Good habit or bad habit?",
       "short": "Bons hábitos",
       "instructions": "Este hábito é bom ou ruim para você?",
-      "categories": ["Good for you 👍", "Bad for you 👎"],
+      "categories": [
+        "Good for you 👍",
+        "Bad for you 👎"
+      ],
       "items": [
-        {"text": "I get enough sleep. 😴", "cat": 0},
-        {"text": "I watch too much TV. 📺", "cat": 1},
-        {"text": "I eat vegetables every day. 🥦", "cat": 0},
-        {"text": "I eat too much junk food. 🍟", "cat": 1},
-        {"text": "I get exercise every day. 🏃", "cat": 0},
-        {"text": "I don't drink enough water. 💧", "cat": 1},
-        {"text": "I wash my hands before meals. 🧼", "cat": 0},
-        {"text": "I drink too much soda. 🥤", "cat": 1}
+        {
+          "text": "I get enough sleep. 😴",
+          "cat": 0
+        },
+        {
+          "text": "I watch too much TV. 📺",
+          "cat": 1
+        },
+        {
+          "text": "I eat vegetables every day. 🥦",
+          "cat": 0
+        },
+        {
+          "text": "I eat too much junk food. 🍟",
+          "cat": 1
+        },
+        {
+          "text": "I get exercise every day. 🏃",
+          "cat": 0
+        },
+        {
+          "text": "I don't drink enough water. 💧",
+          "cat": 1
+        },
+        {
+          "text": "I wash my hands before meals. 🧼",
+          "cat": 0
+        },
+        {
+          "text": "I drink too much soda. 🥤",
+          "cat": 1
+        }
       ]
     }
   ],
@@ -149,70 +335,120 @@
       "type": "mc",
       "q": "Ouça a palavra e escolha a parte do corpo certa.",
       "listen": "elbow",
-      "options": ["cotovelo", "joelho", "ombro", "costas"],
+      "options": [
+        "cotovelo",
+        "joelho",
+        "ombro",
+        "costas"
+      ],
       "answer": 0,
       "explain": "Elbow é o cotovelo. Knee é joelho, shoulder é ombro e back são as costas."
     },
     {
       "type": "mc",
       "q": "Como se diz “dedos dos pés” em inglês?",
-      "options": ["toes", "fingers", "knees", "bones"],
+      "options": [
+        "toes",
+        "fingers",
+        "knees",
+        "bones"
+      ],
       "answer": 0,
       "explain": "Toes são os dedos dos pés. Fingers são os dedos das mãos."
     },
     {
       "type": "mc",
       "q": "Did you brush your teeth yesterday? ✅ (você escovou)",
-      "options": ["Yes, I did.", "No, I didn't.", "Yes, I do.", "Yes, I brush."],
+      "options": [
+        "Yes, I did.",
+        "No, I didn't.",
+        "Yes, I do.",
+        "Yes, I brush."
+      ],
       "answer": 0,
       "explain": "Pergunta com Did pede resposta curta com did: Yes, I did. Didn't seria se você NÃO tivesse escovado."
     },
     {
       "type": "mc",
       "q": "Did he take a shower? ❌ (ele não tomou banho)",
-      "options": ["No, he didn't.", "Yes, he did.", "No, I didn't.", "No, she didn't."],
+      "options": [
+        "No, he didn't.",
+        "Yes, he did.",
+        "No, I didn't.",
+        "No, she didn't."
+      ],
       "answer": 0,
       "explain": "A pergunta fala de he (ele) e a resposta é não: No, he didn't. A resposta repete a mesma pessoa da pergunta."
     },
     {
       "type": "mc",
       "q": "Complete a pergunta: “____ you ride your bike yesterday?”",
-      "options": ["Did", "Do", "Does", "Are"],
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Are"
+      ],
       "answer": 0,
       "explain": "Yesterday (ontem) mostra que é passado. Para perguntar no passado usamos Did."
     },
     {
       "type": "mc",
       "q": "Qual pergunta está escrita corretamente?",
-      "options": ["Did she eat fruit?", "Did she ate fruit?", "Did she eats fruit?", "She did eat fruit?"],
+      "options": [
+        "Did she eat fruit?",
+        "Did she ate fruit?",
+        "Did she eats fruit?",
+        "She did eat fruit?"
+      ],
       "answer": 0,
       "explain": "Depois de Did, o verbo fica na forma normal: Did she eat fruit? (e não ate nem eats)."
     },
     {
       "type": "mc",
       "q": "Complete: “I don't watch ________ TV. Only one hour a day.”",
-      "options": ["too much", "too many", "enough", "a"],
+      "options": [
+        "too much",
+        "too many",
+        "enough",
+        "a"
+      ],
       "answer": 0,
       "explain": "TV não se conta uma por uma, então usamos too much. A frase diz que a pessoa NÃO vê TV demais."
     },
     {
       "type": "mc",
       "q": "Complete: “He eats ________ chips. A big bag every day!”",
-      "options": ["too many", "too much", "enough", "an"],
+      "options": [
+        "too many",
+        "too much",
+        "enough",
+        "an"
+      ],
       "answer": 1,
       "explain": "Chips são coisas que podemos contar (um, dois, três salgadinhos), então usamos too many."
     },
     {
       "type": "mc",
       "q": "“I sleep nine hours every night. I get ________ sleep.” Qual palavra mostra que está na medida certa?",
-      "options": ["too much", "too many", "enough", "junk"],
+      "options": [
+        "too much",
+        "too many",
+        "enough",
+        "junk"
+      ],
       "answer": 2,
       "explain": "Enough quer dizer o suficiente, a quantidade certa."
     },
     {
       "type": "mc",
       "q": "Qual destes hábitos é BAD for you (ruim para você)?",
-      "options": ["eat junk food every day", "get exercise", "eat vegetables", "get enough rest"],
+      "options": [
+        "eat junk food every day",
+        "get exercise",
+        "eat vegetables",
+        "get enough rest"
+      ],
       "answer": 0,
       "explain": "Comer junk food (porcarias) todo dia não faz bem. Os outros são bons hábitos."
     },
@@ -220,28 +456,48 @@
       "type": "mc",
       "q": "Ouça a frase e escolha o que ela significa.",
       "listen": "Stretch your arms!",
-      "options": ["Estique os braços!", "Dobre os joelhos!", "Lave as mãos!", "Mexa os dedos!"],
+      "options": [
+        "Estique os braços!",
+        "Dobre os joelhos!",
+        "Lave as mãos!",
+        "Mexa os dedos!"
+      ],
       "answer": 0,
       "explain": "Stretch é esticar, e arms são os braços. Dobrar seria bend."
     },
     {
       "type": "mc",
       "q": "Segundo o texto “Take Care of Your Brain!”, quantos minutos de exercício por dia já ajudam o cérebro?",
-      "options": ["10 minutos", "45 minutos", "2 horas", "10 horas"],
+      "options": [
+        "10 minutos",
+        "45 minutos",
+        "2 horas",
+        "10 horas"
+      ],
       "answer": 0,
       "explain": "O texto diz que só ten minutes (10 minutos) por dia já fazem o corpo e o cérebro se sentirem melhor. Os 45 minutos são o tempo que o corpo fica bem depois de uma boa risada."
     },
     {
       "type": "mc",
       "q": "No texto, o que é um “forest bath”?",
-      "options": ["Passar um tempo na natureza", "Tomar banho de chuveiro", "Nadar na piscina", "Lavar as mãos"],
+      "options": [
+        "Passar um tempo na natureza",
+        "Tomar banho de chuveiro",
+        "Nadar na piscina",
+        "Lavar as mãos"
+      ],
       "answer": 0,
       "explain": "Forest bath (banho de floresta) é passar um tempo ao ar livre, em um lugar natural como a floresta. Isso relaxa o cérebro."
     },
     {
       "type": "text",
       "q": "Escreva em inglês a parte do corpo que fica no meio da perna: o joelho.",
-      "answers": ["knee", "a knee", "the knee", "knees"],
+      "answers": [
+        "knee",
+        "a knee",
+        "the knee",
+        "knees"
+      ],
       "explain": "Joelho em inglês é knee (o k não é pronunciado: /ni:/)."
     }
   ]

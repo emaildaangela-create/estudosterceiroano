@@ -3,49 +3,130 @@
   "module": "9",
   "title": "My Weekend",
   "subtitle": "Free-time activities · Simple past with didn't · go + -ing",
+  "video": "assets/videos/ing09.mp4",
   "theory": [
     {
       "h": "Weekend activities",
-      "figure": {"src": "assets/4b/ing09-fimdesemana.svg", "alt": "Calendário de fim de semana com atividades: go to the movies, go to the beach, go on a picnic, visit a museum, eat out e stay home.", "tipo": "diagrama"},
+      "figure": {
+        "src": "assets/4b/ing09-fimdesemana.svg",
+        "alt": "Calendário de fim de semana com atividades: go to the movies, go to the beach, go on a picnic, visit a museum, eat out e stay home.",
+        "tipo": "diagrama"
+      },
       "p": [
         "O <strong>weekend</strong> (fim de semana) é um tempo para relaxar e fazer coisas divertidas. Às vezes ficamos em casa; outras vezes saímos, visitamos lugares e encontramos amigos.",
         "Atividades: <strong>eat out</strong> (comer fora), <strong>go to the movies</strong> (ir ao cinema), <strong>visit a museum</strong> (visitar um museu), <strong>go on a picnic</strong> (fazer piquenique), <strong>stay home</strong> (ficar em casa), <strong>go to the beach</strong> (ir à praia), <strong>text my friends</strong> (mandar mensagem para os amigos).",
         "Palavras para descrever: <strong>win</strong> (ganhar) e <strong>lose</strong> (perder) um jogo; <strong>exciting</strong> (emocionante), <strong>interesting</strong> (interessante), <strong>busy</strong> (ocupado) e <strong>boring</strong> (chato)."
       ],
       "cards": [
-        {"icon": "🍕", "en": "eat out", "pt": "comer fora"},
-        {"icon": "🎬", "en": "go to the movies", "pt": "ir ao cinema"},
-        {"icon": "🦖", "en": "visit a museum", "pt": "visitar um museu"},
-        {"icon": "🧺", "en": "go on a picnic", "pt": "fazer piquenique"},
-        {"icon": "🏠", "en": "stay home", "pt": "ficar em casa"},
-        {"icon": "🏖️", "en": "go to the beach", "pt": "ir à praia"},
-        {"icon": "📱", "en": "text my friends", "pt": "mandar mensagem aos amigos"},
-        {"icon": "🏆", "en": "win", "pt": "ganhar"},
-        {"icon": "😞", "en": "lose", "pt": "perder"},
-        {"icon": "🤩", "en": "exciting", "pt": "emocionante"},
-        {"icon": "🔎", "en": "interesting", "pt": "interessante"},
-        {"icon": "📚", "en": "busy", "pt": "ocupado"}
+        {
+          "icon": "🍕",
+          "en": "eat out",
+          "pt": "comer fora"
+        },
+        {
+          "icon": "🎬",
+          "en": "go to the movies",
+          "pt": "ir ao cinema"
+        },
+        {
+          "icon": "🦖",
+          "en": "visit a museum",
+          "pt": "visitar um museu"
+        },
+        {
+          "icon": "🧺",
+          "en": "go on a picnic",
+          "pt": "fazer piquenique"
+        },
+        {
+          "icon": "🏠",
+          "en": "stay home",
+          "pt": "ficar em casa"
+        },
+        {
+          "icon": "🏖️",
+          "en": "go to the beach",
+          "pt": "ir à praia"
+        },
+        {
+          "icon": "📱",
+          "en": "text my friends",
+          "pt": "mandar mensagem aos amigos"
+        },
+        {
+          "icon": "🏆",
+          "en": "win",
+          "pt": "ganhar"
+        },
+        {
+          "icon": "😞",
+          "en": "lose",
+          "pt": "perder"
+        },
+        {
+          "icon": "🤩",
+          "en": "exciting",
+          "pt": "emocionante"
+        },
+        {
+          "icon": "🔎",
+          "en": "interesting",
+          "pt": "interessante"
+        },
+        {
+          "icon": "📚",
+          "en": "busy",
+          "pt": "ocupado"
+        }
       ]
     },
     {
       "h": "Hobbies: go + -ing",
-      "figure": {"src": "assets/4b/ing09-go-ing.svg", "alt": "Fórmula go + verbo com -ing: go swimming, go fishing, go hiking, go horseback riding, go ice skating.", "tipo": "diagrama"},
+      "figure": {
+        "src": "assets/4b/ing09-go-ing.svg",
+        "alt": "Fórmula go + verbo com -ing: go swimming, go fishing, go hiking, go horseback riding, go ice skating.",
+        "tipo": "diagrama"
+      },
       "p": [
         "Muitas atividades de lazer em inglês usam <strong>go + verbo com -ing</strong>: <em>go swimming</em> (nadar), <em>go fishing</em> (pescar), <em>go hiking</em> (fazer trilha), <em>go horseback riding</em> (andar a cavalo), <em>go ice skating</em> (patinar no gelo).",
         "No presente: <em>We usually <strong>go hiking</strong>.</em> No passado, go vira <strong>went</strong>: <em>We <strong>went swimming</strong>.</em> Na negativa: <em>We <strong>didn't go</strong> hiking.</em>",
         "Perguntas do livro: <em>What <strong>do</strong> you do on weekends?</em> (o que você costuma fazer) e <em>What <strong>did</strong> you do last weekend?</em> (o que você fez no fim de semana passado)."
       ],
       "cards": [
-        {"icon": "🏊", "en": "go swimming", "pt": "nadar"},
-        {"icon": "🎣", "en": "go fishing", "pt": "pescar"},
-        {"icon": "🥾", "en": "go hiking", "pt": "fazer trilha"},
-        {"icon": "🏇", "en": "go horseback riding", "pt": "andar a cavalo"},
-        {"icon": "⛸️", "en": "go ice skating", "pt": "patinar no gelo"}
+        {
+          "icon": "🏊",
+          "en": "go swimming",
+          "pt": "nadar"
+        },
+        {
+          "icon": "🎣",
+          "en": "go fishing",
+          "pt": "pescar"
+        },
+        {
+          "icon": "🥾",
+          "en": "go hiking",
+          "pt": "fazer trilha"
+        },
+        {
+          "icon": "🏇",
+          "en": "go horseback riding",
+          "pt": "andar a cavalo"
+        },
+        {
+          "icon": "⛸️",
+          "en": "go ice skating",
+          "pt": "patinar no gelo"
+        }
       ]
     },
     {
       "h": "Didn't: what you did NOT do",
-      "figure": {"src": "assets/4b/ing09-didnt.svg", "alt": "Duas colunas: Things I did (went, won, watched) e Things I didn't do (didn't go, didn't win, didn't watch).", "tipo": "diagrama"},
+      "figure": {
+        "src": "assets/4b/ing09-didnt.svg",
+        "alt": "Duas colunas: Things I did (went, won, watched) e Things I didn't do (didn't go, didn't win, didn't watch).",
+        "tipo": "diagrama"
+      },
       "p": [
         "Para dizer que algo <strong>não aconteceu</strong> no passado, usamos <strong>didn't</strong> + verbo na forma normal: <em>I <strong>didn't go</strong> to the movies. I <strong>didn't eat</strong> out. I stayed home.</em>",
         "Compare: <em>We <strong>went</strong> to the beach.</em> (fomos) × <em>We <strong>didn't go</strong> to the beach.</em> (não fomos). <em>We <strong>won</strong>!</em> (ganhamos) × <em>We <strong>didn't win</strong>. We lost.</em> (não ganhamos, perdemos).",
@@ -70,14 +151,38 @@
       "short": "Memória do lazer",
       "instructions": "Ache cada atividade e o seu significado.",
       "items": [
-        {"base": "go fishing", "result": "pescar 🎣"},
-        {"base": "go hiking", "result": "fazer trilha 🥾"},
-        {"base": "go to the movies", "result": "ir ao cinema 🎬"},
-        {"base": "eat out", "result": "comer fora 🍕"},
-        {"base": "stay home", "result": "ficar em casa 🏠"},
-        {"base": "go horseback riding", "result": "andar a cavalo 🏇"},
-        {"base": "visit a museum", "result": "visitar um museu 🦖"},
-        {"base": "go ice skating", "result": "patinar no gelo ⛸️"}
+        {
+          "base": "go fishing",
+          "result": "pescar 🎣"
+        },
+        {
+          "base": "go hiking",
+          "result": "fazer trilha 🥾"
+        },
+        {
+          "base": "go to the movies",
+          "result": "ir ao cinema 🎬"
+        },
+        {
+          "base": "eat out",
+          "result": "comer fora 🍕"
+        },
+        {
+          "base": "stay home",
+          "result": "ficar em casa 🏠"
+        },
+        {
+          "base": "go horseback riding",
+          "result": "andar a cavalo 🏇"
+        },
+        {
+          "base": "visit a museum",
+          "result": "visitar um museu 🦖"
+        },
+        {
+          "base": "go ice skating",
+          "result": "patinar no gelo ⛸️"
+        }
       ]
     },
     {
@@ -85,14 +190,35 @@
       "title": "Did or didn't?",
       "short": "Did ou didn't",
       "instructions": "Leia a pista e complete a frase com a forma certa.",
-      "categories": ["went", "didn't go"],
+      "categories": [
+        "went",
+        "didn't go"
+      ],
       "items": [
-        {"text": "It was raining. We __ on a picnic. 🌧️", "cat": 1},
-        {"text": "We __ to the movies. We saw a great movie! 🎬", "cat": 0},
-        {"text": "The weather was bad. We __ to the beach. ⛈️", "cat": 1},
-        {"text": "Last Sunday I __ fishing with my dad. 🎣", "cat": 0},
-        {"text": "I was sick. I __ to the party. 🤒", "cat": 1},
-        {"text": "We __ swimming. The water was great! 🏊", "cat": 0}
+        {
+          "text": "It was raining. We __ on a picnic. 🌧️",
+          "cat": 1
+        },
+        {
+          "text": "We __ to the movies. We saw a great movie! 🎬",
+          "cat": 0
+        },
+        {
+          "text": "The weather was bad. We __ to the beach. ⛈️",
+          "cat": 1
+        },
+        {
+          "text": "Last Sunday I __ fishing with my dad. 🎣",
+          "cat": 0
+        },
+        {
+          "text": "I was sick. I __ to the party. 🤒",
+          "cat": 1
+        },
+        {
+          "text": "We __ swimming. The water was great! 🏊",
+          "cat": 0
+        }
       ]
     },
     {
@@ -101,11 +227,26 @@
       "short": "Ganhar ou perder",
       "instructions": "Escolha a frase que completa a história.",
       "pairs": [
-        ["We played basketball on Saturday. We lost!", "We didn't win."],
-        ["I went to the game. It was great!", "We won!"],
-        ["On Sunday we had lunch at home.", "We didn't eat out."],
-        ["Yesterday I played video games.", "I didn't watch TV."],
-        ["Monday we didn't eat out.", "We went on a picnic."]
+        [
+          "We played basketball on Saturday. We lost!",
+          "We didn't win."
+        ],
+        [
+          "I went to the game. It was great!",
+          "We won!"
+        ],
+        [
+          "On Sunday we had lunch at home.",
+          "We didn't eat out."
+        ],
+        [
+          "Yesterday I played video games.",
+          "I didn't watch TV."
+        ],
+        [
+          "Monday we didn't eat out.",
+          "We went on a picnic."
+        ]
       ]
     },
     {
@@ -113,14 +254,35 @@
       "title": "Free time or not?",
       "short": "Descrever o fim de semana",
       "instructions": "A frase descreve um fim de semana divertido ou chato?",
-      "categories": ["Exciting 🤩", "Boring 🥱"],
+      "categories": [
+        "Exciting 🤩",
+        "Boring 🥱"
+      ],
       "items": [
-        {"text": "We won the game! We sang and shouted a lot!", "cat": 0},
-        {"text": "I didn't do anything special.", "cat": 1},
-        {"text": "We saw giant dinosaurs at the museum!", "cat": 0},
-        {"text": "It rained. I didn't go out.", "cat": 1},
-        {"text": "I went rock climbing for the first time!", "cat": 0},
-        {"text": "I stayed home alone all day.", "cat": 1}
+        {
+          "text": "We won the game! We sang and shouted a lot!",
+          "cat": 0
+        },
+        {
+          "text": "I didn't do anything special.",
+          "cat": 1
+        },
+        {
+          "text": "We saw giant dinosaurs at the museum!",
+          "cat": 0
+        },
+        {
+          "text": "It rained. I didn't go out.",
+          "cat": 1
+        },
+        {
+          "text": "I went rock climbing for the first time!",
+          "cat": 0
+        },
+        {
+          "text": "I stayed home alone all day.",
+          "cat": 1
+        }
       ]
     }
   ],
@@ -129,49 +291,84 @@
       "type": "mc",
       "q": "Ouça e escolha o significado da atividade.",
       "listen": "go hiking",
-      "options": ["fazer trilha", "pescar", "nadar", "patinar no gelo"],
+      "options": [
+        "fazer trilha",
+        "pescar",
+        "nadar",
+        "patinar no gelo"
+      ],
       "answer": 0,
       "explain": "Go hiking é fazer trilha (caminhar na natureza). Pescar é go fishing, nadar é go swimming e patinar no gelo é go ice skating."
     },
     {
       "type": "mc",
       "q": "Como se diz “ir ao cinema” em inglês?",
-      "options": ["go to the movies", "go to the beach", "visit a museum", "eat out"],
+      "options": [
+        "go to the movies",
+        "go to the beach",
+        "visit a museum",
+        "eat out"
+      ],
       "answer": 0,
       "explain": "Go to the movies = ir ao cinema."
     },
     {
       "type": "mc",
       "q": "Complete: “We ________ on a picnic because it was raining!”",
-      "options": ["didn't go", "went", "won", "didn't went"],
+      "options": [
+        "didn't go",
+        "went",
+        "won",
+        "didn't went"
+      ],
       "answer": 0,
       "explain": "Com chuva o piquenique não aconteceu, então usamos didn't go. Didn't went está errado: depois de didn't o verbo fica normal."
     },
     {
       "type": "mc",
       "q": "Complete: “We played basketball on Saturday. We ________. We lost!”",
-      "options": ["didn't win", "won", "went", "didn't lose"],
+      "options": [
+        "didn't win",
+        "won",
+        "went",
+        "didn't lose"
+      ],
       "answer": 0,
       "explain": "Se perderam (lost), então não ganharam: didn't win."
     },
     {
       "type": "mc",
       "q": "Qual frase está escrita corretamente?",
-      "options": ["I didn't watch TV.", "I didn't watched TV.", "I don't watched TV.", "I not watch TV."],
+      "options": [
+        "I didn't watch TV.",
+        "I didn't watched TV.",
+        "I don't watched TV.",
+        "I not watch TV."
+      ],
       "answer": 0,
       "explain": "Depois de didn't o verbo fica na forma normal: I didn't watch TV."
     },
     {
       "type": "mc",
       "q": "“How was your weekend?” Qual resposta faz sentido?",
-      "options": ["It was boring. I didn't do anything special.", "Yes, I did. I liked it a lot.", "I go to school every Monday.", "It is Monday and it is sunny."],
+      "options": [
+        "It was boring. I didn't do anything special.",
+        "Yes, I did. I liked it a lot.",
+        "I go to school every Monday.",
+        "It is Monday and it is sunny."
+      ],
       "answer": 0,
       "explain": "How was…? pergunta como foi. A resposta descreve o fim de semana: It was boring (foi chato)."
     },
     {
       "type": "mc",
       "q": "“What did you do last weekend?” Escolha a melhor resposta.",
-      "options": ["I went swimming.", "I go swimming.", "I am swimming.", "Yes, I did."],
+      "options": [
+        "I went swimming.",
+        "I go swimming.",
+        "I am swimming.",
+        "Yes, I did."
+      ],
       "answer": 0,
       "explain": "Last weekend é passado, então a resposta usa went: I went swimming."
     },
@@ -179,42 +376,71 @@
       "type": "mc",
       "q": "Ouça a frase e escolha o que ela quer dizer.",
       "listen": "I didn't eat out. I stayed home.",
-      "options": ["Não comi fora. Fiquei em casa.", "Comi fora. Não fiquei em casa.", "Fui ao cinema e comi pipoca.", "Fiquei em casa e cozinhei."],
+      "options": [
+        "Não comi fora. Fiquei em casa.",
+        "Comi fora. Não fiquei em casa.",
+        "Fui ao cinema e comi pipoca.",
+        "Fiquei em casa e cozinhei."
+      ],
       "answer": 0,
       "explain": "Didn't eat out = não comi fora. Stayed home = fiquei em casa."
     },
     {
       "type": "mc",
       "q": "Qual palavra quer dizer “emocionante”?",
-      "options": ["exciting", "boring", "busy", "interesting"],
+      "options": [
+        "exciting",
+        "boring",
+        "busy",
+        "interesting"
+      ],
       "answer": 0,
       "explain": "Exciting = emocionante. Boring = chato, busy = ocupado, interesting = interessante."
     },
     {
       "type": "mc",
       "q": "Segundo o texto “Wow! Look at That!”, onde fica o Children's Museum?",
-      "options": ["In Indianapolis, USA", "In Mexico City", "In Thailand", "In Rio de Janeiro"],
+      "options": [
+        "In Indianapolis, USA",
+        "In Mexico City",
+        "In Thailand",
+        "In Rio de Janeiro"
+      ],
       "answer": 0,
       "explain": "The Children's Museum fica em Indianapolis, nos Estados Unidos (USA)."
     },
     {
       "type": "mc",
       "q": "No Children's Museum, onde você aprende sobre as estrelas?",
-      "options": ["in the planetarium", "in the theater", "outside the museum", "at the beach"],
+      "options": [
+        "in the planetarium",
+        "in the theater",
+        "outside the museum",
+        "at the beach"
+      ],
       "answer": 0,
       "explain": "You can learn about the stars in the planetarium (planetário)."
     },
     {
       "type": "mc",
       "q": "Qual palavra Hassan usa para dizer a ordem das coisas no texto “My Perfect Weekend”?",
-      "options": ["first", "busy", "lose", "boring"],
+      "options": [
+        "first",
+        "busy",
+        "lose",
+        "boring"
+      ],
       "answer": 0,
       "explain": "First, then, next e after that mostram quando as coisas aconteceram: First I ate my favorite breakfast. After that I went fishing."
     },
     {
       "type": "text",
       "q": "Escreva em inglês: “nadar”, usando go + -ing.",
-      "answers": ["go swimming", "swimming", "went swimming"],
+      "answers": [
+        "go swimming",
+        "swimming",
+        "went swimming"
+      ],
       "explain": "Go swimming. No passado: I went swimming."
     }
   ]

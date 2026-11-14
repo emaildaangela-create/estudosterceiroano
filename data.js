@@ -17,6 +17,7 @@ const DISCIPLINAS = [
         "module": "7",
         "title": "Feeling Fit",
         "subtitle": "Body parts · Did…? Yes, I did / No, I didn't · Too / Enough",
+        "video": "assets/videos/ing07.mp4",
         "theory": [
           {
             "h": "Parts of the body",
@@ -520,6 +521,7 @@ const DISCIPLINAS = [
         "module": "8",
         "title": "Let's Celebrate",
         "subtitle": "Celebrations · Simple past: regular and irregular verbs",
+        "video": "assets/videos/ing08.mp4",
         "theory": [
           {
             "h": "Celebrations and festivals",
@@ -1040,6 +1042,7 @@ const DISCIPLINAS = [
         "module": "9",
         "title": "My Weekend",
         "subtitle": "Free-time activities · Simple past with didn't · go + -ing",
+        "video": "assets/videos/ing09.mp4",
         "theory": [
           {
             "h": "Weekend activities",
