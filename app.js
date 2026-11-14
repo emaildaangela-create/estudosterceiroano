@@ -26,11 +26,34 @@
     for (var i=a.length-1;i>0;i--) { var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; }
     return a;
   }
+  /* Áudio em inglês pela voz do próprio aparelho (Web Speech API): não
+     precisa de arquivos de áudio e funciona offline na maioria dos celulares. */
+  var vozIngles=null;
+  function escolherVoz() {
+    if(!('speechSynthesis' in window))return null;
+    var vozes=window.speechSynthesis.getVoices()||[];
+    return vozes.find(function(v){return /^en[-_]US/i.test(v.lang)&&/female|samantha|zira|jenny|aria|google us/i.test(v.name);})||
+      vozes.find(function(v){return /^en[-_]US/i.test(v.lang);})||vozes.find(function(v){return /^en/i.test(v.lang);})||null;
+  }
+  if('speechSynthesis' in window){vozIngles=escolherVoz();window.speechSynthesis.onvoiceschanged=function(){vozIngles=escolherVoz();};}
+  function falar(texto,lento) {
+    if(!('speechSynthesis' in window)){toast('Este aparelho não consegue ler em voz alta.');return;}
+    var limpo=String(texto||'').replace(/<[^>]+>/g,'').replace(/[\u{1F000}-\u{1FAFF}☀-➿✅❌]/gu,'').replace(/→/g,', ').trim();
+    if(!limpo)return;
+    window.speechSynthesis.cancel();
+    var fala=new SpeechSynthesisUtterance(limpo);fala.lang='en-US';fala.rate=lento?0.65:0.85;if(vozIngles)fala.voice=vozIngles;
+    window.speechSynthesis.speak(fala);
+  }
+  function botaoOuvir(texto,rotulo) {
+    var b=criar('button','ouvir','<span aria-hidden="true">🔊</span>'+(rotulo?'<span>'+textoSeguro(rotulo)+'</span>':''),{type:'button','aria-label':'Ouvir em inglês: '+String(texto)});
+    var vezes=0;b.addEventListener('click',function(e){e.stopPropagation();vezes++;falar(texto,vezes%2===0);});return b;
+  }
+  function emIngles() { return estado.disciplina==='ingles'; }
   function discPorId(id) { return DISCIPLINAS.find(function (d) { return d.id === id; }); }
   function capPorId(disc,id) { return disc && disc.capitulos.find(function (c) { return c.id === id; }); }
   function acento(disc) { return 'var(' + disc.cor + ')'; }
   function totalCaps() { return DISCIPLINAS.reduce(function (n,d) { return n+d.capitulos.length; },0); }
-  function totalFeitos() { return Object.keys(estado.progresso).filter(function (id) { return estado.progresso[id] && estado.progresso[id].feito; }).length; }
+  function totalFeitos() { return DISCIPLINAS.reduce(function (n,d) { return n+d.capitulos.filter(function (c) { return estado.progresso[c.id] && estado.progresso[c.id].feito; }).length; },0); }
 
   function carregar() {
     try {
@@ -99,7 +122,7 @@
   function videosDoApp(){var vistos={};return DISCIPLINAS.reduce(function(lista,disc){disc.capitulos.forEach(function(cap){if(cap.video&&!vistos[cap.video]){vistos[cap.video]=true;lista.push(cap.video);}});return lista;},[]);}
   function atualizarOffline(pct,mensagem,pronto,erro){var card=$('#offline-card'),botao=$('#btn-offline'),status=$('#offline-status'),barra=$('#offline-barra'),fill=$('#offline-barra-fill');if(!card||!botao)return;card.classList.toggle('offline-card--pronto',!!pronto);card.classList.toggle('offline-card--erro',!!erro);status.textContent=mensagem;barra.hidden=pronto||erro||pct<=0;fill.style.width=Math.max(0,Math.min(100,pct))+'%';botao.disabled=offlineDownloadEmAndamento;botao.textContent=pronto?'Atualizar':(offlineDownloadEmAndamento?'Baixando…':(erro?'Tentar novamente':'Baixar'));}
   function enviarAoServiceWorker(mensagem){return navigator.serviceWorker.ready.then(function(registro){var worker=registro.waiting||registro.active||registro.installing;if(!worker)throw new Error('Service worker indisponível');worker.postMessage(mensagem);});}
-  function configurarOffline(){var botao=$('#btn-offline');if(!botao)return;if(!('serviceWorker' in navigator)){atualizarOffline(0,'Este navegador não permite o modo offline.',false,true);return;}navigator.serviceWorker.addEventListener('message',function(evento){var d=evento.data||{};if(d.tipo==='OFFLINE_STATUS'){offlineDownloadEmAndamento=!!d.baixando;var pct=d.total?d.concluidos/d.total*100:0;var msg=d.pronto?'Conteúdo offline atualizado. Toque em Atualizar sempre que houver uma nova versão.':(d.baixando?'Atualizando '+d.concluidos+' de '+d.total+' vídeos…':'Baixe todo o conteúdo e os vídeos · cerca de 208 MB');atualizarOffline(pct,msg,!!d.pronto,false);}if(d.tipo==='OFFLINE_ERRO'){offlineDownloadEmAndamento=false;atualizarOffline(0,'A atualização parou. Conecte-se ao Wi-Fi e tente novamente.',false,true);}});botao.addEventListener('click',function(){if(offlineDownloadEmAndamento)return;offlineDownloadEmAndamento=true;atualizarOffline(1,'Verificando atualizações…',false,false);var persistir=navigator.storage&&navigator.storage.persist?navigator.storage.persist().catch(function(){return false;}):Promise.resolve(false);persistir.then(function(){return navigator.serviceWorker.getRegistration();}).then(function(registro){return registro?registro.update().catch(function(){}):null;}).then(function(){return enviarAoServiceWorker({tipo:'BAIXAR_OFFLINE',arquivos:videosDoApp()});}).catch(function(){offlineDownloadEmAndamento=false;atualizarOffline(0,'Não foi possível atualizar. Recarregue e tente novamente.',false,true);});});}
+  function configurarOffline(){var botao=$('#btn-offline');if(!botao)return;if(!('serviceWorker' in navigator)){atualizarOffline(0,'Este navegador não permite o modo offline.',false,true);return;}navigator.serviceWorker.addEventListener('message',function(evento){var d=evento.data||{};if(d.tipo==='OFFLINE_STATUS'){offlineDownloadEmAndamento=!!d.baixando;var pct=d.total?d.concluidos/d.total*100:0;var msg=d.pronto?'Conteúdo offline atualizado. Toque em Atualizar sempre que houver uma nova versão.':(d.baixando?'Atualizando '+d.concluidos+' de '+d.total+' vídeos…':'Baixe todo o conteúdo e os vídeos');atualizarOffline(pct,msg,!!d.pronto,false);}if(d.tipo==='OFFLINE_ERRO'){offlineDownloadEmAndamento=false;atualizarOffline(0,'A atualização parou. Conecte-se ao Wi-Fi e tente novamente.',false,true);}});botao.addEventListener('click',function(){if(offlineDownloadEmAndamento)return;offlineDownloadEmAndamento=true;atualizarOffline(1,'Verificando atualizações…',false,false);var persistir=navigator.storage&&navigator.storage.persist?navigator.storage.persist().catch(function(){return false;}):Promise.resolve(false);persistir.then(function(){return navigator.serviceWorker.getRegistration();}).then(function(registro){return registro?registro.update().catch(function(){}):null;}).then(function(){return enviarAoServiceWorker({tipo:'BAIXAR_OFFLINE',arquivos:videosDoApp()});}).catch(function(){offlineDownloadEmAndamento=false;atualizarOffline(0,'Não foi possível atualizar. Recarregue e tente novamente.',false,true);});});}
   function registrarServiceWorker() {
     if(!('serviceWorker' in navigator))return;
     navigator.serviceWorker.register('./sw.js').then(function(){return navigator.serviceWorker.ready;}).then(function(){return enviarAoServiceWorker({tipo:'VERIFICAR_OFFLINE',arquivos:videosDoApp()});}).catch(function(){atualizarOffline(0,'Não foi possível preparar o modo offline.',false,true);});
@@ -170,6 +193,7 @@
   }
   function visualDaDescoberta(bloco) {
     if(bloco&&bloco.visual)return bloco.visual;
+    if(bloco&&bloco.figure)return {src:bloco.figure.src,alt:bloco.figure.alt||'',tipo:bloco.figure.tipo||'diagrama',wide:!!bloco.figure.wide};
     var titulo=normalizar(bloco&&bloco.h);
     var visuaisEspecificos={
       'terra planeta azul':{
@@ -364,12 +388,18 @@
     DISCIPLINAS.forEach(function (disc) {
       var feitos=disc.capitulos.filter(function(c){return estado.progresso[c.id] && estado.progresso[c.id].feito;}).length;
       var iniciados=disc.capitulos.some(function(c){return !!estado.progresso[c.id];});
-      var status=feitos ? feitos+' de '+disc.capitulos.length+' concluídos' : (iniciados?'Continuar':'');
-      var b=criar('button','disc-card','<span class="disc-card__nome">'+textoSeguro(disc.nome)+'</span>'+
-        (status?'<span class="disc-card__status">'+status+'</span>':'')+'<span class="disc-card__seta" aria-hidden="true">→</span>',{type:'button'});
+      var vazio=!disc.capitulos.length, dias=diasAte(disc.prova);
+      var status=vazio?'Em preparação':(feitos ? feitos+' de '+disc.capitulos.length+' concluídos' : (iniciados?'Continuar':disc.capitulos.length+' assuntos'));
+      var b=criar('button','disc-card'+(vazio?' disc-card--vazio':'')+(dias!==null&&dias<0?' disc-card--passou':''),
+        '<span class="disc-card__data">'+textoSeguro(dataCurta(disc.prova))+'</span>'+
+        '<span class="disc-card__nome">'+textoSeguro(disc.nome)+'</span>'+
+        '<span class="disc-card__contagem">'+textoSeguro(textoContagem(dias))+'</span>'+
+        '<span class="disc-card__status">'+status+'</span><span class="disc-card__seta" aria-hidden="true">→</span>',{type:'button'});
+      if(vazio)b.disabled=true;
       b.style.setProperty('--acento',acento(disc));
       b.addEventListener('click',function(){abrirDisciplina(disc.id);}); grade.appendChild(b);
     });
+    renderProximaProva();
     var feitos=totalFeitos(), total=totalCaps(), pct=Math.round(feitos/total*100);
     $('#painel-progresso').hidden=feitos===0;
     $('#painel-pct').textContent=pct+'%'; $('#barra-fill').style.width=pct+'%';
@@ -379,94 +409,56 @@
       var d=discPorId(estado.ultimo.disciplina), c=capPorId(d,estado.ultimo.capitulo);
       if(d&&c){ cont.hidden=false; $('#continuar-titulo').textContent=c.title; $('#continuar-detalhe').textContent=d.nome+' · módulo '+c.module; }
     }
-    var calendarioAntigo=$('#calendario-provas');if(calendarioAntigo)calendarioAntigo.hidden=true;
     atualizarTopo(); mostrar('tela-home');
   }
 
-  function normalizarResposta(valor){return String(valor||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}
-  function marcarResposta(alvo,certa,resposta,vazia){var area=alvo.closest('label')||alvo.parentElement,antiga=area.querySelector('.revisao-feedback');if(antiga)antiga.remove();area.classList.remove('revisao-resposta--certa','revisao-resposta--errada');area.classList.add(certa?'revisao-resposta--certa':'revisao-resposta--errada');var aviso=criar('span','revisao-feedback',certa?'✓ Correto':(vazia?'Não respondida. ':'')+'Resposta correta: '+textoSeguro(resposta));area.appendChild(aviso);}
-  function conferirRevisao(raiz,revisao){var regras=revisao.correcao||{},campos=raiz.querySelectorAll('input[type="text"]'),acertos=0,total=0;(regras.textos||[]).forEach(function(regra){var campo=campos[regra.i];if(!campo)return;var valor=normalizarResposta(campo.value),certa=(regra.a||[]).some(function(aceita){return aceita instanceof RegExp?aceita.test(valor):valor===normalizarResposta(aceita);});total++;if(certa)acertos++;marcarResposta(campo,certa,regra.r,!valor);});(regras.radios||[]).forEach(function(regra){var opcoes=raiz.querySelectorAll('input[type="radio"][name="'+regra.n+'"]'),marcada=-1;opcoes.forEach(function(opcao,i){if(opcao.checked)marcada=i;});if(!opcoes.length)return;var certa=marcada===regra.c,totalAlvo=opcoes[0].closest('.revisao-radio-item')||opcoes[0].closest('.revisao-subitens')||opcoes[0].parentElement;total++;if(certa)acertos++;marcarResposta(totalAlvo,certa,regra.r,marcada<0);});var resultado=raiz.querySelector('.revisao-resultado');resultado.hidden=false;resultado.className='revisao-resultado '+(acertos===total?'revisao-resultado--perfeito':'');resultado.innerHTML='<strong>'+acertos+' de '+total+' respostas corretas</strong><span>'+(acertos===total?'Parabéns! Tudo certo.':'Revise os itens marcados em vermelho e tente novamente.')+'</span>';resultado.scrollIntoView({behavior:'smooth',block:'center'});}
-  function abrirRevisaoExtra(nome){if(typeof REVISOES_EXTRAS==='undefined'||!REVISOES_EXTRAS[nome])return;var revisao=REVISOES_EXTRAS[nome],raiz=$('#revisao-conteudo');$('#revisao-titulo').textContent=revisao.titulo;$('#revisao-contexto').textContent=revisao.bonus?'Bônus de estudo para as provas':'Revisão para a prova';raiz.innerHTML=revisao.html+'<section class="correcao-revisao"><h2>Terminou?</h2><p>Confira as respostas. Os itens errados mostrarão a resposta correta.</p><button class="correcao-revisao__botao" type="button">Conferir respostas</button><div class="revisao-resultado" role="status" hidden></div></section><button class="revisao-limpar" type="button">Limpar respostas</button>';$$('.revisao-abas [data-revisao]').forEach(function(b){b.setAttribute('aria-selected',b.dataset.revisao===nome?'true':'false');});raiz.querySelector('.correcao-revisao__botao').addEventListener('click',function(){conferirRevisao(raiz,revisao);});raiz.querySelector('.revisao-limpar').addEventListener('click',function(){raiz.querySelectorAll('input').forEach(function(c){if(c.type==='radio'||c.type==='checkbox')c.checked=false;else c.value='';});raiz.querySelectorAll('textarea').forEach(function(c){c.value='';});raiz.querySelectorAll('.revisao-feedback').forEach(function(c){c.remove();});raiz.querySelectorAll('.revisao-resposta--certa,.revisao-resposta--errada').forEach(function(c){c.classList.remove('revisao-resposta--certa','revisao-resposta--errada');});raiz.querySelector('.revisao-resultado').hidden=true;toast('Respostas apagadas.');});mostrar('tela-revisoes');}
-
-  /* Calendário de provas — cada prova leva à "Revisão do 3º bimestre" da
-     matéria (um toque). O card lista os módulos e tópicos cobrados. Para
-     atualizar num próximo bimestre, basta editar a lista PROVAS: data, dia,
-     o capítulo de revisão de destino e os módulos/tópicos exibidos. */
-  var PROVAS = {
-    titulo:'Calendário de provas',
-    legenda:'Testes bimestrais · 3º bimestre de 2026',
-    itens:[
-      { disciplina:'portugues', capitulo:'rev_lp3b', data:'17', mes:'08', dia:'Segunda', modulos:[
-        {n:17, titulo:'Lava uma mão, lava a outra', topicos:['Texto instrucional','Substantivo aumentativo e diminutivo','Ortografia: terminações -sinho(a), -zinho(a), -inho(a)']},
-        {n:18, titulo:'Lembranças de uma vida', topicos:['Contos de memórias','Adjetivo','Ortografia: -oso/-osa']}
-      ]},
-      { disciplina:'ciencias', capitulo:'rev_cie3b', data:'18', mes:'08', dia:'Terça', modulos:[
-        {n:9, titulo:'Características da Terra', topicos:['Representações da Terra','Terra, planeta azul','O interior da Terra','Vulcões, terremotos e tsunamis']},
-        {n:10, titulo:'Observando o céu diurno', topicos:['Os corpos celestes','O Sol e sua influência na Terra','Os astros se movimentam']}
-      ]},
-      { disciplina:'matematica', capitulo:'rev_mat3b', data:'19', mes:'08', dia:'Quarta', modulos:[
-        {n:9, titulo:'Contagem de possibilidades e outras multiplicações', topicos:['Problemas de contagem de possibilidades','Multiplicação por 10, por 100 e por 1000','Problemas de multiplicação']},
-        {n:10, titulo:'Medidas de tempo, localização e deslocamento', topicos:['Hora e meia hora','Hora, minuto e segundo','Localização','Trajetos e deslocamentos']}
-      ]},
-      { disciplina:'historia', capitulo:'rev_hist3b', data:'20', mes:'08', dia:'Quinta', modulos:[
-        {n:9, titulo:'Dividindo espaços em comunidade', topicos:['Espaços públicos e espaços privados','Espaços públicos de sua cidade']},
-        {n:10, titulo:'Espaços públicos e espaços privados', topicos:['Espaços públicos de acesso restrito','Espaços privados de uso público','Serviços públicos e privados','A administração do município (Prefeitura)']}
-      ]},
-      { disciplina:'geografia', capitulo:'rev_geo3b', data:'21', mes:'08', dia:'Sexta', modulos:[
-        {n:9, titulo:'Conhecendo o município', topicos:['O que é município?','A área urbana do município','Problemas ambientais nas áreas urbanas','A área rural do município','Atividades econômicas rurais e urbanas']}
-      ]}
-    ]
-  };
-  function renderCalendarioProvas() {
-    var secao=$('#calendario-provas'); if(!secao) return;
-    secao.innerHTML='';
-    var itens=PROVAS.itens.filter(function(p){ var d=discPorId(p.disciplina); return d&&capPorId(d,p.capitulo); });
-    if(!itens.length){ secao.hidden=true; return; }
-    secao.hidden=false;
-    secao.appendChild(criar('h2','provas__titulo','<span class="provas__ico" aria-hidden="true">📅</span> '+textoSeguro(PROVAS.titulo),{id:'provas-titulo'}));
-    secao.appendChild(criar('p','provas__legenda',textoSeguro(PROVAS.legenda)));
-    var lista=criar('div','provas__lista');
-    itens.forEach(function(p){
-      var disc=discPorId(p.disciplina);
-      var modulosHtml=(p.modulos||[]).map(function(m){
-        return '<span class="prova-modulo">'+
-          '<span class="prova-modulo__nome">Módulo '+textoSeguro(m.n)+' · '+textoSeguro(m.titulo)+'</span>'+
-          '<span class="prova-modulo__topicos">'+(m.topicos||[]).map(textoSeguro).join(' · ')+'</span>'+
-        '</span>';
-      }).join('');
-      var card=criar('button','prova-card',
-        '<span class="prova-card__data"><strong>'+textoSeguro(p.data)+'</strong><span class="prova-card__mes">/'+textoSeguro(p.mes)+'</span><span class="prova-card__dia">'+textoSeguro(p.dia)+'</span></span>'+
-        '<span class="prova-card__info">'+
-          '<strong class="prova-card__disc">'+textoSeguro(disc.nome)+'</strong>'+
-          '<span class="prova-card__modulos">'+modulosHtml+'</span>'+
-          '<span class="prova-card__atalho">Revisar para a prova <span aria-hidden="true">→</span></span>'+
-        '</span>',
-        {type:'button','aria-label':'Revisar para a prova de '+disc.nome+' em '+p.data+'/'+p.mes});
-      card.style.setProperty('--acento',acento(disc));
-      card.addEventListener('click',function(){ abrirCapitulo(p.disciplina,p.capitulo); });
-      lista.appendChild(card);
-    });
-    secao.appendChild(lista);
+  /* --- Calendário de provas ---------------------------------------------- */
+  var DIAS_SEMANA=['domingo','segunda','terça','quarta','quinta','sexta','sábado'];
+  function dataDaProva(iso) { if(!iso)return null; var p=iso.split('-'); return new Date(Number(p[0]),Number(p[1])-1,Number(p[2])); }
+  function diasAte(iso) {
+    var alvo=dataDaProva(iso); if(!alvo)return null;
+    var hoje=new Date(); hoje=new Date(hoje.getFullYear(),hoje.getMonth(),hoje.getDate());
+    return Math.round((alvo-hoje)/86400000);
+  }
+  function dataCurta(iso) { var d=dataDaProva(iso); return d?DIAS_SEMANA[d.getDay()]+', '+d.getDate()+'/'+(d.getMonth()+1):''; }
+  function textoContagem(dias) {
+    if(dias===null)return '';
+    if(dias<0)return 'Prova já aconteceu';
+    if(dias===0)return 'Prova hoje!';
+    if(dias===1)return 'Prova amanhã';
+    return 'Faltam '+dias+' dias';
+  }
+  function renderProximaProva() {
+    var caixa=$('#proxima-prova'); if(!caixa)return;
+    var proxima=DISCIPLINAS.filter(function(d){var n=diasAte(d.prova);return n!==null&&n>=0;})[0];
+    if(!proxima){caixa.hidden=true;return;}
+    var dias=diasAte(proxima.prova), pronta=proxima.capitulos.length>0;
+    caixa.hidden=false;caixa.style.setProperty('--acento',acento(proxima));
+    caixa.innerHTML='<span class="proxima-prova__rotulo">Próxima prova</span><strong class="proxima-prova__nome">'+textoSeguro(proxima.nome)+'</strong>'+
+      '<span class="proxima-prova__quando">'+textoSeguro(dataCurta(proxima.prova))+' · '+textoSeguro(proxima.horario||'')+'</span>'+
+      '<span class="proxima-prova__dias"><b>'+(dias===0?'Hoje':dias)+'</b>'+(dias===0?'':(dias===1?' dia':' dias'))+'</span>';
+    if(pronta){var ir=criar('button','botao botao--primario proxima-prova__botao','Revisar agora →',{type:'button'});ir.addEventListener('click',function(){abrirDisciplina(proxima.id);});caixa.appendChild(ir);}
   }
 
   function abrirDisciplina(id) {
     var disc=discPorId(id); if(!disc) return renderHome();
     estado.disciplina=id; estado.capitulo=null; salvar();
-    var cab=$('#cabecalho-disc'); cab.innerHTML='<p class="cabecalho-disc__trilha">Matéria</p><h1 class="cabecalho-disc__titulo" id="disc-titulo">'+textoSeguro(disc.nome)+'</h1><p class="cabecalho-disc__texto">Escolha um assunto. Você pode explorar no seu ritmo e voltar quando quiser.</p>';
+    var cab=$('#cabecalho-disc'); cab.innerHTML='<p class="cabecalho-disc__trilha">Matéria</p><h1 class="cabecalho-disc__titulo" id="disc-titulo">'+textoSeguro(disc.nome)+'</h1><p class="cabecalho-disc__texto">Prova: <strong>'+textoSeguro(dataCurta(disc.prova))+'</strong> · '+textoSeguro(disc.horario||'')+' · '+textoSeguro(textoContagem(diasAte(disc.prova)))+'. Estude cada assunto e termine com o simulado.</p>';
     cab.style.setProperty('--acento',acento(disc));
     var visuaisDisciplina={
       portugues:{src:'assets/disciplina-portugues.webp',alt:'Crianças lendo, escrevendo e imaginando histórias juntas.'},
       matematica:{src:'assets/disciplina-matematica.webp',alt:'Crianças explorando formas, quantidades, medidas, padrões e o tempo.'},
       ciencias:{src:'assets/disciplina-ciencias.webp',alt:'Crianças investigando plantas, animais, água, a Terra e o céu.'},
       geografia:{src:'assets/disciplina-geografia.webp',alt:'Crianças explorando mapas, paisagens, cidade, campo e caminhos.'},
-      historia:{src:'assets/disciplina-historia.webp',alt:'Crianças e pessoas idosas compartilhando fotografias, memórias e histórias da comunidade.'}
+      historia:{src:'assets/disciplina-historia.webp',alt:'Crianças e pessoas idosas compartilhando fotografias, memórias e histórias da comunidade.'},
+      ingles:{src:'assets/4b/disciplina-ingles.svg',alt:'Crianças conversando em inglês com balões de fala: Hello!, Did you…?, Yes, I did!'}
     }, visual=visuaisDisciplina[disc.id], figura=$('#disc-visual');
     figura.innerHTML=visual?'<img src="'+visual.src+'" alt="'+visual.alt+'">':'';
     var lista=$('#lista-capitulos'); lista.innerHTML='';
     disc.capitulos.forEach(function(cap){
       var p=estado.progresso[cap.id], marca=p&&p.feito?'✓':'→';
-      var revisao=cap.id.indexOf('rev_')===0;
-      var b=criar('button','cap-card'+(revisao?' cap-card--revisao':''),'<span class="cap-card__num">'+cap.module+'</span><span><strong class="cap-card__titulo">'+textoSeguro(cap.title)+'</strong><span class="cap-card__sub">'+textoSeguro(cap.subtitle||'')+'</span></span><span class="cap-card__estado" aria-hidden="true">'+marca+'</span>',{type:'button'});
+      var revisao=!!cap.exam;
+      var b=criar('button','cap-card'+(revisao?' cap-card--revisao cap-card--simulado':''),'<span class="cap-card__num">'+cap.module+'</span><span><strong class="cap-card__titulo">'+textoSeguro(cap.title)+'</strong><span class="cap-card__sub">'+textoSeguro(cap.subtitle||'')+'</span></span><span class="cap-card__estado" aria-hidden="true">'+marca+'</span>',{type:'button'});
       b.style.setProperty('--acento',acento(disc)); b.addEventListener('click',function(){abrirCapitulo(id,cap.id);}); lista.appendChild(b);
     });
     mostrar('tela-disciplina');
@@ -509,6 +501,7 @@
     destaque.appendChild(criar('figure','descoberta-visual'+(tipoVisual?' descoberta-visual--'+tipoVisual:''),'<img src="'+textoSeguro(visual.src)+'" alt="'+textoSeguro(visual.alt)+'" loading="lazy">'));
     destaque.appendChild(criar('div','ideia-principal','<span>Ideia principal</span><p>'+explicarTermos(recorte.resumo)+'</p>'));
     card.appendChild(destaque);
+    if(bloco.cards&&bloco.cards.length)card.appendChild(montarCartoes(bloco.cards));
     var sequencia=montarSequencia(bloco.p||[]); if(sequencia) card.appendChild(sequencia);
     if(recorte.detalhes.length){var det=criar('details');det.innerHTML='<summary>Entender melhor</summary>';recorte.detalhes.forEach(function(p){det.appendChild(criar('p',null,explicarTermos(p)));var transformacao=montarTransformacao(p);if(transformacao)det.appendChild(transformacao);});card.appendChild(det);}
     if(cap.pageImages && cap.pageImages[idx%2] && (idx===1 || idx===cap.theory.length-1)) {
@@ -520,6 +513,17 @@
     var ant=criar('button','botao','← Anterior',{type:'button'}); ant.disabled=idx===0; ant.addEventListener('click',function(){guardarPasso(cap,idx-1);renderTeoria(cap);irTopo();});
     var prox=criar('button','botao botao--primario',idx===cap.theory.length-1?'Vamos jogar →':'Próxima →',{type:'button'}); prox.addEventListener('click',function(){if(idx===cap.theory.length-1){selecionarAba('jogos',true);}else{guardarPasso(cap,idx+1);renderTeoria(cap);irTopo();}});
     nav.appendChild(ant);nav.appendChild(prox);raiz.appendChild(nav);
+  }
+  /* Cartões de vocabulário: em Inglês, tocar no cartão lê a palavra em voz alta. */
+  function montarCartoes(cartoes) {
+    var ingles=emIngles(), grade=criar('div','cartoes-vocab'+(ingles?' cartoes-vocab--ouvir':''));
+    if(ingles)grade.appendChild(criar('p','cartoes-vocab__dica','🔊 Toque em um cartão para ouvir. Toque de novo para ouvir mais devagar.'));
+    cartoes.forEach(function(c){
+      var termo=c.en||c.t||'', b=criar(ingles?'button':'div','cartao-vocab','<span class="cartao-vocab__icone" aria-hidden="true">'+textoSeguro(c.icon||'✦')+'</span><strong>'+textoSeguro(termo)+'</strong><small>'+textoSeguro(c.pt||c.d||'')+'</small>',ingles?{type:'button','aria-label':'Ouvir '+termo}:null);
+      if(ingles){var vezes=0;b.addEventListener('click',function(){vezes++;b.classList.add('cartao-vocab--tocando');setTimeout(function(){b.classList.remove('cartao-vocab--tocando');},700);falar(termo.split('→').join(', '),vezes%2===0);});}
+      grade.appendChild(b);
+    });
+    return grade;
   }
   function guardarPasso(cap,indice) { estado.passoDescoberta=indice;estado.leitura[cap.id]=indice;salvar(); }
 
@@ -560,7 +564,8 @@
     var raiz=$('#jogos-conteudo'); raiz.innerHTML='';
     if(!cap.games||!cap.games.length){raiz.appendChild(criar('div','vazio','Ainda não há experiências para este assunto.'));return;}
     var salvo=progressoExperiencias(cap);jogoAtual=Math.max(0,Math.min(salvo.atual||0,cap.games.length-1));salvo.atual=jogoAtual;
-    var game=cap.games[jogoAtual], perfis=(typeof EXPERIENCE_PROFILES!=='undefined'&&EXPERIENCE_PROFILES[cap.id])||[], perfil=perfis[jogoAtual]||{mode:game.type==='pairs'?'explore':'choice',goal:game.title,prompt:game.instructions,result:'descoberta'};
+    var original=cap.games[jogoAtual], perfis=(typeof EXPERIENCE_PROFILES!=='undefined'&&EXPERIENCE_PROFILES[cap.id])||[], perfil=perfis[jogoAtual]||{mode:original.type==='pairs'?'explore':(original.type==='memory'?'memoria':'choice'),goal:original.title,prompt:original.instructions,result:'descoberta'};
+    var game=jogoEmbaralhado(original,salvo,perfil.mode);
     var topo=criar('header','jogo-imersivo__topo');
     var sair=criar('button','jogo-imersivo__sair','← <span>Sair do jogo</span>',{type:'button','aria-label':'Sair do jogo e voltar a descobrir'});
     sair.addEventListener('click',function(){selecionarAba('teoria',false);});
@@ -573,6 +578,18 @@
     var palco=criar('main','jogo-imersivo__palco'), conteudo=criar('div','jogo-imersivo__conteudo');
     if(cap.games.length>1)conteudo.appendChild(seletorDeJogos(cap,salvo));
     if(game.type==='writing')renderProducaoTextualJogo(conteudo,cap,game,salvo);else montarNovaExperiencia(conteudo,cap,game,perfil,salvo);palco.appendChild(conteudo);raiz.appendChild(palco);
+  }
+  /* Cada partida sorteia a ordem das rodadas. A ordem fica guardada até o
+     jogo acabar, para a criança poder sair e voltar sem repetir rodadas. */
+  function jogoEmbaralhado(game,salvo,modo) {
+    var chave=game.type==='pairs'?'pairs':'items', lista=game[chave];
+    if(modo==='sequence'||game.type==='writing'||!lista||!lista.length)return game;
+    salvo.ordem=salvo.ordem||{};
+    var ordem=salvo.ordem[jogoAtual];
+    if(!ordem||ordem.length!==lista.length){ordem=misturar(lista.map(function(_,i){return i;}));salvo.ordem[jogoAtual]=ordem;salvar();}
+    var copia={};Object.keys(game).forEach(function(k){copia[k]=game[k];});
+    copia[chave]=ordem.map(function(i){return lista[i];});
+    return copia;
   }
   function alternarTelaCheia() {
     var alvo=$('#jogos-conteudo');
@@ -684,6 +701,7 @@
   function reiniciarExperiencia(cap,salvo) {
     salvo.feitas[jogoAtual]=false;salvo.passos[jogoAtual]=0;
     if(salvo.achados)salvo.achados[jogoAtual]=[];
+    if(salvo.ordem)delete salvo.ordem[jogoAtual];
     zerarPlacar();salvar();renderJogos(cap);
   }
   function criarCenarioRevisao(cap,game) {
@@ -847,6 +865,7 @@
         if(outra.dados.i===carta.i){
           [outra,b].forEach(function(x){x.classList.add('carta--achada');x.disabled=true;});
           achados.push(carta.i);
+          if(emIngles())falar(game.items[carta.i].base);
           salvo.achados=salvo.achados||{}; salvo.achados[jogoAtual]=achados.slice();
           var ultimo=achados.length>=game.items.length;
           comemorar(ultimo);
@@ -1012,21 +1031,29 @@
 
   function iniciarQuiz(cap,reiniciar) {
     var guardado=!reiniciar && estado.tentativas[cap.id];
+    /* No simulado, cada tentativa sorteia um conjunto diferente de questões
+       do banco de todos os módulos; o sorteio fica guardado até terminar. */
+    var indices=cap.quiz.map(function(_,i){return i;});
+    if(cap.exam){
+      var sorteio=guardado&&guardado.sorteio&&guardado.sorteio.every(function(i){return i<cap.quiz.length;})?guardado.sorteio:null;
+      indices=sorteio||misturar(indices).slice(0,cap.exam.size||15);
+      if(!sorteio)guardado=null;
+    }
     if(guardado){
       var errSet={};(guardado.erros||[]).forEach(function(i){errSet[i]=true;});
-      var feitas={};for(var k=0;k<(guardado.indice||0);k++){feitas[k]={acertou:!errSet[k],contou:!errSet[k],escolhaIdx:-1,escolhaTxt:null};}
-      quiz={indice:guardado.indice||0,acertos:guardado.acertos||0,respondidas:guardado.indice||0,erros:(guardado.erros||[]).map(function(i){return {questao:cap.quiz[i],indiceOriginal:i};}),indices:cap.quiz.map(function(_,i){return i;}),revisao:false,pausa:false,feitas:feitas};
+      var feitas={};for(var k=0;k<(guardado.indice||0)&&k<indices.length;k++){var oi=indices[k];feitas[oi]={acertou:!errSet[oi],contou:!errSet[oi],escolhaIdx:-1,escolhaTxt:null};}
+      quiz={indice:guardado.indice||0,acertos:guardado.acertos||0,respondidas:guardado.indice||0,erros:(guardado.erros||[]).map(function(i){return {questao:cap.quiz[i],indiceOriginal:i};}),indices:indices,revisao:false,pausa:false,feitas:feitas};
     } else {
-      quiz={indice:0,acertos:0,respondidas:0,erros:[],indices:cap.quiz.map(function(_,i){return i;}),revisao:false,pausa:false,feitas:{}};
+      quiz={indice:0,acertos:0,respondidas:0,erros:[],indices:indices,revisao:false,pausa:false,feitas:{}};
     }
     if(reiniciar){delete estado.tentativas[cap.id];salvar();}
     renderQuestao(cap);
   }
   function salvarTentativa(cap) {
     if(quiz.revisao)return;
-    estado.tentativas[cap.id]={indice:quiz.indice,acertos:quiz.acertos,erros:quiz.erros.map(function(e){return e.indiceOriginal;})};salvar();
+    estado.tentativas[cap.id]={indice:quiz.indice,acertos:quiz.acertos,erros:quiz.erros.map(function(e){return e.indiceOriginal;}),sorteio:cap.exam?quiz.indices:undefined};salvar();
   }
-  function perguntasAtuais(cap) { return quiz.revisao ? quiz.perguntas : cap.quiz; }
+  function perguntasAtuais(cap) { return quiz.revisao ? quiz.perguntas : quiz.indices.map(function(i){return cap.quiz[i];}); }
   function contextualizarQuestao(cap,q) {
     var texto=q.q, imagem=q.image||null, imagemAlt=q.imageAlt||'', imagemCaption=q.imageCaption||'', contexto='', indice=cap.quiz.indexOf(q), plano=(typeof PEDAGOGY!=='undefined'&&PEDAGOGY[cap.id])||null, ajuste=plano&&plano.questions&&plano.questions[indice];
     if(ajuste){contexto=ajuste.context||'';texto=ajuste.prompt||texto;}
@@ -1057,7 +1084,9 @@
       card.appendChild(figuraOpcional(criar('figure','questao-contexto','<a href="'+textoSeguro(contexto.imagem)+'" target="_blank" rel="noopener" aria-label="Ampliar a ilustração"><img src="'+textoSeguro(contexto.imagem)+'" alt="'+textoSeguro(contexto.imagemAlt)+'" loading="lazy"></a><figcaption>'+textoSeguro(contexto.imagemCaption)+' Toque na imagem para ampliá-la.</figcaption>')));
     }
     if(contexto.contexto)card.appendChild(criar('div','questao-contexto-texto','<span>Informações para pensar</span><p>'+textoSeguro(contexto.contexto)+'</p>'));
+    if(q.from&&cap.exam)card.appendChild(criar('p','quiz-card__origem','Módulo: '+textoSeguro(q.from)));
     card.appendChild(criar('p','quiz-card__pergunta',textoSeguro(contexto.texto)));
+    if(q.listen){var ouvir=botaoOuvir(q.listen,'Ouvir');ouvir.classList.add('ouvir--grande');card.appendChild(ouvir);}
     function navProxima(){
       var nav=criar('div','navegacao'), ultima=quiz.indice===perguntas.length-1, prox=criar('button','botao botao--primario',ultima?(quiz.revisao?'Terminar revisão':'Ver resultado'):'Próxima →',{type:'button'});
       prox.addEventListener('click',function(){quiz.indice++;salvarTentativa(cap);renderQuestao(cap);irTopo();});
@@ -1092,7 +1121,10 @@
       revelar(resposta,nav);
     }
     if(q.type==='mc'){
-      var errosMc=0, ops=criar('div','opcoes'); q.options.forEach(function(op,i){var b=criar('button','opcao','<span class="opcao__letra">'+String.fromCharCode(65+i)+'</span><span>'+textoSeguro(op)+'</span>',{type:'button'});b.addEventListener('click',function(){if(bloqueado||b.disabled)return;if(i===q.answer){ops.querySelectorAll('button').forEach(function(x){x.disabled=true;});b.classList.add('opcao--certa');concluir(true,op,i);}else{errosMc++;errouAntes=true;registrarErro(op);b.disabled=true;b.classList.add('opcao--errada');mostrarNovaTentativa(errosMc===1?'Elimine esta alternativa e releia a pergunta.':q.explain||'Compare as alternativas que ainda restam.');if(errosMc===2)card.appendChild(falaMascote(q.explain||'Observe as palavras mais importantes da pergunta.',true));}});ops.appendChild(b);});card.appendChild(ops);
+      /* A ordem das alternativas é sorteada a cada vez que a pergunta aparece:
+         a resposta certa não fica presa a uma letra. */
+      var errosMc=0, ops=criar('div','opcoes'), ordem=misturar(q.options.map(function(_,i){return i;}));
+      ordem.forEach(function(i,pos){var op=q.options[i];var b=criar('button','opcao','<span class="opcao__letra">'+String.fromCharCode(65+pos)+'</span><span>'+textoSeguro(op)+'</span>',{type:'button'});b.addEventListener('click',function(){if(bloqueado||b.disabled)return;if(i===q.answer){ops.querySelectorAll('button').forEach(function(x){x.disabled=true;});b.classList.add('opcao--certa');concluir(true,op,i);}else{errosMc++;errouAntes=true;registrarErro(op);b.disabled=true;b.classList.add('opcao--errada');mostrarNovaTentativa(errosMc===1?'Elimine esta alternativa e releia a pergunta.':q.explain||'Compare as alternativas que ainda restam.');if(errosMc===2)card.appendChild(falaMascote(q.explain||'Observe as palavras mais importantes da pergunta.',true));}});ops.appendChild(b);});card.appendChild(ops);
     } else {
       var tentativasTexto=0, numerica=/número|quantos|quantas|quanto|horas|segundos|dias/i.test(contexto.texto), linha=criar('div','campo-resposta'), campo=criar('input','campo',null,{type:'text',inputmode:numerica?'numeric':'text',autocomplete:'off',placeholder:numerica?'Escreva o número':'Escreva uma palavra ou frase curta','aria-label':'Sua resposta'}), enviar=criar('button','botao botao--primario','Conferir',{type:'button'});
       function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[]);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(pistaRespostaAberta(q,numerica));campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
@@ -1104,6 +1136,10 @@
   function pistaRespostaAberta(q,numerica){if(numerica)return 'Volte aos números do enunciado e confira a operação ou a unidade pedida.';var alvo=normalizar((q.answers||[])[0]);return alvo?'A resposta começa com “'+alvo.charAt(0).toUpperCase()+'”. Releia a pergunta.':'Releia a pergunta e responda com poucas palavras.';}
   function categoriaQuestao(q) {
     var t=normalizar(q.q);
+    if(q.listen)return 'Listening: ouvir e entender';
+    if(/did|didn|past|passado|went|verbo|verb/.test(t)&&estado.disciplina==='ingles')return 'Grammar: simple past';
+    if(estado.disciplina==='ingles'&&/texto|reading|museum|celebrations|brain/.test(t))return 'Reading: entender o texto';
+    if(estado.disciplina==='ingles')return 'Vocabulary: palavras da unit';
     if(/texto|instrucional|cartaz|manual|anuncio|memoria|tirinha/.test(t))return 'Compreender textos e informações';
     if(/palavra|substantivo|diminutivo|aumentativo|plural|silaba|verbo|adjetivo/.test(t))return 'Observar como as palavras funcionam';
     if(/numero|multiplica|divis|possibil|hora|minuto|calculo|resultado/.test(t))return 'Resolver situações com números';
@@ -1113,7 +1149,7 @@
   }
   function resumoDominio(cap,erros) {
     var grupos={}, errados={};erros.forEach(function(e){errados[e.indiceOriginal]=true;});
-    cap.quiz.forEach(function(q,i){var nome=categoriaQuestao(q);if(!grupos[nome])grupos[nome]={total:0,acertos:0};grupos[nome].total++;if(!errados[i])grupos[nome].acertos++;});
+    quiz.indices.forEach(function(i){var q=cap.quiz[i],nome=cap.exam&&q.from?q.from:categoriaQuestao(q);if(!grupos[nome])grupos[nome]={total:0,acertos:0};grupos[nome].total++;if(!errados[i])grupos[nome].acertos++;});
     var box=criar('div','resumo-dominio','<h4>O que este resultado mostra</h4>'), lista=criar('ul');
     Object.keys(grupos).forEach(function(nome){var g=grupos[nome], ok=g.acertos===g.total;lista.appendChild(criar('li',ok?'resumo-dominio__ok':'resumo-dominio__rever','<span>'+textoSeguro(nome)+'</span><strong>'+(ok?'Já está firme':g.acertos+' de '+g.total+' · vale rever')+'</strong>'));});box.appendChild(lista);return box;
   }
@@ -1150,8 +1186,6 @@
     $('#link-home').addEventListener('click',function(e){e.preventDefault();renderHome();});
     $('#btn-voltar').addEventListener('click',voltar);
     $('#btn-continuar').addEventListener('click',function(){if(estado.ultimo)abrirCapitulo(estado.ultimo.disciplina,estado.ultimo.capitulo);});
-    $$('[data-revisao]').forEach(function(b){b.addEventListener('click',function(){abrirRevisaoExtra(b.dataset.revisao);});});
-    $$('[data-capitulo-revisao]').forEach(function(b){b.addEventListener('click',function(){abrirCapitulo(b.dataset.disciplina,b.dataset.capituloRevisao);});});
     $$('.aba').forEach(function(b){b.addEventListener('click',function(){selecionarAba(b.dataset.aba,true);});});
     document.addEventListener('fullscreenchange',atualizarBotaoTelaCheia);
   }

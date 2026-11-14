@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#2456b8" font-weight="800" text-anchor="middle">go + verb + -ing</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">atividades de lazer</text>
+<rect x="250" y="115" width="120" height="70" rx="18" fill="#f1ecff" stroke="#6b49b8" stroke-width="3"/><text x="310" y="163" font-size="34" fill="#6b49b8" font-weight="800" text-anchor="middle">go</text>
+<text x="400" y="163" font-size="34" fill="#4a5872" font-weight="800" text-anchor="middle">+</text>
+<rect x="430" y="115" width="220" height="70" rx="18" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/><text x="540" y="163" font-size="30" fill="#1d805c" font-weight="800" text-anchor="middle">verb + ing</text>
+<rect x="30" y="225" width="160" height="210" rx="18" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="110" y="300" font-size="58" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏊</text>
+<text x="110" y="350" font-size="18" font-weight="800" text-anchor="middle" fill="#6b49b8">go <tspan fill="#1d805c">swimming</tspan></text>
+<text x="110" y="385" font-size="15" fill="#4a5872" font-weight="700" text-anchor="middle">nadar</text>
+<rect x="200" y="225" width="160" height="210" rx="18" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="280" y="300" font-size="58" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🎣</text>
+<text x="280" y="350" font-size="18" font-weight="800" text-anchor="middle" fill="#6b49b8">go <tspan fill="#1d805c">fishing</tspan></text>
+<text x="280" y="385" font-size="15" fill="#4a5872" font-weight="700" text-anchor="middle">pescar</text>
+<rect x="370" y="225" width="160" height="210" rx="18" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="450" y="300" font-size="58" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🥾</text>
+<text x="450" y="350" font-size="18" font-weight="800" text-anchor="middle" fill="#6b49b8">go <tspan fill="#1d805c">hiking</tspan></text>
+<text x="450" y="385" font-size="15" fill="#4a5872" font-weight="700" text-anchor="middle">fazer trilha</text>
+<rect x="540" y="225" width="160" height="210" rx="18" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="620" y="300" font-size="58" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏇</text>
+<text x="620" y="350" font-size="14" font-weight="800" text-anchor="middle" fill="#6b49b8">go <tspan fill="#1d805c">horseback riding</tspan></text>
+<text x="620" y="385" font-size="15" fill="#4a5872" font-weight="700" text-anchor="middle">andar a cavalo</text>
+<rect x="710" y="225" width="160" height="210" rx="18" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="790" y="300" font-size="58" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">⛸️</text>
+<text x="790" y="350" font-size="18" font-weight="800" text-anchor="middle" fill="#6b49b8">go <tspan fill="#1d805c">ice skating</tspan></text>
+<text x="790" y="385" font-size="15" fill="#4a5872" font-weight="700" text-anchor="middle">patinar no gelo</text>
+<text x="450" y="490" font-size="22" fill="#17213b" font-weight="800" text-anchor="middle">We usually go hiking.  →  passado: We went hiking.</text>
+<text x="450" y="530" font-size="22" fill="#c0392b" font-weight="800" text-anchor="middle">negativa: We didn&#x27;t go hiking.</text>
+</svg>

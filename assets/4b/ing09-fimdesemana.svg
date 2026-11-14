@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<text x="450" y="58" font-size="34" fill="#2456b8" font-weight="800" text-anchor="middle">My weekend</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">o que fazer no fim de semana</text>
+<rect x="50" y="115" width="380" height="455" rx="24" fill="#fff" stroke="#2456b8" stroke-width="3"/>
+<rect x="50" y="115" width="380" height="60" rx="24" fill="#2456b8"/><rect x="50" y="150" width="380" height="25" fill="#2456b8"/>
+<text x="240" y="157" font-size="28" fill="#fff" font-weight="800" text-anchor="middle">SATURDAY</text>
+<rect x="470" y="115" width="380" height="455" rx="24" fill="#fff" stroke="#2456b8" stroke-width="3"/>
+<rect x="470" y="115" width="380" height="60" rx="24" fill="#2456b8"/><rect x="470" y="150" width="380" height="25" fill="#2456b8"/>
+<text x="660" y="157" font-size="28" fill="#fff" font-weight="800" text-anchor="middle">SUNDAY</text>
+<text x="120" y="245" font-size="52" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🎬</text>
+<text x="170" y="235" font-size="24" fill="#17213b" font-weight="800" text-anchor="start">go to the movies</text>
+<text x="120" y="355" font-size="52" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🍕</text>
+<text x="170" y="345" font-size="24" fill="#17213b" font-weight="800" text-anchor="start">eat out</text>
+<text x="120" y="465" font-size="52" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🦖</text>
+<text x="170" y="455" font-size="24" fill="#17213b" font-weight="800" text-anchor="start">visit a museum</text>
+<text x="540" y="245" font-size="52" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🧺</text>
+<text x="590" y="235" font-size="24" fill="#17213b" font-weight="800" text-anchor="start">go on a picnic</text>
+<text x="540" y="355" font-size="52" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏖️</text>
+<text x="590" y="345" font-size="24" fill="#17213b" font-weight="800" text-anchor="start">go to the beach</text>
+<text x="540" y="465" font-size="52" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏠</text>
+<text x="590" y="455" font-size="24" fill="#17213b" font-weight="800" text-anchor="start">stay home</text>
+</svg>

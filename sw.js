@@ -1,46 +1,37 @@
-const CACHE_CORE = 'estudos-3-ano-core-v56';
+const CACHE_CORE = 'estudos-3-ano-core-v57';
 const CACHE_VIDEOS = 'estudos-3-ano-videos-v1';
 const CACHE_LEGADO = 'estudos-3-ano-v47';
+/* A lista entre os marcadores é atualizada pelo build_data.py. */
 const ARQUIVOS = [
-  './assets/english/review-1.png', './assets/english/review-2.png', './assets/english/review-3.png', './assets/english/review-4.png',
-  './', './index.html', './style.css', './data.js', './experiences.js',
-  './pedagogy.js', './reviews.js', './app.js', './manifest.webmanifest',
-  './assets/app-icon.svg', './assets/app-icon-192.png', './assets/app-icon-512.png',
+  // <arquivos-offline>
+  './',
+  './index.html',
+  './style.css',
+  './data.js',
+  './experiences.js',
+  './pedagogy.js',
+  './app.js',
+  './manifest.webmanifest',
+  './assets/app-icon.svg',
+  './assets/app-icon-192.png',
+  './assets/app-icon-512.png',
   './assets/capa-aprender.webp',
-  './assets/capa-aprender.png', './assets/mascote-capivara-v2.webp',
-  './assets/quiz-cidade-espacos.webp', './assets/quiz-desmatamento.webp',
-  './assets/quiz-poluicao-sonora.webp', './assets/quiz-terra-noturna.webp',
-  './assets/descobrir-textos.webp', './assets/descobrir-palavras.webp',
-  './assets/descobrir-numeros.webp', './assets/descobrir-medidas.webp',
-  './assets/descobrir-natureza.webp', './assets/descobrir-lugares.webp',
-  './assets/camadas-esferas-terra-v2.webp', './assets/camadas-interior-terra-v2.webp',
+  './assets/capa-aprender.png',
+  './assets/mascote-capivara-v2.webp',
   './assets/descobrir-ideias.webp',
-  './assets/descobrir-anuncios.webp', './assets/descobrir-memorias.webp',
-  './assets/descobrir-quadrinhos.webp', './assets/descobrir-contos.webp',
-  './assets/infografico-tratamento-agua.webp',
-  './assets/disciplina-portugues.webp', './assets/disciplina-matematica.webp',
-  './assets/disciplina-ciencias.webp', './assets/disciplina-geografia.webp',
-  './assets/disciplina-historia.webp',
-  './assets/revisao-3b-portugues.webp', './assets/revisao-3b-matematica.webp',
-  './assets/revisao-3b-ciencias.webp', './assets/revisao-3b-geografia.webp',
-  './assets/revisao-3b-historia.webp',
-  './assets/jogo-maquina-encolher.webp', './assets/jogo-maquina-aumentar.webp',
-  './assets/games/piloto-mat09-maquina.webp', './assets/games/piloto-geo09-municipio.webp',
-  './assets/games/piloto-hist09-comunidade.webp', './assets/games/piloto-lp18-fabrica.webp',
-  './assets/games/piloto-cie09-terra.webp'
-  ,'./assets/games/piloto-lp19-origens.webp','./assets/games/piloto-mat10-relogios.webp',
-  './assets/games/piloto-cie10-observatorio.webp','./assets/games/piloto-geo10-campo-cidade.webp',
-  './assets/games/piloto-hist10-acessos.webp'
-  ,'./assets/games/piloto-lp20-oficina-sz.webp','./assets/games/piloto-lp21-quadrinhos.webp',
-  './assets/games/piloto-lp22-correspondencia.webp','./assets/games/piloto-mat11-divisao.webp',
-  './assets/games/piloto-cie11-lua.webp','./assets/games/piloto-geo11-poluicao.webp',
-  './assets/games/piloto-hist11-conselho.webp'
-  ,'./assets/games/piloto-lp18-classes.webp','./assets/games/piloto-mat09-ideias.webp',
-  './assets/games/piloto-cie09-agentes.webp','./assets/games/piloto-geo09-glossario.webp',
-  './assets/games/piloto-hist09-servicos.webp'
-  ,'./assets/games/piloto-lp19-narrador.webp','./assets/games/piloto-mat10-conversoes.webp',
-  './assets/games/piloto-cie10-movimentos.webp','./assets/games/piloto-geo10-herancas.webp',
-  './assets/games/piloto-hist10-responsabilidades.webp'
+  './assets/4b/disciplina-ingles.svg',
+  './assets/4b/ing07-corpo.svg',
+  './assets/4b/ing07-did.svg',
+  './assets/4b/ing07-habitos.svg',
+  './assets/4b/ing07-too-enough.svg',
+  './assets/4b/ing08-festa.svg',
+  './assets/4b/ing08-irregular.svg',
+  './assets/4b/ing08-novembro.svg',
+  './assets/4b/ing08-regular.svg',
+  './assets/4b/ing09-didnt.svg',
+  './assets/4b/ing09-fimdesemana.svg',
+  './assets/4b/ing09-go-ing.svg'
+  // </arquivos-offline>
 ];
 
 self.addEventListener('install', function (evento) {

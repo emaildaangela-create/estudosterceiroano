@@ -1,0 +1,259 @@
+{
+  "theory": [
+    {
+      "h": "Resumo da prova: vocabulary",
+      "p": [
+        "A prova cobra <strong>Listening</strong> (ouvir), <strong>Reading Comprehension</strong> (ler e entender) e <strong>Use of English</strong> (usar as palavras e a gramática). Revise as três Units com os cartões abaixo.",
+        "<strong>Unit 7 – Feeling Fit:</strong> partes do corpo (shoulder, elbow, chest, stomach, back, knee, fingers, toes, muscle, bone) e hábitos (get exercise, eat fruit, eat vegetables, get rest, eat junk food).",
+        "<strong>Unit 8 – Let's Celebrate:</strong> costume, mask, party, feast, lantern, fireworks, decorations, parade, celebrate, remember, dance, dress up; present, birthday cake, candles, invitation, balloons.",
+        "<strong>Unit 9 – My Weekend:</strong> eat out, go to the movies, visit a museum, go on a picnic, stay home, go to the beach, text my friends, win, lose, exciting, interesting, busy; go swimming, go fishing, go hiking, go horseback riding, go ice skating."
+      ],
+      "cards": [
+        {
+          "icon": "💪",
+          "en": "elbow",
+          "pt": "cotovelo"
+        },
+        {
+          "icon": "🦵",
+          "en": "knee",
+          "pt": "joelho"
+        },
+        {
+          "icon": "🦶",
+          "en": "toes",
+          "pt": "dedos dos pés"
+        },
+        {
+          "icon": "🎭",
+          "en": "mask",
+          "pt": "máscara"
+        },
+        {
+          "icon": "🎺",
+          "en": "parade",
+          "pt": "desfile"
+        },
+        {
+          "icon": "🏮",
+          "en": "lantern",
+          "pt": "lanterna"
+        },
+        {
+          "icon": "🎬",
+          "en": "go to the movies",
+          "pt": "ir ao cinema"
+        },
+        {
+          "icon": "🎣",
+          "en": "go fishing",
+          "pt": "pescar"
+        },
+        {
+          "icon": "🏠",
+          "en": "stay home",
+          "pt": "ficar em casa"
+        }
+      ]
+    },
+    {
+      "h": "Resumo da prova: grammar",
+      "figure": {
+        "src": "assets/4b/ing09-didnt.svg",
+        "alt": "Duas colunas: coisas que eu fiz (went, won, watched) e coisas que eu não fiz (didn't go, didn't win, didn't watch).",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "Tudo gira em torno do <strong>simple past</strong> (passado). Pergunta: <strong>Did</strong> + pessoa + verbo normal? → <em>Did you watch the parade?</em>",
+        "<strong>Resposta curta (Unit 7):</strong> <em>Yes, I did.</em> / <em>No, I didn't.</em> — repita a pessoa: <em>Did she…? → Yes, she did.</em>",
+        "<strong>Resposta longa (Unit 8):</strong> verbo no passado. Regulares ganham <strong>-ed</strong> (watched, played, danced). Irregulares mudam: <strong>went, saw, ate, sang, drank, wore, had, wrote, gave, took</strong>.",
+        "<strong>Negativa (Unit 9):</strong> <strong>didn't</strong> + verbo normal: <em>I didn't go. We didn't win.</em> Nunca: <em>didn't went</em>.",
+        "<strong>Too / Enough (Unit 7):</strong> too much (TV, soda, junk food), too many (cookies, candies, chips), enough (sleep, water, exercise)."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Ouça a pergunta e escolha a resposta que combina.",
+      "listen": "Did you go to the parade?",
+      "options": [
+        "Yes, I went to the parade.",
+        "Yes, I go to the parade.",
+        "Yes, I goed to the parade.",
+        "Yes, you did go."
+      ],
+      "answer": 0,
+      "explain": "A pergunta é no passado (Did). Go é irregular: a resposta longa usa went."
+    },
+    {
+      "type": "mc",
+      "q": "Ouça e escolha a palavra que você ouviu.",
+      "listen": "fireworks",
+      "options": [
+        "fireworks",
+        "feast",
+        "fingers",
+        "fishing"
+      ],
+      "answer": 0,
+      "explain": "Você ouviu fireworks (fogos de artifício). Todas começam com f, por isso preste atenção no som do final."
+    },
+    {
+      "type": "mc",
+      "q": "Você tem fingers nas mãos e ________ nos pés.",
+      "options": [
+        "toes",
+        "knees",
+        "elbows",
+        "bones"
+      ],
+      "answer": 0,
+      "explain": "Fingers são os dedos das mãos; toes são os dedos dos pés."
+    },
+    {
+      "type": "mc",
+      "q": "Did your team win? ❌ (o time perdeu)",
+      "options": [
+        "No, they didn't win. They lost.",
+        "Yes, they won.",
+        "No, they didn't won.",
+        "Yes, they did win a lot."
+      ],
+      "answer": 0,
+      "explain": "O time perdeu (lost), então não ganhou: No, they didn't win. Depois de didn't o verbo fica normal (win, não won)."
+    },
+    {
+      "type": "mc",
+      "q": "Qual é o passado de write?",
+      "options": [
+        "wrote",
+        "writed",
+        "written",
+        "writes"
+      ],
+      "answer": 0,
+      "explain": "Write é irregular: write → wrote."
+    },
+    {
+      "type": "mc",
+      "q": "Complete: “Do you get ________ exercise? Yes, I go running and I love swimming.”",
+      "options": [
+        "enough",
+        "too many",
+        "a",
+        "didn't"
+      ],
+      "answer": 0,
+      "explain": "A pessoa faz exercício na medida certa: enough exercise."
+    },
+    {
+      "type": "mc",
+      "q": "Qual destas coisas você vê em uma birthday party?",
+      "options": [
+        "candles",
+        "toes",
+        "a muscle",
+        "a museum"
+      ],
+      "answer": 0,
+      "explain": "Candles (velas) vão no bolo de aniversário (birthday cake)."
+    },
+    {
+      "type": "mc",
+      "q": "Ouça e escolha o significado.",
+      "listen": "We went swimming.",
+      "options": [
+        "Nós fomos nadar.",
+        "Nós vamos nadar.",
+        "Nós não fomos nadar.",
+        "Nós gostamos de nadar."
+      ],
+      "answer": 0,
+      "explain": "Went é o passado de go: we went swimming = nós fomos nadar."
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Which unit?",
+      "short": "De qual Unit?",
+      "instructions": "Em qual Unit esta palavra apareceu?",
+      "categories": [
+        "Unit 7 · Feeling Fit 💪",
+        "Unit 8 · Let's Celebrate 🎉",
+        "Unit 9 · My Weekend 🏖️"
+      ],
+      "items": [
+        {
+          "text": "elbow",
+          "cat": 0
+        },
+        {
+          "text": "lantern",
+          "cat": 1
+        },
+        {
+          "text": "go hiking",
+          "cat": 2
+        },
+        {
+          "text": "get rest",
+          "cat": 0
+        },
+        {
+          "text": "fireworks",
+          "cat": 1
+        },
+        {
+          "text": "eat out",
+          "cat": 2
+        },
+        {
+          "text": "stomach",
+          "cat": 0
+        },
+        {
+          "text": "costume",
+          "cat": 1
+        },
+        {
+          "text": "visit a museum",
+          "cat": 2
+        }
+      ]
+    },
+    {
+      "type": "memory",
+      "title": "Memória do passado",
+      "short": "Memória final",
+      "instructions": "Ache o verbo e o seu passado.",
+      "items": [
+        {
+          "base": "go",
+          "result": "went"
+        },
+        {
+          "base": "watch",
+          "result": "watched"
+        },
+        {
+          "base": "see",
+          "result": "saw"
+        },
+        {
+          "base": "win",
+          "result": "won"
+        },
+        {
+          "base": "eat",
+          "result": "ate"
+        },
+        {
+          "base": "dance",
+          "result": "danced"
+        }
+      ]
+    }
+  ]
+}

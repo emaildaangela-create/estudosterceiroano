@@ -1,0 +1,244 @@
+{
+  "id": "ing08",
+  "module": "8",
+  "title": "Let's Celebrate",
+  "subtitle": "Celebrations · Simple past: regular and irregular verbs",
+  "theory": [
+    {
+      "h": "Celebrations and festivals",
+      "figure": {"src": "assets/4b/ing08-festa.svg", "alt": "Cena de festa com máscara, fantasia, lanternas, fogos de artifício, desfile e decorações.", "tipo": "diagrama"},
+      "p": [
+        "Pessoas do mundo todo têm <strong>celebrations</strong> (celebrações) e <strong>festivals</strong> (festivais). Elas lembram o passado, encontram a família e os amigos, comem e se divertem.",
+        "Palavras de festa: <strong>a costume</strong> (fantasia), <strong>a mask</strong> (máscara), <strong>a party</strong> (festa), <strong>a feast</strong> (banquete), <strong>a lantern</strong> (lanterna), <strong>fireworks</strong> (fogos de artifício), <strong>decorations</strong> (enfeites) e <strong>a parade</strong> (desfile).",
+        "Ações: <strong>celebrate</strong> (comemorar), <strong>remember</strong> (lembrar), <strong>dance</strong> (dançar) e <strong>dress up</strong> (fantasiar-se, vestir-se especialmente)."
+      ],
+      "cards": [
+        {"icon": "🦸", "en": "a costume", "pt": "fantasia"},
+        {"icon": "🎭", "en": "a mask", "pt": "máscara"},
+        {"icon": "🥳", "en": "a party", "pt": "festa"},
+        {"icon": "🍗", "en": "a feast", "pt": "banquete"},
+        {"icon": "🏮", "en": "a lantern", "pt": "lanterna"},
+        {"icon": "🎆", "en": "fireworks", "pt": "fogos de artifício"},
+        {"icon": "🎊", "en": "decorations", "pt": "enfeites"},
+        {"icon": "🎺", "en": "a parade", "pt": "desfile"},
+        {"icon": "🎉", "en": "celebrate", "pt": "comemorar"},
+        {"icon": "💭", "en": "remember", "pt": "lembrar"},
+        {"icon": "💃", "en": "dance", "pt": "dançar"},
+        {"icon": "👗", "en": "dress up", "pt": "fantasiar-se"}
+      ]
+    },
+    {
+      "h": "Birthday party words",
+      "p": [
+        "Numa festa de aniversário aparecem: <strong>a present</strong> (presente), <strong>a birthday cake</strong> (bolo de aniversário), <strong>candles</strong> (velas), <strong>an invitation</strong> (convite) e <strong>balloons</strong> (balões).",
+        "Pistas do livro: <em>You write this on paper. You give it to your friends.</em> → <strong>an invitation</strong>. <em>They are usually round. They have air inside.</em> → <strong>balloons</strong>. <em>They are long and thin. You put them on a birthday cake.</em> → <strong>candles</strong>."
+      ],
+      "cards": [
+        {"icon": "🎁", "en": "a present", "pt": "presente"},
+        {"icon": "🎂", "en": "a birthday cake", "pt": "bolo de aniversário"},
+        {"icon": "🕯️", "en": "candles", "pt": "velas"},
+        {"icon": "💌", "en": "an invitation", "pt": "convite"},
+        {"icon": "🎈", "en": "balloons", "pt": "balões"}
+      ]
+    },
+    {
+      "h": "Simple past: regular verbs (-ed)",
+      "figure": {"src": "assets/4b/ing08-regular.svg", "alt": "Verbos regulares ganham -ed no passado: watch vira watched, play vira played, dance vira danced.", "tipo": "diagrama"},
+      "p": [
+        "Para contar o que <strong>aconteceu</strong>, usamos o <strong>simple past</strong>. Nos <strong>verbos regulares</strong>, acrescentamos <strong>-ed</strong> no final: <em>watch → watched, play → played, listen → listened, celebrate → celebrated</em>.",
+        "Se o verbo já termina em <strong>e</strong>, colocamos só <strong>-d</strong>: <em>dance → danced, like → liked</em>.",
+        "Pergunta e resposta longa: <em>Did you watch the parade?</em> → <em>Yes, we <strong>watched</strong> the parade.</em> / <em>Did you like the music?</em> → <em>Yes, we <strong>liked</strong> it a lot!</em>",
+        "Atenção: na pergunta com <strong>Did</strong> o verbo fica normal (<em>Did you <strong>watch</strong>…?</em>); na resposta longa ele vai para o passado (<em>We <strong>watched</strong>…</em>)."
+      ]
+    },
+    {
+      "h": "Simple past: irregular verbs",
+      "figure": {"src": "assets/4b/ing08-irregular.svg", "alt": "Pares de verbos irregulares: go/went, see/saw, eat/ate, sing/sang, drink/drank, wear/wore, have/had, write/wrote, give/gave, take/took.", "tipo": "diagrama"},
+      "p": [
+        "Alguns verbos <strong>não ganham -ed</strong>: eles mudam de forma no passado. São os <strong>verbos irregulares</strong>, e precisamos memorizá-los.",
+        "<em>go → <strong>went</strong>, see → <strong>saw</strong>, eat → <strong>ate</strong>, sing → <strong>sang</strong>, drink → <strong>drank</strong>, wear → <strong>wore</strong>, have → <strong>had</strong>, write → <strong>wrote</strong>, give → <strong>gave</strong>, take → <strong>took</strong></em>.",
+        "Exemplos do livro: <em>Did you go to the parade?</em> → <em>Yes, I <strong>went</strong> to the parade.</em> / <em>Did you see the fireworks?</em> → <em>Yes, I <strong>saw</strong> the fireworks.</em> / <em>Did you eat cake at the party?</em> → <em>Yes, I <strong>ate</strong> a piece of cake.</em>"
+      ],
+      "cards": [
+        {"icon": "🚶", "en": "go → went", "pt": "ir → foi"},
+        {"icon": "👀", "en": "see → saw", "pt": "ver → viu"},
+        {"icon": "🍰", "en": "eat → ate", "pt": "comer → comeu"},
+        {"icon": "🎤", "en": "sing → sang", "pt": "cantar → cantou"},
+        {"icon": "🥤", "en": "drink → drank", "pt": "beber → bebeu"},
+        {"icon": "👕", "en": "wear → wore", "pt": "vestir → vestiu"},
+        {"icon": "🤲", "en": "have → had", "pt": "ter → teve"},
+        {"icon": "✍️", "en": "write → wrote", "pt": "escrever → escreveu"},
+        {"icon": "🎁", "en": "give → gave", "pt": "dar → deu"},
+        {"icon": "📸", "en": "take → took", "pt": "pegar/levar → pegou"}
+      ]
+    },
+    {
+      "h": "Reading: November Celebrations",
+      "figure": {"src": "assets/4b/ing08-novembro.svg", "alt": "Comparação: Day of the Dead no México, com caveiras coloridas e velas; Yi Peng na Tailândia, com lanternas subindo ao céu.", "tipo": "diagrama"},
+      "p": [
+        "O texto compara duas festas de novembro. O <strong>Day of the Dead</strong> (Dia dos Mortos), no <strong>México</strong>, é no primeiro dia de novembro: as famílias lembram e celebram as pessoas da família que morreram.",
+        "No Day of the Dead, as famílias levam um banquete (<strong>a big feast</strong>) ao cemitério, acendem velas e tocam música. Caveiras e esqueletos <strong>não são assustadores</strong>: a festa é alegre, não triste.",
+        "O <strong>Yi Peng</strong>, na <strong>Tailândia</strong>, também acontece em novembro. Tem desfile, fantasias bonitas e milhares de <strong>lanternas de papel de arroz</strong> que sobem ao céu. As pessoas acreditam que as lanternas levam embora as coisas ruins. No último dia há fogos de artifício.",
+        "Na escrita do Hiro, <em>The Sapporo Snow Festival</em>, ele usa o passado: <em>I <strong>went</strong>… I <strong>wore</strong> a snowsuit… We <strong>saw</strong> snow sculptures… We <strong>played</strong>… We <strong>listened</strong>, <strong>ate</strong> and <strong>drank</strong>…</em>"
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "pairs",
+      "title": "Festival words",
+      "short": "Palavras de festa",
+      "instructions": "Ligue a pista ao objeto de festa.",
+      "pairs": [
+        ["You write this on paper and give it to your friends. 💌", "an invitation"],
+        ["They are round and have air inside. 🎈", "balloons"],
+        ["Long and thin. You put them on a birthday cake. 🕯️", "candles"],
+        ["You wear it on your face. 🎭", "a mask"],
+        ["Bright lights that explode in the sky at night. 🎆", "fireworks"],
+        ["Many people walk, dance and play music on the street. 🎺", "a parade"]
+      ]
+    },
+    {
+      "type": "memory",
+      "title": "Memória do passado",
+      "short": "Verbos irregulares",
+      "instructions": "Ache cada verbo e a sua forma no passado.",
+      "items": [
+        {"base": "go", "result": "went"},
+        {"base": "see", "result": "saw"},
+        {"base": "eat", "result": "ate"},
+        {"base": "sing", "result": "sang"},
+        {"base": "drink", "result": "drank"},
+        {"base": "wear", "result": "wore"},
+        {"base": "write", "result": "wrote"},
+        {"base": "give", "result": "gave"}
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Regular or irregular?",
+      "short": "Regular ou irregular",
+      "instructions": "O verbo ganha -ed ou muda de forma no passado?",
+      "categories": ["Regular (-ed)", "Irregular (muda)"],
+      "items": [
+        {"text": "watch → watched", "cat": 0},
+        {"text": "go → went", "cat": 1},
+        {"text": "dance → danced", "cat": 0},
+        {"text": "see → saw", "cat": 1},
+        {"text": "play → played", "cat": 0},
+        {"text": "eat → ate", "cat": 1},
+        {"text": "listen → listened", "cat": 0},
+        {"text": "have → had", "cat": 1}
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Day of the Dead or Yi Peng?",
+      "short": "Duas festas",
+      "instructions": "De qual festa o texto está falando?",
+      "categories": ["Day of the Dead 💀", "Yi Peng 🏮"],
+      "items": [
+        {"text": "It is a big festival in Mexico.", "cat": 0},
+        {"text": "It happens in Thailand.", "cat": 1},
+        {"text": "Families take a big feast to the cemetery.", "cat": 0},
+        {"text": "Thousands of lanterns go up into the sky.", "cat": 1},
+        {"text": "People give candy and chocolate skulls.", "cat": 0},
+        {"text": "Lanterns take away the bad things.", "cat": 1}
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Ouça a palavra e escolha o significado.",
+      "listen": "a parade",
+      "options": ["um desfile", "um convite", "uma fantasia", "um banquete"],
+      "answer": 0,
+      "explain": "Parade é desfile. Convite é invitation, fantasia é costume e banquete é feast."
+    },
+    {
+      "type": "mc",
+      "q": "“They are long and thin. You put them on a birthday cake.” What are they?",
+      "options": ["candles", "balloons", "presents", "masks"],
+      "answer": 0,
+      "explain": "Candles (velas) são compridas e finas e vão em cima do bolo de aniversário."
+    },
+    {
+      "type": "mc",
+      "q": "Qual é o passado do verbo watch?",
+      "options": ["watched", "watch", "wached", "watchs"],
+      "answer": 0,
+      "explain": "Watch é regular: ganha -ed e vira watched."
+    },
+    {
+      "type": "mc",
+      "q": "Qual é o passado do verbo go?",
+      "options": ["went", "goed", "gone", "goes"],
+      "answer": 0,
+      "explain": "Go é irregular: no passado vira went. Exemplo: I went to the parade."
+    },
+    {
+      "type": "mc",
+      "q": "Did you see the fireworks? Escolha a resposta longa correta.",
+      "options": ["Yes, I saw the fireworks.", "Yes, I seed the fireworks.", "Yes, I see the fireworks.", "Yes, I seeing the fireworks."],
+      "answer": 0,
+      "explain": "See é irregular. No passado vira saw: Yes, I saw the fireworks."
+    },
+    {
+      "type": "mc",
+      "q": "Did you eat cake at the party? Escolha a resposta correta.",
+      "options": ["Yes, I ate a piece of cake.", "Yes, I eated a piece of cake.", "Yes, I eat a piece of cake.", "Yes, I eaten a piece of cake."],
+      "answer": 0,
+      "explain": "Eat é irregular: o passado é ate."
+    },
+    {
+      "type": "mc",
+      "q": "Complete: “Yesterday I ______ in my favorite costume. I was a superhero!”",
+      "options": ["dressed up", "dress up", "dressing up", "dresses up"],
+      "answer": 0,
+      "explain": "Yesterday mostra que é passado. Dress é regular: dress up vira dressed up."
+    },
+    {
+      "type": "mc",
+      "q": "Qual destes verbos é IRREGULAR?",
+      "options": ["sing", "play", "dance", "listen"],
+      "answer": 0,
+      "explain": "Sing vira sang no passado (muda de forma). Os outros ganham -ed: played, danced, listened."
+    },
+    {
+      "type": "mc",
+      "q": "Ouça e escolha o passado do verbo que você ouviu.",
+      "listen": "drink",
+      "options": ["drank", "drinked", "drunk", "drinks"],
+      "answer": 0,
+      "explain": "Você ouviu drink (beber). No passado ele vira drank."
+    },
+    {
+      "type": "mc",
+      "q": "Segundo o texto “November Celebrations”, onde acontece o Day of the Dead?",
+      "options": ["In Mexico", "In Thailand", "In Brazil", "In Japan"],
+      "answer": 0,
+      "explain": "O Day of the Dead é um grande festival no México, no primeiro dia de novembro."
+    },
+    {
+      "type": "mc",
+      "q": "No texto, o Day of the Dead é uma festa triste?",
+      "options": ["Não, é uma festa alegre", "Sim, é muito triste", "Sim, porque é assustadora", "Não, porque ninguém vai"],
+      "answer": 0,
+      "explain": "O texto diz que para os mexicanos caveiras e esqueletos não são assustadores e que a festa é a time for fun and happy celebrations."
+    },
+    {
+      "type": "mc",
+      "q": "No festival Yi Peng, na Tailândia, o que milhares de pessoas soltam no céu?",
+      "options": ["lanterns", "balloons", "masks", "presents"],
+      "answer": 0,
+      "explain": "Thousands of bright lanterns go up into the sky. As pessoas acreditam que elas levam embora as coisas ruins."
+    },
+    {
+      "type": "text",
+      "q": "Escreva o passado do verbo play.",
+      "answers": ["played"],
+      "explain": "Play é regular: play + ed = played. Exemplo: After dinner all the children played games."
+    }
+  ]
+}

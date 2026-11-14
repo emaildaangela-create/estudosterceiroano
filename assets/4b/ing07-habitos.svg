@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<text x="450" y="58" font-size="34" fill="#2456b8" font-weight="800" text-anchor="middle">Healthy habits</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">hábitos que fazem bem e hábitos que fazem mal</text>
+<rect x="40" y="115" width="520" height="455" rx="24" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/>
+<text x="300" y="160" font-size="30" fill="#1d805c" font-weight="800" text-anchor="middle">Good for you 👍</text>
+<circle cx="130" cy="232" r="52" fill="#fff" stroke="#1d805c" stroke-width="2"/>
+<text x="130" y="250" font-size="54" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏃</text>
+<text x="130" y="316" font-size="18" fill="#17213b" font-weight="700" text-anchor="middle">get exercise</text>
+<circle cx="300" cy="232" r="52" fill="#fff" stroke="#1d805c" stroke-width="2"/>
+<text x="300" y="250" font-size="54" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🍎</text>
+<text x="300" y="316" font-size="18" fill="#17213b" font-weight="700" text-anchor="middle">eat fruit</text>
+<circle cx="470" cy="232" r="52" fill="#fff" stroke="#1d805c" stroke-width="2"/>
+<text x="470" y="250" font-size="54" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🥦</text>
+<text x="470" y="316" font-size="18" fill="#17213b" font-weight="700" text-anchor="middle">eat vegetables</text>
+<circle cx="130" cy="397" r="52" fill="#fff" stroke="#1d805c" stroke-width="2"/>
+<text x="130" y="415" font-size="54" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">😴</text>
+<text x="130" y="481" font-size="18" fill="#17213b" font-weight="700" text-anchor="middle">get rest</text>
+<circle cx="300" cy="397" r="52" fill="#fff" stroke="#1d805c" stroke-width="2"/>
+<text x="300" y="415" font-size="54" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">💧</text>
+<text x="300" y="481" font-size="18" fill="#17213b" font-weight="700" text-anchor="middle">drink water</text>
+<circle cx="470" cy="397" r="52" fill="#fff" stroke="#1d805c" stroke-width="2"/>
+<text x="470" y="415" font-size="54" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🧼</text>
+<text x="470" y="481" font-size="18" fill="#17213b" font-weight="700" text-anchor="middle">wash your hands</text>
+<rect x="590" y="115" width="270" height="455" rx="24" fill="#fff0f3" stroke="#c0392b" stroke-width="3"/>
+<text x="725" y="160" font-size="28" fill="#c0392b" font-weight="800" text-anchor="middle">Bad for you 👎</text>
+<text x="660" y="250" font-size="50" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🍟</text>
+<text x="705" y="238" font-size="19" fill="#17213b" font-weight="700" text-anchor="start">eat junk food</text>
+<text x="660" y="360" font-size="50" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🥤</text>
+<text x="705" y="348" font-size="19" fill="#17213b" font-weight="700" text-anchor="start">too much soda</text>
+<text x="660" y="470" font-size="50" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">📺</text>
+<text x="705" y="458" font-size="19" fill="#17213b" font-weight="700" text-anchor="start">too much TV</text>
+</svg>

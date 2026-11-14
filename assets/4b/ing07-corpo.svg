@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#2456b8" font-weight="800" text-anchor="middle">Parts of the body</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">partes do corpo</text>
+<circle cx="400" cy="170" r="48" fill="#f2c29b" stroke="#17213b" stroke-width="3"/>
+<path d="M352 160 Q360 112 400 114 Q445 112 450 160 Q430 135 400 140 Q372 136 352 160z" fill="#5b3a29"/>
+<circle cx="384" cy="172" r="5" fill="#17213b"/><circle cx="416" cy="172" r="5" fill="#17213b"/>
+<path d="M384 192 Q400 204 416 192" stroke="#17213b" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M340 228 Q400 214 460 228 L470 360 L330 360 Z" fill="#3f7be0" stroke="#17213b" stroke-width="3"/>
+<path d="M342 232 L270 270 L222 236" stroke="#f2c29b" stroke-width="26" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M458 232 L530 270 L578 236" stroke="#f2c29b" stroke-width="26" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M342 232 L300 254" stroke="#3f7be0" stroke-width="28" stroke-linecap="round"/>
+<path d="M458 232 L500 254" stroke="#3f7be0" stroke-width="28" stroke-linecap="round"/>
+<circle cx="214" cy="230" r="16" fill="#f2c29b" stroke="#17213b" stroke-width="2"/>
+<line x1="214" y1="224" x2="204" y2="198" stroke="#b9805a" stroke-width="10" stroke-linecap="round"/>
+<line x1="214" y1="224" x2="204" y2="198" stroke="#f2c29b" stroke-width="6" stroke-linecap="round"/>
+<line x1="214" y1="224" x2="201" y2="205" stroke="#b9805a" stroke-width="10" stroke-linecap="round"/>
+<line x1="214" y1="224" x2="201" y2="205" stroke="#f2c29b" stroke-width="6" stroke-linecap="round"/>
+<line x1="214" y1="224" x2="198" y2="212" stroke="#b9805a" stroke-width="10" stroke-linecap="round"/>
+<line x1="214" y1="224" x2="198" y2="212" stroke="#f2c29b" stroke-width="6" stroke-linecap="round"/>
+<line x1="214" y1="224" x2="195" y2="219" stroke="#b9805a" stroke-width="10" stroke-linecap="round"/>
+<line x1="214" y1="224" x2="195" y2="219" stroke="#f2c29b" stroke-width="6" stroke-linecap="round"/>
+<circle cx="586" cy="230" r="16" fill="#f2c29b" stroke="#17213b" stroke-width="2"/>
+<line x1="586" y1="224" x2="596" y2="198" stroke="#b9805a" stroke-width="10" stroke-linecap="round"/>
+<line x1="586" y1="224" x2="596" y2="198" stroke="#f2c29b" stroke-width="6" stroke-linecap="round"/>
+<line x1="586" y1="224" x2="599" y2="205" stroke="#b9805a" stroke-width="10" stroke-linecap="round"/>
+<line x1="586" y1="224" x2="599" y2="205" stroke="#f2c29b" stroke-width="6" stroke-linecap="round"/>
+<line x1="586" y1="224" x2="602" y2="212" stroke="#b9805a" stroke-width="10" stroke-linecap="round"/>
+<line x1="586" y1="224" x2="602" y2="212" stroke="#f2c29b" stroke-width="6" stroke-linecap="round"/>
+<line x1="586" y1="224" x2="605" y2="219" stroke="#b9805a" stroke-width="10" stroke-linecap="round"/>
+<line x1="586" y1="224" x2="605" y2="219" stroke="#f2c29b" stroke-width="6" stroke-linecap="round"/>
+<path d="M330 358 L470 358 L462 410 L408 410 L400 380 L392 410 L338 410 Z" fill="#26324f"/>
+<path d="M365 408 L360 520" stroke="#f2c29b" stroke-width="28" stroke-linecap="round"/>
+<path d="M435 408 L440 520" stroke="#f2c29b" stroke-width="28" stroke-linecap="round"/>
+<circle cx="362" cy="462" r="8" fill="#e3a77f"/><circle cx="438" cy="462" r="8" fill="#e3a77f"/>
+<ellipse cx="350" cy="534" rx="30" ry="13" fill="#f2c29b" stroke="#17213b" stroke-width="2"/>
+<circle cx="330" cy="524" r="4.5" fill="#f2c29b" stroke="#17213b" stroke-width="1.5"/>
+<circle cx="340" cy="524" r="4.5" fill="#f2c29b" stroke="#17213b" stroke-width="1.5"/>
+<circle cx="350" cy="524" r="4.5" fill="#f2c29b" stroke="#17213b" stroke-width="1.5"/>
+<circle cx="360" cy="524" r="4.5" fill="#f2c29b" stroke="#17213b" stroke-width="1.5"/>
+<circle cx="370" cy="524" r="4.5" fill="#f2c29b" stroke="#17213b" stroke-width="1.5"/>
+<ellipse cx="452" cy="534" rx="30" ry="13" fill="#f2c29b" stroke="#17213b" stroke-width="2"/>
+<circle cx="432" cy="524" r="4.5" fill="#f2c29b" stroke="#17213b" stroke-width="1.5"/>
+<circle cx="442" cy="524" r="4.5" fill="#f2c29b" stroke="#17213b" stroke-width="1.5"/>
+<circle cx="452" cy="524" r="4.5" fill="#f2c29b" stroke="#17213b" stroke-width="1.5"/>
+<circle cx="462" cy="524" r="4.5" fill="#f2c29b" stroke="#17213b" stroke-width="1.5"/>
+<circle cx="472" cy="524" r="4.5" fill="#f2c29b" stroke="#17213b" stroke-width="1.5"/>
+<rect x="120" y="228" width="150" height="52" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="195" y="250" font-size="19" fill="#2456b8" font-weight="800" text-anchor="middle">a shoulder</text>
+<text x="195" y="271" font-size="14" fill="#4a5872" font-weight="600" text-anchor="middle">ombro</text>
+<line x1="270" y1="254" x2="336" y2="236" stroke="#2456b8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="120" y="338" width="150" height="52" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="195" y="360" font-size="19" fill="#2456b8" font-weight="800" text-anchor="middle">an elbow</text>
+<text x="195" y="381" font-size="14" fill="#4a5872" font-weight="600" text-anchor="middle">cotovelo</text>
+<line x1="270" y1="364" x2="268" y2="274" stroke="#2456b8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="40" y="126" width="150" height="52" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="115" y="148" font-size="19" fill="#2456b8" font-weight="800" text-anchor="middle">fingers</text>
+<text x="115" y="169" font-size="14" fill="#4a5872" font-weight="600" text-anchor="middle">dedos das mãos</text>
+<line x1="190" y1="152" x2="196" y2="206" stroke="#2456b8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="640" y="141" width="150" height="52" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="715" y="163" font-size="19" fill="#2456b8" font-weight="800" text-anchor="middle">a chest</text>
+<text x="715" y="184" font-size="14" fill="#4a5872" font-weight="600" text-anchor="middle">peito</text>
+<line x1="640" y1="167" x2="430" y2="262" stroke="#2456b8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="640" y="296" width="150" height="52" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="715" y="318" font-size="19" fill="#2456b8" font-weight="800" text-anchor="middle">a stomach</text>
+<text x="715" y="339" font-size="14" fill="#4a5872" font-weight="600" text-anchor="middle">barriga</text>
+<line x1="640" y1="322" x2="432" y2="330" stroke="#2456b8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="640" y="416" width="150" height="52" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="715" y="438" font-size="19" fill="#2456b8" font-weight="800" text-anchor="middle">a knee</text>
+<text x="715" y="459" font-size="14" fill="#4a5872" font-weight="600" text-anchor="middle">joelho</text>
+<line x1="640" y1="442" x2="446" y2="462" stroke="#2456b8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="120" y="526" width="150" height="52" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2.5"/>
+<text x="195" y="548" font-size="19" fill="#2456b8" font-weight="800" text-anchor="middle">toes</text>
+<text x="195" y="569" font-size="14" fill="#4a5872" font-weight="600" text-anchor="middle">dedos dos pés</text>
+<line x1="270" y1="552" x2="330" y2="526" stroke="#2456b8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="700" y="470" width="170" height="108" rx="16" fill="#eef3ff" stroke="#2456b8" stroke-width="2"/>
+<circle cx="745" cy="505" r="18" fill="#5b3a29"/>
+<path d="M722 528 Q745 520 768 528 L772 572 L718 572 Z" fill="#3f7be0" stroke="#17213b" stroke-width="2"/>
+<text x="820" y="520" font-size="19" fill="#2456b8" font-weight="800" text-anchor="middle">a back</text>
+<text x="820" y="542" font-size="14" fill="#4a5872" font-weight="600" text-anchor="middle">costas</text>
+<line x1="812" y1="560" x2="772" y2="548" stroke="#2456b8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ponta)"/>
+</svg>

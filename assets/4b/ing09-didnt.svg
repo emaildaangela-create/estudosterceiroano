@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<text x="450" y="58" font-size="34" fill="#2456b8" font-weight="800" text-anchor="middle">did  ×  didn&#x27;t</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">o que eu fiz e o que eu não fiz no fim de semana</text>
+<rect x="40" y="115" width="400" height="455" rx="24" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/>
+<text x="240" y="165" font-size="30" fill="#1d805c" font-weight="800" text-anchor="middle">Things I did ✅</text>
+<rect x="460" y="115" width="400" height="455" rx="24" fill="#fff0f3" stroke="#c0392b" stroke-width="3"/>
+<text x="660" y="165" font-size="28" fill="#c0392b" font-weight="800" text-anchor="middle">Things I didn&#x27;t do ❌</text>
+<text x="85" y="253" font-size="36" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏖️</text><text x="115" y="245" font-size="21" fill="#17213b" font-weight="700" text-anchor="start">We went to the beach.</text>
+<text x="505" y="253" font-size="36" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏖️</text><text x="535" y="245" font-size="20" fill="#17213b" font-weight="700" text-anchor="start">We didn&#x27;t go to the beach.</text>
+<text x="85" y="338" font-size="36" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏆</text><text x="115" y="330" font-size="21" fill="#17213b" font-weight="700" text-anchor="start">We won the game!</text>
+<text x="505" y="338" font-size="36" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">😞</text><text x="535" y="330" font-size="20" fill="#17213b" font-weight="700" text-anchor="start">We didn&#x27;t win. We lost.</text>
+<text x="85" y="423" font-size="36" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🎬</text><text x="115" y="415" font-size="21" fill="#17213b" font-weight="700" text-anchor="start">I watched a movie.</text>
+<text x="505" y="423" font-size="36" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">📺</text><text x="535" y="415" font-size="20" fill="#17213b" font-weight="700" text-anchor="start">I didn&#x27;t watch TV.</text>
+<text x="85" y="508" font-size="36" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">📱</text><text x="115" y="500" font-size="21" fill="#17213b" font-weight="700" text-anchor="start">I texted my friends.</text>
+<text x="505" y="508" font-size="36" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🍕</text><text x="535" y="500" font-size="20" fill="#17213b" font-weight="700" text-anchor="start">I didn&#x27;t eat out.</text>
+<text x="660" y="555" font-size="17" fill="#c0392b" font-weight="800" text-anchor="middle">didn&#x27;t + verbo normal (sem -ed)</text>
+</svg>

@@ -1,5 +1,5 @@
 :root {
-  --ciano:#20768e; --rosa:#ba376d; --roxo:#6b49b8; --verde:#1d805c;
+  --ciano:#20768e; --azul:#2456b8; --rosa:#ba376d; --roxo:#6b49b8; --verde:#1d805c;
   --laranja:#b45b16; --amarelo:#8b6509; --fundo:#f4f6fb; --carta:#fff;
   --borda:#d7dfec; --texto:#17213b; --suave:#4a5872; --fraco:#6c7890;
   --ok:#16775a; --ok-claro:#e8f6f0; --erro:#b93651; --erro-claro:#fff0f3;
@@ -49,8 +49,8 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 .body--home .hero__figura { width:min(100%,calc((100svh - 320px) * 1.822)); min-width:0; margin-inline:auto; background:transparent; box-shadow:none; }
 .body--home .hero__arte { width:100%; height:auto; aspect-ratio:1693/929; border-radius:clamp(16px,2vw,30px); object-fit:contain; }
 .body--home .secao__titulo { margin:clamp(8px,1.2vh,14px) 0 8px; font-size:14px; }
-.body--home .grade-disciplinas { grid-template-columns:repeat(5,minmax(140px,1fr)); gap:11px; padding-bottom:4px; }
-.body--home .disc-card { min-height:0; height:clamp(58px,8vh,74px); padding:10px 14px; border-radius:14px; }
+.body--home .grade-disciplinas { grid-template-columns:repeat(6,minmax(130px,1fr)); gap:11px; padding-bottom:4px; }
+.body--home .disc-card { min-height:0; height:auto; padding:10px 14px 12px; border-radius:14px; }
 .body--home .disc-card__nome { max-width:125px; font-size:clamp(14px,1.8vh,16px); line-height:1.16; }
 .body--home .disc-card__status { display:none; }
 .body--home .disc-card__seta { right:13px; bottom:8px; font-size:16px; }
@@ -65,7 +65,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:3px solid #
 
 .secao__titulo { display:flex; align-items:center; gap:18px; margin:42px 0 20px; color:#6d7991; font-size:17px; line-height:1; letter-spacing:.16em; text-transform:uppercase; }
 .secao__titulo::after { content:""; height:1px; flex:1; background:linear-gradient(90deg,#aebbd0,transparent); }
-.grade-disciplinas { display:grid; grid-template-columns:repeat(5,minmax(180px,1fr)); gap:16px; overflow-x:auto; padding:2px 2px 10px; scrollbar-width:thin; }
+.grade-disciplinas { display:grid; grid-template-columns:repeat(6,minmax(150px,1fr)); gap:16px; overflow-x:auto; padding:2px 2px 10px; scrollbar-width:thin; }
 .disc-card { position:relative; min-height:154px; padding:25px 28px; border:0; border-radius:28px; color:#fff; background:var(--acento); text-align:left; cursor:pointer; box-shadow:0 8px 22px rgba(35,46,75,.08); transition:transform .18s ease, filter .18s ease; }
 .disc-card:hover { transform:translateY(-4px); filter:brightness(1.04); }
 .disc-card__nome { display:block; max-width:170px; font-size:22px; line-height:1.22; letter-spacing:-.025em; font-weight:850; }
@@ -611,7 +611,7 @@ body.modo-jogo-imersivo { overflow:hidden; }
 
 @media (max-width:900px) {
   :root { --largura:1080px; }
-  .grade-disciplinas { grid-template-columns:repeat(5,minmax(178px,1fr)); }
+  .grade-disciplinas { grid-template-columns:repeat(3,minmax(0,1fr)); }
   .lista-capitulos { grid-template-columns:1fr; }
 }
 @media (max-width:620px) {
@@ -632,7 +632,6 @@ body.modo-jogo-imersivo { overflow:hidden; }
     gap:10px;
     overflow-x:visible;
   }
-  .body--home .disc-card:last-child { grid-column:1 / -1; }
   .secao__titulo { margin-top:30px; }
   .disc-card { min-height:72px; padding:12px; border-radius:14px; }
   .disc-card__nome { font-size:15px; }
@@ -801,3 +800,44 @@ body.modo-jogo-imersivo { overflow:hidden; }
 .revisao-ilustrada .revisao-campo{max-width:100%;min-width:0}
 @media(max-width:560px){.revisao-ilustrada{grid-template-columns:minmax(0,1fr);gap:8px}.revisao-figura{width:150px}.revisao-ilustrada .revisao-linha{line-height:1.8}}
 .revisao-questoes>.revisao-radio-item{padding:18px;border:1px solid var(--borda);border-radius:14px;break-inside:avoid}.revisao-radio-item>.revisao-enunciado{margin:0 0 14px;font-weight:700}.revisao-radio-item>.revisao-figura{margin:0 0 18px}.revisao-radio-item>.revisao-subitens{margin-top:12px}
+
+/* ===================== 4º bimestre: preparatório para as provas ===================== */
+.disc-card__data { display:block; margin-bottom:4px; color:rgba(255,255,255,.86); font-size:11px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+.disc-card__contagem { display:inline-block; margin-top:6px; padding:2px 8px; border-radius:999px; background:rgba(255,255,255,.2); color:#fff; font-size:11.5px; font-weight:800; }
+.disc-card--vazio { cursor:default; filter:saturate(.35) brightness(1.1); opacity:.8; }
+.disc-card--vazio:hover { transform:none; filter:saturate(.35) brightness(1.1); }
+.disc-card--passou { opacity:.6; }
+.body--home .disc-card__status { display:block; margin-top:4px; font-size:11px; }
+
+.proxima-prova { position:relative; display:grid; grid-template-columns:1fr auto; align-items:center; gap:2px 18px; margin:16px 0 0; padding:16px 20px; border-radius:20px; color:#fff; background:linear-gradient(120deg,var(--acento),color-mix(in srgb,var(--acento) 70%,#17213b)); box-shadow:0 10px 26px rgba(30,42,69,.16); }
+.proxima-prova__rotulo { grid-column:1; font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; opacity:.85; }
+.proxima-prova__nome { grid-column:1; font-size:clamp(22px,3vw,30px); line-height:1.1; letter-spacing:-.02em; }
+.proxima-prova__quando { grid-column:1; font-size:14px; opacity:.92; }
+.proxima-prova__dias { grid-column:2; grid-row:1 / span 3; text-align:center; font-size:14px; font-weight:700; }
+.proxima-prova__dias b { display:block; font-size:clamp(38px,5vw,54px); line-height:1; }
+.proxima-prova__botao { grid-column:1 / -1; justify-self:start; margin-top:10px; background:#fff !important; color:var(--acento) !important; }
+
+.cap-card--simulado .cap-card__titulo::before { content:'Prepare-se · '; }
+.cap-card--simulado { border-style:dashed; }
+.quiz-card__origem { margin:0 0 6px; color:var(--suave); font-size:12.5px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; }
+
+.ouvir { display:inline-flex; align-items:center; gap:8px; margin:4px 0 14px; padding:10px 16px; border:2px solid var(--azul); border-radius:999px; background:#eef3ff; color:var(--azul); font:inherit; font-weight:800; cursor:pointer; }
+.ouvir:hover { background:#dfe8ff; }
+.ouvir span[aria-hidden] { font-size:20px; }
+.ouvir--grande { font-size:17px; padding:12px 22px; }
+
+.cartoes-vocab { display:grid; grid-template-columns:repeat(auto-fill,minmax(132px,1fr)); gap:10px; margin:18px 0 6px; }
+.cartoes-vocab__dica { grid-column:1 / -1; margin:0; color:var(--suave); font-size:14px; }
+.cartao-vocab { display:flex; flex-direction:column; align-items:center; gap:3px; padding:12px 8px; border:2px solid var(--borda); border-radius:16px; background:#fff; color:var(--texto); font:inherit; text-align:center; }
+button.cartao-vocab { cursor:pointer; transition:transform .15s ease, border-color .15s ease; }
+button.cartao-vocab:hover { transform:translateY(-2px); border-color:var(--acento); }
+.cartao-vocab--tocando { border-color:var(--acento); background:color-mix(in srgb,var(--acento) 10%,white); transform:scale(1.04); }
+.cartao-vocab__icone { font-size:30px; line-height:1.2; }
+.cartao-vocab strong { font-size:15.5px; line-height:1.2; }
+.cartao-vocab small { color:var(--suave); font-size:12.5px; line-height:1.25; }
+.descoberta-visual img[src$=".svg"] { background:#fff; }
+
+@media (max-width:620px) {
+  .proxima-prova { padding:14px 16px; }
+  .cartoes-vocab { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}

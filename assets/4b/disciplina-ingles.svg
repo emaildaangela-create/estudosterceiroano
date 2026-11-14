@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="1600" height="600" rx="28" fill="#f4f7ff"/>
+<circle cx="1420" cy="120" r="200" fill="#dfe8ff"/><circle cx="160" cy="520" r="230" fill="#ffeccf"/>
+<rect x="120" y="90" width="330" height="120" rx="60" fill="#fff" stroke="#2456b8" stroke-width="6"/>
+<path d="M190 204 l-12 46 l46 -40 z" fill="#fff" stroke="#2456b8" stroke-width="6" stroke-linejoin="round"/>
+<rect x="160" y="190" width="80" height="16" fill="#fff"/>
+<text x="285.0" y="168" font-size="46" fill="#2456b8" font-weight="800" text-anchor="middle">Hello! 👋</text>
+<rect x="520" y="60" width="420" height="120" rx="60" fill="#fff" stroke="#6b49b8" stroke-width="6"/>
+<path d="M590 174 l-12 46 l46 -40 z" fill="#fff" stroke="#6b49b8" stroke-width="6" stroke-linejoin="round"/>
+<rect x="560" y="160" width="80" height="16" fill="#fff"/>
+<text x="730.0" y="138" font-size="46" fill="#6b49b8" font-weight="800" text-anchor="middle">Did you dance?</text>
+<rect x="1000" y="110" width="380" height="120" rx="60" fill="#fff" stroke="#1d805c" stroke-width="6"/>
+<path d="M1070 224 l-12 46 l46 -40 z" fill="#fff" stroke="#1d805c" stroke-width="6" stroke-linejoin="round"/>
+<rect x="1040" y="210" width="80" height="16" fill="#fff"/>
+<text x="1190.0" y="188" font-size="46" fill="#1d805c" font-weight="800" text-anchor="middle">Yes, I did! 💃</text>
+<rect x="250" y="330" width="440" height="120" rx="60" fill="#fff" stroke="#d9822b" stroke-width="6"/>
+<path d="M320 444 l-12 46 l46 -40 z" fill="#fff" stroke="#d9822b" stroke-width="6" stroke-linejoin="round"/>
+<rect x="290" y="430" width="80" height="16" fill="#fff"/>
+<text x="470.0" y="408" font-size="46" fill="#d9822b" font-weight="800" text-anchor="middle">I went swimming! 🏊</text>
+<rect x="780" y="330" width="470" height="120" rx="60" fill="#fff" stroke="#ba376d" stroke-width="6"/>
+<path d="M850 444 l-12 46 l46 -40 z" fill="#fff" stroke="#ba376d" stroke-width="6" stroke-linejoin="round"/>
+<rect x="820" y="430" width="80" height="16" fill="#fff"/>
+<text x="1015.0" y="408" font-size="46" fill="#ba376d" font-weight="800" text-anchor="middle">We saw fireworks! 🎆</text>
+<text x="1360" y="520" font-size="120" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">📘</text><text x="1500" y="470" font-size="100" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🎧</text>
+</svg>

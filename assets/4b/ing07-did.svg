@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#2456b8" font-weight="800" text-anchor="middle">Did …? Yes, I did. / No, I didn&#x27;t.</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">perguntas e respostas curtas no passado</text>
+<rect x="70" y="130" width="150" height="90" rx="18" fill="#f1ecff" stroke="#6b49b8" stroke-width="3"/>
+<text x="145.0" y="188" font-size="36" fill="#6b49b8" font-weight="800" text-anchor="middle">Did</text>
+<rect x="238" y="130" width="150" height="90" rx="18" fill="#eef3ff" stroke="#2456b8" stroke-width="3"/>
+<text x="313.0" y="188" font-size="36" fill="#2456b8" font-weight="800" text-anchor="middle">you</text>
+<rect x="406" y="130" width="170" height="90" rx="18" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/>
+<text x="491.0" y="188" font-size="36" fill="#1d805c" font-weight="800" text-anchor="middle">wash</text>
+<rect x="594" y="130" width="230" height="90" rx="18" fill="#fff" stroke="#17213b" stroke-width="3"/>
+<text x="709.0" y="188" font-size="36" fill="#17213b" font-weight="800" text-anchor="middle">your hands?</text>
+<text x="145" y="248" font-size="17" fill="#6b49b8" font-weight="700" text-anchor="middle">passado</text>
+<text x="313" y="248" font-size="17" fill="#2456b8" font-weight="700" text-anchor="middle">pessoa</text>
+<text x="489" y="248" font-size="17" fill="#1d805c" font-weight="700" text-anchor="middle">verbo normal</text>
+<text x="489" y="270" font-size="15" fill="#1d805c" font-weight="600" text-anchor="middle">(sem -ed!)</text>
+<rect x="90" y="320" width="330" height="140" rx="24" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/>
+<text x="150" y="410" font-size="54" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">✅</text>
+<text x="290" y="385" font-size="38" fill="#1d805c" font-weight="800" text-anchor="middle">Yes, I did.</text>
+<text x="290" y="425" font-size="20" fill="#4a5872" font-weight="600" text-anchor="middle">Sim, eu fiz.</text>
+<rect x="480" y="320" width="330" height="140" rx="24" fill="#fff0f3" stroke="#c0392b" stroke-width="3"/>
+<text x="540" y="410" font-size="50" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">❌</text>
+<text x="685" y="385" font-size="36" fill="#c0392b" font-weight="800" text-anchor="middle">No, I didn&#x27;t.</text>
+<text x="685" y="425" font-size="20" fill="#4a5872" font-weight="600" text-anchor="middle">Não, eu não fiz.</text>
+<text x="450" y="510" font-size="22" fill="#17213b" font-weight="700" text-anchor="middle">Did he take a shower?  →  Yes, he did.  /  No, he didn&#x27;t.</text>
+<text x="450" y="548" font-size="18" fill="#4a5872" font-weight="600" text-anchor="middle">A resposta repete a pessoa da pergunta: he → he, she → she, they → they.</text>
+</svg>
