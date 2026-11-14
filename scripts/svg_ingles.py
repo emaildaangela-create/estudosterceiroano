@@ -331,6 +331,7 @@ def disciplina():
     svg("disciplina-ingles.svg", "\n".join(c), 1600, 600, "#f4f7ff")
 
 
-for f in (corpo, did, habitos, too_enough, festa, regular, irregular, novembro, fimdesemana, go_ing, didnt, disciplina):
-    f()
-print("SVGs gerados em", OUT)
+if __name__ == "__main__":
+    for f in (corpo, did, habitos, too_enough, festa, regular, irregular, novembro, fimdesemana, go_ing, didnt, disciplina):
+        f()
+    print("SVGs gerados em", OUT)

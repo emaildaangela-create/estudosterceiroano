@@ -1,0 +1,116 @@
+{
+  "id": "lp23",
+  "module": "23",
+  "title": "Tic-tac!",
+  "subtitle": "Poema e poema visual · Pronomes possessivos",
+  "theory": [
+    {
+      "h": "O poema: versos, estrofes, rima e ritmo",
+      "figure": {"src": "assets/4b/lp23-poema.svg", "alt": "Esquema de um poema mostrando o título, os versos (cada linha) e as estrofes (grupos de versos), com rimas destacadas.", "tipo": "diagrama"},
+      "p": [
+        "O <strong>poema</strong> é um texto organizado em <strong>versos</strong> (cada linha do poema) e em <strong>estrofes</strong> (cada grupo de versos). É comum ter <strong>rimas</strong>, <strong>ritmo</strong> e <strong>repetição de sons</strong> parecidos.",
+        "No poema <em>O relógio</em>, de Vinicius de Moraes, a expressão <strong>tic-tac</strong> se repete muitas vezes. Ela imita o som do relógio e mostra <strong>o passar do tempo</strong>: <em>Passa, tempo, tic-tac / Tic-tac, passa, hora</em>.",
+        "O <strong>ritmo</strong> é como uma batida que se repete, igual ao som do relógio. Ao ler o poema batendo palmas nas sílabas fortes, sentimos esse ritmo.",
+        "O poema serve para <strong>entreter</strong> e emocionar o leitor, brincando com as palavras. Ele não serve para dar notícias nem para ensinar a usar um objeto."
+      ],
+      "cards": [
+        {"icon": "📏", "t": "verso", "d": "cada linha do poema"},
+        {"icon": "🧱", "t": "estrofe", "d": "grupo de versos"},
+        {"icon": "🎵", "t": "rima", "d": "sons parecidos no fim das palavras"},
+        {"icon": "🥁", "t": "ritmo", "d": "batida que se repete"}
+      ]
+    },
+    {
+      "h": "O poema visual",
+      "figure": {"src": "assets/4b/lp23-visual.svg", "alt": "Poema visual: a palavra pêndulo escrita letra por letra balançando como o pêndulo de um relógio.", "tipo": "diagrama"},
+      "p": [
+        "No <strong>poema visual</strong>, as letras e as palavras são organizadas de um jeito diferente e <strong>formam figuras</strong>. O jeito como ele é escrito tem relação com o conteúdo.",
+        "No poema <em>Pêndulo</em>, de E. M. de Melo e Castro, as letras da palavra <strong>pêndulo</strong> vão para um lado e para o outro, como o pêndulo de um relógio antigo que balança.",
+        "No poema <em>Canção para ninar gato com insônia</em>, de Sérgio Capparelli, as palavras <em>ron ron</em> formam o desenho de um gato.",
+        "O poema visual <strong>não precisa</strong> ter rima nem ser dividido em versos e estrofes. O mais importante é que <strong>a forma combine com o conteúdo</strong>."
+      ]
+    },
+    {
+      "h": "Pronomes possessivos",
+      "figure": {"src": "assets/4b/lp23-possessivos.svg", "alt": "Quadro dos pronomes possessivos por pessoa: meu, minha, teu, tua, seu, sua, nosso, nossa, vosso, vossa, seu, sua, no singular e no plural.", "tipo": "diagrama"},
+      "p": [
+        "Os <strong>pronomes possessivos</strong> acompanham o substantivo e dão <strong>ideia de posse</strong>: mostram que algo pertence a alguém. Exemplo: <em><strong>Meu</strong> tic-tac</em>, <em><strong>Seu</strong> relógio está adiantado?</em>, <em><strong>nosso</strong> tempo passa rápido</em>.",
+        "Eles variam em <strong>pessoa</strong> (1ª, 2ª, 3ª), em <strong>gênero</strong> (masculino, feminino) e em <strong>número</strong> (singular, plural).",
+        "1ª pessoa (eu): <strong>meu, minha, meus, minhas</strong>. 2ª pessoa (tu): <strong>teu, tua, teus, tuas</strong>. 3ª pessoa (ele/ela): <strong>seu, sua, seus, suas</strong>.",
+        "1ª pessoa do plural (nós): <strong>nosso, nossa, nossos, nossas</strong>. 2ª pessoa do plural (vós): <strong>vosso, vossa, vossos, vossas</strong>. 3ª do plural (eles/elas): <strong>seu, sua, seus, suas</strong>.",
+        "Na tirinha do Armandinho, ele diz ao pai: <em>A <strong>sua</strong> cabeça está na frente do relógio!</em> O pronome <strong>sua</strong> mostra que a cabeça é do pai."
+      ],
+      "cards": [
+        {"icon": "🙋", "t": "eu", "d": "meu · minha · meus · minhas"},
+        {"icon": "👉", "t": "tu", "d": "teu · tua · teus · tuas"},
+        {"icon": "🧍", "t": "ele / ela", "d": "seu · sua · seus · suas"},
+        {"icon": "👨‍👩‍👧", "t": "nós", "d": "nosso · nossa · nossos · nossas"},
+        {"icon": "👥", "t": "vós", "d": "vosso · vossa · vossos · vossas"},
+        {"icon": "🧑‍🤝‍🧑", "t": "eles / elas", "d": "seu · sua · seus · suas"}
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "De quem é?",
+      "short": "Pessoa do possessivo",
+      "instructions": "A palavra em destaque indica qual pessoa do discurso?",
+      "categories": ["1ª pessoa (eu, nós)", "2ª pessoa (tu, vós)", "3ª pessoa (ele, eles)"],
+      "items": [
+        {"text": "MEUS ouvidos adoram música clássica.", "cat": 0},
+        {"text": "TEUS biscoitos são deliciosos!", "cat": 1},
+        {"text": "A NOSSA mala já está arrumada.", "cat": 0},
+        {"text": "Ela trouxe SUA mochila nova.", "cat": 2},
+        {"text": "Tu arrumaste o TEU material?", "cat": 1},
+        {"text": "Eles acabaram SUAS pesquisas.", "cat": 2},
+        {"text": "MINHA lição está pronta.", "cat": 0},
+        {"text": "VOSSA casa é muito bonita.", "cat": 1}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Complete com o possessivo",
+      "short": "Complete a frase",
+      "instructions": "Escolha o pronome possessivo que completa a frase.",
+      "pairs": [
+        ["O que eu ganho é…", "meu"],
+        ["O que tu ganhaste é…", "teu"],
+        ["O que nós ganhamos é…", "nosso"],
+        ["As camisas que eu ganhei são…", "minhas"],
+        ["O que vos deram é…", "vosso"],
+        ["Os presentes que lhe dei são…", "seus"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Poema ou poema visual?",
+      "short": "Tipos de poema",
+      "instructions": "A pista descreve um poema em versos ou um poema visual?",
+      "categories": ["Poema em versos e estrofes", "Poema visual"],
+      "items": [
+        {"text": "As letras formam o desenho de um gato.", "cat": 1},
+        {"text": "“Passa, tempo, tic-tac / Tic-tac, passa, hora”", "cat": 0},
+        {"text": "A palavra pêndulo balança como um relógio.", "cat": 1},
+        {"text": "Tem 18 linhas e rimas no fim.", "cat": 0},
+        {"text": "Palavras com tamanhos diferentes formam uma árvore.", "cat": 1},
+        {"text": "Está organizado em estrofes com ritmo.", "cat": 0}
+      ]
+    }
+  ],
+  "quiz": [
+    {"type": "mc", "q": "O poema “O relógio”, de Vinicius de Moraes, serve principalmente para:", "options": ["entreter e divertir o leitor", "informar um acontecimento real", "ensinar a consertar um relógio", "vender um relógio novo"], "answer": 0, "explain": "Poemas brincam com as palavras, o ritmo e os sons para entreter e emocionar o leitor."},
+    {"type": "mc", "q": "No poema “O relógio”, a repetição da expressão tic-tac indica:", "options": ["o passar do tempo", "que o relógio está quebrado", "que o relógio é barulhento demais", "que está chovendo"], "answer": 0, "explain": "Tic-tac imita o som do relógio e, repetido, mostra o tempo passando sem parar."},
+    {"type": "mc", "q": "Cada linha de um poema recebe o nome de:", "options": ["verso", "estrofe", "parágrafo", "título"], "answer": 0, "explain": "Cada linha é um verso. Um grupo de versos forma uma estrofe."},
+    {"type": "mc", "q": "Um grupo de versos de um poema é chamado de:", "options": ["estrofe", "verso", "rima", "frase"], "answer": 0, "explain": "Estrofe é o conjunto de versos, como um bloco do poema."},
+    {"type": "mc", "q": "Sobre os poemas visuais, o que é verdade?", "options": ["A forma do poema tem relação com o conteúdo.", "Precisam sempre ter rima.", "Sempre têm versos e estrofes.", "São lidos enquanto se desenha."], "answer": 0, "explain": "No poema visual as letras formam figuras ligadas ao assunto, como em “Pêndulo”. Ele não precisa ter rima nem estrofes."},
+    {"type": "mc", "q": "Qual destes NÃO é um poema visual?", "options": ["Um poema acompanhado de uma xilogravura", "Um poema em forma de estrela", "Um poema que forma a imagem de uma árvore", "Um poema com letras de tamanhos diferentes formando uma imagem"], "answer": 0, "explain": "No poema visual são as próprias letras e palavras que formam a figura. Um desenho ao lado do poema não o torna visual."},
+    {"type": "mc", "q": "Em qual frase há um pronome possessivo?", "options": ["A camisa amarela é sua?", "Aqueles meninos brincam sem parar.", "Nós estamos prontos!", "Você não está entendendo."], "answer": 0, "explain": "Sua indica a quem a camisa pertence: é um pronome possessivo."},
+    {"type": "mc", "q": "Complete: “João e eu temos um videogame. O videogame é ______.”", "options": ["nosso", "meu", "deles", "seu"], "answer": 0, "explain": "João e eu = nós. O pronome possessivo de nós é nosso."},
+    {"type": "mc", "q": "Nos versos “Toda a alegria / De fazer / Meu tic-tac”, que ideia a palavra meu transmite?", "options": ["Posse", "Tempo", "Lugar", "Quantidade"], "answer": 0, "explain": "Meu é pronome possessivo: mostra que o tic-tac pertence a quem fala."},
+    {"type": "mc", "q": "Na frase “Teus biscoitos são deliciosos!”, o pronome teus é da:", "options": ["2ª pessoa do discurso", "1ª pessoa do discurso", "3ª pessoa do discurso", "nenhuma pessoa"], "answer": 0, "explain": "Teu, tua, teus, tuas são da 2ª pessoa (tu), com quem se fala."},
+    {"type": "mc", "q": "Qual é o feminino plural do pronome meu?", "options": ["minhas", "meus", "minha", "nossas"], "answer": 0, "explain": "Meu (masc. sing.), meus (masc. pl.), minha (fem. sing.), minhas (fem. pl.)."},
+    {"type": "mc", "q": "Na tirinha, Armandinho diz ao pai: “A sua cabeça está na frente do relógio!”. De quem é a cabeça?", "options": ["Do pai", "Do Armandinho", "Do sapo", "Do relógio"], "answer": 0, "explain": "Armandinho fala com o pai, então sua se refere ao pai. Por isso o pai não via a hora."},
+    {"type": "text", "q": "Que palavra do poema “O relógio” imita o som produzido por um relógio?", "answers": ["tic-tac", "tic tac", "tictac"], "explain": "Tic-tac é a palavra que imita o som do relógio."}
+  ]
+}

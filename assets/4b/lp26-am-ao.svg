@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#ba376d" font-weight="800" text-anchor="middle">-am ou -ão?</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">o final do verbo mostra quando a ação acontece</text>
+<rect x="40" y="130" width="400" height="300" rx="24" fill="#f1ecff" stroke="#6b49b8" stroke-width="3"/>
+<text x="240" y="210" font-size="54" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">⏪</text><text x="240" y="260" font-size="26" fill="#6b49b8" font-weight="800" text-anchor="middle">PASSADO</text>
+<text x="240" y="330" font-size="34" font-weight="800" text-anchor="middle" fill="#17213b">sentir<tspan fill="#6b49b8">am</tspan></text>
+<text x="240" y="380" font-size="20" fill="#4a5872" font-weight="700" text-anchor="middle">Elas sentiram medo.</text>
+<rect x="460" y="130" width="400" height="300" rx="24" fill="#fff4e6" stroke="#d9822b" stroke-width="3"/>
+<text x="660" y="210" font-size="54" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">⏩</text><text x="660" y="260" font-size="26" fill="#d9822b" font-weight="800" text-anchor="middle">FUTURO</text>
+<text x="660" y="330" font-size="34" font-weight="800" text-anchor="middle" fill="#17213b">sentir<tspan fill="#d9822b">ão</tspan></text>
+<text x="660" y="380" font-size="20" fill="#4a5872" font-weight="700" text-anchor="middle">Elas sentirão medo.</text>
+<rect x="40" y="455" width="820" height="115" rx="20" fill="#fff" stroke="#ba376d" stroke-width="2"/>
+<text x="450" y="497" font-size="20" fill="#ba376d" font-weight="800" text-anchor="middle">Cuidado! Substantivos também terminam em -ão:</text>
+<text x="450" y="537" font-size="22" fill="#17213b" font-weight="700" text-anchor="middle">caminhão · coração · botão · questão · ladrão</text>
+</svg>

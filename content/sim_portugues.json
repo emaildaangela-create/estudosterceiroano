@@ -1,0 +1,46 @@
+{
+  "theory": [
+    {
+      "h": "Resumo da prova: gramática",
+      "p": [
+        "Revise os cartões abaixo. Cada um resume um tópico da prova de Língua Portuguesa.",
+        "<strong>Pronomes possessivos (Mód. 23):</strong> dão ideia de posse — meu, teu, seu, nosso, vosso (e femininos e plurais).",
+        "<strong>Pronomes demonstrativos (Mód. 24):</strong> indicam posição — este (perto de quem fala), esse (perto de quem ouve), aquele (longe dos dois); isto, isso, aquilo são invariáveis.",
+        "<strong>Verbo (Mód. 25):</strong> ação (correr), estado (estar) ou fenômeno da natureza (chover). <strong>Sinônimo</strong> = sentido parecido; <strong>antônimo</strong> = sentido contrário.",
+        "<strong>Tempos verbais e -am/-ão (Mód. 26):</strong> passado (fugiram), presente (fogem), futuro (fugirão).",
+        "<strong>Sujeito e predicado (Mód. 27):</strong> Quem + verbo? → sujeito. O resto, com o verbo, é o predicado."
+      ],
+      "cards": [
+        {"icon": "🔑", "t": "possessivo", "d": "meu · teu · seu · nosso"},
+        {"icon": "📍", "t": "demonstrativo", "d": "este · esse · aquele"},
+        {"icon": "🏃", "t": "verbo", "d": "ação · estado · natureza"},
+        {"icon": "=", "t": "sinônimo", "d": "formosa = bonita"},
+        {"icon": "↔", "t": "antônimo", "d": "sorte × azar"},
+        {"icon": "⏳", "t": "-am / -ão", "d": "fugiram (passado) · fugirão (futuro)"},
+        {"icon": "🧩", "t": "sujeito", "d": "Quem + verbo?"},
+        {"icon": "💬", "t": "predicado", "d": "o que se diz do sujeito"}
+      ]
+    },
+    {
+      "h": "Resumo da prova: gêneros textuais",
+      "p": [
+        "<strong>Poema:</strong> versos (linhas), estrofes (grupos de versos), rima, ritmo e repetição de sons. Serve para entreter e emocionar.",
+        "<strong>Poema visual:</strong> as letras formam figuras; a forma combina com o conteúdo (ex.: Pêndulo).",
+        "<strong>Texto informativo:</strong> fatos reais com datas e locais precisos (ex.: a história da montanha-russa).",
+        "<strong>Conto de mistério:</strong> história misteriosa, com suspense e acontecimentos inesperados (ex.: O fantasma da sorte).",
+        "<strong>Depoimento:</strong> a pessoa conta experiências reais que viveu (ex.: Medo? Todo mundo tem!).",
+        "<strong>Reportagem:</strong> informações aprofundadas, com título, linha fina, lide, entretítulos e falas de especialistas (ex.: lancheira saudável)."
+      ]
+    }
+  ],
+  "quiz": [
+    {"type": "mc", "q": "Leia: “Esta é a minha mochila.” As palavras esta e minha são, nessa ordem, pronomes:", "options": ["demonstrativo e possessivo", "possessivo e demonstrativo", "os dois possessivos", "os dois demonstrativos"], "answer": 0, "explain": "Esta indica posição (demonstrativo); minha indica posse (possessivo)."},
+    {"type": "mc", "q": "Qual texto apresenta fatos reais com datas e locais precisos?", "options": ["Texto informativo", "Conto de mistério", "Poema visual", "Texto teatral"], "answer": 0, "explain": "O texto informativo traz informações reais e precisas."},
+    {"type": "mc", "q": "Na frase “Amanhã os alunos apresentarão a pesquisa”, o sujeito e o tempo verbal são:", "options": ["os alunos; futuro", "a pesquisa; passado", "Amanhã; presente", "os alunos; passado"], "answer": 0, "explain": "Quem apresentará? Os alunos. Apresentarão (-ão) está no futuro."},
+    {"type": "mc", "q": "Qual par é formado por antônimos?", "options": ["aparecer e sumir", "formosa e bonita", "lotado e cheio", "dono e proprietário"], "answer": 0, "explain": "Aparecer e sumir têm sentidos contrários. Os outros pares são sinônimos."},
+    {"type": "mc", "q": "Qual gênero textual é organizado em versos e estrofes?", "options": ["poema", "reportagem", "depoimento", "texto informativo"], "answer": 0, "explain": "Versos e estrofes são marcas do poema."},
+    {"type": "mc", "q": "Em “Ontem choveu muito e as crianças ficaram em casa”, o verbo choveu indica:", "options": ["fenômeno da natureza", "ação de uma pessoa", "estado", "posse"], "answer": 0, "explain": "Chover é fenômeno da natureza; está no passado."},
+    {"type": "mc", "q": "Uma pessoa conta, em primeira pessoa, uma experiência real que viveu. Esse texto é um:", "options": ["depoimento", "poema visual", "conto de mistério", "texto teatral"], "answer": 0, "explain": "No depoimento o narrador fala das próprias experiências reais."},
+    {"type": "mc", "q": "Complete corretamente: “Na semana passada, eles ______ para a praia.”", "options": ["viajaram", "viajarão", "viajam", "viajão"], "answer": 0, "explain": "Semana passada pede verbo no passado, com -am: viajaram."}
+  ]
+}

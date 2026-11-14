@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#6b49b8" font-weight="800" text-anchor="middle">O fantasma da sorte</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">conto de mistério: começo, mistério, suspense, solução</text>
+<rect x="30" y="130" width="200" height="400" rx="20" fill="#fff" stroke="#6b49b8" stroke-width="3"/>
+<text x="130" y="270" font-size="62" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🌲🧭</text>
+<text x="130" y="350" font-size="23" fill="#6b49b8" font-weight="800" text-anchor="middle">1. Perdido</text>
+<text x="130" y="400" font-size="15.5" fill="#17213b" font-weight="700" text-anchor="middle">O capitão dos mares se</text><text x="130" y="425" font-size="15.5" fill="#17213b" font-weight="700" text-anchor="middle">perde na floresta.</text>
+<line x1="230" y1="330" x2="245" y2="330" stroke="#6b49b8" stroke-width="3" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="245" y="130" width="200" height="400" rx="20" fill="#fff" stroke="#6b49b8" stroke-width="3"/>
+<text x="345" y="270" font-size="62" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏰🌙</text>
+<text x="345" y="350" font-size="23" fill="#6b49b8" font-weight="800" text-anchor="middle">2. O castelo</text>
+<text x="345" y="400" font-size="15.5" fill="#17213b" font-weight="700" text-anchor="middle">Ele é recebido, janta</text><text x="345" y="425" font-size="15.5" fill="#17213b" font-weight="700" text-anchor="middle">e vai dormir.</text>
+<line x1="445" y1="330" x2="460" y2="330" stroke="#6b49b8" stroke-width="3" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="460" y="130" width="200" height="400" rx="20" fill="#1f2147" stroke="#6b49b8" stroke-width="3"/>
+<text x="560" y="270" font-size="62" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">👻✨</text>
+<text x="560" y="350" font-size="23" fill="#f2b705" font-weight="800" text-anchor="middle">3. O mistério</text>
+<text x="560" y="400" font-size="15.5" fill="#fff" font-weight="700" text-anchor="middle">De madrugada, vê uma</text><text x="560" y="425" font-size="15.5" fill="#fff" font-weight="700" text-anchor="middle">criança cercada de luz!</text>
+<line x1="660" y1="330" x2="675" y2="330" stroke="#6b49b8" stroke-width="3" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="675" y="130" width="200" height="400" rx="20" fill="#fff" stroke="#6b49b8" stroke-width="3"/>
+<text x="775" y="270" font-size="62" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">💍💰</text>
+<text x="775" y="350" font-size="23" fill="#6b49b8" font-weight="800" text-anchor="middle">4. A solução</text>
+<text x="775" y="400" font-size="15.5" fill="#17213b" font-weight="700" text-anchor="middle">Era o fantasma da sorte:</text><text x="775" y="425" font-size="15.5" fill="#17213b" font-weight="700" text-anchor="middle">ele fica rico e feliz.</text>
+<text x="450" y="570" font-size="20" fill="#6b49b8" font-weight="800" text-anchor="middle">Suspense + acontecimento inesperado = conto de mistério</text>
+</svg>

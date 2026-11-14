@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#f6fbff"/>
+<text x="450" y="58" font-size="34" fill="#2456b8" font-weight="800" text-anchor="middle">A chuva na janela</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">2 estrofes · 8 versos · rimas</text>
+<rect x="150" y="115" width="600" height="190" rx="18" fill="#eef6ff" stroke="#2456b8" stroke-width="2"/>
+<text x="770" y="215" font-size="18" fill="#2456b8" font-weight="800" text-anchor="start">estrofe 1</text>
+<text x="175" y="150" font-size="15" fill="#4a5872" font-weight="700" text-anchor="start">1</text>
+<text x="210" y="150" font-size="25" font-weight="600" fill="#17213b"><tspan fill="#6b49b8" font-weight="800">Pinga, pinga</tspan>, na <tspan fill="#ba376d" font-weight="800">janela,</tspan></text>
+<text x="175" y="190" font-size="15" fill="#4a5872" font-weight="700" text-anchor="start">2</text>
+<text x="210" y="190" font-size="25" font-weight="600" fill="#17213b">a chuva vem <tspan fill="#2456b8" font-weight="800">conversar.</tspan></text>
+<text x="175" y="230" font-size="15" fill="#4a5872" font-weight="700" text-anchor="start">3</text>
+<text x="210" y="230" font-size="25" font-weight="600" fill="#17213b">Bate leve na <tspan fill="#ba376d" font-weight="800">panela,</tspan></text>
+<text x="175" y="270" font-size="15" fill="#4a5872" font-weight="700" text-anchor="start">4</text>
+<text x="210" y="270" font-size="25" font-weight="600" fill="#17213b">quer um jeito de <tspan fill="#2456b8" font-weight="800">entrar.</tspan></text>
+<rect x="150" y="335" width="600" height="190" rx="18" fill="#fff" stroke="#2456b8" stroke-width="2"/>
+<text x="770" y="435" font-size="18" fill="#2456b8" font-weight="800" text-anchor="start">estrofe 2</text>
+<text x="175" y="370" font-size="15" fill="#4a5872" font-weight="700" text-anchor="start">5</text>
+<text x="210" y="370" font-size="25" font-weight="600" fill="#17213b"><tspan fill="#6b49b8" font-weight="800">Pinga, pinga</tspan>, <tspan fill="#1d805c" font-weight="800">devagar,</tspan></text>
+<text x="175" y="410" font-size="15" fill="#4a5872" font-weight="700" text-anchor="start">6</text>
+<text x="210" y="410" font-size="25" font-weight="600" fill="#17213b">molha a rua e o <tspan fill="#d9822b" font-weight="800">jardim.</tspan></text>
+<text x="175" y="450" font-size="15" fill="#4a5872" font-weight="700" text-anchor="start">7</text>
+<text x="210" y="450" font-size="25" font-weight="600" fill="#17213b">Quando o sol voltar a <tspan fill="#1d805c" font-weight="800">brilhar,</tspan></text>
+<text x="175" y="490" font-size="15" fill="#4a5872" font-weight="700" text-anchor="start">8</text>
+<text x="210" y="490" font-size="25" font-weight="600" fill="#17213b">vou brincar até o <tspan fill="#d9822b" font-weight="800">fim.</tspan></text>
+<text x="450" y="580" font-size="18" fill="#6b49b8" font-weight="800" text-anchor="middle">pinga, pinga = som da chuva (como o tic-tac do relógio)</text>
+</svg>

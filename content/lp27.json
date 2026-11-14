@@ -1,0 +1,97 @@
+{
+  "id": "lp27",
+  "module": "27",
+  "title": "Comer bem para melhor crescer!",
+  "subtitle": "Reportagem · Sujeito e predicado",
+  "theory": [
+    {
+      "h": "Reportagem: lancheira saudável",
+      "figure": {"src": "assets/4b/lp27-reportagem.svg", "alt": "Partes de uma reportagem: título, linha fina, lide, entretítulo e matéria com fala de especialista.", "tipo": "diagrama"},
+      "p": [
+        "A <strong>reportagem</strong> apresenta <strong>informações aprofundadas</strong> sobre um tema. É publicada em <strong>jornais, revistas e sites</strong>.",
+        "Partes: <strong>título</strong> (nome da reportagem); <strong>linha fina</strong> (texto abaixo do título que desperta o interesse); <strong>lide</strong> (primeiro parágrafo, que resume a matéria); <strong>matéria</strong> (texto longo, às vezes com falas de <strong>especialistas</strong>); <strong>entretítulos</strong> (pequenos títulos que separam blocos).",
+        "A reportagem <em>Como fazer lancheira saudável na volta às aulas das crianças</em> tem a finalidade de <strong>informar sobre alimentação saudável</strong>. Os entretítulos são <em>Lancheira saudável</em>, <em>Lancheira prática</em> e <em>Lancheira colorida</em>.",
+        "Ela explica a <strong>neofobia</strong>: a dificuldade das crianças em aceitar alimentos novos. Por isso, a apresentação bonita e variada ajuda as crianças a aceitar os alimentos.",
+        "Uma lancheira equilibrada tem <strong>frutas, vegetais, proteínas, grãos integrais e líquidos</strong>. Quanto <strong>mais colorida</strong>, mais nutrientes! Achocolatado, salgadinho, salsicha e refrigerante são <strong>ultraprocessados</strong> e não são boas opções."
+      ]
+    },
+    {
+      "h": "Sujeito e predicado",
+      "figure": {"src": "assets/4b/lp27-sujeito.svg", "alt": "Frase As frutas fazem bem à saúde dividida em sujeito (As frutas) e predicado (fazem bem à saúde), com a pergunta Quem faz bem? ligando o verbo ao sujeito.", "tipo": "diagrama"},
+      "p": [
+        "Uma <strong>oração</strong> é uma frase com <strong>verbo</strong>. Exemplo: <em>Vegetais <strong>oferecem</strong> vitaminas.</em>",
+        "O <strong>sujeito</strong> é o termo <strong>sobre o qual se diz algo</strong>. Para achá-lo, perguntamos: <strong>Quem + verbo?</strong> → <em>Quem oferece vitaminas?</em> → <strong>Vegetais</strong>.",
+        "O <strong>predicado</strong> é <strong>o que se diz sobre o sujeito</strong>. O verbo faz parte do predicado. Em <em>As frutas | fazem bem à saúde</em>, o sujeito é <strong>As frutas</strong> e o predicado é <strong>fazem bem à saúde</strong>.",
+        "O verbo sempre <strong>concorda</strong> com o sujeito: <em>A fruta <strong>faz</strong> bem</em> / <em>As frutas <strong>fazem</strong> bem</em>.",
+        "<strong>Complemento verbal</strong>: alguns verbos precisam de uma palavra que complete o sentido. <em>Ela come <strong>salada</strong>.</em> / <em>Mamãe preparou <strong>um bolo delicioso</strong>.</em> Outros não precisam: <em>Ele dorme.</em>"
+      ]
+    },
+    {
+      "h": "Letra h no início das palavras",
+      "p": [
+        "No início das palavras, a letra <strong>h não tem som</strong>: lemos <em>hora</em> como “ora”. Por isso precisamos memorizar como se escreve.",
+        "Exemplos: <strong>hora</strong>, <strong>hospital</strong>, <strong>homem</strong>, <strong>hidrante</strong>, <strong>harpa</strong>, <strong>helicóptero</strong>, <strong>hipopótamo</strong>, <strong>horta</strong>.",
+        "Substantivos próprios também: <em>Helena, Hugo, Henrique, Holanda</em>."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "pairs",
+      "title": "Ache o sujeito",
+      "short": "Ache o sujeito",
+      "instructions": "Pergunte “Quem + verbo?” e escolha o sujeito da frase.",
+      "pairs": [
+        ["Vegetais oferecem vitaminas.", "Vegetais"],
+        ["No recreio, os alunos comem lanches saudáveis.", "os alunos"],
+        ["Minha família mantém uma dieta equilibrada.", "Minha família"],
+        ["A minha turma fez um piquenique no pátio.", "A minha turma"],
+        ["Eu faço refeições equilibradas.", "Eu"],
+        ["Boa alimentação e exercícios são fundamentais.", "Boa alimentação e exercícios"]
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Ache o predicado",
+      "short": "Ache o predicado",
+      "instructions": "O que se diz sobre o sujeito? Escolha o predicado.",
+      "pairs": [
+        ["As frutas…", "fazem bem à saúde."],
+        ["Ela…", "come salada."],
+        ["Cereais e frutas…", "substituem o salgadinho."],
+        ["Papai…", "comprou tomates na feira."],
+        ["A cozinheira…", "deu frutas às crianças."]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Partes da reportagem",
+      "short": "Partes da reportagem",
+      "instructions": "Que parte da reportagem é essa?",
+      "categories": ["Título", "Linha fina", "Entretítulo"],
+      "items": [
+        {"text": "Como fazer lancheira saudável na volta às aulas das crianças", "cat": 0},
+        {"text": "Nutricionistas ensinam a montar uma alimentação saborosa e colorida", "cat": 1},
+        {"text": "Lancheira prática", "cat": 2},
+        {"text": "Lancheira colorida", "cat": 2},
+        {"text": "Texto logo abaixo do título que chama a atenção do leitor", "cat": 1},
+        {"text": "O nome da reportagem, com letra maior", "cat": 0}
+      ]
+    }
+  ],
+  "quiz": [
+    {"type": "mc", "q": "Qual é a finalidade da reportagem sobre a lancheira saudável?", "options": ["Informar sobre alimentação saudável", "Provocar o riso", "Ensinar a preparar um bolo", "Contar uma história de mistério"], "answer": 0, "explain": "A reportagem traz informações aprofundadas sobre como montar uma lancheira saudável."},
+    {"type": "mc", "q": "Segundo a reportagem, o que é neofobia?", "options": ["Dificuldade de aceitar alimentos novos", "Medo de ir à escola", "Vontade de comer doces", "Alergia a frutas"], "answer": 0, "explain": "Neofobia é a dificuldade das crianças em aceitar ou experimentar alimentos novos ou desconhecidos."},
+    {"type": "mc", "q": "Para a nutricionista, uma lancheira bem colorida:", "options": ["tem mais nutrientes", "é menos saudável", "deve ter só doces", "não faz diferença"], "answer": 0, "explain": "Cada cor de fruta e vegetal representa nutrientes diferentes: quanto mais colorida, mais nutritiva."},
+    {"type": "mc", "q": "Qual destes é um ULTRAPROCESSADO, que não é boa opção para a lancheira?", "options": ["achocolatado", "banana", "tomate-cereja", "água de coco"], "answer": 0, "explain": "Achocolatado, salgadinhos, salsicha e refrigerante são ultraprocessados."},
+    {"type": "mc", "q": "O primeiro parágrafo da reportagem, que resume o conteúdo da matéria, chama-se:", "options": ["lide", "título", "entretítulo", "assinatura"], "answer": 0, "explain": "O lide é o primeiro parágrafo e resume a matéria."},
+    {"type": "mc", "q": "Onde você encontraria outras reportagens como essa?", "options": ["Em jornais e revistas", "Em manuais de instrução", "Em atlas", "Em livros de poemas"], "answer": 0, "explain": "Reportagens são publicadas em jornais, revistas e sites de notícias."},
+    {"type": "mc", "q": "Na frase “Vegetais oferecem vitaminas”, qual é o sujeito?", "options": ["Vegetais", "oferecem", "vitaminas", "oferecem vitaminas"], "answer": 0, "explain": "Quem oferece vitaminas? Vegetais. Esse é o sujeito."},
+    {"type": "mc", "q": "Na frase “No recreio, os alunos comem lanches saudáveis”, o sujeito é:", "options": ["os alunos", "No recreio", "lanches saudáveis", "comem"], "answer": 0, "explain": "Quem come lanches saudáveis? Os alunos."},
+    {"type": "mc", "q": "Em “Minha família mantém uma dieta equilibrada”, o predicado é:", "options": ["mantém uma dieta equilibrada", "Minha família", "Minha família mantém", "uma dieta equilibrada"], "answer": 0, "explain": "Predicado é o que se diz sobre o sujeito, e o verbo faz parte dele: mantém uma dieta equilibrada."},
+    {"type": "mc", "q": "Para encontrar o sujeito de uma oração, perguntamos:", "options": ["Quem + verbo?", "Onde?", "Quando?", "Quantos?"], "answer": 0, "explain": "Perguntamos Quem (ou o que) + verbo. A resposta é o sujeito."},
+    {"type": "mc", "q": "Em “Ela come salada”, qual palavra completa o sentido do verbo?", "options": ["salada", "Ela", "come", "nenhuma"], "answer": 0, "explain": "Salada é o complemento verbal: completa o sentido de comer (come o quê?)."},
+    {"type": "mc", "q": "Qual frase tem o verbo concordando corretamente com o sujeito?", "options": ["As frutas fazem bem à saúde.", "As frutas faz bem à saúde.", "A fruta fazem bem à saúde.", "As fruta fazem bem à saúde."], "answer": 0, "explain": "O verbo concorda com o sujeito: as frutas (plural) fazem (plural)."},
+    {"type": "text", "q": "Escreva o nome do lugar onde as pessoas são atendidas por médicos. A palavra começa com h.", "answers": ["hospital", "o hospital"], "explain": "Hospital começa com h, que não tem som no início da palavra."}
+  ]
+}

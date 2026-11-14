@@ -1,0 +1,121 @@
+{
+  "id": "lp25",
+  "module": "25",
+  "title": "Ai, que susto!",
+  "subtitle": "Conto de mistério · Verbo · Sinônimo e antônimo",
+  "theory": [
+    {
+      "h": "Conto de mistério: O fantasma da sorte",
+      "figure": {"src": "assets/4b/lp25-conto.svg", "alt": "Sequência do conto em quatro quadros: o capitão perdido na floresta, chegada ao castelo, aparição da criança iluminada à noite e o final feliz com casamento.", "tipo": "diagrama"},
+      "p": [
+        "Os <strong>contos de mistério</strong> apresentam uma <strong>história misteriosa</strong>, cheia de <strong>suspense</strong> e de <strong>acontecimentos inesperados</strong>.",
+        "Em <em>O fantasma da sorte</em>, de Heloisa Prieto, um <strong>capitão dos mares</strong> se perde na floresta porque <strong>não estava acostumado a andar em terra</strong>. Com frio, ele avista um castelo, bate à porta e é convidado a jantar e dormir.",
+        "De madrugada, ele sonha que está no mar, numa tormenta. Ao abrir os olhos, vê <strong>uma linda criança cercada de luz</strong>, que sorri e desaparece. No dia seguinte, reclama: <em>não gostei nem um pouco!</em>",
+        "O mistério: o castelo estava lotado, e o mordomo colocou o capitão no <strong>quarto do menino</strong>. Ali vive o <strong>fantasma de um menino, um fantasma da sorte</strong>: todos que o veem ficam ricos e felizes.",
+        "E foi o que aconteceu: o capitão se casou com uma jovem rica, ficou milionário e seus filhos tiveram sorte a vida toda. <strong>Ver o fantasma foi bom para ele!</strong>"
+      ]
+    },
+    {
+      "h": "Verbo: ação, estado ou fenômeno da natureza",
+      "figure": {"src": "assets/4b/lp25-verbo.svg", "alt": "Três colunas de verbos: ação (correr, gritar, pular), estado (ser, estar, ficar, permanecer) e fenômeno da natureza (chover, ventar, nevar, amanhecer).", "tipo": "diagrama"},
+      "p": [
+        "<strong>Verbos</strong> são palavras que indicam <strong>ações</strong>, <strong>estados</strong> ou <strong>fenômenos da natureza</strong>. No conto: <em>o capitão <strong>conheceu</strong> uma jovem, <strong>casou</strong>; ela <strong>era</strong> rica; ele <strong>acabou</strong> milionário</em>.",
+        "<strong>Ação</strong> – o que alguém faz: <em>Ele <strong>corria</strong> pela floresta.</em> Exemplos: correr, chorar, gritar, pular, latir, ler, comer, nadar.",
+        "<strong>Estado</strong> – como alguém está ou é: <em>Todos <strong>estavam</strong> ansiosos.</em> Exemplos: ser, estar, ficar, permanecer, parecer.",
+        "<strong>Fenômeno da natureza</strong>: <em><strong>Trovejava</strong> forte lá fora.</em> Exemplos: chover, ventar, nevar, amanhecer, trovejar."
+      ]
+    },
+    {
+      "h": "Sinônimos e antônimos",
+      "figure": {"src": "assets/4b/lp25-sinonimo.svg", "alt": "Sinônimos com sinal de igual (formosa = bonita, lotado = cheio) e antônimos com setas opostas (dormir × acordar, sorte × azar).", "tipo": "diagrama"},
+      "p": [
+        "<strong>Sinônimo</strong> é a palavra de significado <strong>parecido ou igual</strong> ao de outra e que pode substituí-la. No conto: <em>formosa</em> = <strong>bonita</strong>; <em>lotado</em> = <strong>cheio</strong>; <em>habituado</em> = <strong>acostumado</strong>; <em>proprietário</em> = <strong>dono</strong>; <em>aflita</em> = <strong>preocupada</strong>; <em>suntuoso</em> = <strong>luxuoso</strong>.",
+        "No dicionário, a palavra <strong>sorte</strong> aparece com sinônimos como <strong>destino, fortuna, êxito</strong>.",
+        "<strong>Antônimo</strong> é a palavra de significado <strong>contrário</strong>: <em>dormir × acordar</em>, <em>sorte × azar</em>, <em>preso × solto</em>, <em>bonito × feio</em>, <em>feliz × triste</em>, <em>silêncio × barulho</em>, <em>coragem × medo</em>, <em>aparecer × sumir</em>."
+      ],
+      "cards": [
+        {"icon": "=", "t": "formosa", "d": "bonita (sinônimo)"},
+        {"icon": "=", "t": "lotado", "d": "cheio (sinônimo)"},
+        {"icon": "=", "t": "habituado", "d": "acostumado (sinônimo)"},
+        {"icon": "↔", "t": "dormir", "d": "acordar (antônimo)"},
+        {"icon": "↔", "t": "sorte", "d": "azar (antônimo)"},
+        {"icon": "↔", "t": "coragem", "d": "medo (antônimo)"}
+      ]
+    },
+    {
+      "h": "Texto teatral e rubrica",
+      "p": [
+        "O <strong>texto teatral</strong> é feito para ser <strong>representado</strong>. Nem sempre há narrador: a história acontece pelos <strong>diálogos</strong> dos personagens, como em <em>Príncipe Lagartão</em>.",
+        "A <strong>rubrica</strong> são as informações entre parênteses, geralmente em letras maiúsculas, que indicam <strong>gestos, movimentos dos atores e o cenário</strong>: <em>(CLOTILDE SAI DE CENA ACOMPANHADA PELA RAINHA)</em>.",
+        "O teatro surgiu na <strong>Grécia antiga</strong>, em festas para o deus Dioniso."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Que tipo de verbo?",
+      "short": "Ação, estado, natureza",
+      "instructions": "O verbo indica ação, estado ou fenômeno da natureza?",
+      "categories": ["Ação 🏃", "Estado 😊", "Fenômeno da natureza 🌧️"],
+      "items": [
+        {"text": "correr", "cat": 0},
+        {"text": "estar", "cat": 1},
+        {"text": "chover", "cat": 2},
+        {"text": "gritar", "cat": 0},
+        {"text": "ser", "cat": 1},
+        {"text": "ventar", "cat": 2},
+        {"text": "pular", "cat": 0},
+        {"text": "permanecer", "cat": 1},
+        {"text": "nevar", "cat": 2},
+        {"text": "chorar", "cat": 0},
+        {"text": "ficar", "cat": 1},
+        {"text": "amanhecer", "cat": 2}
+      ]
+    },
+    {
+      "type": "memory",
+      "title": "Memória dos sinônimos",
+      "short": "Sinônimos",
+      "instructions": "Ache cada palavra e o seu sinônimo.",
+      "items": [
+        {"base": "formosa", "result": "bonita"},
+        {"base": "lotado", "result": "cheio"},
+        {"base": "habituado", "result": "acostumado"},
+        {"base": "proprietário", "result": "dono"},
+        {"base": "aflita", "result": "preocupada"},
+        {"base": "assombrar", "result": "assustar"}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Contrários",
+      "short": "Antônimos",
+      "instructions": "Escolha o antônimo (o contrário) de cada palavra.",
+      "pairs": [
+        ["dormir", "acordar"],
+        ["sorte", "azar"],
+        ["preso", "solto"],
+        ["feliz", "triste"],
+        ["silêncio", "barulho"],
+        ["coragem", "medo"],
+        ["aparecer", "sumir"]
+      ]
+    }
+  ],
+  "quiz": [
+    {"type": "mc", "q": "Por que o capitão dos mares se perdeu na floresta?", "options": ["Não estava acostumado a andar em terra", "Estava fugindo de um fantasma", "Queria encontrar um tesouro", "O navio dele afundou na floresta"], "answer": 0, "explain": "O conto diz que ele não estava habituado a andar em terra e acabou se perdendo na densa floresta."},
+    {"type": "mc", "q": "O que o capitão sonhou durante a noite?", "options": ["Que estava no mar, numa terrível tormenta", "Que estava num castelo cheio de hóspedes", "Que ganhava muito dinheiro", "Que era perseguido por um lobo"], "answer": 0, "explain": "Ele sonhou que estava de volta ao mar, no meio de uma terrível tormenta. Ao acordar, viu a criança iluminada."},
+    {"type": "mc", "q": "Qual era o mistério daquele quarto?", "options": ["Lá vivia o fantasma de um menino que traz sorte", "Era o quarto de um ladrão", "A lareira nunca apagava", "Era onde guardavam o tesouro"], "answer": 0, "explain": "O nobre explica que ali vive o fantasma alegre de um menino, um fantasma da sorte."},
+    {"type": "mc", "q": "No final, foi ruim para o capitão ter visto o fantasma?", "options": ["Não: ele ficou rico e feliz", "Sim: ele ficou doente", "Sim: ele perdeu o navio", "Não: mas ele nunca mais dormiu"], "answer": 0, "explain": "Todos que viam o fantasma da sorte ganhavam dinheiro e eram felizes, e foi o que aconteceu com ele."},
+    {"type": "mc", "q": "Um conto de mistério se caracteriza por:", "options": ["suspense e acontecimentos inesperados", "datas e informações precisas", "versos e rimas", "passo a passo de uma receita"], "answer": 0, "explain": "Contos de mistério têm história misteriosa, suspense e surpresas."},
+    {"type": "mc", "q": "No trecho “o capitão conheceu uma formosa jovem, com quem se casou”, as palavras conheceu e casou indicam:", "options": ["ações dos personagens", "nomes dos personagens", "características físicas", "lugares da história"], "answer": 0, "explain": "Conheceu e casou são verbos: indicam ações."},
+    {"type": "mc", "q": "Qual verbo indica um fenômeno da natureza?", "options": ["trovejar", "correr", "estar", "escrever"], "answer": 0, "explain": "Trovejar é fenômeno da natureza. Correr e escrever são ações; estar é estado."},
+    {"type": "mc", "q": "Na frase “Todos estavam ansiosos para a festa”, o verbo estavam indica:", "options": ["estado", "ação", "fenômeno da natureza", "posse"], "answer": 0, "explain": "Estar é verbo de estado: mostra como as pessoas se sentiam."},
+    {"type": "mc", "q": "Qual é um sinônimo de formosa?", "options": ["bonita", "feia", "cansada", "triste"], "answer": 0, "explain": "Formosa e bonita têm o mesmo significado: são sinônimos."},
+    {"type": "mc", "q": "No dicionário, quais palavras aparecem na definição de sorte?", "options": ["destino, fortuna, êxito", "amor, carinho, azar", "bondade, carinho, maneira", "brincadeira, cansaço, modo"], "answer": 0, "explain": "Sorte pode significar destino, fortuna ou êxito. Azar é o contrário (antônimo)."},
+    {"type": "mc", "q": "Qual é o antônimo de dormir?", "options": ["acordar", "sonhar", "deitar", "descansar"], "answer": 0, "explain": "Antônimo é a palavra de sentido contrário: dormir × acordar."},
+    {"type": "mc", "q": "No texto teatral, as informações entre parênteses, em letras maiúsculas, servem para:", "options": ["indicar gestos, movimentos e o cenário", "mostrar a fala do narrador", "dar o título da peça", "indicar o nome do autor"], "answer": 0, "explain": "Essas informações se chamam rubricas e orientam os atores."},
+    {"type": "text", "q": "Escreva um antônimo de sorte.", "answers": ["azar", "falta de sorte", "infortunio", "infortúnio", "desgraca", "desgraça"], "explain": "O contrário de sorte é azar."}
+  ]
+}

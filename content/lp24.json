@@ -1,0 +1,319 @@
+{
+  "id": "lp24",
+  "module": "24",
+  "title": "Aventura e diversão",
+  "subtitle": "Texto informativo · Pronomes demonstrativos",
+  "theory": [
+    {
+      "h": "O texto informativo",
+      "figure": {
+        "src": "assets/4b/lp24-montanha.svg",
+        "alt": "Linha do tempo da montanha-russa: século 15 na Rússia com rampas de neve, 1784 em São Petersburgo, 1827 nos Estados Unidos, 1884 a montanha-russa como conhecemos, 1959 tubos de aço.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "O <strong>texto informativo</strong> apresenta <strong>acontecimentos reais</strong> e informações, em geral com <strong>datas e locais precisos</strong>. Ele não conta uma história inventada nem tem magia.",
+        "O texto <em>Como surgiu a montanha-russa?</em>, da revista <em>Superinteressante</em>, explica que a diversão começou na <strong>Rússia</strong>, no século 15: as pessoas deslizavam em <strong>blocos de gelo</strong> por rampas cobertas de neve. Por isso o brinquedo se chama montanha-<strong>russa</strong>.",
+        "Em 1784, em São Petersburgo, foi construído o primeiro trenzinho. Em 1827, os Estados Unidos fizeram a sua primeira montanha-russa nos trilhos de uma mina de carvão. A montanha-russa como conhecemos hoje surgiu em <strong>1884</strong>, nos Estados Unidos; em 1959 surgiu o modelo de tubos de aço.",
+        "Outro exemplo: a montanha-russa mais comprida do mundo é a <strong>Steel Dragon</strong>, no <strong>Japão</strong>, com <strong>2 479 metros</strong> e velocidade de <strong>153 km/h</strong>.",
+        "Na apresentação oral de uma pesquisa, devemos indicar a fonte, preparar um roteiro, usar um cartaz e falar com tom de voz claro."
+      ]
+    },
+    {
+      "h": "Pronomes demonstrativos",
+      "figure": {
+        "src": "assets/4b/lp24-demonstrativos.svg",
+        "alt": "Esquema de distância: este perto de quem fala, esse perto de quem ouve, aquele longe dos dois.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "Os <strong>pronomes demonstrativos</strong> indicam a <strong>posição das coisas</strong> no espaço e no tempo em relação às pessoas do discurso. Na cena do parque: <em>Olhe <strong>este</strong> brinquedo!</em> (perto de quem fala) — <em>Prefiro <strong>aquele</strong>.</em> (longe dos dois).",
+        "<strong>1ª pessoa</strong> – perto de quem fala: <strong>este, esta, estes, estas, isto</strong>.",
+        "<strong>2ª pessoa</strong> – perto de quem ouve: <strong>esse, essa, esses, essas, isso</strong>.",
+        "<strong>3ª pessoa</strong> – longe dos dois: <strong>aquele, aquela, aqueles, aquelas, aquilo</strong>.",
+        "<strong>Isto, isso e aquilo</strong> são <strong>invariáveis</strong>: não mudam para feminino nem para plural. Na fala do dia a dia, muitas pessoas usam esse/essa/isso em qualquer situação, mas na escrita cuidadosa seguimos o quadro."
+      ],
+      "cards": [
+        {
+          "icon": "🤲",
+          "t": "este · esta · isto",
+          "d": "perto de quem fala"
+        },
+        {
+          "icon": "👉",
+          "t": "esse · essa · isso",
+          "d": "perto de quem ouve"
+        },
+        {
+          "icon": "🔭",
+          "t": "aquele · aquela · aquilo",
+          "d": "longe dos dois"
+        }
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Perto ou longe?",
+      "short": "Este, esse ou aquele",
+      "instructions": "Leia a pista e escolha o demonstrativo certo.",
+      "categories": [
+        "este / esta / isto",
+        "esse / essa / isso",
+        "aquele / aquela / aquilo"
+      ],
+      "items": [
+        {
+          "text": "O brinquedo está na mão de quem fala: “Olhe __ brinquedo!”",
+          "cat": 0,
+          "fill": "este"
+        },
+        {
+          "text": "A roda-gigante está perto de quem ouve: “Qual a altura __ roda-gigante?”",
+          "cat": 1,
+          "fill": "dessa"
+        },
+        {
+          "text": "O parque está longe dos dois: “Não lembro de ter visto __ parque.”",
+          "cat": 2,
+          "fill": "aquele"
+        },
+        {
+          "text": "Os dois estão dentro do parque: “__ parque é o mais divertido!”",
+          "cat": 0,
+          "fill": "Este"
+        },
+        {
+          "text": "A montanha-russa fica do outro lado do parque: “Prefiro __.”",
+          "cat": 2,
+          "fill": "aquela"
+        },
+        {
+          "text": "O amigo segura um prato: “Como __ prato se chama?”",
+          "cat": 1,
+          "fill": "esse"
+        },
+        {
+          "text": "Eu aponto o meu lanche: “__ aqui é delicioso.”",
+          "cat": 0,
+          "fill": "Isto"
+        },
+        {
+          "text": "Algo lá no alto do céu: “O que é __ lá em cima?”",
+          "cat": 2,
+          "fill": "aquilo"
+        }
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "É texto informativo?",
+      "short": "Texto informativo",
+      "instructions": "A afirmação combina com o texto informativo?",
+      "categories": [
+        "Sim, é do texto informativo",
+        "Não, é de outro tipo de texto"
+      ],
+      "items": [
+        {
+          "text": "Apresenta datas e locais precisos.",
+          "cat": 0
+        },
+        {
+          "text": "Tem fadas, magia e encantamento.",
+          "cat": 1
+        },
+        {
+          "text": "Revela curiosidades reais.",
+          "cat": 0
+        },
+        {
+          "text": "Começa com “Era uma vez…”.",
+          "cat": 1
+        },
+        {
+          "text": "Traz informações históricas.",
+          "cat": 0
+        },
+        {
+          "text": "É escrito em versos e estrofes com rima.",
+          "cat": 1
+        }
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Linha do tempo da montanha-russa",
+      "short": "Montanha-russa",
+      "instructions": "Ligue cada data ao que aconteceu.",
+      "pairs": [
+        [
+          "Século 15, Rússia",
+          "Blocos de gelo em rampas de neve"
+        ],
+        [
+          "1784, São Petersburgo",
+          "Primeiro trenzinho para esse fim"
+        ],
+        [
+          "1827, Estados Unidos",
+          "Trilhos de uma mina de carvão"
+        ],
+        [
+          "1884, Estados Unidos",
+          "A montanha-russa como conhecemos"
+        ],
+        [
+          "1959",
+          "Modelo de tubos de aço"
+        ]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Por que a montanha-russa recebeu esse nome?",
+      "options": [
+        "Porque a diversão começou na Rússia",
+        "Porque foi inventada por uma russa",
+        "Porque é vermelha como a Rússia",
+        "Porque fica numa montanha"
+      ],
+      "answer": 0,
+      "explain": "O texto diz que foi mesmo na Rússia, no século 15, que as pessoas deslizavam por rampas de neve."
+    },
+    {
+      "type": "mc",
+      "q": "Como funcionava a primeira montanha-russa?",
+      "options": [
+        "Pessoas deslizavam em blocos de gelo por rampas de neve",
+        "Um trem elétrico subia uma torre",
+        "Carrinhos corriam em trilhos de aço",
+        "Barcos desciam por um rio"
+      ],
+      "answer": 0,
+      "explain": "Subia-se ao alto e deslizava-se sentado em blocos de gelo cobertos de palha; jogava-se areia para frear."
+    },
+    {
+      "type": "mc",
+      "q": "O texto informativo se caracteriza por apresentar:",
+      "options": [
+        "acontecimentos reais com datas e locais",
+        "uma história inventada com magia",
+        "versos com rima e ritmo",
+        "instruções para montar um objeto"
+      ],
+      "answer": 0,
+      "explain": "Texto informativo traz informações reais e precisas sobre um tema."
+    },
+    {
+      "type": "mc",
+      "q": "A Steel Dragon tem 2 479 metros e atinge 153 km/h. Onde ela fica?",
+      "options": [
+        "No Japão",
+        "Nos Estados Unidos",
+        "No Brasil",
+        "Na Rússia"
+      ],
+      "answer": 0,
+      "explain": "O texto diz que ela fica no parque Nagashima Spaland, no Japão."
+    },
+    {
+      "type": "mc",
+      "q": "A velocidade e o comprimento da Steel Dragon são:",
+      "options": [
+        "153 km/h e 2 479 metros",
+        "2 479 km/h e 153 metros",
+        "79 km/h e 24 metros",
+        "2 153 km/h e 179 metros"
+      ],
+      "answer": 0,
+      "explain": "153 quilômetros por hora de velocidade e 2 479 metros de comprimento."
+    },
+    {
+      "type": "mc",
+      "q": "Na fala “Olhe este brinquedo. É muito radical!”, o pronome este indica que o brinquedo está:",
+      "options": [
+        "perto de quem fala",
+        "perto de quem ouve",
+        "longe dos dois",
+        "em outro dia"
+      ],
+      "answer": 0,
+      "explain": "Este, esta e isto são da 1ª pessoa: perto de quem fala."
+    },
+    {
+      "type": "mc",
+      "q": "O menino diz “Prefiro aquele.” apontando um brinquedo distante. Aquele indica:",
+      "options": [
+        "algo longe de quem fala e de quem ouve",
+        "algo na mão de quem fala",
+        "algo perto de quem ouve",
+        "algo que pertence a alguém"
+      ],
+      "answer": 0,
+      "explain": "Aquele, aquela e aquilo indicam o que está longe das duas pessoas da conversa."
+    },
+    {
+      "type": "mc",
+      "q": "Complete: “Qual é a altura ______ roda-gigante em que você andou?” (a roda-gigante está perto de quem ouve)",
+      "options": [
+        "dessa",
+        "desta",
+        "daquela",
+        "deste"
+      ],
+      "answer": 0,
+      "explain": "Perto de quem ouve usamos esse/essa: de + essa = dessa."
+    },
+    {
+      "type": "mc",
+      "q": "Qual pronome demonstrativo é invariável (não muda para feminino nem plural)?",
+      "options": [
+        "aquilo",
+        "aquela",
+        "estes",
+        "essa"
+      ],
+      "answer": 0,
+      "explain": "Isto, isso e aquilo são invariáveis."
+    },
+    {
+      "type": "mc",
+      "q": "“— Este cão — pensou o lobo — goza de boa saúde.” Pelo uso de este, o lobo está:",
+      "options": [
+        "próximo ao cão",
+        "muito distante do cão",
+        "sem ver o cão",
+        "dentro de casa"
+      ],
+      "answer": 0,
+      "explain": "Este indica proximidade de quem fala. O lobo está perto do cão."
+    },
+    {
+      "type": "mc",
+      "q": "Os pronomes demonstrativos indicam:",
+      "options": [
+        "a posição das coisas no espaço e no tempo",
+        "a quem uma coisa pertence",
+        "uma ação ou estado",
+        "o contrário de uma palavra"
+      ],
+      "answer": 0,
+      "explain": "Demonstrativos mostram onde está algo em relação às pessoas do discurso. Quem indica posse são os possessivos."
+    },
+    {
+      "type": "text",
+      "q": "De qual revista foi retirado o texto “Como surgiu a montanha-russa?”",
+      "answers": [
+        "superinteressante",
+        "super interessante",
+        "revista superinteressante",
+        "mundo estranho"
+      ],
+      "explain": "O texto saiu da seção Mundo Estranho, da revista Superinteressante."
+    }
+  ]
+}

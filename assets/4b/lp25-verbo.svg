@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<text x="450" y="58" font-size="34" fill="#1d805c" font-weight="800" text-anchor="middle">Verbos</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">ação · estado · fenômeno da natureza</text>
+<rect x="40" y="120" width="255" height="455" rx="24" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/>
+<text x="168" y="205" font-size="62" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏃</text>
+<text x="168" y="255" font-size="30" fill="#1d805c" font-weight="800" text-anchor="middle">Ação</text><text x="168" y="283" font-size="17" fill="#4a5872" font-weight="700" text-anchor="middle">o que alguém faz</text>
+<rect x="78" y="305" width="180" height="42" rx="21" fill="#fff" stroke="#1d805c" stroke-width="2"/><text x="168" y="334" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">correr</text>
+<rect x="78" y="357" width="180" height="42" rx="21" fill="#fff" stroke="#1d805c" stroke-width="2"/><text x="168" y="386" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">gritar</text>
+<rect x="78" y="409" width="180" height="42" rx="21" fill="#fff" stroke="#1d805c" stroke-width="2"/><text x="168" y="438" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">pular</text>
+<rect x="78" y="461" width="180" height="42" rx="21" fill="#fff" stroke="#1d805c" stroke-width="2"/><text x="168" y="490" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">ler</text>
+<rect x="78" y="513" width="180" height="42" rx="21" fill="#fff" stroke="#1d805c" stroke-width="2"/><text x="168" y="542" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">latir</text>
+<rect x="325" y="120" width="255" height="455" rx="24" fill="#eef3ff" stroke="#2456b8" stroke-width="3"/>
+<text x="453" y="205" font-size="62" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">😊</text>
+<text x="453" y="255" font-size="30" fill="#2456b8" font-weight="800" text-anchor="middle">Estado</text><text x="453" y="283" font-size="17" fill="#4a5872" font-weight="700" text-anchor="middle">como alguém está</text>
+<rect x="363" y="305" width="180" height="42" rx="21" fill="#fff" stroke="#2456b8" stroke-width="2"/><text x="453" y="334" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">ser</text>
+<rect x="363" y="357" width="180" height="42" rx="21" fill="#fff" stroke="#2456b8" stroke-width="2"/><text x="453" y="386" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">estar</text>
+<rect x="363" y="409" width="180" height="42" rx="21" fill="#fff" stroke="#2456b8" stroke-width="2"/><text x="453" y="438" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">ficar</text>
+<rect x="363" y="461" width="180" height="42" rx="21" fill="#fff" stroke="#2456b8" stroke-width="2"/><text x="453" y="490" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">permanecer</text>
+<rect x="363" y="513" width="180" height="42" rx="21" fill="#fff" stroke="#2456b8" stroke-width="2"/><text x="453" y="542" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">parecer</text>
+<rect x="610" y="120" width="255" height="455" rx="24" fill="#f1ecff" stroke="#6b49b8" stroke-width="3"/>
+<text x="738" y="205" font-size="62" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🌧️</text>
+<text x="738" y="255" font-size="30" fill="#6b49b8" font-weight="800" text-anchor="middle">Natureza</text><text x="738" y="283" font-size="17" fill="#4a5872" font-weight="700" text-anchor="middle">o tempo, o céu</text>
+<rect x="648" y="305" width="180" height="42" rx="21" fill="#fff" stroke="#6b49b8" stroke-width="2"/><text x="738" y="334" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">chover</text>
+<rect x="648" y="357" width="180" height="42" rx="21" fill="#fff" stroke="#6b49b8" stroke-width="2"/><text x="738" y="386" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">ventar</text>
+<rect x="648" y="409" width="180" height="42" rx="21" fill="#fff" stroke="#6b49b8" stroke-width="2"/><text x="738" y="438" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">nevar</text>
+<rect x="648" y="461" width="180" height="42" rx="21" fill="#fff" stroke="#6b49b8" stroke-width="2"/><text x="738" y="490" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">trovejar</text>
+<rect x="648" y="513" width="180" height="42" rx="21" fill="#fff" stroke="#6b49b8" stroke-width="2"/><text x="738" y="542" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">amanhecer</text>
+</svg>

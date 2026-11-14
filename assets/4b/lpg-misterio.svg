@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#6b49b8" font-weight="800" text-anchor="middle">O caminho do conto de mistério</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">O barulho no sótão</text>
+<circle cx="95" cy="260" r="74" fill="#fff" stroke="#6b49b8" stroke-width="4"/>
+<text x="95" y="278" font-size="30" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">👧🧒👵</text>
+<text x="95" y="372" font-size="22" fill="#6b49b8" font-weight="800" text-anchor="middle">Personagens</text><text x="95" y="398" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">Pedro, Bia e vovó</text>
+<line x1="155" y1="300" x2="215" y2="360" stroke="#6b49b8" stroke-width="3" stroke-linecap="round" marker-end="url(#ponta)"/>
+<circle cx="272" cy="400" r="74" fill="#fff" stroke="#6b49b8" stroke-width="4"/>
+<text x="272" y="418" font-size="50" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏚️</text>
+<text x="272" y="512" font-size="22" fill="#6b49b8" font-weight="800" text-anchor="middle">Lugar</text><text x="272" y="538" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">o sótão</text>
+<line x1="332" y1="360" x2="392" y2="300" stroke="#6b49b8" stroke-width="3" stroke-linecap="round" marker-end="url(#ponta)"/>
+<circle cx="449" cy="260" r="74" fill="#1f2147" stroke="#6b49b8" stroke-width="4"/>
+<text x="449" y="278" font-size="50" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">❓</text>
+<text x="449" y="372" font-size="22" fill="#6b49b8" font-weight="800" text-anchor="middle">Mistério</text><text x="449" y="398" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">toc-toc toda noite</text>
+<line x1="509" y1="300" x2="569" y2="360" stroke="#6b49b8" stroke-width="3" stroke-linecap="round" marker-end="url(#ponta)"/>
+<circle cx="626" cy="400" r="74" fill="#1f2147" stroke="#6b49b8" stroke-width="4"/>
+<text x="626" y="418" font-size="50" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🔦</text>
+<text x="626" y="512" font-size="22" fill="#6b49b8" font-weight="800" text-anchor="middle">Suspense</text><text x="626" y="538" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">a caixa se mexe!</text>
+<line x1="686" y1="360" x2="746" y2="300" stroke="#6b49b8" stroke-width="3" stroke-linecap="round" marker-end="url(#ponta)"/>
+<circle cx="803" cy="260" r="74" fill="#fff" stroke="#6b49b8" stroke-width="4"/>
+<text x="803" y="278" font-size="50" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🦉</text>
+<text x="803" y="372" font-size="22" fill="#6b49b8" font-weight="800" text-anchor="middle">Solução</text><text x="803" y="398" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">era uma coruja</text>
+</svg>

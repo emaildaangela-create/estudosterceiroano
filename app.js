@@ -477,7 +477,7 @@
     $('#cap-titulo').textContent=cap.title; $('#cap-sub').textContent=cap.subtitle||'';
     var plano=(typeof PEDAGOGY!=='undefined'&&PEDAGOGY[cap.id])||null;
     $('#cap-pergunta').innerHTML=plano&&plano.objectives?'<strong>Você vai aprender a:</strong> '+plano.objectives.map(textoSeguro).join(' · '):textoSeguro(conviteMissao(cap.theory[0]||{},0));
-    var videoTab=$('#aba-video'); videoTab.hidden=!cap.video;
+    var videoTab=$('#aba-video'); videoTab.hidden=!cap.video; $('#tab-jogos').hidden=!(cap.games&&cap.games.length);
     renderTeoria(cap); renderVideo(cap); jogoAtual=0; renderJogos(cap); iniciarQuiz(cap);
     selecionarAba((estado.aba==='video'&&!cap.video)?'teoria':estado.aba,false);
     mostrar('tela-capitulo');
@@ -511,7 +511,7 @@
     raiz.appendChild(card);
     var nav=criar('div','navegacao');
     var ant=criar('button','botao','← Anterior',{type:'button'}); ant.disabled=idx===0; ant.addEventListener('click',function(){guardarPasso(cap,idx-1);renderTeoria(cap);irTopo();});
-    var prox=criar('button','botao botao--primario',idx===cap.theory.length-1?'Vamos jogar →':'Próxima →',{type:'button'}); prox.addEventListener('click',function(){if(idx===cap.theory.length-1){selecionarAba('jogos',true);}else{guardarPasso(cap,idx+1);renderTeoria(cap);irTopo();}});
+    var temJogos=!!(cap.games&&cap.games.length), prox=criar('button','botao botao--primario',idx===cap.theory.length-1?(temJogos?'Vamos jogar →':'Começar o simulado →'):'Próxima →',{type:'button'}); prox.addEventListener('click',function(){if(idx===cap.theory.length-1){selecionarAba(temJogos?'jogos':'desafio',true);}else{guardarPasso(cap,idx+1);renderTeoria(cap);irTopo();}});
     nav.appendChild(ant);nav.appendChild(prox);raiz.appendChild(nav);
   }
   /* Cartões de vocabulário: em Inglês, tocar no cartão lê a palavra em voz alta. */
@@ -712,7 +712,7 @@
   function renderProducaoTextualJogo(raiz,cap,game,salvo) {
     salvo.textos=salvo.textos||{};var rascunho=salvo.textos[jogoAtual]||'';
     if(salvo.feitas[jogoAtual]){
-      var concluida=criar('section','jogo-card jogo-conclusao producao-jogo__conclusao','<h3>🎉 Produção textual concluída!</h3><p>Você criou um texto instrucional. Releia o resultado e confira se outra pessoa conseguiria seguir as orientações.</p>');
+      var concluida=criar('section','jogo-card jogo-conclusao producao-jogo__conclusao','<h3>🎉 '+textoSeguro(game.doneTitle||'Produção textual concluída!')+'</h3><p>'+textoSeguro(game.doneText||'Releia o seu texto e confira se ele está claro para quem for ler.')+'</p>');
       concluida.appendChild(criar('div','producao-jogo__texto',textoSeguro(rascunho).replace(/\n/g,'<br>')));
       var navPronto=criar('div','navegacao'),editar=criar('button','botao','Editar meu texto',{type:'button'}),desafio=criar('button','botao botao--primario','Ir para o desafio →',{type:'button'});
       editar.addEventListener('click',function(){salvo.feitas[jogoAtual]=false;salvo.passos[jogoAtual]=0;salvar();renderJogos(cap);});
@@ -724,11 +724,11 @@
     card.appendChild(criar('h3','jogo-pergunta',textoSeguro(game.instructions)));
     if(game.orientation)card.appendChild(criar('p','producao-textual__orientacao',textoSeguro(game.orientation)));
     if(game.checklist&&game.checklist.length){card.appendChild(criar('strong',null,'Antes de concluir, confira:'));var lista=criar('ul','producao-textual__lista');game.checklist.forEach(function(item){lista.appendChild(criar('li',null,textoSeguro(item)));});card.appendChild(lista);}
-    var campo=criar('textarea','campo producao-textual__campo',null,{rows:'12',placeholder:'Escreva aqui seu título e suas instruções…','aria-label':'Sua produção textual'});campo.value=rascunho;
+    var campo=criar('textarea','campo producao-textual__campo',null,{rows:'12',placeholder:game.placeholder||'Escreva aqui o seu texto…','aria-label':'Sua produção textual'});campo.value=rascunho;
     campo.addEventListener('input',function(){salvo.textos[jogoAtual]=campo.value;});campo.addEventListener('blur',salvar);card.appendChild(campo);
     card.appendChild(criar('p','producao-textual__aviso','Seu texto é autoral: não existe uma única resposta correta. O rascunho fica salvo neste aparelho.'));
     var feedback=criar('div',null,null,{role:'status','aria-live':'polite'}), concluirProducao=criar('button','botao botao--primario','Concluir produção',{type:'button'});
-    concluirProducao.addEventListener('click',function(){var texto=campo.value.trim(),minimo=game.minLength||60;if(texto.length<minimo){feedback.className='feedback feedback--erro';feedback.innerHTML='<strong>Desenvolva um pouco mais.</strong><p class="explicacao">Inclua o título e pelo menos quatro etapas completas.</p>';revelar(feedback);campo.focus();return;}salvo.textos[jogoAtual]=texto;salvo.passos[jogoAtual]=1;salvo.feitas[jogoAtual]=true;salvar();comemorar(true);renderJogos(cap);irTopo();});
+    concluirProducao.addEventListener('click',function(){var texto=campo.value.trim(),minimo=game.minLength||60;if(texto.length<minimo){feedback.className='feedback feedback--erro';feedback.innerHTML='<strong>Desenvolva um pouco mais.</strong><p class="explicacao">'+textoSeguro(game.tooShort||'Escreva um pouco mais e confira a lista acima.')+'</p>';revelar(feedback);campo.focus();return;}salvo.textos[jogoAtual]=texto;salvo.passos[jogoAtual]=1;salvo.feitas[jogoAtual]=true;salvar();comemorar(true);renderJogos(cap);irTopo();});
     card.appendChild(feedback);card.appendChild(concluirProducao);raiz.appendChild(card);
   }
   function montarNovaExperiencia(raiz,cap,game,perfil,salvo) {
@@ -974,13 +974,25 @@
     if(perfil.mode==='combinations')cena.appendChild(criar('div','cena-objetos',visualizarNumeros(item.text)));
     cena.appendChild(criar('p','cena-decisao__texto',textoSeguro(item.text)));stage.appendChild(cena);
     var opcoes=criar('div','decisoes'+(game.categories.length>2?' decisoes--muitas':''));
-    game.categories.forEach(function(nome,i){var b=criar('button','decisao',textoSeguro(rotuloCurto(nome)),{type:'button'});b.addEventListener('click',function(){if(i===item.cat){b.classList.add('decisao--certa');if(/__/.test(item.text))cena.querySelector('.cena-decisao__texto').textContent=completarLacuna(item.text,nome);feedbackInterativo(stage,true,mensagemDaEscolha(item,nome,perfil),'',concluir);}else{erros++;b.classList.add('decisao--errada');setTimeout(function(){b.classList.remove('decisao--errada');},500);if(erros===1)feedbackInterativo(stage,false,'Leia o cartão novamente e compare com as respostas.','',function(){});else if(erros>=2)mostrarPista(stage,'Pista: a melhor resposta é “'+rotuloCurto(game.categories[item.cat])+'”.');}});opcoes.appendChild(b);});stage.appendChild(opcoes);
+    game.categories.forEach(function(nome,i){var b=criar('button','decisao',textoSeguro(rotuloCurto(nome)),{type:'button'});b.addEventListener('click',function(){if(i===item.cat){b.classList.add('decisao--certa');if(/__/.test(item.text))cena.querySelector('.cena-decisao__texto').textContent=completarLacuna(item.text,nome,item);feedbackInterativo(stage,true,mensagemDaEscolha(item,nome,perfil),'',concluir);}else{erros++;b.classList.add('decisao--errada');setTimeout(function(){b.classList.remove('decisao--errada');},500);if(erros===1)feedbackInterativo(stage,false,'Leia o cartão novamente e compare com as respostas.','',function(){});else if(erros>=2)mostrarPista(stage,'Pista: a melhor resposta é “'+rotuloCurto(game.categories[item.cat])+'”.');}});opcoes.appendChild(b);});stage.appendChild(opcoes);
   }
   function mensagemDaEscolha(item,categoria,perfil) {
     if(perfil.result==='conjunto de pistas')return item.cat===0?'Sim. Isso ajuda a pessoa a entender e seguir os passos.':'Certo. Isso aparece em outros tipos de texto, não em uma instrução.';
     return 'Esta situação combina com “'+rotuloCurto(categoria)+'”.';
   }
-  function completarLacuna(texto,categoria) {var letra=/com S/i.test(categoria)?'s':(/com Z/i.test(categoria)?'z':'');return String(texto).replace('__',letra);}
+  /* Preenche a lacuna (__) da frase com a resposta escolhida: um campo
+     "fill" do item, o sufixo da categoria (-am, -ão) ou a própria categoria. */
+  function completarLacuna(texto,categoria,item) {
+    var c=String(categoria), preencher;
+    if(item&&item.fill)preencher=item.fill;
+    else if(/com S/i.test(c))preencher='s';
+    else if(/com Z/i.test(c))preencher='z';
+    else if(/^-(\S+)/.test(c))preencher=c.match(/^-(\S+)/)[1];
+    else preencher=c.replace(/\s*\(.*\)\s*/,'').replace(/\s*[\u{1F000}-\u{1FAFF}\u2600-\u27BF]+/gu,'').trim();
+    texto=String(texto);
+    if(/^__/.test(texto))preencher=preencher.charAt(0).toUpperCase()+preencher.slice(1);
+    return texto.replace('__',preencher);
+  }
   function rotuloCurto(nome) {
     return String(nome).replace('Característica do texto instrucional','Sim, é uma pista').replace('NÃO é característica dele','Não é uma pista').replace('Combinação de possibilidades','Combinar escolhas').replace('Adição de parcelas iguais','Repetir grupos iguais').replace(/^Substantivo$/,'Dá nome').replace(/^Adjetivo$/,'Mostra característica');
   }

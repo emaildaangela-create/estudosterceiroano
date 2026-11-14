@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#2456b8" font-weight="800" text-anchor="middle">Como surgiu a montanha-russa?</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">texto informativo: fatos reais, datas e lugares</text>
+<path d="M60 420 C 160 180, 240 180, 320 380 S 480 520, 560 300 S 760 140, 850 400" fill="none" stroke="#c0392b" stroke-width="10" stroke-linecap="round"/>
+<line x1="80" y1="560" x2="80" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="120" y1="560" x2="120" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="160" y1="560" x2="160" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="200" y1="560" x2="200" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="240" y1="560" x2="240" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="280" y1="560" x2="280" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="320" y1="560" x2="320" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="360" y1="560" x2="360" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="400" y1="560" x2="400" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="440" y1="560" x2="440" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="480" y1="560" x2="480" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="520" y1="560" x2="520" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="560" y1="560" x2="560" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="600" y1="560" x2="600" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="640" y1="560" x2="640" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="680" y1="560" x2="680" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="720" y1="560" x2="720" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="760" y1="560" x2="760" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="800" y1="560" x2="800" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<line x1="840" y1="560" x2="840" y2="470" stroke="#c9d3e6" stroke-width="4"/>
+<circle cx="100" cy="330" r="12" fill="#f2b705" stroke="#17213b" stroke-width="2"/>
+<rect x="20" y="222" width="160" height="84" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2"/>
+<text x="100" y="249" font-size="21" fill="#2456b8" font-weight="800" text-anchor="middle">século 15</text><text x="100" y="273" font-size="15" fill="#17213b" font-weight="700" text-anchor="middle">Rússia:</text><text x="100" y="293" font-size="15" fill="#17213b" font-weight="700" text-anchor="middle">blocos de gelo ❄️</text>
+<circle cx="270" cy="230" r="12" fill="#f2b705" stroke="#17213b" stroke-width="2"/>
+<rect x="190" y="254" width="160" height="84" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2"/>
+<text x="270" y="281" font-size="21" fill="#2456b8" font-weight="800" text-anchor="middle">1784</text><text x="270" y="305" font-size="15" fill="#17213b" font-weight="700" text-anchor="middle">São Petersburgo:</text><text x="270" y="325" font-size="15" fill="#17213b" font-weight="700" text-anchor="middle">1º trenzinho</text>
+<circle cx="440" cy="470" r="12" fill="#f2b705" stroke="#17213b" stroke-width="2"/>
+<rect x="360" y="362" width="160" height="84" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2"/>
+<text x="440" y="389" font-size="21" fill="#2456b8" font-weight="800" text-anchor="middle">1827</text><text x="440" y="413" font-size="15" fill="#17213b" font-weight="700" text-anchor="middle">EUA: trilhos de</text><text x="440" y="433" font-size="15" fill="#17213b" font-weight="700" text-anchor="middle">mina de carvão</text>
+<circle cx="600" cy="250" r="12" fill="#f2b705" stroke="#17213b" stroke-width="2"/>
+<rect x="520" y="274" width="160" height="84" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2"/>
+<text x="600" y="301" font-size="21" fill="#2456b8" font-weight="800" text-anchor="middle">1884</text><text x="600" y="325" font-size="15" fill="#17213b" font-weight="700" text-anchor="middle">EUA: a montanha-</text><text x="600" y="345" font-size="15" fill="#17213b" font-weight="700" text-anchor="middle">russa de hoje 🎢</text>
+<circle cx="790" cy="210" r="12" fill="#f2b705" stroke="#17213b" stroke-width="2"/>
+<rect x="710" y="234" width="160" height="84" rx="14" fill="#fff" stroke="#2456b8" stroke-width="2"/>
+<text x="790" y="261" font-size="21" fill="#2456b8" font-weight="800" text-anchor="middle">1959</text><text x="790" y="285" font-size="15" fill="#17213b" font-weight="700" text-anchor="middle">tubos de</text><text x="790" y="305" font-size="15" fill="#17213b" font-weight="700" text-anchor="middle">aço</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<text x="450" y="58" font-size="34" fill="#ba376d" font-weight="800" text-anchor="middle">Pronomes possessivos</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">mostram de quem é alguma coisa</text>
+<rect x="60" y="120" width="780" height="56" rx="14" fill="#ba376d"/>
+<text x="150.0" y="156" font-size="20" fill="#fff" font-weight="800" text-anchor="middle">Pessoa</text>
+<text x="315.0" y="156" font-size="20" fill="#fff" font-weight="800" text-anchor="middle">masc. sing.</text>
+<text x="465.0" y="156" font-size="20" fill="#fff" font-weight="800" text-anchor="middle">fem. sing.</text>
+<text x="615.0" y="156" font-size="20" fill="#fff" font-weight="800" text-anchor="middle">masc. pl.</text>
+<text x="765.0" y="156" font-size="20" fill="#fff" font-weight="800" text-anchor="middle">fem. pl.</text>
+<rect x="60" y="176" width="780" height="62" fill="#fff0f6"/>
+<text x="150.0" y="216" font-size="21" fill="#ba376d" font-weight="800" text-anchor="middle">eu</text>
+<text x="315.0" y="216" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">meu</text>
+<text x="465.0" y="216" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">minha</text>
+<text x="615.0" y="216" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">meus</text>
+<text x="765.0" y="216" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">minhas</text>
+<rect x="60" y="238" width="780" height="62" fill="#fff"/>
+<text x="150.0" y="278" font-size="21" fill="#ba376d" font-weight="800" text-anchor="middle">tu</text>
+<text x="315.0" y="278" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">teu</text>
+<text x="465.0" y="278" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">tua</text>
+<text x="615.0" y="278" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">teus</text>
+<text x="765.0" y="278" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">tuas</text>
+<rect x="60" y="300" width="780" height="62" fill="#fff0f6"/>
+<text x="150.0" y="340" font-size="21" fill="#ba376d" font-weight="800" text-anchor="middle">ele / ela</text>
+<text x="315.0" y="340" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">seu</text>
+<text x="465.0" y="340" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">sua</text>
+<text x="615.0" y="340" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">seus</text>
+<text x="765.0" y="340" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">suas</text>
+<rect x="60" y="362" width="780" height="62" fill="#fff"/>
+<text x="150.0" y="402" font-size="21" fill="#ba376d" font-weight="800" text-anchor="middle">nós</text>
+<text x="315.0" y="402" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">nosso</text>
+<text x="465.0" y="402" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">nossa</text>
+<text x="615.0" y="402" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">nossos</text>
+<text x="765.0" y="402" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">nossas</text>
+<rect x="60" y="424" width="780" height="62" fill="#fff0f6"/>
+<text x="150.0" y="464" font-size="21" fill="#ba376d" font-weight="800" text-anchor="middle">vós</text>
+<text x="315.0" y="464" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">vosso</text>
+<text x="465.0" y="464" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">vossa</text>
+<text x="615.0" y="464" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">vossos</text>
+<text x="765.0" y="464" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">vossas</text>
+<rect x="60" y="486" width="780" height="62" fill="#fff"/>
+<text x="150.0" y="526" font-size="21" fill="#ba376d" font-weight="800" text-anchor="middle">eles / elas</text>
+<text x="315.0" y="526" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">seu</text>
+<text x="465.0" y="526" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">sua</text>
+<text x="615.0" y="526" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">seus</text>
+<text x="765.0" y="526" font-size="24" fill="#17213b" font-weight="700" text-anchor="middle">suas</text>
+<rect x="60" y="120" width="780" height="428" rx="14" fill="none" stroke="#ba376d" stroke-width="3"/>
+<text x="450" y="580" font-size="18" fill="#4a5872" font-weight="700" text-anchor="middle">Exemplo: “A sua cabeça está na frente do relógio!” — a cabeça é do pai.</text>
+</svg>

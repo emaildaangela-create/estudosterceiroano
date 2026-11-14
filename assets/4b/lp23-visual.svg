@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<text x="450" y="58" font-size="34" fill="#ba376d" font-weight="800" text-anchor="middle">Poema visual</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">a forma das letras combina com o assunto</text>
+<line x1="300" y1="120" x2="300" y2="135" stroke="#17213b" stroke-width="6"/>
+<text x="267" y="197" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">P</text>
+<text x="243" y="243" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">Ê</text>
+<text x="218" y="289" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">N</text>
+<text x="194" y="335" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">D</text>
+<text x="169" y="380" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">U</text>
+<text x="145" y="426" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">L</text>
+<text x="121" y="472" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">O</text>
+<text x="283" y="203" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">P</text>
+<text x="270" y="253" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">Ê</text>
+<text x="258" y="304" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">N</text>
+<text x="245" y="354" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">D</text>
+<text x="233" y="405" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">U</text>
+<text x="220" y="455" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">L</text>
+<text x="208" y="506" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">O</text>
+<text x="300" y="205" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="1">P</text>
+<text x="300" y="257" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="1">Ê</text>
+<text x="300" y="309" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="1">N</text>
+<text x="300" y="361" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="1">D</text>
+<text x="300" y="413" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="1">U</text>
+<text x="300" y="465" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="1">L</text>
+<text x="300" y="517" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="1">O</text>
+<text x="317" y="203" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">P</text>
+<text x="330" y="253" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">Ê</text>
+<text x="342" y="304" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">N</text>
+<text x="355" y="354" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">D</text>
+<text x="367" y="405" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">U</text>
+<text x="380" y="455" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">L</text>
+<text x="392" y="506" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.5">O</text>
+<text x="333" y="197" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">P</text>
+<text x="357" y="243" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">Ê</text>
+<text x="382" y="289" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">N</text>
+<text x="406" y="335" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">D</text>
+<text x="431" y="380" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">U</text>
+<text x="455" y="426" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">L</text>
+<text x="479" y="472" font-size="36" font-weight="800" text-anchor="middle" fill="#ba376d" opacity="0.25">O</text>
+<text x="300" y="560" font-size="18" fill="#4a5872" font-weight="700" text-anchor="middle">“Pêndulo”: as letras balançam</text><text x="300" y="584" font-size="18" fill="#4a5872" font-weight="700" text-anchor="middle">como o pêndulo do relógio</text>
+<defs><path id="cab" d="M650 250 m-70 0 a70 70 0 1 1 140 0 a70 70 0 1 1 -140 0"/><path id="corpo" d="M650 430 m-105 0 a105 105 0 1 1 210 0 a105 105 0 1 1 -210 0"/></defs>
+<text font-size="20" font-weight="800" fill="#6b49b8"><textPath href="#cab">ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron </textPath></text>
+<text font-size="20" font-weight="800" fill="#6b49b8"><textPath href="#corpo">ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron ron </textPath></text>
+<path d="M595 195 l-10 -45 l40 25 z M705 195 l10 -45 l-40 25 z" fill="#6b49b8"/>
+<text x="650" y="255" font-size="26" fill="#4a5872" font-weight="800" text-anchor="middle">zzz</text>
+<text x="690" y="560" font-size="18" fill="#4a5872" font-weight="700" text-anchor="middle">“Canção para ninar gato</text><text x="690" y="584" font-size="18" fill="#4a5872" font-weight="700" text-anchor="middle">com insônia”: forma um gato</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#1d805c" font-weight="800" text-anchor="middle">Sujeito e predicado</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">Quem + verbo? → sujeito</text>
+<rect x="90" y="170" width="300" height="100" rx="18" fill="#e8f6f0" stroke="#1d805c" stroke-width="4"/><text x="240" y="235" font-size="38" fill="#1d805c" font-weight="800" text-anchor="middle">As frutas</text>
+<rect x="410" y="170" width="400" height="100" rx="18" fill="#eef3ff" stroke="#2456b8" stroke-width="4"/>
+<text x="610" y="235" font-size="38" font-weight="800" text-anchor="middle" fill="#2456b8"><tspan text-decoration="underline">fazem</tspan> bem à saúde.</text>
+<text x="240" y="310" font-size="24" fill="#1d805c" font-weight="800" text-anchor="middle">SUJEITO</text><text x="610" y="310" font-size="24" fill="#2456b8" font-weight="800" text-anchor="middle">PREDICADO</text>
+<text x="240" y="336" font-size="17" fill="#4a5872" font-weight="700" text-anchor="middle">de quem se fala</text><text x="610" y="336" font-size="17" fill="#4a5872" font-weight="700" text-anchor="middle">o que se diz do sujeito</text>
+<rect x="250" y="380" width="400" height="80" rx="40" fill="#fff9c4" stroke="#c9a400" stroke-width="3"/><text x="450" y="430" font-size="26" fill="#17213b" font-weight="800" text-anchor="middle">Quem faz bem à saúde?</text>
+<line x1="470" y1="270" x2="470" y2="375" stroke="#4a5872" stroke-width="3" stroke-linecap="round" marker-end="url(#ponta)"/><line x1="300" y1="400" x2="240" y2="345" stroke="#4a5872" stroke-width="3" stroke-linecap="round" marker-end="url(#ponta)"/>
+<text x="450" y="520" font-size="20" fill="#17213b" font-weight="800" text-anchor="middle">O verbo concorda com o sujeito:</text>
+<text x="450" y="555" font-size="21" fill="#1d805c" font-weight="700" text-anchor="middle">A fruta faz bem.  ·  As frutas fazem bem.</text>
+</svg>

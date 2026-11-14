@@ -30,7 +30,21 @@ const ARQUIVOS = [
   './assets/4b/ing08-regular.svg',
   './assets/4b/ing09-didnt.svg',
   './assets/4b/ing09-fimdesemana.svg',
-  './assets/4b/ing09-go-ing.svg'
+  './assets/4b/ing09-go-ing.svg',
+  './assets/4b/lp23-poema.svg',
+  './assets/4b/lp23-possessivos.svg',
+  './assets/4b/lp23-visual.svg',
+  './assets/4b/lp24-demonstrativos.svg',
+  './assets/4b/lp24-montanha.svg',
+  './assets/4b/lp25-conto.svg',
+  './assets/4b/lp25-sinonimo.svg',
+  './assets/4b/lp25-verbo.svg',
+  './assets/4b/lp26-am-ao.svg',
+  './assets/4b/lp26-tempos.svg',
+  './assets/4b/lp27-reportagem.svg',
+  './assets/4b/lp27-sujeito.svg',
+  './assets/4b/lpg-misterio.svg',
+  './assets/4b/lpg-poema.svg'
   // </arquivos-offline>
 ];
 

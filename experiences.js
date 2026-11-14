@@ -25,3 +25,36 @@ EXPERIENCE_PROFILES.sim_ingles = [
   { mode:'choice', goal:'Separar as palavras por Unit', prompt:'Em qual Unit esta palavra apareceu?', result:'mapa das Units' },
   { mode:'memoria', goal:'Memória do passado', prompt:'Ache o verbo e o seu passado.', result:'todos os pares' }
 ];
+Object.assign(EXPERIENCE_PROFILES, {
+  lp23: [
+    { mode:'choice', goal:'Descobrir de quem é cada coisa', prompt:'A palavra em destaque é de qual pessoa do discurso?', result:'mapa das pessoas do discurso' },
+    { mode:'transform', goal:'Completar com o pronome possessivo', prompt:'Qual possessivo completa a frase?', result:'frases completas' },
+    { mode:'choice', goal:'Separar poemas em versos e poemas visuais', prompt:'Que tipo de poema é este?', result:'varal de poemas' }
+  ],
+  lp24: [
+    { mode:'choice', goal:'Este, esse ou aquele?', prompt:'Onde está a coisa? Escolha o demonstrativo.', result:'mapa do parque' },
+    { mode:'choice', goal:'Reconhecer o texto informativo', prompt:'Isto é característica do texto informativo?', result:'ficha do texto informativo' },
+    { mode:'sequence', goal:'Montar a linha do tempo da montanha-russa', prompt:'Qual é a próxima data?', result:'linha do tempo' }
+  ],
+  lp25: [
+    { mode:'choice', goal:'Classificar os verbos', prompt:'Este verbo é ação, estado ou fenômeno da natureza?', result:'coleção de verbos' },
+    { mode:'memoria', goal:'Memória dos sinônimos', prompt:'Ache cada palavra e o seu sinônimo.', result:'todos os sinônimos' },
+    { mode:'transform', goal:'Virar a palavra do avesso', prompt:'Qual é o contrário desta palavra?', result:'painel de antônimos' }
+  ],
+  lp26: [
+    { mode:'choice', goal:'Máquina do tempo dos verbos', prompt:'Em que tempo está o verbo em destaque?', result:'linha do tempo dos verbos' },
+    { mode:'choice', goal:'-am ou -ão?', prompt:'Já aconteceu ou ainda vai acontecer?', result:'frases completas' },
+    { mode:'choice', goal:'Verbo ou substantivo?', prompt:'Esta palavra com -ão é nome ou verbo no futuro?', result:'coleção de palavras' }
+  ],
+  lp27: [
+    { mode:'explore', goal:'Achar o sujeito', prompt:'Quem + verbo? Escolha o sujeito.', result:'frases analisadas' },
+    { mode:'explore', goal:'Achar o predicado', prompt:'O que se diz sobre o sujeito?', result:'frases completas' },
+    { mode:'choice', goal:'Montar a reportagem', prompt:'Que parte da reportagem é esta?', result:'reportagem montada' }
+  ],
+  lp_generos: [
+    { mode:'choice', goal:'Detetive dos gêneros', prompt:'Esta pista é de um poema ou de um conto de mistério?', result:'fichário de gêneros' },
+    { mode:'explore', goal:'Desvendar o conto', prompt:'Que parte do conto é esta?', result:'mapa do conto' },
+    { mode:'writing' },
+    { mode:'writing' }
+  ]
+});

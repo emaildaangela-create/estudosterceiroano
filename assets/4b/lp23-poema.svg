@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#ba376d" font-weight="800" text-anchor="middle">O poema</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">título · versos · estrofes · rimas</text>
+<rect x="250" y="115" width="400" height="450" rx="22" fill="#fff" stroke="#ba376d" stroke-width="3"/>
+<text x="450" y="160" font-size="30" fill="#ba376d" font-weight="800" text-anchor="middle">O relógio</text>
+<text x="290" y="210" font-size="23" fill="#17213b" font-weight="600">Passa, tempo, <tspan fill="#6b49b8" font-weight="800">tic-tac</tspan></text>
+<text x="290" y="248" font-size="23" fill="#17213b" font-weight="600"><tspan fill="#6b49b8" font-weight="800">Tic-tac</tspan>, passa, hora</text>
+<text x="290" y="286" font-size="23" fill="#17213b" font-weight="600">Chega logo, <tspan fill="#6b49b8" font-weight="800">tic-tac</tspan></text>
+<text x="290" y="324" font-size="23" fill="#17213b" font-weight="600"><tspan fill="#6b49b8" font-weight="800">Tic-tac</tspan>, e vai-te embora</text>
+<text x="290" y="380" font-size="23" fill="#17213b" font-weight="600">Meu <tspan fill="#6b49b8" font-weight="800">tic-tac</tspan></text>
+<text x="290" y="418" font-size="23" fill="#17213b" font-weight="600">Dia e noite</text>
+<text x="290" y="456" font-size="23" fill="#17213b" font-weight="600">Noite e dia</text>
+<text x="290" y="494" font-size="23" fill="#17213b" font-weight="600"><tspan fill="#6b49b8" font-weight="800">Tic-tac</tspan>…</text>
+<path d="M635 185 q18 0 18 18 v110 q0 18 18 18 q-18 0 -18 18 v0" fill="none" stroke="#2456b8" stroke-width="3"/>
+<path d="M635 375 q18 0 18 18 v70 q0 18 18 18 q-18 0 -18 18" fill="none" stroke="#2456b8" stroke-width="3"/>
+<rect x="690" y="230" width="180" height="70" rx="14" fill="#eef3ff" stroke="#2456b8" stroke-width="2"/><text x="780" y="262" font-size="21" fill="#2456b8" font-weight="800" text-anchor="middle">estrofe 1</text><text x="780" y="287" font-size="16" fill="#4a5872" font-weight="700" text-anchor="middle">4 versos</text>
+<rect x="690" y="400" width="180" height="70" rx="14" fill="#eef3ff" stroke="#2456b8" stroke-width="2"/><text x="780" y="432" font-size="21" fill="#2456b8" font-weight="800" text-anchor="middle">estrofe 2</text><text x="780" y="457" font-size="16" fill="#4a5872" font-weight="700" text-anchor="middle">4 versos</text>
+<rect x="30" y="190" width="190" height="70" rx="14" fill="#fff0f6" stroke="#ba376d" stroke-width="2"/><text x="125" y="222" font-size="22" fill="#ba376d" font-weight="800" text-anchor="middle">verso</text><text x="125" y="247" font-size="16" fill="#4a5872" font-weight="700" text-anchor="middle">= cada linha</text>
+<line x1="220" y1="222" x2="282" y2="205" stroke="#ba376d" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="30" y="330" width="190" height="90" rx="14" fill="#f1ecff" stroke="#6b49b8" stroke-width="2"/><text x="125" y="362" font-size="22" fill="#6b49b8" font-weight="800" text-anchor="middle">tic-tac</text><text x="125" y="386" font-size="16" fill="#4a5872" font-weight="700" text-anchor="middle">som repetido</text><text x="125" y="406" font-size="16" fill="#4a5872" font-weight="700" text-anchor="middle">= ritmo do tempo</text>
+</svg>
