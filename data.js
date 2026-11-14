@@ -5479,7 +5479,1627 @@ const DISCIPLINAS = [
     "cor": "--roxo",
     "prova": "2026-11-24",
     "horario": "12h55 às 14h25",
-    "capitulos": []
+    "capitulos": [
+      {
+        "id": "hist12",
+        "module": "12",
+        "title": "O campo e a cidade",
+        "subtitle": "Vida, alimentação, trabalho e migração",
+        "theory": [
+          {
+            "h": "O campo e a cidade",
+            "figure": {
+              "src": "assets/4b/hist12-campo-cidade.svg",
+              "alt": "Paisagem dividida: à esquerda a cidade com prédios, trânsito e lojas próximas; à direita o campo com sítio, horta, animais, rio e estrada de terra.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "O campo é a <strong>zona rural</strong> e a cidade é a <strong>zona urbana</strong>. Nem sempre o campo é só mata e animais, e a cidade também tem parques e praças com árvores.",
+              "Na <strong>cidade</strong> vivem e trabalham muitas pessoas. Há <strong>prédios altos</strong> (arranha-céus), e as construções — moradias, lojas, bancos, escolas — ficam <strong>bem próximas</strong> umas das outras.",
+              "No <strong>campo</strong> ficam os <strong>sítios e fazendas</strong>, áreas de vegetação com rios e lagos, construções <strong>mais distantes</strong> umas das outras e <strong>ruas de terra</strong>. As pessoas cultivam hortas e pomares e criam animais (galinhas, porcos) para consumo próprio.",
+              "Algumas áreas rurais são <strong>isoladas</strong>: os moradores fazem longos deslocamentos até a cidade em busca de escola, hospital e banco. Mas muitas zonas urbanas e rurais estão <strong>interligadas</strong> (conectadas) e usam os mesmos serviços."
+            ]
+          },
+          {
+            "h": "A vida no campo e na cidade",
+            "p": [
+              "No campo, o <strong>ritmo de vida é menos acelerado</strong>. As pessoas têm mais contato com a natureza e conhecem a origem dos alimentos.",
+              "As <strong>crianças do campo</strong> costumam brincar <strong>ao ar livre</strong>: nadam em rios, brincam com animais, sobem em árvores, cultivam plantas.",
+              "Nas <strong>cidades</strong>, as brincadeiras acontecem mais <strong>dentro de casa</strong>, na casa de amigos ou em áreas de lazer de prédios e condomínios. Existem parques e praças, mas nem sempre as crianças os frequentam.",
+              "No poema <em>Fazenda da vovó</em>, Suellen mora numa cidade grande com barulho, trânsito e poluição, e passa as férias na fazenda da avó, onde fica “com o pé na terra” e descansa da agitação."
+            ]
+          },
+          {
+            "h": "A alimentação no campo e na cidade",
+            "figure": {
+              "src": "assets/4b/hist12-alimentos.svg",
+              "alt": "Três exemplos com milho: espiga in natura, milho em conserva (processado) e salgadinho de milho (ultraprocessado).",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "No <strong>campo</strong>, as pessoas costumam consumir alimentos produzidos perto de casa: ovos, leite, frutas, verduras, carnes e peixes. Por isso, os <strong>alimentos in natura</strong> (em seu estado natural) tendem a ser <strong>mais baratos e frescos</strong>.",
+              "Nas <strong>cidades</strong>, os alimentos in natura vêm de longe e nem sempre são tão baratos e frescos. Há muita oferta de <strong>produtos industrializados</strong>, com conservantes, sal ou açúcar. Como as pessoas gastam muito tempo em deslocamentos, têm menos tempo para cozinhar.",
+              "Exemplo com milho: a <strong>espiga</strong> é in natura; o <strong>milho em conserva</strong> é processado; o <strong>salgadinho de milho</strong> é ultraprocessado.",
+              "Desde <strong>2023</strong>, uma lei obriga os alimentos industrializados com muito sal, açúcar ou gordura a trazer um aviso no <strong>rótulo</strong> (ALTO EM…).",
+              "A indígena guarani Márcia Poty Vidal conta que seu povo prefere alimentos in natura: fubá, canjica, feijão, milho. “A gente luta para não comer coisa empacotada.”"
+            ]
+          },
+          {
+            "h": "Trabalho e migração",
+            "figure": {
+              "src": "assets/4b/hist12-migracao.svg",
+              "alt": "Linha do tempo: até 1950 a maioria vivia no campo; a partir de 1950 muitos migram para as cidades com as máquinas e as indústrias; em 1970 mais da metade vive nas cidades; hoje há neo-rurais voltando ao campo.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "Até meados do século passado, <strong>a maioria dos brasileiros vivia e trabalhava no campo</strong>.",
+              "A partir dos <strong>anos 1950</strong>, com a chegada de <strong>máquinas</strong> (como o trator) ao campo, havia menos trabalho para as pessoas. Ao mesmo tempo, o <strong>crescimento das indústrias</strong>, do comércio e dos serviços nas cidades atraía os camponeses. Muitos <strong>migraram para as cidades</strong> em busca de <strong>novas oportunidades de trabalho</strong> e de melhores condições de vida.",
+              "Já nos <strong>anos 1970</strong>, mais da metade da população brasileira vivia em cidades.",
+              "Hoje há o caminho inverso: os <strong>neo-rurais</strong> trocam a cidade pelo campo. Eder e Edna saíram de Curitiba para produzir morangos em Mandirituba (PR).",
+              "No início do século 20, <strong>imigrantes</strong> de outros países (como os japoneses) vieram trabalhar nas lavouras de café e nas fábricas do Brasil."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "sort",
+            "title": "Campo ou cidade?",
+            "short": "Campo ou cidade",
+            "instructions": "Esta característica é mais comum no campo ou na cidade?",
+            "categories": [
+              "Campo (zona rural) 🌾",
+              "Cidade (zona urbana) 🏙️"
+            ],
+            "items": [
+              {
+                "text": "Prédios altos, os arranha-céus",
+                "cat": 1
+              },
+              {
+                "text": "Sítios, fazendas, hortas e pomares",
+                "cat": 0
+              },
+              {
+                "text": "Construções muito próximas umas das outras",
+                "cat": 1
+              },
+              {
+                "text": "Ruas de terra, sem asfalto",
+                "cat": 0
+              },
+              {
+                "text": "Ritmo de vida mais acelerado",
+                "cat": 1
+              },
+              {
+                "text": "Crianças nadam em rios e sobem em árvores",
+                "cat": 0
+              },
+              {
+                "text": "Muita oferta de produtos industrializados",
+                "cat": 1
+              },
+              {
+                "text": "Alimentos in natura mais baratos e frescos",
+                "cat": 0
+              }
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "In natura, processado ou ultraprocessado?",
+            "short": "Tipos de alimento",
+            "instructions": "Classifique o alimento.",
+            "categories": [
+              "In natura 🌽",
+              "Processado 🥫",
+              "Ultraprocessado 🍬"
+            ],
+            "items": [
+              {
+                "text": "Espiga de milho",
+                "cat": 0
+              },
+              {
+                "text": "Milho em conserva",
+                "cat": 1
+              },
+              {
+                "text": "Salgadinho de milho",
+                "cat": 2
+              },
+              {
+                "text": "Ovo",
+                "cat": 0
+              },
+              {
+                "text": "Pão de padaria e queijo",
+                "cat": 1
+              },
+              {
+                "text": "Refrigerante e salsicha",
+                "cat": 2
+              },
+              {
+                "text": "Banana",
+                "cat": 0
+              },
+              {
+                "text": "Biscoito recheado",
+                "cat": 2
+              }
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "Por que migraram?",
+            "short": "Motivos da migração",
+            "instructions": "Isto foi um motivo da migração do campo para a cidade a partir de 1950?",
+            "categories": [
+              "Sim, foi um motivo ✅",
+              "Não foi um motivo ❌"
+            ],
+            "items": [
+              {
+                "text": "Crescimento das indústrias nas cidades",
+                "cat": 0
+              },
+              {
+                "text": "Gosto pessoal por férias",
+                "cat": 1
+              },
+              {
+                "text": "Busca por novas oportunidades de trabalho",
+                "cat": 0
+              },
+              {
+                "text": "Crescimento da população no campo",
+                "cat": 1
+              },
+              {
+                "text": "Máquinas no campo diminuíram o trabalho",
+                "cat": 0
+              },
+              {
+                "text": "Lazer",
+                "cat": 1
+              }
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "Qual característica é típica da zona urbana?",
+            "options": [
+              "Prédios altos e construções próximas",
+              "Sítios e fazendas distantes",
+              "Ruas de terra sem asfalto",
+              "Hortas para consumo próprio"
+            ],
+            "answer": 0,
+            "explain": "Nas cidades vivem muitas pessoas, por isso há prédios altos (arranha-céus) e construções bem próximas."
+          },
+          {
+            "type": "mc",
+            "q": "Em comparação com a cidade, o ritmo de vida no campo costuma ser:",
+            "options": [
+              "menos acelerado",
+              "mais acelerado",
+              "igual em todo lugar",
+              "sem nenhuma atividade"
+            ],
+            "answer": 0,
+            "explain": "No campo o ritmo é mais calmo, com mais contato com a natureza."
+          },
+          {
+            "type": "mc",
+            "q": "Onde as crianças costumam brincar mais ao ar livre, em contato com a natureza?",
+            "options": [
+              "No campo",
+              "Em apartamentos",
+              "Em shopping centers",
+              "Em escritórios"
+            ],
+            "answer": 0,
+            "explain": "No campo as crianças nadam em rios, sobem em árvores e brincam com animais."
+          },
+          {
+            "type": "mc",
+            "q": "O que são alimentos in natura?",
+            "options": [
+              "Alimentos em seu estado natural",
+              "Alimentos em lata",
+              "Salgadinhos de pacote",
+              "Comidas congeladas"
+            ],
+            "answer": 0,
+            "explain": "In natura = como vêm da natureza: frutas, verduras, ovos, leite."
+          },
+          {
+            "type": "mc",
+            "q": "Por que no campo os alimentos in natura tendem a ser mais baratos e frescos?",
+            "options": [
+              "São produzidos perto das moradias",
+              "Vêm de outros países",
+              "São feitos em fábricas",
+              "Têm muitos conservantes"
+            ],
+            "answer": 0,
+            "explain": "Os produtores estão próximos, então não há transporte longo."
+          },
+          {
+            "type": "mc",
+            "q": "O salgadinho de milho é um alimento:",
+            "options": [
+              "ultraprocessado",
+              "in natura",
+              "processado simples",
+              "orgânico"
+            ],
+            "answer": 0,
+            "explain": "Espiga = in natura; milho em conserva = processado; salgadinho = ultraprocessado."
+          },
+          {
+            "type": "mc",
+            "q": "Desde 2023, o que os alimentos com muito sal, açúcar ou gordura devem trazer?",
+            "options": [
+              "Um aviso no rótulo",
+              "Um brinquedo dentro",
+              "Um preço mais baixo",
+              "Uma receita no verso"
+            ],
+            "answer": 0,
+            "explain": "A lei obriga o aviso ALTO EM sódio, açúcar ou gordura no rótulo."
+          },
+          {
+            "type": "mc",
+            "q": "A partir dos anos 1950, muitos brasileiros migraram:",
+            "options": [
+              "do campo para as cidades",
+              "das cidades para o campo",
+              "do Brasil para o Japão",
+              "do litoral para as florestas"
+            ],
+            "answer": 0,
+            "explain": "Com a industrialização das cidades, muitos deixaram o campo em busca de trabalho."
+          },
+          {
+            "type": "mc",
+            "q": "Qual foi um dos principais motivos dessa migração?",
+            "options": [
+              "A busca por novas oportunidades de trabalho",
+              "O gosto pessoal por férias",
+              "O crescimento da população no campo",
+              "A vontade de ter mais lazer"
+            ],
+            "answer": 0,
+            "explain": "As indústrias e o comércio nas cidades ofereciam trabalho, e as máquinas no campo diminuíam as vagas."
+          },
+          {
+            "type": "mc",
+            "q": "Como se chamam as pessoas que trocam a cidade pelo campo hoje em dia?",
+            "options": [
+              "neo-rurais",
+              "imigrantes",
+              "camponeses antigos",
+              "turistas"
+            ],
+            "answer": 0,
+            "explain": "Neo-rurais fazem o caminho inverso: deixam a cidade para viver e trabalhar no campo."
+          },
+          {
+            "type": "mc",
+            "q": "No texto, Eder e Edna deixaram a cidade para:",
+            "options": [
+              "produzir morangos no campo",
+              "abrir uma loja no shopping",
+              "trabalhar em uma fábrica",
+              "morar em outro país"
+            ],
+            "answer": 0,
+            "explain": "O casal foi para Mandirituba (PR) e produz morangos."
+          },
+          {
+            "type": "mc",
+            "q": "As fotos de colheita de café de 1930 (manual) e de 2022 (com máquina) mostram que:",
+            "options": [
+              "as máquinas mudaram o trabalho no campo",
+              "o café não é mais plantado",
+              "o trabalho no campo nunca mudou",
+              "só crianças trabalham no campo"
+            ],
+            "answer": 0,
+            "explain": "A colheita mecanizada exige menos pessoas: é a modernização do campo."
+          },
+          {
+            "type": "text",
+            "q": "Em que década, mais da metade da população brasileira passou a viver em cidades? (Escreva o número, ex.: 1950)",
+            "answers": [
+              "1970",
+              "anos 1970",
+              "decada de 1970"
+            ],
+            "explain": "Nos anos 1970, mais da metade dos brasileiros já vivia em cidades."
+          }
+        ]
+      },
+      {
+        "id": "hist13",
+        "module": "13",
+        "title": "Trabalho e lazer",
+        "subtitle": "O que é lazer · Adultos também brincam · Cinema e circo",
+        "theory": [
+          {
+            "h": "O que é lazer?",
+            "p": [
+              "<strong>Lazer</strong> é toda atividade que envolve <strong>descanso e diversão</strong>. As crianças, que não devem trabalhar, têm mais tempo de lazer, mas o lazer é importante para <strong>pessoas de todas as idades</strong>.",
+              "A maioria dos adultos trabalha cerca de <strong>8 horas por dia</strong> e <strong>44 horas por semana</strong>. Por isso, as pausas — como a hora do almoço — e os momentos de descanso são fundamentais para a saúde.",
+              "Exemplos do livro: um advogado que gosta de cantar no tempo livre; um casal de professores que fotografa paisagens nas férias; uma engenheira que adora cozinhar nos fins de semana."
+            ]
+          },
+          {
+            "h": "Adultos também brincam",
+            "p": [
+              "Brincar é importante para <strong>todos</strong>: crianças, jovens, adultos e idosos.",
+              "Os adultos costumam ter <strong>hobbies</strong>. <em>Hobby</em> é uma palavra inglesa para atividades feitas só como lazer ou passatempo: colecionar coisas, pintar, desenhar, tocar um instrumento.",
+              "Fotos do livro: indígenas guarani jogando <strong>peteca</strong> (brincadeira de <strong>origem indígena</strong>), homens jogando <strong>capoeira</strong>, mulher praticando <em>slackline</em>, pessoas jogando basquete.",
+              "Especialistas dizem que brincar ajuda os adultos a <strong>fortalecer laços sociais, melhorar a memória, estimular a imaginação e o raciocínio</strong>.",
+              "No Brasil, o lazer ainda pode ser um <strong>privilégio</strong>: muitos trabalham demais, gastam horas no trânsito ou moram em lugares sem parques, praias e praças."
+            ]
+          },
+          {
+            "h": "O direito ao lazer e ao descanso",
+            "figure": {
+              "src": "assets/4b/hist13-direitos.svg",
+              "alt": "Linha do tempo dos direitos: 1925 férias de 15 dias, 1943 CLT, 1948 Declaração Universal dos Direitos Humanos, 1977 férias de 30 dias, 1988 Constituição Federal com descanso semanal remunerado.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "Depois da Segunda Guerra Mundial (1945), foi criada a <strong>ONU</strong>. Em <strong>1948</strong>, os países assinaram a <strong>Declaração Universal dos Direitos Humanos</strong>, que garante o <strong>direito ao repouso e ao lazer</strong> (Artigo 24). <strong>Eleanor Roosevelt</strong>, a “primeira-dama do mundo”, presidiu a comissão que a elaborou.",
+              "No Brasil, a <strong>Constituição Federal de 1988</strong> garante o <strong>descanso semanal remunerado</strong>: quem trabalha tem direito a descansar sem desconto no salário (normalmente no domingo).",
+              "As férias também foram conquistadas aos poucos: <strong>1925</strong> – 15 dias de férias para trabalhadores urbanos; <strong>1943</strong> – a <strong>CLT</strong> (Consolidação das Leis do Trabalho); <strong>1977</strong> – férias de <strong>30 dias</strong>.",
+              "As leis trabalhistas existem porque <strong>os trabalhadores lutaram por elas</strong> durante décadas, e não só pela boa vontade dos governos."
+            ]
+          },
+          {
+            "h": "O lazer gera trabalho",
+            "p": [
+              "Lazer e trabalho estão interligados: <strong>enquanto alguns se divertem, outros trabalham</strong>. O lazer gera empregos e riquezas para o país.",
+              "Profissionais do lazer e do entretenimento: cantores, cineastas, fotógrafos, músicos, atores, técnicos de som, pipoqueiros, guias de turismo…"
+            ]
+          },
+          {
+            "h": "A história do lazer: o cinema e o circo",
+            "figure": {
+              "src": "assets/4b/hist13-cinema-circo.svg",
+              "alt": "Comparação do cinema antigo (fim do século 19, filmes sem som e sem cor, cinemas de rua, roupas formais) com o atual (shopping, ingresso pela internet) e do circo antigo (animais) com o atual (sem animais, itinerante, palhaços e mágicos).",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "O <strong>cinema</strong> foi inventado no <strong>final do século 19</strong>. Os filmes <strong>não tinham som nem cores</strong> e eram exibidos em salas na rua, os <strong>“cinemas de rua”</strong>. As pessoas se vestiam de maneira <strong>formal</strong> para ir ao cinema.",
+              "Quando surgiu a <strong>televisão</strong>, muitos acharam que ela substituiria o cinema, mas o hábito continua, com mudanças: roupas informais, salas em <strong>shopping centers</strong> e ingressos pela <strong>internet</strong>. Alguns cinemas de rua resistem, como o Cine Theatro Brasil, em Belo Horizonte.",
+              "Hoje o Brasil tem muitas salas, mas só <strong>7% dos municípios</strong> têm cinema: cerca de <strong>90 milhões</strong> de brasileiros vivem em cidades sem cinema.",
+              "O <strong>circo</strong> é um entretenimento antigo. No passado, atrações com <strong>animais</strong> eram comuns; hoje são raras, pois as pessoas estão mais conscientes dos <strong>maus-tratos aos animais</strong>.",
+              "O que não mudou é a <strong>tradição itinerante</strong>: o circo viaja de cidade em cidade, monta a tenda e se apresenta no <strong>picadeiro</strong> (área central do circo). Trabalhadores do circo: palhaço, mágico, trapezista, malabarista, pipoqueiro."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "sort",
+            "title": "Lazer ou trabalho?",
+            "short": "Lazer ou trabalho",
+            "instructions": "A pessoa está em momento de lazer ou trabalhando?",
+            "categories": [
+              "Lazer 🎉",
+              "Trabalho 🛠️"
+            ],
+            "items": [
+              {
+                "text": "Pessoas comendo pipoca e vendo um filme",
+                "cat": 0
+              },
+              {
+                "text": "Equipe filmando um filme no estúdio",
+                "cat": 1
+              },
+              {
+                "text": "Amigos jogando peteca no fim de semana",
+                "cat": 0
+              },
+              {
+                "text": "Trapezista se apresentando no circo",
+                "cat": 1
+              },
+              {
+                "text": "Família fazendo piquenique no parque",
+                "cat": 0
+              },
+              {
+                "text": "Pipoqueiro vendendo pipoca no circo",
+                "cat": 1
+              },
+              {
+                "text": "Engenheira cozinhando por diversão no domingo",
+                "cat": 0
+              },
+              {
+                "text": "Técnico preparando turistas para o arvorismo",
+                "cat": 1
+              }
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "Antes ou hoje?",
+            "short": "Cinema e circo",
+            "instructions": "Isto era comum antigamente ou é comum hoje?",
+            "categories": [
+              "Antigamente 🎞️",
+              "Hoje 📱"
+            ],
+            "items": [
+              {
+                "text": "Filmes sem som e sem cores",
+                "cat": 0
+              },
+              {
+                "text": "Comprar ingresso pela internet",
+                "cat": 1
+              },
+              {
+                "text": "Vestir-se de maneira formal para ir ao cinema",
+                "cat": 0
+              },
+              {
+                "text": "Salas de cinema dentro de shopping centers",
+                "cat": 1
+              },
+              {
+                "text": "Muitas atrações com animais no circo",
+                "cat": 0
+              },
+              {
+                "text": "Circo sem animais, com palhaços e mágicos",
+                "cat": 1
+              }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Linha do tempo dos direitos",
+            "short": "Direitos conquistados",
+            "instructions": "Ligue cada data à conquista.",
+            "pairs": [
+              [
+                "1925",
+                "15 dias de férias para trabalhadores urbanos"
+              ],
+              [
+                "1943",
+                "CLT – Consolidação das Leis do Trabalho"
+              ],
+              [
+                "1948",
+                "Declaração Universal dos Direitos Humanos"
+              ],
+              [
+                "1977",
+                "Férias de 30 dias"
+              ],
+              [
+                "1988",
+                "Constituição Federal: descanso semanal remunerado"
+              ]
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "O que é lazer?",
+            "options": [
+              "Toda atividade de descanso e diversão",
+              "Só o trabalho feito em casa",
+              "Uma profissão do circo",
+              "A hora de ir para a escola"
+            ],
+            "answer": 0,
+            "explain": "Lazer é toda atividade que envolve descanso e diversão."
+          },
+          {
+            "type": "mc",
+            "q": "O lazer é importante para:",
+            "options": [
+              "pessoas de todas as idades",
+              "somente crianças",
+              "somente idosos",
+              "ninguém"
+            ],
+            "answer": 0,
+            "explain": "Crianças, jovens, adultos e idosos precisam de descanso e diversão."
+          },
+          {
+            "type": "mc",
+            "q": "O que é um hobby?",
+            "options": [
+              "Uma atividade feita como passatempo",
+              "Um tipo de trabalho pago",
+              "Um documento de direitos",
+              "Um prédio de cinema"
+            ],
+            "answer": 0,
+            "explain": "Hobby é uma atividade feita só como lazer: colecionar, pintar, tocar um instrumento."
+          },
+          {
+            "type": "mc",
+            "q": "A peteca é uma brincadeira de origem:",
+            "options": [
+              "indígena",
+              "japonesa",
+              "alemã",
+              "portuguesa"
+            ],
+            "answer": 0,
+            "explain": "O livro mostra indígenas guarani jogando peteca feita de folha de palmeira."
+          },
+          {
+            "type": "mc",
+            "q": "Qual documento de 1948 garante o direito ao repouso e ao lazer?",
+            "options": [
+              "Declaração Universal dos Direitos Humanos",
+              "Constituição de 1988",
+              "Lei dos rótulos de 2023",
+              "Certidão de nascimento"
+            ],
+            "answer": 0,
+            "explain": "O Artigo 24 da Declaração diz que todo ser humano tem direito a repouso e lazer."
+          },
+          {
+            "type": "mc",
+            "q": "A Constituição Federal de 1988 garante aos trabalhadores:",
+            "options": [
+              "o descanso semanal remunerado",
+              "trabalhar sem nenhum descanso",
+              "férias de 15 dias apenas",
+              "salário só para quem não descansa"
+            ],
+            "answer": 0,
+            "explain": "Quem trabalha tem direito a um dia de descanso por semana sem desconto no salário."
+          },
+          {
+            "type": "mc",
+            "q": "As leis trabalhistas, como as férias de 30 dias, existem hoje porque:",
+            "options": [
+              "os trabalhadores lutaram por elas",
+              "o governo teve boa vontade",
+              "sempre existiram",
+              "foram criadas em 1925 e nunca mudaram"
+            ],
+            "answer": 0,
+            "explain": "A historiadora explica que houve décadas de luta dos trabalhadores."
+          },
+          {
+            "type": "mc",
+            "q": "O que significa a frase “Enquanto alguns se divertem, outros trabalham”?",
+            "options": [
+              "O lazer de uns depende do trabalho de outros",
+              "Ninguém trabalha nas festas",
+              "Só crianças trabalham",
+              "Lazer e trabalho nunca se misturam"
+            ],
+            "answer": 0,
+            "explain": "Cantores, técnicos, pipoqueiros e muitos outros trabalham para garantir a diversão das pessoas."
+          },
+          {
+            "type": "mc",
+            "q": "Como eram os primeiros filmes de cinema, no final do século 19?",
+            "options": [
+              "Sem som e sem cores",
+              "Coloridos e em 3D",
+              "Vistos pela internet",
+              "Exibidos só na televisão"
+            ],
+            "answer": 0,
+            "explain": "Os primeiros filmes não tinham som nem cores e eram exibidos nos cinemas de rua."
+          },
+          {
+            "type": "mc",
+            "q": "Segundo o texto, no Brasil:",
+            "options": [
+              "milhões de pessoas vivem em cidades sem cinema",
+              "toda cidade tem cinema",
+              "não existem mais cinemas",
+              "o cinema é um lazer para todos"
+            ],
+            "answer": 0,
+            "explain": "Só 7% dos municípios têm sala de cinema; cerca de 90 milhões vivem em cidades sem cinema."
+          },
+          {
+            "type": "mc",
+            "q": "Por que hoje os circos quase não usam animais?",
+            "options": [
+              "Por causa dos maus-tratos aos animais",
+              "Porque os animais ficaram caros",
+              "Porque os circos acabaram",
+              "Porque os animais não viajam"
+            ],
+            "answer": 0,
+            "explain": "As pessoas estão mais conscientes dos maus-tratos aos animais."
+          },
+          {
+            "type": "mc",
+            "q": "O circo é itinerante. Isso quer dizer que ele:",
+            "options": [
+              "viaja de cidade em cidade",
+              "fica sempre no mesmo lugar",
+              "só funciona no inverno",
+              "tem só um artista"
+            ],
+            "answer": 0,
+            "explain": "Itinerante = que viaja, se desloca constantemente."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama a área central do circo, onde acontecem as apresentações?",
+            "answers": [
+              "picadeiro",
+              "o picadeiro"
+            ],
+            "explain": "Picadeiro é a área central do circo, reservada às atrações."
+          }
+        ]
+      },
+      {
+        "id": "hist14",
+        "module": "14",
+        "title": "Muitos jeitos de festejar",
+        "subtitle": "Motivos e jeitos de festejar · Brasil, um país festeiro",
+        "theory": [
+          {
+            "h": "Muitos motivos e jeitos de festejar",
+            "p": [
+              "<strong>Festejar</strong> é reunir-se para <strong>celebrar uma tradição ou um acontecimento</strong>: um ano novo, uma colheita, o nascimento de uma criança, a posse de um líder… É um costume muito antigo.",
+              "Algumas festas acontecem em quase todo o país, como o <strong>Ano-Novo</strong> (31 de dezembro para 1º de janeiro). Outras são de uma região, como o <strong>Festival Folclórico de Parintins</strong> (AM), no fim de junho, com os bois Garantido e Caprichoso.",
+              "Muitas festas antigas de <strong>origem religiosa</strong> foram trazidas pelos <strong>portugueses</strong>. Um exemplo é a <strong>Folia do Divino</strong>, uma das celebrações mais antigas do catolicismo popular brasileiro.",
+              "Os povos indígenas também têm suas festas. O <strong>Kuarup</strong>, dos povos do <strong>Xingu</strong> (MT), é um ritual de <strong>homenagem às pessoas que já morreram</strong>: eles acreditam que os mortos não querem ver os vivos tristes. Há pinturas corporais, flautas uruá e a luta huka-huka."
+            ]
+          },
+          {
+            "h": "Brasil, um país festeiro",
+            "figure": {
+              "src": "assets/4b/hist14-festas.svg",
+              "alt": "Calendário de festas brasileiras: Carnaval em fevereiro e março, festas juninas em junho com Santo Antônio, São João e São Pedro, Parintins em junho, Círio de Nazaré em outubro, Oktoberfest em outubro e Congada.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "<strong>Festas juninas</strong>: trazidas pelos <strong>portugueses</strong>, de origem religiosa. Celebram os santos juninos: <strong>Santo Antônio (13)</strong>, <strong>São João (24)</strong> e <strong>São Pedro (29 de junho)</strong>.",
+              "<strong>Círio de Nazaré</strong>: festa religiosa em <strong>Belém (PA)</strong>, todo mês de <strong>outubro</strong>, há mais de duzentos anos. Milhares de romeiros caminham em homenagem a Nossa Senhora de Nazaré. A devoção também veio de Portugal.",
+              "<strong>Congada</strong>: trazida pelos <strong>africanos</strong>. Lembra a coroação do rei e da rainha do antigo Reino do Congo, na África.",
+              "<strong>Carnaval</strong>: herança dos portugueses, acontece entre <strong>fevereiro e março</strong>. O Carnaval do <strong>Rio de Janeiro</strong> é o maior do mundo (Livro dos Recordes). Também é famoso em Recife e Olinda (bonecos gigantes), Salvador, São Paulo e Belo Horizonte."
+            ]
+          },
+          {
+            "h": "Cada cidade, uma festa",
+            "p": [
+              "Quase toda cidade tem sua festa. Muitas celebram o <strong>aniversário de fundação</strong>: Salvador (29 de março de 1549) e São Paulo (25 de janeiro de 1554).",
+              "Os imigrantes também trouxeram festas: o <strong>Bon Odori</strong>, dos descendentes de <strong>japoneses</strong> em São Paulo, e a <strong>Oktoberfest</strong>, que celebra as tradições <strong>alemãs</strong> em Blumenau (SC), em outubro.",
+              "O <strong>bumba meu boi</strong>, festejado principalmente no Nordeste, tem mais de duzentos anos. Conta a história de <strong>Pai Francisco e Mãe Catirina</strong>, um casal de negros escravizados: Catirina, grávida, queria comer língua de boi; Francisco matou o boi mais bonito da fazenda; os curandeiros ressuscitaram o boi e todos festejaram.",
+              "<strong>Feriados</strong> são dias em que a maioria não trabalha nem vai à escola: 1º de janeiro, 21 de abril (Tiradentes), 1º de maio (Trabalho), 7 de setembro (Independência), 12 de outubro, 15 de novembro, 20 de novembro (Consciência Negra) e 25 de dezembro (Natal)."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "sort",
+            "title": "Quem trouxe a festa?",
+            "short": "Origem das festas",
+            "instructions": "Qual povo trouxe ou criou esta festa?",
+            "categories": [
+              "Portugueses ⛪",
+              "Africanos 👑",
+              "Indígenas 🪶",
+              "Imigrantes europeus e asiáticos 🌍"
+            ],
+            "items": [
+              {
+                "text": "Festas juninas",
+                "cat": 0
+              },
+              {
+                "text": "Congada",
+                "cat": 1
+              },
+              {
+                "text": "Kuarup",
+                "cat": 2
+              },
+              {
+                "text": "Oktoberfest",
+                "cat": 3
+              },
+              {
+                "text": "Folia do Divino",
+                "cat": 0
+              },
+              {
+                "text": "Bon Odori",
+                "cat": 3
+              },
+              {
+                "text": "Círio de Nazaré (a devoção)",
+                "cat": 0
+              },
+              {
+                "text": "Carnaval",
+                "cat": 0
+              }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Onde e quando é a festa?",
+            "short": "Festa e lugar",
+            "instructions": "Ligue cada festa ao lugar ou à data.",
+            "pairs": [
+              [
+                "Círio de Nazaré",
+                "Belém (PA), em outubro"
+              ],
+              [
+                "Festival de Parintins",
+                "Amazonas, no fim de junho"
+              ],
+              [
+                "Kuarup",
+                "Parque Indígena do Xingu (MT)"
+              ],
+              [
+                "Oktoberfest",
+                "Blumenau (SC)"
+              ],
+              [
+                "Maior Carnaval do mundo",
+                "Rio de Janeiro (RJ)"
+              ],
+              [
+                "Bonecos gigantes no Carnaval",
+                "Olinda (PE)"
+              ]
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Santos juninos",
+            "short": "Festas juninas",
+            "instructions": "Ligue o santo ao dia de junho.",
+            "pairs": [
+              [
+                "Santo Antônio",
+                "13 de junho"
+              ],
+              [
+                "São João",
+                "24 de junho"
+              ],
+              [
+                "São Pedro",
+                "29 de junho"
+              ]
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "Festejar é:",
+            "options": [
+              "reunir-se para celebrar uma tradição ou acontecimento",
+              "trabalhar mais horas para ganhar dinheiro",
+              "viajar sozinho para outro país",
+              "ficar em casa estudando para a prova"
+            ],
+            "answer": 0,
+            "explain": "Festejar é se reunir para celebrar algo: um ano novo, uma colheita, um nascimento."
+          },
+          {
+            "type": "mc",
+            "q": "As festas juninas foram trazidas ao Brasil pelos:",
+            "options": [
+              "portugueses",
+              "japoneses",
+              "alemães",
+              "indígenas"
+            ],
+            "answer": 0,
+            "explain": "São festas de origem religiosa trazidas pelos portugueses."
+          },
+          {
+            "type": "mc",
+            "q": "Qual santo é celebrado em 24 de junho?",
+            "options": [
+              "São João",
+              "Santo Antônio",
+              "São Pedro",
+              "São Benedito"
+            ],
+            "answer": 0,
+            "explain": "Santo Antônio dia 13, São João dia 24 e São Pedro dia 29."
+          },
+          {
+            "type": "mc",
+            "q": "O Círio de Nazaré acontece:",
+            "options": [
+              "em Belém (PA), em outubro",
+              "em Olinda, no Carnaval",
+              "em Blumenau, em junho",
+              "no Xingu, em dezembro"
+            ],
+            "answer": 0,
+            "explain": "Todo mês de outubro, milhares de romeiros caminham em Belém em homenagem a Nossa Senhora de Nazaré."
+          },
+          {
+            "type": "mc",
+            "q": "A Congada foi trazida ao Brasil pelos:",
+            "options": [
+              "africanos",
+              "portugueses",
+              "alemães",
+              "japoneses"
+            ],
+            "answer": 0,
+            "explain": "A Congada lembra a coroação do rei e da rainha do antigo Reino do Congo, na África."
+          },
+          {
+            "type": "mc",
+            "q": "O Kuarup é um ritual indígena do Xingu que:",
+            "options": [
+              "homenageia as pessoas que já morreram",
+              "comemora o Ano-Novo",
+              "celebra o aniversário da cidade",
+              "é uma festa de origem alemã"
+            ],
+            "answer": 0,
+            "explain": "Os povos do Xingu acreditam que os mortos não querem ver os vivos tristes."
+          },
+          {
+            "type": "mc",
+            "q": "Segundo o Livro dos Recordes, o maior Carnaval do mundo é o de:",
+            "options": [
+              "Rio de Janeiro",
+              "Salvador",
+              "Recife",
+              "São Paulo"
+            ],
+            "answer": 0,
+            "explain": "São mais de 2 milhões de pessoas por dia nas ruas do Rio de Janeiro."
+          },
+          {
+            "type": "mc",
+            "q": "A Oktoberfest, em Blumenau (SC), celebra as tradições dos imigrantes:",
+            "options": [
+              "alemães",
+              "japoneses",
+              "africanos",
+              "portugueses"
+            ],
+            "answer": 0,
+            "explain": "É um festival parecido com o de Munique, na Alemanha."
+          },
+          {
+            "type": "mc",
+            "q": "O Bon Odori é um festival dos descendentes de:",
+            "options": [
+              "japoneses",
+              "alemães",
+              "italianos",
+              "indígenas"
+            ],
+            "answer": 0,
+            "explain": "No estado de São Paulo, descendentes de japoneses celebram o Bon Odori."
+          },
+          {
+            "type": "mc",
+            "q": "O bumba meu boi conta a história de:",
+            "options": [
+              "Pai Francisco e Mãe Catirina",
+              "Santo Antônio e São Pedro",
+              "dom Pedro I",
+              "um rei do Congo"
+            ],
+            "answer": 0,
+            "explain": "Catirina queria comer língua de boi; o boi foi morto e depois ressuscitado pelos curandeiros."
+          },
+          {
+            "type": "mc",
+            "q": "Muitas cidades fazem festa para celebrar:",
+            "options": [
+              "o aniversário de fundação",
+              "o fim das aulas",
+              "o primeiro dia de chuva",
+              "a troca de prefeito"
+            ],
+            "answer": 0,
+            "explain": "Salvador (29/3/1549) e São Paulo (25/1/1554) comemoram sua fundação."
+          },
+          {
+            "type": "mc",
+            "q": "Qual destes feriados é religioso?",
+            "options": [
+              "25 de dezembro (Natal)",
+              "7 de setembro (Independência)",
+              "1º de maio (Dia do Trabalho)",
+              "21 de abril (Tiradentes)"
+            ],
+            "answer": 0,
+            "explain": "O Natal é um feriado religioso, comemorado pelos cristãos."
+          },
+          {
+            "type": "text",
+            "q": "Em que estado brasileiro fica Parintins, onde acontece o Festival Folclórico?",
+            "answers": [
+              "amazonas",
+              "am",
+              "o amazonas"
+            ],
+            "explain": "Parintins fica no Amazonas (AM)."
+          }
+        ]
+      },
+      {
+        "id": "sim_historia",
+        "module": "★",
+        "title": "Simulado da prova",
+        "subtitle": "Resumo final + 15 questões sorteadas de todos os módulos",
+        "exam": {
+          "size": 15
+        },
+        "theory": [
+          {
+            "h": "Resumo da prova de História",
+            "p": [
+              "<strong>Módulo 12 – O campo e a cidade:</strong> cidade (zona urbana) tem prédios altos e construções próximas; campo (zona rural) tem sítios, fazendas, ruas de terra e ritmo mais calmo. No campo há mais alimentos in natura; na cidade, mais industrializados. A partir de 1950, muitos migraram do campo para as cidades em busca de trabalho; em 1970, mais da metade já vivia nas cidades. Hoje há neo-rurais.",
+              "<strong>Módulo 13 – Trabalho e lazer:</strong> lazer é descanso e diversão, importante para todas as idades. Adultos têm hobbies. Direitos: Declaração Universal dos Direitos Humanos (1948), CLT (1943), férias de 30 dias (1977), Constituição de 1988 (descanso semanal remunerado), conquistados pela luta dos trabalhadores. O lazer gera trabalho. Cinema: no início sem som e sem cor, nos cinemas de rua; hoje em shoppings. Circo: itinerante, hoje quase sem animais.",
+              "<strong>Módulo 14 – Muitos jeitos de festejar:</strong> festas juninas (portugueses; 13, 24 e 29 de junho), Folia do Divino e Círio de Nazaré (religiosas, Belém, outubro), Congada (africanos), Kuarup (indígenas do Xingu), Carnaval (Rio é o maior do mundo), Oktoberfest (alemães), Bon Odori (japoneses), bumba meu boi (Pai Francisco e Mãe Catirina)."
+            ],
+            "cards": [
+              {
+                "icon": "🏙️",
+                "t": "zona urbana",
+                "d": "cidade"
+              },
+              {
+                "icon": "🌾",
+                "t": "zona rural",
+                "d": "campo"
+              },
+              {
+                "icon": "🌽",
+                "t": "in natura",
+                "d": "alimento natural"
+              },
+              {
+                "icon": "🚚",
+                "t": "migração",
+                "d": "campo → cidade (1950)"
+              },
+              {
+                "icon": "🎨",
+                "t": "hobby",
+                "d": "passatempo"
+              },
+              {
+                "icon": "📜",
+                "t": "1948",
+                "d": "Direitos Humanos"
+              },
+              {
+                "icon": "🎪",
+                "t": "itinerante",
+                "d": "que viaja"
+              },
+              {
+                "icon": "🔥",
+                "t": "festas juninas",
+                "d": "portugueses"
+              },
+              {
+                "icon": "👑",
+                "t": "Congada",
+                "d": "africanos"
+              },
+              {
+                "icon": "🪶",
+                "t": "Kuarup",
+                "d": "indígenas do Xingu"
+              }
+            ]
+          }
+        ],
+        "games": [],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "Qual característica é típica da zona urbana?",
+            "options": [
+              "Prédios altos e construções próximas",
+              "Sítios e fazendas distantes",
+              "Ruas de terra sem asfalto",
+              "Hortas para consumo próprio"
+            ],
+            "answer": 0,
+            "explain": "Nas cidades vivem muitas pessoas, por isso há prédios altos (arranha-céus) e construções bem próximas.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "Em comparação com a cidade, o ritmo de vida no campo costuma ser:",
+            "options": [
+              "menos acelerado",
+              "mais acelerado",
+              "igual em todo lugar",
+              "sem nenhuma atividade"
+            ],
+            "answer": 0,
+            "explain": "No campo o ritmo é mais calmo, com mais contato com a natureza.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "Onde as crianças costumam brincar mais ao ar livre, em contato com a natureza?",
+            "options": [
+              "No campo",
+              "Em apartamentos",
+              "Em shopping centers",
+              "Em escritórios"
+            ],
+            "answer": 0,
+            "explain": "No campo as crianças nadam em rios, sobem em árvores e brincam com animais.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "O que são alimentos in natura?",
+            "options": [
+              "Alimentos em seu estado natural",
+              "Alimentos em lata",
+              "Salgadinhos de pacote",
+              "Comidas congeladas"
+            ],
+            "answer": 0,
+            "explain": "In natura = como vêm da natureza: frutas, verduras, ovos, leite.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "Por que no campo os alimentos in natura tendem a ser mais baratos e frescos?",
+            "options": [
+              "São produzidos perto das moradias",
+              "Vêm de outros países",
+              "São feitos em fábricas",
+              "Têm muitos conservantes"
+            ],
+            "answer": 0,
+            "explain": "Os produtores estão próximos, então não há transporte longo.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "O salgadinho de milho é um alimento:",
+            "options": [
+              "ultraprocessado",
+              "in natura",
+              "processado simples",
+              "orgânico"
+            ],
+            "answer": 0,
+            "explain": "Espiga = in natura; milho em conserva = processado; salgadinho = ultraprocessado.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "Desde 2023, o que os alimentos com muito sal, açúcar ou gordura devem trazer?",
+            "options": [
+              "Um aviso no rótulo",
+              "Um brinquedo dentro",
+              "Um preço mais baixo",
+              "Uma receita no verso"
+            ],
+            "answer": 0,
+            "explain": "A lei obriga o aviso ALTO EM sódio, açúcar ou gordura no rótulo.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "A partir dos anos 1950, muitos brasileiros migraram:",
+            "options": [
+              "do campo para as cidades",
+              "das cidades para o campo",
+              "do Brasil para o Japão",
+              "do litoral para as florestas"
+            ],
+            "answer": 0,
+            "explain": "Com a industrialização das cidades, muitos deixaram o campo em busca de trabalho.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "Qual foi um dos principais motivos dessa migração?",
+            "options": [
+              "A busca por novas oportunidades de trabalho",
+              "O gosto pessoal por férias",
+              "O crescimento da população no campo",
+              "A vontade de ter mais lazer"
+            ],
+            "answer": 0,
+            "explain": "As indústrias e o comércio nas cidades ofereciam trabalho, e as máquinas no campo diminuíam as vagas.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "Como se chamam as pessoas que trocam a cidade pelo campo hoje em dia?",
+            "options": [
+              "neo-rurais",
+              "imigrantes",
+              "camponeses antigos",
+              "turistas"
+            ],
+            "answer": 0,
+            "explain": "Neo-rurais fazem o caminho inverso: deixam a cidade para viver e trabalhar no campo.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "No texto, Eder e Edna deixaram a cidade para:",
+            "options": [
+              "produzir morangos no campo",
+              "abrir uma loja no shopping",
+              "trabalhar em uma fábrica",
+              "morar em outro país"
+            ],
+            "answer": 0,
+            "explain": "O casal foi para Mandirituba (PR) e produz morangos.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "As fotos de colheita de café de 1930 (manual) e de 2022 (com máquina) mostram que:",
+            "options": [
+              "as máquinas mudaram o trabalho no campo",
+              "o café não é mais plantado",
+              "o trabalho no campo nunca mudou",
+              "só crianças trabalham no campo"
+            ],
+            "answer": 0,
+            "explain": "A colheita mecanizada exige menos pessoas: é a modernização do campo.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "text",
+            "q": "Em que década, mais da metade da população brasileira passou a viver em cidades? (Escreva o número, ex.: 1950)",
+            "answers": [
+              "1970",
+              "anos 1970",
+              "decada de 1970"
+            ],
+            "explain": "Nos anos 1970, mais da metade dos brasileiros já vivia em cidades.",
+            "from": "O campo e a cidade"
+          },
+          {
+            "type": "mc",
+            "q": "O que é lazer?",
+            "options": [
+              "Toda atividade de descanso e diversão",
+              "Só o trabalho feito em casa",
+              "Uma profissão do circo",
+              "A hora de ir para a escola"
+            ],
+            "answer": 0,
+            "explain": "Lazer é toda atividade que envolve descanso e diversão.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "O lazer é importante para:",
+            "options": [
+              "pessoas de todas as idades",
+              "somente crianças",
+              "somente idosos",
+              "ninguém"
+            ],
+            "answer": 0,
+            "explain": "Crianças, jovens, adultos e idosos precisam de descanso e diversão.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "O que é um hobby?",
+            "options": [
+              "Uma atividade feita como passatempo",
+              "Um tipo de trabalho pago",
+              "Um documento de direitos",
+              "Um prédio de cinema"
+            ],
+            "answer": 0,
+            "explain": "Hobby é uma atividade feita só como lazer: colecionar, pintar, tocar um instrumento.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "A peteca é uma brincadeira de origem:",
+            "options": [
+              "indígena",
+              "japonesa",
+              "alemã",
+              "portuguesa"
+            ],
+            "answer": 0,
+            "explain": "O livro mostra indígenas guarani jogando peteca feita de folha de palmeira.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "Qual documento de 1948 garante o direito ao repouso e ao lazer?",
+            "options": [
+              "Declaração Universal dos Direitos Humanos",
+              "Constituição de 1988",
+              "Lei dos rótulos de 2023",
+              "Certidão de nascimento"
+            ],
+            "answer": 0,
+            "explain": "O Artigo 24 da Declaração diz que todo ser humano tem direito a repouso e lazer.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "A Constituição Federal de 1988 garante aos trabalhadores:",
+            "options": [
+              "o descanso semanal remunerado",
+              "trabalhar sem nenhum descanso",
+              "férias de 15 dias apenas",
+              "salário só para quem não descansa"
+            ],
+            "answer": 0,
+            "explain": "Quem trabalha tem direito a um dia de descanso por semana sem desconto no salário.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "As leis trabalhistas, como as férias de 30 dias, existem hoje porque:",
+            "options": [
+              "os trabalhadores lutaram por elas",
+              "o governo teve boa vontade",
+              "sempre existiram",
+              "foram criadas em 1925 e nunca mudaram"
+            ],
+            "answer": 0,
+            "explain": "A historiadora explica que houve décadas de luta dos trabalhadores.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "O que significa a frase “Enquanto alguns se divertem, outros trabalham”?",
+            "options": [
+              "O lazer de uns depende do trabalho de outros",
+              "Ninguém trabalha nas festas",
+              "Só crianças trabalham",
+              "Lazer e trabalho nunca se misturam"
+            ],
+            "answer": 0,
+            "explain": "Cantores, técnicos, pipoqueiros e muitos outros trabalham para garantir a diversão das pessoas.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "Como eram os primeiros filmes de cinema, no final do século 19?",
+            "options": [
+              "Sem som e sem cores",
+              "Coloridos e em 3D",
+              "Vistos pela internet",
+              "Exibidos só na televisão"
+            ],
+            "answer": 0,
+            "explain": "Os primeiros filmes não tinham som nem cores e eram exibidos nos cinemas de rua.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "Segundo o texto, no Brasil:",
+            "options": [
+              "milhões de pessoas vivem em cidades sem cinema",
+              "toda cidade tem cinema",
+              "não existem mais cinemas",
+              "o cinema é um lazer para todos"
+            ],
+            "answer": 0,
+            "explain": "Só 7% dos municípios têm sala de cinema; cerca de 90 milhões vivem em cidades sem cinema.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "Por que hoje os circos quase não usam animais?",
+            "options": [
+              "Por causa dos maus-tratos aos animais",
+              "Porque os animais ficaram caros",
+              "Porque os circos acabaram",
+              "Porque os animais não viajam"
+            ],
+            "answer": 0,
+            "explain": "As pessoas estão mais conscientes dos maus-tratos aos animais.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "O circo é itinerante. Isso quer dizer que ele:",
+            "options": [
+              "viaja de cidade em cidade",
+              "fica sempre no mesmo lugar",
+              "só funciona no inverno",
+              "tem só um artista"
+            ],
+            "answer": 0,
+            "explain": "Itinerante = que viaja, se desloca constantemente.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "text",
+            "q": "Como se chama a área central do circo, onde acontecem as apresentações?",
+            "answers": [
+              "picadeiro",
+              "o picadeiro"
+            ],
+            "explain": "Picadeiro é a área central do circo, reservada às atrações.",
+            "from": "Trabalho e lazer"
+          },
+          {
+            "type": "mc",
+            "q": "Festejar é:",
+            "options": [
+              "reunir-se para celebrar uma tradição ou acontecimento",
+              "trabalhar mais horas para ganhar dinheiro",
+              "viajar sozinho para outro país",
+              "ficar em casa estudando para a prova"
+            ],
+            "answer": 0,
+            "explain": "Festejar é se reunir para celebrar algo: um ano novo, uma colheita, um nascimento.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "As festas juninas foram trazidas ao Brasil pelos:",
+            "options": [
+              "portugueses",
+              "japoneses",
+              "alemães",
+              "indígenas"
+            ],
+            "answer": 0,
+            "explain": "São festas de origem religiosa trazidas pelos portugueses.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "Qual santo é celebrado em 24 de junho?",
+            "options": [
+              "São João",
+              "Santo Antônio",
+              "São Pedro",
+              "São Benedito"
+            ],
+            "answer": 0,
+            "explain": "Santo Antônio dia 13, São João dia 24 e São Pedro dia 29.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "O Círio de Nazaré acontece:",
+            "options": [
+              "em Belém (PA), em outubro",
+              "em Olinda, no Carnaval",
+              "em Blumenau, em junho",
+              "no Xingu, em dezembro"
+            ],
+            "answer": 0,
+            "explain": "Todo mês de outubro, milhares de romeiros caminham em Belém em homenagem a Nossa Senhora de Nazaré.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "A Congada foi trazida ao Brasil pelos:",
+            "options": [
+              "africanos",
+              "portugueses",
+              "alemães",
+              "japoneses"
+            ],
+            "answer": 0,
+            "explain": "A Congada lembra a coroação do rei e da rainha do antigo Reino do Congo, na África.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "O Kuarup é um ritual indígena do Xingu que:",
+            "options": [
+              "homenageia as pessoas que já morreram",
+              "comemora o Ano-Novo",
+              "celebra o aniversário da cidade",
+              "é uma festa de origem alemã"
+            ],
+            "answer": 0,
+            "explain": "Os povos do Xingu acreditam que os mortos não querem ver os vivos tristes.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "Segundo o Livro dos Recordes, o maior Carnaval do mundo é o de:",
+            "options": [
+              "Rio de Janeiro",
+              "Salvador",
+              "Recife",
+              "São Paulo"
+            ],
+            "answer": 0,
+            "explain": "São mais de 2 milhões de pessoas por dia nas ruas do Rio de Janeiro.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "A Oktoberfest, em Blumenau (SC), celebra as tradições dos imigrantes:",
+            "options": [
+              "alemães",
+              "japoneses",
+              "africanos",
+              "portugueses"
+            ],
+            "answer": 0,
+            "explain": "É um festival parecido com o de Munique, na Alemanha.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "O Bon Odori é um festival dos descendentes de:",
+            "options": [
+              "japoneses",
+              "alemães",
+              "italianos",
+              "indígenas"
+            ],
+            "answer": 0,
+            "explain": "No estado de São Paulo, descendentes de japoneses celebram o Bon Odori.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "O bumba meu boi conta a história de:",
+            "options": [
+              "Pai Francisco e Mãe Catirina",
+              "Santo Antônio e São Pedro",
+              "dom Pedro I",
+              "um rei do Congo"
+            ],
+            "answer": 0,
+            "explain": "Catirina queria comer língua de boi; o boi foi morto e depois ressuscitado pelos curandeiros.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "Muitas cidades fazem festa para celebrar:",
+            "options": [
+              "o aniversário de fundação",
+              "o fim das aulas",
+              "o primeiro dia de chuva",
+              "a troca de prefeito"
+            ],
+            "answer": 0,
+            "explain": "Salvador (29/3/1549) e São Paulo (25/1/1554) comemoram sua fundação.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "Qual destes feriados é religioso?",
+            "options": [
+              "25 de dezembro (Natal)",
+              "7 de setembro (Independência)",
+              "1º de maio (Dia do Trabalho)",
+              "21 de abril (Tiradentes)"
+            ],
+            "answer": 0,
+            "explain": "O Natal é um feriado religioso, comemorado pelos cristãos.",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "text",
+            "q": "Em que estado brasileiro fica Parintins, onde acontece o Festival Folclórico?",
+            "answers": [
+              "amazonas",
+              "am",
+              "o amazonas"
+            ],
+            "explain": "Parintins fica no Amazonas (AM).",
+            "from": "Muitos jeitos de festejar"
+          },
+          {
+            "type": "mc",
+            "q": "Qual alternativa mostra uma festa e o povo que a trouxe para o Brasil?",
+            "options": [
+              "Congada – africanos",
+              "Oktoberfest – portugueses",
+              "Kuarup – japoneses",
+              "Festas juninas – alemães"
+            ],
+            "answer": 0,
+            "explain": "Congada veio dos africanos. Oktoberfest é alemã, Kuarup é indígena e as festas juninas são portuguesas.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Um trabalhador que tem direito a descansar no domingo sem desconto no salário usa um direito garantido pela:",
+            "options": [
+              "Constituição Federal de 1988",
+              "lei dos rótulos de 2023",
+              "Folia do Divino",
+              "Oktoberfest"
+            ],
+            "answer": 0,
+            "explain": "É o descanso semanal remunerado da Constituição de 1988.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "A chegada de máquinas ao campo, a partir de 1950, fez com que:",
+            "options": [
+              "houvesse menos trabalho para as pessoas no campo",
+              "mais pessoas fossem morar no campo",
+              "as cidades ficassem vazias",
+              "as festas juninas acabassem"
+            ],
+            "answer": 0,
+            "explain": "As máquinas reduziram as vagas no campo, e muitos migraram para as cidades.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Qual destes é um alimento in natura?",
+            "options": [
+              "ovo",
+              "refrigerante",
+              "salsicha",
+              "biscoito recheado"
+            ],
+            "answer": 0,
+            "explain": "O ovo chega como vem da natureza; os outros são industrializados.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Pipoqueiro, palhaço e trapezista são exemplos de:",
+            "options": [
+              "trabalhadores do lazer",
+              "pessoas em férias",
+              "neo-rurais",
+              "imigrantes japoneses"
+            ],
+            "answer": 0,
+            "explain": "O lazer gera trabalho: enquanto uns se divertem, outros trabalham.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Qual festa acontece em junho e celebra Santo Antônio, São João e São Pedro?",
+            "options": [
+              "Festas juninas",
+              "Círio de Nazaré",
+              "Carnaval",
+              "Oktoberfest"
+            ],
+            "answer": 0,
+            "explain": "As festas juninas celebram os santos juninos nos dias 13, 24 e 29 de junho.",
+            "from": "Simulado"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "matematica",

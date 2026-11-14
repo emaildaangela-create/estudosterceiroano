@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<text x="450" y="58" font-size="34" fill="#6b49b8" font-weight="800" text-anchor="middle">O lazer muda com o tempo</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">cinema e circo: antes e hoje</text>
+<text x="335" y="130" font-size="28" fill="#8a5a2b" font-weight="800" text-anchor="middle">ANTES</text>
+<text x="665" y="130" font-size="28" fill="#2456b8" font-weight="800" text-anchor="middle">HOJE</text>
+<rect x="30" y="160" width="160" height="190" rx="18" fill="#fff" stroke="#6b49b8" stroke-width="3"/><text x="110" y="265" font-size="22" fill="#6b49b8" font-weight="800" text-anchor="middle">🎞️ Cinema</text>
+<rect x="200" y="160" width="300" height="190" rx="18" fill="#f6efe6" stroke="#8a5a2b" stroke-width="3"/>
+<text x="350" y="215" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">sem som e sem cor</text>
+<text x="350" y="267" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">cinema de rua</text>
+<text x="350" y="319" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">roupa formal</text>
+<rect x="530" y="160" width="300" height="190" rx="18" fill="#eef3ff" stroke="#2456b8" stroke-width="3"/>
+<text x="680" y="215" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">som, cor e 3D</text>
+<text x="680" y="267" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">salas no shopping</text>
+<text x="680" y="319" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">ingresso pela internet</text>
+<rect x="30" y="370" width="160" height="190" rx="18" fill="#fff" stroke="#6b49b8" stroke-width="3"/><text x="110" y="475" font-size="22" fill="#6b49b8" font-weight="800" text-anchor="middle">🎪 Circo</text>
+<rect x="200" y="370" width="300" height="190" rx="18" fill="#f6efe6" stroke="#8a5a2b" stroke-width="3"/>
+<text x="350" y="425" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">muitos animais</text>
+<text x="350" y="477" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">itinerante 🚚</text>
+<text x="350" y="529" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">palhaços e mágicos</text>
+<rect x="530" y="370" width="300" height="190" rx="18" fill="#eef3ff" stroke="#2456b8" stroke-width="3"/>
+<text x="680" y="425" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">quase sem animais</text>
+<text x="680" y="477" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">continua itinerante 🚚</text>
+<text x="680" y="529" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">palhaços e mágicos</text>
+<text x="450" y="590" font-size="16" fill="#4a5872" font-weight="700" text-anchor="middle">Só 7% dos municípios têm cinema: 90 milhões de brasileiros vivem em cidades sem cinema.</text>
+</svg>

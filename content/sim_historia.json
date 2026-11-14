@@ -1,0 +1,32 @@
+{
+  "theory": [
+    {
+      "h": "Resumo da prova de História",
+      "p": [
+        "<strong>Módulo 12 – O campo e a cidade:</strong> cidade (zona urbana) tem prédios altos e construções próximas; campo (zona rural) tem sítios, fazendas, ruas de terra e ritmo mais calmo. No campo há mais alimentos in natura; na cidade, mais industrializados. A partir de 1950, muitos migraram do campo para as cidades em busca de trabalho; em 1970, mais da metade já vivia nas cidades. Hoje há neo-rurais.",
+        "<strong>Módulo 13 – Trabalho e lazer:</strong> lazer é descanso e diversão, importante para todas as idades. Adultos têm hobbies. Direitos: Declaração Universal dos Direitos Humanos (1948), CLT (1943), férias de 30 dias (1977), Constituição de 1988 (descanso semanal remunerado), conquistados pela luta dos trabalhadores. O lazer gera trabalho. Cinema: no início sem som e sem cor, nos cinemas de rua; hoje em shoppings. Circo: itinerante, hoje quase sem animais.",
+        "<strong>Módulo 14 – Muitos jeitos de festejar:</strong> festas juninas (portugueses; 13, 24 e 29 de junho), Folia do Divino e Círio de Nazaré (religiosas, Belém, outubro), Congada (africanos), Kuarup (indígenas do Xingu), Carnaval (Rio é o maior do mundo), Oktoberfest (alemães), Bon Odori (japoneses), bumba meu boi (Pai Francisco e Mãe Catirina)."
+      ],
+      "cards": [
+        {"icon": "🏙️", "t": "zona urbana", "d": "cidade"},
+        {"icon": "🌾", "t": "zona rural", "d": "campo"},
+        {"icon": "🌽", "t": "in natura", "d": "alimento natural"},
+        {"icon": "🚚", "t": "migração", "d": "campo → cidade (1950)"},
+        {"icon": "🎨", "t": "hobby", "d": "passatempo"},
+        {"icon": "📜", "t": "1948", "d": "Direitos Humanos"},
+        {"icon": "🎪", "t": "itinerante", "d": "que viaja"},
+        {"icon": "🔥", "t": "festas juninas", "d": "portugueses"},
+        {"icon": "👑", "t": "Congada", "d": "africanos"},
+        {"icon": "🪶", "t": "Kuarup", "d": "indígenas do Xingu"}
+      ]
+    }
+  ],
+  "quiz": [
+    {"type": "mc", "q": "Qual alternativa mostra uma festa e o povo que a trouxe para o Brasil?", "options": ["Congada – africanos", "Oktoberfest – portugueses", "Kuarup – japoneses", "Festas juninas – alemães"], "answer": 0, "explain": "Congada veio dos africanos. Oktoberfest é alemã, Kuarup é indígena e as festas juninas são portuguesas."},
+    {"type": "mc", "q": "Um trabalhador que tem direito a descansar no domingo sem desconto no salário usa um direito garantido pela:", "options": ["Constituição Federal de 1988", "lei dos rótulos de 2023", "Folia do Divino", "Oktoberfest"], "answer": 0, "explain": "É o descanso semanal remunerado da Constituição de 1988."},
+    {"type": "mc", "q": "A chegada de máquinas ao campo, a partir de 1950, fez com que:", "options": ["houvesse menos trabalho para as pessoas no campo", "mais pessoas fossem morar no campo", "as cidades ficassem vazias", "as festas juninas acabassem"], "answer": 0, "explain": "As máquinas reduziram as vagas no campo, e muitos migraram para as cidades."},
+    {"type": "mc", "q": "Qual destes é um alimento in natura?", "options": ["ovo", "refrigerante", "salsicha", "biscoito recheado"], "answer": 0, "explain": "O ovo chega como vem da natureza; os outros são industrializados."},
+    {"type": "mc", "q": "Pipoqueiro, palhaço e trapezista são exemplos de:", "options": ["trabalhadores do lazer", "pessoas em férias", "neo-rurais", "imigrantes japoneses"], "answer": 0, "explain": "O lazer gera trabalho: enquanto uns se divertem, outros trabalham."},
+    {"type": "mc", "q": "Qual festa acontece em junho e celebra Santo Antônio, São João e São Pedro?", "options": ["Festas juninas", "Círio de Nazaré", "Carnaval", "Oktoberfest"], "answer": 0, "explain": "As festas juninas celebram os santos juninos nos dias 13, 24 e 29 de junho."}
+  ]
+}

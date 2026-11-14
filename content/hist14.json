@@ -1,0 +1,95 @@
+{
+  "id": "hist14",
+  "module": "14",
+  "title": "Muitos jeitos de festejar",
+  "subtitle": "Motivos e jeitos de festejar · Brasil, um país festeiro",
+  "theory": [
+    {
+      "h": "Muitos motivos e jeitos de festejar",
+      "p": [
+        "<strong>Festejar</strong> é reunir-se para <strong>celebrar uma tradição ou um acontecimento</strong>: um ano novo, uma colheita, o nascimento de uma criança, a posse de um líder… É um costume muito antigo.",
+        "Algumas festas acontecem em quase todo o país, como o <strong>Ano-Novo</strong> (31 de dezembro para 1º de janeiro). Outras são de uma região, como o <strong>Festival Folclórico de Parintins</strong> (AM), no fim de junho, com os bois Garantido e Caprichoso.",
+        "Muitas festas antigas de <strong>origem religiosa</strong> foram trazidas pelos <strong>portugueses</strong>. Um exemplo é a <strong>Folia do Divino</strong>, uma das celebrações mais antigas do catolicismo popular brasileiro.",
+        "Os povos indígenas também têm suas festas. O <strong>Kuarup</strong>, dos povos do <strong>Xingu</strong> (MT), é um ritual de <strong>homenagem às pessoas que já morreram</strong>: eles acreditam que os mortos não querem ver os vivos tristes. Há pinturas corporais, flautas uruá e a luta huka-huka."
+      ]
+    },
+    {
+      "h": "Brasil, um país festeiro",
+      "figure": {"src": "assets/4b/hist14-festas.svg", "alt": "Calendário de festas brasileiras: Carnaval em fevereiro e março, festas juninas em junho com Santo Antônio, São João e São Pedro, Parintins em junho, Círio de Nazaré em outubro, Oktoberfest em outubro e Congada.", "tipo": "diagrama"},
+      "p": [
+        "<strong>Festas juninas</strong>: trazidas pelos <strong>portugueses</strong>, de origem religiosa. Celebram os santos juninos: <strong>Santo Antônio (13)</strong>, <strong>São João (24)</strong> e <strong>São Pedro (29 de junho)</strong>.",
+        "<strong>Círio de Nazaré</strong>: festa religiosa em <strong>Belém (PA)</strong>, todo mês de <strong>outubro</strong>, há mais de duzentos anos. Milhares de romeiros caminham em homenagem a Nossa Senhora de Nazaré. A devoção também veio de Portugal.",
+        "<strong>Congada</strong>: trazida pelos <strong>africanos</strong>. Lembra a coroação do rei e da rainha do antigo Reino do Congo, na África.",
+        "<strong>Carnaval</strong>: herança dos portugueses, acontece entre <strong>fevereiro e março</strong>. O Carnaval do <strong>Rio de Janeiro</strong> é o maior do mundo (Livro dos Recordes). Também é famoso em Recife e Olinda (bonecos gigantes), Salvador, São Paulo e Belo Horizonte."
+      ]
+    },
+    {
+      "h": "Cada cidade, uma festa",
+      "p": [
+        "Quase toda cidade tem sua festa. Muitas celebram o <strong>aniversário de fundação</strong>: Salvador (29 de março de 1549) e São Paulo (25 de janeiro de 1554).",
+        "Os imigrantes também trouxeram festas: o <strong>Bon Odori</strong>, dos descendentes de <strong>japoneses</strong> em São Paulo, e a <strong>Oktoberfest</strong>, que celebra as tradições <strong>alemãs</strong> em Blumenau (SC), em outubro.",
+        "O <strong>bumba meu boi</strong>, festejado principalmente no Nordeste, tem mais de duzentos anos. Conta a história de <strong>Pai Francisco e Mãe Catirina</strong>, um casal de negros escravizados: Catirina, grávida, queria comer língua de boi; Francisco matou o boi mais bonito da fazenda; os curandeiros ressuscitaram o boi e todos festejaram.",
+        "<strong>Feriados</strong> são dias em que a maioria não trabalha nem vai à escola: 1º de janeiro, 21 de abril (Tiradentes), 1º de maio (Trabalho), 7 de setembro (Independência), 12 de outubro, 15 de novembro, 20 de novembro (Consciência Negra) e 25 de dezembro (Natal)."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Quem trouxe a festa?",
+      "short": "Origem das festas",
+      "instructions": "Qual povo trouxe ou criou esta festa?",
+      "categories": ["Portugueses ⛪", "Africanos 👑", "Indígenas 🪶", "Imigrantes europeus e asiáticos 🌍"],
+      "items": [
+        {"text": "Festas juninas", "cat": 0},
+        {"text": "Congada", "cat": 1},
+        {"text": "Kuarup", "cat": 2},
+        {"text": "Oktoberfest", "cat": 3},
+        {"text": "Folia do Divino", "cat": 0},
+        {"text": "Bon Odori", "cat": 3},
+        {"text": "Círio de Nazaré (a devoção)", "cat": 0},
+        {"text": "Carnaval", "cat": 0}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Onde e quando é a festa?",
+      "short": "Festa e lugar",
+      "instructions": "Ligue cada festa ao lugar ou à data.",
+      "pairs": [
+        ["Círio de Nazaré", "Belém (PA), em outubro"],
+        ["Festival de Parintins", "Amazonas, no fim de junho"],
+        ["Kuarup", "Parque Indígena do Xingu (MT)"],
+        ["Oktoberfest", "Blumenau (SC)"],
+        ["Maior Carnaval do mundo", "Rio de Janeiro (RJ)"],
+        ["Bonecos gigantes no Carnaval", "Olinda (PE)"]
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Santos juninos",
+      "short": "Festas juninas",
+      "instructions": "Ligue o santo ao dia de junho.",
+      "pairs": [
+        ["Santo Antônio", "13 de junho"],
+        ["São João", "24 de junho"],
+        ["São Pedro", "29 de junho"]
+      ]
+    }
+  ],
+  "quiz": [
+    {"type": "mc", "q": "Festejar é:", "options": ["reunir-se para celebrar uma tradição ou acontecimento", "trabalhar mais horas para ganhar dinheiro", "viajar sozinho para outro país", "ficar em casa estudando para a prova"], "answer": 0, "explain": "Festejar é se reunir para celebrar algo: um ano novo, uma colheita, um nascimento."},
+    {"type": "mc", "q": "As festas juninas foram trazidas ao Brasil pelos:", "options": ["portugueses", "japoneses", "alemães", "indígenas"], "answer": 0, "explain": "São festas de origem religiosa trazidas pelos portugueses."},
+    {"type": "mc", "q": "Qual santo é celebrado em 24 de junho?", "options": ["São João", "Santo Antônio", "São Pedro", "São Benedito"], "answer": 0, "explain": "Santo Antônio dia 13, São João dia 24 e São Pedro dia 29."},
+    {"type": "mc", "q": "O Círio de Nazaré acontece:", "options": ["em Belém (PA), em outubro", "em Olinda, no Carnaval", "em Blumenau, em junho", "no Xingu, em dezembro"], "answer": 0, "explain": "Todo mês de outubro, milhares de romeiros caminham em Belém em homenagem a Nossa Senhora de Nazaré."},
+    {"type": "mc", "q": "A Congada foi trazida ao Brasil pelos:", "options": ["africanos", "portugueses", "alemães", "japoneses"], "answer": 0, "explain": "A Congada lembra a coroação do rei e da rainha do antigo Reino do Congo, na África."},
+    {"type": "mc", "q": "O Kuarup é um ritual indígena do Xingu que:", "options": ["homenageia as pessoas que já morreram", "comemora o Ano-Novo", "celebra o aniversário da cidade", "é uma festa de origem alemã"], "answer": 0, "explain": "Os povos do Xingu acreditam que os mortos não querem ver os vivos tristes."},
+    {"type": "mc", "q": "Segundo o Livro dos Recordes, o maior Carnaval do mundo é o de:", "options": ["Rio de Janeiro", "Salvador", "Recife", "São Paulo"], "answer": 0, "explain": "São mais de 2 milhões de pessoas por dia nas ruas do Rio de Janeiro."},
+    {"type": "mc", "q": "A Oktoberfest, em Blumenau (SC), celebra as tradições dos imigrantes:", "options": ["alemães", "japoneses", "africanos", "portugueses"], "answer": 0, "explain": "É um festival parecido com o de Munique, na Alemanha."},
+    {"type": "mc", "q": "O Bon Odori é um festival dos descendentes de:", "options": ["japoneses", "alemães", "italianos", "indígenas"], "answer": 0, "explain": "No estado de São Paulo, descendentes de japoneses celebram o Bon Odori."},
+    {"type": "mc", "q": "O bumba meu boi conta a história de:", "options": ["Pai Francisco e Mãe Catirina", "Santo Antônio e São Pedro", "dom Pedro I", "um rei do Congo"], "answer": 0, "explain": "Catirina queria comer língua de boi; o boi foi morto e depois ressuscitado pelos curandeiros."},
+    {"type": "mc", "q": "Muitas cidades fazem festa para celebrar:", "options": ["o aniversário de fundação", "o fim das aulas", "o primeiro dia de chuva", "a troca de prefeito"], "answer": 0, "explain": "Salvador (29/3/1549) e São Paulo (25/1/1554) comemoram sua fundação."},
+    {"type": "mc", "q": "Qual destes feriados é religioso?", "options": ["25 de dezembro (Natal)", "7 de setembro (Independência)", "1º de maio (Dia do Trabalho)", "21 de abril (Tiradentes)"], "answer": 0, "explain": "O Natal é um feriado religioso, comemorado pelos cristãos."},
+    {"type": "text", "q": "Em que estado brasileiro fica Parintins, onde acontece o Festival Folclórico?", "answers": ["amazonas", "am", "o amazonas"], "explain": "Parintins fica no Amazonas (AM)."}
+  ]
+}

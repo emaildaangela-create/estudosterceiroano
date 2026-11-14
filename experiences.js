@@ -58,3 +58,20 @@ Object.assign(EXPERIENCE_PROFILES, {
     { mode:'writing' }
   ]
 });
+Object.assign(EXPERIENCE_PROFILES, {
+  hist12: [
+    { mode:'choice', goal:'Montar o mapa do campo e da cidade', prompt:'Isto é mais comum no campo ou na cidade?', result:'mapa do município' },
+    { mode:'choice', goal:'Organizar a feira dos alimentos', prompt:'Este alimento é in natura, processado ou ultraprocessado?', result:'feira organizada' },
+    { mode:'choice', goal:'Investigar a migração', prompt:'Isto foi um motivo para ir do campo para a cidade?', result:'quadro da migração' }
+  ],
+  hist13: [
+    { mode:'choice', goal:'Lazer ou trabalho?', prompt:'Esta pessoa está se divertindo ou trabalhando?', result:'painel do lazer' },
+    { mode:'choice', goal:'Viajar no tempo do cinema e do circo', prompt:'Isto era de antigamente ou é de hoje?', result:'museu do lazer' },
+    { mode:'sequence', goal:'Montar a linha do tempo dos direitos', prompt:'Qual direito veio depois?', result:'linha do tempo' }
+  ],
+  hist14: [
+    { mode:'choice', goal:'Descobrir a origem das festas', prompt:'Quem trouxe ou criou esta festa?', result:'mapa das festas' },
+    { mode:'explore', goal:'Viajar pelas festas do Brasil', prompt:'Onde ou quando acontece esta festa?', result:'calendário de festas' },
+    { mode:'explore', goal:'Arraial dos santos juninos', prompt:'Em que dia de junho se celebra este santo?', result:'arraial' }
+  ]
+});

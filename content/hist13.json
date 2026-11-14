@@ -1,0 +1,116 @@
+{
+  "id": "hist13",
+  "module": "13",
+  "title": "Trabalho e lazer",
+  "subtitle": "O que é lazer · Adultos também brincam · Cinema e circo",
+  "theory": [
+    {
+      "h": "O que é lazer?",
+      "p": [
+        "<strong>Lazer</strong> é toda atividade que envolve <strong>descanso e diversão</strong>. As crianças, que não devem trabalhar, têm mais tempo de lazer, mas o lazer é importante para <strong>pessoas de todas as idades</strong>.",
+        "A maioria dos adultos trabalha cerca de <strong>8 horas por dia</strong> e <strong>44 horas por semana</strong>. Por isso, as pausas — como a hora do almoço — e os momentos de descanso são fundamentais para a saúde.",
+        "Exemplos do livro: um advogado que gosta de cantar no tempo livre; um casal de professores que fotografa paisagens nas férias; uma engenheira que adora cozinhar nos fins de semana."
+      ]
+    },
+    {
+      "h": "Adultos também brincam",
+      "p": [
+        "Brincar é importante para <strong>todos</strong>: crianças, jovens, adultos e idosos.",
+        "Os adultos costumam ter <strong>hobbies</strong>. <em>Hobby</em> é uma palavra inglesa para atividades feitas só como lazer ou passatempo: colecionar coisas, pintar, desenhar, tocar um instrumento.",
+        "Fotos do livro: indígenas guarani jogando <strong>peteca</strong> (brincadeira de <strong>origem indígena</strong>), homens jogando <strong>capoeira</strong>, mulher praticando <em>slackline</em>, pessoas jogando basquete.",
+        "Especialistas dizem que brincar ajuda os adultos a <strong>fortalecer laços sociais, melhorar a memória, estimular a imaginação e o raciocínio</strong>.",
+        "No Brasil, o lazer ainda pode ser um <strong>privilégio</strong>: muitos trabalham demais, gastam horas no trânsito ou moram em lugares sem parques, praias e praças."
+      ]
+    },
+    {
+      "h": "O direito ao lazer e ao descanso",
+      "figure": {"src": "assets/4b/hist13-direitos.svg", "alt": "Linha do tempo dos direitos: 1925 férias de 15 dias, 1943 CLT, 1948 Declaração Universal dos Direitos Humanos, 1977 férias de 30 dias, 1988 Constituição Federal com descanso semanal remunerado.", "tipo": "diagrama"},
+      "p": [
+        "Depois da Segunda Guerra Mundial (1945), foi criada a <strong>ONU</strong>. Em <strong>1948</strong>, os países assinaram a <strong>Declaração Universal dos Direitos Humanos</strong>, que garante o <strong>direito ao repouso e ao lazer</strong> (Artigo 24). <strong>Eleanor Roosevelt</strong>, a “primeira-dama do mundo”, presidiu a comissão que a elaborou.",
+        "No Brasil, a <strong>Constituição Federal de 1988</strong> garante o <strong>descanso semanal remunerado</strong>: quem trabalha tem direito a descansar sem desconto no salário (normalmente no domingo).",
+        "As férias também foram conquistadas aos poucos: <strong>1925</strong> – 15 dias de férias para trabalhadores urbanos; <strong>1943</strong> – a <strong>CLT</strong> (Consolidação das Leis do Trabalho); <strong>1977</strong> – férias de <strong>30 dias</strong>.",
+        "As leis trabalhistas existem porque <strong>os trabalhadores lutaram por elas</strong> durante décadas, e não só pela boa vontade dos governos."
+      ]
+    },
+    {
+      "h": "O lazer gera trabalho",
+      "p": [
+        "Lazer e trabalho estão interligados: <strong>enquanto alguns se divertem, outros trabalham</strong>. O lazer gera empregos e riquezas para o país.",
+        "Profissionais do lazer e do entretenimento: cantores, cineastas, fotógrafos, músicos, atores, técnicos de som, pipoqueiros, guias de turismo…"
+      ]
+    },
+    {
+      "h": "A história do lazer: o cinema e o circo",
+      "figure": {"src": "assets/4b/hist13-cinema-circo.svg", "alt": "Comparação do cinema antigo (fim do século 19, filmes sem som e sem cor, cinemas de rua, roupas formais) com o atual (shopping, ingresso pela internet) e do circo antigo (animais) com o atual (sem animais, itinerante, palhaços e mágicos).", "tipo": "diagrama"},
+      "p": [
+        "O <strong>cinema</strong> foi inventado no <strong>final do século 19</strong>. Os filmes <strong>não tinham som nem cores</strong> e eram exibidos em salas na rua, os <strong>“cinemas de rua”</strong>. As pessoas se vestiam de maneira <strong>formal</strong> para ir ao cinema.",
+        "Quando surgiu a <strong>televisão</strong>, muitos acharam que ela substituiria o cinema, mas o hábito continua, com mudanças: roupas informais, salas em <strong>shopping centers</strong> e ingressos pela <strong>internet</strong>. Alguns cinemas de rua resistem, como o Cine Theatro Brasil, em Belo Horizonte.",
+        "Hoje o Brasil tem muitas salas, mas só <strong>7% dos municípios</strong> têm cinema: cerca de <strong>90 milhões</strong> de brasileiros vivem em cidades sem cinema.",
+        "O <strong>circo</strong> é um entretenimento antigo. No passado, atrações com <strong>animais</strong> eram comuns; hoje são raras, pois as pessoas estão mais conscientes dos <strong>maus-tratos aos animais</strong>.",
+        "O que não mudou é a <strong>tradição itinerante</strong>: o circo viaja de cidade em cidade, monta a tenda e se apresenta no <strong>picadeiro</strong> (área central do circo). Trabalhadores do circo: palhaço, mágico, trapezista, malabarista, pipoqueiro."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Lazer ou trabalho?",
+      "short": "Lazer ou trabalho",
+      "instructions": "A pessoa está em momento de lazer ou trabalhando?",
+      "categories": ["Lazer 🎉", "Trabalho 🛠️"],
+      "items": [
+        {"text": "Pessoas comendo pipoca e vendo um filme", "cat": 0},
+        {"text": "Equipe filmando um filme no estúdio", "cat": 1},
+        {"text": "Amigos jogando peteca no fim de semana", "cat": 0},
+        {"text": "Trapezista se apresentando no circo", "cat": 1},
+        {"text": "Família fazendo piquenique no parque", "cat": 0},
+        {"text": "Pipoqueiro vendendo pipoca no circo", "cat": 1},
+        {"text": "Engenheira cozinhando por diversão no domingo", "cat": 0},
+        {"text": "Técnico preparando turistas para o arvorismo", "cat": 1}
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Antes ou hoje?",
+      "short": "Cinema e circo",
+      "instructions": "Isto era comum antigamente ou é comum hoje?",
+      "categories": ["Antigamente 🎞️", "Hoje 📱"],
+      "items": [
+        {"text": "Filmes sem som e sem cores", "cat": 0},
+        {"text": "Comprar ingresso pela internet", "cat": 1},
+        {"text": "Vestir-se de maneira formal para ir ao cinema", "cat": 0},
+        {"text": "Salas de cinema dentro de shopping centers", "cat": 1},
+        {"text": "Muitas atrações com animais no circo", "cat": 0},
+        {"text": "Circo sem animais, com palhaços e mágicos", "cat": 1}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Linha do tempo dos direitos",
+      "short": "Direitos conquistados",
+      "instructions": "Ligue cada data à conquista.",
+      "pairs": [
+        ["1925", "15 dias de férias para trabalhadores urbanos"],
+        ["1943", "CLT – Consolidação das Leis do Trabalho"],
+        ["1948", "Declaração Universal dos Direitos Humanos"],
+        ["1977", "Férias de 30 dias"],
+        ["1988", "Constituição Federal: descanso semanal remunerado"]
+      ]
+    }
+  ],
+  "quiz": [
+    {"type": "mc", "q": "O que é lazer?", "options": ["Toda atividade de descanso e diversão", "Só o trabalho feito em casa", "Uma profissão do circo", "A hora de ir para a escola"], "answer": 0, "explain": "Lazer é toda atividade que envolve descanso e diversão."},
+    {"type": "mc", "q": "O lazer é importante para:", "options": ["pessoas de todas as idades", "somente crianças", "somente idosos", "ninguém"], "answer": 0, "explain": "Crianças, jovens, adultos e idosos precisam de descanso e diversão."},
+    {"type": "mc", "q": "O que é um hobby?", "options": ["Uma atividade feita como passatempo", "Um tipo de trabalho pago", "Um documento de direitos", "Um prédio de cinema"], "answer": 0, "explain": "Hobby é uma atividade feita só como lazer: colecionar, pintar, tocar um instrumento."},
+    {"type": "mc", "q": "A peteca é uma brincadeira de origem:", "options": ["indígena", "japonesa", "alemã", "portuguesa"], "answer": 0, "explain": "O livro mostra indígenas guarani jogando peteca feita de folha de palmeira."},
+    {"type": "mc", "q": "Qual documento de 1948 garante o direito ao repouso e ao lazer?", "options": ["Declaração Universal dos Direitos Humanos", "Constituição de 1988", "Lei dos rótulos de 2023", "Certidão de nascimento"], "answer": 0, "explain": "O Artigo 24 da Declaração diz que todo ser humano tem direito a repouso e lazer."},
+    {"type": "mc", "q": "A Constituição Federal de 1988 garante aos trabalhadores:", "options": ["o descanso semanal remunerado", "trabalhar sem nenhum descanso", "férias de 15 dias apenas", "salário só para quem não descansa"], "answer": 0, "explain": "Quem trabalha tem direito a um dia de descanso por semana sem desconto no salário."},
+    {"type": "mc", "q": "As leis trabalhistas, como as férias de 30 dias, existem hoje porque:", "options": ["os trabalhadores lutaram por elas", "o governo teve boa vontade", "sempre existiram", "foram criadas em 1925 e nunca mudaram"], "answer": 0, "explain": "A historiadora explica que houve décadas de luta dos trabalhadores."},
+    {"type": "mc", "q": "O que significa a frase “Enquanto alguns se divertem, outros trabalham”?", "options": ["O lazer de uns depende do trabalho de outros", "Ninguém trabalha nas festas", "Só crianças trabalham", "Lazer e trabalho nunca se misturam"], "answer": 0, "explain": "Cantores, técnicos, pipoqueiros e muitos outros trabalham para garantir a diversão das pessoas."},
+    {"type": "mc", "q": "Como eram os primeiros filmes de cinema, no final do século 19?", "options": ["Sem som e sem cores", "Coloridos e em 3D", "Vistos pela internet", "Exibidos só na televisão"], "answer": 0, "explain": "Os primeiros filmes não tinham som nem cores e eram exibidos nos cinemas de rua."},
+    {"type": "mc", "q": "Segundo o texto, no Brasil:", "options": ["milhões de pessoas vivem em cidades sem cinema", "toda cidade tem cinema", "não existem mais cinemas", "o cinema é um lazer para todos"], "answer": 0, "explain": "Só 7% dos municípios têm sala de cinema; cerca de 90 milhões vivem em cidades sem cinema."},
+    {"type": "mc", "q": "Por que hoje os circos quase não usam animais?", "options": ["Por causa dos maus-tratos aos animais", "Porque os animais ficaram caros", "Porque os circos acabaram", "Porque os animais não viajam"], "answer": 0, "explain": "As pessoas estão mais conscientes dos maus-tratos aos animais."},
+    {"type": "mc", "q": "O circo é itinerante. Isso quer dizer que ele:", "options": ["viaja de cidade em cidade", "fica sempre no mesmo lugar", "só funciona no inverno", "tem só um artista"], "answer": 0, "explain": "Itinerante = que viaja, se desloca constantemente."},
+    {"type": "text", "q": "Como se chama a área central do circo, onde acontecem as apresentações?", "answers": ["picadeiro", "o picadeiro"], "explain": "Picadeiro é a área central do circo, reservada às atrações."}
+  ]
+}

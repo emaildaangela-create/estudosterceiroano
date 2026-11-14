@@ -1,0 +1,115 @@
+{
+  "id": "hist12",
+  "module": "12",
+  "title": "O campo e a cidade",
+  "subtitle": "Vida, alimentação, trabalho e migração",
+  "theory": [
+    {
+      "h": "O campo e a cidade",
+      "figure": {"src": "assets/4b/hist12-campo-cidade.svg", "alt": "Paisagem dividida: à esquerda a cidade com prédios, trânsito e lojas próximas; à direita o campo com sítio, horta, animais, rio e estrada de terra.", "tipo": "diagrama"},
+      "p": [
+        "O campo é a <strong>zona rural</strong> e a cidade é a <strong>zona urbana</strong>. Nem sempre o campo é só mata e animais, e a cidade também tem parques e praças com árvores.",
+        "Na <strong>cidade</strong> vivem e trabalham muitas pessoas. Há <strong>prédios altos</strong> (arranha-céus), e as construções — moradias, lojas, bancos, escolas — ficam <strong>bem próximas</strong> umas das outras.",
+        "No <strong>campo</strong> ficam os <strong>sítios e fazendas</strong>, áreas de vegetação com rios e lagos, construções <strong>mais distantes</strong> umas das outras e <strong>ruas de terra</strong>. As pessoas cultivam hortas e pomares e criam animais (galinhas, porcos) para consumo próprio.",
+        "Algumas áreas rurais são <strong>isoladas</strong>: os moradores fazem longos deslocamentos até a cidade em busca de escola, hospital e banco. Mas muitas zonas urbanas e rurais estão <strong>interligadas</strong> (conectadas) e usam os mesmos serviços."
+      ]
+    },
+    {
+      "h": "A vida no campo e na cidade",
+      "p": [
+        "No campo, o <strong>ritmo de vida é menos acelerado</strong>. As pessoas têm mais contato com a natureza e conhecem a origem dos alimentos.",
+        "As <strong>crianças do campo</strong> costumam brincar <strong>ao ar livre</strong>: nadam em rios, brincam com animais, sobem em árvores, cultivam plantas.",
+        "Nas <strong>cidades</strong>, as brincadeiras acontecem mais <strong>dentro de casa</strong>, na casa de amigos ou em áreas de lazer de prédios e condomínios. Existem parques e praças, mas nem sempre as crianças os frequentam.",
+        "No poema <em>Fazenda da vovó</em>, Suellen mora numa cidade grande com barulho, trânsito e poluição, e passa as férias na fazenda da avó, onde fica “com o pé na terra” e descansa da agitação."
+      ]
+    },
+    {
+      "h": "A alimentação no campo e na cidade",
+      "figure": {"src": "assets/4b/hist12-alimentos.svg", "alt": "Três exemplos com milho: espiga in natura, milho em conserva (processado) e salgadinho de milho (ultraprocessado).", "tipo": "diagrama"},
+      "p": [
+        "No <strong>campo</strong>, as pessoas costumam consumir alimentos produzidos perto de casa: ovos, leite, frutas, verduras, carnes e peixes. Por isso, os <strong>alimentos in natura</strong> (em seu estado natural) tendem a ser <strong>mais baratos e frescos</strong>.",
+        "Nas <strong>cidades</strong>, os alimentos in natura vêm de longe e nem sempre são tão baratos e frescos. Há muita oferta de <strong>produtos industrializados</strong>, com conservantes, sal ou açúcar. Como as pessoas gastam muito tempo em deslocamentos, têm menos tempo para cozinhar.",
+        "Exemplo com milho: a <strong>espiga</strong> é in natura; o <strong>milho em conserva</strong> é processado; o <strong>salgadinho de milho</strong> é ultraprocessado.",
+        "Desde <strong>2023</strong>, uma lei obriga os alimentos industrializados com muito sal, açúcar ou gordura a trazer um aviso no <strong>rótulo</strong> (ALTO EM…).",
+        "A indígena guarani Márcia Poty Vidal conta que seu povo prefere alimentos in natura: fubá, canjica, feijão, milho. “A gente luta para não comer coisa empacotada.”"
+      ]
+    },
+    {
+      "h": "Trabalho e migração",
+      "figure": {"src": "assets/4b/hist12-migracao.svg", "alt": "Linha do tempo: até 1950 a maioria vivia no campo; a partir de 1950 muitos migram para as cidades com as máquinas e as indústrias; em 1970 mais da metade vive nas cidades; hoje há neo-rurais voltando ao campo.", "tipo": "diagrama"},
+      "p": [
+        "Até meados do século passado, <strong>a maioria dos brasileiros vivia e trabalhava no campo</strong>.",
+        "A partir dos <strong>anos 1950</strong>, com a chegada de <strong>máquinas</strong> (como o trator) ao campo, havia menos trabalho para as pessoas. Ao mesmo tempo, o <strong>crescimento das indústrias</strong>, do comércio e dos serviços nas cidades atraía os camponeses. Muitos <strong>migraram para as cidades</strong> em busca de <strong>novas oportunidades de trabalho</strong> e de melhores condições de vida.",
+        "Já nos <strong>anos 1970</strong>, mais da metade da população brasileira vivia em cidades.",
+        "Hoje há o caminho inverso: os <strong>neo-rurais</strong> trocam a cidade pelo campo. Eder e Edna saíram de Curitiba para produzir morangos em Mandirituba (PR).",
+        "No início do século 20, <strong>imigrantes</strong> de outros países (como os japoneses) vieram trabalhar nas lavouras de café e nas fábricas do Brasil."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Campo ou cidade?",
+      "short": "Campo ou cidade",
+      "instructions": "Esta característica é mais comum no campo ou na cidade?",
+      "categories": ["Campo (zona rural) 🌾", "Cidade (zona urbana) 🏙️"],
+      "items": [
+        {"text": "Prédios altos, os arranha-céus", "cat": 1},
+        {"text": "Sítios, fazendas, hortas e pomares", "cat": 0},
+        {"text": "Construções muito próximas umas das outras", "cat": 1},
+        {"text": "Ruas de terra, sem asfalto", "cat": 0},
+        {"text": "Ritmo de vida mais acelerado", "cat": 1},
+        {"text": "Crianças nadam em rios e sobem em árvores", "cat": 0},
+        {"text": "Muita oferta de produtos industrializados", "cat": 1},
+        {"text": "Alimentos in natura mais baratos e frescos", "cat": 0}
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "In natura, processado ou ultraprocessado?",
+      "short": "Tipos de alimento",
+      "instructions": "Classifique o alimento.",
+      "categories": ["In natura 🌽", "Processado 🥫", "Ultraprocessado 🍬"],
+      "items": [
+        {"text": "Espiga de milho", "cat": 0},
+        {"text": "Milho em conserva", "cat": 1},
+        {"text": "Salgadinho de milho", "cat": 2},
+        {"text": "Ovo", "cat": 0},
+        {"text": "Pão de padaria e queijo", "cat": 1},
+        {"text": "Refrigerante e salsicha", "cat": 2},
+        {"text": "Banana", "cat": 0},
+        {"text": "Biscoito recheado", "cat": 2}
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Por que migraram?",
+      "short": "Motivos da migração",
+      "instructions": "Isto foi um motivo da migração do campo para a cidade a partir de 1950?",
+      "categories": ["Sim, foi um motivo ✅", "Não foi um motivo ❌"],
+      "items": [
+        {"text": "Crescimento das indústrias nas cidades", "cat": 0},
+        {"text": "Gosto pessoal por férias", "cat": 1},
+        {"text": "Busca por novas oportunidades de trabalho", "cat": 0},
+        {"text": "Crescimento da população no campo", "cat": 1},
+        {"text": "Máquinas no campo diminuíram o trabalho", "cat": 0},
+        {"text": "Lazer", "cat": 1}
+      ]
+    }
+  ],
+  "quiz": [
+    {"type": "mc", "q": "Qual característica é típica da zona urbana?", "options": ["Prédios altos e construções próximas", "Sítios e fazendas distantes", "Ruas de terra sem asfalto", "Hortas para consumo próprio"], "answer": 0, "explain": "Nas cidades vivem muitas pessoas, por isso há prédios altos (arranha-céus) e construções bem próximas."},
+    {"type": "mc", "q": "Em comparação com a cidade, o ritmo de vida no campo costuma ser:", "options": ["menos acelerado", "mais acelerado", "igual em todo lugar", "sem nenhuma atividade"], "answer": 0, "explain": "No campo o ritmo é mais calmo, com mais contato com a natureza."},
+    {"type": "mc", "q": "Onde as crianças costumam brincar mais ao ar livre, em contato com a natureza?", "options": ["No campo", "Em apartamentos", "Em shopping centers", "Em escritórios"], "answer": 0, "explain": "No campo as crianças nadam em rios, sobem em árvores e brincam com animais."},
+    {"type": "mc", "q": "O que são alimentos in natura?", "options": ["Alimentos em seu estado natural", "Alimentos em lata", "Salgadinhos de pacote", "Comidas congeladas"], "answer": 0, "explain": "In natura = como vêm da natureza: frutas, verduras, ovos, leite."},
+    {"type": "mc", "q": "Por que no campo os alimentos in natura tendem a ser mais baratos e frescos?", "options": ["São produzidos perto das moradias", "Vêm de outros países", "São feitos em fábricas", "Têm muitos conservantes"], "answer": 0, "explain": "Os produtores estão próximos, então não há transporte longo."},
+    {"type": "mc", "q": "O salgadinho de milho é um alimento:", "options": ["ultraprocessado", "in natura", "processado simples", "orgânico"], "answer": 0, "explain": "Espiga = in natura; milho em conserva = processado; salgadinho = ultraprocessado."},
+    {"type": "mc", "q": "Desde 2023, o que os alimentos com muito sal, açúcar ou gordura devem trazer?", "options": ["Um aviso no rótulo", "Um brinquedo dentro", "Um preço mais baixo", "Uma receita no verso"], "answer": 0, "explain": "A lei obriga o aviso ALTO EM sódio, açúcar ou gordura no rótulo."},
+    {"type": "mc", "q": "A partir dos anos 1950, muitos brasileiros migraram:", "options": ["do campo para as cidades", "das cidades para o campo", "do Brasil para o Japão", "do litoral para as florestas"], "answer": 0, "explain": "Com a industrialização das cidades, muitos deixaram o campo em busca de trabalho."},
+    {"type": "mc", "q": "Qual foi um dos principais motivos dessa migração?", "options": ["A busca por novas oportunidades de trabalho", "O gosto pessoal por férias", "O crescimento da população no campo", "A vontade de ter mais lazer"], "answer": 0, "explain": "As indústrias e o comércio nas cidades ofereciam trabalho, e as máquinas no campo diminuíam as vagas."},
+    {"type": "mc", "q": "Como se chamam as pessoas que trocam a cidade pelo campo hoje em dia?", "options": ["neo-rurais", "imigrantes", "camponeses antigos", "turistas"], "answer": 0, "explain": "Neo-rurais fazem o caminho inverso: deixam a cidade para viver e trabalhar no campo."},
+    {"type": "mc", "q": "No texto, Eder e Edna deixaram a cidade para:", "options": ["produzir morangos no campo", "abrir uma loja no shopping", "trabalhar em uma fábrica", "morar em outro país"], "answer": 0, "explain": "O casal foi para Mandirituba (PR) e produz morangos."},
+    {"type": "mc", "q": "As fotos de colheita de café de 1930 (manual) e de 2022 (com máquina) mostram que:", "options": ["as máquinas mudaram o trabalho no campo", "o café não é mais plantado", "o trabalho no campo nunca mudou", "só crianças trabalham no campo"], "answer": 0, "explain": "A colheita mecanizada exige menos pessoas: é a modernização do campo."},
+    {"type": "text", "q": "Em que década, mais da metade da população brasileira passou a viver em cidades? (Escreva o número, ex.: 1950)", "answers": ["1970", "anos 1970", "decada de 1970"], "explain": "Nos anos 1970, mais da metade dos brasileiros já vivia em cidades."}
+  ]
+}

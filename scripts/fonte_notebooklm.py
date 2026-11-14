@@ -12,7 +12,7 @@ for b in cap["theory"]:
     for p in b.get("p", []):
         linhas.append(limpar(p))
     for c in b.get("cards", []):
-        linhas.append("- %s: %s" % (c["en"], c["pt"]))
+        linhas.append("- %s: %s" % (c.get("en") or c.get("t", ""), c.get("pt") or c.get("d", "")))
     linhas.append("")
 linhas.append("## Perguntas de revisão (com respostas)")
 for q in cap.get("quiz", []):

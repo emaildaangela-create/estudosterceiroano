@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#d9822b" font-weight="800" text-anchor="middle">Trabalho e migração</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">do campo para a cidade e de volta ao campo</text>
+<line x1="60" y1="330" x2="850" y2="330" stroke="#4a5872" stroke-width="6" marker-end="url(#ponta)"/>
+<circle cx="130" cy="330" r="16" fill="#1d805c"/>
+<rect x="35" y="130" width="190" height="170" rx="18" fill="#fff" stroke="#1d805c" stroke-width="3"/><text x="130" y="205" font-size="44" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🌾</text><text x="130" y="255" font-size="20" fill="#1d805c" font-weight="800" text-anchor="middle">até 1950</text>
+<rect x="35" y="370" width="190" height="100" rx="18" fill="#fff" stroke="#1d805c" stroke-width="2"/><text x="130" y="412" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">maioria vive</text><text x="130" y="438" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">no campo</text>
+<circle cx="330" cy="330" r="16" fill="#d9822b"/>
+<rect x="235" y="130" width="190" height="170" rx="18" fill="#fff" stroke="#d9822b" stroke-width="3"/><text x="330" y="205" font-size="44" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🚜➜🏭</text><text x="330" y="255" font-size="20" fill="#d9822b" font-weight="800" text-anchor="middle">a partir de 1950</text>
+<rect x="235" y="370" width="190" height="100" rx="18" fill="#fff" stroke="#d9822b" stroke-width="2"/><text x="330" y="412" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">máquinas no campo;</text><text x="330" y="438" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">indústrias na cidade</text>
+<circle cx="550" cy="330" r="16" fill="#2456b8"/>
+<rect x="455" y="130" width="190" height="170" rx="18" fill="#fff" stroke="#2456b8" stroke-width="3"/><text x="550" y="205" font-size="44" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏙️</text><text x="550" y="255" font-size="20" fill="#2456b8" font-weight="800" text-anchor="middle">1970</text>
+<rect x="455" y="370" width="190" height="100" rx="18" fill="#fff" stroke="#2456b8" stroke-width="2"/><text x="550" y="412" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">mais da metade</text><text x="550" y="438" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">vive na cidade</text>
+<circle cx="760" cy="330" r="16" fill="#6b49b8"/>
+<rect x="665" y="130" width="190" height="170" rx="18" fill="#fff" stroke="#6b49b8" stroke-width="3"/><text x="760" y="205" font-size="44" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🍓</text><text x="760" y="255" font-size="20" fill="#6b49b8" font-weight="800" text-anchor="middle">hoje</text>
+<rect x="665" y="370" width="190" height="100" rx="18" fill="#fff" stroke="#6b49b8" stroke-width="2"/><text x="760" y="412" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">neo-rurais voltam</text><text x="760" y="438" font-size="16" fill="#17213b" font-weight="700" text-anchor="middle">para o campo</text>
+<text x="450" y="530" font-size="18" fill="#17213b" font-weight="800" text-anchor="middle">Motivo: busca por novas oportunidades de trabalho e melhores condições de vida</text>
+</svg>
