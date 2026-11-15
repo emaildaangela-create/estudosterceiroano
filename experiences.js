@@ -91,3 +91,19 @@ Object.assign(EXPERIENCE_PROFILES, {
     { mode:'explore', goal:'Resolver problemas de frações', prompt:'Leia o problema e escolha a resposta.', result:'problemas resolvidos' }
   ]
 });
+Object.assign(EXPERIENCE_PROFILES, {
+  geo13: [
+    { mode:'choice', goal:'Base ou bens de consumo?', prompt:'Que tipo de indústria é esta?', result:'mapa das indústrias' },
+    { mode:'choice', goal:'Artesanal ou industrial?', prompt:'Como este produto foi feito?', result:'museu da produção' },
+    { mode:'choice', goal:'Durável ou não durável?', prompt:'Este produto dura muito ou acaba rápido?', result:'carrinho de compras' },
+    { mode:'explore', goal:'Praticar os 5 Rs', prompt:'Qual R do consumo consciente é esta atitude?', result:'cartaz dos 5 Rs' },
+    { mode:'explore', goal:'Conhecer os profissionais da indústria', prompt:'O que este profissional faz?', result:'equipe da fábrica' }
+  ],
+  cie13: [
+    { mode:'choice', goal:'Descobrir o uso do solo', prompt:'Que atividade está usando o solo?', result:'mapa dos usos do solo' },
+    { mode:'choice', goal:'Tipos de agricultura', prompt:'Subsistência, comercial ou orgânica?', result:'horta organizada' },
+    { mode:'explore', goal:'Cuidar do solo', prompt:'Qual cuidado com o solo é este?', result:'manual do bom agricultor' },
+    { mode:'choice', goal:'Polui ou protege?', prompt:'Esta atitude polui ou protege o solo?', result:'campanha pelo solo' },
+    { mode:'explore', goal:'Da causa à consequência', prompt:'O que acontece por causa disso?', result:'mapa das consequências' }
+  ]
+});

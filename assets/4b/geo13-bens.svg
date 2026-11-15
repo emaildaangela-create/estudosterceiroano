@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<text x="450" y="58" font-size="34" fill="#6b49b8" font-weight="800" text-anchor="middle">Bens duráveis e não duráveis</text>
+<rect x="40" y="100" width="400" height="470" rx="24" fill="#eaf2ff" stroke="#2456b8" stroke-width="3"/>
+<text x="240" y="160" font-size="28" fill="#2456b8" font-weight="800" text-anchor="middle">BENS DURÁVEIS</text><text x="240" y="198" font-size="16" fill="#4a5872" font-weight="700" text-anchor="middle">duram muito tempo, usados muitas vezes</text>
+<rect x="80" y="235" width="320" height="62" rx="31" fill="#fff"/>
+<text x="240" y="276" font-size="24" fill="#17213b" font-weight="800" text-anchor="middle">🚗 automóvel</text>
+<rect x="80" y="315" width="320" height="62" rx="31" fill="#fff"/>
+<text x="240" y="356" font-size="24" fill="#17213b" font-weight="800" text-anchor="middle">💻 computador</text>
+<rect x="80" y="395" width="320" height="62" rx="31" fill="#fff"/>
+<text x="240" y="436" font-size="24" fill="#17213b" font-weight="800" text-anchor="middle">🧊 geladeira</text>
+<rect x="80" y="475" width="320" height="62" rx="31" fill="#fff"/>
+<text x="240" y="516" font-size="24" fill="#17213b" font-weight="800" text-anchor="middle">📺 televisão</text>
+<rect x="460" y="100" width="400" height="470" rx="24" fill="#fff4e6" stroke="#d9822b" stroke-width="3"/>
+<text x="660" y="160" font-size="28" fill="#d9822b" font-weight="800" text-anchor="middle">BENS NÃO DURÁVEIS</text><text x="660" y="198" font-size="16" fill="#4a5872" font-weight="700" text-anchor="middle">acabam rápido: consumo imediato</text>
+<rect x="500" y="235" width="320" height="62" rx="31" fill="#fff"/>
+<text x="660" y="276" font-size="24" fill="#17213b" font-weight="800" text-anchor="middle">🍎 alimentos</text>
+<rect x="500" y="315" width="320" height="62" rx="31" fill="#fff"/>
+<text x="660" y="356" font-size="24" fill="#17213b" font-weight="800" text-anchor="middle">🧃 bebidas</text>
+<rect x="500" y="395" width="320" height="62" rx="31" fill="#fff"/>
+<text x="660" y="436" font-size="24" fill="#17213b" font-weight="800" text-anchor="middle">🪥 pasta de dente</text>
+<rect x="500" y="475" width="320" height="62" rx="31" fill="#fff"/>
+<text x="660" y="516" font-size="24" fill="#17213b" font-weight="800" text-anchor="middle">🧴 detergente</text>
+</svg>

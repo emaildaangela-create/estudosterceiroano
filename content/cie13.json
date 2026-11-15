@@ -1,0 +1,349 @@
+{
+  "id": "cie13",
+  "module": "13",
+  "title": "O uso do solo",
+  "subtitle": "Composição · Agricultura, pecuária, silvicultura, mineração, urbanização · Cuidados · Poluição",
+  "theory": [
+    {
+      "h": "Composição do solo e seus diferentes usos",
+      "figure": {
+        "src": "assets/4b/cie13-camadas.svg",
+        "alt": "Corte do solo com plantas em cima e as camadas, de cima para baixo: húmus (mais nutrientes), camada superior, subsolo, águas subterrâneas e fragmentos de rochas, e rocha-mãe.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "O <strong>solo</strong> é um recurso natural essencial para a vida no planeta e para muitas atividades humanas, como a agricultura e a extração de materiais. Por isso, conservá-lo é fundamental.",
+        "O solo é a <strong>camada mais externa da litosfera</strong>, onde as plantas crescem e muitos organismos vivem. Ele é composto de <strong>nutrientes minerais, matéria orgânica, água e ar</strong>, distribuídos em diferentes <strong>camadas</strong>: húmus, camada superior, subsolo, águas subterrâneas e fragmentos de rochas, e rocha-mãe.",
+        "A camada de <strong>húmus</strong> é a que tem <strong>mais nutrientes minerais</strong>, além de água e oxigênio, necessários ao crescimento dos vegetais. Um <strong>solo fértil</strong> é úmido e rico em nutrientes; um solo seco e pobre em nutrientes não é fértil."
+      ],
+      "cards": [
+        {"icon": "🪨", "t": "minerais", "d": "nutrientes do solo"},
+        {"icon": "🍂", "t": "matéria orgânica", "d": "restos de plantas e animais"},
+        {"icon": "💧", "t": "água", "d": "componente do solo"},
+        {"icon": "💨", "t": "ar", "d": "componente do solo"},
+        {"icon": "🌱", "t": "húmus", "d": "camada com mais nutrientes"}
+      ]
+    },
+    {
+      "h": "Agricultura e pecuária",
+      "figure": {
+        "src": "assets/4b/cie13-usos.svg",
+        "alt": "Cinco usos do solo: agricultura (cultivo de plantas para alimentos e fibras), pecuária (criação de animais: carne, leite, couro, lã), silvicultura (cultivo de florestas: madeira, celulose, látex), mineração (extração de minerais como ferro e alumínio) e urbanização (casas, prédios, rodovias, parques).",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "A <strong>agricultura</strong> é um dos usos mais comuns do solo: é o <strong>cultivo de plantas</strong> para alimentação, produção de fibras e outros produtos. Tipos de agricultura:",
+        "• <strong>de subsistência</strong>: praticada por famílias para atender às suas necessidades de alimento e às da comunidade local;<br>• <strong>comercial</strong>: produz grandes quantidades de alimentos para <strong>vender</strong>;<br>• <strong>orgânica</strong>: usa técnicas sustentáveis, <strong>sem fertilizantes e pesticidas sintéticos</strong>, conservando o ambiente e produzindo alimentos mais saudáveis.",
+        "A <strong>pecuária</strong> é a <strong>criação e o cuidado de animais</strong> para obter produtos. Pode ser <strong>extensiva</strong> (grandes áreas de pasto) ou <strong>intensiva</strong> (animais criados em confinamento).",
+        "Produtos da pecuária: <strong>carne</strong> (fonte de proteínas), <strong>leite</strong> (queijos e iogurtes), <strong>couro</strong> (roupas, calçados e acessórios) e <strong>lã</strong> (matéria-prima da indústria têxtil)."
+      ],
+      "cards": [
+        {"icon": "🏡", "t": "subsistência", "d": "para a família comer"},
+        {"icon": "🚜", "t": "comercial", "d": "muita produção para vender"},
+        {"icon": "🥬", "t": "orgânica", "d": "sem agrotóxicos sintéticos"},
+        {"icon": "🐄", "t": "extensiva", "d": "animais soltos no pasto"},
+        {"icon": "🐖", "t": "intensiva", "d": "animais confinados"}
+      ]
+    },
+    {
+      "h": "Silvicultura, mineração e urbanização",
+      "p": [
+        "A <strong>silvicultura</strong> é a prática de <strong>cultivar e conservar florestas</strong> para obter produtos como <strong>madeira, celulose e látex</strong>. A madeira é usada em construções, móveis e na produção de papel. Para não causar desequilíbrios, é preciso adotar práticas sustentáveis, como o <strong>reflorestamento</strong>, a recuperação de áreas degradadas e o plantio de espécies nativas.",
+        "A <strong>mineração</strong> é a <strong>extração de minerais</strong> do solo ou de rochas. Ela fornece ouro, prata e minerais para a construção, veículos, eletrônicos, joias e utensílios. No Brasil, os principais minérios explorados são o <strong>ferro</strong> e o <strong>alumínio</strong>. Sem controle, a mineração pode <strong>contaminar a água</strong> com metais pesados e produtos químicos, <strong>degradar o solo</strong> e destruir hábitats.",
+        "A <strong>urbanização</strong> é a construção de <strong>moradias</strong> (casas e edifícios) e de infraestrutura (rodovias, parques e outras edificações). Ela traz benefícios: acesso a saúde, educação, transporte e saneamento, empregos e lazer.",
+        "Se não for bem planejada, a urbanização causa <strong>poluição do ar e da água</strong>, doenças, <strong>deslizamentos de terra, enchentes</strong> e perda de biodiversidade. O solo pode sofrer com a <strong>impermeabilização</strong> (o asfalto e o concreto impedem a água de se infiltrar) e com a contaminação por resíduos urbanos. Por isso é essencial o <strong>planejamento urbano</strong>."
+      ],
+      "cards": [
+        {"icon": "🌲", "t": "silvicultura", "d": "madeira, celulose, látex"},
+        {"icon": "⛏️", "t": "mineração", "d": "ferro e alumínio no Brasil"},
+        {"icon": "🏙️", "t": "urbanização", "d": "casas, prédios, rodovias"},
+        {"icon": "🧱", "t": "impermeabilização", "d": "a água não infiltra no solo"}
+      ]
+    },
+    {
+      "h": "Cuidados com o solo",
+      "figure": {
+        "src": "assets/4b/cie13-cuidados.svg",
+        "alt": "Seis cuidados com o solo: rotação de culturas, adubação orgânica, controle da erosão com reflorestamento, irrigação e drenagem, compostagem e unidades de conservação.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "O uso responsável do solo garante que ele continue fornecendo recursos para as <strong>gerações futuras</strong>. Algumas práticas:",
+        "<strong>Rotação de culturas:</strong> alternar a plantação de diferentes espécies na mesma área ao longo do tempo, para <strong>evitar o esgotamento</strong> do solo (cada planta retira e devolve nutrientes diferentes). Exemplo: soja crescendo nos restos da plantação de milho.",
+        "<strong>Adubação orgânica:</strong> a matéria orgânica, como <strong>restos de plantas</strong>, enriquece o solo com nutrientes.",
+        "<strong>Controle da erosão:</strong> técnicas para evitar a perda de solo pela ação da <strong>água e do vento</strong> (erosão). O <strong>reflorestamento</strong> ajuda, pois as <strong>raízes</strong> das plantas mantêm as partículas do solo unidas.",
+        "<strong>Irrigação e drenagem:</strong> a irrigação adequada dá às plantas a água suficiente; a drenagem evita o excesso de água, que prejudica as raízes.",
+        "<strong>Unidades de Conservação</strong> são áreas naturais <strong>protegidas por lei</strong> para conservar a biodiversidade e a água, como <strong>Parques Nacionais</strong>, Reservas Biológicas e Áreas de Proteção Ambiental (APAs). Exemplo: o Parque Nacional da Serra dos Órgãos, em Teresópolis (RJ), com o pico “Dedo de Deus”."
+      ]
+    },
+    {
+      "h": "Poluição do solo: causas, consequências e prevenção",
+      "figure": {
+        "src": "assets/4b/cie13-poluicao.svg",
+        "alt": "Três colunas. Causas: lixo descartado de forma errada, excesso de agrotóxicos, resíduos das indústrias, mineração, petróleo derramado. Consequências: morte de plantas e animais, doenças nas pessoas, solo menos fértil, água subterrânea e rios contaminados. Prevenção: separar recicláveis, compostagem, agricultura orgânica, uso controlado de fertilizantes, leis e fiscalização.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "A <strong>poluição do solo</strong> acontece quando <strong>substâncias impróprias</strong> são colocadas no solo, mudando suas propriedades e prejudicando a vida. Exemplo: resíduos plásticos no solo.",
+        "<strong>Causas:</strong> descarte inadequado de <strong>resíduos sólidos</strong> (de casas, indústrias e hospitais); uso excessivo de <strong>fertilizantes, pesticidas e herbicidas</strong> na agricultura; <strong>atividades industriais</strong> (vazamentos e derramamentos de resíduos químicos); <strong>extração de minerais</strong>, que libera metais tóxicos; e <strong>derramamentos de petróleo</strong>.",
+        "<strong>Consequências:</strong> os poluentes contaminam as plantas e, depois, os outros seres vivos, chegando até o ser humano: causam a <strong>morte de seres vivos</strong>, <strong>doenças</strong>, solo <strong>menos fértil</strong> (menor produção agrícola) e perda de biodiversidade. Eles também se infiltram e <strong>contaminam a água subterrânea e os rios</strong>.",
+        "<strong>Medidas de prevenção e controle</strong> (individuais, coletivas e governamentais): descartar os resíduos corretamente e <strong>separar os recicláveis</strong>; fazer <strong>reciclagem e compostagem</strong> (restos de alimentos e folhas são decompostos por microrganismos e viram adubo); usar fertilizantes e pesticidas com controle; incentivar a <strong>agricultura orgânica</strong> e a rotação de culturas; e criar <strong>leis</strong> que protejam o ambiente, com <strong>fiscalização</strong>."
+      ],
+      "cards": [
+        {"icon": "🪱", "t": "compostagem", "d": "restos viram adubo"},
+        {"icon": "♻️", "t": "reciclagem", "d": "menos lixo no solo"},
+        {"icon": "🧪", "t": "agrotóxicos em excesso", "d": "poluem o solo"},
+        {"icon": "🛢️", "t": "petróleo", "d": "altamente tóxico"}
+      ]
+    },
+    {
+      "h": "Utilizando o solo",
+      "p": [
+        "O solo é usado de diferentes maneiras, conforme a finalidade que o ser humano deseja. O livro compara duas fotos:",
+        "<strong>Foto A:</strong> plantação de <strong>soja</strong> em Quatro Pontes (PR), em <strong>2020</strong>: uso do solo na <strong>agricultura</strong>.",
+        "<strong>Foto B:</strong> <strong>mineração de ferro</strong> em Corumbá (MS), em <strong>2006</strong>: uso do solo na <strong>mineração</strong>, com máquinas retirando terra vermelha.",
+        "A foto mais recente é a da soja (2020) e a mais antiga é a da mineração (2006). As duas foram tiradas de <strong>dia</strong>, pois há luz do Sol e céu claro.",
+        "Usar o solo de maneira <strong>sustentável</strong> é importante para que ele continue fértil e para que os recursos continuem disponíveis para as futuras gerações."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Qual é o uso do solo?",
+      "short": "Usos do solo",
+      "instructions": "Que atividade está usando o solo?",
+      "categories": ["Agricultura 🌽", "Pecuária 🐄", "Silvicultura 🌲", "Mineração ⛏️", "Urbanização 🏙️"],
+      "items": [
+        {"text": "Plantação de soja e de alface", "cat": 0},
+        {"text": "Porcos criados em confinamento", "cat": 1},
+        {"text": "Árvores cultivadas para virar madeira e papel", "cat": 2},
+        {"text": "Escavadeira retirando ferro do solo", "cat": 3},
+        {"text": "Construção de prédios, ruas e rodovias", "cat": 4},
+        {"text": "Família cultivando uma horta orgânica", "cat": 0},
+        {"text": "Bois soltos em um grande pasto", "cat": 1},
+        {"text": "Extração de látex das seringueiras plantadas", "cat": 2},
+        {"text": "Poço de extração de carvão", "cat": 3},
+        {"text": "Bairro novo com casas e um parque", "cat": 4}
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Que tipo de agricultura?",
+      "short": "Tipos de agricultura",
+      "instructions": "Esta é uma agricultura de subsistência, comercial ou orgânica?",
+      "categories": ["Subsistência 🏡", "Comercial 🚜", "Orgânica 🥬"],
+      "items": [
+        {"text": "A família planta feijão e milho só para comer em casa.", "cat": 0},
+        {"text": "Uma fazenda planta toneladas de soja para vender.", "cat": 1},
+        {"text": "A horta não usa fertilizantes e pesticidas sintéticos.", "cat": 2},
+        {"text": "A produção atende a família e a comunidade local.", "cat": 0},
+        {"text": "Grandes quantidades de alimentos vão para os mercados.", "cat": 1},
+        {"text": "O agricultor usa técnicas sustentáveis para conservar o ambiente.", "cat": 2}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Cuidados com o solo",
+      "short": "Cuidados",
+      "instructions": "Qual cuidado com o solo é este?",
+      "pairs": [
+        ["Alternar o cultivo de diferentes plantas para não esgotar os nutrientes.", "Rotação de culturas"],
+        ["Usar restos de plantas para enriquecer o solo.", "Adubação orgânica"],
+        ["Plantar árvores para as raízes segurarem o solo.", "Controle da erosão"],
+        ["Dar às plantas a água certa e evitar o excesso.", "Irrigação e drenagem"],
+        ["Restos de alimentos e folhas viram adubo.", "Compostagem"],
+        ["Área natural protegida por lei, como um Parque Nacional.", "Unidade de Conservação"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Polui ou protege o solo?",
+      "short": "Poluição do solo",
+      "instructions": "Esta atitude polui ou protege o solo?",
+      "categories": ["Polui o solo ☠️", "Protege o solo 🌱"],
+      "items": [
+        {"text": "Jogar lixo na praia", "cat": 0},
+        {"text": "Separar os resíduos recicláveis em casa", "cat": 1},
+        {"text": "Usar pesticidas em excesso na plantação", "cat": 0},
+        {"text": "Fazer compostagem com restos de alimentos", "cat": 1},
+        {"text": "Derramar petróleo no chão", "cat": 0},
+        {"text": "Incentivar a agricultura orgânica", "cat": 1},
+        {"text": "Indústria que deixa vazar resíduos químicos", "cat": 0},
+        {"text": "Criar leis e fiscalizar o seu cumprimento", "cat": 1}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Da causa à consequência",
+      "short": "Consequências",
+      "instructions": "O que acontece por causa disso?",
+      "pairs": [
+        ["Poluentes se acumulam no solo e nas plantas", "chegam aos animais e ao ser humano"],
+        ["O solo fica poluído e menos fértil", "a produção agrícola diminui"],
+        ["Os poluentes se infiltram no solo", "a água subterrânea fica contaminada"],
+        ["Cidade cresce sem planejamento", "enchentes e deslizamentos de terra"],
+        ["Asfalto e concreto cobrem o solo", "a água não consegue se infiltrar"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "De que é composto o solo?",
+      "options": ["Nutrientes minerais, matéria orgânica, água e ar", "Somente areia, pedras e rochas grandes", "Somente água da chuva e do rio", "Plástico, vidro e metais da cidade"],
+      "answer": 0,
+      "explain": "O solo tem nutrientes minerais, matéria orgânica, água e ar, distribuídos em camadas."
+    },
+    {
+      "type": "mc",
+      "image": "assets/4b/cie13-camadas.svg",
+      "imageAlt": "Corte do solo com as camadas: húmus, camada superior, subsolo, águas subterrâneas e fragmentos de rochas, e rocha-mãe.",
+      "q": "Qual camada do solo tem mais nutrientes minerais?",
+      "options": ["Húmus", "Rocha-mãe", "Subsolo", "Águas subterrâneas"],
+      "answer": 0,
+      "explain": "O húmus tem mais nutrientes, água e oxigênio, necessários ao crescimento dos vegetais."
+    },
+    {
+      "type": "mc",
+      "q": "Como é um solo fértil?",
+      "options": ["Úmido e rico em nutrientes", "Seco e rachado", "Pobre em nutrientes", "Coberto de asfalto"],
+      "answer": 0,
+      "explain": "O livro compara um solo úmido e rico em nutrientes (fértil) com um solo seco e pobre em nutrientes."
+    },
+    {
+      "type": "mc",
+      "q": "A agricultura de subsistência é praticada:",
+      "options": ["por famílias, para a própria alimentação e a da comunidade", "por grandes fazendas, para vender", "por indústrias de petróleo", "somente em cidades grandes"],
+      "answer": 0,
+      "explain": "A de subsistência atende às necessidades da família e da comunidade local; a comercial produz para vender."
+    },
+    {
+      "type": "mc",
+      "q": "A agricultura comercial tem como objetivo:",
+      "options": ["produzir grandes quantidades para vender", "alimentar só a própria família", "evitar plantar alimentos", "criar animais no pasto"],
+      "answer": 0,
+      "explain": "A agricultura comercial produz grandes quantidades de alimentos para comercializá-los."
+    },
+    {
+      "type": "mc",
+      "q": "Como a agricultura orgânica ajuda a conservar o solo?",
+      "options": ["Evita fertilizantes e pesticidas sintéticos", "Usa muitos agrotóxicos", "Cobre o solo com cimento", "Retira todas as árvores"],
+      "answer": 0,
+      "explain": "A agricultura orgânica usa técnicas sustentáveis, sem fertilizantes e pesticidas sintéticos."
+    },
+    {
+      "type": "mc",
+      "q": "O que é pecuária?",
+      "options": ["Criação e cuidado de animais para obter produtos", "Cultivo de florestas para tirar madeira", "Extração de minerais do solo e das rochas", "Construção de casas, prédios e ruas"],
+      "answer": 0,
+      "explain": "Na pecuária, os animais são criados para dar carne, leite, couro e lã."
+    },
+    {
+      "type": "mc",
+      "q": "Na pecuária intensiva, os animais são criados:",
+      "options": ["em confinamento", "soltos em grandes pastos", "dentro das florestas", "no mar"],
+      "answer": 0,
+      "explain": "Intensiva: animais em confinamento. Extensiva: grandes áreas de pasto."
+    },
+    {
+      "type": "mc",
+      "q": "Qual destes é um produto da pecuária usado para fazer roupas, calçados e acessórios?",
+      "options": ["Couro", "Celulose", "Ferro", "Látex"],
+      "answer": 0,
+      "explain": "Da pecuária vêm a carne, o leite, o couro (calçados e roupas) e a lã (indústria têxtil)."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama a prática de cultivar e conservar florestas para obter madeira, celulose e látex?",
+      "answers": ["silvicultura", "a silvicultura"],
+      "explain": "Silvicultura é o cultivo de florestas para obter produtos de interesse humano."
+    },
+    {
+      "type": "mc",
+      "q": "Quais são os dois principais minérios extraídos no Brasil?",
+      "options": ["Ferro e alumínio", "Soja e café", "Carne bovina e ovos", "Petróleo e madeira"],
+      "answer": 0,
+      "explain": "No Brasil, os principais minérios explorados são o ferro e o alumínio."
+    },
+    {
+      "type": "mc",
+      "q": "Um problema da mineração feita sem controle é:",
+      "options": ["contaminar a água com metais pesados", "deixar o solo mais fértil", "aumentar as florestas", "diminuir a poluição"],
+      "answer": 0,
+      "explain": "Sem controle, a mineração contamina os cursos de água e degrada o solo."
+    },
+    {
+      "type": "mc",
+      "context": "Se a urbanização não for bem planejada, pode trazer consequências para a população e o ambiente, como poluição do ar e da água, problemas de saúde, aumento dos deslizamentos de terra, enchentes e perda da biodiversidade. O solo pode ser afetado pela impermeabilização, que reduz a capacidade de infiltração de água.",
+      "q": "Segundo o texto, um problema da urbanização mal planejada é:",
+      "options": ["enchentes e deslizamentos de terra", "mais água infiltrando no solo", "aumento da biodiversidade", "ar mais limpo"],
+      "answer": 0,
+      "explain": "A cidade sem planejamento causa poluição, doenças, enchentes, deslizamentos e perda de biodiversidade."
+    },
+    {
+      "type": "mc",
+      "q": "A impermeabilização do solo pelo asfalto e pelo concreto faz com que:",
+      "options": ["a água não consiga se infiltrar no solo", "o solo fique mais fértil", "as plantas cresçam mais", "a água fique mais limpa"],
+      "answer": 0,
+      "explain": "O solo coberto não deixa a água infiltrar, o que pode causar enchentes."
+    },
+    {
+      "type": "mc",
+      "q": "Alternar o cultivo de diferentes plantas na mesma área para evitar o esgotamento dos nutrientes é:",
+      "options": ["rotação de culturas", "impermeabilização", "mineração", "pecuária intensiva"],
+      "answer": 0,
+      "explain": "Na rotação de culturas, cada planta retira e devolve nutrientes diferentes ao solo."
+    },
+    {
+      "type": "mc",
+      "q": "Por que o reflorestamento ajuda a controlar a erosão?",
+      "options": ["As raízes das plantas mantêm o solo unido", "As árvores deixam o solo seco", "As folhas tiram os nutrientes", "As árvores atraem enchentes"],
+      "answer": 0,
+      "explain": "Erosão é a perda de solo pela água e pelo vento; as raízes seguram as partículas do solo."
+    },
+    {
+      "type": "mc",
+      "q": "O que é compostagem?",
+      "options": ["Restos de alimentos e folhas decompostos viram adubo", "Queimar todo o lixo da casa no quintal", "Enterrar plástico e vidro no solo", "Usar muitos pesticidas na plantação"],
+      "answer": 0,
+      "explain": "Na compostagem, microrganismos decompõem a matéria orgânica, que vira um composto rico em nutrientes."
+    },
+    {
+      "type": "mc",
+      "q": "Parques Nacionais, Reservas Biológicas e APAs são exemplos de:",
+      "options": ["Unidades de Conservação", "áreas de mineração", "indústrias de base", "plantações de soja"],
+      "answer": 0,
+      "explain": "Unidades de Conservação são áreas naturais protegidas por lei, como o Parque Nacional da Serra dos Órgãos (RJ)."
+    },
+    {
+      "type": "mc",
+      "q": "Qual destas é uma causa da poluição do solo?",
+      "options": ["Uso excessivo de fertilizantes e pesticidas", "Separação dos recicláveis", "Compostagem", "Agricultura orgânica"],
+      "answer": 0,
+      "explain": "Lixo descartado errado, agrotóxicos em excesso, resíduos industriais, mineração e petróleo derramado poluem o solo."
+    },
+    {
+      "type": "mc",
+      "q": "Os poluentes do solo podem chegar até o ser humano. Como?",
+      "options": ["Contaminam as plantas e depois os outros seres vivos", "Eles desaparecem sozinhos com a chuva", "Viram nutrientes bons para as plantas", "Ficam presos para sempre na rocha-mãe"],
+      "answer": 0,
+      "explain": "Os poluentes contaminam as plantas e, depois, os animais e o ser humano, causando doenças."
+    },
+    {
+      "type": "mc",
+      "q": "Qual frase sobre o solo está correta?",
+      "options": ["A conservação do solo depende de medidas individuais, coletivas e governamentais.", "O resultado da compostagem contamina o solo com seus nutrientes.", "O bom uso do solo esgota seus nutrientes e gera erosão.", "A mineração e o uso de fertilizantes sempre ajudam o solo."],
+      "answer": 0,
+      "explain": "Cuidar do solo depende de cada pessoa, da comunidade e do governo (leis e fiscalização)."
+    },
+    {
+      "type": "mc",
+      "context": "Foto A: plantação de soja em Quatro Pontes (PR), em 2020. Foto B: mineração de ferro em Corumbá (MS), em 2006.",
+      "q": "Qual das fotografias é a mais recente?",
+      "options": ["A foto A, de 2020", "A foto B, de 2006", "As duas são de 2006", "As duas são de 2020"],
+      "answer": 0,
+      "explain": "2020 é mais recente que 2006. A foto A mostra a agricultura; a B, a mineração."
+    }
+  ]
+}

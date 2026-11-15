@@ -25,3 +25,9 @@ Object.assign(PEDAGOGY, {
   mat14:{objectives:['reconhecer metade, terço, quarto e frações até o décimo','ler frações e entender numerador e denominador','calcular a fração de uma quantidade e resolver problemas']},
   sim_matematica:{objectives:['revisar os módulos 13 e 14','treinar com questões sorteadas','ver o que precisa revisar']}
 });
+Object.assign(PEDAGOGY, {
+  geo13:{objectives:['explicar o que é indústria e seus tipos','comparar artesanato e indústria, bens duráveis e não duráveis','praticar o consumo consciente e reconhecer os impactos da indústria']},
+  sim_geografia:{objectives:['revisar o módulo 13','treinar com questões sorteadas','ver o que precisa revisar']},
+  cie13:{objectives:['conhecer a composição e as camadas do solo','reconhecer agricultura, pecuária, silvicultura, mineração e urbanização','cuidar do solo e evitar a poluição']},
+  sim_ciencias:{objectives:['revisar o módulo 13','treinar com questões sorteadas','ver o que precisa revisar']}
+});

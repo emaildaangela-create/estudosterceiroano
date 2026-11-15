@@ -1,0 +1,47 @@
+{
+  "theory": [
+    {
+      "h": "Resumo da prova de Ciências",
+      "p": [
+        "<strong>Composição do solo:</strong> camada mais externa da litosfera; tem nutrientes minerais, matéria orgânica, água e ar, em camadas (húmus, camada superior, subsolo, águas e fragmentos de rochas, rocha-mãe). O <strong>húmus</strong> tem mais nutrientes.",
+        "<strong>Usos do solo:</strong> agricultura (de subsistência, comercial, orgânica); pecuária (extensiva ou intensiva: carne, leite, couro, lã); silvicultura (madeira, celulose, látex; reflorestamento); mineração (no Brasil, ferro e alumínio; pode contaminar a água); urbanização (moradias e infraestrutura; sem planejamento: enchentes, deslizamentos, impermeabilização).",
+        "<strong>Cuidados:</strong> rotação de culturas, adubação orgânica, controle da erosão (reflorestamento: raízes seguram o solo), irrigação e drenagem, Unidades de Conservação.",
+        "<strong>Poluição do solo:</strong> causas (lixo descartado errado, agrotóxicos em excesso, resíduos industriais, mineração, petróleo); consequências (morte de seres vivos, doenças, solo menos fértil, água contaminada); prevenção (separar recicláveis, reciclagem, compostagem, agricultura orgânica, leis e fiscalização)."
+      ],
+      "cards": [
+        {"icon": "🌱", "t": "húmus", "d": "mais nutrientes"},
+        {"icon": "🌽", "t": "agricultura", "d": "cultivo de plantas"},
+        {"icon": "🐄", "t": "pecuária", "d": "criação de animais"},
+        {"icon": "🌲", "t": "silvicultura", "d": "cultivo de florestas"},
+        {"icon": "⛏️", "t": "mineração", "d": "ferro e alumínio"},
+        {"icon": "🏙️", "t": "urbanização", "d": "moradias e rodovias"},
+        {"icon": "🔄", "t": "rotação de culturas", "d": "não esgota o solo"},
+        {"icon": "🪱", "t": "compostagem", "d": "restos viram adubo"},
+        {"icon": "☠️", "t": "poluição", "d": "substâncias impróprias no solo"}
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "A lã, matéria-prima da indústria têxtil, é um produto de qual atividade?",
+      "options": ["Pecuária", "Mineração", "Silvicultura", "Urbanização"],
+      "answer": 0,
+      "explain": "A pecuária produz carne, leite, couro e lã."
+    },
+    {
+      "type": "mc",
+      "q": "Jogar resíduos na praia é uma atitude que:",
+      "options": ["polui o solo e o ambiente", "protege o solo", "enriquece o solo com nutrientes", "evita a erosão"],
+      "answer": 0,
+      "explain": "O descarte inadequado de resíduos é uma das causas da poluição do solo."
+    },
+    {
+      "type": "mc",
+      "q": "Erosão é a perda de solo causada pela ação:",
+      "options": ["da água e do vento", "das raízes das plantas", "da compostagem", "da adubação orgânica"],
+      "answer": 0,
+      "explain": "A água e o vento levam o solo embora; o reflorestamento ajuda a evitar a erosão."
+    }
+  ]
+}

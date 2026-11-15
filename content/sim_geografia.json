@@ -1,0 +1,47 @@
+{
+  "theory": [
+    {
+      "h": "Resumo da prova de Geografia",
+      "p": [
+        "<strong>O que é indústria:</strong> atividade que transforma recursos naturais em produtos, com máquinas e equipamentos, em grandes quantidades; gera empregos. <strong>Indústria de base</strong> (petróleo, minérios → aço, diesel) e <strong>de bens de consumo</strong> (alimentos, roupas, móveis, automóveis).",
+        "<strong>Do artesanato à indústria:</strong> artesanal = à mão ou com ferramentas simples, um a um, dias ou semanas (ainda hoje: cestos indígenas). Industrial = máquinas, grandes quantidades, produção padronizada.",
+        "<strong>Bens duráveis</strong> duram muito (geladeira, computador, automóvel); <strong>não duráveis</strong> acabam rápido (alimentos, bebidas, higiene, limpeza). <strong>Consumo consciente:</strong> 5 Rs — repensar, recusar, reduzir, reutilizar e reciclar.",
+        "<strong>Profissionais:</strong> operador de máquina, supervisora de qualidade, desenhista industrial, mecânica de manutenção; usam EPIs contra acidentes. <strong>Impactos:</strong> poluição do ar, contaminação das águas e uso excessivo dos recursos naturais."
+      ],
+      "cards": [
+        {"icon": "🏭", "t": "indústria", "d": "transforma recursos naturais"},
+        {"icon": "⚙️", "t": "indústria de base", "d": "aço, diesel"},
+        {"icon": "🛋️", "t": "bens de consumo", "d": "alimentos, roupas, móveis"},
+        {"icon": "🧵", "t": "artesanal", "d": "à mão, um a um"},
+        {"icon": "🧊", "t": "bem durável", "d": "dura muito tempo"},
+        {"icon": "🧃", "t": "bem não durável", "d": "acaba rápido"},
+        {"icon": "♻️", "t": "5 Rs", "d": "consumo consciente"},
+        {"icon": "⛑️", "t": "EPI", "d": "proteção contra acidentes"},
+        {"icon": "🌫️", "t": "impacto", "d": "poluição do ar e da água"}
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Uma montadora de automóveis é uma indústria de:",
+      "options": ["bens de consumo", "base", "artesanato", "mineração"],
+      "answer": 0,
+      "explain": "Automóveis são produtos para o consumidor: indústria de bens de consumo."
+    },
+    {
+      "type": "mc",
+      "q": "Qual destes é um bem não durável?",
+      "options": ["Detergente", "Geladeira", "Computador", "Automóvel"],
+      "answer": 0,
+      "explain": "Produtos de limpeza se esgotam quando são consumidos: são bens não duráveis."
+    },
+    {
+      "type": "mc",
+      "q": "Recusar produtos com excesso de embalagens ajuda a:",
+      "options": ["evitar desperdício e diminuir o lixo", "aumentar a poluição", "gastar mais recursos naturais", "fabricar mais embalagens"],
+      "answer": 0,
+      "explain": "Recusar é um dos 5 Rs do consumo consciente: evita desperdício."
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "id": "geo13",
+  "module": "13",
+  "title": "A indústria e o comércio",
+  "subtitle": "O que é indústria · Artesanato · Bens duráveis · Consumo consciente · Profissionais · Impactos",
+  "theory": [
+    {
+      "h": "O que é indústria?",
+      "figure": {
+        "src": "assets/4b/geo13-cadeia-leite.svg",
+        "alt": "Cadeia de produção do leite em 6 etapas: extração (ordenha da vaca), transporte em caminhão-tanque, indústria (iogurte, queijo, manteiga), distribuição, comércio e consumo pela família.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "Muitos alimentos, como frutas, legumes e verduras, são extraídos da natureza e levados direto para feiras e mercados. Outros recursos vão para as <strong>indústrias</strong> e são transformados em novos produtos. O leite, por exemplo, vira iogurte, queijo, manteiga e outros <strong>derivados</strong> (produtos que se originam da transformação de outro).",
+        "A <strong>indústria</strong> é a atividade que <strong>transforma os recursos naturais em diversos produtos</strong>, com a ajuda de ferramentas, máquinas e equipamentos. Ela <strong>gera empregos</strong> e amplia a variedade de mercadorias. Os produtos são fabricados em <strong>grandes quantidades</strong>.",
+        "Muitas matérias-primas são recursos naturais transformados: o <strong>plástico</strong>, usado para fazer brinquedos, é feito a partir do <strong>petróleo</strong>."
+      ],
+      "cards": [
+        {"icon": "🏭", "t": "indústria", "d": "transforma recursos naturais em produtos"},
+        {"icon": "🧀", "t": "derivado", "d": "produto que vem de outro (leite → queijo)"},
+        {"icon": "🛢️", "t": "petróleo", "d": "vira plástico"}
+      ]
+    },
+    {
+      "h": "Indústria de base e indústria de bens de consumo",
+      "figure": {
+        "src": "assets/4b/geo13-tipos-industria.svg",
+        "alt": "Recursos naturais (petróleo, minérios, madeira, leite) vão para a indústria de base, que faz matérias-primas e energia (aço, diesel, plástico), e para a indústria de bens de consumo, que faz alimentos, roupas, móveis e automóveis.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "Alguns produtos servem de <strong>matéria-prima para outras indústrias</strong>; outros vão direto para o <strong>consumidor final</strong>. Por isso, as indústrias são classificadas em dois tipos:",
+        "<strong>Indústrias de base:</strong> transformam os recursos naturais em matérias-primas (por exemplo, o <strong>aço</strong>) e em fontes de energia (por exemplo, o <strong>diesel</strong>). Boa parte dos produtos vai para outras indústrias. Exemplos: indústrias de <strong>petróleo</strong> e de <strong>minérios</strong>.",
+        "<strong>Indústrias de bens de consumo:</strong> usam as matérias-primas para fabricar produtos para as pessoas. Exemplos: indústrias de <strong>alimentos, roupas, móveis e automóveis</strong>."
+      ]
+    },
+    {
+      "h": "Do artesanato à indústria",
+      "figure": {
+        "src": "assets/4b/geo13-artesanato-industria.svg",
+        "alt": "Comparação: produção artesanal, feita à mão ou com ferramentas simples, um a um, levando dias ou semanas, como os cestos indígenas; e produção industrial, com máquinas e equipamentos, em grandes quantidades e padronizada, como na fábrica de sapatos.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "Antigamente, os produtos eram feitos de modo <strong>artesanal</strong>: <strong>à mão</strong> ou com algumas ferramentas. As máquinas industriais ainda não existiam e o artesão tinha apenas materiais e instrumentos simples. Os produtos eram feitos <strong>um a um</strong> e podiam levar <strong>dias ou até semanas</strong> para ficar prontos. Exemplo: o sapateiro do século 17, que fazia os sapatos à mão.",
+        "Ainda hoje, muitos produtos são feitos artesanalmente. Povos e comunidades tradicionais, como os <strong>indígenas</strong>, fabricam e vendem produtos artesanais, como cestos.",
+        "Com o surgimento das indústrias, os produtos passaram a ser feitos com <strong>máquinas e equipamentos</strong>, em <strong>grandes quantidades</strong>, seguindo <strong>modelos iguais</strong> (produção padronizada), como na fábrica de sapatos de Birigui (SP)."
+      ]
+    },
+    {
+      "h": "Bens duráveis e não duráveis",
+      "figure": {
+        "src": "assets/4b/geo13-bens.svg",
+        "alt": "Bens duráveis duram muito tempo e são usados muitas vezes: automóvel, computador, geladeira, televisão. Bens não duráveis acabam rápido: alimentos, bebidas, pasta de dente, detergente.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "<strong>Bens duráveis</strong> são produtos que <strong>duram muito tempo</strong>: não desaparecem nem estragam rapidamente e podem ser usados <strong>inúmeras vezes</strong>. Exemplos: <strong>automóveis, computadores e eletrodomésticos</strong> (geladeira, fogão, máquina de lavar).",
+        "<strong>Bens não duráveis</strong> têm <strong>tempo de vida curto</strong>: o consumo é imediato ou rápido e, quando são consumidos, <strong>se esgotam</strong>. Exemplos: <strong>alimentos, bebidas, produtos de higiene e de limpeza</strong> (pasta de dente, detergente)."
+      ],
+      "cards": [
+        {"icon": "🧊", "t": "geladeira", "d": "bem durável"},
+        {"icon": "💻", "t": "computador", "d": "bem durável"},
+        {"icon": "🧃", "t": "suco de uva", "d": "bem não durável"},
+        {"icon": "🪥", "t": "pasta de dente", "d": "bem não durável"}
+      ]
+    },
+    {
+      "h": "Consumo consciente dos produtos",
+      "figure": {
+        "src": "assets/4b/geo13-5rs.svg",
+        "alt": "Os 5 Rs: repensar (eu preciso mesmo disso?), recusar (excesso de embalagens), reduzir (menos descartáveis), reutilizar (pote de vidro vira vaso) e reciclar (papel, plástico e metal viram novos produtos).",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "Para fabricar bens duráveis e não duráveis, são usadas <strong>muitas matérias-primas e fontes de energia</strong>. Por isso, o <strong>consumo excessivo</strong> pode causar impactos no meio ambiente: <strong>esgotamento de recursos naturais</strong>, emissão de <strong>poluentes</strong> e muitos <strong>resíduos</strong> (lixo).",
+        "É importante consumir de modo <strong>consciente</strong>, avaliando a real necessidade de comprar um produto. A prática dos <strong>5 Rs</strong> ajuda:",
+        "<strong>Recusar</strong> produtos que não sejam reaproveitáveis ou recicláveis, ou com excesso de embalagens. <strong>Reduzir</strong> o uso de descartáveis. <strong>Reutilizar</strong> o que normalmente jogamos fora, como embalagens de vidro e papéis. <strong>Reciclar</strong>: papel, papelão, plástico e metal viram novos produtos. <strong>Repensar</strong>: antes de comprar, pensar se precisamos mesmo daquele produto."
+      ],
+      "cards": [
+        {"icon": "🤔", "t": "Repensar", "d": "preciso mesmo?"},
+        {"icon": "🚫", "t": "Recusar", "d": "excesso de embalagem"},
+        {"icon": "📉", "t": "Reduzir", "d": "menos descartáveis"},
+        {"icon": "🫙", "t": "Reutilizar", "d": "usar de novo"},
+        {"icon": "♻️", "t": "Reciclar", "d": "virar novo produto"}
+      ]
+    },
+    {
+      "h": "Os profissionais da indústria",
+      "p": [
+        "Nas indústrias, os produtos são feitos com máquinas, equipamentos e ferramentas, mas também há <strong>muitos profissionais</strong>. Eles criam os produtos, controlam as máquinas, fazem a manutenção dos equipamentos, manuseiam ferramentas e avaliam a qualidade dos produtos.",
+        "Exemplos do livro: <strong>operador de máquina</strong>, <strong>supervisora de qualidade dos produtos</strong>, <strong>desenhista industrial</strong> e <strong>mecânica de manutenção de máquinas</strong>.",
+        "O trabalho varia: em algumas indústrias, as máquinas são controladas por <strong>equipamentos eletrônicos</strong>; em outras, os profissionais operam grandes equipamentos, como os <strong>guindastes</strong> (máquinas que erguem cargas muito pesadas). Na fabricação de celulares, eles <strong>manuseiam</strong> (pegam e mexem com as mãos) peças eletrônicas muito pequenas.",
+        "Esse trabalho é importante: ajuda a fabricar produtos e a <strong>produzir riqueza para o país</strong>. Para as atividades de risco, os profissionais usam <strong>Equipamentos de Proteção Individual (EPIs)</strong>, como capacete, óculos e luvas, que os <strong>protegem de acidentes</strong> e garantem a segurança e a saúde."
+      ],
+      "cards": [
+        {"icon": "⚙️", "t": "operador de máquina", "d": "controla as máquinas"},
+        {"icon": "📋", "t": "supervisora de qualidade", "d": "avalia os produtos"},
+        {"icon": "✏️", "t": "desenhista industrial", "d": "cria os produtos"},
+        {"icon": "🔧", "t": "mecânica de manutenção", "d": "conserta as máquinas"},
+        {"icon": "⛑️", "t": "EPI", "d": "protege de acidentes"}
+      ]
+    },
+    {
+      "h": "Impactos ambientais da indústria",
+      "figure": {
+        "src": "assets/4b/geo13-impactos.svg",
+        "alt": "Impactos ambientais da indústria: poluição do ar, contaminação das águas, uso excessivo dos recursos naturais e muitos resíduos. Abaixo, os EPIs dos profissionais: capacete, óculos, luvas, botas e máscara.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "As indústrias ficam nas áreas <strong>urbanas e rurais</strong>, geralmente em locais com <strong>matérias-primas</strong> para a produção, <strong>energia</strong> para as máquinas e <strong>meios de transporte</strong> para levar os produtos ao comércio.",
+        "A indústria é muito importante para gerar <strong>riqueza</strong> para o país e <strong>empregos</strong>, mas pode provocar impactos no ambiente: <strong>poluição atmosférica</strong> (do ar), <strong>contaminação das águas</strong> e <strong>uso excessivo dos recursos naturais</strong>.",
+        "Entre duas indústrias, uma muito poluente e outra que conserva os recursos naturais e usa materiais reciclados, a escolha consciente é a que causa <strong>baixo impacto</strong> ao meio ambiente."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Base ou bens de consumo?",
+      "short": "Tipos de indústria",
+      "instructions": "Que tipo de indústria é esta?",
+      "context": "As indústrias de base transformam os recursos naturais em matérias-primas (como o aço) e em fontes de energia (como o diesel); boa parte dos produtos vai para outras indústrias. As indústrias de bens de consumo usam as matérias-primas para fabricar produtos para as pessoas, como alimentos, roupas, móveis e automóveis.",
+      "categories": ["Indústria de base ⚙️", "Indústria de bens de consumo 🛋️"],
+      "items": [
+        {"text": "Indústria que transforma minério em aço", "cat": 0},
+        {"text": "Fábrica de móveis de madeira", "cat": 1},
+        {"text": "Indústria de petróleo que produz diesel", "cat": 0},
+        {"text": "Fábrica de roupas", "cat": 1},
+        {"text": "Montadora de automóveis", "cat": 1},
+        {"text": "Indústria de minérios", "cat": 0},
+        {"text": "Fábrica de iogurte e queijo", "cat": 1},
+        {"text": "Fábrica de pães em grande quantidade", "cat": 1}
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Artesanal ou industrial?",
+      "short": "Artesanato ou indústria",
+      "instructions": "Este produto foi feito de modo artesanal ou industrial?",
+      "categories": ["Artesanal 🧵", "Industrial 🏭"],
+      "items": [
+        {"text": "Sapateiro do século 17 costurando um sapato à mão", "cat": 0},
+        {"text": "Fábrica de Birigui produzindo milhares de sapatos iguais", "cat": 1},
+        {"text": "Mulher indígena guarani trançando um cesto", "cat": 0},
+        {"text": "Pães feitos em grandes batedeiras e fornos de fábrica", "cat": 1},
+        {"text": "Produto feito um a um, levando semanas para ficar pronto", "cat": 0},
+        {"text": "Produtos feitos com máquinas, seguindo um mesmo modelo", "cat": 1},
+        {"text": "Padeiro sovando a massa com as mãos", "cat": 0}
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Durável ou não durável?",
+      "short": "Bens duráveis",
+      "instructions": "Este produto é um bem durável ou não durável?",
+      "categories": ["Bem durável 🧊", "Bem não durável 🧃"],
+      "items": [
+        {"text": "geladeira", "cat": 0},
+        {"text": "suco de uva", "cat": 1},
+        {"text": "computador", "cat": 0},
+        {"text": "pasta de dente", "cat": 1},
+        {"text": "automóvel", "cat": 0},
+        {"text": "detergente", "cat": 1},
+        {"text": "máquina de lavar roupa", "cat": 0},
+        {"text": "pão", "cat": 1},
+        {"text": "televisão", "cat": 0},
+        {"text": "sabonete", "cat": 1}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Os 5 Rs",
+      "short": "Consumo consciente",
+      "instructions": "Qual R do consumo consciente é esta atitude?",
+      "pairs": [
+        ["Antes de comprar, pensar se precisa mesmo daquele produto.", "Repensar"],
+        ["Não aceitar produtos com excesso de embalagens.", "Recusar"],
+        ["Usar menos copos e talheres descartáveis.", "Reduzir"],
+        ["Transformar um pote de vidro em porta-lápis.", "Reutilizar"],
+        ["Separar papel, plástico e metal para virarem novos produtos.", "Reciclar"]
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Quem trabalha na indústria?",
+      "short": "Profissionais",
+      "instructions": "Ligue o profissional ao que ele faz.",
+      "pairs": [
+        ["Operador de máquina", "controla as máquinas da fábrica"],
+        ["Supervisora de qualidade", "avalia a qualidade dos produtos"],
+        ["Desenhista industrial", "cria e desenha os produtos"],
+        ["Mecânica de manutenção", "conserta e cuida das máquinas"],
+        ["Operador de guindaste", "ergue cargas muito pesadas"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "O que é a indústria?",
+      "options": ["Atividade que transforma recursos naturais em produtos", "Atividade de vender produtos nas lojas", "Atividade de plantar alimentos no campo", "Atividade de criar animais no pasto"],
+      "answer": 0,
+      "explain": "A indústria transforma os recursos naturais em diversos produtos, com ferramentas, máquinas e equipamentos."
+    },
+    {
+      "type": "mc",
+      "context": "Muitos alimentos, como frutas, legumes e verduras, são extraídos da natureza e levados direto para feiras e mercados. Outros recursos são levados para as indústrias para serem transformados em novos produtos. Um exemplo é o leite, que, após ser extraído da vaca, é levado para a indústria e transformado em iogurte, queijo, manteiga e outros derivados.",
+      "q": "Segundo o texto, o que são o iogurte, o queijo e a manteiga?",
+      "options": ["Derivados do leite feitos na indústria", "Alimentos extraídos direto da natureza", "Matérias-primas da indústria de base", "Bens duráveis"],
+      "answer": 0,
+      "explain": "Derivado é o produto que se origina da transformação de outro: o leite vira iogurte, queijo e manteiga."
+    },
+    {
+      "type": "mc",
+      "q": "Qual é a ordem correta da cadeia de produção do leite?",
+      "options": ["vaca → transporte → indústria → mercado → consumidor", "mercado → vaca → indústria → consumidor → transporte", "indústria → vaca → consumidor → mercado → transporte", "consumidor → mercado → indústria → transporte → vaca"],
+      "answer": 0,
+      "explain": "Primeiro a extração (ordenha), depois o transporte, a indústria, o comércio e, por fim, o consumidor."
+    },
+    {
+      "type": "mc",
+      "q": "As indústrias de petróleo e de minérios são exemplos de:",
+      "options": ["indústrias de base", "indústrias de bens de consumo", "comércio eletrônico", "produção artesanal"],
+      "answer": 0,
+      "explain": "As indústrias de base transformam recursos naturais em matérias-primas (aço) e fontes de energia (diesel)."
+    },
+    {
+      "type": "mc",
+      "q": "Uma fábrica de móveis é uma indústria de:",
+      "options": ["bens de consumo", "base de minérios", "base de petróleo", "artesanato local"],
+      "answer": 0,
+      "explain": "Indústrias de alimentos, roupas, móveis e automóveis fabricam produtos para as pessoas: bens de consumo."
+    },
+    {
+      "type": "mc",
+      "q": "O plástico, usado para fabricar brinquedos, é feito a partir de qual recurso natural?",
+      "options": ["Petróleo", "Leite", "Madeira", "Areia"],
+      "answer": 0,
+      "explain": "Muitas matérias-primas são recursos naturais transformados: o plástico vem do petróleo."
+    },
+    {
+      "type": "mc",
+      "context": "Antigamente, os produtos eram fabricados de modo artesanal, ou seja, eram feitos à mão ou com o uso de algumas ferramentas. As máquinas industriais ainda não existiam e o artesão tinha apenas materiais e instrumentos de trabalho simples. Os produtos eram feitos um a um e podiam levar dias ou até semanas para ficarem prontos.",
+      "q": "Como eram fabricados os produtos artesanais?",
+      "options": ["À mão, um a um, com ferramentas simples", "Em grandes quantidades, com máquinas", "Por robôs, em poucos minutos", "Em fábricas, seguindo um mesmo modelo"],
+      "answer": 0,
+      "explain": "A produção artesanal é feita à mão ou com ferramentas simples, um produto de cada vez."
+    },
+    {
+      "type": "mc",
+      "q": "Com o surgimento das indústrias, a produção passou a ser:",
+      "options": ["em grandes quantidades e padronizada", "sempre feita à mão", "mais lenta, um produto por semana", "só de produtos indígenas"],
+      "answer": 0,
+      "explain": "Com máquinas e equipamentos, os produtos passaram a ser feitos em grande quantidade, seguindo modelos iguais."
+    },
+    {
+      "type": "mc",
+      "q": "Ainda hoje, quem fabrica e vende produtos artesanais, como cestos?",
+      "options": ["Povos e comunidades tradicionais, como os indígenas", "Somente as grandes fábricas de sapatos", "As indústrias de petróleo e de minérios", "Os robôs das montadoras de carros"],
+      "answer": 0,
+      "explain": "O livro mostra uma mulher guarani fazendo um cesto artesanal em Bertioga (SP)."
+    },
+    {
+      "type": "mc",
+      "q": "Qual destes é um bem durável?",
+      "options": ["Geladeira", "Suco de uva", "Pasta de dente", "Detergente"],
+      "answer": 0,
+      "explain": "Bens duráveis duram muito tempo e são usados muitas vezes, como os eletrodomésticos."
+    },
+    {
+      "type": "mc",
+      "q": "Os bens não duráveis são produtos que:",
+      "options": ["acabam rápido quando são consumidos", "duram muitos anos", "nunca precisam ser comprados", "são usados inúmeras vezes"],
+      "answer": 0,
+      "explain": "Alimentos, bebidas, produtos de higiene e de limpeza se esgotam quando são consumidos."
+    },
+    {
+      "type": "mc",
+      "context": "Para fabricar tanto os bens duráveis como os não duráveis, é preciso utilizar muitas matérias-primas e fontes de energia. Por isso, o consumo excessivo de produtos pode gerar diversos impactos no meio ambiente, como o esgotamento de recursos naturais de uma região, a emissão de poluentes e a produção de grande quantidade de resíduos.",
+      "q": "Segundo o texto, um impacto do consumo excessivo é:",
+      "options": ["o esgotamento dos recursos naturais", "o aumento das florestas", "a limpeza dos rios", "a diminuição do lixo"],
+      "answer": 0,
+      "explain": "Consumir demais gasta muitas matérias-primas e energia e gera poluentes e resíduos."
+    },
+    {
+      "type": "mc",
+      "q": "Antes de comprar, Lia pensou: “Eu preciso mesmo deste brinquedo?”. Qual R ela praticou?",
+      "options": ["Repensar", "Reciclar", "Reutilizar", "Recusar"],
+      "answer": 0,
+      "explain": "Repensar é pensar, antes de comprar, se precisamos mesmo daquele produto."
+    },
+    {
+      "type": "mc",
+      "q": "Usar um pote de vidro vazio como vaso de flores é um exemplo de:",
+      "options": ["Reutilizar", "Reduzir", "Recusar", "Repensar"],
+      "answer": 0,
+      "explain": "Reutilizar é reaproveitar o que normalmente jogamos fora, como embalagens de vidro."
+    },
+    {
+      "type": "mc",
+      "q": "Separar papel, plástico e metal para que virem novos produtos é:",
+      "options": ["Reciclar", "Recusar", "Repensar", "Reduzir"],
+      "answer": 0,
+      "explain": "Na reciclagem, materiais descartados viram novos produtos, evitando extrair mais recursos naturais."
+    },
+    {
+      "type": "mc",
+      "q": "Qual profissional avalia a qualidade dos produtos na indústria?",
+      "options": ["Supervisora de qualidade", "Operador de guindaste", "Vendedor da loja", "Agricultor"],
+      "answer": 0,
+      "explain": "O livro mostra a supervisora de qualidade dos produtos, o operador de máquina, a desenhista industrial e a mecânica de manutenção."
+    },
+    {
+      "type": "mc",
+      "q": "Por que os profissionais das indústrias devem usar Equipamentos de Proteção Individual (EPIs)?",
+      "options": ["Para se proteger de acidentes", "Para trabalhar mais rápido", "Para economizar energia", "Para enfeitar o uniforme"],
+      "answer": 0,
+      "explain": "Os EPIs protegem de acidentes e garantem a segurança e a saúde de todos."
+    },
+    {
+      "type": "text",
+      "q": "Como se chama a grande máquina usada para erguer e deslocar cargas muito pesadas?",
+      "answers": ["guindaste", "o guindaste", "guindastes"],
+      "explain": "Guindaste: grande máquina que ergue cargas muito pesadas, como materiais de construção e rochas."
+    },
+    {
+      "type": "mc",
+      "q": "O que uma indústria precisa ter por perto para funcionar?",
+      "options": ["Matérias-primas, energia e transporte", "Somente uma praia", "Somente uma floresta", "Muitas lojas de roupa"],
+      "answer": 0,
+      "explain": "As indústrias ficam onde há matérias-primas, energia para as máquinas e transporte para levar os produtos ao comércio."
+    },
+    {
+      "type": "mc",
+      "q": "Qual é um impacto ambiental causado pela indústria?",
+      "options": ["Poluição do ar", "Aumento da água limpa", "Mais árvores nas cidades", "Solo mais fértil"],
+      "answer": 0,
+      "explain": "A indústria pode causar poluição atmosférica, contaminação das águas e uso excessivo dos recursos naturais."
+    },
+    {
+      "type": "mc",
+      "context": "Imagine que um produto é fabricado por duas indústrias diferentes: uma delas é muito poluente; a outra conserva os recursos naturais e produz com materiais reciclados, causando baixo impacto ao meio ambiente.",
+      "q": "Qual escolha é a de um consumidor consciente?",
+      "options": ["Comprar da indústria que usa materiais reciclados", "Comprar da indústria mais poluente", "Comprar dos dois sempre em excesso", "Não pensar em quem fabricou"],
+      "answer": 0,
+      "explain": "O consumo consciente prefere produtos que causam menos impacto ao meio ambiente."
+    }
+  ]
+}

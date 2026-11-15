@@ -1,4 +1,4 @@
-const CACHE_CORE = 'estudos-3-ano-core-e7061997';
+const CACHE_CORE = 'estudos-3-ano-core-7aad678c';
 const CACHE_VIDEOS = 'estudos-3-ano-videos-v1';
 const CACHE_LEGADO = 'estudos-3-ano-v47';
 /* A lista entre os marcadores é atualizada pelo build_data.py. */
@@ -19,7 +19,17 @@ const ARQUIVOS = [
   './assets/capa-aprender.png',
   './assets/mascote-capivara-v2.webp',
   './assets/descobrir-ideias.webp',
+  './assets/4b/cie13-camadas.svg',
+  './assets/4b/cie13-cuidados.svg',
+  './assets/4b/cie13-poluicao.svg',
+  './assets/4b/cie13-usos.svg',
   './assets/4b/disciplina-ingles.svg',
+  './assets/4b/geo13-5rs.svg',
+  './assets/4b/geo13-artesanato-industria.svg',
+  './assets/4b/geo13-bens.svg',
+  './assets/4b/geo13-cadeia-leite.svg',
+  './assets/4b/geo13-impactos.svg',
+  './assets/4b/geo13-tipos-industria.svg',
   './assets/4b/hist12-alimentos.svg',
   './assets/4b/hist12-campo-cidade.svg',
   './assets/4b/hist12-migracao.svg',

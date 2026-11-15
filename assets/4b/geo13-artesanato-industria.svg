@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#6b49b8" font-weight="800" text-anchor="middle">Do artesanato à indústria</text>
+<rect x="40" y="100" width="380" height="470" rx="24" fill="#f6efe6" stroke="#8a5a2b" stroke-width="3"/><text x="230" y="215" font-size="100" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🧵</text>
+<text x="230" y="300" font-size="30" fill="#8a5a2b" font-weight="800" text-anchor="middle">ARTESANAL</text>
+<text x="230" y="350" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">feito à mão ou com</text><text x="230" y="380" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">ferramentas simples</text>
+<text x="230" y="430" font-size="19" fill="#17213b" font-weight="800" text-anchor="middle">um a um, dias ou semanas</text>
+<rect x="70" y="480" width="320" height="50" rx="25" fill="#fff"/><text x="230" y="513" font-size="18" fill="#8a5a2b" font-weight="800" text-anchor="middle">Ainda hoje: cestos indígenas</text>
+<rect x="480" y="100" width="380" height="470" rx="24" fill="#eaf2ff" stroke="#2456b8" stroke-width="3"/><text x="670" y="215" font-size="100" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🏭</text>
+<text x="670" y="300" font-size="30" fill="#2456b8" font-weight="800" text-anchor="middle">INDUSTRIAL</text>
+<text x="670" y="350" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">máquinas e</text><text x="670" y="380" font-size="21" fill="#17213b" font-weight="700" text-anchor="middle">equipamentos</text>
+<text x="670" y="430" font-size="19" fill="#17213b" font-weight="800" text-anchor="middle">grandes quantidades, iguais</text>
+<rect x="510" y="480" width="320" height="50" rx="25" fill="#fff"/><text x="670" y="513" font-size="18" fill="#2456b8" font-weight="800" text-anchor="middle">Ex.: fábrica de sapatos</text>
+<line x1="425" y1="330" x2="475" y2="330" stroke="#4a5872" stroke-width="6" stroke-linecap="round" marker-end="url(#ponta)"/>
+</svg>

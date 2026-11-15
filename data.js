@@ -9899,7 +9899,1030 @@ const DISCIPLINAS = [
     "cor": "--laranja",
     "prova": "2026-11-26",
     "horario": "12h55 às 14h25",
-    "capitulos": []
+    "capitulos": [
+      {
+        "id": "geo13",
+        "module": "13",
+        "title": "A indústria e o comércio",
+        "subtitle": "O que é indústria · Artesanato · Bens duráveis · Consumo consciente · Profissionais · Impactos",
+        "theory": [
+          {
+            "h": "O que é indústria?",
+            "figure": {
+              "src": "assets/4b/geo13-cadeia-leite.svg",
+              "alt": "Cadeia de produção do leite em 6 etapas: extração (ordenha da vaca), transporte em caminhão-tanque, indústria (iogurte, queijo, manteiga), distribuição, comércio e consumo pela família.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "Muitos alimentos, como frutas, legumes e verduras, são extraídos da natureza e levados direto para feiras e mercados. Outros recursos vão para as <strong>indústrias</strong> e são transformados em novos produtos. O leite, por exemplo, vira iogurte, queijo, manteiga e outros <strong>derivados</strong> (produtos que se originam da transformação de outro).",
+              "A <strong>indústria</strong> é a atividade que <strong>transforma os recursos naturais em diversos produtos</strong>, com a ajuda de ferramentas, máquinas e equipamentos. Ela <strong>gera empregos</strong> e amplia a variedade de mercadorias. Os produtos são fabricados em <strong>grandes quantidades</strong>.",
+              "Muitas matérias-primas são recursos naturais transformados: o <strong>plástico</strong>, usado para fazer brinquedos, é feito a partir do <strong>petróleo</strong>."
+            ],
+            "cards": [
+              {
+                "icon": "🏭",
+                "t": "indústria",
+                "d": "transforma recursos naturais em produtos"
+              },
+              {
+                "icon": "🧀",
+                "t": "derivado",
+                "d": "produto que vem de outro (leite → queijo)"
+              },
+              {
+                "icon": "🛢️",
+                "t": "petróleo",
+                "d": "vira plástico"
+              }
+            ]
+          },
+          {
+            "h": "Indústria de base e indústria de bens de consumo",
+            "figure": {
+              "src": "assets/4b/geo13-tipos-industria.svg",
+              "alt": "Recursos naturais (petróleo, minérios, madeira, leite) vão para a indústria de base, que faz matérias-primas e energia (aço, diesel, plástico), e para a indústria de bens de consumo, que faz alimentos, roupas, móveis e automóveis.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "Alguns produtos servem de <strong>matéria-prima para outras indústrias</strong>; outros vão direto para o <strong>consumidor final</strong>. Por isso, as indústrias são classificadas em dois tipos:",
+              "<strong>Indústrias de base:</strong> transformam os recursos naturais em matérias-primas (por exemplo, o <strong>aço</strong>) e em fontes de energia (por exemplo, o <strong>diesel</strong>). Boa parte dos produtos vai para outras indústrias. Exemplos: indústrias de <strong>petróleo</strong> e de <strong>minérios</strong>.",
+              "<strong>Indústrias de bens de consumo:</strong> usam as matérias-primas para fabricar produtos para as pessoas. Exemplos: indústrias de <strong>alimentos, roupas, móveis e automóveis</strong>."
+            ]
+          },
+          {
+            "h": "Do artesanato à indústria",
+            "figure": {
+              "src": "assets/4b/geo13-artesanato-industria.svg",
+              "alt": "Comparação: produção artesanal, feita à mão ou com ferramentas simples, um a um, levando dias ou semanas, como os cestos indígenas; e produção industrial, com máquinas e equipamentos, em grandes quantidades e padronizada, como na fábrica de sapatos.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "Antigamente, os produtos eram feitos de modo <strong>artesanal</strong>: <strong>à mão</strong> ou com algumas ferramentas. As máquinas industriais ainda não existiam e o artesão tinha apenas materiais e instrumentos simples. Os produtos eram feitos <strong>um a um</strong> e podiam levar <strong>dias ou até semanas</strong> para ficar prontos. Exemplo: o sapateiro do século 17, que fazia os sapatos à mão.",
+              "Ainda hoje, muitos produtos são feitos artesanalmente. Povos e comunidades tradicionais, como os <strong>indígenas</strong>, fabricam e vendem produtos artesanais, como cestos.",
+              "Com o surgimento das indústrias, os produtos passaram a ser feitos com <strong>máquinas e equipamentos</strong>, em <strong>grandes quantidades</strong>, seguindo <strong>modelos iguais</strong> (produção padronizada), como na fábrica de sapatos de Birigui (SP)."
+            ]
+          },
+          {
+            "h": "Bens duráveis e não duráveis",
+            "figure": {
+              "src": "assets/4b/geo13-bens.svg",
+              "alt": "Bens duráveis duram muito tempo e são usados muitas vezes: automóvel, computador, geladeira, televisão. Bens não duráveis acabam rápido: alimentos, bebidas, pasta de dente, detergente.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "<strong>Bens duráveis</strong> são produtos que <strong>duram muito tempo</strong>: não desaparecem nem estragam rapidamente e podem ser usados <strong>inúmeras vezes</strong>. Exemplos: <strong>automóveis, computadores e eletrodomésticos</strong> (geladeira, fogão, máquina de lavar).",
+              "<strong>Bens não duráveis</strong> têm <strong>tempo de vida curto</strong>: o consumo é imediato ou rápido e, quando são consumidos, <strong>se esgotam</strong>. Exemplos: <strong>alimentos, bebidas, produtos de higiene e de limpeza</strong> (pasta de dente, detergente)."
+            ],
+            "cards": [
+              {
+                "icon": "🧊",
+                "t": "geladeira",
+                "d": "bem durável"
+              },
+              {
+                "icon": "💻",
+                "t": "computador",
+                "d": "bem durável"
+              },
+              {
+                "icon": "🧃",
+                "t": "suco de uva",
+                "d": "bem não durável"
+              },
+              {
+                "icon": "🪥",
+                "t": "pasta de dente",
+                "d": "bem não durável"
+              }
+            ]
+          },
+          {
+            "h": "Consumo consciente dos produtos",
+            "figure": {
+              "src": "assets/4b/geo13-5rs.svg",
+              "alt": "Os 5 Rs: repensar (eu preciso mesmo disso?), recusar (excesso de embalagens), reduzir (menos descartáveis), reutilizar (pote de vidro vira vaso) e reciclar (papel, plástico e metal viram novos produtos).",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "Para fabricar bens duráveis e não duráveis, são usadas <strong>muitas matérias-primas e fontes de energia</strong>. Por isso, o <strong>consumo excessivo</strong> pode causar impactos no meio ambiente: <strong>esgotamento de recursos naturais</strong>, emissão de <strong>poluentes</strong> e muitos <strong>resíduos</strong> (lixo).",
+              "É importante consumir de modo <strong>consciente</strong>, avaliando a real necessidade de comprar um produto. A prática dos <strong>5 Rs</strong> ajuda:",
+              "<strong>Recusar</strong> produtos que não sejam reaproveitáveis ou recicláveis, ou com excesso de embalagens. <strong>Reduzir</strong> o uso de descartáveis. <strong>Reutilizar</strong> o que normalmente jogamos fora, como embalagens de vidro e papéis. <strong>Reciclar</strong>: papel, papelão, plástico e metal viram novos produtos. <strong>Repensar</strong>: antes de comprar, pensar se precisamos mesmo daquele produto."
+            ],
+            "cards": [
+              {
+                "icon": "🤔",
+                "t": "Repensar",
+                "d": "preciso mesmo?"
+              },
+              {
+                "icon": "🚫",
+                "t": "Recusar",
+                "d": "excesso de embalagem"
+              },
+              {
+                "icon": "📉",
+                "t": "Reduzir",
+                "d": "menos descartáveis"
+              },
+              {
+                "icon": "🫙",
+                "t": "Reutilizar",
+                "d": "usar de novo"
+              },
+              {
+                "icon": "♻️",
+                "t": "Reciclar",
+                "d": "virar novo produto"
+              }
+            ]
+          },
+          {
+            "h": "Os profissionais da indústria",
+            "p": [
+              "Nas indústrias, os produtos são feitos com máquinas, equipamentos e ferramentas, mas também há <strong>muitos profissionais</strong>. Eles criam os produtos, controlam as máquinas, fazem a manutenção dos equipamentos, manuseiam ferramentas e avaliam a qualidade dos produtos.",
+              "Exemplos do livro: <strong>operador de máquina</strong>, <strong>supervisora de qualidade dos produtos</strong>, <strong>desenhista industrial</strong> e <strong>mecânica de manutenção de máquinas</strong>.",
+              "O trabalho varia: em algumas indústrias, as máquinas são controladas por <strong>equipamentos eletrônicos</strong>; em outras, os profissionais operam grandes equipamentos, como os <strong>guindastes</strong> (máquinas que erguem cargas muito pesadas). Na fabricação de celulares, eles <strong>manuseiam</strong> (pegam e mexem com as mãos) peças eletrônicas muito pequenas.",
+              "Esse trabalho é importante: ajuda a fabricar produtos e a <strong>produzir riqueza para o país</strong>. Para as atividades de risco, os profissionais usam <strong>Equipamentos de Proteção Individual (EPIs)</strong>, como capacete, óculos e luvas, que os <strong>protegem de acidentes</strong> e garantem a segurança e a saúde."
+            ],
+            "cards": [
+              {
+                "icon": "⚙️",
+                "t": "operador de máquina",
+                "d": "controla as máquinas"
+              },
+              {
+                "icon": "📋",
+                "t": "supervisora de qualidade",
+                "d": "avalia os produtos"
+              },
+              {
+                "icon": "✏️",
+                "t": "desenhista industrial",
+                "d": "cria os produtos"
+              },
+              {
+                "icon": "🔧",
+                "t": "mecânica de manutenção",
+                "d": "conserta as máquinas"
+              },
+              {
+                "icon": "⛑️",
+                "t": "EPI",
+                "d": "protege de acidentes"
+              }
+            ]
+          },
+          {
+            "h": "Impactos ambientais da indústria",
+            "figure": {
+              "src": "assets/4b/geo13-impactos.svg",
+              "alt": "Impactos ambientais da indústria: poluição do ar, contaminação das águas, uso excessivo dos recursos naturais e muitos resíduos. Abaixo, os EPIs dos profissionais: capacete, óculos, luvas, botas e máscara.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "As indústrias ficam nas áreas <strong>urbanas e rurais</strong>, geralmente em locais com <strong>matérias-primas</strong> para a produção, <strong>energia</strong> para as máquinas e <strong>meios de transporte</strong> para levar os produtos ao comércio.",
+              "A indústria é muito importante para gerar <strong>riqueza</strong> para o país e <strong>empregos</strong>, mas pode provocar impactos no ambiente: <strong>poluição atmosférica</strong> (do ar), <strong>contaminação das águas</strong> e <strong>uso excessivo dos recursos naturais</strong>.",
+              "Entre duas indústrias, uma muito poluente e outra que conserva os recursos naturais e usa materiais reciclados, a escolha consciente é a que causa <strong>baixo impacto</strong> ao meio ambiente."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "sort",
+            "title": "Base ou bens de consumo?",
+            "short": "Tipos de indústria",
+            "instructions": "Que tipo de indústria é esta?",
+            "context": "As indústrias de base transformam os recursos naturais em matérias-primas (como o aço) e em fontes de energia (como o diesel); boa parte dos produtos vai para outras indústrias. As indústrias de bens de consumo usam as matérias-primas para fabricar produtos para as pessoas, como alimentos, roupas, móveis e automóveis.",
+            "categories": [
+              "Indústria de base ⚙️",
+              "Indústria de bens de consumo 🛋️"
+            ],
+            "items": [
+              {
+                "text": "Indústria que transforma minério em aço",
+                "cat": 0
+              },
+              {
+                "text": "Fábrica de móveis de madeira",
+                "cat": 1
+              },
+              {
+                "text": "Indústria de petróleo que produz diesel",
+                "cat": 0
+              },
+              {
+                "text": "Fábrica de roupas",
+                "cat": 1
+              },
+              {
+                "text": "Montadora de automóveis",
+                "cat": 1
+              },
+              {
+                "text": "Indústria de minérios",
+                "cat": 0
+              },
+              {
+                "text": "Fábrica de iogurte e queijo",
+                "cat": 1
+              },
+              {
+                "text": "Fábrica de pães em grande quantidade",
+                "cat": 1
+              }
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "Artesanal ou industrial?",
+            "short": "Artesanato ou indústria",
+            "instructions": "Este produto foi feito de modo artesanal ou industrial?",
+            "categories": [
+              "Artesanal 🧵",
+              "Industrial 🏭"
+            ],
+            "items": [
+              {
+                "text": "Sapateiro do século 17 costurando um sapato à mão",
+                "cat": 0
+              },
+              {
+                "text": "Fábrica de Birigui produzindo milhares de sapatos iguais",
+                "cat": 1
+              },
+              {
+                "text": "Mulher indígena guarani trançando um cesto",
+                "cat": 0
+              },
+              {
+                "text": "Pães feitos em grandes batedeiras e fornos de fábrica",
+                "cat": 1
+              },
+              {
+                "text": "Produto feito um a um, levando semanas para ficar pronto",
+                "cat": 0
+              },
+              {
+                "text": "Produtos feitos com máquinas, seguindo um mesmo modelo",
+                "cat": 1
+              },
+              {
+                "text": "Padeiro sovando a massa com as mãos",
+                "cat": 0
+              }
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "Durável ou não durável?",
+            "short": "Bens duráveis",
+            "instructions": "Este produto é um bem durável ou não durável?",
+            "categories": [
+              "Bem durável 🧊",
+              "Bem não durável 🧃"
+            ],
+            "items": [
+              {
+                "text": "geladeira",
+                "cat": 0
+              },
+              {
+                "text": "suco de uva",
+                "cat": 1
+              },
+              {
+                "text": "computador",
+                "cat": 0
+              },
+              {
+                "text": "pasta de dente",
+                "cat": 1
+              },
+              {
+                "text": "automóvel",
+                "cat": 0
+              },
+              {
+                "text": "detergente",
+                "cat": 1
+              },
+              {
+                "text": "máquina de lavar roupa",
+                "cat": 0
+              },
+              {
+                "text": "pão",
+                "cat": 1
+              },
+              {
+                "text": "televisão",
+                "cat": 0
+              },
+              {
+                "text": "sabonete",
+                "cat": 1
+              }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Os 5 Rs",
+            "short": "Consumo consciente",
+            "instructions": "Qual R do consumo consciente é esta atitude?",
+            "pairs": [
+              [
+                "Antes de comprar, pensar se precisa mesmo daquele produto.",
+                "Repensar"
+              ],
+              [
+                "Não aceitar produtos com excesso de embalagens.",
+                "Recusar"
+              ],
+              [
+                "Usar menos copos e talheres descartáveis.",
+                "Reduzir"
+              ],
+              [
+                "Transformar um pote de vidro em porta-lápis.",
+                "Reutilizar"
+              ],
+              [
+                "Separar papel, plástico e metal para virarem novos produtos.",
+                "Reciclar"
+              ]
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Quem trabalha na indústria?",
+            "short": "Profissionais",
+            "instructions": "Ligue o profissional ao que ele faz.",
+            "pairs": [
+              [
+                "Operador de máquina",
+                "controla as máquinas da fábrica"
+              ],
+              [
+                "Supervisora de qualidade",
+                "avalia a qualidade dos produtos"
+              ],
+              [
+                "Desenhista industrial",
+                "cria e desenha os produtos"
+              ],
+              [
+                "Mecânica de manutenção",
+                "conserta e cuida das máquinas"
+              ],
+              [
+                "Operador de guindaste",
+                "ergue cargas muito pesadas"
+              ]
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "O que é a indústria?",
+            "options": [
+              "Atividade que transforma recursos naturais em produtos",
+              "Atividade de vender produtos nas lojas",
+              "Atividade de plantar alimentos no campo",
+              "Atividade de criar animais no pasto"
+            ],
+            "answer": 0,
+            "explain": "A indústria transforma os recursos naturais em diversos produtos, com ferramentas, máquinas e equipamentos."
+          },
+          {
+            "type": "mc",
+            "context": "Muitos alimentos, como frutas, legumes e verduras, são extraídos da natureza e levados direto para feiras e mercados. Outros recursos são levados para as indústrias para serem transformados em novos produtos. Um exemplo é o leite, que, após ser extraído da vaca, é levado para a indústria e transformado em iogurte, queijo, manteiga e outros derivados.",
+            "q": "Segundo o texto, o que são o iogurte, o queijo e a manteiga?",
+            "options": [
+              "Derivados do leite feitos na indústria",
+              "Alimentos extraídos direto da natureza",
+              "Matérias-primas da indústria de base",
+              "Bens duráveis"
+            ],
+            "answer": 0,
+            "explain": "Derivado é o produto que se origina da transformação de outro: o leite vira iogurte, queijo e manteiga."
+          },
+          {
+            "type": "mc",
+            "q": "Qual é a ordem correta da cadeia de produção do leite?",
+            "options": [
+              "vaca → transporte → indústria → mercado → consumidor",
+              "mercado → vaca → indústria → consumidor → transporte",
+              "indústria → vaca → consumidor → mercado → transporte",
+              "consumidor → mercado → indústria → transporte → vaca"
+            ],
+            "answer": 0,
+            "explain": "Primeiro a extração (ordenha), depois o transporte, a indústria, o comércio e, por fim, o consumidor."
+          },
+          {
+            "type": "mc",
+            "q": "As indústrias de petróleo e de minérios são exemplos de:",
+            "options": [
+              "indústrias de base",
+              "indústrias de bens de consumo",
+              "comércio eletrônico",
+              "produção artesanal"
+            ],
+            "answer": 0,
+            "explain": "As indústrias de base transformam recursos naturais em matérias-primas (aço) e fontes de energia (diesel)."
+          },
+          {
+            "type": "mc",
+            "q": "Uma fábrica de móveis é uma indústria de:",
+            "options": [
+              "bens de consumo",
+              "base de minérios",
+              "base de petróleo",
+              "artesanato local"
+            ],
+            "answer": 0,
+            "explain": "Indústrias de alimentos, roupas, móveis e automóveis fabricam produtos para as pessoas: bens de consumo."
+          },
+          {
+            "type": "mc",
+            "q": "O plástico, usado para fabricar brinquedos, é feito a partir de qual recurso natural?",
+            "options": [
+              "Petróleo",
+              "Leite",
+              "Madeira",
+              "Areia"
+            ],
+            "answer": 0,
+            "explain": "Muitas matérias-primas são recursos naturais transformados: o plástico vem do petróleo."
+          },
+          {
+            "type": "mc",
+            "context": "Antigamente, os produtos eram fabricados de modo artesanal, ou seja, eram feitos à mão ou com o uso de algumas ferramentas. As máquinas industriais ainda não existiam e o artesão tinha apenas materiais e instrumentos de trabalho simples. Os produtos eram feitos um a um e podiam levar dias ou até semanas para ficarem prontos.",
+            "q": "Como eram fabricados os produtos artesanais?",
+            "options": [
+              "À mão, um a um, com ferramentas simples",
+              "Em grandes quantidades, com máquinas",
+              "Por robôs, em poucos minutos",
+              "Em fábricas, seguindo um mesmo modelo"
+            ],
+            "answer": 0,
+            "explain": "A produção artesanal é feita à mão ou com ferramentas simples, um produto de cada vez."
+          },
+          {
+            "type": "mc",
+            "q": "Com o surgimento das indústrias, a produção passou a ser:",
+            "options": [
+              "em grandes quantidades e padronizada",
+              "sempre feita à mão",
+              "mais lenta, um produto por semana",
+              "só de produtos indígenas"
+            ],
+            "answer": 0,
+            "explain": "Com máquinas e equipamentos, os produtos passaram a ser feitos em grande quantidade, seguindo modelos iguais."
+          },
+          {
+            "type": "mc",
+            "q": "Ainda hoje, quem fabrica e vende produtos artesanais, como cestos?",
+            "options": [
+              "Povos e comunidades tradicionais, como os indígenas",
+              "Somente as grandes fábricas de sapatos",
+              "As indústrias de petróleo e de minérios",
+              "Os robôs das montadoras de carros"
+            ],
+            "answer": 0,
+            "explain": "O livro mostra uma mulher guarani fazendo um cesto artesanal em Bertioga (SP)."
+          },
+          {
+            "type": "mc",
+            "q": "Qual destes é um bem durável?",
+            "options": [
+              "Geladeira",
+              "Suco de uva",
+              "Pasta de dente",
+              "Detergente"
+            ],
+            "answer": 0,
+            "explain": "Bens duráveis duram muito tempo e são usados muitas vezes, como os eletrodomésticos."
+          },
+          {
+            "type": "mc",
+            "q": "Os bens não duráveis são produtos que:",
+            "options": [
+              "acabam rápido quando são consumidos",
+              "duram muitos anos",
+              "nunca precisam ser comprados",
+              "são usados inúmeras vezes"
+            ],
+            "answer": 0,
+            "explain": "Alimentos, bebidas, produtos de higiene e de limpeza se esgotam quando são consumidos."
+          },
+          {
+            "type": "mc",
+            "context": "Para fabricar tanto os bens duráveis como os não duráveis, é preciso utilizar muitas matérias-primas e fontes de energia. Por isso, o consumo excessivo de produtos pode gerar diversos impactos no meio ambiente, como o esgotamento de recursos naturais de uma região, a emissão de poluentes e a produção de grande quantidade de resíduos.",
+            "q": "Segundo o texto, um impacto do consumo excessivo é:",
+            "options": [
+              "o esgotamento dos recursos naturais",
+              "o aumento das florestas",
+              "a limpeza dos rios",
+              "a diminuição do lixo"
+            ],
+            "answer": 0,
+            "explain": "Consumir demais gasta muitas matérias-primas e energia e gera poluentes e resíduos."
+          },
+          {
+            "type": "mc",
+            "q": "Antes de comprar, Lia pensou: “Eu preciso mesmo deste brinquedo?”. Qual R ela praticou?",
+            "options": [
+              "Repensar",
+              "Reciclar",
+              "Reutilizar",
+              "Recusar"
+            ],
+            "answer": 0,
+            "explain": "Repensar é pensar, antes de comprar, se precisamos mesmo daquele produto."
+          },
+          {
+            "type": "mc",
+            "q": "Usar um pote de vidro vazio como vaso de flores é um exemplo de:",
+            "options": [
+              "Reutilizar",
+              "Reduzir",
+              "Recusar",
+              "Repensar"
+            ],
+            "answer": 0,
+            "explain": "Reutilizar é reaproveitar o que normalmente jogamos fora, como embalagens de vidro."
+          },
+          {
+            "type": "mc",
+            "q": "Separar papel, plástico e metal para que virem novos produtos é:",
+            "options": [
+              "Reciclar",
+              "Recusar",
+              "Repensar",
+              "Reduzir"
+            ],
+            "answer": 0,
+            "explain": "Na reciclagem, materiais descartados viram novos produtos, evitando extrair mais recursos naturais."
+          },
+          {
+            "type": "mc",
+            "q": "Qual profissional avalia a qualidade dos produtos na indústria?",
+            "options": [
+              "Supervisora de qualidade",
+              "Operador de guindaste",
+              "Vendedor da loja",
+              "Agricultor"
+            ],
+            "answer": 0,
+            "explain": "O livro mostra a supervisora de qualidade dos produtos, o operador de máquina, a desenhista industrial e a mecânica de manutenção."
+          },
+          {
+            "type": "mc",
+            "q": "Por que os profissionais das indústrias devem usar Equipamentos de Proteção Individual (EPIs)?",
+            "options": [
+              "Para se proteger de acidentes",
+              "Para trabalhar mais rápido",
+              "Para economizar energia",
+              "Para enfeitar o uniforme"
+            ],
+            "answer": 0,
+            "explain": "Os EPIs protegem de acidentes e garantem a segurança e a saúde de todos."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama a grande máquina usada para erguer e deslocar cargas muito pesadas?",
+            "answers": [
+              "guindaste",
+              "o guindaste",
+              "guindastes"
+            ],
+            "explain": "Guindaste: grande máquina que ergue cargas muito pesadas, como materiais de construção e rochas."
+          },
+          {
+            "type": "mc",
+            "q": "O que uma indústria precisa ter por perto para funcionar?",
+            "options": [
+              "Matérias-primas, energia e transporte",
+              "Somente uma praia",
+              "Somente uma floresta",
+              "Muitas lojas de roupa"
+            ],
+            "answer": 0,
+            "explain": "As indústrias ficam onde há matérias-primas, energia para as máquinas e transporte para levar os produtos ao comércio."
+          },
+          {
+            "type": "mc",
+            "q": "Qual é um impacto ambiental causado pela indústria?",
+            "options": [
+              "Poluição do ar",
+              "Aumento da água limpa",
+              "Mais árvores nas cidades",
+              "Solo mais fértil"
+            ],
+            "answer": 0,
+            "explain": "A indústria pode causar poluição atmosférica, contaminação das águas e uso excessivo dos recursos naturais."
+          },
+          {
+            "type": "mc",
+            "context": "Imagine que um produto é fabricado por duas indústrias diferentes: uma delas é muito poluente; a outra conserva os recursos naturais e produz com materiais reciclados, causando baixo impacto ao meio ambiente.",
+            "q": "Qual escolha é a de um consumidor consciente?",
+            "options": [
+              "Comprar da indústria que usa materiais reciclados",
+              "Comprar da indústria mais poluente",
+              "Comprar dos dois sempre em excesso",
+              "Não pensar em quem fabricou"
+            ],
+            "answer": 0,
+            "explain": "O consumo consciente prefere produtos que causam menos impacto ao meio ambiente."
+          }
+        ]
+      },
+      {
+        "id": "sim_geografia",
+        "module": "★",
+        "title": "Simulado da prova",
+        "subtitle": "Resumo final + 15 questões sorteadas de todos os módulos",
+        "exam": {
+          "size": 15
+        },
+        "theory": [
+          {
+            "h": "Resumo da prova de Geografia",
+            "p": [
+              "<strong>O que é indústria:</strong> atividade que transforma recursos naturais em produtos, com máquinas e equipamentos, em grandes quantidades; gera empregos. <strong>Indústria de base</strong> (petróleo, minérios → aço, diesel) e <strong>de bens de consumo</strong> (alimentos, roupas, móveis, automóveis).",
+              "<strong>Do artesanato à indústria:</strong> artesanal = à mão ou com ferramentas simples, um a um, dias ou semanas (ainda hoje: cestos indígenas). Industrial = máquinas, grandes quantidades, produção padronizada.",
+              "<strong>Bens duráveis</strong> duram muito (geladeira, computador, automóvel); <strong>não duráveis</strong> acabam rápido (alimentos, bebidas, higiene, limpeza). <strong>Consumo consciente:</strong> 5 Rs — repensar, recusar, reduzir, reutilizar e reciclar.",
+              "<strong>Profissionais:</strong> operador de máquina, supervisora de qualidade, desenhista industrial, mecânica de manutenção; usam EPIs contra acidentes. <strong>Impactos:</strong> poluição do ar, contaminação das águas e uso excessivo dos recursos naturais."
+            ],
+            "cards": [
+              {
+                "icon": "🏭",
+                "t": "indústria",
+                "d": "transforma recursos naturais"
+              },
+              {
+                "icon": "⚙️",
+                "t": "indústria de base",
+                "d": "aço, diesel"
+              },
+              {
+                "icon": "🛋️",
+                "t": "bens de consumo",
+                "d": "alimentos, roupas, móveis"
+              },
+              {
+                "icon": "🧵",
+                "t": "artesanal",
+                "d": "à mão, um a um"
+              },
+              {
+                "icon": "🧊",
+                "t": "bem durável",
+                "d": "dura muito tempo"
+              },
+              {
+                "icon": "🧃",
+                "t": "bem não durável",
+                "d": "acaba rápido"
+              },
+              {
+                "icon": "♻️",
+                "t": "5 Rs",
+                "d": "consumo consciente"
+              },
+              {
+                "icon": "⛑️",
+                "t": "EPI",
+                "d": "proteção contra acidentes"
+              },
+              {
+                "icon": "🌫️",
+                "t": "impacto",
+                "d": "poluição do ar e da água"
+              }
+            ]
+          }
+        ],
+        "games": [],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "O que é a indústria?",
+            "options": [
+              "Atividade que transforma recursos naturais em produtos",
+              "Atividade de vender produtos nas lojas",
+              "Atividade de plantar alimentos no campo",
+              "Atividade de criar animais no pasto"
+            ],
+            "answer": 0,
+            "explain": "A indústria transforma os recursos naturais em diversos produtos, com ferramentas, máquinas e equipamentos.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "context": "Muitos alimentos, como frutas, legumes e verduras, são extraídos da natureza e levados direto para feiras e mercados. Outros recursos são levados para as indústrias para serem transformados em novos produtos. Um exemplo é o leite, que, após ser extraído da vaca, é levado para a indústria e transformado em iogurte, queijo, manteiga e outros derivados.",
+            "q": "Segundo o texto, o que são o iogurte, o queijo e a manteiga?",
+            "options": [
+              "Derivados do leite feitos na indústria",
+              "Alimentos extraídos direto da natureza",
+              "Matérias-primas da indústria de base",
+              "Bens duráveis"
+            ],
+            "answer": 0,
+            "explain": "Derivado é o produto que se origina da transformação de outro: o leite vira iogurte, queijo e manteiga.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Qual é a ordem correta da cadeia de produção do leite?",
+            "options": [
+              "vaca → transporte → indústria → mercado → consumidor",
+              "mercado → vaca → indústria → consumidor → transporte",
+              "indústria → vaca → consumidor → mercado → transporte",
+              "consumidor → mercado → indústria → transporte → vaca"
+            ],
+            "answer": 0,
+            "explain": "Primeiro a extração (ordenha), depois o transporte, a indústria, o comércio e, por fim, o consumidor.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "As indústrias de petróleo e de minérios são exemplos de:",
+            "options": [
+              "indústrias de base",
+              "indústrias de bens de consumo",
+              "comércio eletrônico",
+              "produção artesanal"
+            ],
+            "answer": 0,
+            "explain": "As indústrias de base transformam recursos naturais em matérias-primas (aço) e fontes de energia (diesel).",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Uma fábrica de móveis é uma indústria de:",
+            "options": [
+              "bens de consumo",
+              "base de minérios",
+              "base de petróleo",
+              "artesanato local"
+            ],
+            "answer": 0,
+            "explain": "Indústrias de alimentos, roupas, móveis e automóveis fabricam produtos para as pessoas: bens de consumo.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "O plástico, usado para fabricar brinquedos, é feito a partir de qual recurso natural?",
+            "options": [
+              "Petróleo",
+              "Leite",
+              "Madeira",
+              "Areia"
+            ],
+            "answer": 0,
+            "explain": "Muitas matérias-primas são recursos naturais transformados: o plástico vem do petróleo.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "context": "Antigamente, os produtos eram fabricados de modo artesanal, ou seja, eram feitos à mão ou com o uso de algumas ferramentas. As máquinas industriais ainda não existiam e o artesão tinha apenas materiais e instrumentos de trabalho simples. Os produtos eram feitos um a um e podiam levar dias ou até semanas para ficarem prontos.",
+            "q": "Como eram fabricados os produtos artesanais?",
+            "options": [
+              "À mão, um a um, com ferramentas simples",
+              "Em grandes quantidades, com máquinas",
+              "Por robôs, em poucos minutos",
+              "Em fábricas, seguindo um mesmo modelo"
+            ],
+            "answer": 0,
+            "explain": "A produção artesanal é feita à mão ou com ferramentas simples, um produto de cada vez.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Com o surgimento das indústrias, a produção passou a ser:",
+            "options": [
+              "em grandes quantidades e padronizada",
+              "sempre feita à mão",
+              "mais lenta, um produto por semana",
+              "só de produtos indígenas"
+            ],
+            "answer": 0,
+            "explain": "Com máquinas e equipamentos, os produtos passaram a ser feitos em grande quantidade, seguindo modelos iguais.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Ainda hoje, quem fabrica e vende produtos artesanais, como cestos?",
+            "options": [
+              "Povos e comunidades tradicionais, como os indígenas",
+              "Somente as grandes fábricas de sapatos",
+              "As indústrias de petróleo e de minérios",
+              "Os robôs das montadoras de carros"
+            ],
+            "answer": 0,
+            "explain": "O livro mostra uma mulher guarani fazendo um cesto artesanal em Bertioga (SP).",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Qual destes é um bem durável?",
+            "options": [
+              "Geladeira",
+              "Suco de uva",
+              "Pasta de dente",
+              "Detergente"
+            ],
+            "answer": 0,
+            "explain": "Bens duráveis duram muito tempo e são usados muitas vezes, como os eletrodomésticos.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Os bens não duráveis são produtos que:",
+            "options": [
+              "acabam rápido quando são consumidos",
+              "duram muitos anos",
+              "nunca precisam ser comprados",
+              "são usados inúmeras vezes"
+            ],
+            "answer": 0,
+            "explain": "Alimentos, bebidas, produtos de higiene e de limpeza se esgotam quando são consumidos.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "context": "Para fabricar tanto os bens duráveis como os não duráveis, é preciso utilizar muitas matérias-primas e fontes de energia. Por isso, o consumo excessivo de produtos pode gerar diversos impactos no meio ambiente, como o esgotamento de recursos naturais de uma região, a emissão de poluentes e a produção de grande quantidade de resíduos.",
+            "q": "Segundo o texto, um impacto do consumo excessivo é:",
+            "options": [
+              "o esgotamento dos recursos naturais",
+              "o aumento das florestas",
+              "a limpeza dos rios",
+              "a diminuição do lixo"
+            ],
+            "answer": 0,
+            "explain": "Consumir demais gasta muitas matérias-primas e energia e gera poluentes e resíduos.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Antes de comprar, Lia pensou: “Eu preciso mesmo deste brinquedo?”. Qual R ela praticou?",
+            "options": [
+              "Repensar",
+              "Reciclar",
+              "Reutilizar",
+              "Recusar"
+            ],
+            "answer": 0,
+            "explain": "Repensar é pensar, antes de comprar, se precisamos mesmo daquele produto.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Usar um pote de vidro vazio como vaso de flores é um exemplo de:",
+            "options": [
+              "Reutilizar",
+              "Reduzir",
+              "Recusar",
+              "Repensar"
+            ],
+            "answer": 0,
+            "explain": "Reutilizar é reaproveitar o que normalmente jogamos fora, como embalagens de vidro.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Separar papel, plástico e metal para que virem novos produtos é:",
+            "options": [
+              "Reciclar",
+              "Recusar",
+              "Repensar",
+              "Reduzir"
+            ],
+            "answer": 0,
+            "explain": "Na reciclagem, materiais descartados viram novos produtos, evitando extrair mais recursos naturais.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Qual profissional avalia a qualidade dos produtos na indústria?",
+            "options": [
+              "Supervisora de qualidade",
+              "Operador de guindaste",
+              "Vendedor da loja",
+              "Agricultor"
+            ],
+            "answer": 0,
+            "explain": "O livro mostra a supervisora de qualidade dos produtos, o operador de máquina, a desenhista industrial e a mecânica de manutenção.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Por que os profissionais das indústrias devem usar Equipamentos de Proteção Individual (EPIs)?",
+            "options": [
+              "Para se proteger de acidentes",
+              "Para trabalhar mais rápido",
+              "Para economizar energia",
+              "Para enfeitar o uniforme"
+            ],
+            "answer": 0,
+            "explain": "Os EPIs protegem de acidentes e garantem a segurança e a saúde de todos.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "text",
+            "q": "Como se chama a grande máquina usada para erguer e deslocar cargas muito pesadas?",
+            "answers": [
+              "guindaste",
+              "o guindaste",
+              "guindastes"
+            ],
+            "explain": "Guindaste: grande máquina que ergue cargas muito pesadas, como materiais de construção e rochas.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "O que uma indústria precisa ter por perto para funcionar?",
+            "options": [
+              "Matérias-primas, energia e transporte",
+              "Somente uma praia",
+              "Somente uma floresta",
+              "Muitas lojas de roupa"
+            ],
+            "answer": 0,
+            "explain": "As indústrias ficam onde há matérias-primas, energia para as máquinas e transporte para levar os produtos ao comércio.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Qual é um impacto ambiental causado pela indústria?",
+            "options": [
+              "Poluição do ar",
+              "Aumento da água limpa",
+              "Mais árvores nas cidades",
+              "Solo mais fértil"
+            ],
+            "answer": 0,
+            "explain": "A indústria pode causar poluição atmosférica, contaminação das águas e uso excessivo dos recursos naturais.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "context": "Imagine que um produto é fabricado por duas indústrias diferentes: uma delas é muito poluente; a outra conserva os recursos naturais e produz com materiais reciclados, causando baixo impacto ao meio ambiente.",
+            "q": "Qual escolha é a de um consumidor consciente?",
+            "options": [
+              "Comprar da indústria que usa materiais reciclados",
+              "Comprar da indústria mais poluente",
+              "Comprar dos dois sempre em excesso",
+              "Não pensar em quem fabricou"
+            ],
+            "answer": 0,
+            "explain": "O consumo consciente prefere produtos que causam menos impacto ao meio ambiente.",
+            "from": "A indústria e o comércio"
+          },
+          {
+            "type": "mc",
+            "q": "Uma montadora de automóveis é uma indústria de:",
+            "options": [
+              "bens de consumo",
+              "base",
+              "artesanato",
+              "mineração"
+            ],
+            "answer": 0,
+            "explain": "Automóveis são produtos para o consumidor: indústria de bens de consumo.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Qual destes é um bem não durável?",
+            "options": [
+              "Detergente",
+              "Geladeira",
+              "Computador",
+              "Automóvel"
+            ],
+            "answer": 0,
+            "explain": "Produtos de limpeza se esgotam quando são consumidos: são bens não duráveis.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Recusar produtos com excesso de embalagens ajuda a:",
+            "options": [
+              "evitar desperdício e diminuir o lixo",
+              "aumentar a poluição",
+              "gastar mais recursos naturais",
+              "fabricar mais embalagens"
+            ],
+            "answer": 0,
+            "explain": "Recusar é um dos 5 Rs do consumo consciente: evita desperdício.",
+            "from": "Simulado"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "ciencias",
@@ -9907,6 +10930,1050 @@ const DISCIPLINAS = [
     "cor": "--verde",
     "prova": "2026-11-27",
     "horario": "12h55 às 14h25",
-    "capitulos": []
+    "capitulos": [
+      {
+        "id": "cie13",
+        "module": "13",
+        "title": "O uso do solo",
+        "subtitle": "Composição · Agricultura, pecuária, silvicultura, mineração, urbanização · Cuidados · Poluição",
+        "theory": [
+          {
+            "h": "Composição do solo e seus diferentes usos",
+            "figure": {
+              "src": "assets/4b/cie13-camadas.svg",
+              "alt": "Corte do solo com plantas em cima e as camadas, de cima para baixo: húmus (mais nutrientes), camada superior, subsolo, águas subterrâneas e fragmentos de rochas, e rocha-mãe.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "O <strong>solo</strong> é um recurso natural essencial para a vida no planeta e para muitas atividades humanas, como a agricultura e a extração de materiais. Por isso, conservá-lo é fundamental.",
+              "O solo é a <strong>camada mais externa da litosfera</strong>, onde as plantas crescem e muitos organismos vivem. Ele é composto de <strong>nutrientes minerais, matéria orgânica, água e ar</strong>, distribuídos em diferentes <strong>camadas</strong>: húmus, camada superior, subsolo, águas subterrâneas e fragmentos de rochas, e rocha-mãe.",
+              "A camada de <strong>húmus</strong> é a que tem <strong>mais nutrientes minerais</strong>, além de água e oxigênio, necessários ao crescimento dos vegetais. Um <strong>solo fértil</strong> é úmido e rico em nutrientes; um solo seco e pobre em nutrientes não é fértil."
+            ],
+            "cards": [
+              {
+                "icon": "🪨",
+                "t": "minerais",
+                "d": "nutrientes do solo"
+              },
+              {
+                "icon": "🍂",
+                "t": "matéria orgânica",
+                "d": "restos de plantas e animais"
+              },
+              {
+                "icon": "💧",
+                "t": "água",
+                "d": "componente do solo"
+              },
+              {
+                "icon": "💨",
+                "t": "ar",
+                "d": "componente do solo"
+              },
+              {
+                "icon": "🌱",
+                "t": "húmus",
+                "d": "camada com mais nutrientes"
+              }
+            ]
+          },
+          {
+            "h": "Agricultura e pecuária",
+            "figure": {
+              "src": "assets/4b/cie13-usos.svg",
+              "alt": "Cinco usos do solo: agricultura (cultivo de plantas para alimentos e fibras), pecuária (criação de animais: carne, leite, couro, lã), silvicultura (cultivo de florestas: madeira, celulose, látex), mineração (extração de minerais como ferro e alumínio) e urbanização (casas, prédios, rodovias, parques).",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "A <strong>agricultura</strong> é um dos usos mais comuns do solo: é o <strong>cultivo de plantas</strong> para alimentação, produção de fibras e outros produtos. Tipos de agricultura:",
+              "• <strong>de subsistência</strong>: praticada por famílias para atender às suas necessidades de alimento e às da comunidade local;<br>• <strong>comercial</strong>: produz grandes quantidades de alimentos para <strong>vender</strong>;<br>• <strong>orgânica</strong>: usa técnicas sustentáveis, <strong>sem fertilizantes e pesticidas sintéticos</strong>, conservando o ambiente e produzindo alimentos mais saudáveis.",
+              "A <strong>pecuária</strong> é a <strong>criação e o cuidado de animais</strong> para obter produtos. Pode ser <strong>extensiva</strong> (grandes áreas de pasto) ou <strong>intensiva</strong> (animais criados em confinamento).",
+              "Produtos da pecuária: <strong>carne</strong> (fonte de proteínas), <strong>leite</strong> (queijos e iogurtes), <strong>couro</strong> (roupas, calçados e acessórios) e <strong>lã</strong> (matéria-prima da indústria têxtil)."
+            ],
+            "cards": [
+              {
+                "icon": "🏡",
+                "t": "subsistência",
+                "d": "para a família comer"
+              },
+              {
+                "icon": "🚜",
+                "t": "comercial",
+                "d": "muita produção para vender"
+              },
+              {
+                "icon": "🥬",
+                "t": "orgânica",
+                "d": "sem agrotóxicos sintéticos"
+              },
+              {
+                "icon": "🐄",
+                "t": "extensiva",
+                "d": "animais soltos no pasto"
+              },
+              {
+                "icon": "🐖",
+                "t": "intensiva",
+                "d": "animais confinados"
+              }
+            ]
+          },
+          {
+            "h": "Silvicultura, mineração e urbanização",
+            "p": [
+              "A <strong>silvicultura</strong> é a prática de <strong>cultivar e conservar florestas</strong> para obter produtos como <strong>madeira, celulose e látex</strong>. A madeira é usada em construções, móveis e na produção de papel. Para não causar desequilíbrios, é preciso adotar práticas sustentáveis, como o <strong>reflorestamento</strong>, a recuperação de áreas degradadas e o plantio de espécies nativas.",
+              "A <strong>mineração</strong> é a <strong>extração de minerais</strong> do solo ou de rochas. Ela fornece ouro, prata e minerais para a construção, veículos, eletrônicos, joias e utensílios. No Brasil, os principais minérios explorados são o <strong>ferro</strong> e o <strong>alumínio</strong>. Sem controle, a mineração pode <strong>contaminar a água</strong> com metais pesados e produtos químicos, <strong>degradar o solo</strong> e destruir hábitats.",
+              "A <strong>urbanização</strong> é a construção de <strong>moradias</strong> (casas e edifícios) e de infraestrutura (rodovias, parques e outras edificações). Ela traz benefícios: acesso a saúde, educação, transporte e saneamento, empregos e lazer.",
+              "Se não for bem planejada, a urbanização causa <strong>poluição do ar e da água</strong>, doenças, <strong>deslizamentos de terra, enchentes</strong> e perda de biodiversidade. O solo pode sofrer com a <strong>impermeabilização</strong> (o asfalto e o concreto impedem a água de se infiltrar) e com a contaminação por resíduos urbanos. Por isso é essencial o <strong>planejamento urbano</strong>."
+            ],
+            "cards": [
+              {
+                "icon": "🌲",
+                "t": "silvicultura",
+                "d": "madeira, celulose, látex"
+              },
+              {
+                "icon": "⛏️",
+                "t": "mineração",
+                "d": "ferro e alumínio no Brasil"
+              },
+              {
+                "icon": "🏙️",
+                "t": "urbanização",
+                "d": "casas, prédios, rodovias"
+              },
+              {
+                "icon": "🧱",
+                "t": "impermeabilização",
+                "d": "a água não infiltra no solo"
+              }
+            ]
+          },
+          {
+            "h": "Cuidados com o solo",
+            "figure": {
+              "src": "assets/4b/cie13-cuidados.svg",
+              "alt": "Seis cuidados com o solo: rotação de culturas, adubação orgânica, controle da erosão com reflorestamento, irrigação e drenagem, compostagem e unidades de conservação.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "O uso responsável do solo garante que ele continue fornecendo recursos para as <strong>gerações futuras</strong>. Algumas práticas:",
+              "<strong>Rotação de culturas:</strong> alternar a plantação de diferentes espécies na mesma área ao longo do tempo, para <strong>evitar o esgotamento</strong> do solo (cada planta retira e devolve nutrientes diferentes). Exemplo: soja crescendo nos restos da plantação de milho.",
+              "<strong>Adubação orgânica:</strong> a matéria orgânica, como <strong>restos de plantas</strong>, enriquece o solo com nutrientes.",
+              "<strong>Controle da erosão:</strong> técnicas para evitar a perda de solo pela ação da <strong>água e do vento</strong> (erosão). O <strong>reflorestamento</strong> ajuda, pois as <strong>raízes</strong> das plantas mantêm as partículas do solo unidas.",
+              "<strong>Irrigação e drenagem:</strong> a irrigação adequada dá às plantas a água suficiente; a drenagem evita o excesso de água, que prejudica as raízes.",
+              "<strong>Unidades de Conservação</strong> são áreas naturais <strong>protegidas por lei</strong> para conservar a biodiversidade e a água, como <strong>Parques Nacionais</strong>, Reservas Biológicas e Áreas de Proteção Ambiental (APAs). Exemplo: o Parque Nacional da Serra dos Órgãos, em Teresópolis (RJ), com o pico “Dedo de Deus”."
+            ]
+          },
+          {
+            "h": "Poluição do solo: causas, consequências e prevenção",
+            "figure": {
+              "src": "assets/4b/cie13-poluicao.svg",
+              "alt": "Três colunas. Causas: lixo descartado de forma errada, excesso de agrotóxicos, resíduos das indústrias, mineração, petróleo derramado. Consequências: morte de plantas e animais, doenças nas pessoas, solo menos fértil, água subterrânea e rios contaminados. Prevenção: separar recicláveis, compostagem, agricultura orgânica, uso controlado de fertilizantes, leis e fiscalização.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "A <strong>poluição do solo</strong> acontece quando <strong>substâncias impróprias</strong> são colocadas no solo, mudando suas propriedades e prejudicando a vida. Exemplo: resíduos plásticos no solo.",
+              "<strong>Causas:</strong> descarte inadequado de <strong>resíduos sólidos</strong> (de casas, indústrias e hospitais); uso excessivo de <strong>fertilizantes, pesticidas e herbicidas</strong> na agricultura; <strong>atividades industriais</strong> (vazamentos e derramamentos de resíduos químicos); <strong>extração de minerais</strong>, que libera metais tóxicos; e <strong>derramamentos de petróleo</strong>.",
+              "<strong>Consequências:</strong> os poluentes contaminam as plantas e, depois, os outros seres vivos, chegando até o ser humano: causam a <strong>morte de seres vivos</strong>, <strong>doenças</strong>, solo <strong>menos fértil</strong> (menor produção agrícola) e perda de biodiversidade. Eles também se infiltram e <strong>contaminam a água subterrânea e os rios</strong>.",
+              "<strong>Medidas de prevenção e controle</strong> (individuais, coletivas e governamentais): descartar os resíduos corretamente e <strong>separar os recicláveis</strong>; fazer <strong>reciclagem e compostagem</strong> (restos de alimentos e folhas são decompostos por microrganismos e viram adubo); usar fertilizantes e pesticidas com controle; incentivar a <strong>agricultura orgânica</strong> e a rotação de culturas; e criar <strong>leis</strong> que protejam o ambiente, com <strong>fiscalização</strong>."
+            ],
+            "cards": [
+              {
+                "icon": "🪱",
+                "t": "compostagem",
+                "d": "restos viram adubo"
+              },
+              {
+                "icon": "♻️",
+                "t": "reciclagem",
+                "d": "menos lixo no solo"
+              },
+              {
+                "icon": "🧪",
+                "t": "agrotóxicos em excesso",
+                "d": "poluem o solo"
+              },
+              {
+                "icon": "🛢️",
+                "t": "petróleo",
+                "d": "altamente tóxico"
+              }
+            ]
+          },
+          {
+            "h": "Utilizando o solo",
+            "p": [
+              "O solo é usado de diferentes maneiras, conforme a finalidade que o ser humano deseja. O livro compara duas fotos:",
+              "<strong>Foto A:</strong> plantação de <strong>soja</strong> em Quatro Pontes (PR), em <strong>2020</strong>: uso do solo na <strong>agricultura</strong>.",
+              "<strong>Foto B:</strong> <strong>mineração de ferro</strong> em Corumbá (MS), em <strong>2006</strong>: uso do solo na <strong>mineração</strong>, com máquinas retirando terra vermelha.",
+              "A foto mais recente é a da soja (2020) e a mais antiga é a da mineração (2006). As duas foram tiradas de <strong>dia</strong>, pois há luz do Sol e céu claro.",
+              "Usar o solo de maneira <strong>sustentável</strong> é importante para que ele continue fértil e para que os recursos continuem disponíveis para as futuras gerações."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "sort",
+            "title": "Qual é o uso do solo?",
+            "short": "Usos do solo",
+            "instructions": "Que atividade está usando o solo?",
+            "categories": [
+              "Agricultura 🌽",
+              "Pecuária 🐄",
+              "Silvicultura 🌲",
+              "Mineração ⛏️",
+              "Urbanização 🏙️"
+            ],
+            "items": [
+              {
+                "text": "Plantação de soja e de alface",
+                "cat": 0
+              },
+              {
+                "text": "Porcos criados em confinamento",
+                "cat": 1
+              },
+              {
+                "text": "Árvores cultivadas para virar madeira e papel",
+                "cat": 2
+              },
+              {
+                "text": "Escavadeira retirando ferro do solo",
+                "cat": 3
+              },
+              {
+                "text": "Construção de prédios, ruas e rodovias",
+                "cat": 4
+              },
+              {
+                "text": "Família cultivando uma horta orgânica",
+                "cat": 0
+              },
+              {
+                "text": "Bois soltos em um grande pasto",
+                "cat": 1
+              },
+              {
+                "text": "Extração de látex das seringueiras plantadas",
+                "cat": 2
+              },
+              {
+                "text": "Poço de extração de carvão",
+                "cat": 3
+              },
+              {
+                "text": "Bairro novo com casas e um parque",
+                "cat": 4
+              }
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "Que tipo de agricultura?",
+            "short": "Tipos de agricultura",
+            "instructions": "Esta é uma agricultura de subsistência, comercial ou orgânica?",
+            "categories": [
+              "Subsistência 🏡",
+              "Comercial 🚜",
+              "Orgânica 🥬"
+            ],
+            "items": [
+              {
+                "text": "A família planta feijão e milho só para comer em casa.",
+                "cat": 0
+              },
+              {
+                "text": "Uma fazenda planta toneladas de soja para vender.",
+                "cat": 1
+              },
+              {
+                "text": "A horta não usa fertilizantes e pesticidas sintéticos.",
+                "cat": 2
+              },
+              {
+                "text": "A produção atende a família e a comunidade local.",
+                "cat": 0
+              },
+              {
+                "text": "Grandes quantidades de alimentos vão para os mercados.",
+                "cat": 1
+              },
+              {
+                "text": "O agricultor usa técnicas sustentáveis para conservar o ambiente.",
+                "cat": 2
+              }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Cuidados com o solo",
+            "short": "Cuidados",
+            "instructions": "Qual cuidado com o solo é este?",
+            "pairs": [
+              [
+                "Alternar o cultivo de diferentes plantas para não esgotar os nutrientes.",
+                "Rotação de culturas"
+              ],
+              [
+                "Usar restos de plantas para enriquecer o solo.",
+                "Adubação orgânica"
+              ],
+              [
+                "Plantar árvores para as raízes segurarem o solo.",
+                "Controle da erosão"
+              ],
+              [
+                "Dar às plantas a água certa e evitar o excesso.",
+                "Irrigação e drenagem"
+              ],
+              [
+                "Restos de alimentos e folhas viram adubo.",
+                "Compostagem"
+              ],
+              [
+                "Área natural protegida por lei, como um Parque Nacional.",
+                "Unidade de Conservação"
+              ]
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "Polui ou protege o solo?",
+            "short": "Poluição do solo",
+            "instructions": "Esta atitude polui ou protege o solo?",
+            "categories": [
+              "Polui o solo ☠️",
+              "Protege o solo 🌱"
+            ],
+            "items": [
+              {
+                "text": "Jogar lixo na praia",
+                "cat": 0
+              },
+              {
+                "text": "Separar os resíduos recicláveis em casa",
+                "cat": 1
+              },
+              {
+                "text": "Usar pesticidas em excesso na plantação",
+                "cat": 0
+              },
+              {
+                "text": "Fazer compostagem com restos de alimentos",
+                "cat": 1
+              },
+              {
+                "text": "Derramar petróleo no chão",
+                "cat": 0
+              },
+              {
+                "text": "Incentivar a agricultura orgânica",
+                "cat": 1
+              },
+              {
+                "text": "Indústria que deixa vazar resíduos químicos",
+                "cat": 0
+              },
+              {
+                "text": "Criar leis e fiscalizar o seu cumprimento",
+                "cat": 1
+              }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Da causa à consequência",
+            "short": "Consequências",
+            "instructions": "O que acontece por causa disso?",
+            "pairs": [
+              [
+                "Poluentes se acumulam no solo e nas plantas",
+                "chegam aos animais e ao ser humano"
+              ],
+              [
+                "O solo fica poluído e menos fértil",
+                "a produção agrícola diminui"
+              ],
+              [
+                "Os poluentes se infiltram no solo",
+                "a água subterrânea fica contaminada"
+              ],
+              [
+                "Cidade cresce sem planejamento",
+                "enchentes e deslizamentos de terra"
+              ],
+              [
+                "Asfalto e concreto cobrem o solo",
+                "a água não consegue se infiltrar"
+              ]
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "De que é composto o solo?",
+            "options": [
+              "Nutrientes minerais, matéria orgânica, água e ar",
+              "Somente areia, pedras e rochas grandes",
+              "Somente água da chuva e do rio",
+              "Plástico, vidro e metais da cidade"
+            ],
+            "answer": 0,
+            "explain": "O solo tem nutrientes minerais, matéria orgânica, água e ar, distribuídos em camadas."
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/cie13-camadas.svg",
+            "imageAlt": "Corte do solo com as camadas: húmus, camada superior, subsolo, águas subterrâneas e fragmentos de rochas, e rocha-mãe.",
+            "q": "Qual camada do solo tem mais nutrientes minerais?",
+            "options": [
+              "Húmus",
+              "Rocha-mãe",
+              "Subsolo",
+              "Águas subterrâneas"
+            ],
+            "answer": 0,
+            "explain": "O húmus tem mais nutrientes, água e oxigênio, necessários ao crescimento dos vegetais."
+          },
+          {
+            "type": "mc",
+            "q": "Como é um solo fértil?",
+            "options": [
+              "Úmido e rico em nutrientes",
+              "Seco e rachado",
+              "Pobre em nutrientes",
+              "Coberto de asfalto"
+            ],
+            "answer": 0,
+            "explain": "O livro compara um solo úmido e rico em nutrientes (fértil) com um solo seco e pobre em nutrientes."
+          },
+          {
+            "type": "mc",
+            "q": "A agricultura de subsistência é praticada:",
+            "options": [
+              "por famílias, para a própria alimentação e a da comunidade",
+              "por grandes fazendas, para vender",
+              "por indústrias de petróleo",
+              "somente em cidades grandes"
+            ],
+            "answer": 0,
+            "explain": "A de subsistência atende às necessidades da família e da comunidade local; a comercial produz para vender."
+          },
+          {
+            "type": "mc",
+            "q": "A agricultura comercial tem como objetivo:",
+            "options": [
+              "produzir grandes quantidades para vender",
+              "alimentar só a própria família",
+              "evitar plantar alimentos",
+              "criar animais no pasto"
+            ],
+            "answer": 0,
+            "explain": "A agricultura comercial produz grandes quantidades de alimentos para comercializá-los."
+          },
+          {
+            "type": "mc",
+            "q": "Como a agricultura orgânica ajuda a conservar o solo?",
+            "options": [
+              "Evita fertilizantes e pesticidas sintéticos",
+              "Usa muitos agrotóxicos",
+              "Cobre o solo com cimento",
+              "Retira todas as árvores"
+            ],
+            "answer": 0,
+            "explain": "A agricultura orgânica usa técnicas sustentáveis, sem fertilizantes e pesticidas sintéticos."
+          },
+          {
+            "type": "mc",
+            "q": "O que é pecuária?",
+            "options": [
+              "Criação e cuidado de animais para obter produtos",
+              "Cultivo de florestas para tirar madeira",
+              "Extração de minerais do solo e das rochas",
+              "Construção de casas, prédios e ruas"
+            ],
+            "answer": 0,
+            "explain": "Na pecuária, os animais são criados para dar carne, leite, couro e lã."
+          },
+          {
+            "type": "mc",
+            "q": "Na pecuária intensiva, os animais são criados:",
+            "options": [
+              "em confinamento",
+              "soltos em grandes pastos",
+              "dentro das florestas",
+              "no mar"
+            ],
+            "answer": 0,
+            "explain": "Intensiva: animais em confinamento. Extensiva: grandes áreas de pasto."
+          },
+          {
+            "type": "mc",
+            "q": "Qual destes é um produto da pecuária usado para fazer roupas, calçados e acessórios?",
+            "options": [
+              "Couro",
+              "Celulose",
+              "Ferro",
+              "Látex"
+            ],
+            "answer": 0,
+            "explain": "Da pecuária vêm a carne, o leite, o couro (calçados e roupas) e a lã (indústria têxtil)."
+          },
+          {
+            "type": "text",
+            "q": "Como se chama a prática de cultivar e conservar florestas para obter madeira, celulose e látex?",
+            "answers": [
+              "silvicultura",
+              "a silvicultura"
+            ],
+            "explain": "Silvicultura é o cultivo de florestas para obter produtos de interesse humano."
+          },
+          {
+            "type": "mc",
+            "q": "Quais são os dois principais minérios extraídos no Brasil?",
+            "options": [
+              "Ferro e alumínio",
+              "Soja e café",
+              "Carne bovina e ovos",
+              "Petróleo e madeira"
+            ],
+            "answer": 0,
+            "explain": "No Brasil, os principais minérios explorados são o ferro e o alumínio."
+          },
+          {
+            "type": "mc",
+            "q": "Um problema da mineração feita sem controle é:",
+            "options": [
+              "contaminar a água com metais pesados",
+              "deixar o solo mais fértil",
+              "aumentar as florestas",
+              "diminuir a poluição"
+            ],
+            "answer": 0,
+            "explain": "Sem controle, a mineração contamina os cursos de água e degrada o solo."
+          },
+          {
+            "type": "mc",
+            "context": "Se a urbanização não for bem planejada, pode trazer consequências para a população e o ambiente, como poluição do ar e da água, problemas de saúde, aumento dos deslizamentos de terra, enchentes e perda da biodiversidade. O solo pode ser afetado pela impermeabilização, que reduz a capacidade de infiltração de água.",
+            "q": "Segundo o texto, um problema da urbanização mal planejada é:",
+            "options": [
+              "enchentes e deslizamentos de terra",
+              "mais água infiltrando no solo",
+              "aumento da biodiversidade",
+              "ar mais limpo"
+            ],
+            "answer": 0,
+            "explain": "A cidade sem planejamento causa poluição, doenças, enchentes, deslizamentos e perda de biodiversidade."
+          },
+          {
+            "type": "mc",
+            "q": "A impermeabilização do solo pelo asfalto e pelo concreto faz com que:",
+            "options": [
+              "a água não consiga se infiltrar no solo",
+              "o solo fique mais fértil",
+              "as plantas cresçam mais",
+              "a água fique mais limpa"
+            ],
+            "answer": 0,
+            "explain": "O solo coberto não deixa a água infiltrar, o que pode causar enchentes."
+          },
+          {
+            "type": "mc",
+            "q": "Alternar o cultivo de diferentes plantas na mesma área para evitar o esgotamento dos nutrientes é:",
+            "options": [
+              "rotação de culturas",
+              "impermeabilização",
+              "mineração",
+              "pecuária intensiva"
+            ],
+            "answer": 0,
+            "explain": "Na rotação de culturas, cada planta retira e devolve nutrientes diferentes ao solo."
+          },
+          {
+            "type": "mc",
+            "q": "Por que o reflorestamento ajuda a controlar a erosão?",
+            "options": [
+              "As raízes das plantas mantêm o solo unido",
+              "As árvores deixam o solo seco",
+              "As folhas tiram os nutrientes",
+              "As árvores atraem enchentes"
+            ],
+            "answer": 0,
+            "explain": "Erosão é a perda de solo pela água e pelo vento; as raízes seguram as partículas do solo."
+          },
+          {
+            "type": "mc",
+            "q": "O que é compostagem?",
+            "options": [
+              "Restos de alimentos e folhas decompostos viram adubo",
+              "Queimar todo o lixo da casa no quintal",
+              "Enterrar plástico e vidro no solo",
+              "Usar muitos pesticidas na plantação"
+            ],
+            "answer": 0,
+            "explain": "Na compostagem, microrganismos decompõem a matéria orgânica, que vira um composto rico em nutrientes."
+          },
+          {
+            "type": "mc",
+            "q": "Parques Nacionais, Reservas Biológicas e APAs são exemplos de:",
+            "options": [
+              "Unidades de Conservação",
+              "áreas de mineração",
+              "indústrias de base",
+              "plantações de soja"
+            ],
+            "answer": 0,
+            "explain": "Unidades de Conservação são áreas naturais protegidas por lei, como o Parque Nacional da Serra dos Órgãos (RJ)."
+          },
+          {
+            "type": "mc",
+            "q": "Qual destas é uma causa da poluição do solo?",
+            "options": [
+              "Uso excessivo de fertilizantes e pesticidas",
+              "Separação dos recicláveis",
+              "Compostagem",
+              "Agricultura orgânica"
+            ],
+            "answer": 0,
+            "explain": "Lixo descartado errado, agrotóxicos em excesso, resíduos industriais, mineração e petróleo derramado poluem o solo."
+          },
+          {
+            "type": "mc",
+            "q": "Os poluentes do solo podem chegar até o ser humano. Como?",
+            "options": [
+              "Contaminam as plantas e depois os outros seres vivos",
+              "Eles desaparecem sozinhos com a chuva",
+              "Viram nutrientes bons para as plantas",
+              "Ficam presos para sempre na rocha-mãe"
+            ],
+            "answer": 0,
+            "explain": "Os poluentes contaminam as plantas e, depois, os animais e o ser humano, causando doenças."
+          },
+          {
+            "type": "mc",
+            "q": "Qual frase sobre o solo está correta?",
+            "options": [
+              "A conservação do solo depende de medidas individuais, coletivas e governamentais.",
+              "O resultado da compostagem contamina o solo com seus nutrientes.",
+              "O bom uso do solo esgota seus nutrientes e gera erosão.",
+              "A mineração e o uso de fertilizantes sempre ajudam o solo."
+            ],
+            "answer": 0,
+            "explain": "Cuidar do solo depende de cada pessoa, da comunidade e do governo (leis e fiscalização)."
+          },
+          {
+            "type": "mc",
+            "context": "Foto A: plantação de soja em Quatro Pontes (PR), em 2020. Foto B: mineração de ferro em Corumbá (MS), em 2006.",
+            "q": "Qual das fotografias é a mais recente?",
+            "options": [
+              "A foto A, de 2020",
+              "A foto B, de 2006",
+              "As duas são de 2006",
+              "As duas são de 2020"
+            ],
+            "answer": 0,
+            "explain": "2020 é mais recente que 2006. A foto A mostra a agricultura; a B, a mineração."
+          }
+        ]
+      },
+      {
+        "id": "sim_ciencias",
+        "module": "★",
+        "title": "Simulado da prova",
+        "subtitle": "Resumo final + 15 questões sorteadas de todos os módulos",
+        "exam": {
+          "size": 15
+        },
+        "theory": [
+          {
+            "h": "Resumo da prova de Ciências",
+            "p": [
+              "<strong>Composição do solo:</strong> camada mais externa da litosfera; tem nutrientes minerais, matéria orgânica, água e ar, em camadas (húmus, camada superior, subsolo, águas e fragmentos de rochas, rocha-mãe). O <strong>húmus</strong> tem mais nutrientes.",
+              "<strong>Usos do solo:</strong> agricultura (de subsistência, comercial, orgânica); pecuária (extensiva ou intensiva: carne, leite, couro, lã); silvicultura (madeira, celulose, látex; reflorestamento); mineração (no Brasil, ferro e alumínio; pode contaminar a água); urbanização (moradias e infraestrutura; sem planejamento: enchentes, deslizamentos, impermeabilização).",
+              "<strong>Cuidados:</strong> rotação de culturas, adubação orgânica, controle da erosão (reflorestamento: raízes seguram o solo), irrigação e drenagem, Unidades de Conservação.",
+              "<strong>Poluição do solo:</strong> causas (lixo descartado errado, agrotóxicos em excesso, resíduos industriais, mineração, petróleo); consequências (morte de seres vivos, doenças, solo menos fértil, água contaminada); prevenção (separar recicláveis, reciclagem, compostagem, agricultura orgânica, leis e fiscalização)."
+            ],
+            "cards": [
+              {
+                "icon": "🌱",
+                "t": "húmus",
+                "d": "mais nutrientes"
+              },
+              {
+                "icon": "🌽",
+                "t": "agricultura",
+                "d": "cultivo de plantas"
+              },
+              {
+                "icon": "🐄",
+                "t": "pecuária",
+                "d": "criação de animais"
+              },
+              {
+                "icon": "🌲",
+                "t": "silvicultura",
+                "d": "cultivo de florestas"
+              },
+              {
+                "icon": "⛏️",
+                "t": "mineração",
+                "d": "ferro e alumínio"
+              },
+              {
+                "icon": "🏙️",
+                "t": "urbanização",
+                "d": "moradias e rodovias"
+              },
+              {
+                "icon": "🔄",
+                "t": "rotação de culturas",
+                "d": "não esgota o solo"
+              },
+              {
+                "icon": "🪱",
+                "t": "compostagem",
+                "d": "restos viram adubo"
+              },
+              {
+                "icon": "☠️",
+                "t": "poluição",
+                "d": "substâncias impróprias no solo"
+              }
+            ]
+          }
+        ],
+        "games": [],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "De que é composto o solo?",
+            "options": [
+              "Nutrientes minerais, matéria orgânica, água e ar",
+              "Somente areia, pedras e rochas grandes",
+              "Somente água da chuva e do rio",
+              "Plástico, vidro e metais da cidade"
+            ],
+            "answer": 0,
+            "explain": "O solo tem nutrientes minerais, matéria orgânica, água e ar, distribuídos em camadas.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/cie13-camadas.svg",
+            "imageAlt": "Corte do solo com as camadas: húmus, camada superior, subsolo, águas subterrâneas e fragmentos de rochas, e rocha-mãe.",
+            "q": "Qual camada do solo tem mais nutrientes minerais?",
+            "options": [
+              "Húmus",
+              "Rocha-mãe",
+              "Subsolo",
+              "Águas subterrâneas"
+            ],
+            "answer": 0,
+            "explain": "O húmus tem mais nutrientes, água e oxigênio, necessários ao crescimento dos vegetais.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Como é um solo fértil?",
+            "options": [
+              "Úmido e rico em nutrientes",
+              "Seco e rachado",
+              "Pobre em nutrientes",
+              "Coberto de asfalto"
+            ],
+            "answer": 0,
+            "explain": "O livro compara um solo úmido e rico em nutrientes (fértil) com um solo seco e pobre em nutrientes.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "A agricultura de subsistência é praticada:",
+            "options": [
+              "por famílias, para a própria alimentação e a da comunidade",
+              "por grandes fazendas, para vender",
+              "por indústrias de petróleo",
+              "somente em cidades grandes"
+            ],
+            "answer": 0,
+            "explain": "A de subsistência atende às necessidades da família e da comunidade local; a comercial produz para vender.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "A agricultura comercial tem como objetivo:",
+            "options": [
+              "produzir grandes quantidades para vender",
+              "alimentar só a própria família",
+              "evitar plantar alimentos",
+              "criar animais no pasto"
+            ],
+            "answer": 0,
+            "explain": "A agricultura comercial produz grandes quantidades de alimentos para comercializá-los.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Como a agricultura orgânica ajuda a conservar o solo?",
+            "options": [
+              "Evita fertilizantes e pesticidas sintéticos",
+              "Usa muitos agrotóxicos",
+              "Cobre o solo com cimento",
+              "Retira todas as árvores"
+            ],
+            "answer": 0,
+            "explain": "A agricultura orgânica usa técnicas sustentáveis, sem fertilizantes e pesticidas sintéticos.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "O que é pecuária?",
+            "options": [
+              "Criação e cuidado de animais para obter produtos",
+              "Cultivo de florestas para tirar madeira",
+              "Extração de minerais do solo e das rochas",
+              "Construção de casas, prédios e ruas"
+            ],
+            "answer": 0,
+            "explain": "Na pecuária, os animais são criados para dar carne, leite, couro e lã.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Na pecuária intensiva, os animais são criados:",
+            "options": [
+              "em confinamento",
+              "soltos em grandes pastos",
+              "dentro das florestas",
+              "no mar"
+            ],
+            "answer": 0,
+            "explain": "Intensiva: animais em confinamento. Extensiva: grandes áreas de pasto.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Qual destes é um produto da pecuária usado para fazer roupas, calçados e acessórios?",
+            "options": [
+              "Couro",
+              "Celulose",
+              "Ferro",
+              "Látex"
+            ],
+            "answer": 0,
+            "explain": "Da pecuária vêm a carne, o leite, o couro (calçados e roupas) e a lã (indústria têxtil).",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "text",
+            "q": "Como se chama a prática de cultivar e conservar florestas para obter madeira, celulose e látex?",
+            "answers": [
+              "silvicultura",
+              "a silvicultura"
+            ],
+            "explain": "Silvicultura é o cultivo de florestas para obter produtos de interesse humano.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Quais são os dois principais minérios extraídos no Brasil?",
+            "options": [
+              "Ferro e alumínio",
+              "Soja e café",
+              "Carne bovina e ovos",
+              "Petróleo e madeira"
+            ],
+            "answer": 0,
+            "explain": "No Brasil, os principais minérios explorados são o ferro e o alumínio.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Um problema da mineração feita sem controle é:",
+            "options": [
+              "contaminar a água com metais pesados",
+              "deixar o solo mais fértil",
+              "aumentar as florestas",
+              "diminuir a poluição"
+            ],
+            "answer": 0,
+            "explain": "Sem controle, a mineração contamina os cursos de água e degrada o solo.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "context": "Se a urbanização não for bem planejada, pode trazer consequências para a população e o ambiente, como poluição do ar e da água, problemas de saúde, aumento dos deslizamentos de terra, enchentes e perda da biodiversidade. O solo pode ser afetado pela impermeabilização, que reduz a capacidade de infiltração de água.",
+            "q": "Segundo o texto, um problema da urbanização mal planejada é:",
+            "options": [
+              "enchentes e deslizamentos de terra",
+              "mais água infiltrando no solo",
+              "aumento da biodiversidade",
+              "ar mais limpo"
+            ],
+            "answer": 0,
+            "explain": "A cidade sem planejamento causa poluição, doenças, enchentes, deslizamentos e perda de biodiversidade.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "A impermeabilização do solo pelo asfalto e pelo concreto faz com que:",
+            "options": [
+              "a água não consiga se infiltrar no solo",
+              "o solo fique mais fértil",
+              "as plantas cresçam mais",
+              "a água fique mais limpa"
+            ],
+            "answer": 0,
+            "explain": "O solo coberto não deixa a água infiltrar, o que pode causar enchentes.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Alternar o cultivo de diferentes plantas na mesma área para evitar o esgotamento dos nutrientes é:",
+            "options": [
+              "rotação de culturas",
+              "impermeabilização",
+              "mineração",
+              "pecuária intensiva"
+            ],
+            "answer": 0,
+            "explain": "Na rotação de culturas, cada planta retira e devolve nutrientes diferentes ao solo.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Por que o reflorestamento ajuda a controlar a erosão?",
+            "options": [
+              "As raízes das plantas mantêm o solo unido",
+              "As árvores deixam o solo seco",
+              "As folhas tiram os nutrientes",
+              "As árvores atraem enchentes"
+            ],
+            "answer": 0,
+            "explain": "Erosão é a perda de solo pela água e pelo vento; as raízes seguram as partículas do solo.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "O que é compostagem?",
+            "options": [
+              "Restos de alimentos e folhas decompostos viram adubo",
+              "Queimar todo o lixo da casa no quintal",
+              "Enterrar plástico e vidro no solo",
+              "Usar muitos pesticidas na plantação"
+            ],
+            "answer": 0,
+            "explain": "Na compostagem, microrganismos decompõem a matéria orgânica, que vira um composto rico em nutrientes.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Parques Nacionais, Reservas Biológicas e APAs são exemplos de:",
+            "options": [
+              "Unidades de Conservação",
+              "áreas de mineração",
+              "indústrias de base",
+              "plantações de soja"
+            ],
+            "answer": 0,
+            "explain": "Unidades de Conservação são áreas naturais protegidas por lei, como o Parque Nacional da Serra dos Órgãos (RJ).",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Qual destas é uma causa da poluição do solo?",
+            "options": [
+              "Uso excessivo de fertilizantes e pesticidas",
+              "Separação dos recicláveis",
+              "Compostagem",
+              "Agricultura orgânica"
+            ],
+            "answer": 0,
+            "explain": "Lixo descartado errado, agrotóxicos em excesso, resíduos industriais, mineração e petróleo derramado poluem o solo.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Os poluentes do solo podem chegar até o ser humano. Como?",
+            "options": [
+              "Contaminam as plantas e depois os outros seres vivos",
+              "Eles desaparecem sozinhos com a chuva",
+              "Viram nutrientes bons para as plantas",
+              "Ficam presos para sempre na rocha-mãe"
+            ],
+            "answer": 0,
+            "explain": "Os poluentes contaminam as plantas e, depois, os animais e o ser humano, causando doenças.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "Qual frase sobre o solo está correta?",
+            "options": [
+              "A conservação do solo depende de medidas individuais, coletivas e governamentais.",
+              "O resultado da compostagem contamina o solo com seus nutrientes.",
+              "O bom uso do solo esgota seus nutrientes e gera erosão.",
+              "A mineração e o uso de fertilizantes sempre ajudam o solo."
+            ],
+            "answer": 0,
+            "explain": "Cuidar do solo depende de cada pessoa, da comunidade e do governo (leis e fiscalização).",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "context": "Foto A: plantação de soja em Quatro Pontes (PR), em 2020. Foto B: mineração de ferro em Corumbá (MS), em 2006.",
+            "q": "Qual das fotografias é a mais recente?",
+            "options": [
+              "A foto A, de 2020",
+              "A foto B, de 2006",
+              "As duas são de 2006",
+              "As duas são de 2020"
+            ],
+            "answer": 0,
+            "explain": "2020 é mais recente que 2006. A foto A mostra a agricultura; a B, a mineração.",
+            "from": "O uso do solo"
+          },
+          {
+            "type": "mc",
+            "q": "A lã, matéria-prima da indústria têxtil, é um produto de qual atividade?",
+            "options": [
+              "Pecuária",
+              "Mineração",
+              "Silvicultura",
+              "Urbanização"
+            ],
+            "answer": 0,
+            "explain": "A pecuária produz carne, leite, couro e lã.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Jogar resíduos na praia é uma atitude que:",
+            "options": [
+              "polui o solo e o ambiente",
+              "protege o solo",
+              "enriquece o solo com nutrientes",
+              "evita a erosão"
+            ],
+            "answer": 0,
+            "explain": "O descarte inadequado de resíduos é uma das causas da poluição do solo.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Erosão é a perda de solo causada pela ação:",
+            "options": [
+              "da água e do vento",
+              "das raízes das plantas",
+              "da compostagem",
+              "da adubação orgânica"
+            ],
+            "answer": 0,
+            "explain": "A água e o vento levam o solo embora; o reflorestamento ajuda a evitar a erosão.",
+            "from": "Simulado"
+          }
+        ]
+      }
+    ]
   }
 ];

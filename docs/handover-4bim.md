@@ -12,8 +12,8 @@ O site virou um preparatório para as provas do 4º bimestre do 3º ano. Só ent
 | Língua Portuguesa (Mód. 23–27 + poema e conto de mistério) | seg 23/11 | ✅ pronto, com vídeos |
 | História (Mód. 12–14) | ter 24/11 | ✅ pronto, com vídeos |
 | Matemática (Mód. 13 e 14) | qua 25/11 | ✅ pronto, sem vídeos (opcional) |
-| Geografia (Mód. 13) | qui 26/11 | ⏳ não iniciado |
-| Ciências (Mód. 13) | sex 27/11 | ⏳ não iniciado |
+| Geografia (Mód. 13) | qui 26/11 | ✅ pronto |
+| Ciências (Mód. 13) | sex 27/11 | ✅ pronto |
 
 A 2ª chamada (1 a 4/12) usa o mesmo conteúdo.
 
@@ -63,10 +63,12 @@ Publicado em `content/mat13.json`, `mat14.json` e `sim_matematica.json`; ilustra
   - As páginas 69–70 do livro são o **gráfico de setores: excluir**.
 - O módulo 14 pede ilustrações de pizza e barra de fração em SVG, que se desenham bem por script.
 
-### 3. Geografia (Mód. 13: A indústria e o comércio)
+### 3. Geografia (Mód. 13: A indústria e o comércio) — feito em 15/11
+Publicado em `content/geo13.json` e `sim_geografia.json`; ilustrações em `scripts/svg_geo_ciencias.py`. As seções do livro que não estão na lista (O comércio, comércio eletrônico, desemprego) ficaram de fora.
 Tópicos: o que é indústria; do artesanato à indústria; bens duráveis e não duráveis; consumo consciente; profissionais da indústria; impactos ambientais da indústria. Os módulos 12 e 14 da apostila **não** entram.
 
-### 4. Ciências (Mód. 13: O uso do solo)
+### 4. Ciências (Mód. 13: O uso do solo) — feito em 15/11
+Publicado em `content/cie13.json` e `sim_ciencias.json`. Os tipos de solo (arenoso, argiloso, humífero) são do Mód. 12 e ficaram de fora.
 Tópicos:
 - composição do solo e seus usos;
 - agricultura, pecuária, silvicultura, mineração e urbanização;

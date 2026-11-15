@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#6b49b8" font-weight="800" text-anchor="middle">Tipos de indústria</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">recurso natural → matéria-prima → produto</text>
+<rect x="30" y="120" width="250" height="420" rx="22" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/><text x="155" y="220" font-size="70" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">⛰️</text>
+<text x="155" y="290" font-size="20" fill="#1d805c" font-weight="800" text-anchor="middle">Recursos naturais</text><text x="155" y="330" font-size="17" fill="#17213b" font-weight="700" text-anchor="middle">petróleo, minérios,</text><text x="155" y="355" font-size="17" fill="#17213b" font-weight="700" text-anchor="middle">madeira, leite</text>
+<line x1="282" y1="330" x2="318" y2="330" stroke="#4a5872" stroke-width="5" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="320" y="120" width="260" height="420" rx="22" fill="#fff4e6" stroke="#d9822b" stroke-width="3"/><text x="450" y="220" font-size="70" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">⚙️</text>
+<text x="450" y="285" font-size="21" fill="#d9822b" font-weight="800" text-anchor="middle">Indústria de BASE</text><text x="450" y="325" font-size="17" fill="#17213b" font-weight="700" text-anchor="middle">faz matérias-primas</text>
+<text x="450" y="350" font-size="17" fill="#17213b" font-weight="700" text-anchor="middle">e energia:</text><text x="450" y="385" font-size="17" fill="#17213b" font-weight="800" text-anchor="middle">aço, diesel, plástico</text>
+<text x="450" y="430" font-size="15" fill="#4a5872" font-weight="700" text-anchor="middle">petróleo e minérios</text>
+<line x1="582" y1="330" x2="618" y2="330" stroke="#4a5872" stroke-width="5" stroke-linecap="round" marker-end="url(#ponta)"/>
+<rect x="620" y="120" width="250" height="420" rx="22" fill="#eaf2ff" stroke="#2456b8" stroke-width="3"/><text x="745" y="220" font-size="70" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🛋️</text>
+<text x="745" y="280" font-size="20" fill="#2456b8" font-weight="800" text-anchor="middle">Indústria de</text><text x="745" y="305" font-size="20" fill="#2456b8" font-weight="800" text-anchor="middle">BENS DE CONSUMO</text>
+<text x="745" y="345" font-size="17" fill="#17213b" font-weight="700" text-anchor="middle">faz produtos para</text><text x="745" y="370" font-size="17" fill="#17213b" font-weight="700" text-anchor="middle">o consumidor:</text>
+<text x="745" y="405" font-size="17" fill="#17213b" font-weight="800" text-anchor="middle">alimentos, roupas,</text><text x="745" y="430" font-size="17" fill="#17213b" font-weight="800" text-anchor="middle">móveis, automóveis</text>
+</svg>
