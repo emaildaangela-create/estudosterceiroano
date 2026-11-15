@@ -11,7 +11,7 @@ O site virou um preparatório para as provas do 4º bimestre do 3º ano. Só ent
 | Inglês (Units 7–9) | qui 19/11 | ✅ pronto, com vídeos |
 | Língua Portuguesa (Mód. 23–27 + poema e conto de mistério) | seg 23/11 | ✅ pronto, com vídeos |
 | História (Mód. 12–14) | ter 24/11 | ✅ pronto, com vídeos |
-| Matemática (Mód. 13 e 14) | qua 25/11 | ✅ pronto, sem vídeos (opcional) |
+| Matemática (Mód. 13 e 14) | qua 25/11 | ✅ pronto, com vídeos |
 | Geografia (Mód. 13) | qui 26/11 | ✅ pronto |
 | Ciências (Mód. 13) | sex 27/11 | ✅ pronto |
 
@@ -46,6 +46,8 @@ A 2ª chamada (1 a 4/12) usa o mesmo conteúdo.
 - Ilustrações: `scripts/svg_ingles.py`, `svg_portugues.py` e `svg_historia.py` geram `assets/4b/*.svg` (900×600). Os auxiliares de desenho ficam em `svg_ingles.py`. Para Matemática, Geografia e Ciências, criar `svg_<materia>.py` no mesmo padrão.
 
 ## Pendências
+
+Em 15/11 todas as matérias ficaram prontas, com vídeo em cada módulo e um vídeo de revisão final em cada simulado (`sim_<disciplina>.json` → `"video"`; a fonte é gerada por `scripts/fonte_notebooklm.py sim_<disciplina>`, que junta o resumo e todos os módulos). O login do NotebookLM expira em poucas horas: refazer `notebooklm login --browser chrome` antes de gerar.
 
 ### 1. Vídeos do NotebookLM
 Feito em 14/11: `lp24`–`lp27`, `hist13` e `hist14` ganharam vídeo novo. Se o login expirar (`Authentication expired`), a usuária roda `notebooklm login --browser chrome`. Passo a passo para um módulo novo:

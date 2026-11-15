@@ -10553,6 +10553,7 @@ const DISCIPLINAS = [
         "exam": {
           "size": 15
         },
+        "video": "assets/videos/sim_geografia.mp4",
         "theory": [
           {
             "h": "Resumo da prova de Geografia",
