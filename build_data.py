@@ -134,6 +134,8 @@ def montar_simulado(disc, caps):
         "title": "Simulado da prova",
         "subtitle": "Resumo final + %d questões sorteadas de todos os módulos" % TAMANHO_SIMULADO,
         "exam": {"size": min(TAMANHO_SIMULADO, len(banco))},
+        # vídeo do resumo final (NotebookLM), quando já existir
+        **({"video": extra["video"]} if extra.get("video") else {}),
         "theory": extra.get("theory") or [{
             "h": "Como funciona o simulado",
             "p": ["Cada tentativa sorteia questões diferentes de todos os módulos da prova. No final, você vê quais assuntos ainda precisam de revisão."],

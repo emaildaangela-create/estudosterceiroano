@@ -2370,6 +2370,7 @@ const DISCIPLINAS = [
             "didnt-long"
           ]
         },
+        "video": "assets/videos/sim_ingles.mp4",
         "theory": [
           {
             "h": "Resumo da prova: vocabulary",
@@ -5515,6 +5516,7 @@ const DISCIPLINAS = [
         "exam": {
           "size": 15
         },
+        "video": "assets/videos/sim_portugues.mp4",
         "theory": [
           {
             "h": "Resumo da prova: gramática",
@@ -7481,6 +7483,7 @@ const DISCIPLINAS = [
         "exam": {
           "size": 15
         },
+        "video": "assets/videos/sim_historia.mp4",
         "theory": [
           {
             "h": "Resumo da prova de História",
@@ -8041,6 +8044,7 @@ const DISCIPLINAS = [
         "module": "13",
         "title": "Medidas de massa, de capacidade e de comprimento",
         "subtitle": "Instrumentos · kg, g, mg e t · L e mL · km, m, cm e mm · Problemas",
+        "video": "assets/videos/mat13.mp4",
         "theory": [
           {
             "h": "Instrumentos de medida",
@@ -8672,6 +8676,7 @@ const DISCIPLINAS = [
         "module": "14",
         "title": "Frações",
         "subtitle": "Metade, terço e quarto · Quinto a décimo · Fração de quantidade · Problemas",
+        "video": "assets/videos/mat14.mp4",
         "theory": [
           {
             "h": "Metade ou um meio",
@@ -9190,6 +9195,7 @@ const DISCIPLINAS = [
         "exam": {
           "size": 15
         },
+        "video": "assets/videos/sim_matematica.mp4",
         "theory": [
           {
             "h": "Resumo da prova de Matemática",
@@ -9905,6 +9911,7 @@ const DISCIPLINAS = [
         "module": "13",
         "title": "A indústria e o comércio",
         "subtitle": "O que é indústria · Artesanato · Bens duráveis · Consumo consciente · Profissionais · Impactos",
+        "video": "assets/videos/geo13.mp4",
         "theory": [
           {
             "h": "O que é indústria?",
@@ -10936,6 +10943,7 @@ const DISCIPLINAS = [
         "module": "13",
         "title": "O uso do solo",
         "subtitle": "Composição · Agricultura, pecuária, silvicultura, mineração, urbanização · Cuidados · Poluição",
+        "video": "assets/videos/cie13.mp4",
         "theory": [
           {
             "h": "Composição do solo e seus diferentes usos",
@@ -11586,6 +11594,7 @@ const DISCIPLINAS = [
         "exam": {
           "size": 15
         },
+        "video": "assets/videos/sim_ciencias.mp4",
         "theory": [
           {
             "h": "Resumo da prova de Ciências",
