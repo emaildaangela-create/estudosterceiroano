@@ -2,53 +2,32 @@
   "id": "lp24",
   "module": "24",
   "title": "Aventura e diversão",
-  "subtitle": "Texto informativo · Pronomes demonstrativos",
+  "subtitle": "Pronomes demonstrativos",
   "theory": [
     {
-      "h": "O texto informativo",
-      "figure": {
-        "src": "assets/4b/lp24-montanha.svg",
-        "alt": "Linha do tempo da montanha-russa: século 15 na Rússia com rampas de neve, 1784 em São Petersburgo, 1827 nos Estados Unidos, 1884 a montanha-russa como conhecemos, 1959 tubos de aço.",
-        "tipo": "diagrama"
-      },
+      "h": "Pronomes demonstrativos",
+      "figure": {"src": "assets/4b/lp24-demonstrativos.svg", "alt": "Esquema de distância: este perto de quem fala, esse perto de quem ouve, aquele longe dos dois.", "tipo": "diagrama"},
       "p": [
-        "O <strong>texto informativo</strong> apresenta <strong>acontecimentos reais</strong> e informações, em geral com <strong>datas e locais precisos</strong>. Ele não conta uma história inventada nem tem magia.",
-        "O texto <em>Como surgiu a montanha-russa?</em>, da revista <em>Superinteressante</em>, explica que a diversão começou na <strong>Rússia</strong>, no século 15: as pessoas deslizavam em <strong>blocos de gelo</strong> por rampas cobertas de neve. Por isso o brinquedo se chama montanha-<strong>russa</strong>.",
-        "Em 1784, em São Petersburgo, foi construído o primeiro trenzinho. Em 1827, os Estados Unidos fizeram a sua primeira montanha-russa nos trilhos de uma mina de carvão. A montanha-russa como conhecemos hoje surgiu em <strong>1884</strong>, nos Estados Unidos; em 1959 surgiu o modelo de tubos de aço.",
-        "Outro exemplo: a montanha-russa mais comprida do mundo é a <strong>Steel Dragon</strong>, no <strong>Japão</strong>, com <strong>2 479 metros</strong> e velocidade de <strong>153 km/h</strong>.",
-        "Na apresentação oral de uma pesquisa, devemos indicar a fonte, preparar um roteiro, usar um cartaz e falar com tom de voz claro."
+        "Os <strong>pronomes demonstrativos</strong> indicam a <strong>posição das coisas</strong> em relação às pessoas que conversam. No parque de diversões, Lia diz a Téo: <em>Olhe <strong>este</strong> brinquedo!</em> (perto de quem fala). Téo responde: <em>Prefiro <strong>aquele</strong>.</em> (longe dos dois).",
+        "<strong>1ª pessoa</strong> – perto de quem fala: <strong>este, esta, estes, estas, isto</strong>.",
+        "<strong>2ª pessoa</strong> – perto de quem ouve: <strong>esse, essa, esses, essas, isso</strong>.",
+        "<strong>3ª pessoa</strong> – longe de quem fala e de quem ouve: <strong>aquele, aquela, aqueles, aquelas, aquilo</strong>.",
+        "<strong>Isto, isso e aquilo</strong> são <strong>invariáveis</strong>: não mudam para feminino nem para plural."
+      ],
+      "cards": [
+        {"icon": "🤲", "t": "este · esta · isto", "d": "perto de quem fala"},
+        {"icon": "👉", "t": "esse · essa · isso", "d": "perto de quem ouve"},
+        {"icon": "🔭", "t": "aquele · aquela · aquilo", "d": "longe dos dois"}
       ]
     },
     {
-      "h": "Pronomes demonstrativos",
-      "figure": {
-        "src": "assets/4b/lp24-demonstrativos.svg",
-        "alt": "Esquema de distância: este perto de quem fala, esse perto de quem ouve, aquele longe dos dois.",
-        "tipo": "diagrama"
-      },
+      "h": "Os demonstrativos mudam com a palavra",
       "p": [
-        "Os <strong>pronomes demonstrativos</strong> indicam a <strong>posição das coisas</strong> no espaço e no tempo em relação às pessoas do discurso. Na cena do parque: <em>Olhe <strong>este</strong> brinquedo!</em> (perto de quem fala) — <em>Prefiro <strong>aquele</strong>.</em> (longe dos dois).",
-        "<strong>1ª pessoa</strong> – perto de quem fala: <strong>este, esta, estes, estas, isto</strong>.",
-        "<strong>2ª pessoa</strong> – perto de quem ouve: <strong>esse, essa, esses, essas, isso</strong>.",
-        "<strong>3ª pessoa</strong> – longe dos dois: <strong>aquele, aquela, aqueles, aquelas, aquilo</strong>.",
-        "<strong>Isto, isso e aquilo</strong> são <strong>invariáveis</strong>: não mudam para feminino nem para plural. Na fala do dia a dia, muitas pessoas usam esse/essa/isso em qualquer situação, mas na escrita cuidadosa seguimos o quadro."
-      ],
-      "cards": [
-        {
-          "icon": "🤲",
-          "t": "este · esta · isto",
-          "d": "perto de quem fala"
-        },
-        {
-          "icon": "👉",
-          "t": "esse · essa · isso",
-          "d": "perto de quem ouve"
-        },
-        {
-          "icon": "🔭",
-          "t": "aquele · aquela · aquilo",
-          "d": "longe dos dois"
-        }
+        "Os demonstrativos <strong>concordam</strong> com a palavra que acompanham, em gênero (masculino/feminino) e número (singular/plural).",
+        "Perto de quem fala: <em><strong>este</strong> balão</em>, <em><strong>esta</strong> pipoca</em>, <em><strong>estes</strong> ingressos</em>, <em><strong>estas</strong> fichas</em>.",
+        "Perto de quem ouve: <em><strong>esse</strong> boné</em>, <em><strong>essa</strong> roda-gigante</em>, <em><strong>esses</strong> óculos</em>, <em><strong>essas</strong> pulseiras</em>.",
+        "Longe dos dois: <em><strong>aquele</strong> carrossel</em>, <em><strong>aquela</strong> montanha-russa</em>, <em><strong>aqueles</strong> brinquedos</em>, <em><strong>aquelas</strong> barracas</em>.",
+        "Os demonstrativos podem se juntar a outras palavras: <em>de + esse = <strong>desse</strong></em>, <em>de + essa = <strong>dessa</strong></em>, <em>em + este = <strong>neste</strong></em>, <em>em + aquele = <strong>naquele</strong></em>."
       ]
     }
   ],
@@ -58,262 +37,57 @@
       "title": "Perto ou longe?",
       "short": "Este, esse ou aquele",
       "instructions": "Leia a pista e escolha o demonstrativo certo.",
-      "categories": [
-        "este / esta / isto",
-        "esse / essa / isso",
-        "aquele / aquela / aquilo"
-      ],
+      "categories": ["este / esta / isto", "esse / essa / isso", "aquele / aquela / aquilo"],
       "items": [
-        {
-          "text": "O brinquedo está na mão de quem fala: “Olhe __ brinquedo!”",
-          "cat": 0,
-          "fill": "este"
-        },
-        {
-          "text": "A roda-gigante está perto de quem ouve: “Qual a altura __ roda-gigante?”",
-          "cat": 1,
-          "fill": "dessa"
-        },
-        {
-          "text": "O parque está longe dos dois: “Não lembro de ter visto __ parque.”",
-          "cat": 2,
-          "fill": "aquele"
-        },
-        {
-          "text": "Os dois estão dentro do parque: “__ parque é o mais divertido!”",
-          "cat": 0,
-          "fill": "Este"
-        },
-        {
-          "text": "A montanha-russa fica do outro lado do parque: “Prefiro __.”",
-          "cat": 2,
-          "fill": "aquela"
-        },
-        {
-          "text": "O amigo segura um prato: “Como __ prato se chama?”",
-          "cat": 1,
-          "fill": "esse"
-        },
-        {
-          "text": "Eu aponto o meu lanche: “__ aqui é delicioso.”",
-          "cat": 0,
-          "fill": "Isto"
-        },
-        {
-          "text": "Algo lá no alto do céu: “O que é __ lá em cima?”",
-          "cat": 2,
-          "fill": "aquilo"
-        }
-      ]
-    },
-    {
-      "type": "sort",
-      "title": "É texto informativo?",
-      "short": "Texto informativo",
-      "instructions": "A afirmação combina com o texto informativo?",
-      "categories": [
-        "Sim, é do texto informativo",
-        "Não, é de outro tipo de texto"
-      ],
-      "items": [
-        {
-          "text": "Apresenta datas e locais precisos.",
-          "cat": 0
-        },
-        {
-          "text": "Tem fadas, magia e encantamento.",
-          "cat": 1
-        },
-        {
-          "text": "Revela curiosidades reais.",
-          "cat": 0
-        },
-        {
-          "text": "Começa com “Era uma vez…”.",
-          "cat": 1
-        },
-        {
-          "text": "Traz informações históricas.",
-          "cat": 0
-        },
-        {
-          "text": "É escrito em versos e estrofes com rima.",
-          "cat": 1
-        }
+        {"text": "Lia segura um balão: “Olhe __ balão!”", "cat": 0, "fill": "este"},
+        {"text": "Téo está ao lado da roda-gigante. Lia pergunta: “Qual a altura __ roda-gigante?”", "cat": 1, "fill": "dessa"},
+        {"text": "O carrossel está do outro lado do parque: “Vamos andar em __ carrossel lá longe!”", "cat": 2, "fill": "aquele"},
+        {"text": "Lia mostra a pipoca na mão dela: “__ pipoca está quentinha.”", "cat": 0, "fill": "Esta"},
+        {"text": "A montanha-russa fica longe dos dois: “Prefiro __ brinquedo lá no fundo.”", "cat": 2, "fill": "aquele"},
+        {"text": "Téo segura um boné. Lia pergunta: “__ boné é novo?”", "cat": 1, "fill": "Esse"},
+        {"text": "Lia aponta o sorvete que ela mesma segura: “__ aqui é de morango.”", "cat": 0, "fill": "Isto"},
+        {"text": "Algo bem alto no céu, longe dos dois: “O que é __ lá em cima?”", "cat": 2, "fill": "aquilo"}
       ]
     },
     {
       "type": "pairs",
-      "title": "Linha do tempo da montanha-russa",
-      "short": "Montanha-russa",
-      "instructions": "Ligue cada data ao que aconteceu.",
+      "title": "Complete com o demonstrativo",
+      "short": "Concordância",
+      "instructions": "As coisas estão perto de quem fala. Escolha a forma certa de este.",
       "pairs": [
-        [
-          "Século 15, Rússia",
-          "Blocos de gelo em rampas de neve"
-        ],
-        [
-          "1784, São Petersburgo",
-          "Primeiro trenzinho para esse fim"
-        ],
-        [
-          "1827, Estados Unidos",
-          "Trilhos de uma mina de carvão"
-        ],
-        [
-          "1884, Estados Unidos",
-          "A montanha-russa como conhecemos"
-        ],
-        [
-          "1959",
-          "Modelo de tubos de aço"
-        ]
+        ["… balão (masculino, singular)", "este"],
+        ["… pipoca (feminino, singular)", "esta"],
+        ["… ingressos (masculino, plural)", "estes"],
+        ["… fichas (feminino, plural)", "estas"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Possessivo ou demonstrativo?",
+      "short": "Qual pronome?",
+      "instructions": "A palavra em destaque indica posse (de quem é) ou posição (onde está)?",
+      "categories": ["Possessivo (de quem é) 🔑", "Demonstrativo (onde está) 📍"],
+      "items": [
+        {"text": "AQUELE brinquedo é radical!", "cat": 1},
+        {"text": "MEU ingresso caiu no chão.", "cat": 0},
+        {"text": "ESTA fila está enorme.", "cat": 1},
+        {"text": "NOSSA turma adorou o parque.", "cat": 0},
+        {"text": "Você viu ISSO na sua mão?", "cat": 1},
+        {"text": "SEU boné é azul.", "cat": 0}
       ]
     }
   ],
   "quiz": [
-    {
-      "type": "mc",
-      "q": "Por que a montanha-russa recebeu esse nome?",
-      "options": [
-        "Porque a diversão começou na Rússia",
-        "Porque foi inventada por uma russa",
-        "Porque é vermelha como a Rússia",
-        "Porque fica numa montanha"
-      ],
-      "answer": 0,
-      "explain": "O texto diz que foi mesmo na Rússia, no século 15, que as pessoas deslizavam por rampas de neve."
-    },
-    {
-      "type": "mc",
-      "q": "Como funcionava a primeira montanha-russa?",
-      "options": [
-        "Pessoas deslizavam em blocos de gelo por rampas de neve",
-        "Um trem elétrico subia uma torre",
-        "Carrinhos corriam em trilhos de aço",
-        "Barcos desciam por um rio"
-      ],
-      "answer": 0,
-      "explain": "Subia-se ao alto e deslizava-se sentado em blocos de gelo cobertos de palha; jogava-se areia para frear."
-    },
-    {
-      "type": "mc",
-      "q": "O texto informativo se caracteriza por apresentar:",
-      "options": [
-        "acontecimentos reais com datas e locais",
-        "uma história inventada com magia",
-        "versos com rima e ritmo",
-        "instruções para montar um objeto"
-      ],
-      "answer": 0,
-      "explain": "Texto informativo traz informações reais e precisas sobre um tema."
-    },
-    {
-      "type": "mc",
-      "q": "A Steel Dragon tem 2 479 metros e atinge 153 km/h. Onde ela fica?",
-      "options": [
-        "No Japão",
-        "Nos Estados Unidos",
-        "No Brasil",
-        "Na Rússia"
-      ],
-      "answer": 0,
-      "explain": "O texto diz que ela fica no parque Nagashima Spaland, no Japão."
-    },
-    {
-      "type": "mc",
-      "q": "A velocidade e o comprimento da Steel Dragon são:",
-      "options": [
-        "153 km/h e 2 479 metros",
-        "2 479 km/h e 153 metros",
-        "79 km/h e 24 metros",
-        "2 153 km/h e 179 metros"
-      ],
-      "answer": 0,
-      "explain": "153 quilômetros por hora de velocidade e 2 479 metros de comprimento."
-    },
-    {
-      "type": "mc",
-      "q": "Na fala “Olhe este brinquedo. É muito radical!”, o pronome este indica que o brinquedo está:",
-      "options": [
-        "perto de quem fala",
-        "perto de quem ouve",
-        "longe dos dois",
-        "em outro dia"
-      ],
-      "answer": 0,
-      "explain": "Este, esta e isto são da 1ª pessoa: perto de quem fala."
-    },
-    {
-      "type": "mc",
-      "q": "O menino diz “Prefiro aquele.” apontando um brinquedo distante. Aquele indica:",
-      "options": [
-        "algo longe de quem fala e de quem ouve",
-        "algo na mão de quem fala",
-        "algo perto de quem ouve",
-        "algo que pertence a alguém"
-      ],
-      "answer": 0,
-      "explain": "Aquele, aquela e aquilo indicam o que está longe das duas pessoas da conversa."
-    },
-    {
-      "type": "mc",
-      "q": "Complete: “Qual é a altura ______ roda-gigante em que você andou?” (a roda-gigante está perto de quem ouve)",
-      "options": [
-        "dessa",
-        "desta",
-        "daquela",
-        "deste"
-      ],
-      "answer": 0,
-      "explain": "Perto de quem ouve usamos esse/essa: de + essa = dessa."
-    },
-    {
-      "type": "mc",
-      "q": "Qual pronome demonstrativo é invariável (não muda para feminino nem plural)?",
-      "options": [
-        "aquilo",
-        "aquela",
-        "estes",
-        "essa"
-      ],
-      "answer": 0,
-      "explain": "Isto, isso e aquilo são invariáveis."
-    },
-    {
-      "type": "mc",
-      "q": "“— Este cão — pensou o lobo — goza de boa saúde.” Pelo uso de este, o lobo está:",
-      "options": [
-        "próximo ao cão",
-        "muito distante do cão",
-        "sem ver o cão",
-        "dentro de casa"
-      ],
-      "answer": 0,
-      "explain": "Este indica proximidade de quem fala. O lobo está perto do cão."
-    },
-    {
-      "type": "mc",
-      "q": "Os pronomes demonstrativos indicam:",
-      "options": [
-        "a posição das coisas no espaço e no tempo",
-        "a quem uma coisa pertence",
-        "uma ação ou estado",
-        "o contrário de uma palavra"
-      ],
-      "answer": 0,
-      "explain": "Demonstrativos mostram onde está algo em relação às pessoas do discurso. Quem indica posse são os possessivos."
-    },
-    {
-      "type": "text",
-      "q": "De qual revista foi retirado o texto “Como surgiu a montanha-russa?”",
-      "answers": [
-        "superinteressante",
-        "super interessante",
-        "revista superinteressante",
-        "mundo estranho"
-      ],
-      "explain": "O texto saiu da seção Mundo Estranho, da revista Superinteressante."
-    }
+    {"type": "mc", "context": "No parque, Lia segura um balão e diz a Téo: “Olhe este balão! É enorme!”", "q": "O pronome este indica que o balão está:", "options": ["perto de quem fala", "perto de quem ouve", "longe dos dois", "em outro dia"], "answer": 0, "explain": "Este, esta e isto indicam o que está perto de quem fala (Lia)."},
+    {"type": "mc", "context": "Téo aponta a montanha-russa, bem longe dos dois, e diz: “Prefiro aquele brinquedo.”", "q": "Aquele indica que o brinquedo está:", "options": ["longe de quem fala e de quem ouve", "na mão de quem fala", "perto de quem ouve", "dentro da mochila"], "answer": 0, "explain": "Aquele, aquela e aquilo indicam o que está longe das duas pessoas da conversa."},
+    {"type": "mc", "context": "Téo está segurando um boné novo. Lia olha para ele e pergunta sobre o boné.", "q": "Qual pergunta Lia deve fazer?", "options": ["Esse boné é novo?", "Este boné é novo?", "Aquele boné é novo?", "Aquilo boné é novo?"], "answer": 0, "explain": "O boné está perto de quem ouve (Téo), então usamos esse."},
+    {"type": "mc", "context": "Téo está ao lado da roda-gigante. Lia, longe dela, pergunta a ele: “Qual é a altura ______ roda-gigante?”", "q": "Qual palavra completa a pergunta?", "options": ["dessa", "desta", "daquela", "deste"], "answer": 0, "explain": "A roda-gigante está perto de quem ouve: de + essa = dessa."},
+    {"type": "mc", "q": "Qual pronome demonstrativo é invariável (não muda para feminino nem para plural)?", "options": ["aquilo", "aquela", "estes", "essa"], "answer": 0, "explain": "Isto, isso e aquilo são invariáveis."},
+    {"type": "mc", "context": "“— Este cão — pensou o lobo — goza de boa saúde.”", "q": "Pelo uso de este, o lobo está:", "options": ["perto do cão", "muito longe do cão", "sem ver o cão", "dentro de casa"], "answer": 0, "explain": "Este indica proximidade de quem fala. O lobo está perto do cão."},
+    {"type": "mc", "q": "Os pronomes demonstrativos indicam:", "options": ["a posição das coisas em relação às pessoas", "a quem uma coisa pertence", "uma ação ou um estado", "o contrário de uma palavra"], "answer": 0, "explain": "Demonstrativos mostram onde está algo. Quem indica posse são os possessivos."},
+    {"type": "mc", "context": "Lia segura duas fichas para os brinquedos e mostra a Téo.", "q": "Qual frase está correta?", "options": ["Estas fichas são para a roda-gigante.", "Este fichas são para a roda-gigante.", "Esta fichas são para a roda-gigante.", "Estes fichas são para a roda-gigante."], "answer": 0, "explain": "Fichas é feminino plural e está perto de quem fala: estas."},
+    {"type": "mc", "q": "Em qual frase a palavra destacada é um pronome demonstrativo?", "options": ["AQUELA barraca vende algodão-doce.", "MINHA mãe comprou pipoca.", "NÓS andamos no carrossel.", "TEU ingresso é azul."], "answer": 0, "explain": "Aquela indica posição. Minha e teu são possessivos; nós é pronome pessoal."},
+    {"type": "mc", "context": "Téo está segurando algo que Lia não reconhece.", "q": "Como Lia pergunta?", "options": ["O que é isso na sua mão?", "O que é isto na sua mão?", "O que é aquilo na sua mão?", "O que é esta na sua mão?"], "answer": 0, "explain": "A coisa está perto de quem ouve (Téo): isso."},
+    {"type": "text", "context": "Lia mostra o sorvete que ela mesma está segurando: “______ sorvete é de morango.”", "q": "Escreva o pronome demonstrativo que completa a frase.", "answers": ["este"], "explain": "O sorvete está perto de quem fala, então o mais adequado é este."}
   ]
 }

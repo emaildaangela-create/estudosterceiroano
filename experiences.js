@@ -35,8 +35,8 @@ Object.assign(EXPERIENCE_PROFILES, {
   ],
   lp24: [
     { mode:'choice', goal:'Este, esse ou aquele?', prompt:'Onde está a coisa? Escolha o demonstrativo.', result:'mapa do parque' },
-    { mode:'choice', goal:'Reconhecer o texto informativo', prompt:'Isto é característica do texto informativo?', result:'ficha do texto informativo' },
-    { mode:'sequence', goal:'Montar a linha do tempo da montanha-russa', prompt:'Qual é a próxima data?', result:'linha do tempo' }
+    { mode:'transform', goal:'Combinar o demonstrativo com a palavra', prompt:'A coisa está perto de quem fala. Qual forma combina?', result:'frases completas', feedback:'O demonstrativo concorda com a palavra em gênero e número.', hint:'Veja se a palavra é masculina ou feminina, singular ou plural.' },
+    { mode:'choice', goal:'Possessivo ou demonstrativo?', prompt:'A palavra mostra de quem é ou onde está?', result:'coleção de pronomes' }
   ],
   lp25: [
     { mode:'choice', goal:'Classificar os verbos', prompt:'Este verbo é ação, estado ou fenômeno da natureza?', result:'coleção de verbos' },
@@ -46,16 +46,17 @@ Object.assign(EXPERIENCE_PROFILES, {
   lp26: [
     { mode:'choice', goal:'Máquina do tempo dos verbos', prompt:'Em que tempo está o verbo em destaque?', result:'linha do tempo dos verbos' },
     { mode:'choice', goal:'-am ou -ão?', prompt:'Já aconteceu ou ainda vai acontecer?', result:'frases completas' },
+    { mode:'transform', goal:'Levar a frase para o futuro', prompt:'Como fica a frase no futuro?', result:'frases no futuro', feedback:'No futuro, o verbo termina em -ão (eles) ou -rei (eu).', hint:'Procure a frase que fala do que ainda vai acontecer.' },
     { mode:'choice', goal:'Verbo ou substantivo?', prompt:'Esta palavra com -ão é nome ou verbo no futuro?', result:'coleção de palavras' }
   ],
   lp27: [
     { mode:'explore', goal:'Achar o sujeito', prompt:'Quem + verbo? Escolha o sujeito.', result:'frases analisadas' },
     { mode:'explore', goal:'Achar o predicado', prompt:'O que se diz sobre o sujeito?', result:'frases completas' },
-    { mode:'choice', goal:'Montar a reportagem', prompt:'Que parte da reportagem é esta?', result:'reportagem montada' }
+    { mode:'choice', goal:'Conferir a concordância', prompt:'O verbo concorda com o sujeito?', result:'frases revisadas' }
   ],
   lp_generos: [
     { mode:'choice', goal:'Detetive dos gêneros', prompt:'Esta pista é de um poema ou de um conto de mistério?', result:'fichário de gêneros' },
-    { mode:'explore', goal:'Desvendar o conto', prompt:'Que parte do conto é esta?', result:'mapa do conto' },
+    { mode:'explore', goal:'Desvendar o conto', prompt:'O que aparece no conto para este elemento?', result:'mapa do conto' },
     { mode:'writing' },
     { mode:'writing' }
   ]
@@ -67,13 +68,12 @@ Object.assign(EXPERIENCE_PROFILES, {
     { mode:'choice', goal:'Investigar a migração', prompt:'Isto foi um motivo para ir do campo para a cidade?', result:'quadro da migração' }
   ],
   hist13: [
-    { mode:'choice', goal:'Lazer ou trabalho?', prompt:'Esta pessoa está se divertindo ou trabalhando?', result:'painel do lazer' },
-    { mode:'choice', goal:'Viajar no tempo do cinema e do circo', prompt:'Isto era de antigamente ou é de hoje?', result:'museu do lazer' },
-    { mode:'sequence', goal:'Montar a linha do tempo dos direitos', prompt:'Qual direito veio depois?', result:'linha do tempo' }
+    { mode:'choice', goal:'O que é lazer?', prompt:'Esta atividade é descanso e diversão?', result:'painel do lazer' },
+    { mode:'choice', goal:'Viajar no tempo do cinema e do circo', prompt:'Isto era de antigamente ou é de hoje?', result:'museu do lazer' }
   ],
   hist14: [
     { mode:'choice', goal:'Descobrir a origem das festas', prompt:'Quem trouxe ou criou esta festa?', result:'mapa das festas' },
-    { mode:'explore', goal:'Viajar pelas festas do Brasil', prompt:'Onde ou quando acontece esta festa?', result:'calendário de festas' },
+    { mode:'explore', goal:'Viajar pelas festas do Brasil', prompt:'Onde acontece ou de onde veio esta festa?', result:'calendário de festas' },
     { mode:'explore', goal:'Arraial dos santos juninos', prompt:'Em que dia de junho se celebra este santo?', result:'arraial' }
   ]
 });

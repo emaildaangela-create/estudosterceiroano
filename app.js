@@ -628,7 +628,7 @@
     cheia.addEventListener('click',alternarTelaCheia);controles.appendChild(cheia);topo.appendChild(controles);raiz.appendChild(topo);
     var palco=criar('main','jogo-imersivo__palco'), conteudo=criar('div','jogo-imersivo__conteudo');
     if(cap.games.length>1)conteudo.appendChild(seletorDeJogos(cap,salvo));
-    if(game.context)conteudo.appendChild(criar('section','questao-contexto-texto','<span>Leia para jogar</span><p lang="en">'+textoSeguro(game.context)+'</p>'));
+    if(game.context)conteudo.appendChild(criar('section','questao-contexto-texto','<span>Leia para jogar</span><p'+(emIngles()?' lang="en"':'')+'>'+textoSeguro(game.context)+'</p>'));
     if(game.type==='writing')renderProducaoTextualJogo(conteudo,cap,game,salvo);else montarNovaExperiencia(conteudo,cap,game,perfil,salvo);palco.appendChild(conteudo);raiz.appendChild(palco);
   }
   /* Cada partida sorteia a ordem das rodadas. A ordem fica guardada até o

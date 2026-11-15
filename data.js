@@ -3497,6 +3497,7 @@ const DISCIPLINAS = [
         "module": "23",
         "title": "Tic-tac!",
         "subtitle": "Poema e poema visual · Pronomes possessivos",
+        "video": "assets/videos/lp23.mp4",
         "theory": [
           {
             "h": "O poema: versos, estrofes, rima e ritmo",
@@ -3697,7 +3698,7 @@ const DISCIPLINAS = [
                 "cat": 1
               },
               {
-                "text": "Tem 18 linhas e rimas no fim.",
+                "text": "Tem versos com rimas no fim.",
                 "cat": 0
               },
               {
@@ -3714,7 +3715,7 @@ const DISCIPLINAS = [
         "quiz": [
           {
             "type": "mc",
-            "q": "O poema “O relógio”, de Vinicius de Moraes, serve principalmente para:",
+            "q": "Esse poema serve principalmente para:",
             "options": [
               "entreter e divertir o leitor",
               "informar um acontecimento real",
@@ -3722,11 +3723,12 @@ const DISCIPLINAS = [
               "vender um relógio novo"
             ],
             "answer": 0,
-            "explain": "Poemas brincam com as palavras, o ritmo e os sons para entreter e emocionar o leitor."
+            "explain": "Poemas brincam com as palavras, o ritmo e os sons para entreter e emocionar o leitor.",
+            "context": "Trecho do poema “O relógio”, de Vinicius de Moraes: “Passa, tempo, tic-tac / Tic-tac, passa, hora / Chega logo, tic-tac / Tic-tac, e vai-te embora”"
           },
           {
             "type": "mc",
-            "q": "No poema “O relógio”, a repetição da expressão tic-tac indica:",
+            "q": "No poema, a repetição de tic-tac indica:",
             "options": [
               "o passar do tempo",
               "que o relógio está quebrado",
@@ -3734,7 +3736,8 @@ const DISCIPLINAS = [
               "que está chovendo"
             ],
             "answer": 0,
-            "explain": "Tic-tac imita o som do relógio e, repetido, mostra o tempo passando sem parar."
+            "explain": "Tic-tac imita o som do relógio e, repetido, mostra o tempo passando sem parar.",
+            "context": "Trecho do poema “O relógio”, de Vinicius de Moraes: “Passa, tempo, tic-tac / Tic-tac, passa, hora / Chega logo, tic-tac / Tic-tac, e vai-te embora”"
           },
           {
             "type": "mc",
@@ -3774,7 +3777,7 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Qual destes NÃO é um poema visual?",
+            "q": "Qual destes exemplos não é um poema visual?",
             "options": [
               "Um poema acompanhado de uma xilogravura",
               "Um poema em forma de estrela",
@@ -3810,7 +3813,7 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Nos versos “Toda a alegria / De fazer / Meu tic-tac”, que ideia a palavra meu transmite?",
+            "q": "Que ideia a palavra meu transmite nesses versos?",
             "options": [
               "Posse",
               "Tempo",
@@ -3818,7 +3821,8 @@ const DISCIPLINAS = [
               "Quantidade"
             ],
             "answer": 0,
-            "explain": "Meu é pronome possessivo: mostra que o tic-tac pertence a quem fala."
+            "explain": "Meu é pronome possessivo: mostra que o tic-tac pertence a quem fala.",
+            "context": "Versos do poema “O relógio”: “Toda a alegria / De fazer / Meu tic-tac”"
           },
           {
             "type": "mc",
@@ -3846,7 +3850,7 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Na tirinha, Armandinho diz ao pai: “A sua cabeça está na frente do relógio!”. De quem é a cabeça?",
+            "q": "Na fala de Armandinho, de quem é a cabeça?",
             "options": [
               "Do pai",
               "Do Armandinho",
@@ -3854,7 +3858,8 @@ const DISCIPLINAS = [
               "Do relógio"
             ],
             "answer": 0,
-            "explain": "Armandinho fala com o pai, então sua se refere ao pai. Por isso o pai não via a hora."
+            "explain": "Armandinho fala com o pai, então sua se refere ao pai. Por isso o pai não via a hora.",
+            "context": "Numa tirinha, Armandinho pergunta as horas ao pai. O pai não consegue ver o relógio, e Armandinho diz: “A sua cabeça está na frente do relógio!”"
           },
           {
             "type": "text",
@@ -3864,7 +3869,8 @@ const DISCIPLINAS = [
               "tic tac",
               "tictac"
             ],
-            "explain": "Tic-tac é a palavra que imita o som do relógio."
+            "explain": "Tic-tac é a palavra que imita o som do relógio.",
+            "context": "Trecho do poema “O relógio”, de Vinicius de Moraes: “Passa, tempo, tic-tac / Tic-tac, passa, hora / Chega logo, tic-tac / Tic-tac, e vai-te embora”"
           }
         ]
       },
@@ -3872,23 +3878,8 @@ const DISCIPLINAS = [
         "id": "lp24",
         "module": "24",
         "title": "Aventura e diversão",
-        "subtitle": "Texto informativo · Pronomes demonstrativos",
+        "subtitle": "Pronomes demonstrativos",
         "theory": [
-          {
-            "h": "O texto informativo",
-            "figure": {
-              "src": "assets/4b/lp24-montanha.svg",
-              "alt": "Linha do tempo da montanha-russa: século 15 na Rússia com rampas de neve, 1784 em São Petersburgo, 1827 nos Estados Unidos, 1884 a montanha-russa como conhecemos, 1959 tubos de aço.",
-              "tipo": "diagrama"
-            },
-            "p": [
-              "O <strong>texto informativo</strong> apresenta <strong>acontecimentos reais</strong> e informações, em geral com <strong>datas e locais precisos</strong>. Ele não conta uma história inventada nem tem magia.",
-              "O texto <em>Como surgiu a montanha-russa?</em>, da revista <em>Superinteressante</em>, explica que a diversão começou na <strong>Rússia</strong>, no século 15: as pessoas deslizavam em <strong>blocos de gelo</strong> por rampas cobertas de neve. Por isso o brinquedo se chama montanha-<strong>russa</strong>.",
-              "Em 1784, em São Petersburgo, foi construído o primeiro trenzinho. Em 1827, os Estados Unidos fizeram a sua primeira montanha-russa nos trilhos de uma mina de carvão. A montanha-russa como conhecemos hoje surgiu em <strong>1884</strong>, nos Estados Unidos; em 1959 surgiu o modelo de tubos de aço.",
-              "Outro exemplo: a montanha-russa mais comprida do mundo é a <strong>Steel Dragon</strong>, no <strong>Japão</strong>, com <strong>2 479 metros</strong> e velocidade de <strong>153 km/h</strong>.",
-              "Na apresentação oral de uma pesquisa, devemos indicar a fonte, preparar um roteiro, usar um cartaz e falar com tom de voz claro."
-            ]
-          },
           {
             "h": "Pronomes demonstrativos",
             "figure": {
@@ -3897,11 +3888,11 @@ const DISCIPLINAS = [
               "tipo": "diagrama"
             },
             "p": [
-              "Os <strong>pronomes demonstrativos</strong> indicam a <strong>posição das coisas</strong> no espaço e no tempo em relação às pessoas do discurso. Na cena do parque: <em>Olhe <strong>este</strong> brinquedo!</em> (perto de quem fala) — <em>Prefiro <strong>aquele</strong>.</em> (longe dos dois).",
+              "Os <strong>pronomes demonstrativos</strong> indicam a <strong>posição das coisas</strong> em relação às pessoas que conversam. No parque de diversões, Lia diz a Téo: <em>Olhe <strong>este</strong> brinquedo!</em> (perto de quem fala). Téo responde: <em>Prefiro <strong>aquele</strong>.</em> (longe dos dois).",
               "<strong>1ª pessoa</strong> – perto de quem fala: <strong>este, esta, estes, estas, isto</strong>.",
               "<strong>2ª pessoa</strong> – perto de quem ouve: <strong>esse, essa, esses, essas, isso</strong>.",
-              "<strong>3ª pessoa</strong> – longe dos dois: <strong>aquele, aquela, aqueles, aquelas, aquilo</strong>.",
-              "<strong>Isto, isso e aquilo</strong> são <strong>invariáveis</strong>: não mudam para feminino nem para plural. Na fala do dia a dia, muitas pessoas usam esse/essa/isso em qualquer situação, mas na escrita cuidadosa seguimos o quadro."
+              "<strong>3ª pessoa</strong> – longe de quem fala e de quem ouve: <strong>aquele, aquela, aqueles, aquelas, aquilo</strong>.",
+              "<strong>Isto, isso e aquilo</strong> são <strong>invariáveis</strong>: não mudam para feminino nem para plural."
             ],
             "cards": [
               {
@@ -3920,6 +3911,16 @@ const DISCIPLINAS = [
                 "d": "longe dos dois"
               }
             ]
+          },
+          {
+            "h": "Os demonstrativos mudam com a palavra",
+            "p": [
+              "Os demonstrativos <strong>concordam</strong> com a palavra que acompanham, em gênero (masculino/feminino) e número (singular/plural).",
+              "Perto de quem fala: <em><strong>este</strong> balão</em>, <em><strong>esta</strong> pipoca</em>, <em><strong>estes</strong> ingressos</em>, <em><strong>estas</strong> fichas</em>.",
+              "Perto de quem ouve: <em><strong>esse</strong> boné</em>, <em><strong>essa</strong> roda-gigante</em>, <em><strong>esses</strong> óculos</em>, <em><strong>essas</strong> pulseiras</em>.",
+              "Longe dos dois: <em><strong>aquele</strong> carrossel</em>, <em><strong>aquela</strong> montanha-russa</em>, <em><strong>aqueles</strong> brinquedos</em>, <em><strong>aquelas</strong> barracas</em>.",
+              "Os demonstrativos podem se juntar a outras palavras: <em>de + esse = <strong>desse</strong></em>, <em>de + essa = <strong>dessa</strong></em>, <em>em + este = <strong>neste</strong></em>, <em>em + aquele = <strong>naquele</strong></em>."
+            ]
           }
         ],
         "games": [
@@ -3935,176 +3936,113 @@ const DISCIPLINAS = [
             ],
             "items": [
               {
-                "text": "O brinquedo está na mão de quem fala: “Olhe __ brinquedo!”",
+                "text": "Lia segura um balão: “Olhe __ balão!”",
                 "cat": 0,
                 "fill": "este"
               },
               {
-                "text": "A roda-gigante está perto de quem ouve: “Qual a altura __ roda-gigante?”",
+                "text": "Téo está ao lado da roda-gigante. Lia pergunta: “Qual a altura __ roda-gigante?”",
                 "cat": 1,
                 "fill": "dessa"
               },
               {
-                "text": "O parque está longe dos dois: “Não lembro de ter visto __ parque.”",
+                "text": "O carrossel está do outro lado do parque: “Vamos andar em __ carrossel lá longe!”",
                 "cat": 2,
                 "fill": "aquele"
               },
               {
-                "text": "Os dois estão dentro do parque: “__ parque é o mais divertido!”",
+                "text": "Lia mostra a pipoca na mão dela: “__ pipoca está quentinha.”",
                 "cat": 0,
-                "fill": "Este"
+                "fill": "Esta"
               },
               {
-                "text": "A montanha-russa fica do outro lado do parque: “Prefiro __.”",
+                "text": "A montanha-russa fica longe dos dois: “Prefiro __ brinquedo lá no fundo.”",
                 "cat": 2,
-                "fill": "aquela"
+                "fill": "aquele"
               },
               {
-                "text": "O amigo segura um prato: “Como __ prato se chama?”",
+                "text": "Téo segura um boné. Lia pergunta: “__ boné é novo?”",
                 "cat": 1,
-                "fill": "esse"
+                "fill": "Esse"
               },
               {
-                "text": "Eu aponto o meu lanche: “__ aqui é delicioso.”",
+                "text": "Lia aponta o sorvete que ela mesma segura: “__ aqui é de morango.”",
                 "cat": 0,
                 "fill": "Isto"
               },
               {
-                "text": "Algo lá no alto do céu: “O que é __ lá em cima?”",
+                "text": "Algo bem alto no céu, longe dos dois: “O que é __ lá em cima?”",
                 "cat": 2,
                 "fill": "aquilo"
               }
             ]
           },
           {
-            "type": "sort",
-            "title": "É texto informativo?",
-            "short": "Texto informativo",
-            "instructions": "A afirmação combina com o texto informativo?",
-            "categories": [
-              "Sim, é do texto informativo",
-              "Não, é de outro tipo de texto"
-            ],
-            "items": [
-              {
-                "text": "Apresenta datas e locais precisos.",
-                "cat": 0
-              },
-              {
-                "text": "Tem fadas, magia e encantamento.",
-                "cat": 1
-              },
-              {
-                "text": "Revela curiosidades reais.",
-                "cat": 0
-              },
-              {
-                "text": "Começa com “Era uma vez…”.",
-                "cat": 1
-              },
-              {
-                "text": "Traz informações históricas.",
-                "cat": 0
-              },
-              {
-                "text": "É escrito em versos e estrofes com rima.",
-                "cat": 1
-              }
+            "type": "pairs",
+            "title": "Complete com o demonstrativo",
+            "short": "Concordância",
+            "instructions": "As coisas estão perto de quem fala. Escolha a forma certa de este.",
+            "pairs": [
+              [
+                "… balão (masculino, singular)",
+                "este"
+              ],
+              [
+                "… pipoca (feminino, singular)",
+                "esta"
+              ],
+              [
+                "… ingressos (masculino, plural)",
+                "estes"
+              ],
+              [
+                "… fichas (feminino, plural)",
+                "estas"
+              ]
             ]
           },
           {
-            "type": "pairs",
-            "title": "Linha do tempo da montanha-russa",
-            "short": "Montanha-russa",
-            "instructions": "Ligue cada data ao que aconteceu.",
-            "pairs": [
-              [
-                "Século 15, Rússia",
-                "Blocos de gelo em rampas de neve"
-              ],
-              [
-                "1784, São Petersburgo",
-                "Primeiro trenzinho para esse fim"
-              ],
-              [
-                "1827, Estados Unidos",
-                "Trilhos de uma mina de carvão"
-              ],
-              [
-                "1884, Estados Unidos",
-                "A montanha-russa como conhecemos"
-              ],
-              [
-                "1959",
-                "Modelo de tubos de aço"
-              ]
+            "type": "sort",
+            "title": "Possessivo ou demonstrativo?",
+            "short": "Qual pronome?",
+            "instructions": "A palavra em destaque indica posse (de quem é) ou posição (onde está)?",
+            "categories": [
+              "Possessivo (de quem é) 🔑",
+              "Demonstrativo (onde está) 📍"
+            ],
+            "items": [
+              {
+                "text": "AQUELE brinquedo é radical!",
+                "cat": 1
+              },
+              {
+                "text": "MEU ingresso caiu no chão.",
+                "cat": 0
+              },
+              {
+                "text": "ESTA fila está enorme.",
+                "cat": 1
+              },
+              {
+                "text": "NOSSA turma adorou o parque.",
+                "cat": 0
+              },
+              {
+                "text": "Você viu ISSO na sua mão?",
+                "cat": 1
+              },
+              {
+                "text": "SEU boné é azul.",
+                "cat": 0
+              }
             ]
           }
         ],
         "quiz": [
           {
             "type": "mc",
-            "q": "Por que a montanha-russa recebeu esse nome?",
-            "options": [
-              "Porque a diversão começou na Rússia",
-              "Porque foi inventada por uma russa",
-              "Porque é vermelha como a Rússia",
-              "Porque fica numa montanha"
-            ],
-            "answer": 0,
-            "explain": "O texto diz que foi mesmo na Rússia, no século 15, que as pessoas deslizavam por rampas de neve."
-          },
-          {
-            "type": "mc",
-            "q": "Como funcionava a primeira montanha-russa?",
-            "options": [
-              "Pessoas deslizavam em blocos de gelo por rampas de neve",
-              "Um trem elétrico subia uma torre",
-              "Carrinhos corriam em trilhos de aço",
-              "Barcos desciam por um rio"
-            ],
-            "answer": 0,
-            "explain": "Subia-se ao alto e deslizava-se sentado em blocos de gelo cobertos de palha; jogava-se areia para frear."
-          },
-          {
-            "type": "mc",
-            "q": "O texto informativo se caracteriza por apresentar:",
-            "options": [
-              "acontecimentos reais com datas e locais",
-              "uma história inventada com magia",
-              "versos com rima e ritmo",
-              "instruções para montar um objeto"
-            ],
-            "answer": 0,
-            "explain": "Texto informativo traz informações reais e precisas sobre um tema."
-          },
-          {
-            "type": "mc",
-            "q": "A Steel Dragon tem 2 479 metros e atinge 153 km/h. Onde ela fica?",
-            "options": [
-              "No Japão",
-              "Nos Estados Unidos",
-              "No Brasil",
-              "Na Rússia"
-            ],
-            "answer": 0,
-            "explain": "O texto diz que ela fica no parque Nagashima Spaland, no Japão."
-          },
-          {
-            "type": "mc",
-            "q": "A velocidade e o comprimento da Steel Dragon são:",
-            "options": [
-              "153 km/h e 2 479 metros",
-              "2 479 km/h e 153 metros",
-              "79 km/h e 24 metros",
-              "2 153 km/h e 179 metros"
-            ],
-            "answer": 0,
-            "explain": "153 quilômetros por hora de velocidade e 2 479 metros de comprimento."
-          },
-          {
-            "type": "mc",
-            "q": "Na fala “Olhe este brinquedo. É muito radical!”, o pronome este indica que o brinquedo está:",
+            "context": "No parque, Lia segura um balão e diz a Téo: “Olhe este balão! É enorme!”",
+            "q": "O pronome este indica que o balão está:",
             "options": [
               "perto de quem fala",
               "perto de quem ouve",
@@ -4112,23 +4050,38 @@ const DISCIPLINAS = [
               "em outro dia"
             ],
             "answer": 0,
-            "explain": "Este, esta e isto são da 1ª pessoa: perto de quem fala."
+            "explain": "Este, esta e isto indicam o que está perto de quem fala (Lia)."
           },
           {
             "type": "mc",
-            "q": "O menino diz “Prefiro aquele.” apontando um brinquedo distante. Aquele indica:",
+            "context": "Téo aponta a montanha-russa, bem longe dos dois, e diz: “Prefiro aquele brinquedo.”",
+            "q": "Aquele indica que o brinquedo está:",
             "options": [
-              "algo longe de quem fala e de quem ouve",
-              "algo na mão de quem fala",
-              "algo perto de quem ouve",
-              "algo que pertence a alguém"
+              "longe de quem fala e de quem ouve",
+              "na mão de quem fala",
+              "perto de quem ouve",
+              "dentro da mochila"
             ],
             "answer": 0,
             "explain": "Aquele, aquela e aquilo indicam o que está longe das duas pessoas da conversa."
           },
           {
             "type": "mc",
-            "q": "Complete: “Qual é a altura ______ roda-gigante em que você andou?” (a roda-gigante está perto de quem ouve)",
+            "context": "Téo está segurando um boné novo. Lia olha para ele e pergunta sobre o boné.",
+            "q": "Qual pergunta Lia deve fazer?",
+            "options": [
+              "Esse boné é novo?",
+              "Este boné é novo?",
+              "Aquele boné é novo?",
+              "Aquilo boné é novo?"
+            ],
+            "answer": 0,
+            "explain": "O boné está perto de quem ouve (Téo), então usamos esse."
+          },
+          {
+            "type": "mc",
+            "context": "Téo está ao lado da roda-gigante. Lia, longe dela, pergunta a ele: “Qual é a altura ______ roda-gigante?”",
+            "q": "Qual palavra completa a pergunta?",
             "options": [
               "dessa",
               "desta",
@@ -4136,11 +4089,11 @@ const DISCIPLINAS = [
               "deste"
             ],
             "answer": 0,
-            "explain": "Perto de quem ouve usamos esse/essa: de + essa = dessa."
+            "explain": "A roda-gigante está perto de quem ouve: de + essa = dessa."
           },
           {
             "type": "mc",
-            "q": "Qual pronome demonstrativo é invariável (não muda para feminino nem plural)?",
+            "q": "Qual pronome demonstrativo é invariável (não muda para feminino nem para plural)?",
             "options": [
               "aquilo",
               "aquela",
@@ -4152,10 +4105,11 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "“— Este cão — pensou o lobo — goza de boa saúde.” Pelo uso de este, o lobo está:",
+            "context": "“— Este cão — pensou o lobo — goza de boa saúde.”",
+            "q": "Pelo uso de este, o lobo está:",
             "options": [
-              "próximo ao cão",
-              "muito distante do cão",
+              "perto do cão",
+              "muito longe do cão",
               "sem ver o cão",
               "dentro de casa"
             ],
@@ -4166,24 +4120,60 @@ const DISCIPLINAS = [
             "type": "mc",
             "q": "Os pronomes demonstrativos indicam:",
             "options": [
-              "a posição das coisas no espaço e no tempo",
+              "a posição das coisas em relação às pessoas",
               "a quem uma coisa pertence",
-              "uma ação ou estado",
+              "uma ação ou um estado",
               "o contrário de uma palavra"
             ],
             "answer": 0,
-            "explain": "Demonstrativos mostram onde está algo em relação às pessoas do discurso. Quem indica posse são os possessivos."
+            "explain": "Demonstrativos mostram onde está algo. Quem indica posse são os possessivos."
+          },
+          {
+            "type": "mc",
+            "context": "Lia segura duas fichas para os brinquedos e mostra a Téo.",
+            "q": "Qual frase está correta?",
+            "options": [
+              "Estas fichas são para a roda-gigante.",
+              "Este fichas são para a roda-gigante.",
+              "Esta fichas são para a roda-gigante.",
+              "Estes fichas são para a roda-gigante."
+            ],
+            "answer": 0,
+            "explain": "Fichas é feminino plural e está perto de quem fala: estas."
+          },
+          {
+            "type": "mc",
+            "q": "Em qual frase a palavra destacada é um pronome demonstrativo?",
+            "options": [
+              "AQUELA barraca vende algodão-doce.",
+              "MINHA mãe comprou pipoca.",
+              "NÓS andamos no carrossel.",
+              "TEU ingresso é azul."
+            ],
+            "answer": 0,
+            "explain": "Aquela indica posição. Minha e teu são possessivos; nós é pronome pessoal."
+          },
+          {
+            "type": "mc",
+            "context": "Téo está segurando algo que Lia não reconhece.",
+            "q": "Como Lia pergunta?",
+            "options": [
+              "O que é isso na sua mão?",
+              "O que é isto na sua mão?",
+              "O que é aquilo na sua mão?",
+              "O que é esta na sua mão?"
+            ],
+            "answer": 0,
+            "explain": "A coisa está perto de quem ouve (Téo): isso."
           },
           {
             "type": "text",
-            "q": "De qual revista foi retirado o texto “Como surgiu a montanha-russa?”",
+            "context": "Lia mostra o sorvete que ela mesma está segurando: “______ sorvete é de morango.”",
+            "q": "Escreva o pronome demonstrativo que completa a frase.",
             "answers": [
-              "superinteressante",
-              "super interessante",
-              "revista superinteressante",
-              "mundo estranho"
+              "este"
             ],
-            "explain": "O texto saiu da seção Mundo Estranho, da revista Superinteressante."
+            "explain": "O sorvete está perto de quem fala, então o mais adequado é este."
           }
         ]
       },
@@ -4265,14 +4255,6 @@ const DISCIPLINAS = [
                 "t": "coragem",
                 "d": "medo (antônimo)"
               }
-            ]
-          },
-          {
-            "h": "Texto teatral e rubrica",
-            "p": [
-              "O <strong>texto teatral</strong> é feito para ser <strong>representado</strong>. Nem sempre há narrador: a história acontece pelos <strong>diálogos</strong> dos personagens, como em <em>Príncipe Lagartão</em>.",
-              "A <strong>rubrica</strong> são as informações entre parênteses, geralmente em letras maiúsculas, que indicam <strong>gestos, movimentos dos atores e o cenário</strong>: <em>(CLOTILDE SAI DE CENA ACOMPANHADA PELA RAINHA)</em>.",
-              "O teatro surgiu na <strong>Grécia antiga</strong>, em festas para o deus Dioniso."
             ]
           }
         ],
@@ -4418,7 +4400,8 @@ const DISCIPLINAS = [
               "O navio dele afundou na floresta"
             ],
             "answer": 0,
-            "explain": "O conto diz que ele não estava habituado a andar em terra e acabou se perdendo na densa floresta."
+            "explain": "O conto diz que ele não estava habituado a andar em terra e acabou se perdendo na densa floresta.",
+            "context": "Resumo do conto “O fantasma da sorte”: um capitão dos mares, que não estava acostumado a andar em terra, se perde na floresta. Ele chega a um castelo lotado, janta e dorme no quarto do menino. De madrugada, sonha com uma tormenta no mar e, ao acordar, vê uma linda criança cercada de luz, que sorri e desaparece. O nobre explica que ali vive o fantasma de um menino, um fantasma da sorte: quem o vê fica rico e feliz. Depois, o capitão conheceu uma formosa jovem, com quem se casou, e ficou milionário."
           },
           {
             "type": "mc",
@@ -4430,7 +4413,8 @@ const DISCIPLINAS = [
               "Que era perseguido por um lobo"
             ],
             "answer": 0,
-            "explain": "Ele sonhou que estava de volta ao mar, no meio de uma terrível tormenta. Ao acordar, viu a criança iluminada."
+            "explain": "Ele sonhou que estava de volta ao mar, no meio de uma terrível tormenta. Ao acordar, viu a criança iluminada.",
+            "context": "Resumo do conto “O fantasma da sorte”: um capitão dos mares, que não estava acostumado a andar em terra, se perde na floresta. Ele chega a um castelo lotado, janta e dorme no quarto do menino. De madrugada, sonha com uma tormenta no mar e, ao acordar, vê uma linda criança cercada de luz, que sorri e desaparece. O nobre explica que ali vive o fantasma de um menino, um fantasma da sorte: quem o vê fica rico e feliz. Depois, o capitão conheceu uma formosa jovem, com quem se casou, e ficou milionário."
           },
           {
             "type": "mc",
@@ -4442,7 +4426,8 @@ const DISCIPLINAS = [
               "Era onde guardavam o tesouro"
             ],
             "answer": 0,
-            "explain": "O nobre explica que ali vive o fantasma alegre de um menino, um fantasma da sorte."
+            "explain": "O nobre explica que ali vive o fantasma alegre de um menino, um fantasma da sorte.",
+            "context": "Resumo do conto “O fantasma da sorte”: um capitão dos mares, que não estava acostumado a andar em terra, se perde na floresta. Ele chega a um castelo lotado, janta e dorme no quarto do menino. De madrugada, sonha com uma tormenta no mar e, ao acordar, vê uma linda criança cercada de luz, que sorri e desaparece. O nobre explica que ali vive o fantasma de um menino, um fantasma da sorte: quem o vê fica rico e feliz. Depois, o capitão conheceu uma formosa jovem, com quem se casou, e ficou milionário."
           },
           {
             "type": "mc",
@@ -4454,7 +4439,8 @@ const DISCIPLINAS = [
               "Não: mas ele nunca mais dormiu"
             ],
             "answer": 0,
-            "explain": "Todos que viam o fantasma da sorte ganhavam dinheiro e eram felizes, e foi o que aconteceu com ele."
+            "explain": "Todos que viam o fantasma da sorte ganhavam dinheiro e eram felizes, e foi o que aconteceu com ele.",
+            "context": "Resumo do conto “O fantasma da sorte”: um capitão dos mares, que não estava acostumado a andar em terra, se perde na floresta. Ele chega a um castelo lotado, janta e dorme no quarto do menino. De madrugada, sonha com uma tormenta no mar e, ao acordar, vê uma linda criança cercada de luz, que sorri e desaparece. O nobre explica que ali vive o fantasma de um menino, um fantasma da sorte: quem o vê fica rico e feliz. Depois, o capitão conheceu uma formosa jovem, com quem se casou, e ficou milionário."
           },
           {
             "type": "mc",
@@ -4478,7 +4464,8 @@ const DISCIPLINAS = [
               "lugares da história"
             ],
             "answer": 0,
-            "explain": "Conheceu e casou são verbos: indicam ações."
+            "explain": "Conheceu e casou são verbos: indicam ações.",
+            "context": "Resumo do conto “O fantasma da sorte”: um capitão dos mares, que não estava acostumado a andar em terra, se perde na floresta. Ele chega a um castelo lotado, janta e dorme no quarto do menino. De madrugada, sonha com uma tormenta no mar e, ao acordar, vê uma linda criança cercada de luz, que sorri e desaparece. O nobre explica que ali vive o fantasma de um menino, um fantasma da sorte: quem o vê fica rico e feliz. Depois, o capitão conheceu uma formosa jovem, com quem se casou, e ficou milionário."
           },
           {
             "type": "mc",
@@ -4514,7 +4501,8 @@ const DISCIPLINAS = [
               "triste"
             ],
             "answer": 0,
-            "explain": "Formosa e bonita têm o mesmo significado: são sinônimos."
+            "explain": "Formosa e bonita têm o mesmo significado: são sinônimos.",
+            "context": "No conto, o capitão “conheceu uma formosa jovem, com quem se casou”."
           },
           {
             "type": "mc",
@@ -4526,7 +4514,8 @@ const DISCIPLINAS = [
               "brincadeira, cansaço, modo"
             ],
             "answer": 0,
-            "explain": "Sorte pode significar destino, fortuna ou êxito. Azar é o contrário (antônimo)."
+            "explain": "Sorte pode significar destino, fortuna ou êxito. Azar é o contrário (antônimo).",
+            "context": "O título do conto é “O fantasma da sorte”. No dicionário, a palavra sorte aparece com alguns sinônimos."
           },
           {
             "type": "mc",
@@ -4539,18 +4528,6 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Antônimo é a palavra de sentido contrário: dormir × acordar."
-          },
-          {
-            "type": "mc",
-            "q": "No texto teatral, as informações entre parênteses, em letras maiúsculas, servem para:",
-            "options": [
-              "indicar gestos, movimentos e o cenário",
-              "mostrar a fala do narrador",
-              "dar o título da peça",
-              "indicar o nome do autor"
-            ],
-            "answer": 0,
-            "explain": "Essas informações se chamam rubricas e orientam os atores."
           },
           {
             "type": "text",
@@ -4571,17 +4548,8 @@ const DISCIPLINAS = [
         "id": "lp26",
         "module": "26",
         "title": "Todo mundo tem medo!",
-        "subtitle": "Depoimento · Tempos verbais · Ortografia: -am e -ão",
+        "subtitle": "Tempos verbais · Ortografia: -am e -ão",
         "theory": [
-          {
-            "h": "Depoimento: Medo? Todo mundo tem!",
-            "p": [
-              "O <strong>depoimento</strong> é um texto em que uma pessoa conta <strong>acontecimentos ou experiências que viveu de verdade</strong>. Quem narra é chamado de <strong>narrador</strong> ou <strong>depoente</strong>, e fala das próprias experiências.",
-              "No texto <em>Medo? Todo mundo tem!</em>, Silvinha Meirelles mostra que <strong>todo mundo sente algum medo</strong>: de aranha, de avião, de ficar sozinho, de trovão… Ela conversou com várias pessoas e registrou o medo e o <strong>antídoto</strong> de cada uma.",
-              "<strong>Antídoto</strong>, no texto, é <strong>o jeito de afastar o medo</strong>. Nina, de 9 anos, tem medo do escuro e muda de assunto na cabeça; Júlia gruda no cachorro; Marcelo, de 6 anos, tem medo de raio e de fantasma e diz: <em>Eu me deito e me cubro.</em>",
-              "Para afastar o medo, o texto sugere: cantar, correr, pensar em outra coisa, assobiar, chamar alguém ou olhar o medo de frente."
-            ]
-          },
           {
             "h": "Tempos verbais: passado, presente e futuro",
             "figure": {
@@ -4590,11 +4558,11 @@ const DISCIPLINAS = [
               "tipo": "diagrama"
             },
             "p": [
+              "O verbo muda de forma para mostrar <strong>quando</strong> uma ação acontece. Isso se chama <strong>tempo verbal</strong>.",
               "<strong>Presente</strong>: algo que acontece agora, com frequência ou sempre. <em>Eu <strong>aprendo</strong> com meus medos. Meu primo <strong>gosta</strong> de filmes de monstros.</em>",
               "<strong>Passado</strong> (ou pretérito): algo que <strong>já aconteceu</strong>. <em>Quando eu <strong>era</strong> pequena, <strong>tinha</strong> medo de bicho-papão. Ele <strong>falou</strong> dos próprios medos.</em>",
               "<strong>Futuro</strong>: algo que <strong>ainda vai acontecer</strong>. <em>Ela <strong>crescerá</strong> e <strong>perderá</strong> o medo do escuro.</em>",
-              "Exemplo com o antídoto do Marcelo: presente – <em>Eu me <strong>deito</strong> e me <strong>cubro</strong>.</em> Futuro – <em>Eu me <strong>deitarei</strong> e me <strong>cobrirei</strong>.</em>",
-              "Nas tirinhas aparecem formas reduzidas, como <strong>tá</strong> (está). Isso acontece porque a tirinha mostra uma situação de <strong>linguagem coloquial</strong>, a fala do dia a dia."
+              "Palavras como <strong>ontem</strong>, <strong>hoje</strong> e <strong>amanhã</strong> são boas pistas do tempo da frase."
             ],
             "cards": [
               {
@@ -4615,6 +4583,15 @@ const DISCIPLINAS = [
             ]
           },
           {
+            "h": "Trocando o tempo da frase",
+            "p": [
+              "Marcelo, de 6 anos, tem medo de raio. Para afastar o medo, ele diz: <em>Eu me <strong>deito</strong> e me <strong>cubro</strong>.</em> (presente)",
+              "No passado: <em>Eu me <strong>deitei</strong> e me <strong>cobri</strong>.</em>",
+              "No futuro: <em>Eu me <strong>deitarei</strong> e me <strong>cobrirei</strong>.</em>",
+              "Veja o verbo <strong>estudar</strong>: <em>Ontem eu <strong>estudei</strong>. Hoje eu <strong>estudo</strong>. Amanhã eu <strong>estudarei</strong>.</em>"
+            ]
+          },
+          {
             "h": "Ortografia: -am ou -ão?",
             "figure": {
               "src": "assets/4b/lp26-am-ao.svg",
@@ -4626,7 +4603,7 @@ const DISCIPLINAS = [
               "<strong>-am</strong> = passado: <em>Elas sentir<strong>am</strong> medo da tempestade.</em> / acordaram, fugiram, dançaram, ajudaram, ofereceram.",
               "<strong>-ão</strong> = futuro: <em>Elas sentir<strong>ão</strong> medo da tempestade.</em> / acordarão, fugirão, dançarão, ajudarão, oferecerão.",
               "Atenção: muitos <strong>substantivos</strong> também terminam em -ão e não são verbos: <em>caminhão, coração, botão, questão, guardião, ladrão</em>.",
-              "Ditados: <em>Os cães <strong>ladram</strong> e a caravana passa.</em> (verbo, -am) / <em>A ocasião faz o <strong>ladrão</strong>.</em> (substantivo, -ão)"
+              "Ditados: <em>Os cães <strong>ladram</strong> e a caravana passa.</em> (verbo) / <em>A ocasião faz o <strong>ladrão</strong>.</em> (substantivo)"
             ]
           }
         ],
@@ -4711,9 +4688,37 @@ const DISCIPLINAS = [
                 "cat": 0
               },
               {
-                "text": "Depois do jantar, eles oferecer__ sobremesa.",
+                "text": "Depois do jantar de amanhã, eles oferecer__ sobremesa.",
                 "cat": 1
               }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Viagem no tempo",
+            "short": "Trocar o tempo",
+            "instructions": "Passe o verbo para o futuro.",
+            "pairs": [
+              [
+                "Eles perderam o medo do escuro.",
+                "Eles perderão o medo do escuro."
+              ],
+              [
+                "Os amigos conversaram muito.",
+                "Os amigos conversarão muito."
+              ],
+              [
+                "Elas passaram em frente ao museu.",
+                "Elas passarão em frente ao museu."
+              ],
+              [
+                "Eu me deito e me cubro.",
+                "Eu me deitarei e me cobrirei."
+              ],
+              [
+                "Ontem eu estudei.",
+                "Amanhã eu estudarei."
+              ]
             ]
           },
           {
@@ -4764,43 +4769,8 @@ const DISCIPLINAS = [
         "quiz": [
           {
             "type": "mc",
-            "q": "Qual é o principal assunto do texto “Medo? Todo mundo tem!”?",
-            "options": [
-              "Os medos das pessoas e jeitos de afastá-los",
-              "Como fazer uma lanterna",
-              "A vida de uma escritora famosa",
-              "Uma história de fantasma inventada"
-            ],
-            "answer": 0,
-            "explain": "O texto reúne depoimentos sobre medos e antídotos para eles."
-          },
-          {
-            "type": "mc",
-            "q": "No texto, o que significa a palavra antídoto?",
-            "options": [
-              "O jeito de afastar o medo",
-              "Um tipo de monstro",
-              "Um remédio para dor de cabeça",
-              "O nome de quem conta"
-            ],
-            "answer": 0,
-            "explain": "Cada pessoa conta o seu medo e o seu antídoto, isto é, o que faz para o medo passar."
-          },
-          {
-            "type": "mc",
-            "q": "O depoimento é um texto em que uma pessoa:",
-            "options": [
-              "conta experiências que viveu de verdade",
-              "inventa uma história com fadas",
-              "escreve versos com rimas",
-              "dá instruções de um jogo"
-            ],
-            "answer": 0,
-            "explain": "No depoimento, o narrador (depoente) fala das próprias experiências reais."
-          },
-          {
-            "type": "mc",
-            "q": "Em “Tenho medo de raio. Também não gosto de história com bruxa”, os verbos tenho e gosto indicam algo que:",
+            "context": "Marcelo, de 6 anos, contou: “Tenho medo de raio. Também não gosto de história com bruxa.”",
+            "q": "Os verbos tenho e gosto indicam algo que:",
             "options": [
               "está acontecendo (presente)",
               "já aconteceu (passado)",
@@ -4812,7 +4782,8 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Como fica “Eu me deito e me cubro” com os verbos no futuro?",
+            "context": "Para afastar o medo, Marcelo diz: “Eu me deito e me cubro.”",
+            "q": "Como fica a frase com os verbos no futuro?",
             "options": [
               "Eu me deitarei e me cobrirei.",
               "Eu me deitei e me cobri.",
@@ -4829,7 +4800,7 @@ const DISCIPLINAS = [
               "passado",
               "presente",
               "futuro",
-              "infinitivo"
+              "plural do substantivo"
             ],
             "answer": 0,
             "explain": "Brincaram termina em -am: a ação já aconteceu."
@@ -4860,6 +4831,18 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
+            "q": "Qual frase está no presente?",
+            "options": [
+              "Eu conheço muitas histórias.",
+              "Eu conheci muitas histórias.",
+              "Eu conhecerei muitas histórias.",
+              "Eu conhecia muitas histórias."
+            ],
+            "answer": 0,
+            "explain": "Conheço indica o que acontece agora: presente."
+          },
+          {
+            "type": "mc",
             "q": "Complete o ditado: “Os cães ______ e a caravana passa.”",
             "options": [
               "ladram",
@@ -4868,7 +4851,7 @@ const DISCIPLINAS = [
               "ladrões"
             ],
             "answer": 0,
-            "explain": "Ladram é o verbo latir no presente. Ladrão é um substantivo."
+            "explain": "Ladram é verbo (o que os cães fazem). Ladrão é um substantivo."
           },
           {
             "type": "mc",
@@ -4884,31 +4867,44 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Na tirinha, a bruxa diz “Tá pronta!”. A palavra tá corresponde ao verbo:",
+            "q": "Complete corretamente: “Na semana passada, eles ______ para a praia.”",
             "options": [
-              "estar",
-              "tomar",
-              "tocar",
-              "ter"
+              "viajaram",
+              "viajarão",
+              "viajam",
+              "viajão"
             ],
             "answer": 0,
-            "explain": "Tá é a forma reduzida de está, do verbo estar."
+            "explain": "Semana passada pede verbo no passado, com -am: viajaram."
           },
           {
             "type": "mc",
-            "q": "A forma reduzida tá pode ser usada na tirinha porque:",
+            "q": "Complete corretamente: “No próximo sábado, os alunos ______ o teatro.”",
             "options": [
-              "mostra uma situação de linguagem coloquial",
-              "em todo tipo de texto se usa essa forma",
-              "é uma linguagem cerimoniosa",
-              "é um erro de digitação"
+              "visitarão",
+              "visitaram",
+              "visitão",
+              "visitavam"
             ],
             "answer": 0,
-            "explain": "Nas HQs a linguagem costuma ser informal, parecida com a fala do dia a dia."
+            "explain": "Próximo sábado ainda vai acontecer: futuro, com -ão (visitarão)."
+          },
+          {
+            "type": "mc",
+            "q": "Qual frase usa o verbo estudar no futuro?",
+            "options": [
+              "Amanhã eu estudarei.",
+              "Ontem eu estudei.",
+              "Hoje eu estudo.",
+              "Eu estudava muito."
+            ],
+            "answer": 0,
+            "explain": "Estudarei indica algo que ainda vai acontecer."
           },
           {
             "type": "text",
-            "q": "Reescreva o verbo no futuro: “Eles perderam o medo do escuro.” → Eles ______ o medo do escuro.",
+            "context": "Eles perderam o medo do escuro.",
+            "q": "Reescreva o verbo no futuro: Eles ______ o medo do escuro.",
             "answers": [
               "perderao",
               "perderão"
@@ -4921,21 +4917,13 @@ const DISCIPLINAS = [
         "id": "lp27",
         "module": "27",
         "title": "Comer bem para melhor crescer!",
-        "subtitle": "Reportagem · Sujeito e predicado",
+        "subtitle": "Sujeito e predicado",
         "theory": [
           {
-            "h": "Reportagem: lancheira saudável",
-            "figure": {
-              "src": "assets/4b/lp27-reportagem.svg",
-              "alt": "Partes de uma reportagem: título, linha fina, lide, entretítulo e matéria com fala de especialista.",
-              "tipo": "diagrama"
-            },
+            "h": "Oração: frase com verbo",
             "p": [
-              "A <strong>reportagem</strong> apresenta <strong>informações aprofundadas</strong> sobre um tema. É publicada em <strong>jornais, revistas e sites</strong>.",
-              "Partes: <strong>título</strong> (nome da reportagem); <strong>linha fina</strong> (texto abaixo do título que desperta o interesse); <strong>lide</strong> (primeiro parágrafo, que resume a matéria); <strong>matéria</strong> (texto longo, às vezes com falas de <strong>especialistas</strong>); <strong>entretítulos</strong> (pequenos títulos que separam blocos).",
-              "A reportagem <em>Como fazer lancheira saudável na volta às aulas das crianças</em> tem a finalidade de <strong>informar sobre alimentação saudável</strong>. Os entretítulos são <em>Lancheira saudável</em>, <em>Lancheira prática</em> e <em>Lancheira colorida</em>.",
-              "Ela explica a <strong>neofobia</strong>: a dificuldade das crianças em aceitar alimentos novos. Por isso, a apresentação bonita e variada ajuda as crianças a aceitar os alimentos.",
-              "Uma lancheira equilibrada tem <strong>frutas, vegetais, proteínas, grãos integrais e líquidos</strong>. Quanto <strong>mais colorida</strong>, mais nutrientes! Achocolatado, salgadinho, salsicha e refrigerante são <strong>ultraprocessados</strong> e não são boas opções."
+              "Uma <strong>oração</strong> é uma frase que tem <strong>verbo</strong>. Exemplo: <em>Vegetais <strong>oferecem</strong> vitaminas.</em> O verbo é <strong>oferecem</strong>.",
+              "Toda oração pode ser dividida em duas partes: o <strong>sujeito</strong> e o <strong>predicado</strong>."
             ]
           },
           {
@@ -4946,19 +4934,19 @@ const DISCIPLINAS = [
               "tipo": "diagrama"
             },
             "p": [
-              "Uma <strong>oração</strong> é uma frase com <strong>verbo</strong>. Exemplo: <em>Vegetais <strong>oferecem</strong> vitaminas.</em>",
-              "O <strong>sujeito</strong> é o termo <strong>sobre o qual se diz algo</strong>. Para achá-lo, perguntamos: <strong>Quem + verbo?</strong> → <em>Quem oferece vitaminas?</em> → <strong>Vegetais</strong>.",
+              "O <strong>sujeito</strong> é o termo <strong>sobre o qual se diz algo</strong>. Para achá-lo, perguntamos: <strong>Quem (ou o que) + verbo?</strong>",
+              "<em>Vegetais oferecem vitaminas.</em> → <em>O que oferece vitaminas?</em> → <strong>Vegetais</strong> (sujeito).",
               "O <strong>predicado</strong> é <strong>o que se diz sobre o sujeito</strong>. O verbo faz parte do predicado. Em <em>As frutas | fazem bem à saúde</em>, o sujeito é <strong>As frutas</strong> e o predicado é <strong>fazem bem à saúde</strong>.",
-              "O verbo sempre <strong>concorda</strong> com o sujeito: <em>A fruta <strong>faz</strong> bem</em> / <em>As frutas <strong>fazem</strong> bem</em>.",
-              "<strong>Complemento verbal</strong>: alguns verbos precisam de uma palavra que complete o sentido. <em>Ela come <strong>salada</strong>.</em> / <em>Mamãe preparou <strong>um bolo delicioso</strong>.</em> Outros não precisam: <em>Ele dorme.</em>"
+              "O sujeito pode estar no meio ou no fim da frase: <em>No recreio, <strong>os alunos</strong> comem lanches saudáveis.</em> Quem come? Os alunos.",
+              "O sujeito pode ter mais de uma palavra principal: <em><strong>Boa alimentação e exercícios</strong> são fundamentais para a saúde.</em>"
             ]
           },
           {
-            "h": "Letra h no início das palavras",
+            "h": "O verbo concorda com o sujeito",
             "p": [
-              "No início das palavras, a letra <strong>h não tem som</strong>: lemos <em>hora</em> como “ora”. Por isso precisamos memorizar como se escreve.",
-              "Exemplos: <strong>hora</strong>, <strong>hospital</strong>, <strong>homem</strong>, <strong>hidrante</strong>, <strong>harpa</strong>, <strong>helicóptero</strong>, <strong>hipopótamo</strong>, <strong>horta</strong>.",
-              "Substantivos próprios também: <em>Helena, Hugo, Henrique, Holanda</em>."
+              "O verbo sempre <strong>concorda</strong> com o sujeito em número: <em>A fruta <strong>faz</strong> bem</em> (singular) / <em>As frutas <strong>fazem</strong> bem</em> (plural).",
+              "<em>Eu <strong>faço</strong> refeições equilibradas.</em> / <em>Nós <strong>fazemos</strong> refeições equilibradas.</em>",
+              "Alguns verbos precisam de uma palavra que <strong>complete o sentido</strong>, e ela também fica no predicado: <em>Ela come <strong>salada</strong>.</em> (come o quê?) / <em>Mamãe preparou <strong>um bolo</strong>.</em> Outros não precisam: <em>Ele dorme.</em>"
             ]
           }
         ],
@@ -5025,115 +5013,42 @@ const DISCIPLINAS = [
           },
           {
             "type": "sort",
-            "title": "Partes da reportagem",
-            "short": "Partes da reportagem",
-            "instructions": "Que parte da reportagem é essa?",
+            "title": "O verbo concorda?",
+            "short": "Concordância",
+            "instructions": "O verbo está concordando com o sujeito?",
             "categories": [
-              "Título",
-              "Linha fina",
-              "Entretítulo"
+              "Correto ✅",
+              "Precisa corrigir ❌"
             ],
             "items": [
               {
-                "text": "Como fazer lancheira saudável na volta às aulas das crianças",
+                "text": "As frutas fazem bem à saúde.",
                 "cat": 0
               },
               {
-                "text": "Nutricionistas ensinam a montar uma alimentação saborosa e colorida",
+                "text": "As frutas faz bem à saúde.",
                 "cat": 1
               },
               {
-                "text": "Lancheira prática",
-                "cat": 2
-              },
-              {
-                "text": "Lancheira colorida",
-                "cat": 2
-              },
-              {
-                "text": "Texto logo abaixo do título que chama a atenção do leitor",
-                "cat": 1
-              },
-              {
-                "text": "O nome da reportagem, com letra maior",
+                "text": "Os alunos comem lanches saudáveis.",
                 "cat": 0
+              },
+              {
+                "text": "A menina comem salada.",
+                "cat": 1
+              },
+              {
+                "text": "Nós fazemos um piquenique.",
+                "cat": 0
+              },
+              {
+                "text": "Eu e meus amigos lanchou no pátio.",
+                "cat": 1
               }
             ]
           }
         ],
         "quiz": [
-          {
-            "type": "mc",
-            "q": "Qual é a finalidade da reportagem sobre a lancheira saudável?",
-            "options": [
-              "Informar sobre alimentação saudável",
-              "Provocar o riso",
-              "Ensinar a preparar um bolo",
-              "Contar uma história de mistério"
-            ],
-            "answer": 0,
-            "explain": "A reportagem traz informações aprofundadas sobre como montar uma lancheira saudável."
-          },
-          {
-            "type": "mc",
-            "q": "Segundo a reportagem, o que é neofobia?",
-            "options": [
-              "Dificuldade de aceitar alimentos novos",
-              "Medo de ir à escola",
-              "Vontade de comer doces",
-              "Alergia a frutas"
-            ],
-            "answer": 0,
-            "explain": "Neofobia é a dificuldade das crianças em aceitar ou experimentar alimentos novos ou desconhecidos."
-          },
-          {
-            "type": "mc",
-            "q": "Para a nutricionista, uma lancheira bem colorida:",
-            "options": [
-              "tem mais nutrientes",
-              "é menos saudável",
-              "deve ter só doces",
-              "não faz diferença"
-            ],
-            "answer": 0,
-            "explain": "Cada cor de fruta e vegetal representa nutrientes diferentes: quanto mais colorida, mais nutritiva."
-          },
-          {
-            "type": "mc",
-            "q": "Qual destes é um ULTRAPROCESSADO, que não é boa opção para a lancheira?",
-            "options": [
-              "achocolatado",
-              "banana",
-              "tomate-cereja",
-              "água de coco"
-            ],
-            "answer": 0,
-            "explain": "Achocolatado, salgadinhos, salsicha e refrigerante são ultraprocessados."
-          },
-          {
-            "type": "mc",
-            "q": "O primeiro parágrafo da reportagem, que resume o conteúdo da matéria, chama-se:",
-            "options": [
-              "lide",
-              "título",
-              "entretítulo",
-              "assinatura"
-            ],
-            "answer": 0,
-            "explain": "O lide é o primeiro parágrafo e resume a matéria."
-          },
-          {
-            "type": "mc",
-            "q": "Onde você encontraria outras reportagens como essa?",
-            "options": [
-              "Em jornais e revistas",
-              "Em manuais de instrução",
-              "Em atlas",
-              "Em livros de poemas"
-            ],
-            "answer": 0,
-            "explain": "Reportagens são publicadas em jornais, revistas e sites de notícias."
-          },
           {
             "type": "mc",
             "q": "Na frase “Vegetais oferecem vitaminas”, qual é o sujeito?",
@@ -5144,7 +5059,19 @@ const DISCIPLINAS = [
               "oferecem vitaminas"
             ],
             "answer": 0,
-            "explain": "Quem oferece vitaminas? Vegetais. Esse é o sujeito."
+            "explain": "O que oferece vitaminas? Vegetais. Esse é o sujeito."
+          },
+          {
+            "type": "mc",
+            "q": "Na frase “Vegetais oferecem vitaminas”, qual é o verbo?",
+            "options": [
+              "oferecem",
+              "Vegetais",
+              "vitaminas",
+              "não há verbo"
+            ],
+            "answer": 0,
+            "explain": "Oferecem é o verbo: indica a ação. Por ter verbo, a frase é uma oração."
           },
           {
             "type": "mc",
@@ -5192,7 +5119,7 @@ const DISCIPLINAS = [
               "nenhuma"
             ],
             "answer": 0,
-            "explain": "Salada é o complemento verbal: completa o sentido de comer (come o quê?)."
+            "explain": "Salada completa o sentido de comer (come o quê?). Ela faz parte do predicado."
           },
           {
             "type": "mc",
@@ -5207,13 +5134,60 @@ const DISCIPLINAS = [
             "explain": "O verbo concorda com o sujeito: as frutas (plural) fazem (plural)."
           },
           {
-            "type": "text",
-            "q": "Escreva o nome do lugar onde as pessoas são atendidas por médicos. A palavra começa com h.",
-            "answers": [
-              "hospital",
-              "o hospital"
+            "type": "mc",
+            "q": "Na frase “Boa alimentação e exercícios são fundamentais para a saúde”, o sujeito é:",
+            "options": [
+              "Boa alimentação e exercícios",
+              "são fundamentais",
+              "para a saúde",
+              "exercícios"
             ],
-            "explain": "Hospital começa com h, que não tem som no início da palavra."
+            "answer": 0,
+            "explain": "O que é fundamental? Boa alimentação e exercícios. O sujeito tem duas palavras principais."
+          },
+          {
+            "type": "mc",
+            "q": "Em “A minha turma fez um piquenique no pátio”, o predicado é:",
+            "options": [
+              "fez um piquenique no pátio",
+              "A minha turma",
+              "A minha turma fez",
+              "no pátio"
+            ],
+            "answer": 0,
+            "explain": "O que se diz da minha turma? Que fez um piquenique no pátio."
+          },
+          {
+            "type": "mc",
+            "q": "Complete com o verbo que concorda com o sujeito: “Eu e meus amigos ______ no pátio.”",
+            "options": [
+              "lanchamos",
+              "lanchou",
+              "lanchei",
+              "lanchaste"
+            ],
+            "answer": 0,
+            "explain": "Eu e meus amigos = nós. Nós lanchamos."
+          },
+          {
+            "type": "mc",
+            "q": "Qual frase NÃO precisa de complemento para o verbo?",
+            "options": [
+              "O bebê dorme.",
+              "Papai comprou…",
+              "A cozinheira deu…",
+              "Ela come…"
+            ],
+            "answer": 0,
+            "explain": "Dormir tem sentido completo. Comprar, dar e comer pedem complemento (o quê?)."
+          },
+          {
+            "type": "text",
+            "q": "Escreva o sujeito da frase: “Papai comprou tomates na feira.”",
+            "answers": [
+              "papai"
+            ],
+            "explain": "Quem comprou tomates? Papai."
           }
         ]
       },
@@ -5222,6 +5196,7 @@ const DISCIPLINAS = [
         "module": "✍️",
         "title": "Ler e escrever: poema e conto de mistério",
         "subtitle": "Leitura, interpretação e produção de texto",
+        "video": "assets/videos/lp_generos.mp4",
         "theory": [
           {
             "h": "Ler um poema com atenção",
@@ -5334,7 +5309,8 @@ const DISCIPLINAS = [
                 "Solução",
                 "era uma coruja chamando os filhotes"
               ]
-            ]
+            ],
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
           },
           {
             "type": "writing",
@@ -5383,7 +5359,8 @@ const DISCIPLINAS = [
               "1 estrofe"
             ],
             "answer": 0,
-            "explain": "São 2 estrofes (grupos de versos), cada uma com 4 versos."
+            "explain": "São 2 estrofes (grupos de versos), cada uma com 4 versos.",
+            "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim."
           },
           {
             "type": "mc",
@@ -5395,7 +5372,8 @@ const DISCIPLINAS = [
               "entrar"
             ],
             "answer": 0,
-            "explain": "Janela e panela terminam com o mesmo som: -ela."
+            "explain": "Janela e panela terminam com o mesmo som: -ela.",
+            "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim."
           },
           {
             "type": "mc",
@@ -5407,7 +5385,8 @@ const DISCIPLINAS = [
               "um sino tocando"
             ],
             "answer": 0,
-            "explain": "Pinga, pinga lembra o som das gotas de chuva caindo, assim como tic-tac imita o relógio."
+            "explain": "Pinga, pinga lembra o som das gotas de chuva caindo, assim como tic-tac imita o relógio.",
+            "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim."
           },
           {
             "type": "mc",
@@ -5419,7 +5398,8 @@ const DISCIPLINAS = [
               "ensinou a fechar a janela"
             ],
             "answer": 0,
-            "explain": "Nos poemas é comum dar sentimentos e ações humanas a objetos e à natureza."
+            "explain": "Nos poemas é comum dar sentimentos e ações humanas a objetos e à natureza.",
+            "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim."
           },
           {
             "type": "mc",
@@ -5431,7 +5411,8 @@ const DISCIPLINAS = [
               "A casa estava vazia"
             ],
             "answer": 0,
-            "explain": "Todas as noites, às nove horas, ouvia-se toc-toc no sótão."
+            "explain": "Todas as noites, às nove horas, ouvia-se toc-toc no sótão.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
           },
           {
             "type": "mc",
@@ -5443,7 +5424,8 @@ const DISCIPLINAS = [
               "O toc-toc virou cantiga de ninar"
             ],
             "answer": 0,
-            "explain": "Suspense é o momento de tensão, quando o leitor ainda não sabe o que vai acontecer."
+            "explain": "Suspense é o momento de tensão, quando o leitor ainda não sabe o que vai acontecer.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
           },
           {
             "type": "mc",
@@ -5455,7 +5437,8 @@ const DISCIPLINAS = [
               "A vovó fazia o barulho"
             ],
             "answer": 0,
-            "explain": "A coruja morava numa caixa velha e batia o bico para chamar os filhotes."
+            "explain": "A coruja morava numa caixa velha e batia o bico para chamar os filhotes.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
           },
           {
             "type": "mc",
@@ -5467,7 +5450,8 @@ const DISCIPLINAS = [
               "Em um navio"
             ],
             "answer": 0,
-            "explain": "O barulho vinha do sótão da casa da vovó Lúcia."
+            "explain": "O barulho vinha do sótão da casa da vovó Lúcia.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
           },
           {
             "type": "mc",
@@ -5503,7 +5487,8 @@ const DISCIPLINAS = [
               "sono"
             ],
             "answer": 0,
-            "explain": "Tremer embaixo do cobertor mostra que eles estavam com medo do barulho."
+            "explain": "Tremer embaixo do cobertor mostra que eles estavam com medo do barulho.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
           },
           {
             "type": "text",
@@ -5513,7 +5498,8 @@ const DISCIPLINAS = [
               "uma coruja",
               "a coruja"
             ],
-            "explain": "Era uma coruja chamando os filhotes."
+            "explain": "Era uma coruja chamando os filhotes.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
           }
         ]
       },
@@ -5580,14 +5566,12 @@ const DISCIPLINAS = [
             ]
           },
           {
-            "h": "Resumo da prova: gêneros textuais",
+            "h": "Resumo da prova: poema e conto de mistério",
             "p": [
-              "<strong>Poema:</strong> versos (linhas), estrofes (grupos de versos), rima, ritmo e repetição de sons. Serve para entreter e emocionar.",
-              "<strong>Poema visual:</strong> as letras formam figuras; a forma combina com o conteúdo (ex.: Pêndulo).",
-              "<strong>Texto informativo:</strong> fatos reais com datas e locais precisos (ex.: a história da montanha-russa).",
-              "<strong>Conto de mistério:</strong> história misteriosa, com suspense e acontecimentos inesperados (ex.: O fantasma da sorte).",
-              "<strong>Depoimento:</strong> a pessoa conta experiências reais que viveu (ex.: Medo? Todo mundo tem!).",
-              "<strong>Reportagem:</strong> informações aprofundadas, com título, linha fina, lide, entretítulos e falas de especialistas (ex.: lancheira saudável)."
+              "<strong>Poema:</strong> versos (cada linha), estrofes (grupos de versos), rima (sons parecidos no fim), ritmo e repetição de sons, como tic-tac. Serve para entreter e emocionar.",
+              "<strong>Poema visual:</strong> as letras formam figuras; a forma combina com o conteúdo (ex.: “Pêndulo”).",
+              "<strong>Conto de mistério:</strong> personagens, lugar, um mistério, suspense e uma solução surpreendente no final (ex.: “O fantasma da sorte” e “O barulho no sótão”).",
+              "<strong>Para escrever:</strong> no poema, use versos, estrofes e rimas; no conto, apresente personagens e lugar, crie o mistério, aumente o suspense e revele a solução, usando verbos no passado."
             ]
           }
         ],
@@ -5595,7 +5579,7 @@ const DISCIPLINAS = [
         "quiz": [
           {
             "type": "mc",
-            "q": "O poema “O relógio”, de Vinicius de Moraes, serve principalmente para:",
+            "q": "Esse poema serve principalmente para:",
             "options": [
               "entreter e divertir o leitor",
               "informar um acontecimento real",
@@ -5604,11 +5588,12 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Poemas brincam com as palavras, o ritmo e os sons para entreter e emocionar o leitor.",
+            "context": "Trecho do poema “O relógio”, de Vinicius de Moraes: “Passa, tempo, tic-tac / Tic-tac, passa, hora / Chega logo, tic-tac / Tic-tac, e vai-te embora”",
             "from": "Tic-tac!"
           },
           {
             "type": "mc",
-            "q": "No poema “O relógio”, a repetição da expressão tic-tac indica:",
+            "q": "No poema, a repetição de tic-tac indica:",
             "options": [
               "o passar do tempo",
               "que o relógio está quebrado",
@@ -5617,6 +5602,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Tic-tac imita o som do relógio e, repetido, mostra o tempo passando sem parar.",
+            "context": "Trecho do poema “O relógio”, de Vinicius de Moraes: “Passa, tempo, tic-tac / Tic-tac, passa, hora / Chega logo, tic-tac / Tic-tac, e vai-te embora”",
             "from": "Tic-tac!"
           },
           {
@@ -5660,7 +5646,7 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Qual destes NÃO é um poema visual?",
+            "q": "Qual destes exemplos não é um poema visual?",
             "options": [
               "Um poema acompanhado de uma xilogravura",
               "Um poema em forma de estrela",
@@ -5699,7 +5685,7 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Nos versos “Toda a alegria / De fazer / Meu tic-tac”, que ideia a palavra meu transmite?",
+            "q": "Que ideia a palavra meu transmite nesses versos?",
             "options": [
               "Posse",
               "Tempo",
@@ -5708,6 +5694,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Meu é pronome possessivo: mostra que o tic-tac pertence a quem fala.",
+            "context": "Versos do poema “O relógio”: “Toda a alegria / De fazer / Meu tic-tac”",
             "from": "Tic-tac!"
           },
           {
@@ -5738,7 +5725,7 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Na tirinha, Armandinho diz ao pai: “A sua cabeça está na frente do relógio!”. De quem é a cabeça?",
+            "q": "Na fala de Armandinho, de quem é a cabeça?",
             "options": [
               "Do pai",
               "Do Armandinho",
@@ -5747,6 +5734,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Armandinho fala com o pai, então sua se refere ao pai. Por isso o pai não via a hora.",
+            "context": "Numa tirinha, Armandinho pergunta as horas ao pai. O pai não consegue ver o relógio, e Armandinho diz: “A sua cabeça está na frente do relógio!”",
             "from": "Tic-tac!"
           },
           {
@@ -5758,76 +5746,13 @@ const DISCIPLINAS = [
               "tictac"
             ],
             "explain": "Tic-tac é a palavra que imita o som do relógio.",
+            "context": "Trecho do poema “O relógio”, de Vinicius de Moraes: “Passa, tempo, tic-tac / Tic-tac, passa, hora / Chega logo, tic-tac / Tic-tac, e vai-te embora”",
             "from": "Tic-tac!"
           },
           {
             "type": "mc",
-            "q": "Por que a montanha-russa recebeu esse nome?",
-            "options": [
-              "Porque a diversão começou na Rússia",
-              "Porque foi inventada por uma russa",
-              "Porque é vermelha como a Rússia",
-              "Porque fica numa montanha"
-            ],
-            "answer": 0,
-            "explain": "O texto diz que foi mesmo na Rússia, no século 15, que as pessoas deslizavam por rampas de neve.",
-            "from": "Aventura e diversão"
-          },
-          {
-            "type": "mc",
-            "q": "Como funcionava a primeira montanha-russa?",
-            "options": [
-              "Pessoas deslizavam em blocos de gelo por rampas de neve",
-              "Um trem elétrico subia uma torre",
-              "Carrinhos corriam em trilhos de aço",
-              "Barcos desciam por um rio"
-            ],
-            "answer": 0,
-            "explain": "Subia-se ao alto e deslizava-se sentado em blocos de gelo cobertos de palha; jogava-se areia para frear.",
-            "from": "Aventura e diversão"
-          },
-          {
-            "type": "mc",
-            "q": "O texto informativo se caracteriza por apresentar:",
-            "options": [
-              "acontecimentos reais com datas e locais",
-              "uma história inventada com magia",
-              "versos com rima e ritmo",
-              "instruções para montar um objeto"
-            ],
-            "answer": 0,
-            "explain": "Texto informativo traz informações reais e precisas sobre um tema.",
-            "from": "Aventura e diversão"
-          },
-          {
-            "type": "mc",
-            "q": "A Steel Dragon tem 2 479 metros e atinge 153 km/h. Onde ela fica?",
-            "options": [
-              "No Japão",
-              "Nos Estados Unidos",
-              "No Brasil",
-              "Na Rússia"
-            ],
-            "answer": 0,
-            "explain": "O texto diz que ela fica no parque Nagashima Spaland, no Japão.",
-            "from": "Aventura e diversão"
-          },
-          {
-            "type": "mc",
-            "q": "A velocidade e o comprimento da Steel Dragon são:",
-            "options": [
-              "153 km/h e 2 479 metros",
-              "2 479 km/h e 153 metros",
-              "79 km/h e 24 metros",
-              "2 153 km/h e 179 metros"
-            ],
-            "answer": 0,
-            "explain": "153 quilômetros por hora de velocidade e 2 479 metros de comprimento.",
-            "from": "Aventura e diversão"
-          },
-          {
-            "type": "mc",
-            "q": "Na fala “Olhe este brinquedo. É muito radical!”, o pronome este indica que o brinquedo está:",
+            "context": "No parque, Lia segura um balão e diz a Téo: “Olhe este balão! É enorme!”",
+            "q": "O pronome este indica que o balão está:",
             "options": [
               "perto de quem fala",
               "perto de quem ouve",
@@ -5835,17 +5760,18 @@ const DISCIPLINAS = [
               "em outro dia"
             ],
             "answer": 0,
-            "explain": "Este, esta e isto são da 1ª pessoa: perto de quem fala.",
+            "explain": "Este, esta e isto indicam o que está perto de quem fala (Lia).",
             "from": "Aventura e diversão"
           },
           {
             "type": "mc",
-            "q": "O menino diz “Prefiro aquele.” apontando um brinquedo distante. Aquele indica:",
+            "context": "Téo aponta a montanha-russa, bem longe dos dois, e diz: “Prefiro aquele brinquedo.”",
+            "q": "Aquele indica que o brinquedo está:",
             "options": [
-              "algo longe de quem fala e de quem ouve",
-              "algo na mão de quem fala",
-              "algo perto de quem ouve",
-              "algo que pertence a alguém"
+              "longe de quem fala e de quem ouve",
+              "na mão de quem fala",
+              "perto de quem ouve",
+              "dentro da mochila"
             ],
             "answer": 0,
             "explain": "Aquele, aquela e aquilo indicam o que está longe das duas pessoas da conversa.",
@@ -5853,7 +5779,22 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Complete: “Qual é a altura ______ roda-gigante em que você andou?” (a roda-gigante está perto de quem ouve)",
+            "context": "Téo está segurando um boné novo. Lia olha para ele e pergunta sobre o boné.",
+            "q": "Qual pergunta Lia deve fazer?",
+            "options": [
+              "Esse boné é novo?",
+              "Este boné é novo?",
+              "Aquele boné é novo?",
+              "Aquilo boné é novo?"
+            ],
+            "answer": 0,
+            "explain": "O boné está perto de quem ouve (Téo), então usamos esse.",
+            "from": "Aventura e diversão"
+          },
+          {
+            "type": "mc",
+            "context": "Téo está ao lado da roda-gigante. Lia, longe dela, pergunta a ele: “Qual é a altura ______ roda-gigante?”",
+            "q": "Qual palavra completa a pergunta?",
             "options": [
               "dessa",
               "desta",
@@ -5861,12 +5802,12 @@ const DISCIPLINAS = [
               "deste"
             ],
             "answer": 0,
-            "explain": "Perto de quem ouve usamos esse/essa: de + essa = dessa.",
+            "explain": "A roda-gigante está perto de quem ouve: de + essa = dessa.",
             "from": "Aventura e diversão"
           },
           {
             "type": "mc",
-            "q": "Qual pronome demonstrativo é invariável (não muda para feminino nem plural)?",
+            "q": "Qual pronome demonstrativo é invariável (não muda para feminino nem para plural)?",
             "options": [
               "aquilo",
               "aquela",
@@ -5879,10 +5820,11 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "“— Este cão — pensou o lobo — goza de boa saúde.” Pelo uso de este, o lobo está:",
+            "context": "“— Este cão — pensou o lobo — goza de boa saúde.”",
+            "q": "Pelo uso de este, o lobo está:",
             "options": [
-              "próximo ao cão",
-              "muito distante do cão",
+              "perto do cão",
+              "muito longe do cão",
               "sem ver o cão",
               "dentro de casa"
             ],
@@ -5894,25 +5836,64 @@ const DISCIPLINAS = [
             "type": "mc",
             "q": "Os pronomes demonstrativos indicam:",
             "options": [
-              "a posição das coisas no espaço e no tempo",
+              "a posição das coisas em relação às pessoas",
               "a quem uma coisa pertence",
-              "uma ação ou estado",
+              "uma ação ou um estado",
               "o contrário de uma palavra"
             ],
             "answer": 0,
-            "explain": "Demonstrativos mostram onde está algo em relação às pessoas do discurso. Quem indica posse são os possessivos.",
+            "explain": "Demonstrativos mostram onde está algo. Quem indica posse são os possessivos.",
+            "from": "Aventura e diversão"
+          },
+          {
+            "type": "mc",
+            "context": "Lia segura duas fichas para os brinquedos e mostra a Téo.",
+            "q": "Qual frase está correta?",
+            "options": [
+              "Estas fichas são para a roda-gigante.",
+              "Este fichas são para a roda-gigante.",
+              "Esta fichas são para a roda-gigante.",
+              "Estes fichas são para a roda-gigante."
+            ],
+            "answer": 0,
+            "explain": "Fichas é feminino plural e está perto de quem fala: estas.",
+            "from": "Aventura e diversão"
+          },
+          {
+            "type": "mc",
+            "q": "Em qual frase a palavra destacada é um pronome demonstrativo?",
+            "options": [
+              "AQUELA barraca vende algodão-doce.",
+              "MINHA mãe comprou pipoca.",
+              "NÓS andamos no carrossel.",
+              "TEU ingresso é azul."
+            ],
+            "answer": 0,
+            "explain": "Aquela indica posição. Minha e teu são possessivos; nós é pronome pessoal.",
+            "from": "Aventura e diversão"
+          },
+          {
+            "type": "mc",
+            "context": "Téo está segurando algo que Lia não reconhece.",
+            "q": "Como Lia pergunta?",
+            "options": [
+              "O que é isso na sua mão?",
+              "O que é isto na sua mão?",
+              "O que é aquilo na sua mão?",
+              "O que é esta na sua mão?"
+            ],
+            "answer": 0,
+            "explain": "A coisa está perto de quem ouve (Téo): isso.",
             "from": "Aventura e diversão"
           },
           {
             "type": "text",
-            "q": "De qual revista foi retirado o texto “Como surgiu a montanha-russa?”",
+            "context": "Lia mostra o sorvete que ela mesma está segurando: “______ sorvete é de morango.”",
+            "q": "Escreva o pronome demonstrativo que completa a frase.",
             "answers": [
-              "superinteressante",
-              "super interessante",
-              "revista superinteressante",
-              "mundo estranho"
+              "este"
             ],
-            "explain": "O texto saiu da seção Mundo Estranho, da revista Superinteressante.",
+            "explain": "O sorvete está perto de quem fala, então o mais adequado é este.",
             "from": "Aventura e diversão"
           },
           {
@@ -5926,6 +5907,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "O conto diz que ele não estava habituado a andar em terra e acabou se perdendo na densa floresta.",
+            "context": "Resumo do conto “O fantasma da sorte”: um capitão dos mares, que não estava acostumado a andar em terra, se perde na floresta. Ele chega a um castelo lotado, janta e dorme no quarto do menino. De madrugada, sonha com uma tormenta no mar e, ao acordar, vê uma linda criança cercada de luz, que sorri e desaparece. O nobre explica que ali vive o fantasma de um menino, um fantasma da sorte: quem o vê fica rico e feliz. Depois, o capitão conheceu uma formosa jovem, com quem se casou, e ficou milionário.",
             "from": "Ai, que susto!"
           },
           {
@@ -5939,6 +5921,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Ele sonhou que estava de volta ao mar, no meio de uma terrível tormenta. Ao acordar, viu a criança iluminada.",
+            "context": "Resumo do conto “O fantasma da sorte”: um capitão dos mares, que não estava acostumado a andar em terra, se perde na floresta. Ele chega a um castelo lotado, janta e dorme no quarto do menino. De madrugada, sonha com uma tormenta no mar e, ao acordar, vê uma linda criança cercada de luz, que sorri e desaparece. O nobre explica que ali vive o fantasma de um menino, um fantasma da sorte: quem o vê fica rico e feliz. Depois, o capitão conheceu uma formosa jovem, com quem se casou, e ficou milionário.",
             "from": "Ai, que susto!"
           },
           {
@@ -5952,6 +5935,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "O nobre explica que ali vive o fantasma alegre de um menino, um fantasma da sorte.",
+            "context": "Resumo do conto “O fantasma da sorte”: um capitão dos mares, que não estava acostumado a andar em terra, se perde na floresta. Ele chega a um castelo lotado, janta e dorme no quarto do menino. De madrugada, sonha com uma tormenta no mar e, ao acordar, vê uma linda criança cercada de luz, que sorri e desaparece. O nobre explica que ali vive o fantasma de um menino, um fantasma da sorte: quem o vê fica rico e feliz. Depois, o capitão conheceu uma formosa jovem, com quem se casou, e ficou milionário.",
             "from": "Ai, que susto!"
           },
           {
@@ -5965,6 +5949,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Todos que viam o fantasma da sorte ganhavam dinheiro e eram felizes, e foi o que aconteceu com ele.",
+            "context": "Resumo do conto “O fantasma da sorte”: um capitão dos mares, que não estava acostumado a andar em terra, se perde na floresta. Ele chega a um castelo lotado, janta e dorme no quarto do menino. De madrugada, sonha com uma tormenta no mar e, ao acordar, vê uma linda criança cercada de luz, que sorri e desaparece. O nobre explica que ali vive o fantasma de um menino, um fantasma da sorte: quem o vê fica rico e feliz. Depois, o capitão conheceu uma formosa jovem, com quem se casou, e ficou milionário.",
             "from": "Ai, que susto!"
           },
           {
@@ -5991,6 +5976,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Conheceu e casou são verbos: indicam ações.",
+            "context": "Resumo do conto “O fantasma da sorte”: um capitão dos mares, que não estava acostumado a andar em terra, se perde na floresta. Ele chega a um castelo lotado, janta e dorme no quarto do menino. De madrugada, sonha com uma tormenta no mar e, ao acordar, vê uma linda criança cercada de luz, que sorri e desaparece. O nobre explica que ali vive o fantasma de um menino, um fantasma da sorte: quem o vê fica rico e feliz. Depois, o capitão conheceu uma formosa jovem, com quem se casou, e ficou milionário.",
             "from": "Ai, que susto!"
           },
           {
@@ -6030,6 +6016,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Formosa e bonita têm o mesmo significado: são sinônimos.",
+            "context": "No conto, o capitão “conheceu uma formosa jovem, com quem se casou”.",
             "from": "Ai, que susto!"
           },
           {
@@ -6043,6 +6030,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Sorte pode significar destino, fortuna ou êxito. Azar é o contrário (antônimo).",
+            "context": "O título do conto é “O fantasma da sorte”. No dicionário, a palavra sorte aparece com alguns sinônimos.",
             "from": "Ai, que susto!"
           },
           {
@@ -6056,19 +6044,6 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Antônimo é a palavra de sentido contrário: dormir × acordar.",
-            "from": "Ai, que susto!"
-          },
-          {
-            "type": "mc",
-            "q": "No texto teatral, as informações entre parênteses, em letras maiúsculas, servem para:",
-            "options": [
-              "indicar gestos, movimentos e o cenário",
-              "mostrar a fala do narrador",
-              "dar o título da peça",
-              "indicar o nome do autor"
-            ],
-            "answer": 0,
-            "explain": "Essas informações se chamam rubricas e orientam os atores.",
             "from": "Ai, que susto!"
           },
           {
@@ -6087,46 +6062,8 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Qual é o principal assunto do texto “Medo? Todo mundo tem!”?",
-            "options": [
-              "Os medos das pessoas e jeitos de afastá-los",
-              "Como fazer uma lanterna",
-              "A vida de uma escritora famosa",
-              "Uma história de fantasma inventada"
-            ],
-            "answer": 0,
-            "explain": "O texto reúne depoimentos sobre medos e antídotos para eles.",
-            "from": "Todo mundo tem medo!"
-          },
-          {
-            "type": "mc",
-            "q": "No texto, o que significa a palavra antídoto?",
-            "options": [
-              "O jeito de afastar o medo",
-              "Um tipo de monstro",
-              "Um remédio para dor de cabeça",
-              "O nome de quem conta"
-            ],
-            "answer": 0,
-            "explain": "Cada pessoa conta o seu medo e o seu antídoto, isto é, o que faz para o medo passar.",
-            "from": "Todo mundo tem medo!"
-          },
-          {
-            "type": "mc",
-            "q": "O depoimento é um texto em que uma pessoa:",
-            "options": [
-              "conta experiências que viveu de verdade",
-              "inventa uma história com fadas",
-              "escreve versos com rimas",
-              "dá instruções de um jogo"
-            ],
-            "answer": 0,
-            "explain": "No depoimento, o narrador (depoente) fala das próprias experiências reais.",
-            "from": "Todo mundo tem medo!"
-          },
-          {
-            "type": "mc",
-            "q": "Em “Tenho medo de raio. Também não gosto de história com bruxa”, os verbos tenho e gosto indicam algo que:",
+            "context": "Marcelo, de 6 anos, contou: “Tenho medo de raio. Também não gosto de história com bruxa.”",
+            "q": "Os verbos tenho e gosto indicam algo que:",
             "options": [
               "está acontecendo (presente)",
               "já aconteceu (passado)",
@@ -6139,7 +6076,8 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Como fica “Eu me deito e me cubro” com os verbos no futuro?",
+            "context": "Para afastar o medo, Marcelo diz: “Eu me deito e me cubro.”",
+            "q": "Como fica a frase com os verbos no futuro?",
             "options": [
               "Eu me deitarei e me cobrirei.",
               "Eu me deitei e me cobri.",
@@ -6157,7 +6095,7 @@ const DISCIPLINAS = [
               "passado",
               "presente",
               "futuro",
-              "infinitivo"
+              "plural do substantivo"
             ],
             "answer": 0,
             "explain": "Brincaram termina em -am: a ação já aconteceu.",
@@ -6191,6 +6129,19 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
+            "q": "Qual frase está no presente?",
+            "options": [
+              "Eu conheço muitas histórias.",
+              "Eu conheci muitas histórias.",
+              "Eu conhecerei muitas histórias.",
+              "Eu conhecia muitas histórias."
+            ],
+            "answer": 0,
+            "explain": "Conheço indica o que acontece agora: presente.",
+            "from": "Todo mundo tem medo!"
+          },
+          {
+            "type": "mc",
             "q": "Complete o ditado: “Os cães ______ e a caravana passa.”",
             "options": [
               "ladram",
@@ -6199,7 +6150,7 @@ const DISCIPLINAS = [
               "ladrões"
             ],
             "answer": 0,
-            "explain": "Ladram é o verbo latir no presente. Ladrão é um substantivo.",
+            "explain": "Ladram é verbo (o que os cães fazem). Ladrão é um substantivo.",
             "from": "Todo mundo tem medo!"
           },
           {
@@ -6217,117 +6168,53 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Na tirinha, a bruxa diz “Tá pronta!”. A palavra tá corresponde ao verbo:",
+            "q": "Complete corretamente: “Na semana passada, eles ______ para a praia.”",
             "options": [
-              "estar",
-              "tomar",
-              "tocar",
-              "ter"
+              "viajaram",
+              "viajarão",
+              "viajam",
+              "viajão"
             ],
             "answer": 0,
-            "explain": "Tá é a forma reduzida de está, do verbo estar.",
+            "explain": "Semana passada pede verbo no passado, com -am: viajaram.",
             "from": "Todo mundo tem medo!"
           },
           {
             "type": "mc",
-            "q": "A forma reduzida tá pode ser usada na tirinha porque:",
+            "q": "Complete corretamente: “No próximo sábado, os alunos ______ o teatro.”",
             "options": [
-              "mostra uma situação de linguagem coloquial",
-              "em todo tipo de texto se usa essa forma",
-              "é uma linguagem cerimoniosa",
-              "é um erro de digitação"
+              "visitarão",
+              "visitaram",
+              "visitão",
+              "visitavam"
             ],
             "answer": 0,
-            "explain": "Nas HQs a linguagem costuma ser informal, parecida com a fala do dia a dia.",
+            "explain": "Próximo sábado ainda vai acontecer: futuro, com -ão (visitarão).",
+            "from": "Todo mundo tem medo!"
+          },
+          {
+            "type": "mc",
+            "q": "Qual frase usa o verbo estudar no futuro?",
+            "options": [
+              "Amanhã eu estudarei.",
+              "Ontem eu estudei.",
+              "Hoje eu estudo.",
+              "Eu estudava muito."
+            ],
+            "answer": 0,
+            "explain": "Estudarei indica algo que ainda vai acontecer.",
             "from": "Todo mundo tem medo!"
           },
           {
             "type": "text",
-            "q": "Reescreva o verbo no futuro: “Eles perderam o medo do escuro.” → Eles ______ o medo do escuro.",
+            "context": "Eles perderam o medo do escuro.",
+            "q": "Reescreva o verbo no futuro: Eles ______ o medo do escuro.",
             "answers": [
               "perderao",
               "perderão"
             ],
             "explain": "Perderam (passado, -am) → perderão (futuro, -ão).",
             "from": "Todo mundo tem medo!"
-          },
-          {
-            "type": "mc",
-            "q": "Qual é a finalidade da reportagem sobre a lancheira saudável?",
-            "options": [
-              "Informar sobre alimentação saudável",
-              "Provocar o riso",
-              "Ensinar a preparar um bolo",
-              "Contar uma história de mistério"
-            ],
-            "answer": 0,
-            "explain": "A reportagem traz informações aprofundadas sobre como montar uma lancheira saudável.",
-            "from": "Comer bem para melhor crescer!"
-          },
-          {
-            "type": "mc",
-            "q": "Segundo a reportagem, o que é neofobia?",
-            "options": [
-              "Dificuldade de aceitar alimentos novos",
-              "Medo de ir à escola",
-              "Vontade de comer doces",
-              "Alergia a frutas"
-            ],
-            "answer": 0,
-            "explain": "Neofobia é a dificuldade das crianças em aceitar ou experimentar alimentos novos ou desconhecidos.",
-            "from": "Comer bem para melhor crescer!"
-          },
-          {
-            "type": "mc",
-            "q": "Para a nutricionista, uma lancheira bem colorida:",
-            "options": [
-              "tem mais nutrientes",
-              "é menos saudável",
-              "deve ter só doces",
-              "não faz diferença"
-            ],
-            "answer": 0,
-            "explain": "Cada cor de fruta e vegetal representa nutrientes diferentes: quanto mais colorida, mais nutritiva.",
-            "from": "Comer bem para melhor crescer!"
-          },
-          {
-            "type": "mc",
-            "q": "Qual destes é um ULTRAPROCESSADO, que não é boa opção para a lancheira?",
-            "options": [
-              "achocolatado",
-              "banana",
-              "tomate-cereja",
-              "água de coco"
-            ],
-            "answer": 0,
-            "explain": "Achocolatado, salgadinhos, salsicha e refrigerante são ultraprocessados.",
-            "from": "Comer bem para melhor crescer!"
-          },
-          {
-            "type": "mc",
-            "q": "O primeiro parágrafo da reportagem, que resume o conteúdo da matéria, chama-se:",
-            "options": [
-              "lide",
-              "título",
-              "entretítulo",
-              "assinatura"
-            ],
-            "answer": 0,
-            "explain": "O lide é o primeiro parágrafo e resume a matéria.",
-            "from": "Comer bem para melhor crescer!"
-          },
-          {
-            "type": "mc",
-            "q": "Onde você encontraria outras reportagens como essa?",
-            "options": [
-              "Em jornais e revistas",
-              "Em manuais de instrução",
-              "Em atlas",
-              "Em livros de poemas"
-            ],
-            "answer": 0,
-            "explain": "Reportagens são publicadas em jornais, revistas e sites de notícias.",
-            "from": "Comer bem para melhor crescer!"
           },
           {
             "type": "mc",
@@ -6339,7 +6226,20 @@ const DISCIPLINAS = [
               "oferecem vitaminas"
             ],
             "answer": 0,
-            "explain": "Quem oferece vitaminas? Vegetais. Esse é o sujeito.",
+            "explain": "O que oferece vitaminas? Vegetais. Esse é o sujeito.",
+            "from": "Comer bem para melhor crescer!"
+          },
+          {
+            "type": "mc",
+            "q": "Na frase “Vegetais oferecem vitaminas”, qual é o verbo?",
+            "options": [
+              "oferecem",
+              "Vegetais",
+              "vitaminas",
+              "não há verbo"
+            ],
+            "answer": 0,
+            "explain": "Oferecem é o verbo: indica a ação. Por ter verbo, a frase é uma oração.",
             "from": "Comer bem para melhor crescer!"
           },
           {
@@ -6391,7 +6291,7 @@ const DISCIPLINAS = [
               "nenhuma"
             ],
             "answer": 0,
-            "explain": "Salada é o complemento verbal: completa o sentido de comer (come o quê?).",
+            "explain": "Salada completa o sentido de comer (come o quê?). Ela faz parte do predicado.",
             "from": "Comer bem para melhor crescer!"
           },
           {
@@ -6408,13 +6308,64 @@ const DISCIPLINAS = [
             "from": "Comer bem para melhor crescer!"
           },
           {
-            "type": "text",
-            "q": "Escreva o nome do lugar onde as pessoas são atendidas por médicos. A palavra começa com h.",
-            "answers": [
-              "hospital",
-              "o hospital"
+            "type": "mc",
+            "q": "Na frase “Boa alimentação e exercícios são fundamentais para a saúde”, o sujeito é:",
+            "options": [
+              "Boa alimentação e exercícios",
+              "são fundamentais",
+              "para a saúde",
+              "exercícios"
             ],
-            "explain": "Hospital começa com h, que não tem som no início da palavra.",
+            "answer": 0,
+            "explain": "O que é fundamental? Boa alimentação e exercícios. O sujeito tem duas palavras principais.",
+            "from": "Comer bem para melhor crescer!"
+          },
+          {
+            "type": "mc",
+            "q": "Em “A minha turma fez um piquenique no pátio”, o predicado é:",
+            "options": [
+              "fez um piquenique no pátio",
+              "A minha turma",
+              "A minha turma fez",
+              "no pátio"
+            ],
+            "answer": 0,
+            "explain": "O que se diz da minha turma? Que fez um piquenique no pátio.",
+            "from": "Comer bem para melhor crescer!"
+          },
+          {
+            "type": "mc",
+            "q": "Complete com o verbo que concorda com o sujeito: “Eu e meus amigos ______ no pátio.”",
+            "options": [
+              "lanchamos",
+              "lanchou",
+              "lanchei",
+              "lanchaste"
+            ],
+            "answer": 0,
+            "explain": "Eu e meus amigos = nós. Nós lanchamos.",
+            "from": "Comer bem para melhor crescer!"
+          },
+          {
+            "type": "mc",
+            "q": "Qual frase NÃO precisa de complemento para o verbo?",
+            "options": [
+              "O bebê dorme.",
+              "Papai comprou…",
+              "A cozinheira deu…",
+              "Ela come…"
+            ],
+            "answer": 0,
+            "explain": "Dormir tem sentido completo. Comprar, dar e comer pedem complemento (o quê?).",
+            "from": "Comer bem para melhor crescer!"
+          },
+          {
+            "type": "text",
+            "q": "Escreva o sujeito da frase: “Papai comprou tomates na feira.”",
+            "answers": [
+              "papai"
+            ],
+            "explain": "Quem comprou tomates? Papai.",
             "from": "Comer bem para melhor crescer!"
           },
           {
@@ -6428,6 +6379,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "São 2 estrofes (grupos de versos), cada uma com 4 versos.",
+            "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim.",
             "from": "Ler e escrever: poema e conto de mistério"
           },
           {
@@ -6441,6 +6393,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Janela e panela terminam com o mesmo som: -ela.",
+            "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim.",
             "from": "Ler e escrever: poema e conto de mistério"
           },
           {
@@ -6454,6 +6407,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Pinga, pinga lembra o som das gotas de chuva caindo, assim como tic-tac imita o relógio.",
+            "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim.",
             "from": "Ler e escrever: poema e conto de mistério"
           },
           {
@@ -6467,6 +6421,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Nos poemas é comum dar sentimentos e ações humanas a objetos e à natureza.",
+            "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim.",
             "from": "Ler e escrever: poema e conto de mistério"
           },
           {
@@ -6480,6 +6435,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Todas as noites, às nove horas, ouvia-se toc-toc no sótão.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!",
             "from": "Ler e escrever: poema e conto de mistério"
           },
           {
@@ -6493,6 +6449,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Suspense é o momento de tensão, quando o leitor ainda não sabe o que vai acontecer.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!",
             "from": "Ler e escrever: poema e conto de mistério"
           },
           {
@@ -6506,6 +6463,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "A coruja morava numa caixa velha e batia o bico para chamar os filhotes.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!",
             "from": "Ler e escrever: poema e conto de mistério"
           },
           {
@@ -6519,6 +6477,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "O barulho vinha do sótão da casa da vovó Lúcia.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!",
             "from": "Ler e escrever: poema e conto de mistério"
           },
           {
@@ -6558,6 +6517,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Tremer embaixo do cobertor mostra que eles estavam com medo do barulho.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!",
             "from": "Ler e escrever: poema e conto de mistério"
           },
           {
@@ -6569,11 +6529,13 @@ const DISCIPLINAS = [
               "a coruja"
             ],
             "explain": "Era uma coruja chamando os filhotes.",
+            "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!",
             "from": "Ler e escrever: poema e conto de mistério"
           },
           {
             "type": "mc",
-            "q": "Leia: “Esta é a minha mochila.” As palavras esta e minha são, nessa ordem, pronomes:",
+            "context": "Lia segura a mochila dela e diz: “Esta é a minha mochila.”",
+            "q": "As palavras esta e minha são, nessa ordem, pronomes:",
             "options": [
               "demonstrativo e possessivo",
               "possessivo e demonstrativo",
@@ -6586,23 +6548,10 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Qual texto apresenta fatos reais com datas e locais precisos?",
-            "options": [
-              "Texto informativo",
-              "Conto de mistério",
-              "Poema visual",
-              "Texto teatral"
-            ],
-            "answer": 0,
-            "explain": "O texto informativo traz informações reais e precisas.",
-            "from": "Simulado"
-          },
-          {
-            "type": "mc",
-            "q": "Na frase “Amanhã os alunos apresentarão a pesquisa”, o sujeito e o tempo verbal são:",
+            "q": "Na frase “Amanhã os alunos apresentarão o poema”, o sujeito e o tempo verbal são:",
             "options": [
               "os alunos; futuro",
-              "a pesquisa; passado",
+              "o poema; passado",
               "Amanhã; presente",
               "os alunos; passado"
             ],
@@ -6628,9 +6577,9 @@ const DISCIPLINAS = [
             "q": "Qual gênero textual é organizado em versos e estrofes?",
             "options": [
               "poema",
-              "reportagem",
-              "depoimento",
-              "texto informativo"
+              "conto de mistério",
+              "bilhete",
+              "receita"
             ],
             "answer": 0,
             "explain": "Versos e estrofes são marcas do poema.",
@@ -6651,15 +6600,16 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Uma pessoa conta, em primeira pessoa, uma experiência real que viveu. Esse texto é um:",
+            "context": "Toda noite, às nove horas, um toc-toc vinha do sótão. Pedro e Bia subiram a escada com uma lanterna, tremendo. A porta rangeu… e uma caixa velha se mexeu sozinha!",
+            "q": "Que elemento do conto de mistério aparece nesse trecho?",
             "options": [
-              "depoimento",
-              "poema visual",
-              "conto de mistério",
-              "texto teatral"
+              "suspense",
+              "rima",
+              "estrofe",
+              "título"
             ],
             "answer": 0,
-            "explain": "No depoimento o narrador fala das próprias experiências reais.",
+            "explain": "O momento de tensão, em que ainda não sabemos o que vai acontecer, é o suspense.",
             "from": "Simulado"
           },
           {
@@ -6673,6 +6623,19 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Semana passada pede verbo no passado, com -am: viajaram.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Em “Nossa turma adora poemas”, a palavra nossa é um pronome:",
+            "options": [
+              "possessivo",
+              "demonstrativo",
+              "pessoal",
+              "verbo"
+            ],
+            "answer": 0,
+            "explain": "Nossa indica de quem é a turma: possessivo.",
             "from": "Simulado"
           }
         ]
@@ -6691,6 +6654,7 @@ const DISCIPLINAS = [
         "module": "12",
         "title": "O campo e a cidade",
         "subtitle": "Vida, alimentação, trabalho e migração",
+        "video": "assets/videos/hist12.mp4",
         "theory": [
           {
             "h": "O campo e a cidade",
@@ -6726,7 +6690,6 @@ const DISCIPLINAS = [
               "No <strong>campo</strong>, as pessoas costumam consumir alimentos produzidos perto de casa: ovos, leite, frutas, verduras, carnes e peixes. Por isso, os <strong>alimentos in natura</strong> (em seu estado natural) tendem a ser <strong>mais baratos e frescos</strong>.",
               "Nas <strong>cidades</strong>, os alimentos in natura vêm de longe e nem sempre são tão baratos e frescos. Há muita oferta de <strong>produtos industrializados</strong>, com conservantes, sal ou açúcar. Como as pessoas gastam muito tempo em deslocamentos, têm menos tempo para cozinhar.",
               "Exemplo com milho: a <strong>espiga</strong> é in natura; o <strong>milho em conserva</strong> é processado; o <strong>salgadinho de milho</strong> é ultraprocessado.",
-              "Desde <strong>2023</strong>, uma lei obriga os alimentos industrializados com muito sal, açúcar ou gordura a trazer um aviso no <strong>rótulo</strong> (ALTO EM…).",
               "A indígena guarani Márcia Poty Vidal conta que seu povo prefere alimentos in natura: fubá, canjica, feijão, milho. “A gente luta para não comer coisa empacotada.”"
             ]
           },
@@ -6920,7 +6883,8 @@ const DISCIPLINAS = [
               "Comidas congeladas"
             ],
             "answer": 0,
-            "explain": "In natura = como vêm da natureza: frutas, verduras, ovos, leite."
+            "explain": "In natura = como vêm da natureza: frutas, verduras, ovos, leite.",
+            "context": "No campo, as pessoas costumam consumir alimentos produzidos perto de casa: ovos, leite, frutas, verduras. Por isso, os alimentos in natura (em seu estado natural) tendem a ser mais baratos e frescos. Nas cidades, há muita oferta de produtos industrializados. Exemplo com o milho: a espiga é in natura; o milho em conserva é processado; o salgadinho de milho é ultraprocessado."
           },
           {
             "type": "mc",
@@ -6932,7 +6896,8 @@ const DISCIPLINAS = [
               "Têm muitos conservantes"
             ],
             "answer": 0,
-            "explain": "Os produtores estão próximos, então não há transporte longo."
+            "explain": "Os produtores estão próximos, então não há transporte longo.",
+            "context": "No campo, as pessoas costumam consumir alimentos produzidos perto de casa: ovos, leite, frutas, verduras. Por isso, os alimentos in natura (em seu estado natural) tendem a ser mais baratos e frescos. Nas cidades, há muita oferta de produtos industrializados. Exemplo com o milho: a espiga é in natura; o milho em conserva é processado; o salgadinho de milho é ultraprocessado."
           },
           {
             "type": "mc",
@@ -6944,19 +6909,8 @@ const DISCIPLINAS = [
               "orgânico"
             ],
             "answer": 0,
-            "explain": "Espiga = in natura; milho em conserva = processado; salgadinho = ultraprocessado."
-          },
-          {
-            "type": "mc",
-            "q": "Desde 2023, o que os alimentos com muito sal, açúcar ou gordura devem trazer?",
-            "options": [
-              "Um aviso no rótulo",
-              "Um brinquedo dentro",
-              "Um preço mais baixo",
-              "Uma receita no verso"
-            ],
-            "answer": 0,
-            "explain": "A lei obriga o aviso ALTO EM sódio, açúcar ou gordura no rótulo."
+            "explain": "Espiga = in natura; milho em conserva = processado; salgadinho = ultraprocessado.",
+            "context": "No campo, as pessoas costumam consumir alimentos produzidos perto de casa: ovos, leite, frutas, verduras. Por isso, os alimentos in natura (em seu estado natural) tendem a ser mais baratos e frescos. Nas cidades, há muita oferta de produtos industrializados. Exemplo com o milho: a espiga é in natura; o milho em conserva é processado; o salgadinho de milho é ultraprocessado."
           },
           {
             "type": "mc",
@@ -6968,7 +6922,8 @@ const DISCIPLINAS = [
               "do litoral para as florestas"
             ],
             "answer": 0,
-            "explain": "Com a industrialização das cidades, muitos deixaram o campo em busca de trabalho."
+            "explain": "Com a industrialização das cidades, muitos deixaram o campo em busca de trabalho.",
+            "context": "Até meados do século passado, a maioria dos brasileiros vivia e trabalhava no campo. A partir dos anos 1950, com a chegada de máquinas ao campo, havia menos trabalho para as pessoas. Ao mesmo tempo, as indústrias, o comércio e os serviços cresciam nas cidades. Muitos camponeses migraram para as cidades em busca de novas oportunidades de trabalho. Nos anos 1970, mais da metade da população brasileira já vivia em cidades."
           },
           {
             "type": "mc",
@@ -6980,7 +6935,8 @@ const DISCIPLINAS = [
               "A vontade de ter mais lazer"
             ],
             "answer": 0,
-            "explain": "As indústrias e o comércio nas cidades ofereciam trabalho, e as máquinas no campo diminuíam as vagas."
+            "explain": "As indústrias e o comércio nas cidades ofereciam trabalho, e as máquinas no campo diminuíam as vagas.",
+            "context": "Até meados do século passado, a maioria dos brasileiros vivia e trabalhava no campo. A partir dos anos 1950, com a chegada de máquinas ao campo, havia menos trabalho para as pessoas. Ao mesmo tempo, as indústrias, o comércio e os serviços cresciam nas cidades. Muitos camponeses migraram para as cidades em busca de novas oportunidades de trabalho. Nos anos 1970, mais da metade da população brasileira já vivia em cidades."
           },
           {
             "type": "mc",
@@ -6992,7 +6948,8 @@ const DISCIPLINAS = [
               "turistas"
             ],
             "answer": 0,
-            "explain": "Neo-rurais fazem o caminho inverso: deixam a cidade para viver e trabalhar no campo."
+            "explain": "Neo-rurais fazem o caminho inverso: deixam a cidade para viver e trabalhar no campo.",
+            "context": "Eder e Edna moravam na Região Metropolitana de Curitiba, uma área urbana. Eles deixaram a vida na cidade, foram morar na área rural e hoje produzem morangos em Mandirituba (PR). Pessoas que trocam a cidade pelo campo são chamadas de neo-rurais."
           },
           {
             "type": "mc",
@@ -7004,19 +6961,8 @@ const DISCIPLINAS = [
               "morar em outro país"
             ],
             "answer": 0,
-            "explain": "O casal foi para Mandirituba (PR) e produz morangos."
-          },
-          {
-            "type": "mc",
-            "q": "As fotos de colheita de café de 1930 (manual) e de 2022 (com máquina) mostram que:",
-            "options": [
-              "as máquinas mudaram o trabalho no campo",
-              "o café não é mais plantado",
-              "o trabalho no campo nunca mudou",
-              "só crianças trabalham no campo"
-            ],
-            "answer": 0,
-            "explain": "A colheita mecanizada exige menos pessoas: é a modernização do campo."
+            "explain": "O casal foi para Mandirituba (PR) e produz morangos.",
+            "context": "Eder e Edna moravam na Região Metropolitana de Curitiba, uma área urbana. Eles deixaram a vida na cidade, foram morar na área rural e hoje produzem morangos em Mandirituba (PR). Pessoas que trocam a cidade pelo campo são chamadas de neo-rurais."
           },
           {
             "type": "text",
@@ -7026,7 +6972,8 @@ const DISCIPLINAS = [
               "anos 1970",
               "decada de 1970"
             ],
-            "explain": "Nos anos 1970, mais da metade dos brasileiros já vivia em cidades."
+            "explain": "Nos anos 1970, mais da metade dos brasileiros já vivia em cidades.",
+            "context": "Até meados do século passado, a maioria dos brasileiros vivia e trabalhava no campo. A partir dos anos 1950, com a chegada de máquinas ao campo, havia menos trabalho para as pessoas. Ao mesmo tempo, as indústrias, o comércio e os serviços cresciam nas cidades. Muitos camponeses migraram para as cidades em busca de novas oportunidades de trabalho. Nos anos 1970, mais da metade da população brasileira já vivia em cidades."
           }
         ]
       },
@@ -7050,29 +6997,7 @@ const DISCIPLINAS = [
               "Brincar é importante para <strong>todos</strong>: crianças, jovens, adultos e idosos.",
               "Os adultos costumam ter <strong>hobbies</strong>. <em>Hobby</em> é uma palavra inglesa para atividades feitas só como lazer ou passatempo: colecionar coisas, pintar, desenhar, tocar um instrumento.",
               "Fotos do livro: indígenas guarani jogando <strong>peteca</strong> (brincadeira de <strong>origem indígena</strong>), homens jogando <strong>capoeira</strong>, mulher praticando <em>slackline</em>, pessoas jogando basquete.",
-              "Especialistas dizem que brincar ajuda os adultos a <strong>fortalecer laços sociais, melhorar a memória, estimular a imaginação e o raciocínio</strong>.",
-              "No Brasil, o lazer ainda pode ser um <strong>privilégio</strong>: muitos trabalham demais, gastam horas no trânsito ou moram em lugares sem parques, praias e praças."
-            ]
-          },
-          {
-            "h": "O direito ao lazer e ao descanso",
-            "figure": {
-              "src": "assets/4b/hist13-direitos.svg",
-              "alt": "Linha do tempo dos direitos: 1925 férias de 15 dias, 1943 CLT, 1948 Declaração Universal dos Direitos Humanos, 1977 férias de 30 dias, 1988 Constituição Federal com descanso semanal remunerado.",
-              "tipo": "diagrama"
-            },
-            "p": [
-              "Depois da Segunda Guerra Mundial (1945), foi criada a <strong>ONU</strong>. Em <strong>1948</strong>, os países assinaram a <strong>Declaração Universal dos Direitos Humanos</strong>, que garante o <strong>direito ao repouso e ao lazer</strong> (Artigo 24). <strong>Eleanor Roosevelt</strong>, a “primeira-dama do mundo”, presidiu a comissão que a elaborou.",
-              "No Brasil, a <strong>Constituição Federal de 1988</strong> garante o <strong>descanso semanal remunerado</strong>: quem trabalha tem direito a descansar sem desconto no salário (normalmente no domingo).",
-              "As férias também foram conquistadas aos poucos: <strong>1925</strong> – 15 dias de férias para trabalhadores urbanos; <strong>1943</strong> – a <strong>CLT</strong> (Consolidação das Leis do Trabalho); <strong>1977</strong> – férias de <strong>30 dias</strong>.",
-              "As leis trabalhistas existem porque <strong>os trabalhadores lutaram por elas</strong> durante décadas, e não só pela boa vontade dos governos."
-            ]
-          },
-          {
-            "h": "O lazer gera trabalho",
-            "p": [
-              "Lazer e trabalho estão interligados: <strong>enquanto alguns se divertem, outros trabalham</strong>. O lazer gera empregos e riquezas para o país.",
-              "Profissionais do lazer e do entretenimento: cantores, cineastas, fotógrafos, músicos, atores, técnicos de som, pipoqueiros, guias de turismo…"
+              "Especialistas dizem que brincar ajuda os adultos a <strong>fortalecer laços sociais, melhorar a memória, estimular a imaginação e o raciocínio</strong>."
             ]
           },
           {
@@ -7094,45 +7019,45 @@ const DISCIPLINAS = [
         "games": [
           {
             "type": "sort",
-            "title": "Lazer ou trabalho?",
-            "short": "Lazer ou trabalho",
-            "instructions": "A pessoa está em momento de lazer ou trabalhando?",
+            "title": "É lazer?",
+            "short": "É lazer?",
+            "instructions": "Esta atividade é um momento de lazer (descanso e diversão)?",
             "categories": [
-              "Lazer 🎉",
-              "Trabalho 🛠️"
+              "É lazer 🎉",
+              "Não é lazer 🛠️"
             ],
             "items": [
               {
-                "text": "Pessoas comendo pipoca e vendo um filme",
+                "text": "Um advogado canta no tempo livre para relaxar.",
                 "cat": 0
               },
               {
-                "text": "Equipe filmando um filme no estúdio",
+                "text": "Um adulto trabalha 8 horas no escritório.",
                 "cat": 1
               },
               {
-                "text": "Amigos jogando peteca no fim de semana",
+                "text": "Uma família joga peteca no fim de semana.",
                 "cat": 0
               },
               {
-                "text": "Trapezista se apresentando no circo",
+                "text": "Uma engenheira faz os cálculos de uma ponte no trabalho.",
                 "cat": 1
               },
               {
-                "text": "Família fazendo piquenique no parque",
+                "text": "Um casal fotografa paisagens nas férias.",
                 "cat": 0
               },
               {
-                "text": "Pipoqueiro vendendo pipoca no circo",
-                "cat": 1
-              },
-              {
-                "text": "Engenheira cozinhando por diversão no domingo",
+                "text": "Amigos jogam basquete na praça.",
                 "cat": 0
               },
               {
-                "text": "Técnico preparando turistas para o arvorismo",
+                "text": "Uma professora corrige provas na escola.",
                 "cat": 1
+              },
+              {
+                "text": "Uma pessoa coleciona selos por diversão.",
+                "cat": 0
               }
             ]
           },
@@ -7170,34 +7095,6 @@ const DISCIPLINAS = [
                 "text": "Circo sem animais, com palhaços e mágicos",
                 "cat": 1
               }
-            ]
-          },
-          {
-            "type": "pairs",
-            "title": "Linha do tempo dos direitos",
-            "short": "Direitos conquistados",
-            "instructions": "Ligue cada data à conquista.",
-            "pairs": [
-              [
-                "1925",
-                "15 dias de férias para trabalhadores urbanos"
-              ],
-              [
-                "1943",
-                "CLT – Consolidação das Leis do Trabalho"
-              ],
-              [
-                "1948",
-                "Declaração Universal dos Direitos Humanos"
-              ],
-              [
-                "1977",
-                "Férias de 30 dias"
-              ],
-              [
-                "1988",
-                "Constituição Federal: descanso semanal remunerado"
-              ]
             ]
           }
         ],
@@ -7248,55 +7145,21 @@ const DISCIPLINAS = [
               "portuguesa"
             ],
             "answer": 0,
-            "explain": "O livro mostra indígenas guarani jogando peteca feita de folha de palmeira."
+            "explain": "O livro mostra indígenas guarani jogando peteca feita de folha de palmeira.",
+            "context": "Uma foto do livro mostra pessoas indígenas da etnia Guarani jogando peteca feita de folha de palmeira, em Bertioga (SP)."
           },
           {
             "type": "mc",
-            "q": "Qual documento de 1948 garante o direito ao repouso e ao lazer?",
+            "context": "Especialistas dizem que brincar não é só coisa de criança. Para os adultos, as brincadeiras e os jogos ajudam a fortalecer laços com outras pessoas, melhorar a memória, estimular a imaginação e o raciocínio.",
+            "q": "Segundo o texto, brincar ajuda os adultos a:",
             "options": [
-              "Declaração Universal dos Direitos Humanos",
-              "Constituição de 1988",
-              "Lei dos rótulos de 2023",
-              "Certidão de nascimento"
+              "melhorar a memória e a imaginação",
+              "trabalhar mais horas por dia",
+              "não precisar de descanso",
+              "esquecer os amigos"
             ],
             "answer": 0,
-            "explain": "O Artigo 24 da Declaração diz que todo ser humano tem direito a repouso e lazer."
-          },
-          {
-            "type": "mc",
-            "q": "A Constituição Federal de 1988 garante aos trabalhadores:",
-            "options": [
-              "o descanso semanal remunerado",
-              "trabalhar sem nenhum descanso",
-              "férias de 15 dias apenas",
-              "salário só para quem não descansa"
-            ],
-            "answer": 0,
-            "explain": "Quem trabalha tem direito a um dia de descanso por semana sem desconto no salário."
-          },
-          {
-            "type": "mc",
-            "q": "As leis trabalhistas, como as férias de 30 dias, existem hoje porque:",
-            "options": [
-              "os trabalhadores lutaram por elas",
-              "o governo teve boa vontade",
-              "sempre existiram",
-              "foram criadas em 1925 e nunca mudaram"
-            ],
-            "answer": 0,
-            "explain": "A historiadora explica que houve décadas de luta dos trabalhadores."
-          },
-          {
-            "type": "mc",
-            "q": "O que significa a frase “Enquanto alguns se divertem, outros trabalham”?",
-            "options": [
-              "O lazer de uns depende do trabalho de outros",
-              "Ninguém trabalha nas festas",
-              "Só crianças trabalham",
-              "Lazer e trabalho nunca se misturam"
-            ],
-            "answer": 0,
-            "explain": "Cantores, técnicos, pipoqueiros e muitos outros trabalham para garantir a diversão das pessoas."
+            "explain": "Brincar é importante para todas as idades: fortalece laços, melhora a memória e estimula a imaginação."
           },
           {
             "type": "mc",
@@ -7308,7 +7171,8 @@ const DISCIPLINAS = [
               "Exibidos só na televisão"
             ],
             "answer": 0,
-            "explain": "Os primeiros filmes não tinham som nem cores e eram exibidos nos cinemas de rua."
+            "explain": "Os primeiros filmes não tinham som nem cores e eram exibidos nos cinemas de rua.",
+            "context": "Quando o cinema foi inventado, no final do século 19, os filmes não tinham som nem cores e eram exibidos em salas na rua, os “cinemas de rua”. As pessoas se vestiam de maneira formal. Hoje, muitas salas ficam em shopping centers e os ingressos podem ser comprados pela internet. Apenas 7% dos municípios brasileiros têm sala de cinema: cerca de 90 milhões de pessoas vivem em cidades sem cinema."
           },
           {
             "type": "mc",
@@ -7320,7 +7184,8 @@ const DISCIPLINAS = [
               "o cinema é um lazer para todos"
             ],
             "answer": 0,
-            "explain": "Só 7% dos municípios têm sala de cinema; cerca de 90 milhões vivem em cidades sem cinema."
+            "explain": "Só 7% dos municípios têm sala de cinema; cerca de 90 milhões vivem em cidades sem cinema.",
+            "context": "O Brasil nunca teve tantas salas de cinema quanto hoje, mas isso não significa que elas estejam disponíveis para todos. Apenas 7% dos municípios têm uma sala de exibição. Isso significa que 90 milhões de brasileiros vivem em cidades onde não há cinema."
           },
           {
             "type": "mc",
@@ -7332,7 +7197,8 @@ const DISCIPLINAS = [
               "Porque os animais não viajam"
             ],
             "answer": 0,
-            "explain": "As pessoas estão mais conscientes dos maus-tratos aos animais."
+            "explain": "As pessoas estão mais conscientes dos maus-tratos aos animais.",
+            "context": "O circo é um entretenimento antigo. No passado, as atrações com animais eram comuns; hoje são raras, porque as pessoas estão mais conscientes dos maus-tratos aos animais. O que não mudou é a tradição itinerante: o circo viaja de cidade em cidade, monta a tenda e se apresenta no picadeiro, a área central do circo."
           },
           {
             "type": "mc",
@@ -7344,7 +7210,8 @@ const DISCIPLINAS = [
               "tem só um artista"
             ],
             "answer": 0,
-            "explain": "Itinerante = que viaja, se desloca constantemente."
+            "explain": "Itinerante = que viaja, se desloca constantemente.",
+            "context": "O circo é um entretenimento antigo. No passado, as atrações com animais eram comuns; hoje são raras, porque as pessoas estão mais conscientes dos maus-tratos aos animais. O que não mudou é a tradição itinerante: o circo viaja de cidade em cidade, monta a tenda e se apresenta no picadeiro, a área central do circo."
           },
           {
             "type": "text",
@@ -7353,7 +7220,8 @@ const DISCIPLINAS = [
               "picadeiro",
               "o picadeiro"
             ],
-            "explain": "Picadeiro é a área central do circo, reservada às atrações."
+            "explain": "Picadeiro é a área central do circo, reservada às atrações.",
+            "context": "O circo é um entretenimento antigo. No passado, as atrações com animais eram comuns; hoje são raras, porque as pessoas estão mais conscientes dos maus-tratos aos animais. O que não mudou é a tradição itinerante: o circo viaja de cidade em cidade, monta a tenda e se apresenta no picadeiro, a área central do circo."
           }
         ]
       },
@@ -7367,7 +7235,6 @@ const DISCIPLINAS = [
             "h": "Muitos motivos e jeitos de festejar",
             "p": [
               "<strong>Festejar</strong> é reunir-se para <strong>celebrar uma tradição ou um acontecimento</strong>: um ano novo, uma colheita, o nascimento de uma criança, a posse de um líder… É um costume muito antigo.",
-              "Algumas festas acontecem em quase todo o país, como o <strong>Ano-Novo</strong> (31 de dezembro para 1º de janeiro). Outras são de uma região, como o <strong>Festival Folclórico de Parintins</strong> (AM), no fim de junho, com os bois Garantido e Caprichoso.",
               "Muitas festas antigas de <strong>origem religiosa</strong> foram trazidas pelos <strong>portugueses</strong>. Um exemplo é a <strong>Folia do Divino</strong>, uma das celebrações mais antigas do catolicismo popular brasileiro.",
               "Os povos indígenas também têm suas festas. O <strong>Kuarup</strong>, dos povos do <strong>Xingu</strong> (MT), é um ritual de <strong>homenagem às pessoas que já morreram</strong>: eles acreditam que os mortos não querem ver os vivos tristes. Há pinturas corporais, flautas uruá e a luta huka-huka."
             ]
@@ -7376,7 +7243,7 @@ const DISCIPLINAS = [
             "h": "Brasil, um país festeiro",
             "figure": {
               "src": "assets/4b/hist14-festas.svg",
-              "alt": "Calendário de festas brasileiras: Carnaval em fevereiro e março, festas juninas em junho com Santo Antônio, São João e São Pedro, Parintins em junho, Círio de Nazaré em outubro, Oktoberfest em outubro e Congada.",
+              "alt": "Calendário de festas brasileiras: Carnaval em fevereiro e março, festas juninas em junho com Santo Antônio, São João e São Pedro, Círio de Nazaré em outubro, Congada, Kuarup e Folia do Divino.",
               "tipo": "diagrama"
             },
             "p": [
@@ -7384,15 +7251,6 @@ const DISCIPLINAS = [
               "<strong>Círio de Nazaré</strong>: festa religiosa em <strong>Belém (PA)</strong>, todo mês de <strong>outubro</strong>, há mais de duzentos anos. Milhares de romeiros caminham em homenagem a Nossa Senhora de Nazaré. A devoção também veio de Portugal.",
               "<strong>Congada</strong>: trazida pelos <strong>africanos</strong>. Lembra a coroação do rei e da rainha do antigo Reino do Congo, na África.",
               "<strong>Carnaval</strong>: herança dos portugueses, acontece entre <strong>fevereiro e março</strong>. O Carnaval do <strong>Rio de Janeiro</strong> é o maior do mundo (Livro dos Recordes). Também é famoso em Recife e Olinda (bonecos gigantes), Salvador, São Paulo e Belo Horizonte."
-            ]
-          },
-          {
-            "h": "Cada cidade, uma festa",
-            "p": [
-              "Quase toda cidade tem sua festa. Muitas celebram o <strong>aniversário de fundação</strong>: Salvador (29 de março de 1549) e São Paulo (25 de janeiro de 1554).",
-              "Os imigrantes também trouxeram festas: o <strong>Bon Odori</strong>, dos descendentes de <strong>japoneses</strong> em São Paulo, e a <strong>Oktoberfest</strong>, que celebra as tradições <strong>alemãs</strong> em Blumenau (SC), em outubro.",
-              "O <strong>bumba meu boi</strong>, festejado principalmente no Nordeste, tem mais de duzentos anos. Conta a história de <strong>Pai Francisco e Mãe Catirina</strong>, um casal de negros escravizados: Catirina, grávida, queria comer língua de boi; Francisco matou o boi mais bonito da fazenda; os curandeiros ressuscitaram o boi e todos festejaram.",
-              "<strong>Feriados</strong> são dias em que a maioria não trabalha nem vai à escola: 1º de janeiro, 21 de abril (Tiradentes), 1º de maio (Trabalho), 7 de setembro (Independência), 12 de outubro, 15 de novembro, 20 de novembro (Consciência Negra) e 25 de dezembro (Natal)."
             ]
           }
         ],
@@ -7405,8 +7263,7 @@ const DISCIPLINAS = [
             "categories": [
               "Portugueses ⛪",
               "Africanos 👑",
-              "Indígenas 🪶",
-              "Imigrantes europeus e asiáticos 🌍"
+              "Indígenas 🪶"
             ],
             "items": [
               {
@@ -7422,16 +7279,8 @@ const DISCIPLINAS = [
                 "cat": 2
               },
               {
-                "text": "Oktoberfest",
-                "cat": 3
-              },
-              {
                 "text": "Folia do Divino",
                 "cat": 0
-              },
-              {
-                "text": "Bon Odori",
-                "cat": 3
               },
               {
                 "text": "Círio de Nazaré (a devoção)",
@@ -7440,6 +7289,14 @@ const DISCIPLINAS = [
               {
                 "text": "Carnaval",
                 "cat": 0
+              },
+              {
+                "text": "Ritual que homenageia os mortos no Xingu",
+                "cat": 2
+              },
+              {
+                "text": "Coroação do rei e da rainha do Congo",
+                "cat": 1
               }
             ]
           },
@@ -7454,16 +7311,8 @@ const DISCIPLINAS = [
                 "Belém (PA), em outubro"
               ],
               [
-                "Festival de Parintins",
-                "Amazonas, no fim de junho"
-              ],
-              [
                 "Kuarup",
                 "Parque Indígena do Xingu (MT)"
-              ],
-              [
-                "Oktoberfest",
-                "Blumenau (SC)"
               ],
               [
                 "Maior Carnaval do mundo",
@@ -7472,6 +7321,10 @@ const DISCIPLINAS = [
               [
                 "Bonecos gigantes no Carnaval",
                 "Olinda (PE)"
+              ],
+              [
+                "Folia do Divino",
+                "festa religiosa trazida pelos portugueses"
               ]
             ]
           },
@@ -7519,7 +7372,8 @@ const DISCIPLINAS = [
               "indígenas"
             ],
             "answer": 0,
-            "explain": "São festas de origem religiosa trazidas pelos portugueses."
+            "explain": "São festas de origem religiosa trazidas pelos portugueses.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram."
           },
           {
             "type": "mc",
@@ -7531,7 +7385,8 @@ const DISCIPLINAS = [
               "São Benedito"
             ],
             "answer": 0,
-            "explain": "Santo Antônio dia 13, São João dia 24 e São Pedro dia 29."
+            "explain": "Santo Antônio dia 13, São João dia 24 e São Pedro dia 29.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram."
           },
           {
             "type": "mc",
@@ -7543,7 +7398,8 @@ const DISCIPLINAS = [
               "no Xingu, em dezembro"
             ],
             "answer": 0,
-            "explain": "Todo mês de outubro, milhares de romeiros caminham em Belém em homenagem a Nossa Senhora de Nazaré."
+            "explain": "Todo mês de outubro, milhares de romeiros caminham em Belém em homenagem a Nossa Senhora de Nazaré.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram."
           },
           {
             "type": "mc",
@@ -7555,7 +7411,8 @@ const DISCIPLINAS = [
               "japoneses"
             ],
             "answer": 0,
-            "explain": "A Congada lembra a coroação do rei e da rainha do antigo Reino do Congo, na África."
+            "explain": "A Congada lembra a coroação do rei e da rainha do antigo Reino do Congo, na África.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram."
           },
           {
             "type": "mc",
@@ -7567,7 +7424,8 @@ const DISCIPLINAS = [
               "é uma festa de origem alemã"
             ],
             "answer": 0,
-            "explain": "Os povos do Xingu acreditam que os mortos não querem ver os vivos tristes."
+            "explain": "Os povos do Xingu acreditam que os mortos não querem ver os vivos tristes.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram."
           },
           {
             "type": "mc",
@@ -7579,77 +7437,33 @@ const DISCIPLINAS = [
               "São Paulo"
             ],
             "answer": 0,
-            "explain": "São mais de 2 milhões de pessoas por dia nas ruas do Rio de Janeiro."
+            "explain": "São mais de 2 milhões de pessoas por dia nas ruas do Rio de Janeiro.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram."
           },
           {
             "type": "mc",
-            "q": "A Oktoberfest, em Blumenau (SC), celebra as tradições dos imigrantes:",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram.",
+            "q": "Qual destas festas tem origem africana?",
             "options": [
-              "alemães",
-              "japoneses",
-              "africanos",
-              "portugueses"
+              "Congada",
+              "Festas juninas",
+              "Círio de Nazaré",
+              "Kuarup"
             ],
             "answer": 0,
-            "explain": "É um festival parecido com o de Munique, na Alemanha."
-          },
-          {
-            "type": "mc",
-            "q": "O Bon Odori é um festival dos descendentes de:",
-            "options": [
-              "japoneses",
-              "alemães",
-              "italianos",
-              "indígenas"
-            ],
-            "answer": 0,
-            "explain": "No estado de São Paulo, descendentes de japoneses celebram o Bon Odori."
-          },
-          {
-            "type": "mc",
-            "q": "O bumba meu boi conta a história de:",
-            "options": [
-              "Pai Francisco e Mãe Catirina",
-              "Santo Antônio e São Pedro",
-              "dom Pedro I",
-              "um rei do Congo"
-            ],
-            "answer": 0,
-            "explain": "Catirina queria comer língua de boi; o boi foi morto e depois ressuscitado pelos curandeiros."
-          },
-          {
-            "type": "mc",
-            "q": "Muitas cidades fazem festa para celebrar:",
-            "options": [
-              "o aniversário de fundação",
-              "o fim das aulas",
-              "o primeiro dia de chuva",
-              "a troca de prefeito"
-            ],
-            "answer": 0,
-            "explain": "Salvador (29/3/1549) e São Paulo (25/1/1554) comemoram sua fundação."
-          },
-          {
-            "type": "mc",
-            "q": "Qual destes feriados é religioso?",
-            "options": [
-              "25 de dezembro (Natal)",
-              "7 de setembro (Independência)",
-              "1º de maio (Dia do Trabalho)",
-              "21 de abril (Tiradentes)"
-            ],
-            "answer": 0,
-            "explain": "O Natal é um feriado religioso, comemorado pelos cristãos."
+            "explain": "A Congada foi trazida pelos africanos."
           },
           {
             "type": "text",
-            "q": "Em que estado brasileiro fica Parintins, onde acontece o Festival Folclórico?",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram.",
+            "q": "Em que cidade acontece o Círio de Nazaré?",
             "answers": [
-              "amazonas",
-              "am",
-              "o amazonas"
+              "belem",
+              "belém",
+              "belem pa",
+              "belém (pa)"
             ],
-            "explain": "Parintins fica no Amazonas (AM)."
+            "explain": "O Círio de Nazaré acontece em Belém, no Pará."
           }
         ]
       },
@@ -7666,8 +7480,8 @@ const DISCIPLINAS = [
             "h": "Resumo da prova de História",
             "p": [
               "<strong>Módulo 12 – O campo e a cidade:</strong> cidade (zona urbana) tem prédios altos e construções próximas; campo (zona rural) tem sítios, fazendas, ruas de terra e ritmo mais calmo. No campo há mais alimentos in natura; na cidade, mais industrializados. A partir de 1950, muitos migraram do campo para as cidades em busca de trabalho; em 1970, mais da metade já vivia nas cidades. Hoje há neo-rurais.",
-              "<strong>Módulo 13 – Trabalho e lazer:</strong> lazer é descanso e diversão, importante para todas as idades. Adultos têm hobbies. Direitos: Declaração Universal dos Direitos Humanos (1948), CLT (1943), férias de 30 dias (1977), Constituição de 1988 (descanso semanal remunerado), conquistados pela luta dos trabalhadores. O lazer gera trabalho. Cinema: no início sem som e sem cor, nos cinemas de rua; hoje em shoppings. Circo: itinerante, hoje quase sem animais.",
-              "<strong>Módulo 14 – Muitos jeitos de festejar:</strong> festas juninas (portugueses; 13, 24 e 29 de junho), Folia do Divino e Círio de Nazaré (religiosas, Belém, outubro), Congada (africanos), Kuarup (indígenas do Xingu), Carnaval (Rio é o maior do mundo), Oktoberfest (alemães), Bon Odori (japoneses), bumba meu boi (Pai Francisco e Mãe Catirina)."
+              "<strong>Módulo 13 – Trabalho e lazer:</strong> lazer é descanso e diversão, importante para todas as idades. Adultos também brincam e têm hobbies (colecionar, pintar, tocar um instrumento); brincar ajuda a memória e a imaginação. Cinema: no início sem som e sem cor, nos cinemas de rua, com roupa formal; hoje em shoppings e com ingresso pela internet. Circo: itinerante, se apresenta no picadeiro e hoje quase não usa animais.",
+              "<strong>Módulo 14 – Muitos jeitos de festejar:</strong> festejar é reunir-se para celebrar uma tradição ou acontecimento. Festas juninas (portugueses; 13, 24 e 29 de junho), Folia do Divino e Círio de Nazaré (religiosas; Círio em Belém, em outubro), Congada (africanos), Kuarup (indígenas do Xingu, homenagem aos mortos), Carnaval (o do Rio de Janeiro é o maior do mundo)."
             ],
             "cards": [
               {
@@ -7694,11 +7508,6 @@ const DISCIPLINAS = [
                 "icon": "🎨",
                 "t": "hobby",
                 "d": "passatempo"
-              },
-              {
-                "icon": "📜",
-                "t": "1948",
-                "d": "Direitos Humanos"
               },
               {
                 "icon": "🎪",
@@ -7775,6 +7584,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "In natura = como vêm da natureza: frutas, verduras, ovos, leite.",
+            "context": "No campo, as pessoas costumam consumir alimentos produzidos perto de casa: ovos, leite, frutas, verduras. Por isso, os alimentos in natura (em seu estado natural) tendem a ser mais baratos e frescos. Nas cidades, há muita oferta de produtos industrializados. Exemplo com o milho: a espiga é in natura; o milho em conserva é processado; o salgadinho de milho é ultraprocessado.",
             "from": "O campo e a cidade"
           },
           {
@@ -7788,6 +7598,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Os produtores estão próximos, então não há transporte longo.",
+            "context": "No campo, as pessoas costumam consumir alimentos produzidos perto de casa: ovos, leite, frutas, verduras. Por isso, os alimentos in natura (em seu estado natural) tendem a ser mais baratos e frescos. Nas cidades, há muita oferta de produtos industrializados. Exemplo com o milho: a espiga é in natura; o milho em conserva é processado; o salgadinho de milho é ultraprocessado.",
             "from": "O campo e a cidade"
           },
           {
@@ -7801,19 +7612,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Espiga = in natura; milho em conserva = processado; salgadinho = ultraprocessado.",
-            "from": "O campo e a cidade"
-          },
-          {
-            "type": "mc",
-            "q": "Desde 2023, o que os alimentos com muito sal, açúcar ou gordura devem trazer?",
-            "options": [
-              "Um aviso no rótulo",
-              "Um brinquedo dentro",
-              "Um preço mais baixo",
-              "Uma receita no verso"
-            ],
-            "answer": 0,
-            "explain": "A lei obriga o aviso ALTO EM sódio, açúcar ou gordura no rótulo.",
+            "context": "No campo, as pessoas costumam consumir alimentos produzidos perto de casa: ovos, leite, frutas, verduras. Por isso, os alimentos in natura (em seu estado natural) tendem a ser mais baratos e frescos. Nas cidades, há muita oferta de produtos industrializados. Exemplo com o milho: a espiga é in natura; o milho em conserva é processado; o salgadinho de milho é ultraprocessado.",
             "from": "O campo e a cidade"
           },
           {
@@ -7827,6 +7626,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Com a industrialização das cidades, muitos deixaram o campo em busca de trabalho.",
+            "context": "Até meados do século passado, a maioria dos brasileiros vivia e trabalhava no campo. A partir dos anos 1950, com a chegada de máquinas ao campo, havia menos trabalho para as pessoas. Ao mesmo tempo, as indústrias, o comércio e os serviços cresciam nas cidades. Muitos camponeses migraram para as cidades em busca de novas oportunidades de trabalho. Nos anos 1970, mais da metade da população brasileira já vivia em cidades.",
             "from": "O campo e a cidade"
           },
           {
@@ -7840,6 +7640,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "As indústrias e o comércio nas cidades ofereciam trabalho, e as máquinas no campo diminuíam as vagas.",
+            "context": "Até meados do século passado, a maioria dos brasileiros vivia e trabalhava no campo. A partir dos anos 1950, com a chegada de máquinas ao campo, havia menos trabalho para as pessoas. Ao mesmo tempo, as indústrias, o comércio e os serviços cresciam nas cidades. Muitos camponeses migraram para as cidades em busca de novas oportunidades de trabalho. Nos anos 1970, mais da metade da população brasileira já vivia em cidades.",
             "from": "O campo e a cidade"
           },
           {
@@ -7853,6 +7654,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Neo-rurais fazem o caminho inverso: deixam a cidade para viver e trabalhar no campo.",
+            "context": "Eder e Edna moravam na Região Metropolitana de Curitiba, uma área urbana. Eles deixaram a vida na cidade, foram morar na área rural e hoje produzem morangos em Mandirituba (PR). Pessoas que trocam a cidade pelo campo são chamadas de neo-rurais.",
             "from": "O campo e a cidade"
           },
           {
@@ -7866,19 +7668,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "O casal foi para Mandirituba (PR) e produz morangos.",
-            "from": "O campo e a cidade"
-          },
-          {
-            "type": "mc",
-            "q": "As fotos de colheita de café de 1930 (manual) e de 2022 (com máquina) mostram que:",
-            "options": [
-              "as máquinas mudaram o trabalho no campo",
-              "o café não é mais plantado",
-              "o trabalho no campo nunca mudou",
-              "só crianças trabalham no campo"
-            ],
-            "answer": 0,
-            "explain": "A colheita mecanizada exige menos pessoas: é a modernização do campo.",
+            "context": "Eder e Edna moravam na Região Metropolitana de Curitiba, uma área urbana. Eles deixaram a vida na cidade, foram morar na área rural e hoje produzem morangos em Mandirituba (PR). Pessoas que trocam a cidade pelo campo são chamadas de neo-rurais.",
             "from": "O campo e a cidade"
           },
           {
@@ -7890,6 +7680,7 @@ const DISCIPLINAS = [
               "decada de 1970"
             ],
             "explain": "Nos anos 1970, mais da metade dos brasileiros já vivia em cidades.",
+            "context": "Até meados do século passado, a maioria dos brasileiros vivia e trabalhava no campo. A partir dos anos 1950, com a chegada de máquinas ao campo, havia menos trabalho para as pessoas. Ao mesmo tempo, as indústrias, o comércio e os serviços cresciam nas cidades. Muitos camponeses migraram para as cidades em busca de novas oportunidades de trabalho. Nos anos 1970, mais da metade da população brasileira já vivia em cidades.",
             "from": "O campo e a cidade"
           },
           {
@@ -7942,58 +7733,21 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "O livro mostra indígenas guarani jogando peteca feita de folha de palmeira.",
+            "context": "Uma foto do livro mostra pessoas indígenas da etnia Guarani jogando peteca feita de folha de palmeira, em Bertioga (SP).",
             "from": "Trabalho e lazer"
           },
           {
             "type": "mc",
-            "q": "Qual documento de 1948 garante o direito ao repouso e ao lazer?",
+            "context": "Especialistas dizem que brincar não é só coisa de criança. Para os adultos, as brincadeiras e os jogos ajudam a fortalecer laços com outras pessoas, melhorar a memória, estimular a imaginação e o raciocínio.",
+            "q": "Segundo o texto, brincar ajuda os adultos a:",
             "options": [
-              "Declaração Universal dos Direitos Humanos",
-              "Constituição de 1988",
-              "Lei dos rótulos de 2023",
-              "Certidão de nascimento"
+              "melhorar a memória e a imaginação",
+              "trabalhar mais horas por dia",
+              "não precisar de descanso",
+              "esquecer os amigos"
             ],
             "answer": 0,
-            "explain": "O Artigo 24 da Declaração diz que todo ser humano tem direito a repouso e lazer.",
-            "from": "Trabalho e lazer"
-          },
-          {
-            "type": "mc",
-            "q": "A Constituição Federal de 1988 garante aos trabalhadores:",
-            "options": [
-              "o descanso semanal remunerado",
-              "trabalhar sem nenhum descanso",
-              "férias de 15 dias apenas",
-              "salário só para quem não descansa"
-            ],
-            "answer": 0,
-            "explain": "Quem trabalha tem direito a um dia de descanso por semana sem desconto no salário.",
-            "from": "Trabalho e lazer"
-          },
-          {
-            "type": "mc",
-            "q": "As leis trabalhistas, como as férias de 30 dias, existem hoje porque:",
-            "options": [
-              "os trabalhadores lutaram por elas",
-              "o governo teve boa vontade",
-              "sempre existiram",
-              "foram criadas em 1925 e nunca mudaram"
-            ],
-            "answer": 0,
-            "explain": "A historiadora explica que houve décadas de luta dos trabalhadores.",
-            "from": "Trabalho e lazer"
-          },
-          {
-            "type": "mc",
-            "q": "O que significa a frase “Enquanto alguns se divertem, outros trabalham”?",
-            "options": [
-              "O lazer de uns depende do trabalho de outros",
-              "Ninguém trabalha nas festas",
-              "Só crianças trabalham",
-              "Lazer e trabalho nunca se misturam"
-            ],
-            "answer": 0,
-            "explain": "Cantores, técnicos, pipoqueiros e muitos outros trabalham para garantir a diversão das pessoas.",
+            "explain": "Brincar é importante para todas as idades: fortalece laços, melhora a memória e estimula a imaginação.",
             "from": "Trabalho e lazer"
           },
           {
@@ -8007,6 +7761,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Os primeiros filmes não tinham som nem cores e eram exibidos nos cinemas de rua.",
+            "context": "Quando o cinema foi inventado, no final do século 19, os filmes não tinham som nem cores e eram exibidos em salas na rua, os “cinemas de rua”. As pessoas se vestiam de maneira formal. Hoje, muitas salas ficam em shopping centers e os ingressos podem ser comprados pela internet. Apenas 7% dos municípios brasileiros têm sala de cinema: cerca de 90 milhões de pessoas vivem em cidades sem cinema.",
             "from": "Trabalho e lazer"
           },
           {
@@ -8020,6 +7775,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Só 7% dos municípios têm sala de cinema; cerca de 90 milhões vivem em cidades sem cinema.",
+            "context": "O Brasil nunca teve tantas salas de cinema quanto hoje, mas isso não significa que elas estejam disponíveis para todos. Apenas 7% dos municípios têm uma sala de exibição. Isso significa que 90 milhões de brasileiros vivem em cidades onde não há cinema.",
             "from": "Trabalho e lazer"
           },
           {
@@ -8033,6 +7789,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "As pessoas estão mais conscientes dos maus-tratos aos animais.",
+            "context": "O circo é um entretenimento antigo. No passado, as atrações com animais eram comuns; hoje são raras, porque as pessoas estão mais conscientes dos maus-tratos aos animais. O que não mudou é a tradição itinerante: o circo viaja de cidade em cidade, monta a tenda e se apresenta no picadeiro, a área central do circo.",
             "from": "Trabalho e lazer"
           },
           {
@@ -8046,6 +7803,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Itinerante = que viaja, se desloca constantemente.",
+            "context": "O circo é um entretenimento antigo. No passado, as atrações com animais eram comuns; hoje são raras, porque as pessoas estão mais conscientes dos maus-tratos aos animais. O que não mudou é a tradição itinerante: o circo viaja de cidade em cidade, monta a tenda e se apresenta no picadeiro, a área central do circo.",
             "from": "Trabalho e lazer"
           },
           {
@@ -8056,6 +7814,7 @@ const DISCIPLINAS = [
               "o picadeiro"
             ],
             "explain": "Picadeiro é a área central do circo, reservada às atrações.",
+            "context": "O circo é um entretenimento antigo. No passado, as atrações com animais eram comuns; hoje são raras, porque as pessoas estão mais conscientes dos maus-tratos aos animais. O que não mudou é a tradição itinerante: o circo viaja de cidade em cidade, monta a tenda e se apresenta no picadeiro, a área central do circo.",
             "from": "Trabalho e lazer"
           },
           {
@@ -8082,6 +7841,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "São festas de origem religiosa trazidas pelos portugueses.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram.",
             "from": "Muitos jeitos de festejar"
           },
           {
@@ -8095,6 +7855,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Santo Antônio dia 13, São João dia 24 e São Pedro dia 29.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram.",
             "from": "Muitos jeitos de festejar"
           },
           {
@@ -8108,6 +7869,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Todo mês de outubro, milhares de romeiros caminham em Belém em homenagem a Nossa Senhora de Nazaré.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram.",
             "from": "Muitos jeitos de festejar"
           },
           {
@@ -8121,6 +7883,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "A Congada lembra a coroação do rei e da rainha do antigo Reino do Congo, na África.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram.",
             "from": "Muitos jeitos de festejar"
           },
           {
@@ -8134,6 +7897,7 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "Os povos do Xingu acreditam que os mortos não querem ver os vivos tristes.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram.",
             "from": "Muitos jeitos de festejar"
           },
           {
@@ -8147,82 +7911,34 @@ const DISCIPLINAS = [
             ],
             "answer": 0,
             "explain": "São mais de 2 milhões de pessoas por dia nas ruas do Rio de Janeiro.",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram.",
             "from": "Muitos jeitos de festejar"
           },
           {
             "type": "mc",
-            "q": "A Oktoberfest, em Blumenau (SC), celebra as tradições dos imigrantes:",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram.",
+            "q": "Qual destas festas tem origem africana?",
             "options": [
-              "alemães",
-              "japoneses",
-              "africanos",
-              "portugueses"
+              "Congada",
+              "Festas juninas",
+              "Círio de Nazaré",
+              "Kuarup"
             ],
             "answer": 0,
-            "explain": "É um festival parecido com o de Munique, na Alemanha.",
-            "from": "Muitos jeitos de festejar"
-          },
-          {
-            "type": "mc",
-            "q": "O Bon Odori é um festival dos descendentes de:",
-            "options": [
-              "japoneses",
-              "alemães",
-              "italianos",
-              "indígenas"
-            ],
-            "answer": 0,
-            "explain": "No estado de São Paulo, descendentes de japoneses celebram o Bon Odori.",
-            "from": "Muitos jeitos de festejar"
-          },
-          {
-            "type": "mc",
-            "q": "O bumba meu boi conta a história de:",
-            "options": [
-              "Pai Francisco e Mãe Catirina",
-              "Santo Antônio e São Pedro",
-              "dom Pedro I",
-              "um rei do Congo"
-            ],
-            "answer": 0,
-            "explain": "Catirina queria comer língua de boi; o boi foi morto e depois ressuscitado pelos curandeiros.",
-            "from": "Muitos jeitos de festejar"
-          },
-          {
-            "type": "mc",
-            "q": "Muitas cidades fazem festa para celebrar:",
-            "options": [
-              "o aniversário de fundação",
-              "o fim das aulas",
-              "o primeiro dia de chuva",
-              "a troca de prefeito"
-            ],
-            "answer": 0,
-            "explain": "Salvador (29/3/1549) e São Paulo (25/1/1554) comemoram sua fundação.",
-            "from": "Muitos jeitos de festejar"
-          },
-          {
-            "type": "mc",
-            "q": "Qual destes feriados é religioso?",
-            "options": [
-              "25 de dezembro (Natal)",
-              "7 de setembro (Independência)",
-              "1º de maio (Dia do Trabalho)",
-              "21 de abril (Tiradentes)"
-            ],
-            "answer": 0,
-            "explain": "O Natal é um feriado religioso, comemorado pelos cristãos.",
+            "explain": "A Congada foi trazida pelos africanos.",
             "from": "Muitos jeitos de festejar"
           },
           {
             "type": "text",
-            "q": "Em que estado brasileiro fica Parintins, onde acontece o Festival Folclórico?",
+            "context": "Festas juninas: trazidas pelos portugueses, celebram Santo Antônio (13), São João (24) e São Pedro (29 de junho). Círio de Nazaré: festa religiosa em Belém (PA), todo mês de outubro. Congada: trazida pelos africanos, lembra a coroação do rei e da rainha do antigo Reino do Congo. Carnaval: herança dos portugueses; o do Rio de Janeiro é o maior do mundo. Kuarup: ritual dos povos indígenas do Xingu (MT) que homenageia as pessoas que já morreram.",
+            "q": "Em que cidade acontece o Círio de Nazaré?",
             "answers": [
-              "amazonas",
-              "am",
-              "o amazonas"
+              "belem",
+              "belém",
+              "belem pa",
+              "belém (pa)"
             ],
-            "explain": "Parintins fica no Amazonas (AM).",
+            "explain": "O Círio de Nazaré acontece em Belém, no Pará.",
             "from": "Muitos jeitos de festejar"
           },
           {
@@ -8230,25 +7946,12 @@ const DISCIPLINAS = [
             "q": "Qual alternativa mostra uma festa e o povo que a trouxe para o Brasil?",
             "options": [
               "Congada – africanos",
-              "Oktoberfest – portugueses",
+              "Círio de Nazaré – indígenas",
               "Kuarup – japoneses",
               "Festas juninas – alemães"
             ],
             "answer": 0,
-            "explain": "Congada veio dos africanos. Oktoberfest é alemã, Kuarup é indígena e as festas juninas são portuguesas.",
-            "from": "Simulado"
-          },
-          {
-            "type": "mc",
-            "q": "Um trabalhador que tem direito a descansar no domingo sem desconto no salário usa um direito garantido pela:",
-            "options": [
-              "Constituição Federal de 1988",
-              "lei dos rótulos de 2023",
-              "Folia do Divino",
-              "Oktoberfest"
-            ],
-            "answer": 0,
-            "explain": "É o descanso semanal remunerado da Constituição de 1988.",
+            "explain": "Congada veio dos africanos. o Círio de Nazaré é uma festa religiosa trazida pelos portugueses, o Kuarup é indígena e as festas juninas são portuguesas.",
             "from": "Simulado"
           },
           {
@@ -8279,28 +7982,41 @@ const DISCIPLINAS = [
           },
           {
             "type": "mc",
-            "q": "Pipoqueiro, palhaço e trapezista são exemplos de:",
-            "options": [
-              "trabalhadores do lazer",
-              "pessoas em férias",
-              "neo-rurais",
-              "imigrantes japoneses"
-            ],
-            "answer": 0,
-            "explain": "O lazer gera trabalho: enquanto uns se divertem, outros trabalham.",
-            "from": "Simulado"
-          },
-          {
-            "type": "mc",
             "q": "Qual festa acontece em junho e celebra Santo Antônio, São João e São Pedro?",
             "options": [
               "Festas juninas",
               "Círio de Nazaré",
               "Carnaval",
-              "Oktoberfest"
+              "Kuarup"
             ],
             "answer": 0,
             "explain": "As festas juninas celebram os santos juninos nos dias 13, 24 e 29 de junho.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Antigamente, quem ia ao cinema de rua costumava:",
+            "options": [
+              "vestir-se de maneira formal",
+              "comprar ingresso pela internet",
+              "assistir a filmes coloridos em 3D",
+              "ir ao shopping"
+            ],
+            "answer": 0,
+            "explain": "No início do cinema, as pessoas se vestiam formalmente e os filmes não tinham som nem cor.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Colecionar selos por diversão nos momentos livres é um exemplo de:",
+            "options": [
+              "hobby",
+              "trabalho",
+              "migração",
+              "festa religiosa"
+            ],
+            "answer": 0,
+            "explain": "Hobby é uma atividade feita como lazer ou passatempo.",
             "from": "Simulado"
           }
         ]

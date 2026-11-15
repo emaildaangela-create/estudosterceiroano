@@ -2,31 +2,31 @@
   "id": "lp26",
   "module": "26",
   "title": "Todo mundo tem medo!",
-  "subtitle": "Depoimento · Tempos verbais · Ortografia: -am e -ão",
+  "subtitle": "Tempos verbais · Ortografia: -am e -ão",
   "theory": [
-    {
-      "h": "Depoimento: Medo? Todo mundo tem!",
-      "p": [
-        "O <strong>depoimento</strong> é um texto em que uma pessoa conta <strong>acontecimentos ou experiências que viveu de verdade</strong>. Quem narra é chamado de <strong>narrador</strong> ou <strong>depoente</strong>, e fala das próprias experiências.",
-        "No texto <em>Medo? Todo mundo tem!</em>, Silvinha Meirelles mostra que <strong>todo mundo sente algum medo</strong>: de aranha, de avião, de ficar sozinho, de trovão… Ela conversou com várias pessoas e registrou o medo e o <strong>antídoto</strong> de cada uma.",
-        "<strong>Antídoto</strong>, no texto, é <strong>o jeito de afastar o medo</strong>. Nina, de 9 anos, tem medo do escuro e muda de assunto na cabeça; Júlia gruda no cachorro; Marcelo, de 6 anos, tem medo de raio e de fantasma e diz: <em>Eu me deito e me cubro.</em>",
-        "Para afastar o medo, o texto sugere: cantar, correr, pensar em outra coisa, assobiar, chamar alguém ou olhar o medo de frente."
-      ]
-    },
     {
       "h": "Tempos verbais: passado, presente e futuro",
       "figure": {"src": "assets/4b/lp26-tempos.svg", "alt": "Linha do tempo com três partes: passado (ontem, eu tive medo), presente (hoje, eu tenho medo) e futuro (amanhã, eu terei coragem).", "tipo": "diagrama"},
       "p": [
+        "O verbo muda de forma para mostrar <strong>quando</strong> uma ação acontece. Isso se chama <strong>tempo verbal</strong>.",
         "<strong>Presente</strong>: algo que acontece agora, com frequência ou sempre. <em>Eu <strong>aprendo</strong> com meus medos. Meu primo <strong>gosta</strong> de filmes de monstros.</em>",
         "<strong>Passado</strong> (ou pretérito): algo que <strong>já aconteceu</strong>. <em>Quando eu <strong>era</strong> pequena, <strong>tinha</strong> medo de bicho-papão. Ele <strong>falou</strong> dos próprios medos.</em>",
         "<strong>Futuro</strong>: algo que <strong>ainda vai acontecer</strong>. <em>Ela <strong>crescerá</strong> e <strong>perderá</strong> o medo do escuro.</em>",
-        "Exemplo com o antídoto do Marcelo: presente – <em>Eu me <strong>deito</strong> e me <strong>cubro</strong>.</em> Futuro – <em>Eu me <strong>deitarei</strong> e me <strong>cobrirei</strong>.</em>",
-        "Nas tirinhas aparecem formas reduzidas, como <strong>tá</strong> (está). Isso acontece porque a tirinha mostra uma situação de <strong>linguagem coloquial</strong>, a fala do dia a dia."
+        "Palavras como <strong>ontem</strong>, <strong>hoje</strong> e <strong>amanhã</strong> são boas pistas do tempo da frase."
       ],
       "cards": [
         {"icon": "⏪", "t": "passado", "d": "estudei · estudou · estudaram"},
         {"icon": "⏺️", "t": "presente", "d": "estudo · estuda · estudam"},
         {"icon": "⏩", "t": "futuro", "d": "estudarei · estudará · estudarão"}
+      ]
+    },
+    {
+      "h": "Trocando o tempo da frase",
+      "p": [
+        "Marcelo, de 6 anos, tem medo de raio. Para afastar o medo, ele diz: <em>Eu me <strong>deito</strong> e me <strong>cubro</strong>.</em> (presente)",
+        "No passado: <em>Eu me <strong>deitei</strong> e me <strong>cobri</strong>.</em>",
+        "No futuro: <em>Eu me <strong>deitarei</strong> e me <strong>cobrirei</strong>.</em>",
+        "Veja o verbo <strong>estudar</strong>: <em>Ontem eu <strong>estudei</strong>. Hoje eu <strong>estudo</strong>. Amanhã eu <strong>estudarei</strong>.</em>"
       ]
     },
     {
@@ -37,7 +37,7 @@
         "<strong>-am</strong> = passado: <em>Elas sentir<strong>am</strong> medo da tempestade.</em> / acordaram, fugiram, dançaram, ajudaram, ofereceram.",
         "<strong>-ão</strong> = futuro: <em>Elas sentir<strong>ão</strong> medo da tempestade.</em> / acordarão, fugirão, dançarão, ajudarão, oferecerão.",
         "Atenção: muitos <strong>substantivos</strong> também terminam em -ão e não são verbos: <em>caminhão, coração, botão, questão, guardião, ladrão</em>.",
-        "Ditados: <em>Os cães <strong>ladram</strong> e a caravana passa.</em> (verbo, -am) / <em>A ocasião faz o <strong>ladrão</strong>.</em> (substantivo, -ão)"
+        "Ditados: <em>Os cães <strong>ladram</strong> e a caravana passa.</em> (verbo) / <em>A ocasião faz o <strong>ladrão</strong>.</em> (substantivo)"
       ]
     }
   ],
@@ -72,7 +72,20 @@
         {"text": "Na semana passada, os gatos fugir__.", "cat": 0},
         {"text": "No próximo ano, eles ajudar__ a escola.", "cat": 1},
         {"text": "Ontem à noite, os cães ladr__ muito.", "cat": 0},
-        {"text": "Depois do jantar, eles oferecer__ sobremesa.", "cat": 1}
+        {"text": "Depois do jantar de amanhã, eles oferecer__ sobremesa.", "cat": 1}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Viagem no tempo",
+      "short": "Trocar o tempo",
+      "instructions": "Passe o verbo para o futuro.",
+      "pairs": [
+        ["Eles perderam o medo do escuro.", "Eles perderão o medo do escuro."],
+        ["Os amigos conversaram muito.", "Os amigos conversarão muito."],
+        ["Elas passaram em frente ao museu.", "Elas passarão em frente ao museu."],
+        ["Eu me deito e me cubro.", "Eu me deitarei e me cobrirei."],
+        ["Ontem eu estudei.", "Amanhã eu estudarei."]
       ]
     },
     {
@@ -94,18 +107,17 @@
     }
   ],
   "quiz": [
-    {"type": "mc", "q": "Qual é o principal assunto do texto “Medo? Todo mundo tem!”?", "options": ["Os medos das pessoas e jeitos de afastá-los", "Como fazer uma lanterna", "A vida de uma escritora famosa", "Uma história de fantasma inventada"], "answer": 0, "explain": "O texto reúne depoimentos sobre medos e antídotos para eles."},
-    {"type": "mc", "q": "No texto, o que significa a palavra antídoto?", "options": ["O jeito de afastar o medo", "Um tipo de monstro", "Um remédio para dor de cabeça", "O nome de quem conta"], "answer": 0, "explain": "Cada pessoa conta o seu medo e o seu antídoto, isto é, o que faz para o medo passar."},
-    {"type": "mc", "q": "O depoimento é um texto em que uma pessoa:", "options": ["conta experiências que viveu de verdade", "inventa uma história com fadas", "escreve versos com rimas", "dá instruções de um jogo"], "answer": 0, "explain": "No depoimento, o narrador (depoente) fala das próprias experiências reais."},
-    {"type": "mc", "q": "Em “Tenho medo de raio. Também não gosto de história com bruxa”, os verbos tenho e gosto indicam algo que:", "options": ["está acontecendo (presente)", "já aconteceu (passado)", "ainda vai acontecer (futuro)", "nunca acontece"], "answer": 0, "explain": "Tenho e gosto estão no presente: é o que Marcelo sente agora."},
-    {"type": "mc", "q": "Como fica “Eu me deito e me cubro” com os verbos no futuro?", "options": ["Eu me deitarei e me cobrirei.", "Eu me deitei e me cobri.", "Eu me deitava e me cobria.", "Eu me deito e me cobri."], "answer": 0, "explain": "Futuro indica o que ainda vai acontecer: deitarei, cobrirei."},
-    {"type": "mc", "q": "Em “Eles brincaram até cansar”, o verbo está no:", "options": ["passado", "presente", "futuro", "infinitivo"], "answer": 0, "explain": "Brincaram termina em -am: a ação já aconteceu."},
+    {"type": "mc", "context": "Marcelo, de 6 anos, contou: “Tenho medo de raio. Também não gosto de história com bruxa.”", "q": "Os verbos tenho e gosto indicam algo que:", "options": ["está acontecendo (presente)", "já aconteceu (passado)", "ainda vai acontecer (futuro)", "nunca acontece"], "answer": 0, "explain": "Tenho e gosto estão no presente: é o que Marcelo sente agora."},
+    {"type": "mc", "context": "Para afastar o medo, Marcelo diz: “Eu me deito e me cubro.”", "q": "Como fica a frase com os verbos no futuro?", "options": ["Eu me deitarei e me cobrirei.", "Eu me deitei e me cobri.", "Eu me deitava e me cobria.", "Eu me deito e me cobri."], "answer": 0, "explain": "Futuro indica o que ainda vai acontecer: deitarei, cobrirei."},
+    {"type": "mc", "q": "Em “Eles brincaram até cansar”, o verbo está no:", "options": ["passado", "presente", "futuro", "plural do substantivo"], "answer": 0, "explain": "Brincaram termina em -am: a ação já aconteceu."},
     {"type": "mc", "q": "Em “Eles voltarão bronzeados da praia”, o verbo está no:", "options": ["futuro", "passado", "presente", "plural do substantivo"], "answer": 0, "explain": "Voltarão termina em -ão: a ação ainda vai acontecer."},
     {"type": "mc", "q": "Qual frase está no passado?", "options": ["Elas sentiram medo da tempestade.", "Elas sentirão medo da tempestade.", "Elas sentem medo da tempestade.", "Elas vão sentir medo amanhã."], "answer": 0, "explain": "Sentiram (-am) é passado. Sentirão (-ão) é futuro."},
-    {"type": "mc", "q": "Complete o ditado: “Os cães ______ e a caravana passa.”", "options": ["ladram", "ladrão", "ladrarão", "ladrões"], "answer": 0, "explain": "Ladram é o verbo latir no presente. Ladrão é um substantivo."},
+    {"type": "mc", "q": "Qual frase está no presente?", "options": ["Eu conheço muitas histórias.", "Eu conheci muitas histórias.", "Eu conhecerei muitas histórias.", "Eu conhecia muitas histórias."], "answer": 0, "explain": "Conheço indica o que acontece agora: presente."},
+    {"type": "mc", "q": "Complete o ditado: “Os cães ______ e a caravana passa.”", "options": ["ladram", "ladrão", "ladrarão", "ladrões"], "answer": 0, "explain": "Ladram é verbo (o que os cães fazem). Ladrão é um substantivo."},
     {"type": "mc", "q": "Qual destas palavras terminadas em -ão é um SUBSTANTIVO?", "options": ["coração", "obedecerão", "caminharão", "guardarão"], "answer": 0, "explain": "Coração é nome (substantivo). As outras são verbos no futuro."},
-    {"type": "mc", "q": "Na tirinha, a bruxa diz “Tá pronta!”. A palavra tá corresponde ao verbo:", "options": ["estar", "tomar", "tocar", "ter"], "answer": 0, "explain": "Tá é a forma reduzida de está, do verbo estar."},
-    {"type": "mc", "q": "A forma reduzida tá pode ser usada na tirinha porque:", "options": ["mostra uma situação de linguagem coloquial", "em todo tipo de texto se usa essa forma", "é uma linguagem cerimoniosa", "é um erro de digitação"], "answer": 0, "explain": "Nas HQs a linguagem costuma ser informal, parecida com a fala do dia a dia."},
-    {"type": "text", "q": "Reescreva o verbo no futuro: “Eles perderam o medo do escuro.” → Eles ______ o medo do escuro.", "answers": ["perderao", "perderão"], "explain": "Perderam (passado, -am) → perderão (futuro, -ão)."}
+    {"type": "mc", "q": "Complete corretamente: “Na semana passada, eles ______ para a praia.”", "options": ["viajaram", "viajarão", "viajam", "viajão"], "answer": 0, "explain": "Semana passada pede verbo no passado, com -am: viajaram."},
+    {"type": "mc", "q": "Complete corretamente: “No próximo sábado, os alunos ______ o teatro.”", "options": ["visitarão", "visitaram", "visitão", "visitavam"], "answer": 0, "explain": "Próximo sábado ainda vai acontecer: futuro, com -ão (visitarão)."},
+    {"type": "mc", "q": "Qual frase usa o verbo estudar no futuro?", "options": ["Amanhã eu estudarei.", "Ontem eu estudei.", "Hoje eu estudo.", "Eu estudava muito."], "answer": 0, "explain": "Estudarei indica algo que ainda vai acontecer."},
+    {"type": "text", "context": "Eles perderam o medo do escuro.", "q": "Reescreva o verbo no futuro: Eles ______ o medo do escuro.", "answers": ["perderao", "perderão"], "explain": "Perderam (passado, -am) → perderão (futuro, -ão)."}
   ]
 }

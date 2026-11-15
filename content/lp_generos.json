@@ -3,10 +3,15 @@
   "module": "✍️",
   "title": "Ler e escrever: poema e conto de mistério",
   "subtitle": "Leitura, interpretação e produção de texto",
+  "video": "assets/videos/lp_generos.mp4",
   "theory": [
     {
       "h": "Ler um poema com atenção",
-      "figure": {"src": "assets/4b/lpg-poema.svg", "alt": "O poema A chuva na janela, com os versos numerados, as estrofes marcadas e as rimas destacadas em cores.", "tipo": "diagrama"},
+      "figure": {
+        "src": "assets/4b/lpg-poema.svg",
+        "alt": "O poema A chuva na janela, com os versos numerados, as estrofes marcadas e as rimas destacadas em cores.",
+        "tipo": "diagrama"
+      },
       "p": [
         "Leia o poema e repare nos versos, nas estrofes e nas rimas:",
         "<em>A chuva na janela</em><br>Pinga, pinga, na janela,<br>a chuva vem conversar.<br>Bate leve na panela,<br>quer um jeito de entrar.<br><br>Pinga, pinga, devagar,<br>molha a rua e o jardim.<br>Quando o sol voltar a brilhar,<br>vou brincar até o fim.",
@@ -17,7 +22,11 @@
     },
     {
       "h": "Ler um conto de mistério",
-      "figure": {"src": "assets/4b/lpg-misterio.svg", "alt": "Os elementos do conto de mistério: personagens, lugar, mistério, pistas, suspense e solução, ligados como um caminho.", "tipo": "diagrama"},
+      "figure": {
+        "src": "assets/4b/lpg-misterio.svg",
+        "alt": "Os elementos do conto de mistério: personagens, lugar, mistério, pistas, suspense e solução, ligados como um caminho.",
+        "tipo": "diagrama"
+      },
       "p": [
         "Leia o conto:",
         "<em>O barulho no sótão</em> — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: <em>toc… toc… toc…</em> Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma?",
@@ -42,16 +51,43 @@
       "title": "Detetive dos gêneros",
       "short": "Poema ou conto?",
       "instructions": "A pista pertence a um poema ou a um conto de mistério?",
-      "categories": ["Poema 🎵", "Conto de mistério 🔦"],
+      "categories": [
+        "Poema 🎵",
+        "Conto de mistério 🔦"
+      ],
       "items": [
-        {"text": "É organizado em versos e estrofes.", "cat": 0},
-        {"text": "Tem suspense até a revelação final.", "cat": 1},
-        {"text": "Usa rimas e ritmo.", "cat": 0},
-        {"text": "Os personagens tentam resolver um enigma.", "cat": 1},
-        {"text": "Repete sons, como pinga, pinga.", "cat": 0},
-        {"text": "Tem acontecimentos inesperados e assustadores.", "cat": 1},
-        {"text": "As palavras podem formar uma figura.", "cat": 0},
-        {"text": "Conta a história com começo, meio e fim em parágrafos.", "cat": 1}
+        {
+          "text": "É organizado em versos e estrofes.",
+          "cat": 0
+        },
+        {
+          "text": "Tem suspense até a revelação final.",
+          "cat": 1
+        },
+        {
+          "text": "Usa rimas e ritmo.",
+          "cat": 0
+        },
+        {
+          "text": "Os personagens tentam resolver um enigma.",
+          "cat": 1
+        },
+        {
+          "text": "Repete sons, como pinga, pinga.",
+          "cat": 0
+        },
+        {
+          "text": "Tem acontecimentos inesperados e assustadores.",
+          "cat": 1
+        },
+        {
+          "text": "As palavras podem formar uma figura.",
+          "cat": 0
+        },
+        {
+          "text": "Conta a história com começo, meio e fim em parágrafos.",
+          "cat": 1
+        }
       ]
     },
     {
@@ -60,12 +96,28 @@
       "short": "O barulho no sótão",
       "instructions": "Ligue cada elemento ao que aparece no conto “O barulho no sótão”.",
       "pairs": [
-        ["Personagens", "Pedro, Bia e vovó Lúcia"],
-        ["Lugar do mistério", "o sótão da casa da vovó"],
-        ["Mistério", "um toc-toc toda noite"],
-        ["Suspense", "a caixa velha se mexendo"],
-        ["Solução", "era uma coruja chamando os filhotes"]
-      ]
+        [
+          "Personagens",
+          "Pedro, Bia e vovó Lúcia"
+        ],
+        [
+          "Lugar do mistério",
+          "o sótão da casa da vovó"
+        ],
+        [
+          "Mistério",
+          "um toc-toc toda noite"
+        ],
+        [
+          "Suspense",
+          "a caixa velha se mexendo"
+        ],
+        [
+          "Solução",
+          "era uma coruja chamando os filhotes"
+        ]
+      ],
+      "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
     },
     {
       "type": "writing",
@@ -76,7 +128,13 @@
       "doneTitle": "Conto de mistério concluído!",
       "doneText": "Releia o seu conto: ele tem mistério, suspense e uma solução no final?",
       "placeholder": "Escreva aqui o título e o seu conto de mistério…",
-      "checklist": ["Dei um título ao conto.", "Apresentei os personagens e o lugar.", "Criei um mistério e momentos de suspense.", "Revelei a solução no final.", "Usei verbos no passado e parágrafos."],
+      "checklist": [
+        "Dei um título ao conto.",
+        "Apresentei os personagens e o lugar.",
+        "Criei um mistério e momentos de suspense.",
+        "Revelei a solução no final.",
+        "Usei verbos no passado e parágrafos."
+      ],
       "minLength": 200
     },
     {
@@ -88,22 +146,167 @@
       "doneTitle": "Poema concluído!",
       "doneText": "Leia o poema em voz alta e sinta o ritmo. As rimas estão no final dos versos?",
       "placeholder": "Escreva aqui o título e os versos do seu poema…",
-      "checklist": ["Dei um título.", "Escrevi em versos (linhas) e estrofes.", "Usei pelo menos duas rimas.", "Repeti algum som ou palavra para criar ritmo."],
+      "checklist": [
+        "Dei um título.",
+        "Escrevi em versos (linhas) e estrofes.",
+        "Usei pelo menos duas rimas.",
+        "Repeti algum som ou palavra para criar ritmo."
+      ],
       "minLength": 80
     }
   ],
   "quiz": [
-    {"type": "mc", "q": "Quantas estrofes tem o poema “A chuva na janela”?", "options": ["2 estrofes", "4 estrofes", "8 estrofes", "1 estrofe"], "answer": 0, "explain": "São 2 estrofes (grupos de versos), cada uma com 4 versos."},
-    {"type": "mc", "q": "No poema “A chuva na janela”, qual palavra rima com janela?", "options": ["panela", "chuva", "jardim", "entrar"], "answer": 0, "explain": "Janela e panela terminam com o mesmo som: -ela."},
-    {"type": "mc", "q": "A repetição de “pinga, pinga” no poema imita:", "options": ["o som da chuva", "o som do relógio", "uma pessoa chorando", "um sino tocando"], "answer": 0, "explain": "Pinga, pinga lembra o som das gotas de chuva caindo, assim como tic-tac imita o relógio."},
-    {"type": "mc", "q": "No poema, a chuva “vem conversar” e “quer um jeito de entrar”. Isso mostra que o poeta:", "options": ["deu à chuva atitudes de gente", "explicou como a chuva se forma", "deu uma notícia sobre o tempo", "ensinou a fechar a janela"], "answer": 0, "explain": "Nos poemas é comum dar sentimentos e ações humanas a objetos e à natureza."},
-    {"type": "mc", "q": "No conto “O barulho no sótão”, qual era o mistério?", "options": ["Um toc-toc no sótão toda noite", "A vovó tinha sumido", "A lanterna não acendia", "A casa estava vazia"], "answer": 0, "explain": "Todas as noites, às nove horas, ouvia-se toc-toc no sótão."},
-    {"type": "mc", "q": "Qual trecho do conto cria mais suspense?", "options": ["A porta rangeu e a caixa se mexia sozinha", "Na casa da vovó Lúcia moravam todos", "Vovó riu e explicou", "O toc-toc virou cantiga de ninar"], "answer": 0, "explain": "Suspense é o momento de tensão, quando o leitor ainda não sabe o que vai acontecer."},
-    {"type": "mc", "q": "Qual foi a solução do mistério?", "options": ["Uma coruja batia o bico na madeira", "Era um fantasma de verdade", "O vento batia a janela", "A vovó fazia o barulho"], "answer": 0, "explain": "A coruja morava numa caixa velha e batia o bico para chamar os filhotes."},
-    {"type": "mc", "q": "Em que lugar acontece o mistério do conto?", "options": ["No sótão da casa da vovó", "Em um castelo antigo", "Na escola", "Em um navio"], "answer": 0, "explain": "O barulho vinha do sótão da casa da vovó Lúcia."},
-    {"type": "mc", "q": "Ao escrever um conto de mistério, o que NÃO pode faltar?", "options": ["Um mistério e a sua solução", "Versos com rimas", "Uma lista de ingredientes", "Datas e locais precisos"], "answer": 0, "explain": "O conto de mistério precisa de um enigma, suspense e uma revelação final."},
-    {"type": "mc", "q": "Que tempo verbal usamos normalmente para contar uma história?", "options": ["Passado: ouviu, subiram, descobriram", "Futuro: ouvirá, subirão", "Presente: ouço, subo", "Nenhum, não há verbos"], "answer": 0, "explain": "Contos costumam ser narrados no passado, contando fatos que já aconteceram."},
-    {"type": "mc", "q": "Pedro e Bia “tremiam embaixo do cobertor”. Que sentimento esse trecho mostra?", "options": ["medo", "alegria", "fome", "sono"], "answer": 0, "explain": "Tremer embaixo do cobertor mostra que eles estavam com medo do barulho."},
-    {"type": "text", "q": "No conto, que animal fazia o barulho no sótão?", "answers": ["coruja", "uma coruja", "a coruja"], "explain": "Era uma coruja chamando os filhotes."}
+    {
+      "type": "mc",
+      "q": "Quantas estrofes tem o poema “A chuva na janela”?",
+      "options": [
+        "2 estrofes",
+        "4 estrofes",
+        "8 estrofes",
+        "1 estrofe"
+      ],
+      "answer": 0,
+      "explain": "São 2 estrofes (grupos de versos), cada uma com 4 versos.",
+      "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim."
+    },
+    {
+      "type": "mc",
+      "q": "No poema “A chuva na janela”, qual palavra rima com janela?",
+      "options": [
+        "panela",
+        "chuva",
+        "jardim",
+        "entrar"
+      ],
+      "answer": 0,
+      "explain": "Janela e panela terminam com o mesmo som: -ela.",
+      "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim."
+    },
+    {
+      "type": "mc",
+      "q": "A repetição de “pinga, pinga” no poema imita:",
+      "options": [
+        "o som da chuva",
+        "o som do relógio",
+        "uma pessoa chorando",
+        "um sino tocando"
+      ],
+      "answer": 0,
+      "explain": "Pinga, pinga lembra o som das gotas de chuva caindo, assim como tic-tac imita o relógio.",
+      "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim."
+    },
+    {
+      "type": "mc",
+      "q": "No poema, a chuva “vem conversar” e “quer um jeito de entrar”. Isso mostra que o poeta:",
+      "options": [
+        "deu à chuva atitudes de gente",
+        "explicou como a chuva se forma",
+        "deu uma notícia sobre o tempo",
+        "ensinou a fechar a janela"
+      ],
+      "answer": 0,
+      "explain": "Nos poemas é comum dar sentimentos e ações humanas a objetos e à natureza.",
+      "context": "A chuva na janela — Pinga, pinga, na janela, / a chuva vem conversar. / Bate leve na panela, / quer um jeito de entrar. // Pinga, pinga, devagar, / molha a rua e o jardim. / Quando o sol voltar a brilhar, / vou brincar até o fim."
+    },
+    {
+      "type": "mc",
+      "q": "No conto “O barulho no sótão”, qual era o mistério?",
+      "options": [
+        "Um toc-toc no sótão toda noite",
+        "A vovó tinha sumido",
+        "A lanterna não acendia",
+        "A casa estava vazia"
+      ],
+      "answer": 0,
+      "explain": "Todas as noites, às nove horas, ouvia-se toc-toc no sótão.",
+      "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
+    },
+    {
+      "type": "mc",
+      "q": "Qual trecho do conto cria mais suspense?",
+      "options": [
+        "A porta rangeu e a caixa se mexia sozinha",
+        "Na casa da vovó Lúcia moravam todos",
+        "Vovó riu e explicou",
+        "O toc-toc virou cantiga de ninar"
+      ],
+      "answer": 0,
+      "explain": "Suspense é o momento de tensão, quando o leitor ainda não sabe o que vai acontecer.",
+      "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
+    },
+    {
+      "type": "mc",
+      "q": "Qual foi a solução do mistério?",
+      "options": [
+        "Uma coruja batia o bico na madeira",
+        "Era um fantasma de verdade",
+        "O vento batia a janela",
+        "A vovó fazia o barulho"
+      ],
+      "answer": 0,
+      "explain": "A coruja morava numa caixa velha e batia o bico para chamar os filhotes.",
+      "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
+    },
+    {
+      "type": "mc",
+      "q": "Em que lugar acontece o mistério do conto?",
+      "options": [
+        "No sótão da casa da vovó",
+        "Em um castelo antigo",
+        "Na escola",
+        "Em um navio"
+      ],
+      "answer": 0,
+      "explain": "O barulho vinha do sótão da casa da vovó Lúcia.",
+      "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
+    },
+    {
+      "type": "mc",
+      "q": "Ao escrever um conto de mistério, o que NÃO pode faltar?",
+      "options": [
+        "Um mistério e a sua solução",
+        "Versos com rimas",
+        "Uma lista de ingredientes",
+        "Datas e locais precisos"
+      ],
+      "answer": 0,
+      "explain": "O conto de mistério precisa de um enigma, suspense e uma revelação final."
+    },
+    {
+      "type": "mc",
+      "q": "Que tempo verbal usamos normalmente para contar uma história?",
+      "options": [
+        "Passado: ouviu, subiram, descobriram",
+        "Futuro: ouvirá, subirão",
+        "Presente: ouço, subo",
+        "Nenhum, não há verbos"
+      ],
+      "answer": 0,
+      "explain": "Contos costumam ser narrados no passado, contando fatos que já aconteceram."
+    },
+    {
+      "type": "mc",
+      "q": "Pedro e Bia “tremiam embaixo do cobertor”. Que sentimento esse trecho mostra?",
+      "options": [
+        "medo",
+        "alegria",
+        "fome",
+        "sono"
+      ],
+      "answer": 0,
+      "explain": "Tremer embaixo do cobertor mostra que eles estavam com medo do barulho.",
+      "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
+    },
+    {
+      "type": "text",
+      "q": "No conto, que animal fazia o barulho no sótão?",
+      "answers": [
+        "coruja",
+        "uma coruja",
+        "a coruja"
+      ],
+      "explain": "Era uma coruja chamando os filhotes.",
+      "context": "O barulho no sótão — Na casa da vovó Lúcia, toda noite, às nove horas em ponto, ouvia-se no sótão: toc… toc… toc… Pedro e a prima Bia tremiam embaixo do cobertor. Seria um fantasma? Numa noite de lua cheia, os dois subiram a escada com uma lanterna. A porta rangeu… e a luz mostrou uma caixa velha que se mexia sozinha! De dentro da caixa saiu uma coruja, que batia o bico na madeira para chamar os filhotes. Vovó riu: — Ela mora aqui há anos. É a nossa vigia da noite!"
+    }
   ]
 }

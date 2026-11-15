@@ -91,7 +91,7 @@ def cinema_circo():
     for col, (tit, cor) in enumerate((("ANTES", MARROM), ("HOJE", AZUL))):
         x = 200 + col * 330
         c.append(t(x + 135, 130, tit, 28, cor, 800))
-    linhas = [("🎞️ Cinema", ["sem som e sem cor", "cinema de rua", "roupa formal"], ["som, cor e 3D", "salas no shopping", "ingresso pela internet"]),
+    linhas = [("🎞️ Cinema", ["sem som e sem cor", "cinema de rua", "roupa formal"], ["som e cor", "salas no shopping", "ingresso pela internet"]),
               ("🎪 Circo", ["muitos animais", "itinerante 🚚", "palhaços e mágicos"], ["quase sem animais", "continua itinerante 🚚", "palhaços e mágicos"])]
     for r, (nome, antes, hoje) in enumerate(linhas):
         y = 160 + r * 210
@@ -107,23 +107,21 @@ def cinema_circo():
 
 def festas():
     c = [titulo("Brasil, um país festeiro", "festas, lugares e origens", ROSA)]
-    cards = [("🎭", "Carnaval", "fev./mar. · Rio, Olinda, Salvador", "herança portuguesa"),
+    cards = [("🎭", "Carnaval", "fev./mar. · Rio é o maior do mundo", "herança portuguesa"),
              ("🔥", "Festas juninas", "junho · 13, 24 e 29", "portugueses"),
-             ("🐂", "Parintins (AM)", "fim de junho · boi-bumbá", "festa regional"),
              ("🕯️", "Círio de Nazaré", "outubro · Belém (PA)", "religiosa (portugueses)"),
+             ("🕊️", "Folia do Divino", "festa religiosa antiga", "portugueses"),
              ("👑", "Congada", "coroação do rei e da rainha", "africanos"),
-             ("🪶", "Kuarup", "Xingu (MT) · homenagem aos mortos", "indígenas"),
-             ("🍺", "Oktoberfest", "outubro · Blumenau (SC)", "imigrantes alemães"),
-             ("🏮", "Bon Odori", "verão · São Paulo", "imigrantes japoneses")]
+             ("🪶", "Kuarup", "Xingu (MT) · homenagem aos mortos", "indígenas")]
     for i, (em, nome, d, origem) in enumerate(cards):
-        x = 30 + (i % 4) * 215
-        y = 115 + (i // 4) * 235
-        c.append(caixa(x, y, 200, 220, "#fff", ROSA, 18, 3) + e(x + 100, y + 70, em, 50))
-        c.append(t(x + 100, y + 115, nome, 20, ROSA, 800))
+        x = 45 + (i % 3) * 280
+        y = 115 + (i // 3) * 235
+        c.append(caixa(x, y, 250, 220, "#fff", ROSA, 18, 3) + e(x + 125, y + 70, em, 50))
+        c.append(t(x + 125, y + 115, nome, 21, ROSA, 800))
         palavras = d.split(" · ")
         for k, p in enumerate(palavras[:2]):
-            c.append(t(x + 100, y + 145 + k * 20, p, 13, TINTA, 700))
-        c.append(f'<rect x="{x + 15}" y="{y + 185}" width="170" height="24" rx="12" fill="#fff0f6"/>' + t(x + 100, y + 202, origem, 13, ROSA, 800))
+            c.append(t(x + 125, y + 145 + k * 20, p, 14, TINTA, 700))
+        c.append(f'<rect x="{x + 25}" y="{y + 185}" width="200" height="24" rx="12" fill="#fff0f6"/>' + t(x + 125, y + 202, origem, 14, ROSA, 800))
     svg("hist14-festas.svg", "\n".join(c))
 
 

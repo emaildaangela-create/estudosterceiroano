@@ -276,6 +276,6 @@ def g_misterio():
 
 
 if __name__ == "__main__":
-    for f in (poema, visual, possessivos, montanha, demonstrativos, conto, verbo, sinonimo, tempos, am_ao, reportagem, sujeito, g_poema, g_misterio):
+    for f in (poema, visual, possessivos, demonstrativos, conto, verbo, sinonimo, tempos, am_ao, sujeito, g_poema, g_misterio):
         f()
     print("SVGs de Português gerados")

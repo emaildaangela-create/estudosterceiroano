@@ -7,16 +7,16 @@ const PEDAGOGY = {
 };
 Object.assign(PEDAGOGY, {
   lp23:{objectives:['reconhecer verso, estrofe, rima e ritmo','entender o poema visual','usar pronomes possessivos']},
-  lp24:{objectives:['ler um texto informativo','buscar datas e lugares no texto','usar este, esse e aquele']},
+  lp24:{objectives:['usar este, esse e aquele','combinar o demonstrativo com a palavra','diferenciar demonstrativo e possessivo']},
   lp25:{objectives:['entender um conto de mistério','classificar verbos de ação, estado e natureza','usar sinônimos e antônimos']},
-  lp26:{objectives:['ler um depoimento','reconhecer passado, presente e futuro','escrever -am ou -ão']},
-  lp27:{objectives:['conhecer as partes da reportagem','encontrar sujeito e predicado','escrever palavras com h inicial']},
+  lp26:{objectives:['reconhecer passado, presente e futuro','passar frases para outro tempo','escrever -am ou -ão']},
+  lp27:{objectives:['encontrar o sujeito com a pergunta Quem + verbo?','encontrar o predicado','fazer o verbo concordar com o sujeito']},
   lp_generos:{objectives:['interpretar poemas e contos de mistério','planejar um texto','escrever e revisar']},
   sim_portugues:{objectives:['revisar os módulos 23 a 27','treinar leitura e gramática','ver o que ainda precisa de atenção']}
 });
 Object.assign(PEDAGOGY, {
   hist12:{objectives:['comparar a vida no campo e na cidade','diferenciar alimentos in natura e industrializados','entender por que as pessoas migraram']},
-  hist13:{objectives:['explicar o que é lazer','conhecer o direito ao descanso','comparar o cinema e o circo de antes e de hoje']},
+  hist13:{objectives:['explicar o que é lazer','entender que adultos também brincam','comparar o cinema e o circo de antes e de hoje']},
   hist14:{objectives:['reconhecer motivos para festejar','conhecer festas de origem portuguesa, africana e indígena','localizar festas do Brasil']},
   sim_historia:{objectives:['revisar os módulos 12, 13 e 14','treinar com questões sorteadas','ver o que precisa revisar']}
 });
