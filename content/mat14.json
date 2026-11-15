@@ -1,0 +1,301 @@
+{
+  "id": "mat14",
+  "module": "14",
+  "title": "Frações",
+  "subtitle": "Metade, terço e quarto · Quinto a décimo · Fração de quantidade · Problemas",
+  "theory": [
+    {
+      "h": "Metade ou um meio",
+      "figure": {
+        "src": "assets/4b/mat14-partes-da-fracao.svg",
+        "alt": "Retângulo dividido em 4 partes iguais com 1 parte pintada, ao lado da fração um quarto: o numerador 1 indica as partes pintadas e o denominador 4 indica o total de partes iguais.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "Quando uma figura é dividida em <strong>2 partes iguais</strong> e pintamos 1 parte, dizemos que <strong>metade</strong> ou <strong>um meio</strong> da figura foi pintado. Escrevemos <strong>1/2</strong>.",
+        "O número de cima é o <strong>numerador</strong>: indica quantas partes foram pintadas. O número de baixo é o <strong>denominador</strong>: indica em quantas <strong>partes iguais</strong> a figura foi dividida.",
+        "O traço entre os números significa <strong>divisão</strong>. Essa representação recebe o nome de <strong>fração</strong>.",
+        "Jair dividiu um sanduíche igualmente com Estela: o sanduíche foi dividido em 2 partes, e cada um ficou com <strong>metade</strong>."
+      ],
+      "cards": [
+        {"icon": "⬆️", "t": "numerador", "d": "partes pintadas"},
+        {"icon": "⬇️", "t": "denominador", "d": "total de partes iguais"},
+        {"icon": "➗", "t": "traço da fração", "d": "significa divisão"}
+      ]
+    },
+    {
+      "h": "Terça parte e quarta parte",
+      "figure": {
+        "src": "assets/4b/mat14-meio-terco-quarto.svg",
+        "alt": "Três círculos: dividido em 2 partes com 1 pintada (um meio), em 3 partes com 1 pintada (um terço) e em 4 partes com 1 pintada (um quarto).",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "Figura dividida em <strong>3 partes iguais</strong>, 1 pintada: <strong>terça parte</strong> ou <strong>um terço</strong> → <strong>1/3</strong>.",
+        "Figura dividida em <strong>4 partes iguais</strong>, 1 pintada: <strong>quarta parte</strong> ou <strong>um quarto</strong> → <strong>1/4</strong>. Dobrando uma folha ao meio duas vezes, obtemos 4 partes iguais: cada uma é a metade da metade, ou seja, um quarto. Juntando 4 quartos, formamos a folha inteira.",
+        "Atenção: as partes precisam ser <strong>iguais</strong>. Se uma pizza foi dividida em 4 pedaços iguais e 1 foi tirado, o pedaço tirado é <strong>1/4</strong> da pizza."
+      ]
+    },
+    {
+      "h": "Quinta, sexta, sétima, oitava, nona e décima partes",
+      "figure": {
+        "src": "assets/4b/mat14-fracoes-unitarias.svg",
+        "alt": "Barras iguais divididas de 2 a 10 partes, cada uma com 1 parte pintada: um meio, um terço, um quarto, um quinto, um sexto, um sétimo, um oitavo, um nono, um décimo. Quanto mais partes, menor o pedaço.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "Frações com <strong>numerador 1</strong> são chamadas <strong>frações unitárias</strong>. Veja como lemos:",
+        "1/2 um meio · 1/3 um terço · 1/4 um quarto · 1/5 <strong>um quinto</strong> · 1/6 <strong>um sexto</strong> · 1/7 <strong>um sétimo</strong> · 1/8 <strong>um oitavo</strong> · 1/9 <strong>um nono</strong> · 1/10 <strong>um décimo</strong>.",
+        "Quando dividimos uma figura em 5 partes iguais e pintamos 1, a <strong>quinta parte</strong> (um quinto, 1/5) foi pintada. Com 10 partes iguais, a <strong>décima parte</strong> (um décimo, 1/10).",
+        "Quanto <strong>mais</strong> partes iguais, <strong>menor</strong> é cada pedaço: 1/10 de uma pizza é menor que 1/2 da mesma pizza."
+      ],
+      "cards": [
+        {"icon": "🍕", "t": "1/5", "d": "um quinto"},
+        {"icon": "🍕", "t": "1/6", "d": "um sexto"},
+        {"icon": "🍕", "t": "1/7", "d": "um sétimo"},
+        {"icon": "🍕", "t": "1/8", "d": "um oitavo"},
+        {"icon": "🍕", "t": "1/9", "d": "um nono"},
+        {"icon": "🍕", "t": "1/10", "d": "um décimo"}
+      ]
+    },
+    {
+      "h": "Frações de quantidade",
+      "figure": {
+        "src": "assets/4b/mat14-fracao-de-quantidade.svg",
+        "alt": "Metade de 8 morangos: 8 morangos repartidos em 2 grupos de 4, 8 ÷ 2 = 4. Um quarto de 12 picolés: 12 picolés em 4 grupos de 3, 12 ÷ 4 = 3.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "Para achar a fração de uma quantidade, <strong>dividimos</strong> a quantidade pelo <strong>denominador</strong>.",
+        "Cecília tinha 8 morangos e deu metade ao irmão: <strong>1/2 de 8 = 8 ÷ 2 = 4</strong>.",
+        "1/3 de 9 bolas = 9 ÷ 3 = <strong>3</strong>. 1/4 de 12 picolés = 12 ÷ 4 = <strong>3</strong>. 1/8 de 16 chaves = 16 ÷ 8 = <strong>2</strong>.",
+        "Mais exemplos do livro: 1/2 de 50 carrinhos = 25; 1/4 de 20 bombons = 5; 1/5 de 35 laranjas = 7; 1/7 de 63 pirulitos = 9; 1/9 de 54 bolas = 6."
+      ]
+    },
+    {
+      "h": "Resolvendo problemas com frações unitárias",
+      "p": [
+        "Plínio dividiu uma torta de limão em <strong>8 pedaços iguais</strong>. A metade da torta são <strong>4 pedaços</strong> (8 ÷ 2); um quarto são <strong>2 pedaços</strong> (8 ÷ 4). Se ele comeu 1 pedaço, comeu <strong>1/8</strong> da torta.",
+        "João dividiu um bolo em <strong>10 pedaços</strong>. A família comeu 2 + 1 + 3 + 1 + 2 = <strong>9 pedaços</strong>. Restou 1 pedaço: <strong>1/10</strong> do bolo.",
+        "Ricardo tem <strong>18 carrinhos</strong>. Metade é azul: 18 ÷ 2 = <strong>9</strong>. Um sexto é verde: 18 ÷ 6 = <strong>3</strong> (o mesmo para os vermelhos e os amarelos). 9 + 3 + 3 + 3 = 18.",
+        "Na pesquisa da professora Gabriela, votaram 15 + 30 + 5 + 8 + 2 = <strong>60 alunos</strong>. Pão de queijo teve 30 votos (<strong>metade</strong>, pois 60 ÷ 2 = 30) e churrasco teve 15 (<strong>um quarto</strong>, pois 60 ÷ 4 = 15).",
+        "“Metade das batatas ficou crua” <strong>não</strong> quer dizer que nenhuma ficou cozida: a outra metade ficou cozida. E “1/2 da lata de leite condensado” é a metade da lata."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "memory",
+      "title": "Jogo da memória das frações unitárias",
+      "short": "Memória das frações",
+      "instructions": "Ache cada fração e o jeito de ler.",
+      "items": [
+        {"base": "1/2", "result": "um meio"},
+        {"base": "1/3", "result": "um terço"},
+        {"base": "1/4", "result": "um quarto"},
+        {"base": "1/5", "result": "um quinto"},
+        {"base": "1/8", "result": "um oitavo"},
+        {"base": "1/10", "result": "um décimo"}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Repartir em grupos iguais",
+      "short": "Fração de quantidade",
+      "instructions": "Reparta a quantidade em grupos iguais. Quantos ficam em cada grupo?",
+      "pairs": [
+        ["Metade de 8 morangos: 8 ÷ 2", "4"],
+        ["Terça parte de 9 bolas: 9 ÷ 3", "3"],
+        ["Oitava parte de 16 chaves: 16 ÷ 8", "2"],
+        ["Metade de 12 vasos: 12 ÷ 2", "6"],
+        ["Quarta parte de 20 bombons: 20 ÷ 4", "5"],
+        ["Quinta parte de 35 laranjas: 35 ÷ 5", "7"],
+        ["Terça parte de 24 bolinhas: 24 ÷ 3", "8"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Que fração é essa?",
+      "short": "Meio, terço ou quarto",
+      "instructions": "Leia a situação. Que fração do todo foi pega?",
+      "categories": ["Um meio (1/2)", "Um terço (1/3)", "Um quarto (1/4)"],
+      "items": [
+        {"text": "Jair dividiu um sanduíche igualmente com Estela. Com quanto Jair ficou?", "cat": 0},
+        {"text": "Uma pizza foi dividida em 4 pedaços iguais. Tiraram 1 pedaço.", "cat": 2},
+        {"text": "Um bolo foi dividido em 3 partes iguais. Ana comeu 1 parte.", "cat": 1},
+        {"text": "Dobrei a folha ao meio duas vezes e pintei 1 das partes.", "cat": 2},
+        {"text": "Uma torta de 8 pedaços iguais: Plínio separou 4 pedaços.", "cat": 0},
+        {"text": "Uma torta de 8 pedaços iguais: Plínio separou 2 pedaços.", "cat": 2},
+        {"text": "Uma barra de 3 pedaços iguais: Lia comeu 1 pedaço.", "cat": 1},
+        {"text": "Metade das batatas ficou crua. Que fração ficou crua?", "cat": 0}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Problemas de frações",
+      "short": "Problemas",
+      "instructions": "Leia o problema e escolha a resposta.",
+      "pairs": [
+        ["Ricardo tem 18 carrinhos. Metade é azul. Quantos são azuis?", "9 carrinhos"],
+        ["Um sexto dos 18 carrinhos de Ricardo é verde. Quantos são verdes?", "3 carrinhos"],
+        ["A torta de Plínio tem 8 pedaços iguais. Quantos pedaços são um quarto da torta?", "2 pedaços"],
+        ["O bolo tinha 10 pedaços iguais e a família comeu 9. Que fração restou?", "um décimo do bolo"],
+        ["60 alunos votaram. Um quarto escolheu churrasco. Quantos alunos?", "15 alunos"],
+        ["O cozinheiro gastou 68 reais. No outro dia, gastou metade disso. Quanto?", "34 reais"]
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "image": "assets/4b/mat14-q-sexto.svg",
+      "imageAlt": "Círculo dividido em 6 partes iguais, com 1 parte pintada de laranja.",
+      "q": "Qual fração representa a parte colorida desta figura?",
+      "options": ["1/6", "1/8", "1/7", "1/2"],
+      "answer": 0,
+      "explain": "O círculo foi dividido em 6 partes iguais e 1 está colorida: 1/6, um sexto."
+    },
+    {
+      "type": "mc",
+      "image": "assets/4b/mat14-q-chocolate.svg",
+      "imageAlt": "Barra de chocolate com 3 fileiras de 3 pedaços retangulares iguais, 9 pedaços no total.",
+      "q": "Giulia ganhou esta barra de chocolate. Que fração da barra representa cada pedaço?",
+      "options": ["1/9", "1/3", "1/10", "1/8"],
+      "answer": 0,
+      "explain": "A barra tem 3 × 3 = 9 pedaços iguais. Cada pedaço é 1/9, um nono."
+    },
+    {
+      "type": "mc",
+      "image": "assets/4b/mat14-q-oitavo.svg",
+      "imageAlt": "Retângulo dividido em 8 partes iguais, com 1 parte pintada de roxo.",
+      "q": "Como se lê a fração que representa a parte pintada?",
+      "options": ["um oitavo", "um sétimo", "um sexto", "um décimo"],
+      "answer": 0,
+      "explain": "8 partes iguais, 1 pintada: 1/8, que se lê um oitavo."
+    },
+    {
+      "type": "mc",
+      "image": "assets/4b/mat14-q-terco.svg",
+      "imageAlt": "Retângulo dividido em 3 partes iguais, com 1 parte pintada de amarelo.",
+      "q": "Que parte do retângulo foi pintada de amarelo?",
+      "options": ["A terça parte", "A metade", "A quarta parte", "A quinta parte"],
+      "answer": 0,
+      "explain": "3 partes iguais, 1 pintada: a terça parte, ou um terço (1/3)."
+    },
+    {
+      "type": "mc",
+      "image": "assets/4b/mat14-q-quinto.svg",
+      "imageAlt": "Círculo dividido em 5 partes iguais, com 1 parte pintada de verde.",
+      "q": "Qual fração representa a parte verde?",
+      "options": ["1/5", "1/4", "1/6", "1/3"],
+      "answer": 0,
+      "explain": "5 partes iguais, 1 verde: 1/5, um quinto."
+    },
+    {
+      "type": "mc",
+      "q": "Na fração 1/4, o número 4 é o denominador. O que ele indica?",
+      "options": ["Em quantas partes iguais o todo foi dividido", "Quantas partes foram pintadas", "Quantas figuras existem", "Quantas partes sobraram"],
+      "answer": 0,
+      "explain": "O denominador (número de baixo) indica o total de partes iguais. O numerador (de cima) indica as partes pintadas."
+    },
+    {
+      "type": "mc",
+      "q": "Uma pizza foi dividida em 2 pedaços iguais e outra pizza igual, em 10 pedaços iguais. Qual pedaço é maior?",
+      "options": ["1/2 da pizza", "1/10 da pizza", "Os dois são iguais", "Não dá para saber"],
+      "answer": 0,
+      "explain": "Quanto mais partes iguais, menor é cada pedaço. Por isso 1/2 é maior que 1/10."
+    },
+    {
+      "type": "mc",
+      "context": "Cecília tinha 8 morangos. Ela disse ao irmão: “Vou dar metade dessa quantidade de morangos para você”.",
+      "q": "Quantos morangos Cecília deu ao irmão?",
+      "options": ["4 morangos", "2 morangos", "6 morangos", "8 morangos"],
+      "answer": 0,
+      "explain": "1/2 de 8 = 8 ÷ 2 = 4."
+    },
+    {
+      "type": "text",
+      "q": "Calcule: 1/3 de 27 copos é igual a quantos copos? Escreva só o número.",
+      "answers": ["9", "9 copos", "nove"],
+      "explain": "1/3 de 27 = 27 ÷ 3 = 9."
+    },
+    {
+      "type": "mc",
+      "q": "Quanto é 1/5 de 35 laranjas?",
+      "options": ["7 laranjas", "5 laranjas", "30 laranjas", "40 laranjas"],
+      "answer": 0,
+      "explain": "1/5 de 35 = 35 ÷ 5 = 7."
+    },
+    {
+      "type": "text",
+      "q": "Quanto é 1/4 de 12 picolés? Escreva só o número.",
+      "answers": ["3", "3 picolés", "três"],
+      "explain": "1/4 de 12 = 12 ÷ 4 = 3."
+    },
+    {
+      "type": "mc",
+      "image": "assets/4b/mat14-q-torta.svg",
+      "imageAlt": "Torta de limão redonda dividida em 8 pedaços iguais.",
+      "q": "Plínio dividiu igualmente esta torta de limão em 8 pedaços. Quantos pedaços correspondem à metade da torta?",
+      "options": ["4 pedaços", "2 pedaços", "8 pedaços", "6 pedaços"],
+      "answer": 0,
+      "explain": "Metade de 8 = 8 ÷ 2 = 4 pedaços."
+    },
+    {
+      "type": "mc",
+      "image": "assets/4b/mat14-q-torta.svg",
+      "imageAlt": "Torta de limão redonda dividida em 8 pedaços iguais.",
+      "q": "Plínio comeu um pedaço desta torta, dividida em 8 pedaços iguais. Que fração da torta ele comeu?",
+      "options": ["1/8", "1/2", "1/4", "1/6"],
+      "answer": 0,
+      "explain": "1 pedaço de 8 pedaços iguais: 1/8, um oitavo."
+    },
+    {
+      "type": "mc",
+      "context": "João dividiu o bolo em 10 pedaços iguais. O avô comeu 2 pedaços, o pai comeu 1, o irmão comeu 3, João comeu 1 e a mãe comeu 2 pedaços.",
+      "q": "Que fração do bolo restou?",
+      "options": ["1/10", "1/9", "1/2", "1/5"],
+      "answer": 0,
+      "explain": "2 + 1 + 3 + 1 + 2 = 9 pedaços comidos. Restou 1 de 10: 1/10."
+    },
+    {
+      "type": "mc",
+      "context": "Ricardo tem uma coleção de 18 carrinhos. Metade desses carrinhos são azuis, um sexto é verde, um sexto é vermelho e um sexto é amarelo.",
+      "q": "Quantos carrinhos de Ricardo são verdes?",
+      "options": ["3 carrinhos", "9 carrinhos", "6 carrinhos", "2 carrinhos"],
+      "answer": 0,
+      "explain": "1/6 de 18 = 18 ÷ 6 = 3."
+    },
+    {
+      "type": "mc",
+      "context": "Na cozinha, a mulher pergunta: “As batatas ficaram boas?”. O homem responde: “Não, metade das batatas ficou crua”.",
+      "q": "O que o homem quis dizer?",
+      "options": ["Metade das batatas ficou cozida", "Nenhuma batata ficou cozida", "Todas as batatas ficaram cruas", "Só uma batata ficou crua"],
+      "answer": 0,
+      "explain": "Se metade ficou crua, a outra metade ficou cozida."
+    },
+    {
+      "type": "mc",
+      "context": "A menina ganhou 1 sanduíche cortado em 2 metades. Pedro ganhou 1 sanduíche igual, cortado em 4 quartos. Ela reclamou: “Por que Pedro ganhou 4 sanduíches e eu ganhei só 2?”.",
+      "q": "A menina tem razão de reclamar?",
+      "options": ["Não, os dois ganharam um sanduíche inteiro", "Sim, Pedro ganhou mais sanduíche", "Sim, ela ganhou o dobro", "Não, ela ganhou mais que Pedro"],
+      "answer": 0,
+      "explain": "2 metades formam 1 sanduíche inteiro, e 4 quartos também. Os dois ganharam a mesma quantidade."
+    },
+    {
+      "type": "mc",
+      "context": "Pesquisa da professora Gabriela com os alunos do 3º ano (cada aluno votou em uma comida típica): churrasco 15, pão de queijo 30, tapioca 5, açaí 8, arroz com pequi 2. Ao todo, votaram 60 alunos.",
+      "q": "Em qual comida típica votou metade dos alunos?",
+      "options": ["Pão de queijo", "Churrasco", "Açaí", "Tapioca"],
+      "answer": 0,
+      "explain": "Metade de 60 = 60 ÷ 2 = 30, e pão de queijo teve 30 votos. Churrasco teve 15, que é um quarto de 60."
+    },
+    {
+      "type": "mc",
+      "q": "O que quer dizer “1/2 da lata de leite condensado” em uma receita?",
+      "options": ["Metade da lata", "Duas latas", "Uma lata inteira", "Um quarto da lata"],
+      "answer": 0,
+      "explain": "1/2 é um meio: a lata dividida em 2 partes iguais, usando 1 parte."
+    }
+  ]
+}

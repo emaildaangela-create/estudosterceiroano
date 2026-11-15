@@ -3879,6 +3879,7 @@ const DISCIPLINAS = [
         "module": "24",
         "title": "Aventura e diversão",
         "subtitle": "Pronomes demonstrativos",
+        "video": "assets/videos/lp24.mp4",
         "theory": [
           {
             "h": "Pronomes demonstrativos",
@@ -4182,6 +4183,7 @@ const DISCIPLINAS = [
         "module": "25",
         "title": "Ai, que susto!",
         "subtitle": "Conto de mistério · Verbo · Sinônimo e antônimo",
+        "video": "assets/videos/lp25.mp4",
         "theory": [
           {
             "h": "Conto de mistério: O fantasma da sorte",
@@ -4549,6 +4551,7 @@ const DISCIPLINAS = [
         "module": "26",
         "title": "Todo mundo tem medo!",
         "subtitle": "Tempos verbais · Ortografia: -am e -ão",
+        "video": "assets/videos/lp26.mp4",
         "theory": [
           {
             "h": "Tempos verbais: passado, presente e futuro",
@@ -4918,6 +4921,7 @@ const DISCIPLINAS = [
         "module": "27",
         "title": "Comer bem para melhor crescer!",
         "subtitle": "Sujeito e predicado",
+        "video": "assets/videos/lp27.mp4",
         "theory": [
           {
             "h": "Oração: frase com verbo",
@@ -6982,6 +6986,7 @@ const DISCIPLINAS = [
         "module": "13",
         "title": "Trabalho e lazer",
         "subtitle": "O que é lazer · Adultos também brincam · Cinema e circo",
+        "video": "assets/videos/hist13.mp4",
         "theory": [
           {
             "h": "O que é lazer?",
@@ -7230,6 +7235,7 @@ const DISCIPLINAS = [
         "module": "14",
         "title": "Muitos jeitos de festejar",
         "subtitle": "Motivos e jeitos de festejar · Brasil, um país festeiro",
+        "video": "assets/videos/hist14.mp4",
         "theory": [
           {
             "h": "Muitos motivos e jeitos de festejar",
@@ -8029,7 +8035,1863 @@ const DISCIPLINAS = [
     "cor": "--ciano",
     "prova": "2026-11-25",
     "horario": "12h55 às 14h25",
-    "capitulos": []
+    "capitulos": [
+      {
+        "id": "mat13",
+        "module": "13",
+        "title": "Medidas de massa, de capacidade e de comprimento",
+        "subtitle": "Instrumentos · kg, g, mg e t · L e mL · km, m, cm e mm · Problemas",
+        "theory": [
+          {
+            "h": "Instrumentos de medida",
+            "figure": {
+              "src": "assets/4b/mat13-instrumentos.svg",
+              "alt": "Três colunas: massa (balança; quilograma, grama, miligrama, tonelada), capacidade (copo de medidas; litro e mililitro) e comprimento (régua e fita métrica; metro, centímetro, milímetro, quilômetro).",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "Para medir, usamos <strong>instrumentos padronizados de medida</strong>. Cada um serve para uma coisa:",
+              "<strong>Balança</strong> ⚖️ mede a <strong>massa</strong> (o “peso”): a massa dos tomates que o feirante vende, a massa de uma criança no consultório.",
+              "<strong>Copo de medidas</strong> 🥛 mede a <strong>capacidade</strong> (quanto cabe): a quantidade de leite de uma receita de bolo.",
+              "<strong>Régua, fita métrica e metro de madeira</strong> 📏 medem o <strong>comprimento</strong>: o tecido da costureira, a altura de uma parede, a capa do caderno.",
+              "O <strong>relógio</strong> também é um instrumento de medida: ele mede o <strong>tempo</strong>."
+            ],
+            "cards": [
+              {
+                "icon": "⚖️",
+                "t": "balança",
+                "d": "mede massa"
+              },
+              {
+                "icon": "🥛",
+                "t": "copo de medidas",
+                "d": "mede capacidade"
+              },
+              {
+                "icon": "📏",
+                "t": "régua / fita métrica",
+                "d": "mede comprimento"
+              },
+              {
+                "icon": "⏰",
+                "t": "relógio",
+                "d": "mede tempo"
+              }
+            ]
+          },
+          {
+            "h": "Medidas de massa: quilograma, grama, miligrama e tonelada",
+            "figure": {
+              "src": "assets/4b/mat13-massa.svg",
+              "alt": "Degraus das unidades de massa: 1 tonelada = 1 000 quilogramas; 1 quilograma = 1 000 gramas; 1 grama = 1 000 miligramas.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "<strong>1 quilograma (1 kg) = 1 000 gramas (1 000 g).</strong> Meio quilograma corresponde a <strong>500 g</strong>. Um pacote de arroz tem 2 kg; um pacote de leite em pó tem 400 g; dois pacotes de milho de pipoca de 500 g formam 1 kg.",
+              "<strong>1 grama (1 g) = 1 000 miligramas (1 000 mg).</strong> O miligrama aparece no rótulo dos alimentos: um copo de iogurte tem 110 mg de sódio e 248 mg de cálcio. Uma beterraba de 70 g tem 70 000 mg.",
+              "<strong>1 tonelada (1 t) = 1 000 quilogramas.</strong> José leva 10 caixas de 100 kg na empilhadeira: 10 × 100 = 1 000 kg = 1 t.",
+              "Para escolher a unidade, pense no tamanho: <strong>abelha</strong> e <strong>formiga</strong> → miligrama; <strong>lápis</strong>, <strong>pera</strong> e <strong>borracha</strong> → grama; <strong>melancia</strong>, <strong>bebê</strong> e <strong>cachorro</strong> → quilograma; <strong>caminhão de carga</strong> → tonelada."
+            ],
+            "cards": [
+              {
+                "icon": "🍚",
+                "t": "1 kg",
+                "d": "1 000 g"
+              },
+              {
+                "icon": "🫘",
+                "t": "meio quilograma",
+                "d": "500 g"
+              },
+              {
+                "icon": "🥛",
+                "t": "1 g",
+                "d": "1 000 mg"
+              },
+              {
+                "icon": "🚚",
+                "t": "1 t",
+                "d": "1 000 kg"
+              }
+            ]
+          },
+          {
+            "h": "Medidas de capacidade: litro e mililitro",
+            "figure": {
+              "src": "assets/4b/mat13-capacidade.svg",
+              "alt": "Uma jarra de 1 litro é igual a quatro copos de 250 mililitros: 250 + 250 + 250 + 250 = 1 000 mL.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "<strong>1 litro (1 L) = 1 000 mililitros (1 000 mL).</strong> Leite, suco, água e óleo costumam ser vendidos por litro.",
+              "Júlio fez 1 L de suco e encheu 3 copos de 250 mL: usou 750 mL e sobraram <strong>250 mL</strong> na jarra. Com 4 copos de 200 mL, ele usaria 800 mL e sobrariam <strong>200 mL</strong>.",
+              "Uma garrafa de 500 mL tem <strong>250 mL a mais</strong> que uma garrafa de 250 mL.",
+              "Um galão de tinta tem cerca de <strong>4 L</strong>; um frasco de xampu tem cerca de <strong>250 mL</strong>."
+            ]
+          },
+          {
+            "h": "Medidas de comprimento: quilômetro, metro, centímetro e milímetro",
+            "figure": {
+              "src": "assets/4b/mat13-comprimento.svg",
+              "alt": "1 quilômetro = 1 000 metros; 1 metro = 100 centímetros; 1 centímetro = 10 milímetros; 1 milímetro é o menor tracinho da régua.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "<strong>1 centímetro (1 cm) = 10 milímetros (10 mm).</strong> Na régua, cada número é 1 cm e os tracinhos pequenos são milímetros. Então 4 cm = 40 mm e 80 mm = 8 cm.",
+              "<strong>1 metro (1 m) = 100 centímetros (100 cm).</strong> A fita métrica de papel mede 1 m. Então 3 m = 300 cm e 700 cm = 7 m. Uma porta mede cerca de 2 m; uma tesoura, cerca de 11 cm.",
+              "<strong>1 quilômetro (1 km) = 1 000 metros (1 000 m).</strong> Usamos o quilômetro para distâncias grandes, como de uma cidade a outra.",
+              "Use <strong>centímetro</strong> para coisas pequenas (um estojo, a página) e <strong>metro</strong> para coisas maiores (a altura de uma parede)."
+            ],
+            "cards": [
+              {
+                "icon": "📏",
+                "t": "1 cm",
+                "d": "10 mm"
+              },
+              {
+                "icon": "🚪",
+                "t": "1 m",
+                "d": "100 cm"
+              },
+              {
+                "icon": "🛣️",
+                "t": "1 km",
+                "d": "1 000 m"
+              }
+            ]
+          },
+          {
+            "h": "Medidas nas feiras livres",
+            "p": [
+              "Nas feiras livres, os feirantes usam <strong>balanças</strong> para medir a massa dos produtos em <strong>unidades padronizadas</strong>, como o quilograma e o grama.",
+              "Também é comum usar <strong>unidades não padronizadas</strong>: a <strong>dúzia</strong> (12 unidades), o <strong>maço</strong> (de verduras) e a <strong>bacia</strong> (de pimentões, por exemplo). Esses produtos não são pesados.",
+              "Comparar preços ajuda a escolher bem. Goiaba a R$ 14,90 o quilograma e goiabada a R$ 12,00 por 300 gramas: a goiaba natural é mais saudável, e os alimentos naturais ajudam a prevenir problemas de saúde."
+            ]
+          },
+          {
+            "h": "Resolvendo problemas com as quatro operações",
+            "p": [
+              "➕ <strong>Adição:</strong> um agricultor colheu 4 t de soja (4 000 kg) e 980 kg de milho: 4 000 + 980 = <strong>4 980 kg</strong>. A horta de Pedro tem lados de 30 m, 17 m, 30 m e 17 m: para cercar, precisa de 30 + 17 + 30 + 17 = <strong>94 m</strong> de arame.",
+              "➖ <strong>Subtração:</strong> na balança do aeroporto, havia 23 kg; com a mala preta, 38 kg. A mala preta tem 38 − 23 = <strong>15 kg</strong>. Um artista de 176 cm fica com 191 cm nas pernas-de-pau: cada perna-de-pau mede 191 − 176 = <strong>15 cm</strong>.",
+              "✖️ <strong>Multiplicação:</strong> Luciana viaja 70 km para ir e 70 km para voltar, de segunda a sexta: 70 × 2 = 140 km por dia e 140 × 5 = <strong>700 km</strong>. Na casa de Giovana, comem meio quilograma (500 g) de feijão por dia: em 5 dias, 5 × 500 = <strong>2 500 g</strong>.",
+              "➗ <strong>Divisão:</strong> uma embalagem de 3 L custa 24 reais (24 ÷ 3 = 8 reais por litro) e outra de 2 L custa 12 reais (12 ÷ 2 = 6 reais por litro). A de 2 L é <strong>mais vantajosa</strong>. Um cozinheiro gastou 68 reais e, no dia seguinte, a metade: 68 ÷ 2 = <strong>34 reais</strong>."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "sort",
+            "title": "Qual instrumento usar?",
+            "short": "Instrumentos",
+            "instructions": "Qual instrumento de medida é o mais adequado para cada situação?",
+            "categories": [
+              "Balança ⚖️",
+              "Copo de medidas 🥛",
+              "Régua ou fita métrica 📏"
+            ],
+            "items": [
+              {
+                "text": "O feirante mede a massa dos tomates que a cliente comprou.",
+                "cat": 0
+              },
+              {
+                "text": "O cozinheiro mede o leite da receita de bolo.",
+                "cat": 1
+              },
+              {
+                "text": "A costureira mede o comprimento de um pedaço de tecido.",
+                "cat": 2
+              },
+              {
+                "text": "A nutricionista mede a massa da criança.",
+                "cat": 0
+              },
+              {
+                "text": "Júlio mede 250 mL de suco para cada copo.",
+                "cat": 1
+              },
+              {
+                "text": "Você mede a altura de uma parede.",
+                "cat": 2
+              },
+              {
+                "text": "O cozinheiro mede a massa de cada bolinho de falafel.",
+                "cat": 0
+              },
+              {
+                "text": "Você mede a capa do caderno.",
+                "cat": 2
+              }
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "Qual é a unidade mais adequada?",
+            "short": "Unidades de massa",
+            "instructions": "Qual unidade é a melhor para medir a massa de cada um?",
+            "categories": [
+              "miligrama (mg)",
+              "grama (g)",
+              "quilograma (kg)",
+              "tonelada (t)"
+            ],
+            "items": [
+              {
+                "text": "1 abelha",
+                "cat": 0
+              },
+              {
+                "text": "1 formiga",
+                "cat": 0
+              },
+              {
+                "text": "1 lápis",
+                "cat": 1
+              },
+              {
+                "text": "1 pera",
+                "cat": 1
+              },
+              {
+                "text": "4 borrachas",
+                "cat": 1
+              },
+              {
+                "text": "1 melancia",
+                "cat": 2
+              },
+              {
+                "text": "1 bebê",
+                "cat": 2
+              },
+              {
+                "text": "1 cachorro adulto",
+                "cat": 2
+              },
+              {
+                "text": "10 caixas de 100 kg na empilhadeira",
+                "cat": 3
+              },
+              {
+                "text": "A carga de um caminhão",
+                "cat": 3
+              }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Troca de unidades",
+            "short": "Converter medidas",
+            "instructions": "Escolha a medida que vale o mesmo.",
+            "pairs": [
+              [
+                "1 kg",
+                "1 000 g"
+              ],
+              [
+                "meio quilograma",
+                "500 g"
+              ],
+              [
+                "1 g",
+                "1 000 mg"
+              ],
+              [
+                "1 t",
+                "1 000 kg"
+              ],
+              [
+                "1 L",
+                "1 000 mL"
+              ],
+              [
+                "4 cm",
+                "40 mm"
+              ],
+              [
+                "3 m",
+                "300 cm"
+              ],
+              [
+                "1 km",
+                "1 000 m"
+              ]
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "Padronizada ou não padronizada?",
+            "short": "Medidas na feira",
+            "instructions": "Esta unidade é padronizada ou não padronizada?",
+            "context": "Nas feiras livres, os comerciantes costumam utilizar balanças para medir a massa dos produtos em unidades padronizadas de medida, como o quilograma e o grama. No entanto, é comum também o uso de unidades não padronizadas de medida, como a dúzia, o maço e a bacia.",
+            "categories": [
+              "Padronizada 📏",
+              "Não padronizada 🧺"
+            ],
+            "items": [
+              {
+                "text": "quilograma",
+                "cat": 0
+              },
+              {
+                "text": "dúzia",
+                "cat": 1
+              },
+              {
+                "text": "grama",
+                "cat": 0
+              },
+              {
+                "text": "maço",
+                "cat": 1
+              },
+              {
+                "text": "litro",
+                "cat": 0
+              },
+              {
+                "text": "bacia",
+                "cat": 1
+              },
+              {
+                "text": "metro",
+                "cat": 0
+              },
+              {
+                "text": "mililitro",
+                "cat": 0
+              }
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "Qual instrumento o cozinheiro deve usar para medir a quantidade de leite de uma receita de bolo?",
+            "options": [
+              "Copo de medidas",
+              "Régua",
+              "Fita métrica",
+              "Relógio"
+            ],
+            "answer": 0,
+            "explain": "O copo de medidas mede capacidade, isto é, a quantidade de líquido."
+          },
+          {
+            "type": "mc",
+            "q": "1 quilograma equivale a:",
+            "options": [
+              "1 000 gramas",
+              "100 gramas",
+              "10 gramas",
+              "500 gramas"
+            ],
+            "answer": 0,
+            "explain": "1 kg = 1 000 g. Meio quilograma é que corresponde a 500 g."
+          },
+          {
+            "type": "mc",
+            "context": "Na casa de Giovana, é consumido meio quilograma de feijão por dia. Atenção: meio quilograma corresponde a 500 gramas.",
+            "q": "Quantos gramas de feijão são consumidos de segunda a sexta-feira?",
+            "options": [
+              "2 500 g",
+              "500 g",
+              "1 000 g",
+              "3 500 g"
+            ],
+            "answer": 0,
+            "explain": "De segunda a sexta são 5 dias: 5 × 500 = 2 500 g."
+          },
+          {
+            "type": "mc",
+            "context": "Na balança do aeroporto, um senhor colocou uma mala vermelha: o visor mostrou 23 kg. Depois, colocou a mala preta em cima da vermelha: o visor mostrou 38 kg.",
+            "q": "Qual é a massa da mala preta?",
+            "options": [
+              "15 kg",
+              "23 kg",
+              "38 kg",
+              "61 kg"
+            ],
+            "answer": 0,
+            "explain": "A mala preta é a diferença: 38 − 23 = 15 kg (ou 15 000 g)."
+          },
+          {
+            "type": "mc",
+            "q": "1 grama equivale a:",
+            "options": [
+              "1 000 miligramas",
+              "100 miligramas",
+              "10 miligramas",
+              "1 miligrama"
+            ],
+            "answer": 0,
+            "explain": "1 g = 1 000 mg. O miligrama aparece nos rótulos dos alimentos, como o do iogurte."
+          },
+          {
+            "type": "text",
+            "q": "Uma beterraba pesa 70 g. Quantos miligramas (mg) ela pesa? Escreva só o número.",
+            "answers": [
+              "70000",
+              "70 000",
+              "70.000",
+              "70000 mg",
+              "70 000 mg"
+            ],
+            "explain": "Cada grama tem 1 000 mg: 70 × 1 000 = 70 000 mg."
+          },
+          {
+            "type": "mc",
+            "context": "José trabalha com uma empilhadeira. Na foto, há 10 caixas sobre a empilhadeira, e a massa de cada caixa é 100 quilogramas.",
+            "q": "Quanto José está levando de uma só vez?",
+            "options": [
+              "1 000 kg, ou seja, 1 tonelada",
+              "100 kg, ou seja, 1 tonelada",
+              "10 kg, ou seja, 1 tonelada",
+              "1 000 g, ou seja, 1 tonelada"
+            ],
+            "answer": 0,
+            "explain": "10 × 100 = 1 000 kg. E 1 tonelada = 1 000 kg."
+          },
+          {
+            "type": "mc",
+            "context": "Um agricultor colheu 4 toneladas de soja e 980 quilogramas de milho. Lembre: 1 tonelada = 1 000 quilogramas.",
+            "q": "Quantos quilogramas de grãos esse agricultor colheu ao todo?",
+            "options": [
+              "4 980 kg",
+              "984 kg",
+              "1 380 kg",
+              "4 098 kg"
+            ],
+            "answer": 0,
+            "explain": "4 t = 4 000 kg. Então 4 000 + 980 = 4 980 kg."
+          },
+          {
+            "type": "mc",
+            "q": "1 litro equivale a:",
+            "options": [
+              "1 000 mililitros",
+              "100 mililitros",
+              "250 mililitros",
+              "500 mililitros"
+            ],
+            "answer": 0,
+            "explain": "1 L = 1 000 mL."
+          },
+          {
+            "type": "mc",
+            "context": "Júlio fez 1 L de suco de laranja e colocou em 1 jarra. Depois, encheu 3 copos iguais com 250 mL de suco de laranja em cada um.",
+            "q": "Quantos mililitros de suco sobraram na jarra?",
+            "options": [
+              "250 mL",
+              "750 mL",
+              "500 mL",
+              "1 000 mL"
+            ],
+            "answer": 0,
+            "explain": "3 × 250 = 750 mL nos copos. 1 000 − 750 = 250 mL na jarra."
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat13-jarra-300.svg",
+            "imageAlt": "Jarra de 1 litro graduada de 100 em 100 mililitros, com líquido até a marca de 300 mL.",
+            "q": "A jarra tem 300 mL de suco. Quantos mililitros faltam para completar 1 litro?",
+            "options": [
+              "700 mL",
+              "300 mL",
+              "600 mL",
+              "1 000 mL"
+            ],
+            "answer": 0,
+            "explain": "1 L = 1 000 mL. 1 000 − 300 = 700 mL."
+          },
+          {
+            "type": "mc",
+            "context": "Vera foi ao mercado com o pai comprar amaciante. A embalagem da esquerda tem 3 L e custa 24 reais. A embalagem da direita tem 2 L e custa 12 reais.",
+            "q": "Considerando o preço de 1 litro, qual embalagem é mais vantajosa?",
+            "options": [
+              "A da direita: 6 reais o litro",
+              "A da esquerda: 8 reais o litro",
+              "A da esquerda: 6 reais o litro",
+              "A da direita: 8 reais o litro"
+            ],
+            "answer": 0,
+            "explain": "24 ÷ 3 = 8 reais por litro; 12 ÷ 2 = 6 reais por litro. A de 2 L sai mais barata."
+          },
+          {
+            "type": "mc",
+            "q": "80 mm equivalem a:",
+            "options": [
+              "8 cm",
+              "80 cm",
+              "800 cm",
+              "8 m"
+            ],
+            "answer": 0,
+            "explain": "1 cm = 10 mm. 80 ÷ 10 = 8 cm."
+          },
+          {
+            "type": "mc",
+            "q": "700 cm equivalem a:",
+            "options": [
+              "7 m",
+              "70 m",
+              "700 m",
+              "7 km"
+            ],
+            "answer": 0,
+            "explain": "1 m = 100 cm. 700 ÷ 100 = 7 m."
+          },
+          {
+            "type": "text",
+            "q": "Complete: 3 m são equivalentes a quantos centímetros? Escreva só o número.",
+            "answers": [
+              "300",
+              "300 cm"
+            ],
+            "explain": "1 m = 100 cm. 3 × 100 = 300 cm."
+          },
+          {
+            "type": "mc",
+            "q": "Qual unidade é a mais adequada para medir a altura de uma parede?",
+            "options": [
+              "Metro",
+              "Litro",
+              "Quilograma",
+              "Miligrama"
+            ],
+            "answer": 0,
+            "explain": "Altura é comprimento. Para coisas grandes, usamos o metro."
+          },
+          {
+            "type": "mc",
+            "q": "Qual medida mais se aproxima da altura real de uma porta?",
+            "options": [
+              "2 m",
+              "2 cm",
+              "2 mm",
+              "2 km"
+            ],
+            "answer": 0,
+            "explain": "Uma porta tem cerca de 2 metros, isto é, 200 cm."
+          },
+          {
+            "type": "mc",
+            "context": "Luciana mora na cidade de Santos e trabalha na capital, a cerca de 70 quilômetros. De segunda a sexta-feira, ela faz o trajeto de ida e volta.",
+            "q": "Quantos quilômetros, aproximadamente, Luciana percorre de segunda a sexta-feira?",
+            "options": [
+              "700 km",
+              "140 km",
+              "350 km",
+              "70 km"
+            ],
+            "answer": 0,
+            "explain": "Ida e volta: 70 × 2 = 140 km por dia. Em 5 dias: 140 × 5 = 700 km."
+          },
+          {
+            "type": "mc",
+            "context": "Um artista de circo tem 176 cm de altura. Com as pernas-de-pau, ele fica com 191 cm de altura.",
+            "q": "Qual é o comprimento de cada perna-de-pau?",
+            "options": [
+              "15 cm",
+              "15 m",
+              "15 mm",
+              "25 cm"
+            ],
+            "answer": 0,
+            "explain": "191 − 176 = 15 cm."
+          },
+          {
+            "type": "mc",
+            "context": "Receita de mousse de Teresa (o chocolate caiu sobre algumas palavras): “230 ___ de chocolate meio amargo; 350 ___ de creme de leite fresco gelado. Coloque em uma forma de 30 ___ de comprimento e leve ao congelador.”",
+            "q": "Quais unidades completam a receita, na ordem em que aparecem?",
+            "options": [
+              "gramas, mililitros, centímetros",
+              "quilogramas, litros, centímetros",
+              "litros, metros, quilogramas",
+              "gramas, quilogramas, litros"
+            ],
+            "answer": 0,
+            "explain": "Chocolate se mede em gramas, creme de leite (líquido) em mililitros e o comprimento da forma em centímetros."
+          },
+          {
+            "type": "mc",
+            "context": "Pedro vai cercar a horta retangular da chácara. Os lados da horta medem 30 m, 17 m, 30 m e 17 m.",
+            "q": "De quantos metros de arame Pedro vai precisar para dar uma volta na horta?",
+            "options": [
+              "94 m",
+              "47 m",
+              "64 m",
+              "510 m"
+            ],
+            "answer": 0,
+            "explain": "Somamos todos os lados: 30 + 17 + 30 + 17 = 94 m."
+          },
+          {
+            "type": "mc",
+            "context": "Supermercado Preço Bom: tomate, 1 kg por 4 reais. Supermercado Preço Justo: tomate, 2 kg por 7 reais.",
+            "q": "Para comprar 2 kg de tomate, qual supermercado é mais vantajoso?",
+            "options": [
+              "Preço Justo: 7 reais",
+              "Preço Bom: 7 reais",
+              "Preço Bom: 8 reais",
+              "Preço Justo: 8 reais"
+            ],
+            "answer": 0,
+            "explain": "No Preço Bom, 2 kg custam 2 × 4 = 8 reais. No Preço Justo, custam 7 reais."
+          },
+          {
+            "type": "mc",
+            "context": "Para fazer 1 copo de suco de graviola de 250 mL, Gregório usou 2 graviolas.",
+            "q": "Quantos litros de suco Gregório pode fazer com 8 graviolas?",
+            "options": [
+              "1 litro",
+              "2 litros",
+              "4 litros",
+              "8 litros"
+            ],
+            "answer": 0,
+            "explain": "8 ÷ 2 = 4 copos. 4 × 250 = 1 000 mL = 1 litro."
+          },
+          {
+            "type": "mc",
+            "context": "Nas feiras livres, os comerciantes usam balanças e unidades padronizadas, como o quilograma. Também usam unidades não padronizadas para vender frutas, legumes e verduras.",
+            "q": "Qual destas é uma unidade não padronizada usada nas feiras?",
+            "options": [
+              "Dúzia",
+              "Quilograma",
+              "Metro",
+              "Litro"
+            ],
+            "answer": 0,
+            "explain": "Dúzia e maço não são unidades padronizadas; quilograma, metro e litro são."
+          }
+        ]
+      },
+      {
+        "id": "mat14",
+        "module": "14",
+        "title": "Frações",
+        "subtitle": "Metade, terço e quarto · Quinto a décimo · Fração de quantidade · Problemas",
+        "theory": [
+          {
+            "h": "Metade ou um meio",
+            "figure": {
+              "src": "assets/4b/mat14-partes-da-fracao.svg",
+              "alt": "Retângulo dividido em 4 partes iguais com 1 parte pintada, ao lado da fração um quarto: o numerador 1 indica as partes pintadas e o denominador 4 indica o total de partes iguais.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "Quando uma figura é dividida em <strong>2 partes iguais</strong> e pintamos 1 parte, dizemos que <strong>metade</strong> ou <strong>um meio</strong> da figura foi pintado. Escrevemos <strong>1/2</strong>.",
+              "O número de cima é o <strong>numerador</strong>: indica quantas partes foram pintadas. O número de baixo é o <strong>denominador</strong>: indica em quantas <strong>partes iguais</strong> a figura foi dividida.",
+              "O traço entre os números significa <strong>divisão</strong>. Essa representação recebe o nome de <strong>fração</strong>.",
+              "Jair dividiu um sanduíche igualmente com Estela: o sanduíche foi dividido em 2 partes, e cada um ficou com <strong>metade</strong>."
+            ],
+            "cards": [
+              {
+                "icon": "⬆️",
+                "t": "numerador",
+                "d": "partes pintadas"
+              },
+              {
+                "icon": "⬇️",
+                "t": "denominador",
+                "d": "total de partes iguais"
+              },
+              {
+                "icon": "➗",
+                "t": "traço da fração",
+                "d": "significa divisão"
+              }
+            ]
+          },
+          {
+            "h": "Terça parte e quarta parte",
+            "figure": {
+              "src": "assets/4b/mat14-meio-terco-quarto.svg",
+              "alt": "Três círculos: dividido em 2 partes com 1 pintada (um meio), em 3 partes com 1 pintada (um terço) e em 4 partes com 1 pintada (um quarto).",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "Figura dividida em <strong>3 partes iguais</strong>, 1 pintada: <strong>terça parte</strong> ou <strong>um terço</strong> → <strong>1/3</strong>.",
+              "Figura dividida em <strong>4 partes iguais</strong>, 1 pintada: <strong>quarta parte</strong> ou <strong>um quarto</strong> → <strong>1/4</strong>. Dobrando uma folha ao meio duas vezes, obtemos 4 partes iguais: cada uma é a metade da metade, ou seja, um quarto. Juntando 4 quartos, formamos a folha inteira.",
+              "Atenção: as partes precisam ser <strong>iguais</strong>. Se uma pizza foi dividida em 4 pedaços iguais e 1 foi tirado, o pedaço tirado é <strong>1/4</strong> da pizza."
+            ]
+          },
+          {
+            "h": "Quinta, sexta, sétima, oitava, nona e décima partes",
+            "figure": {
+              "src": "assets/4b/mat14-fracoes-unitarias.svg",
+              "alt": "Barras iguais divididas de 2 a 10 partes, cada uma com 1 parte pintada: um meio, um terço, um quarto, um quinto, um sexto, um sétimo, um oitavo, um nono, um décimo. Quanto mais partes, menor o pedaço.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "Frações com <strong>numerador 1</strong> são chamadas <strong>frações unitárias</strong>. Veja como lemos:",
+              "1/2 um meio · 1/3 um terço · 1/4 um quarto · 1/5 <strong>um quinto</strong> · 1/6 <strong>um sexto</strong> · 1/7 <strong>um sétimo</strong> · 1/8 <strong>um oitavo</strong> · 1/9 <strong>um nono</strong> · 1/10 <strong>um décimo</strong>.",
+              "Quando dividimos uma figura em 5 partes iguais e pintamos 1, a <strong>quinta parte</strong> (um quinto, 1/5) foi pintada. Com 10 partes iguais, a <strong>décima parte</strong> (um décimo, 1/10).",
+              "Quanto <strong>mais</strong> partes iguais, <strong>menor</strong> é cada pedaço: 1/10 de uma pizza é menor que 1/2 da mesma pizza."
+            ],
+            "cards": [
+              {
+                "icon": "🍕",
+                "t": "1/5",
+                "d": "um quinto"
+              },
+              {
+                "icon": "🍕",
+                "t": "1/6",
+                "d": "um sexto"
+              },
+              {
+                "icon": "🍕",
+                "t": "1/7",
+                "d": "um sétimo"
+              },
+              {
+                "icon": "🍕",
+                "t": "1/8",
+                "d": "um oitavo"
+              },
+              {
+                "icon": "🍕",
+                "t": "1/9",
+                "d": "um nono"
+              },
+              {
+                "icon": "🍕",
+                "t": "1/10",
+                "d": "um décimo"
+              }
+            ]
+          },
+          {
+            "h": "Frações de quantidade",
+            "figure": {
+              "src": "assets/4b/mat14-fracao-de-quantidade.svg",
+              "alt": "Metade de 8 morangos: 8 morangos repartidos em 2 grupos de 4, 8 ÷ 2 = 4. Um quarto de 12 picolés: 12 picolés em 4 grupos de 3, 12 ÷ 4 = 3.",
+              "tipo": "diagrama"
+            },
+            "p": [
+              "Para achar a fração de uma quantidade, <strong>dividimos</strong> a quantidade pelo <strong>denominador</strong>.",
+              "Cecília tinha 8 morangos e deu metade ao irmão: <strong>1/2 de 8 = 8 ÷ 2 = 4</strong>.",
+              "1/3 de 9 bolas = 9 ÷ 3 = <strong>3</strong>. 1/4 de 12 picolés = 12 ÷ 4 = <strong>3</strong>. 1/8 de 16 chaves = 16 ÷ 8 = <strong>2</strong>.",
+              "Mais exemplos do livro: 1/2 de 50 carrinhos = 25; 1/4 de 20 bombons = 5; 1/5 de 35 laranjas = 7; 1/7 de 63 pirulitos = 9; 1/9 de 54 bolas = 6."
+            ]
+          },
+          {
+            "h": "Resolvendo problemas com frações unitárias",
+            "p": [
+              "Plínio dividiu uma torta de limão em <strong>8 pedaços iguais</strong>. A metade da torta são <strong>4 pedaços</strong> (8 ÷ 2); um quarto são <strong>2 pedaços</strong> (8 ÷ 4). Se ele comeu 1 pedaço, comeu <strong>1/8</strong> da torta.",
+              "João dividiu um bolo em <strong>10 pedaços</strong>. A família comeu 2 + 1 + 3 + 1 + 2 = <strong>9 pedaços</strong>. Restou 1 pedaço: <strong>1/10</strong> do bolo.",
+              "Ricardo tem <strong>18 carrinhos</strong>. Metade é azul: 18 ÷ 2 = <strong>9</strong>. Um sexto é verde: 18 ÷ 6 = <strong>3</strong> (o mesmo para os vermelhos e os amarelos). 9 + 3 + 3 + 3 = 18.",
+              "Na pesquisa da professora Gabriela, votaram 15 + 30 + 5 + 8 + 2 = <strong>60 alunos</strong>. Pão de queijo teve 30 votos (<strong>metade</strong>, pois 60 ÷ 2 = 30) e churrasco teve 15 (<strong>um quarto</strong>, pois 60 ÷ 4 = 15).",
+              "“Metade das batatas ficou crua” <strong>não</strong> quer dizer que nenhuma ficou cozida: a outra metade ficou cozida. E “1/2 da lata de leite condensado” é a metade da lata."
+            ]
+          }
+        ],
+        "games": [
+          {
+            "type": "memory",
+            "title": "Jogo da memória das frações unitárias",
+            "short": "Memória das frações",
+            "instructions": "Ache cada fração e o jeito de ler.",
+            "items": [
+              {
+                "base": "1/2",
+                "result": "um meio"
+              },
+              {
+                "base": "1/3",
+                "result": "um terço"
+              },
+              {
+                "base": "1/4",
+                "result": "um quarto"
+              },
+              {
+                "base": "1/5",
+                "result": "um quinto"
+              },
+              {
+                "base": "1/8",
+                "result": "um oitavo"
+              },
+              {
+                "base": "1/10",
+                "result": "um décimo"
+              }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Repartir em grupos iguais",
+            "short": "Fração de quantidade",
+            "instructions": "Reparta a quantidade em grupos iguais. Quantos ficam em cada grupo?",
+            "pairs": [
+              [
+                "Metade de 8 morangos: 8 ÷ 2",
+                "4"
+              ],
+              [
+                "Terça parte de 9 bolas: 9 ÷ 3",
+                "3"
+              ],
+              [
+                "Oitava parte de 16 chaves: 16 ÷ 8",
+                "2"
+              ],
+              [
+                "Metade de 12 vasos: 12 ÷ 2",
+                "6"
+              ],
+              [
+                "Quarta parte de 20 bombons: 20 ÷ 4",
+                "5"
+              ],
+              [
+                "Quinta parte de 35 laranjas: 35 ÷ 5",
+                "7"
+              ],
+              [
+                "Terça parte de 24 bolinhas: 24 ÷ 3",
+                "8"
+              ]
+            ]
+          },
+          {
+            "type": "sort",
+            "title": "Que fração é essa?",
+            "short": "Meio, terço ou quarto",
+            "instructions": "Leia a situação. Que fração do todo foi pega?",
+            "categories": [
+              "Um meio (1/2)",
+              "Um terço (1/3)",
+              "Um quarto (1/4)"
+            ],
+            "items": [
+              {
+                "text": "Jair dividiu um sanduíche igualmente com Estela. Com quanto Jair ficou?",
+                "cat": 0
+              },
+              {
+                "text": "Uma pizza foi dividida em 4 pedaços iguais. Tiraram 1 pedaço.",
+                "cat": 2
+              },
+              {
+                "text": "Um bolo foi dividido em 3 partes iguais. Ana comeu 1 parte.",
+                "cat": 1
+              },
+              {
+                "text": "Dobrei a folha ao meio duas vezes e pintei 1 das partes.",
+                "cat": 2
+              },
+              {
+                "text": "Uma torta de 8 pedaços iguais: Plínio separou 4 pedaços.",
+                "cat": 0
+              },
+              {
+                "text": "Uma torta de 8 pedaços iguais: Plínio separou 2 pedaços.",
+                "cat": 2
+              },
+              {
+                "text": "Uma barra de 3 pedaços iguais: Lia comeu 1 pedaço.",
+                "cat": 1
+              },
+              {
+                "text": "Metade das batatas ficou crua. Que fração ficou crua?",
+                "cat": 0
+              }
+            ]
+          },
+          {
+            "type": "pairs",
+            "title": "Problemas de frações",
+            "short": "Problemas",
+            "instructions": "Leia o problema e escolha a resposta.",
+            "pairs": [
+              [
+                "Ricardo tem 18 carrinhos. Metade é azul. Quantos são azuis?",
+                "9 carrinhos"
+              ],
+              [
+                "Um sexto dos 18 carrinhos de Ricardo é verde. Quantos são verdes?",
+                "3 carrinhos"
+              ],
+              [
+                "A torta de Plínio tem 8 pedaços iguais. Quantos pedaços são um quarto da torta?",
+                "2 pedaços"
+              ],
+              [
+                "O bolo tinha 10 pedaços iguais e a família comeu 9. Que fração restou?",
+                "um décimo do bolo"
+              ],
+              [
+                "60 alunos votaram. Um quarto escolheu churrasco. Quantos alunos?",
+                "15 alunos"
+              ],
+              [
+                "O cozinheiro gastou 68 reais. No outro dia, gastou metade disso. Quanto?",
+                "34 reais"
+              ]
+            ]
+          }
+        ],
+        "quiz": [
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-sexto.svg",
+            "imageAlt": "Círculo dividido em 6 partes iguais, com 1 parte pintada de laranja.",
+            "q": "Qual fração representa a parte colorida desta figura?",
+            "options": [
+              "1/6",
+              "1/8",
+              "1/7",
+              "1/2"
+            ],
+            "answer": 0,
+            "explain": "O círculo foi dividido em 6 partes iguais e 1 está colorida: 1/6, um sexto."
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-chocolate.svg",
+            "imageAlt": "Barra de chocolate com 3 fileiras de 3 pedaços retangulares iguais, 9 pedaços no total.",
+            "q": "Giulia ganhou esta barra de chocolate. Que fração da barra representa cada pedaço?",
+            "options": [
+              "1/9",
+              "1/3",
+              "1/10",
+              "1/8"
+            ],
+            "answer": 0,
+            "explain": "A barra tem 3 × 3 = 9 pedaços iguais. Cada pedaço é 1/9, um nono."
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-oitavo.svg",
+            "imageAlt": "Retângulo dividido em 8 partes iguais, com 1 parte pintada de roxo.",
+            "q": "Como se lê a fração que representa a parte pintada?",
+            "options": [
+              "um oitavo",
+              "um sétimo",
+              "um sexto",
+              "um décimo"
+            ],
+            "answer": 0,
+            "explain": "8 partes iguais, 1 pintada: 1/8, que se lê um oitavo."
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-terco.svg",
+            "imageAlt": "Retângulo dividido em 3 partes iguais, com 1 parte pintada de amarelo.",
+            "q": "Que parte do retângulo foi pintada de amarelo?",
+            "options": [
+              "A terça parte",
+              "A metade",
+              "A quarta parte",
+              "A quinta parte"
+            ],
+            "answer": 0,
+            "explain": "3 partes iguais, 1 pintada: a terça parte, ou um terço (1/3)."
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-quinto.svg",
+            "imageAlt": "Círculo dividido em 5 partes iguais, com 1 parte pintada de verde.",
+            "q": "Qual fração representa a parte verde?",
+            "options": [
+              "1/5",
+              "1/4",
+              "1/6",
+              "1/3"
+            ],
+            "answer": 0,
+            "explain": "5 partes iguais, 1 verde: 1/5, um quinto."
+          },
+          {
+            "type": "mc",
+            "q": "Na fração 1/4, o número 4 é o denominador. O que ele indica?",
+            "options": [
+              "Em quantas partes iguais o todo foi dividido",
+              "Quantas partes foram pintadas",
+              "Quantas figuras existem",
+              "Quantas partes sobraram"
+            ],
+            "answer": 0,
+            "explain": "O denominador (número de baixo) indica o total de partes iguais. O numerador (de cima) indica as partes pintadas."
+          },
+          {
+            "type": "mc",
+            "q": "Uma pizza foi dividida em 2 pedaços iguais e outra pizza igual, em 10 pedaços iguais. Qual pedaço é maior?",
+            "options": [
+              "1/2 da pizza",
+              "1/10 da pizza",
+              "Os dois são iguais",
+              "Não dá para saber"
+            ],
+            "answer": 0,
+            "explain": "Quanto mais partes iguais, menor é cada pedaço. Por isso 1/2 é maior que 1/10."
+          },
+          {
+            "type": "mc",
+            "context": "Cecília tinha 8 morangos. Ela disse ao irmão: “Vou dar metade dessa quantidade de morangos para você”.",
+            "q": "Quantos morangos Cecília deu ao irmão?",
+            "options": [
+              "4 morangos",
+              "2 morangos",
+              "6 morangos",
+              "8 morangos"
+            ],
+            "answer": 0,
+            "explain": "1/2 de 8 = 8 ÷ 2 = 4."
+          },
+          {
+            "type": "text",
+            "q": "Calcule: 1/3 de 27 copos é igual a quantos copos? Escreva só o número.",
+            "answers": [
+              "9",
+              "9 copos",
+              "nove"
+            ],
+            "explain": "1/3 de 27 = 27 ÷ 3 = 9."
+          },
+          {
+            "type": "mc",
+            "q": "Quanto é 1/5 de 35 laranjas?",
+            "options": [
+              "7 laranjas",
+              "5 laranjas",
+              "30 laranjas",
+              "40 laranjas"
+            ],
+            "answer": 0,
+            "explain": "1/5 de 35 = 35 ÷ 5 = 7."
+          },
+          {
+            "type": "text",
+            "q": "Quanto é 1/4 de 12 picolés? Escreva só o número.",
+            "answers": [
+              "3",
+              "3 picolés",
+              "três"
+            ],
+            "explain": "1/4 de 12 = 12 ÷ 4 = 3."
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-torta.svg",
+            "imageAlt": "Torta de limão redonda dividida em 8 pedaços iguais.",
+            "q": "Plínio dividiu igualmente esta torta de limão em 8 pedaços. Quantos pedaços correspondem à metade da torta?",
+            "options": [
+              "4 pedaços",
+              "2 pedaços",
+              "8 pedaços",
+              "6 pedaços"
+            ],
+            "answer": 0,
+            "explain": "Metade de 8 = 8 ÷ 2 = 4 pedaços."
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-torta.svg",
+            "imageAlt": "Torta de limão redonda dividida em 8 pedaços iguais.",
+            "q": "Plínio comeu um pedaço desta torta, dividida em 8 pedaços iguais. Que fração da torta ele comeu?",
+            "options": [
+              "1/8",
+              "1/2",
+              "1/4",
+              "1/6"
+            ],
+            "answer": 0,
+            "explain": "1 pedaço de 8 pedaços iguais: 1/8, um oitavo."
+          },
+          {
+            "type": "mc",
+            "context": "João dividiu o bolo em 10 pedaços iguais. O avô comeu 2 pedaços, o pai comeu 1, o irmão comeu 3, João comeu 1 e a mãe comeu 2 pedaços.",
+            "q": "Que fração do bolo restou?",
+            "options": [
+              "1/10",
+              "1/9",
+              "1/2",
+              "1/5"
+            ],
+            "answer": 0,
+            "explain": "2 + 1 + 3 + 1 + 2 = 9 pedaços comidos. Restou 1 de 10: 1/10."
+          },
+          {
+            "type": "mc",
+            "context": "Ricardo tem uma coleção de 18 carrinhos. Metade desses carrinhos são azuis, um sexto é verde, um sexto é vermelho e um sexto é amarelo.",
+            "q": "Quantos carrinhos de Ricardo são verdes?",
+            "options": [
+              "3 carrinhos",
+              "9 carrinhos",
+              "6 carrinhos",
+              "2 carrinhos"
+            ],
+            "answer": 0,
+            "explain": "1/6 de 18 = 18 ÷ 6 = 3."
+          },
+          {
+            "type": "mc",
+            "context": "Na cozinha, a mulher pergunta: “As batatas ficaram boas?”. O homem responde: “Não, metade das batatas ficou crua”.",
+            "q": "O que o homem quis dizer?",
+            "options": [
+              "Metade das batatas ficou cozida",
+              "Nenhuma batata ficou cozida",
+              "Todas as batatas ficaram cruas",
+              "Só uma batata ficou crua"
+            ],
+            "answer": 0,
+            "explain": "Se metade ficou crua, a outra metade ficou cozida."
+          },
+          {
+            "type": "mc",
+            "context": "A menina ganhou 1 sanduíche cortado em 2 metades. Pedro ganhou 1 sanduíche igual, cortado em 4 quartos. Ela reclamou: “Por que Pedro ganhou 4 sanduíches e eu ganhei só 2?”.",
+            "q": "A menina tem razão de reclamar?",
+            "options": [
+              "Não, os dois ganharam um sanduíche inteiro",
+              "Sim, Pedro ganhou mais sanduíche",
+              "Sim, ela ganhou o dobro",
+              "Não, ela ganhou mais que Pedro"
+            ],
+            "answer": 0,
+            "explain": "2 metades formam 1 sanduíche inteiro, e 4 quartos também. Os dois ganharam a mesma quantidade."
+          },
+          {
+            "type": "mc",
+            "context": "Pesquisa da professora Gabriela com os alunos do 3º ano (cada aluno votou em uma comida típica): churrasco 15, pão de queijo 30, tapioca 5, açaí 8, arroz com pequi 2. Ao todo, votaram 60 alunos.",
+            "q": "Em qual comida típica votou metade dos alunos?",
+            "options": [
+              "Pão de queijo",
+              "Churrasco",
+              "Açaí",
+              "Tapioca"
+            ],
+            "answer": 0,
+            "explain": "Metade de 60 = 60 ÷ 2 = 30, e pão de queijo teve 30 votos. Churrasco teve 15, que é um quarto de 60."
+          },
+          {
+            "type": "mc",
+            "q": "O que quer dizer “1/2 da lata de leite condensado” em uma receita?",
+            "options": [
+              "Metade da lata",
+              "Duas latas",
+              "Uma lata inteira",
+              "Um quarto da lata"
+            ],
+            "answer": 0,
+            "explain": "1/2 é um meio: a lata dividida em 2 partes iguais, usando 1 parte."
+          }
+        ]
+      },
+      {
+        "id": "sim_matematica",
+        "module": "★",
+        "title": "Simulado da prova",
+        "subtitle": "Resumo final + 15 questões sorteadas de todos os módulos",
+        "exam": {
+          "size": 15
+        },
+        "theory": [
+          {
+            "h": "Resumo da prova de Matemática",
+            "p": [
+              "<strong>Módulo 13 – Medidas:</strong> balança mede massa; copo de medidas mede capacidade; régua e fita métrica medem comprimento. 1 t = 1 000 kg; 1 kg = 1 000 g (meio quilograma = 500 g); 1 g = 1 000 mg. 1 L = 1 000 mL. 1 km = 1 000 m; 1 m = 100 cm; 1 cm = 10 mm. Nas feiras, há unidades padronizadas (kg, g) e não padronizadas (dúzia, maço, bacia).",
+              "<strong>Módulo 14 – Frações:</strong> numerador (em cima) = partes pintadas; denominador (embaixo) = total de partes iguais. Frações unitárias: 1/2 um meio, 1/3 um terço, 1/4 um quarto, 1/5 um quinto, 1/6 um sexto, 1/7 um sétimo, 1/8 um oitavo, 1/9 um nono, 1/10 um décimo. Para achar a fração de uma quantidade, divida pelo denominador: 1/2 de 8 = 8 ÷ 2 = 4.",
+              "<strong>As quatro operações nos problemas:</strong> some para juntar (4 000 kg + 980 kg), subtraia para achar a diferença (38 kg − 23 kg), multiplique para repetir (70 km × 2 × 5) e divida para repartir ou comparar preços (24 reais ÷ 3 L = 8 reais o litro)."
+            ],
+            "cards": [
+              {
+                "icon": "⚖️",
+                "t": "1 kg",
+                "d": "1 000 g"
+              },
+              {
+                "icon": "🥛",
+                "t": "1 L",
+                "d": "1 000 mL"
+              },
+              {
+                "icon": "🚪",
+                "t": "1 m",
+                "d": "100 cm"
+              },
+              {
+                "icon": "📏",
+                "t": "1 cm",
+                "d": "10 mm"
+              },
+              {
+                "icon": "🛣️",
+                "t": "1 km",
+                "d": "1 000 m"
+              },
+              {
+                "icon": "🚚",
+                "t": "1 t",
+                "d": "1 000 kg"
+              },
+              {
+                "icon": "⬆️",
+                "t": "numerador",
+                "d": "partes pintadas"
+              },
+              {
+                "icon": "⬇️",
+                "t": "denominador",
+                "d": "partes iguais"
+              },
+              {
+                "icon": "➗",
+                "t": "1/4 de 12",
+                "d": "12 ÷ 4 = 3"
+              }
+            ]
+          }
+        ],
+        "games": [],
+        "quiz": [
+          {
+            "type": "mc",
+            "q": "Qual instrumento o cozinheiro deve usar para medir a quantidade de leite de uma receita de bolo?",
+            "options": [
+              "Copo de medidas",
+              "Régua",
+              "Fita métrica",
+              "Relógio"
+            ],
+            "answer": 0,
+            "explain": "O copo de medidas mede capacidade, isto é, a quantidade de líquido.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "q": "1 quilograma equivale a:",
+            "options": [
+              "1 000 gramas",
+              "100 gramas",
+              "10 gramas",
+              "500 gramas"
+            ],
+            "answer": 0,
+            "explain": "1 kg = 1 000 g. Meio quilograma é que corresponde a 500 g.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Na casa de Giovana, é consumido meio quilograma de feijão por dia. Atenção: meio quilograma corresponde a 500 gramas.",
+            "q": "Quantos gramas de feijão são consumidos de segunda a sexta-feira?",
+            "options": [
+              "2 500 g",
+              "500 g",
+              "1 000 g",
+              "3 500 g"
+            ],
+            "answer": 0,
+            "explain": "De segunda a sexta são 5 dias: 5 × 500 = 2 500 g.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Na balança do aeroporto, um senhor colocou uma mala vermelha: o visor mostrou 23 kg. Depois, colocou a mala preta em cima da vermelha: o visor mostrou 38 kg.",
+            "q": "Qual é a massa da mala preta?",
+            "options": [
+              "15 kg",
+              "23 kg",
+              "38 kg",
+              "61 kg"
+            ],
+            "answer": 0,
+            "explain": "A mala preta é a diferença: 38 − 23 = 15 kg (ou 15 000 g).",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "q": "1 grama equivale a:",
+            "options": [
+              "1 000 miligramas",
+              "100 miligramas",
+              "10 miligramas",
+              "1 miligrama"
+            ],
+            "answer": 0,
+            "explain": "1 g = 1 000 mg. O miligrama aparece nos rótulos dos alimentos, como o do iogurte.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "text",
+            "q": "Uma beterraba pesa 70 g. Quantos miligramas (mg) ela pesa? Escreva só o número.",
+            "answers": [
+              "70000",
+              "70 000",
+              "70.000",
+              "70000 mg",
+              "70 000 mg"
+            ],
+            "explain": "Cada grama tem 1 000 mg: 70 × 1 000 = 70 000 mg.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "José trabalha com uma empilhadeira. Na foto, há 10 caixas sobre a empilhadeira, e a massa de cada caixa é 100 quilogramas.",
+            "q": "Quanto José está levando de uma só vez?",
+            "options": [
+              "1 000 kg, ou seja, 1 tonelada",
+              "100 kg, ou seja, 1 tonelada",
+              "10 kg, ou seja, 1 tonelada",
+              "1 000 g, ou seja, 1 tonelada"
+            ],
+            "answer": 0,
+            "explain": "10 × 100 = 1 000 kg. E 1 tonelada = 1 000 kg.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Um agricultor colheu 4 toneladas de soja e 980 quilogramas de milho. Lembre: 1 tonelada = 1 000 quilogramas.",
+            "q": "Quantos quilogramas de grãos esse agricultor colheu ao todo?",
+            "options": [
+              "4 980 kg",
+              "984 kg",
+              "1 380 kg",
+              "4 098 kg"
+            ],
+            "answer": 0,
+            "explain": "4 t = 4 000 kg. Então 4 000 + 980 = 4 980 kg.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "q": "1 litro equivale a:",
+            "options": [
+              "1 000 mililitros",
+              "100 mililitros",
+              "250 mililitros",
+              "500 mililitros"
+            ],
+            "answer": 0,
+            "explain": "1 L = 1 000 mL.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Júlio fez 1 L de suco de laranja e colocou em 1 jarra. Depois, encheu 3 copos iguais com 250 mL de suco de laranja em cada um.",
+            "q": "Quantos mililitros de suco sobraram na jarra?",
+            "options": [
+              "250 mL",
+              "750 mL",
+              "500 mL",
+              "1 000 mL"
+            ],
+            "answer": 0,
+            "explain": "3 × 250 = 750 mL nos copos. 1 000 − 750 = 250 mL na jarra.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat13-jarra-300.svg",
+            "imageAlt": "Jarra de 1 litro graduada de 100 em 100 mililitros, com líquido até a marca de 300 mL.",
+            "q": "A jarra tem 300 mL de suco. Quantos mililitros faltam para completar 1 litro?",
+            "options": [
+              "700 mL",
+              "300 mL",
+              "600 mL",
+              "1 000 mL"
+            ],
+            "answer": 0,
+            "explain": "1 L = 1 000 mL. 1 000 − 300 = 700 mL.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Vera foi ao mercado com o pai comprar amaciante. A embalagem da esquerda tem 3 L e custa 24 reais. A embalagem da direita tem 2 L e custa 12 reais.",
+            "q": "Considerando o preço de 1 litro, qual embalagem é mais vantajosa?",
+            "options": [
+              "A da direita: 6 reais o litro",
+              "A da esquerda: 8 reais o litro",
+              "A da esquerda: 6 reais o litro",
+              "A da direita: 8 reais o litro"
+            ],
+            "answer": 0,
+            "explain": "24 ÷ 3 = 8 reais por litro; 12 ÷ 2 = 6 reais por litro. A de 2 L sai mais barata.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "q": "80 mm equivalem a:",
+            "options": [
+              "8 cm",
+              "80 cm",
+              "800 cm",
+              "8 m"
+            ],
+            "answer": 0,
+            "explain": "1 cm = 10 mm. 80 ÷ 10 = 8 cm.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "q": "700 cm equivalem a:",
+            "options": [
+              "7 m",
+              "70 m",
+              "700 m",
+              "7 km"
+            ],
+            "answer": 0,
+            "explain": "1 m = 100 cm. 700 ÷ 100 = 7 m.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "text",
+            "q": "Complete: 3 m são equivalentes a quantos centímetros? Escreva só o número.",
+            "answers": [
+              "300",
+              "300 cm"
+            ],
+            "explain": "1 m = 100 cm. 3 × 100 = 300 cm.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "q": "Qual unidade é a mais adequada para medir a altura de uma parede?",
+            "options": [
+              "Metro",
+              "Litro",
+              "Quilograma",
+              "Miligrama"
+            ],
+            "answer": 0,
+            "explain": "Altura é comprimento. Para coisas grandes, usamos o metro.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "q": "Qual medida mais se aproxima da altura real de uma porta?",
+            "options": [
+              "2 m",
+              "2 cm",
+              "2 mm",
+              "2 km"
+            ],
+            "answer": 0,
+            "explain": "Uma porta tem cerca de 2 metros, isto é, 200 cm.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Luciana mora na cidade de Santos e trabalha na capital, a cerca de 70 quilômetros. De segunda a sexta-feira, ela faz o trajeto de ida e volta.",
+            "q": "Quantos quilômetros, aproximadamente, Luciana percorre de segunda a sexta-feira?",
+            "options": [
+              "700 km",
+              "140 km",
+              "350 km",
+              "70 km"
+            ],
+            "answer": 0,
+            "explain": "Ida e volta: 70 × 2 = 140 km por dia. Em 5 dias: 140 × 5 = 700 km.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Um artista de circo tem 176 cm de altura. Com as pernas-de-pau, ele fica com 191 cm de altura.",
+            "q": "Qual é o comprimento de cada perna-de-pau?",
+            "options": [
+              "15 cm",
+              "15 m",
+              "15 mm",
+              "25 cm"
+            ],
+            "answer": 0,
+            "explain": "191 − 176 = 15 cm.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Receita de mousse de Teresa (o chocolate caiu sobre algumas palavras): “230 ___ de chocolate meio amargo; 350 ___ de creme de leite fresco gelado. Coloque em uma forma de 30 ___ de comprimento e leve ao congelador.”",
+            "q": "Quais unidades completam a receita, na ordem em que aparecem?",
+            "options": [
+              "gramas, mililitros, centímetros",
+              "quilogramas, litros, centímetros",
+              "litros, metros, quilogramas",
+              "gramas, quilogramas, litros"
+            ],
+            "answer": 0,
+            "explain": "Chocolate se mede em gramas, creme de leite (líquido) em mililitros e o comprimento da forma em centímetros.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Pedro vai cercar a horta retangular da chácara. Os lados da horta medem 30 m, 17 m, 30 m e 17 m.",
+            "q": "De quantos metros de arame Pedro vai precisar para dar uma volta na horta?",
+            "options": [
+              "94 m",
+              "47 m",
+              "64 m",
+              "510 m"
+            ],
+            "answer": 0,
+            "explain": "Somamos todos os lados: 30 + 17 + 30 + 17 = 94 m.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Supermercado Preço Bom: tomate, 1 kg por 4 reais. Supermercado Preço Justo: tomate, 2 kg por 7 reais.",
+            "q": "Para comprar 2 kg de tomate, qual supermercado é mais vantajoso?",
+            "options": [
+              "Preço Justo: 7 reais",
+              "Preço Bom: 7 reais",
+              "Preço Bom: 8 reais",
+              "Preço Justo: 8 reais"
+            ],
+            "answer": 0,
+            "explain": "No Preço Bom, 2 kg custam 2 × 4 = 8 reais. No Preço Justo, custam 7 reais.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Para fazer 1 copo de suco de graviola de 250 mL, Gregório usou 2 graviolas.",
+            "q": "Quantos litros de suco Gregório pode fazer com 8 graviolas?",
+            "options": [
+              "1 litro",
+              "2 litros",
+              "4 litros",
+              "8 litros"
+            ],
+            "answer": 0,
+            "explain": "8 ÷ 2 = 4 copos. 4 × 250 = 1 000 mL = 1 litro.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "context": "Nas feiras livres, os comerciantes usam balanças e unidades padronizadas, como o quilograma. Também usam unidades não padronizadas para vender frutas, legumes e verduras.",
+            "q": "Qual destas é uma unidade não padronizada usada nas feiras?",
+            "options": [
+              "Dúzia",
+              "Quilograma",
+              "Metro",
+              "Litro"
+            ],
+            "answer": 0,
+            "explain": "Dúzia e maço não são unidades padronizadas; quilograma, metro e litro são.",
+            "from": "Medidas de massa, de capacidade e de comprimento"
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-sexto.svg",
+            "imageAlt": "Círculo dividido em 6 partes iguais, com 1 parte pintada de laranja.",
+            "q": "Qual fração representa a parte colorida desta figura?",
+            "options": [
+              "1/6",
+              "1/8",
+              "1/7",
+              "1/2"
+            ],
+            "answer": 0,
+            "explain": "O círculo foi dividido em 6 partes iguais e 1 está colorida: 1/6, um sexto.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-chocolate.svg",
+            "imageAlt": "Barra de chocolate com 3 fileiras de 3 pedaços retangulares iguais, 9 pedaços no total.",
+            "q": "Giulia ganhou esta barra de chocolate. Que fração da barra representa cada pedaço?",
+            "options": [
+              "1/9",
+              "1/3",
+              "1/10",
+              "1/8"
+            ],
+            "answer": 0,
+            "explain": "A barra tem 3 × 3 = 9 pedaços iguais. Cada pedaço é 1/9, um nono.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-oitavo.svg",
+            "imageAlt": "Retângulo dividido em 8 partes iguais, com 1 parte pintada de roxo.",
+            "q": "Como se lê a fração que representa a parte pintada?",
+            "options": [
+              "um oitavo",
+              "um sétimo",
+              "um sexto",
+              "um décimo"
+            ],
+            "answer": 0,
+            "explain": "8 partes iguais, 1 pintada: 1/8, que se lê um oitavo.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-terco.svg",
+            "imageAlt": "Retângulo dividido em 3 partes iguais, com 1 parte pintada de amarelo.",
+            "q": "Que parte do retângulo foi pintada de amarelo?",
+            "options": [
+              "A terça parte",
+              "A metade",
+              "A quarta parte",
+              "A quinta parte"
+            ],
+            "answer": 0,
+            "explain": "3 partes iguais, 1 pintada: a terça parte, ou um terço (1/3).",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-quinto.svg",
+            "imageAlt": "Círculo dividido em 5 partes iguais, com 1 parte pintada de verde.",
+            "q": "Qual fração representa a parte verde?",
+            "options": [
+              "1/5",
+              "1/4",
+              "1/6",
+              "1/3"
+            ],
+            "answer": 0,
+            "explain": "5 partes iguais, 1 verde: 1/5, um quinto.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "q": "Na fração 1/4, o número 4 é o denominador. O que ele indica?",
+            "options": [
+              "Em quantas partes iguais o todo foi dividido",
+              "Quantas partes foram pintadas",
+              "Quantas figuras existem",
+              "Quantas partes sobraram"
+            ],
+            "answer": 0,
+            "explain": "O denominador (número de baixo) indica o total de partes iguais. O numerador (de cima) indica as partes pintadas.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "q": "Uma pizza foi dividida em 2 pedaços iguais e outra pizza igual, em 10 pedaços iguais. Qual pedaço é maior?",
+            "options": [
+              "1/2 da pizza",
+              "1/10 da pizza",
+              "Os dois são iguais",
+              "Não dá para saber"
+            ],
+            "answer": 0,
+            "explain": "Quanto mais partes iguais, menor é cada pedaço. Por isso 1/2 é maior que 1/10.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "context": "Cecília tinha 8 morangos. Ela disse ao irmão: “Vou dar metade dessa quantidade de morangos para você”.",
+            "q": "Quantos morangos Cecília deu ao irmão?",
+            "options": [
+              "4 morangos",
+              "2 morangos",
+              "6 morangos",
+              "8 morangos"
+            ],
+            "answer": 0,
+            "explain": "1/2 de 8 = 8 ÷ 2 = 4.",
+            "from": "Frações"
+          },
+          {
+            "type": "text",
+            "q": "Calcule: 1/3 de 27 copos é igual a quantos copos? Escreva só o número.",
+            "answers": [
+              "9",
+              "9 copos",
+              "nove"
+            ],
+            "explain": "1/3 de 27 = 27 ÷ 3 = 9.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "q": "Quanto é 1/5 de 35 laranjas?",
+            "options": [
+              "7 laranjas",
+              "5 laranjas",
+              "30 laranjas",
+              "40 laranjas"
+            ],
+            "answer": 0,
+            "explain": "1/5 de 35 = 35 ÷ 5 = 7.",
+            "from": "Frações"
+          },
+          {
+            "type": "text",
+            "q": "Quanto é 1/4 de 12 picolés? Escreva só o número.",
+            "answers": [
+              "3",
+              "3 picolés",
+              "três"
+            ],
+            "explain": "1/4 de 12 = 12 ÷ 4 = 3.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-torta.svg",
+            "imageAlt": "Torta de limão redonda dividida em 8 pedaços iguais.",
+            "q": "Plínio dividiu igualmente esta torta de limão em 8 pedaços. Quantos pedaços correspondem à metade da torta?",
+            "options": [
+              "4 pedaços",
+              "2 pedaços",
+              "8 pedaços",
+              "6 pedaços"
+            ],
+            "answer": 0,
+            "explain": "Metade de 8 = 8 ÷ 2 = 4 pedaços.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "image": "assets/4b/mat14-q-torta.svg",
+            "imageAlt": "Torta de limão redonda dividida em 8 pedaços iguais.",
+            "q": "Plínio comeu um pedaço desta torta, dividida em 8 pedaços iguais. Que fração da torta ele comeu?",
+            "options": [
+              "1/8",
+              "1/2",
+              "1/4",
+              "1/6"
+            ],
+            "answer": 0,
+            "explain": "1 pedaço de 8 pedaços iguais: 1/8, um oitavo.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "context": "João dividiu o bolo em 10 pedaços iguais. O avô comeu 2 pedaços, o pai comeu 1, o irmão comeu 3, João comeu 1 e a mãe comeu 2 pedaços.",
+            "q": "Que fração do bolo restou?",
+            "options": [
+              "1/10",
+              "1/9",
+              "1/2",
+              "1/5"
+            ],
+            "answer": 0,
+            "explain": "2 + 1 + 3 + 1 + 2 = 9 pedaços comidos. Restou 1 de 10: 1/10.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "context": "Ricardo tem uma coleção de 18 carrinhos. Metade desses carrinhos são azuis, um sexto é verde, um sexto é vermelho e um sexto é amarelo.",
+            "q": "Quantos carrinhos de Ricardo são verdes?",
+            "options": [
+              "3 carrinhos",
+              "9 carrinhos",
+              "6 carrinhos",
+              "2 carrinhos"
+            ],
+            "answer": 0,
+            "explain": "1/6 de 18 = 18 ÷ 6 = 3.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "context": "Na cozinha, a mulher pergunta: “As batatas ficaram boas?”. O homem responde: “Não, metade das batatas ficou crua”.",
+            "q": "O que o homem quis dizer?",
+            "options": [
+              "Metade das batatas ficou cozida",
+              "Nenhuma batata ficou cozida",
+              "Todas as batatas ficaram cruas",
+              "Só uma batata ficou crua"
+            ],
+            "answer": 0,
+            "explain": "Se metade ficou crua, a outra metade ficou cozida.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "context": "A menina ganhou 1 sanduíche cortado em 2 metades. Pedro ganhou 1 sanduíche igual, cortado em 4 quartos. Ela reclamou: “Por que Pedro ganhou 4 sanduíches e eu ganhei só 2?”.",
+            "q": "A menina tem razão de reclamar?",
+            "options": [
+              "Não, os dois ganharam um sanduíche inteiro",
+              "Sim, Pedro ganhou mais sanduíche",
+              "Sim, ela ganhou o dobro",
+              "Não, ela ganhou mais que Pedro"
+            ],
+            "answer": 0,
+            "explain": "2 metades formam 1 sanduíche inteiro, e 4 quartos também. Os dois ganharam a mesma quantidade.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "context": "Pesquisa da professora Gabriela com os alunos do 3º ano (cada aluno votou em uma comida típica): churrasco 15, pão de queijo 30, tapioca 5, açaí 8, arroz com pequi 2. Ao todo, votaram 60 alunos.",
+            "q": "Em qual comida típica votou metade dos alunos?",
+            "options": [
+              "Pão de queijo",
+              "Churrasco",
+              "Açaí",
+              "Tapioca"
+            ],
+            "answer": 0,
+            "explain": "Metade de 60 = 60 ÷ 2 = 30, e pão de queijo teve 30 votos. Churrasco teve 15, que é um quarto de 60.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "q": "O que quer dizer “1/2 da lata de leite condensado” em uma receita?",
+            "options": [
+              "Metade da lata",
+              "Duas latas",
+              "Uma lata inteira",
+              "Um quarto da lata"
+            ],
+            "answer": 0,
+            "explain": "1/2 é um meio: a lata dividida em 2 partes iguais, usando 1 parte.",
+            "from": "Frações"
+          },
+          {
+            "type": "mc",
+            "q": "Quantos pacotes de 500 g de milho de pipoca são necessários para formar 1 quilograma?",
+            "options": [
+              "2 pacotes",
+              "5 pacotes",
+              "10 pacotes",
+              "1 pacote"
+            ],
+            "answer": 0,
+            "explain": "1 kg = 1 000 g. 500 + 500 = 1 000, então são 2 pacotes.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "12 cm equivalem a:",
+            "options": [
+              "120 mm",
+              "12 mm",
+              "1 200 mm",
+              "102 mm"
+            ],
+            "answer": 0,
+            "explain": "1 cm = 10 mm. 12 × 10 = 120 mm.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "q": "Quanto é 1/7 de 63 pirulitos?",
+            "options": [
+              "9 pirulitos",
+              "7 pirulitos",
+              "56 pirulitos",
+              "70 pirulitos"
+            ],
+            "answer": 0,
+            "explain": "1/7 de 63 = 63 ÷ 7 = 9.",
+            "from": "Simulado"
+          },
+          {
+            "type": "mc",
+            "context": "Júlio fez 1 L de suco de uva e colocou em 1 jarra. Em seguida, encheu 4 copos iguais com 200 mL de suco de uva cada um.",
+            "q": "Quantos mililitros de suco sobraram na jarra?",
+            "options": [
+              "200 mL",
+              "800 mL",
+              "400 mL",
+              "600 mL"
+            ],
+            "answer": 0,
+            "explain": "4 × 200 = 800 mL nos copos. 1 000 − 800 = 200 mL na jarra.",
+            "from": "Simulado"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "geografia",

@@ -77,3 +77,17 @@ Object.assign(EXPERIENCE_PROFILES, {
     { mode:'explore', goal:'Arraial dos santos juninos', prompt:'Em que dia de junho se celebra este santo?', result:'arraial' }
   ]
 });
+Object.assign(EXPERIENCE_PROFILES, {
+  mat13: [
+    { mode:'choice', goal:'Escolher o instrumento de medida', prompt:'Balança, copo de medidas ou régua?', result:'caixa de instrumentos' },
+    { mode:'choice', goal:'Escolher a unidade de massa', prompt:'Miligrama, grama, quilograma ou tonelada?', result:'balança organizada' },
+    { mode:'transform', goal:'Trocar a unidade de medida', prompt:'Qual medida vale o mesmo?', result:'tabela de equivalências', feedback:'As duas medidas são iguais: só mudou a unidade.', hint:'Lembre: 1 kg = 1 000 g, 1 L = 1 000 mL, 1 m = 100 cm, 1 cm = 10 mm.' },
+    { mode:'choice', goal:'Medidas na feira livre', prompt:'Esta unidade é padronizada ou não padronizada?', result:'barraca da feira' }
+  ],
+  mat14: [
+    { mode:'memoria', goal:'Jogo da memória das frações unitárias', prompt:'Ache cada fração e o jeito de ler.', result:'todos os pares de frações' },
+    { mode:'distribute', goal:'Repartir em grupos iguais', prompt:'Quantos ficam em cada grupo?', result:'quantidades repartidas' },
+    { mode:'choice', goal:'Meio, terço ou quarto?', prompt:'Que fração do todo foi pega?', result:'mural de frações' },
+    { mode:'explore', goal:'Resolver problemas de frações', prompt:'Leia o problema e escolha a resposta.', result:'problemas resolvidos' }
+  ]
+});

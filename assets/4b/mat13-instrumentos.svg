@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<text x="450" y="58" font-size="34" fill="#0f8fb0" font-weight="800" text-anchor="middle">Cada medida tem o seu instrumento</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">massa · capacidade · comprimento</text>
+<rect x="30" y="115" width="270" height="455" rx="24" fill="#fff4e6" stroke="#d9822b" stroke-width="3"/><text x="165" y="225" font-size="84" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">⚖️</text>
+<text x="165" y="290" font-size="26" fill="#d9822b" font-weight="800" text-anchor="middle">MASSA</text>
+<rect x="55" y="305" width="220" height="40" rx="20" fill="#fff"/><text x="165" y="333" font-size="19" fill="#17213b" font-weight="800" text-anchor="middle">balança</text>
+<text x="165" y="395" font-size="17" fill="#4a5872" font-weight="700" text-anchor="middle">Unidades:</text>
+<text x="165" y="430" font-size="22" fill="#17213b" font-weight="800" text-anchor="middle">quilograma (kg)</text><text x="165" y="465" font-size="22" fill="#17213b" font-weight="800" text-anchor="middle">grama (g)</text>
+<text x="165" y="520" font-size="15" fill="#4a5872" font-weight="700" text-anchor="middle">miligrama (mg) · tonelada (t)</text>
+<rect x="315" y="115" width="270" height="455" rx="24" fill="#eaf2ff" stroke="#2456b8" stroke-width="3"/><text x="450" y="225" font-size="84" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🥛</text>
+<text x="450" y="290" font-size="26" fill="#2456b8" font-weight="800" text-anchor="middle">CAPACIDADE</text>
+<rect x="340" y="305" width="220" height="40" rx="20" fill="#fff"/><text x="450" y="333" font-size="19" fill="#17213b" font-weight="800" text-anchor="middle">copo de medidas</text>
+<text x="450" y="395" font-size="17" fill="#4a5872" font-weight="700" text-anchor="middle">Unidades:</text>
+<text x="450" y="430" font-size="22" fill="#17213b" font-weight="800" text-anchor="middle">litro (L)</text><text x="450" y="465" font-size="22" fill="#17213b" font-weight="800" text-anchor="middle">mililitro (mL)</text>
+<text x="450" y="520" font-size="15" fill="#4a5872" font-weight="700" text-anchor="middle">quanto cabe no recipiente</text>
+<rect x="600" y="115" width="270" height="455" rx="24" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/><text x="735" y="225" font-size="84" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">📏</text>
+<text x="735" y="290" font-size="26" fill="#1d805c" font-weight="800" text-anchor="middle">COMPRIMENTO</text>
+<rect x="625" y="305" width="220" height="40" rx="20" fill="#fff"/><text x="735" y="333" font-size="19" fill="#17213b" font-weight="800" text-anchor="middle">régua · fita métrica</text>
+<text x="735" y="395" font-size="17" fill="#4a5872" font-weight="700" text-anchor="middle">Unidades:</text>
+<text x="735" y="430" font-size="22" fill="#17213b" font-weight="800" text-anchor="middle">metro (m)</text><text x="735" y="465" font-size="22" fill="#17213b" font-weight="800" text-anchor="middle">centímetro (cm)</text>
+<text x="735" y="520" font-size="15" fill="#4a5872" font-weight="700" text-anchor="middle">milímetro (mm) · quilômetro (km)</text>
+</svg>

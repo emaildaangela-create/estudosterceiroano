@@ -1,0 +1,54 @@
+{
+  "theory": [
+    {
+      "h": "Resumo da prova de Matemática",
+      "p": [
+        "<strong>Módulo 13 – Medidas:</strong> balança mede massa; copo de medidas mede capacidade; régua e fita métrica medem comprimento. 1 t = 1 000 kg; 1 kg = 1 000 g (meio quilograma = 500 g); 1 g = 1 000 mg. 1 L = 1 000 mL. 1 km = 1 000 m; 1 m = 100 cm; 1 cm = 10 mm. Nas feiras, há unidades padronizadas (kg, g) e não padronizadas (dúzia, maço, bacia).",
+        "<strong>Módulo 14 – Frações:</strong> numerador (em cima) = partes pintadas; denominador (embaixo) = total de partes iguais. Frações unitárias: 1/2 um meio, 1/3 um terço, 1/4 um quarto, 1/5 um quinto, 1/6 um sexto, 1/7 um sétimo, 1/8 um oitavo, 1/9 um nono, 1/10 um décimo. Para achar a fração de uma quantidade, divida pelo denominador: 1/2 de 8 = 8 ÷ 2 = 4.",
+        "<strong>As quatro operações nos problemas:</strong> some para juntar (4 000 kg + 980 kg), subtraia para achar a diferença (38 kg − 23 kg), multiplique para repetir (70 km × 2 × 5) e divida para repartir ou comparar preços (24 reais ÷ 3 L = 8 reais o litro)."
+      ],
+      "cards": [
+        {"icon": "⚖️", "t": "1 kg", "d": "1 000 g"},
+        {"icon": "🥛", "t": "1 L", "d": "1 000 mL"},
+        {"icon": "🚪", "t": "1 m", "d": "100 cm"},
+        {"icon": "📏", "t": "1 cm", "d": "10 mm"},
+        {"icon": "🛣️", "t": "1 km", "d": "1 000 m"},
+        {"icon": "🚚", "t": "1 t", "d": "1 000 kg"},
+        {"icon": "⬆️", "t": "numerador", "d": "partes pintadas"},
+        {"icon": "⬇️", "t": "denominador", "d": "partes iguais"},
+        {"icon": "➗", "t": "1/4 de 12", "d": "12 ÷ 4 = 3"}
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Quantos pacotes de 500 g de milho de pipoca são necessários para formar 1 quilograma?",
+      "options": ["2 pacotes", "5 pacotes", "10 pacotes", "1 pacote"],
+      "answer": 0,
+      "explain": "1 kg = 1 000 g. 500 + 500 = 1 000, então são 2 pacotes."
+    },
+    {
+      "type": "mc",
+      "q": "12 cm equivalem a:",
+      "options": ["120 mm", "12 mm", "1 200 mm", "102 mm"],
+      "answer": 0,
+      "explain": "1 cm = 10 mm. 12 × 10 = 120 mm."
+    },
+    {
+      "type": "mc",
+      "q": "Quanto é 1/7 de 63 pirulitos?",
+      "options": ["9 pirulitos", "7 pirulitos", "56 pirulitos", "70 pirulitos"],
+      "answer": 0,
+      "explain": "1/7 de 63 = 63 ÷ 7 = 9."
+    },
+    {
+      "type": "mc",
+      "context": "Júlio fez 1 L de suco de uva e colocou em 1 jarra. Em seguida, encheu 4 copos iguais com 200 mL de suco de uva cada um.",
+      "q": "Quantos mililitros de suco sobraram na jarra?",
+      "options": ["200 mL", "800 mL", "400 mL", "600 mL"],
+      "answer": 0,
+      "explain": "4 × 200 = 800 mL nos copos. 1 000 − 800 = 200 mL na jarra."
+    }
+  ]
+}

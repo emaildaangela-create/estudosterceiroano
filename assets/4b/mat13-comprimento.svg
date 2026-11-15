@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<defs><marker id="ponta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5872"/></marker></defs>
+<text x="450" y="58" font-size="34" fill="#1d805c" font-weight="800" text-anchor="middle">Unidades de comprimento</text><text x="450" y="90" font-size="19" fill="#4a5872" font-weight="600" text-anchor="middle">quilômetro · metro · centímetro · milímetro</text>
+<rect x="40" y="120" width="820" height="100" rx="18" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/><text x="100" y="187" font-size="48" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🛣️</text>
+<text x="220" y="184" font-size="40" fill="#1d805c" font-weight="800" text-anchor="middle">1 km</text><text x="400" y="183" font-size="30" fill="#17213b" font-weight="800" text-anchor="middle">= 1 000 m</text>
+<text x="680" y="180" font-size="18" fill="#4a5872" font-weight="700" text-anchor="middle">distância entre cidades</text>
+<rect x="40" y="235" width="820" height="100" rx="18" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/><text x="100" y="302" font-size="48" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🚪</text>
+<text x="220" y="299" font-size="40" fill="#1d805c" font-weight="800" text-anchor="middle">1 m</text><text x="400" y="298" font-size="30" fill="#17213b" font-weight="800" text-anchor="middle">= 100 cm</text>
+<text x="680" y="295" font-size="18" fill="#4a5872" font-weight="700" text-anchor="middle">altura de uma porta: cerca de 2 m</text>
+<rect x="40" y="350" width="820" height="100" rx="18" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/><text x="100" y="417" font-size="48" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">📏</text>
+<text x="220" y="414" font-size="40" fill="#1d805c" font-weight="800" text-anchor="middle">1 cm</text><text x="400" y="413" font-size="30" fill="#17213b" font-weight="800" text-anchor="middle">= 10 mm</text>
+<text x="680" y="410" font-size="18" fill="#4a5872" font-weight="700" text-anchor="middle">cada número da régua</text>
+<rect x="40" y="465" width="820" height="100" rx="18" fill="#e8f6f0" stroke="#1d805c" stroke-width="3"/><text x="100" y="532" font-size="48" text-anchor="middle" font-family="'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif">🐜</text>
+<text x="220" y="529" font-size="40" fill="#1d805c" font-weight="800" text-anchor="middle">1 mm</text><text x="400" y="528" font-size="30" fill="#17213b" font-weight="800" text-anchor="middle"></text>
+<text x="680" y="525" font-size="18" fill="#4a5872" font-weight="700" text-anchor="middle">o menor tracinho da régua</text>
+</svg>

@@ -1,4 +1,4 @@
-const CACHE_CORE = 'estudos-3-ano-core-24dd2d20';
+const CACHE_CORE = 'estudos-3-ano-core-e7061997';
 const CACHE_VIDEOS = 'estudos-3-ano-videos-v1';
 const CACHE_LEGADO = 'estudos-3-ano-v47';
 /* A lista entre os marcadores é atualizada pelo build_data.py. */
@@ -49,6 +49,21 @@ const ARQUIVOS = [
   './assets/4b/lp27-sujeito.svg',
   './assets/4b/lpg-misterio.svg',
   './assets/4b/lpg-poema.svg',
+  './assets/4b/mat13-capacidade.svg',
+  './assets/4b/mat13-comprimento.svg',
+  './assets/4b/mat13-instrumentos.svg',
+  './assets/4b/mat13-jarra-300.svg',
+  './assets/4b/mat13-massa.svg',
+  './assets/4b/mat14-fracao-de-quantidade.svg',
+  './assets/4b/mat14-fracoes-unitarias.svg',
+  './assets/4b/mat14-meio-terco-quarto.svg',
+  './assets/4b/mat14-partes-da-fracao.svg',
+  './assets/4b/mat14-q-chocolate.svg',
+  './assets/4b/mat14-q-oitavo.svg',
+  './assets/4b/mat14-q-quinto.svg',
+  './assets/4b/mat14-q-sexto.svg',
+  './assets/4b/mat14-q-terco.svg',
+  './assets/4b/mat14-q-torta.svg',
   './assets/english/watercolor/body.png',
   './assets/english/watercolor/celebrations.png',
   './assets/english/watercolor/cultures.png',

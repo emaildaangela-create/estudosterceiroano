@@ -9,9 +9,9 @@ O site virou um preparatório para as provas do 4º bimestre do 3º ano. Só ent
 | Prova | Data | Situação no site |
 |---|---|---|
 | Inglês (Units 7–9) | qui 19/11 | ✅ pronto, com vídeos |
-| Língua Portuguesa (Mód. 23–27 + poema e conto de mistério) | seg 23/11 | ✅ pronto; faltam 4 vídeos |
-| História (Mód. 12–14) | ter 24/11 | ✅ pronto; faltam 2 vídeos |
-| Matemática (Mód. 13 e 14) | qua 25/11 | ⏳ apostila lida, conteúdo não escrito |
+| Língua Portuguesa (Mód. 23–27 + poema e conto de mistério) | seg 23/11 | ✅ pronto, com vídeos |
+| História (Mód. 12–14) | ter 24/11 | ✅ pronto, com vídeos |
+| Matemática (Mód. 13 e 14) | qua 25/11 | ✅ pronto, sem vídeos (opcional) |
 | Geografia (Mód. 13) | qui 26/11 | ⏳ não iniciado |
 | Ciências (Mód. 13) | sex 27/11 | ⏳ não iniciado |
 
@@ -47,15 +47,15 @@ A 2ª chamada (1 a 4/12) usa o mesmo conteúdo.
 
 ## Pendências
 
-### 1. Vídeos do NotebookLM (o login expirou)
-Os vídeos antigos de `lp24`, `lp25`, `lp26`, `lp27` e `hist13` foram **apagados**, porque cobriam assuntos que saíram. Esses módulos e o `hist14` estão sem vídeo, e a geração falhou com `Authentication expired`.
-1. A usuária precisa rodar `notebooklm login --browser chrome` e entrar com a conta Google dela; a ferramenta abre o Chrome.
-2. Para cada módulo: `scripts/video_notebooklm.sh <id> "<título do caderno>" "<pedido>" kawaii` (cerca de 10 a 20 min cada; pode rodar vários em paralelo com `nohup … &`). O script gera a fonte com `scripts/fonte_notebooklm.py`, cria o caderno, gera o vídeo em `pt_BR` e baixa para `assets/videos/<id>.mp4`.
-3. Conferir um frame do vídeo e acrescentar `"video": "assets/videos/<id>.mp4"` logo depois de `subtitle` no JSON. Rodar o build, fazer commit e push.
+### 1. Vídeos do NotebookLM
+Feito em 14/11: `lp24`–`lp27`, `hist13` e `hist14` ganharam vídeo novo. Se o login expirar (`Authentication expired`), a usuária roda `notebooklm login --browser chrome`. Passo a passo para um módulo novo:
+1. Para cada módulo: `scripts/video_notebooklm.sh <id> "<título do caderno>" "<pedido>" kawaii` (cerca de 10 a 20 min cada; pode rodar vários em paralelo com `nohup … &`). O script gera a fonte com `scripts/fonte_notebooklm.py`, cria o caderno, gera o vídeo em `pt_BR` e baixa para `assets/videos/<id>.mp4`.
+2. Conferir um frame do vídeo e acrescentar `"video": "assets/videos/<id>.mp4"` logo depois de `subtitle` no JSON. Rodar o build, fazer commit e push.
 
 No pedido, dizer que é para crianças de 8 anos, com narração em português falada devagar e **"cubra apenas o que está na fonte, sem acrescentar outros assuntos"**.
 
-### 2. Matemática (prova em 25/11)
+### 2. Matemática (prova em 25/11) — feito
+Publicado em `content/mat13.json`, `mat14.json` e `sim_matematica.json`; ilustrações em `scripts/svg_matematica.py`. "As quatro operações" foram tratadas como no livro: problemas de medidas e de frações (somar, subtrair, multiplicar, dividir, comparar preços). Referência do que entrou:
 - Lista: Módulo 13 completo (massa, comprimento, capacidade). Módulo 14, Frações, **sem o gráfico de setores**. A usuária mandou seguir o livro na parte "as quatro operações".
 - O livro, já lido, cobre:
   - **Mód. 13:** instrumentos de medida; kg e g (1 kg = 1 000 g); g e mg (1 g = 1 000 mg); kg e tonelada (1 t = 1 000 kg); L e mL (1 L = 1 000 mL); cm e mm (1 cm = 10 mm); cm e m (1 m = 100 cm); m e km (1 km = 1 000 m); medidas em feiras livres; problemas.

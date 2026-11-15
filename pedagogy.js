@@ -20,3 +20,8 @@ Object.assign(PEDAGOGY, {
   hist14:{objectives:['reconhecer motivos para festejar','conhecer festas de origem portuguesa, africana e indígena','localizar festas do Brasil']},
   sim_historia:{objectives:['revisar os módulos 12, 13 e 14','treinar com questões sorteadas','ver o que precisa revisar']}
 });
+Object.assign(PEDAGOGY, {
+  mat13:{objectives:['escolher o instrumento e a unidade de medida','trocar kg e g, g e mg, t e kg, L e mL, km, m, cm e mm','resolver problemas de medidas com as quatro operações']},
+  mat14:{objectives:['reconhecer metade, terço, quarto e frações até o décimo','ler frações e entender numerador e denominador','calcular a fração de uma quantidade e resolver problemas']},
+  sim_matematica:{objectives:['revisar os módulos 13 e 14','treinar com questões sorteadas','ver o que precisa revisar']}
+});

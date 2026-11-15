@@ -1,0 +1,354 @@
+{
+  "id": "mat13",
+  "module": "13",
+  "title": "Medidas de massa, de capacidade e de comprimento",
+  "subtitle": "Instrumentos · kg, g, mg e t · L e mL · km, m, cm e mm · Problemas",
+  "theory": [
+    {
+      "h": "Instrumentos de medida",
+      "figure": {
+        "src": "assets/4b/mat13-instrumentos.svg",
+        "alt": "Três colunas: massa (balança; quilograma, grama, miligrama, tonelada), capacidade (copo de medidas; litro e mililitro) e comprimento (régua e fita métrica; metro, centímetro, milímetro, quilômetro).",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "Para medir, usamos <strong>instrumentos padronizados de medida</strong>. Cada um serve para uma coisa:",
+        "<strong>Balança</strong> ⚖️ mede a <strong>massa</strong> (o “peso”): a massa dos tomates que o feirante vende, a massa de uma criança no consultório.",
+        "<strong>Copo de medidas</strong> 🥛 mede a <strong>capacidade</strong> (quanto cabe): a quantidade de leite de uma receita de bolo.",
+        "<strong>Régua, fita métrica e metro de madeira</strong> 📏 medem o <strong>comprimento</strong>: o tecido da costureira, a altura de uma parede, a capa do caderno.",
+        "O <strong>relógio</strong> também é um instrumento de medida: ele mede o <strong>tempo</strong>."
+      ],
+      "cards": [
+        {"icon": "⚖️", "t": "balança", "d": "mede massa"},
+        {"icon": "🥛", "t": "copo de medidas", "d": "mede capacidade"},
+        {"icon": "📏", "t": "régua / fita métrica", "d": "mede comprimento"},
+        {"icon": "⏰", "t": "relógio", "d": "mede tempo"}
+      ]
+    },
+    {
+      "h": "Medidas de massa: quilograma, grama, miligrama e tonelada",
+      "figure": {
+        "src": "assets/4b/mat13-massa.svg",
+        "alt": "Degraus das unidades de massa: 1 tonelada = 1 000 quilogramas; 1 quilograma = 1 000 gramas; 1 grama = 1 000 miligramas.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "<strong>1 quilograma (1 kg) = 1 000 gramas (1 000 g).</strong> Meio quilograma corresponde a <strong>500 g</strong>. Um pacote de arroz tem 2 kg; um pacote de leite em pó tem 400 g; dois pacotes de milho de pipoca de 500 g formam 1 kg.",
+        "<strong>1 grama (1 g) = 1 000 miligramas (1 000 mg).</strong> O miligrama aparece no rótulo dos alimentos: um copo de iogurte tem 110 mg de sódio e 248 mg de cálcio. Uma beterraba de 70 g tem 70 000 mg.",
+        "<strong>1 tonelada (1 t) = 1 000 quilogramas.</strong> José leva 10 caixas de 100 kg na empilhadeira: 10 × 100 = 1 000 kg = 1 t.",
+        "Para escolher a unidade, pense no tamanho: <strong>abelha</strong> e <strong>formiga</strong> → miligrama; <strong>lápis</strong>, <strong>pera</strong> e <strong>borracha</strong> → grama; <strong>melancia</strong>, <strong>bebê</strong> e <strong>cachorro</strong> → quilograma; <strong>caminhão de carga</strong> → tonelada."
+      ],
+      "cards": [
+        {"icon": "🍚", "t": "1 kg", "d": "1 000 g"},
+        {"icon": "🫘", "t": "meio quilograma", "d": "500 g"},
+        {"icon": "🥛", "t": "1 g", "d": "1 000 mg"},
+        {"icon": "🚚", "t": "1 t", "d": "1 000 kg"}
+      ]
+    },
+    {
+      "h": "Medidas de capacidade: litro e mililitro",
+      "figure": {
+        "src": "assets/4b/mat13-capacidade.svg",
+        "alt": "Uma jarra de 1 litro é igual a quatro copos de 250 mililitros: 250 + 250 + 250 + 250 = 1 000 mL.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "<strong>1 litro (1 L) = 1 000 mililitros (1 000 mL).</strong> Leite, suco, água e óleo costumam ser vendidos por litro.",
+        "Júlio fez 1 L de suco e encheu 3 copos de 250 mL: usou 750 mL e sobraram <strong>250 mL</strong> na jarra. Com 4 copos de 200 mL, ele usaria 800 mL e sobrariam <strong>200 mL</strong>.",
+        "Uma garrafa de 500 mL tem <strong>250 mL a mais</strong> que uma garrafa de 250 mL.",
+        "Um galão de tinta tem cerca de <strong>4 L</strong>; um frasco de xampu tem cerca de <strong>250 mL</strong>."
+      ]
+    },
+    {
+      "h": "Medidas de comprimento: quilômetro, metro, centímetro e milímetro",
+      "figure": {
+        "src": "assets/4b/mat13-comprimento.svg",
+        "alt": "1 quilômetro = 1 000 metros; 1 metro = 100 centímetros; 1 centímetro = 10 milímetros; 1 milímetro é o menor tracinho da régua.",
+        "tipo": "diagrama"
+      },
+      "p": [
+        "<strong>1 centímetro (1 cm) = 10 milímetros (10 mm).</strong> Na régua, cada número é 1 cm e os tracinhos pequenos são milímetros. Então 4 cm = 40 mm e 80 mm = 8 cm.",
+        "<strong>1 metro (1 m) = 100 centímetros (100 cm).</strong> A fita métrica de papel mede 1 m. Então 3 m = 300 cm e 700 cm = 7 m. Uma porta mede cerca de 2 m; uma tesoura, cerca de 11 cm.",
+        "<strong>1 quilômetro (1 km) = 1 000 metros (1 000 m).</strong> Usamos o quilômetro para distâncias grandes, como de uma cidade a outra.",
+        "Use <strong>centímetro</strong> para coisas pequenas (um estojo, a página) e <strong>metro</strong> para coisas maiores (a altura de uma parede)."
+      ],
+      "cards": [
+        {"icon": "📏", "t": "1 cm", "d": "10 mm"},
+        {"icon": "🚪", "t": "1 m", "d": "100 cm"},
+        {"icon": "🛣️", "t": "1 km", "d": "1 000 m"}
+      ]
+    },
+    {
+      "h": "Medidas nas feiras livres",
+      "p": [
+        "Nas feiras livres, os feirantes usam <strong>balanças</strong> para medir a massa dos produtos em <strong>unidades padronizadas</strong>, como o quilograma e o grama.",
+        "Também é comum usar <strong>unidades não padronizadas</strong>: a <strong>dúzia</strong> (12 unidades), o <strong>maço</strong> (de verduras) e a <strong>bacia</strong> (de pimentões, por exemplo). Esses produtos não são pesados.",
+        "Comparar preços ajuda a escolher bem. Goiaba a R$ 14,90 o quilograma e goiabada a R$ 12,00 por 300 gramas: a goiaba natural é mais saudável, e os alimentos naturais ajudam a prevenir problemas de saúde."
+      ]
+    },
+    {
+      "h": "Resolvendo problemas com as quatro operações",
+      "p": [
+        "➕ <strong>Adição:</strong> um agricultor colheu 4 t de soja (4 000 kg) e 980 kg de milho: 4 000 + 980 = <strong>4 980 kg</strong>. A horta de Pedro tem lados de 30 m, 17 m, 30 m e 17 m: para cercar, precisa de 30 + 17 + 30 + 17 = <strong>94 m</strong> de arame.",
+        "➖ <strong>Subtração:</strong> na balança do aeroporto, havia 23 kg; com a mala preta, 38 kg. A mala preta tem 38 − 23 = <strong>15 kg</strong>. Um artista de 176 cm fica com 191 cm nas pernas-de-pau: cada perna-de-pau mede 191 − 176 = <strong>15 cm</strong>.",
+        "✖️ <strong>Multiplicação:</strong> Luciana viaja 70 km para ir e 70 km para voltar, de segunda a sexta: 70 × 2 = 140 km por dia e 140 × 5 = <strong>700 km</strong>. Na casa de Giovana, comem meio quilograma (500 g) de feijão por dia: em 5 dias, 5 × 500 = <strong>2 500 g</strong>.",
+        "➗ <strong>Divisão:</strong> uma embalagem de 3 L custa 24 reais (24 ÷ 3 = 8 reais por litro) e outra de 2 L custa 12 reais (12 ÷ 2 = 6 reais por litro). A de 2 L é <strong>mais vantajosa</strong>. Um cozinheiro gastou 68 reais e, no dia seguinte, a metade: 68 ÷ 2 = <strong>34 reais</strong>."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "type": "sort",
+      "title": "Qual instrumento usar?",
+      "short": "Instrumentos",
+      "instructions": "Qual instrumento de medida é o mais adequado para cada situação?",
+      "categories": ["Balança ⚖️", "Copo de medidas 🥛", "Régua ou fita métrica 📏"],
+      "items": [
+        {"text": "O feirante mede a massa dos tomates que a cliente comprou.", "cat": 0},
+        {"text": "O cozinheiro mede o leite da receita de bolo.", "cat": 1},
+        {"text": "A costureira mede o comprimento de um pedaço de tecido.", "cat": 2},
+        {"text": "A nutricionista mede a massa da criança.", "cat": 0},
+        {"text": "Júlio mede 250 mL de suco para cada copo.", "cat": 1},
+        {"text": "Você mede a altura de uma parede.", "cat": 2},
+        {"text": "O cozinheiro mede a massa de cada bolinho de falafel.", "cat": 0},
+        {"text": "Você mede a capa do caderno.", "cat": 2}
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Qual é a unidade mais adequada?",
+      "short": "Unidades de massa",
+      "instructions": "Qual unidade é a melhor para medir a massa de cada um?",
+      "categories": ["miligrama (mg)", "grama (g)", "quilograma (kg)", "tonelada (t)"],
+      "items": [
+        {"text": "1 abelha", "cat": 0},
+        {"text": "1 formiga", "cat": 0},
+        {"text": "1 lápis", "cat": 1},
+        {"text": "1 pera", "cat": 1},
+        {"text": "4 borrachas", "cat": 1},
+        {"text": "1 melancia", "cat": 2},
+        {"text": "1 bebê", "cat": 2},
+        {"text": "1 cachorro adulto", "cat": 2},
+        {"text": "10 caixas de 100 kg na empilhadeira", "cat": 3},
+        {"text": "A carga de um caminhão", "cat": 3}
+      ]
+    },
+    {
+      "type": "pairs",
+      "title": "Troca de unidades",
+      "short": "Converter medidas",
+      "instructions": "Escolha a medida que vale o mesmo.",
+      "pairs": [
+        ["1 kg", "1 000 g"],
+        ["meio quilograma", "500 g"],
+        ["1 g", "1 000 mg"],
+        ["1 t", "1 000 kg"],
+        ["1 L", "1 000 mL"],
+        ["4 cm", "40 mm"],
+        ["3 m", "300 cm"],
+        ["1 km", "1 000 m"]
+      ]
+    },
+    {
+      "type": "sort",
+      "title": "Padronizada ou não padronizada?",
+      "short": "Medidas na feira",
+      "instructions": "Esta unidade é padronizada ou não padronizada?",
+      "context": "Nas feiras livres, os comerciantes costumam utilizar balanças para medir a massa dos produtos em unidades padronizadas de medida, como o quilograma e o grama. No entanto, é comum também o uso de unidades não padronizadas de medida, como a dúzia, o maço e a bacia.",
+      "categories": ["Padronizada 📏", "Não padronizada 🧺"],
+      "items": [
+        {"text": "quilograma", "cat": 0},
+        {"text": "dúzia", "cat": 1},
+        {"text": "grama", "cat": 0},
+        {"text": "maço", "cat": 1},
+        {"text": "litro", "cat": 0},
+        {"text": "bacia", "cat": 1},
+        {"text": "metro", "cat": 0},
+        {"text": "mililitro", "cat": 0}
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mc",
+      "q": "Qual instrumento o cozinheiro deve usar para medir a quantidade de leite de uma receita de bolo?",
+      "options": ["Copo de medidas", "Régua", "Fita métrica", "Relógio"],
+      "answer": 0,
+      "explain": "O copo de medidas mede capacidade, isto é, a quantidade de líquido."
+    },
+    {
+      "type": "mc",
+      "q": "1 quilograma equivale a:",
+      "options": ["1 000 gramas", "100 gramas", "10 gramas", "500 gramas"],
+      "answer": 0,
+      "explain": "1 kg = 1 000 g. Meio quilograma é que corresponde a 500 g."
+    },
+    {
+      "type": "mc",
+      "context": "Na casa de Giovana, é consumido meio quilograma de feijão por dia. Atenção: meio quilograma corresponde a 500 gramas.",
+      "q": "Quantos gramas de feijão são consumidos de segunda a sexta-feira?",
+      "options": ["2 500 g", "500 g", "1 000 g", "3 500 g"],
+      "answer": 0,
+      "explain": "De segunda a sexta são 5 dias: 5 × 500 = 2 500 g."
+    },
+    {
+      "type": "mc",
+      "context": "Na balança do aeroporto, um senhor colocou uma mala vermelha: o visor mostrou 23 kg. Depois, colocou a mala preta em cima da vermelha: o visor mostrou 38 kg.",
+      "q": "Qual é a massa da mala preta?",
+      "options": ["15 kg", "23 kg", "38 kg", "61 kg"],
+      "answer": 0,
+      "explain": "A mala preta é a diferença: 38 − 23 = 15 kg (ou 15 000 g)."
+    },
+    {
+      "type": "mc",
+      "q": "1 grama equivale a:",
+      "options": ["1 000 miligramas", "100 miligramas", "10 miligramas", "1 miligrama"],
+      "answer": 0,
+      "explain": "1 g = 1 000 mg. O miligrama aparece nos rótulos dos alimentos, como o do iogurte."
+    },
+    {
+      "type": "text",
+      "q": "Uma beterraba pesa 70 g. Quantos miligramas (mg) ela pesa? Escreva só o número.",
+      "answers": ["70000", "70 000", "70.000", "70000 mg", "70 000 mg"],
+      "explain": "Cada grama tem 1 000 mg: 70 × 1 000 = 70 000 mg."
+    },
+    {
+      "type": "mc",
+      "context": "José trabalha com uma empilhadeira. Na foto, há 10 caixas sobre a empilhadeira, e a massa de cada caixa é 100 quilogramas.",
+      "q": "Quanto José está levando de uma só vez?",
+      "options": ["1 000 kg, ou seja, 1 tonelada", "100 kg, ou seja, 1 tonelada", "10 kg, ou seja, 1 tonelada", "1 000 g, ou seja, 1 tonelada"],
+      "answer": 0,
+      "explain": "10 × 100 = 1 000 kg. E 1 tonelada = 1 000 kg."
+    },
+    {
+      "type": "mc",
+      "context": "Um agricultor colheu 4 toneladas de soja e 980 quilogramas de milho. Lembre: 1 tonelada = 1 000 quilogramas.",
+      "q": "Quantos quilogramas de grãos esse agricultor colheu ao todo?",
+      "options": ["4 980 kg", "984 kg", "1 380 kg", "4 098 kg"],
+      "answer": 0,
+      "explain": "4 t = 4 000 kg. Então 4 000 + 980 = 4 980 kg."
+    },
+    {
+      "type": "mc",
+      "q": "1 litro equivale a:",
+      "options": ["1 000 mililitros", "100 mililitros", "250 mililitros", "500 mililitros"],
+      "answer": 0,
+      "explain": "1 L = 1 000 mL."
+    },
+    {
+      "type": "mc",
+      "context": "Júlio fez 1 L de suco de laranja e colocou em 1 jarra. Depois, encheu 3 copos iguais com 250 mL de suco de laranja em cada um.",
+      "q": "Quantos mililitros de suco sobraram na jarra?",
+      "options": ["250 mL", "750 mL", "500 mL", "1 000 mL"],
+      "answer": 0,
+      "explain": "3 × 250 = 750 mL nos copos. 1 000 − 750 = 250 mL na jarra."
+    },
+    {
+      "type": "mc",
+      "image": "assets/4b/mat13-jarra-300.svg",
+      "imageAlt": "Jarra de 1 litro graduada de 100 em 100 mililitros, com líquido até a marca de 300 mL.",
+      "q": "A jarra tem 300 mL de suco. Quantos mililitros faltam para completar 1 litro?",
+      "options": ["700 mL", "300 mL", "600 mL", "1 000 mL"],
+      "answer": 0,
+      "explain": "1 L = 1 000 mL. 1 000 − 300 = 700 mL."
+    },
+    {
+      "type": "mc",
+      "context": "Vera foi ao mercado com o pai comprar amaciante. A embalagem da esquerda tem 3 L e custa 24 reais. A embalagem da direita tem 2 L e custa 12 reais.",
+      "q": "Considerando o preço de 1 litro, qual embalagem é mais vantajosa?",
+      "options": ["A da direita: 6 reais o litro", "A da esquerda: 8 reais o litro", "A da esquerda: 6 reais o litro", "A da direita: 8 reais o litro"],
+      "answer": 0,
+      "explain": "24 ÷ 3 = 8 reais por litro; 12 ÷ 2 = 6 reais por litro. A de 2 L sai mais barata."
+    },
+    {
+      "type": "mc",
+      "q": "80 mm equivalem a:",
+      "options": ["8 cm", "80 cm", "800 cm", "8 m"],
+      "answer": 0,
+      "explain": "1 cm = 10 mm. 80 ÷ 10 = 8 cm."
+    },
+    {
+      "type": "mc",
+      "q": "700 cm equivalem a:",
+      "options": ["7 m", "70 m", "700 m", "7 km"],
+      "answer": 0,
+      "explain": "1 m = 100 cm. 700 ÷ 100 = 7 m."
+    },
+    {
+      "type": "text",
+      "q": "Complete: 3 m são equivalentes a quantos centímetros? Escreva só o número.",
+      "answers": ["300", "300 cm"],
+      "explain": "1 m = 100 cm. 3 × 100 = 300 cm."
+    },
+    {
+      "type": "mc",
+      "q": "Qual unidade é a mais adequada para medir a altura de uma parede?",
+      "options": ["Metro", "Litro", "Quilograma", "Miligrama"],
+      "answer": 0,
+      "explain": "Altura é comprimento. Para coisas grandes, usamos o metro."
+    },
+    {
+      "type": "mc",
+      "q": "Qual medida mais se aproxima da altura real de uma porta?",
+      "options": ["2 m", "2 cm", "2 mm", "2 km"],
+      "answer": 0,
+      "explain": "Uma porta tem cerca de 2 metros, isto é, 200 cm."
+    },
+    {
+      "type": "mc",
+      "context": "Luciana mora na cidade de Santos e trabalha na capital, a cerca de 70 quilômetros. De segunda a sexta-feira, ela faz o trajeto de ida e volta.",
+      "q": "Quantos quilômetros, aproximadamente, Luciana percorre de segunda a sexta-feira?",
+      "options": ["700 km", "140 km", "350 km", "70 km"],
+      "answer": 0,
+      "explain": "Ida e volta: 70 × 2 = 140 km por dia. Em 5 dias: 140 × 5 = 700 km."
+    },
+    {
+      "type": "mc",
+      "context": "Um artista de circo tem 176 cm de altura. Com as pernas-de-pau, ele fica com 191 cm de altura.",
+      "q": "Qual é o comprimento de cada perna-de-pau?",
+      "options": ["15 cm", "15 m", "15 mm", "25 cm"],
+      "answer": 0,
+      "explain": "191 − 176 = 15 cm."
+    },
+    {
+      "type": "mc",
+      "context": "Receita de mousse de Teresa (o chocolate caiu sobre algumas palavras): “230 ___ de chocolate meio amargo; 350 ___ de creme de leite fresco gelado. Coloque em uma forma de 30 ___ de comprimento e leve ao congelador.”",
+      "q": "Quais unidades completam a receita, na ordem em que aparecem?",
+      "options": ["gramas, mililitros, centímetros", "quilogramas, litros, centímetros", "litros, metros, quilogramas", "gramas, quilogramas, litros"],
+      "answer": 0,
+      "explain": "Chocolate se mede em gramas, creme de leite (líquido) em mililitros e o comprimento da forma em centímetros."
+    },
+    {
+      "type": "mc",
+      "context": "Pedro vai cercar a horta retangular da chácara. Os lados da horta medem 30 m, 17 m, 30 m e 17 m.",
+      "q": "De quantos metros de arame Pedro vai precisar para dar uma volta na horta?",
+      "options": ["94 m", "47 m", "64 m", "510 m"],
+      "answer": 0,
+      "explain": "Somamos todos os lados: 30 + 17 + 30 + 17 = 94 m."
+    },
+    {
+      "type": "mc",
+      "context": "Supermercado Preço Bom: tomate, 1 kg por 4 reais. Supermercado Preço Justo: tomate, 2 kg por 7 reais.",
+      "q": "Para comprar 2 kg de tomate, qual supermercado é mais vantajoso?",
+      "options": ["Preço Justo: 7 reais", "Preço Bom: 7 reais", "Preço Bom: 8 reais", "Preço Justo: 8 reais"],
+      "answer": 0,
+      "explain": "No Preço Bom, 2 kg custam 2 × 4 = 8 reais. No Preço Justo, custam 7 reais."
+    },
+    {
+      "type": "mc",
+      "context": "Para fazer 1 copo de suco de graviola de 250 mL, Gregório usou 2 graviolas.",
+      "q": "Quantos litros de suco Gregório pode fazer com 8 graviolas?",
+      "options": ["1 litro", "2 litros", "4 litros", "8 litros"],
+      "answer": 0,
+      "explain": "8 ÷ 2 = 4 copos. 4 × 250 = 1 000 mL = 1 litro."
+    },
+    {
+      "type": "mc",
+      "context": "Nas feiras livres, os comerciantes usam balanças e unidades padronizadas, como o quilograma. Também usam unidades não padronizadas para vender frutas, legumes e verduras.",
+      "q": "Qual destas é uma unidade não padronizada usada nas feiras?",
+      "options": ["Dúzia", "Quilograma", "Metro", "Litro"],
+      "answer": 0,
+      "explain": "Dúzia e maço não são unidades padronizadas; quilograma, metro e litro são."
+    }
+  ]
+}

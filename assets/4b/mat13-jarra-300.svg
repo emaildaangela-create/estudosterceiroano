@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Trebuchet MS','Segoe UI','Helvetica Neue',Arial,sans-serif">
+<rect width="900" height="600" rx="28" fill="#fff9ec"/>
+<text x="450" y="58" font-size="34" fill="#2456b8" font-weight="800" text-anchor="middle">Quanto falta para 1 litro?</text>
+<path d="M330 120 L570 120 L555 540 Q555 565 530 565 L370 565 Q345 565 345 540 Z" fill="#eaf6ff" stroke="#2456b8" stroke-width="4"/>
+<path d="M347 432 L553 432 L555 540 Q555 565 530 565 L370 565 Q345 565 345 540 Z" fill="#7cc8f2"/>
+<line x1="500" y1="520" x2="550" y2="520" stroke="#17213b" stroke-width="2"/>
+<text x="620" y="527.5" font-size="18" fill="#17213b" font-weight="700" text-anchor="start">100 mL</text>
+<line x1="500" y1="476" x2="550" y2="476" stroke="#17213b" stroke-width="2"/>
+<text x="620" y="483.0" font-size="18" fill="#17213b" font-weight="700" text-anchor="start">200 mL</text>
+<line x1="500" y1="432" x2="550" y2="432" stroke="#17213b" stroke-width="2"/>
+<text x="620" y="438.5" font-size="18" fill="#17213b" font-weight="700" text-anchor="start">300 mL</text>
+<line x1="500" y1="387" x2="550" y2="387" stroke="#17213b" stroke-width="2"/>
+<text x="620" y="394.0" font-size="18" fill="#17213b" font-weight="700" text-anchor="start">400 mL</text>
+<line x1="500" y1="342" x2="550" y2="342" stroke="#17213b" stroke-width="2"/>
+<text x="620" y="349.5" font-size="18" fill="#17213b" font-weight="700" text-anchor="start">500 mL</text>
+<line x1="500" y1="298" x2="550" y2="298" stroke="#17213b" stroke-width="2"/>
+<text x="620" y="305.0" font-size="18" fill="#17213b" font-weight="700" text-anchor="start">600 mL</text>
+<line x1="500" y1="254" x2="550" y2="254" stroke="#17213b" stroke-width="2"/>
+<text x="620" y="260.5" font-size="18" fill="#17213b" font-weight="700" text-anchor="start">700 mL</text>
+<line x1="500" y1="209" x2="550" y2="209" stroke="#17213b" stroke-width="2"/>
+<text x="620" y="216.0" font-size="18" fill="#17213b" font-weight="700" text-anchor="start">800 mL</text>
+<line x1="500" y1="164" x2="550" y2="164" stroke="#17213b" stroke-width="2"/>
+<text x="620" y="171.5" font-size="18" fill="#17213b" font-weight="700" text-anchor="start">900 mL</text>
+<line x1="500" y1="120" x2="550" y2="120" stroke="#17213b" stroke-width="2"/>
+<text x="620" y="127.0" font-size="18" fill="#17213b" font-weight="700" text-anchor="start">1 L</text>
+<path d="M330 170 Q250 200 270 300 Q280 350 340 360" stroke="#2456b8" stroke-width="10" fill="none"/>
+</svg>
