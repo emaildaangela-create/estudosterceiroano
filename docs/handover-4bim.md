@@ -97,6 +97,6 @@ Adicionar perfis em `experiences.js` e objetivos em `pedagogy.js`. Criar `conten
 
 - **Sempre rodar `git fetch` antes de começar.** Outras sessões publicam neste repositório: as de Inglês e as de modo offline vieram assim. Houve um rebase com conflitos em `app.js`, `style.css`, `sw.js` e `index.html`.
 - O Windows usa cp1252 no terminal. Rodar scripts Python que imprimem acentos ou setas com `PYTHONIOENCODING=utf-8`.
-- Respostas escritas: a correção continua exata (em Inglês, a frase inteira), mas `diagnosticarResposta` no `app.js` reconhece um pedaço certo ("Danced" para "Yes, she danced at the party."): não gasta tentativa, mantém o texto e pede para completar. Um erro de uma só palavra recebe pista apontando a palavra. Testes em `scripts/check-english-content.mjs`.
+- Respostas escritas: quando o enunciado dá o começo ("Comece com “Yes, she…”"), completar só o que falta vale como certo ("Danced", "danced at the party", "didn't"), decisão da usuária em 17/11 (`aceitaComplemento` no `app.js`). Fora isso, a correção continua exata, e `diagnosticarResposta` no `app.js` reconhece um pedaço certo ("Danced" para "Yes, she danced at the party."): não gasta tentativa, mantém o texto e pede para completar. Um erro de uma só palavra recebe pista apontando a palavra. Testes em `scripts/check-english-content.mjs`.
 - O validador rejeita a alternativa certa quando ela é muito mais longa que as outras. Equilibrar o tamanho das opções.
 - `scripts/video_frames_to_pdfs.py` é um arquivo da usuária, ainda fora do git. Não mexer.

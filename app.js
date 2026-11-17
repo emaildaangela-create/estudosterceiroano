@@ -1204,12 +1204,33 @@
       ordem.forEach(function(i,pos){var op=q.options[i];var b=criar('button','opcao','<span class="opcao__letra">'+String.fromCharCode(65+pos)+'</span><span>'+textoSeguro(op)+'</span>',{type:'button'});b.addEventListener('click',function(){if(bloqueado||b.disabled)return;if(i===q.answer){ops.querySelectorAll('button').forEach(function(x){x.disabled=true;});b.classList.add('opcao--certa');concluir(true,op,i);}else{errosMc++;errouAntes=true;registrarErro(op);b.disabled=true;b.classList.add('opcao--errada');mostrarNovaTentativa(errosMc===1?'Elimine esta alternativa e releia a pergunta.':q.explain||'Compare as alternativas que ainda restam.');if(errosMc===2)card.appendChild(falaMascote(q.explain||'Observe as palavras mais importantes da pergunta.',true));}});ops.appendChild(b);});card.appendChild(ops);
     } else {
       var tentativasTexto=0, numerica=/número|quantos|quantas|quanto|horas|segundos|dias/i.test(contexto.texto), linha=criar('div','campo-resposta'), campo=criar('input','campo',null,{type:'text',inputmode:numerica?'numeric':'text',autocomplete:'off',placeholder:numerica?'Escreva o número':'Escreva uma palavra ou frase curta','aria-label':'Sua resposta'}), enviar=criar('button','botao botao--primario','Conferir',{type:'button'});
-      function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[],q.answerMode);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}var diag=diagnosticarResposta(valor,q.answers||[],q.answerMode);if(diag&&diag.tipo==='parcial'){mostrarNovaTentativa(mensagemDoDiagnostico(diag,valor,q.answerMode));campo.focus();return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(diag?mensagemDoDiagnostico(diag,valor,q.answerMode):pistaRespostaAberta(q,numerica));if(!diag)campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
+      function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[],q.answerMode)||aceitaComplemento(valor,q.q,q.answers||[],q.answerMode);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}var diag=diagnosticarResposta(valor,q.answers||[],q.answerMode);if(diag&&diag.tipo==='parcial'){mostrarNovaTentativa(mensagemDoDiagnostico(diag,valor,q.answerMode));campo.focus();return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(diag?mensagemDoDiagnostico(diag,valor,q.answerMode):pistaRespostaAberta(q,numerica));if(!diag)campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
     }
     card.appendChild(resposta);raiz.appendChild(card);
   }
   function normalizar(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();}
   function normalizarRespostaIngles(v){return normalizar(String(v).toLowerCase().replace(/[’‘`´]/g,"'").replace(/\bdidn'?t\b/g,'did not').replace(/\bdid n'?t\b/g,'did not'));}
+  /* Quando o enunciado já dá o começo da resposta ("Comece com “Yes, she…”"),
+     a criança pode completar só o que falta: "danced at the party" ou só a
+     palavra-chave "Danced". Vale se o que ela escreveu continua a frase logo
+     depois do começo e traz a palavra que a pergunta não deu (danced, didn't). */
+  function aceitaComplemento(v,enunciado,aceitas,modo){
+    var m=String(enunciado||'').match(/Comece com [“"]([^”"]+?)(?:…|\.\.\.)?[”"]/);
+    if(!m||modo!=='english-exact')return false;
+    var norm=normalizarRespostaIngles, inicio=norm(m[1]).split(' ').filter(Boolean);
+    var doEnunciado=norm(String(enunciado).replace(m[0],' ')).split(' ');
+    var digitado=norm(v).split(' ').filter(Boolean);
+    if(digitado.slice(0,inicio.length).join(' ')===inicio.join(' '))digitado=digitado.slice(inicio.length);
+    if(!digitado.length)return false;
+    return aceitas.some(function(r){
+      var alvo=norm(r).split(' ').filter(Boolean);
+      if(alvo.slice(0,inicio.length).join(' ')!==inicio.join(' '))return false;
+      var resto=alvo.slice(inicio.length), chave=resto.filter(function(p){return doEnunciado.indexOf(p)<0;});
+      if(!chave.length||digitado.length>resto.length)return false;
+      if(digitado.join(' ')!==resto.slice(0,digitado.length).join(' '))return false;
+      return chave.every(function(p){return digitado.indexOf(p)>=0;});
+    });
+  }
   /* Lê uma resposta escrita que não foi aceita e diz por quê, sem afrouxar a
      correção: "Danced" para "Yes, she danced at the party." é um pedaço certo
      da frase (parcial); "Yes, she dance at the party." erra uma só palavra. */

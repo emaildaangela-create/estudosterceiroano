@@ -11,7 +11,7 @@ function functionSource(name) {
   return source.slice(start, end < 0 ? undefined : end);
 }
 const context = vm.createContext({});
-vm.runInContext(['misturar', 'sortearQuestoes', 'normalizar', 'normalizarRespostaIngles', 'validarResposta', 'diagnosticarResposta']
+vm.runInContext(['misturar', 'sortearQuestoes', 'normalizar', 'normalizarRespostaIngles', 'validarResposta', 'aceitaComplemento', 'diagnosticarResposta']
   .map(functionSource).join('\n'), context);
 vm.runInContext(readFileSync(new URL('../data.js', import.meta.url), 'utf8'), context);
 const english = vm.runInContext('DISCIPLINAS.find(d => d.id === "ingles")', context);
@@ -73,6 +73,19 @@ assert.equal(diag('Yes, she dance at the party', 'Yes, she danced at the party.'
 assert.equal(diag('dance', 'Yes, she danced at the party.'), null);
 assert.equal(diag('She ate out.', "No, she didn't eat out."), null);
 assert.equal(diag('70', '70 000', undefined), null);
+// When the prompt gives the start ("Comece com “Yes, she…”"), completing only what is missing is right.
+const bank = english.capitulos.filter(c => !c.exam).flatMap(c => c.quiz);
+const byAnswer = text => bank.find(q => q.answers?.[0] === text);
+const completes = (value, answer) => { const q = byAnswer(answer); assert(q, answer); return context.aceitaComplemento(value, q.q, q.answers, q.answerMode); };
+for (const ok of ['Danced', 'danced at the party', 'Yes, she danced', 'Yes, she danced at the party']) assert(completes(ok, 'Yes, she danced at the party.'), ok);
+for (const ok of ['Played', 'played games']) assert(completes(ok, 'Yes, I played games.'), ok);
+for (const ok of ['went', 'went to the festival']) assert(completes(ok, 'Yes, he went to the festival.'), ok);
+for (const ok of ["didn't", 'didnt go hiking', 'did not go hiking']) assert(completes(ok, "No, I didn't go hiking."), ok);
+for (const bad of ['dance', 'Dances', 'at the party', 'Yes, she', 'Yes, she dance', 'danced the party']) assert(!completes(bad, 'Yes, she danced at the party.'), bad);
+for (const bad of ['did', 'not', "didn't went hiking", 'go hiking', "didn't hiking"]) assert(!completes(bad, "No, I didn't go hiking."), bad);
+for (const bad of ['ate', "didn't ate out", 'eat out']) assert(!completes(bad, "No, she didn't eat out."), bad);
+// Questions without a given start keep the full answer.
+assert(!context.aceitaComplemento("didn't", byAnswer("No, she didn't.").q, ["No, she didn't."], 'english-exact'));
 // Existing non-English acceptance behavior remains available.
 assert(context.validarResposta('o resultado é quinze', ['quinze']));
 const history = vm.runInContext('DISCIPLINAS.find(d => d.id === "historia").capitulos.find(c => c.exam)', context);
