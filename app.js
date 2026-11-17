@@ -1204,12 +1204,41 @@
       ordem.forEach(function(i,pos){var op=q.options[i];var b=criar('button','opcao','<span class="opcao__letra">'+String.fromCharCode(65+pos)+'</span><span>'+textoSeguro(op)+'</span>',{type:'button'});b.addEventListener('click',function(){if(bloqueado||b.disabled)return;if(i===q.answer){ops.querySelectorAll('button').forEach(function(x){x.disabled=true;});b.classList.add('opcao--certa');concluir(true,op,i);}else{errosMc++;errouAntes=true;registrarErro(op);b.disabled=true;b.classList.add('opcao--errada');mostrarNovaTentativa(errosMc===1?'Elimine esta alternativa e releia a pergunta.':q.explain||'Compare as alternativas que ainda restam.');if(errosMc===2)card.appendChild(falaMascote(q.explain||'Observe as palavras mais importantes da pergunta.',true));}});ops.appendChild(b);});card.appendChild(ops);
     } else {
       var tentativasTexto=0, numerica=/número|quantos|quantas|quanto|horas|segundos|dias/i.test(contexto.texto), linha=criar('div','campo-resposta'), campo=criar('input','campo',null,{type:'text',inputmode:numerica?'numeric':'text',autocomplete:'off',placeholder:numerica?'Escreva o número':'Escreva uma palavra ou frase curta','aria-label':'Sua resposta'}), enviar=criar('button','botao botao--primario','Conferir',{type:'button'});
-      function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[],q.answerMode);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(pistaRespostaAberta(q,numerica));campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
+      function checar(){if(!campo.value.trim()||bloqueado)return;var valor=campo.value.trim(),certo=validarResposta(valor,q.answers||[],q.answerMode);if(certo){campo.disabled=true;enviar.disabled=true;concluir(true,valor);return;}var diag=diagnosticarResposta(valor,q.answers||[],q.answerMode);if(diag&&diag.tipo==='parcial'){mostrarNovaTentativa(mensagemDoDiagnostico(diag,valor,q.answerMode));campo.focus();return;}tentativasTexto++;errouAntes=true;registrarErro(valor);if(tentativasTexto===1){mostrarNovaTentativa(diag?mensagemDoDiagnostico(diag,valor,q.answerMode):pistaRespostaAberta(q,numerica));if(!diag)campo.value='';campo.focus();}else{campo.disabled=true;enviar.disabled=true;concluir(false,valor);}} enviar.addEventListener('click',checar);campo.addEventListener('keydown',function(e){if(e.key==='Enter')checar();});linha.appendChild(campo);linha.appendChild(enviar);card.appendChild(linha);
     }
     card.appendChild(resposta);raiz.appendChild(card);
   }
   function normalizar(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();}
-  function normalizarRespostaIngles(v){return normalizar(String(v).toLowerCase().replace(/[’‘]/g,"'").replace(/\bdidn't\b/g,'did not'));}
+  function normalizarRespostaIngles(v){return normalizar(String(v).toLowerCase().replace(/[’‘`´]/g,"'").replace(/\bdidn'?t\b/g,'did not').replace(/\bdid n'?t\b/g,'did not'));}
+  /* Lê uma resposta escrita que não foi aceita e diz por quê, sem afrouxar a
+     correção: "Danced" para "Yes, she danced at the party." é um pedaço certo
+     da frase (parcial); "Yes, she dance at the party." erra uma só palavra. */
+  function diagnosticarResposta(v,aceitas,modo){
+    var norm=modo==='english-exact'?normalizarRespostaIngles:normalizar, digitado=norm(v).split(' ').filter(Boolean);
+    if(!digitado.length)return null;
+    /* Só vale como "pedaço certo" se houver uma palavra de verdade: um número
+       solto ("70" para "70 000") ou um artigo ("o") não mostram que a criança
+       chegou perto. */
+    var temPalavra=digitado.some(function(p){return p.length>=3&&!/^\d+$/.test(p);});
+    for(var k=0;temPalavra&&k<aceitas.length;k++){
+      var alvo=norm(aceitas[k]).split(' ').filter(Boolean), j=0;
+      for(var i=0;i<alvo.length&&j<digitado.length;i++)if(alvo[i]===digitado[j])j++;
+      if(j===digitado.length&&digitado.length<alvo.length)return {tipo:'parcial',esperada:aceitas[k],inicio:String(aceitas[k]).split(/\s+/).slice(0,2).join(' ').replace(/[.,!?]+$/,'')};
+    }
+    for(k=0;k<aceitas.length;k++){
+      alvo=norm(aceitas[k]).split(' ').filter(Boolean);
+      if(alvo.length!==digitado.length||alvo.length<2)continue;
+      var diferentes=digitado.filter(function(p,n){return p!==alvo[n];});
+      if(diferentes.length===1)return {tipo:'uma-palavra',palavra:diferentes[0]};
+    }
+    return null;
+  }
+  function mensagemDoDiagnostico(d,valor,modo){
+    if(d.tipo==='parcial')return modo==='english-exact'
+      ?'Quase! “'+valor+'” está certo, mas a pergunta pede a frase inteira. Complete a frase começando com “'+d.inicio+'…”.'
+      :'Quase! “'+valor+'” está no caminho certo. Complete a resposta.';
+    return 'Falta pouco! Só a palavra “'+d.palavra+'” precisa ser conferida. Releia a pergunta e corrija essa palavra.';
+  }
   function validarResposta(v,aceitas,modo){if(modo==='english-exact'){var ingles=normalizarRespostaIngles(v);return aceitas.some(function(x){return ingles===normalizarRespostaIngles(x);});}var a=normalizar(v);return aceitas.some(function(x){var b=normalizar(x);return a===b || (b.length>4 && a.indexOf(b)>=0);});}
   function pistaRespostaAberta(q,numerica){if(numerica)return 'Volte aos números do enunciado e confira a operação ou a unidade pedida.';var alvo=normalizar((q.answers||[])[0]);return alvo?'A resposta começa com “'+alvo.charAt(0).toUpperCase()+'”. Releia a pergunta.':'Releia a pergunta e responda com poucas palavras.';}
   function categoriaQuestao(q) {

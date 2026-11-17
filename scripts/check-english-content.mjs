@@ -11,7 +11,7 @@ function functionSource(name) {
   return source.slice(start, end < 0 ? undefined : end);
 }
 const context = vm.createContext({});
-vm.runInContext(['misturar', 'sortearQuestoes', 'normalizar', 'normalizarRespostaIngles', 'validarResposta']
+vm.runInContext(['misturar', 'sortearQuestoes', 'normalizar', 'normalizarRespostaIngles', 'validarResposta', 'diagnosticarResposta']
   .map(functionSource).join('\n'), context);
 vm.runInContext(readFileSync(new URL('../data.js', import.meta.url), 'utf8'), context);
 const english = vm.runInContext('DISCIPLINAS.find(d => d.id === "ingles")', context);
@@ -60,6 +60,19 @@ assert(!accepts('not played', 'played'));
 assert(!accepts("I didn't go swimming", 'go swimming'));
 assert(!accepts('swimming', 'go swimming'));
 assert(!accepts('went swimming', 'go swimming'));
+assert(accepts('No, she didnt eat out', "No, she didn't eat out."));
+// Wrong-but-close answers are diagnosed, never accepted.
+const diag = (value, expected, mode = 'english-exact') => context.diagnosticarResposta(value, [expected], mode);
+assert.equal(diag('Danced', 'Yes, she danced at the party.')?.tipo, 'parcial');
+assert.equal(diag('Danced', 'Yes, she danced at the party.').inicio, 'Yes, she');
+assert.equal(diag('Played', 'Yes, I played games.')?.tipo, 'parcial');
+assert.equal(diag('played games', 'Yes, I played games.')?.tipo, 'parcial');
+assert(!accepts('Danced', 'Yes, she danced at the party.'));
+assert.equal(diag('Yes, she dance at the party', 'Yes, she danced at the party.')?.tipo, 'uma-palavra');
+assert.equal(diag('Yes, she dance at the party', 'Yes, she danced at the party.').palavra, 'dance');
+assert.equal(diag('dance', 'Yes, she danced at the party.'), null);
+assert.equal(diag('She ate out.', "No, she didn't eat out."), null);
+assert.equal(diag('70', '70 000', undefined), null);
 // Existing non-English acceptance behavior remains available.
 assert(context.validarResposta('o resultado é quinze', ['quinze']));
 const history = vm.runInContext('DISCIPLINAS.find(d => d.id === "historia").capitulos.find(c => c.exam)', context);
